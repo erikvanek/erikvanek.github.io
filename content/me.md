@@ -1,7 +1,7 @@
 ---
 title: "Hi. I'm Erik Vaněk"
 date: 2018-03-23T20:03:43+01:00
-draft: true
+draft: false
 ---
 
 I like to do stuff. Grow greens [for example](/aero/) or develop on the [web](/development/).
