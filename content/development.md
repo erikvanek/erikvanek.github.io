@@ -1,7 +1,7 @@
 ---
 title: "Software development"
 date: 2018-03-23T22:17:10+01:00
-draft: true
+draft: false
 ---
 
 What is my favourite platform you may ask? [Open web](https://www.w3.org/wiki/Open_Web_Platform) I reply.

@@ -1,7 +1,7 @@
 ---
 title: "School times & misc"
 date: 2018-03-23T22:43:35+01:00
-draft: true
+draft: false
 ---
 
 Random parts of my life not fitting anywhere else but still worth mentioning.

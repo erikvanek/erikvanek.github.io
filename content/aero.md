@@ -1,7 +1,7 @@
 ---
 title: "Fresh greens all year long"
 date: 2018-03-23T20:02:36+01:00
-draft: true
+draft: false
 ---
 
 This is one of my sideprojects I've been working on mainly during 2016 and 2017. It stems from two major facts (both connected though). First is that one of my biggest hobbies is food. Second is that it's impossible to prepare good food (at least how I see it) without fine ingredients. I do not mean fancy. Rather fresh and full of taste, preferably seasonal and local.
