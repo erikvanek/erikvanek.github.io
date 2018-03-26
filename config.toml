@@ -1,9 +1,9 @@
-baseurl                 = "/"               # Your domain name. Must end with "/"
+baseurl                 = "https://erikvanek.com/"               # Your domain name. Must end with "/"
 languageCode            = "en-us"
 title                   = "Hi, I'm Erik"
 theme                   = "sam"
 publishDir 		= "."
-# googleAnalytics       = "xxx"             # Tracking code, eg. "UA-111111111-1"
+# googleAnalytics       = "UA-116349788-1"             # Tracking code, eg. "UA-111111111-1"
 
 [params]
     dateform            = "Mon Jan 02, 2006"
@@ -17,7 +17,7 @@ publishDir 		= "."
     footerText          = "Hi. I'm Erik. Sometimes I talk a lot."
 
 # Metadata
-    description         = "A new Hugo site."            # Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.
+    description         = "Hi. I'm Erik. I like to make stuff. Food, software, plants and many others."            # 
     twitterCard         = "summary_large_image"         # Card value “summary”, “summary_large_image”, “app”, or “player”
     primaryImage        = "/tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 

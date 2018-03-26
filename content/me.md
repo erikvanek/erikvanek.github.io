@@ -12,7 +12,9 @@ That's a good one. Glad you ask. Trying to find out lately. At least 20 years.
 
 Overgrown brat? Hopefully not.
 
-Professionally software developer for several years. Wannabe designer, hobby cook. Sometimes hater (constructive preferably!). Loyal person (you need to earn this loyalty though). I love my family, friends, sports and good sleep. Food indeed.
+Professionally software developer for several years. Wannabe designer, hobby cook. Sometimes constructive hater. Loyal person. You need to earn this loyalty though. I love my family, friends, sports and good sleep. Food indeed.
+
+Wanto to se those _hard skills_? Feel free to scan through my [CV](/docs/erik-vanek-cv.pdf).
 
 ### What do I appreciate?
 - honesty
@@ -29,7 +31,7 @@ Professionally software developer for several years. Wannabe designer, hobby coo
 - wasteful tools (e.g. dull knives)
 - stereotype
 - meal vouchers
-- "But we've always done this way" mindset
+- "But we've always done it this way" mindset
 - overcooked pasta
 
 ## Favourite
@@ -41,8 +43,8 @@ Professionally software developer for several years. Wannabe designer, hobby coo
 	- [A beautiful mind](http://www.imdb.com/title/tt0268978/)
 - City
 	- Copenhagen
-- Music track
-	- phew :) depending on the mood, say [One day U Here](https://www.youtube.com/watch?v=rCWH2MmlHQE) by UGK
+- Music
+	- phew :) that's hard, say [A brief history of nothing](https://anetterecords.bandcamp.com/album/a-brief-history-of-nothing) by mattr.
 
 ## Get in touch
 via
