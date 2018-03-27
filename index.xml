@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hi, I&#39;m Erik</title>
-    <link>https://erikvanek.com/</link>
+    <link>/</link>
     <description>Recent content on Hi, I&#39;m Erik</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Mar 2018 22:43:35 +0100</lastBuildDate>
     
-	<atom:link href="https://erikvanek.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>School times &amp; misc</title>
-      <link>https://erikvanek.com/commin-up/</link>
+      <link>/commin-up/</link>
       <pubDate>Fri, 23 Mar 2018 22:43:35 +0100</pubDate>
       
-      <guid>https://erikvanek.com/commin-up/</guid>
+      <guid>/commin-up/</guid>
       <description>Random parts of my life not fitting anywhere else but still worth mentioning.
 School times Before being competent to work in software industry, I&amp;rsquo;ve graduated from Computer graphics and digital image processing at Faculty of Informatics, Masaryk University in Brno. It went well, especially that part with playing with Kinect. It&amp;rsquo;s been a while though :)
 For my masters, I decided to attend Information studies with emphasis on service design at KISK.</description>
@@ -24,10 +24,10 @@ For my masters, I decided to attend Information studies with emphasis on service
     
     <item>
       <title>Software development</title>
-      <link>https://erikvanek.com/development/</link>
+      <link>/development/</link>
       <pubDate>Fri, 23 Mar 2018 22:17:10 +0100</pubDate>
       
-      <guid>https://erikvanek.com/development/</guid>
+      <guid>/development/</guid>
       <description>What is my favourite platform you may ask? Open web I reply.
 What am I up to? Professionally I&amp;rsquo;ve spent last five years or so working as a software developer for several companies. To name a few - FNZ, Adacta or most recently Snapshot where I also tried to implement some basic user-centered design methods. That was quite fun and eye opening. I&amp;rsquo;d like to do this more!
 During those years spent as a software developer, I had a chance to get in touch with some incredibly skilled and open-minded people.</description>
@@ -35,10 +35,10 @@ During those years spent as a software developer, I had a chance to get in touch
     
     <item>
       <title>Hi. I&#39;m Erik Vaněk</title>
-      <link>https://erikvanek.com/me/</link>
+      <link>/me/</link>
       <pubDate>Fri, 23 Mar 2018 20:03:43 +0100</pubDate>
       
-      <guid>https://erikvanek.com/me/</guid>
+      <guid>/me/</guid>
       <description>I like to do stuff. Grow greens for example or develop on the web.
 Who am I? That&amp;rsquo;s a good one. Glad you ask. Trying to find out lately. At least 20 years.
 Overgrown brat? Hopefully not.
@@ -47,10 +47,10 @@ Professionally software developer for several years. Wannabe designer, hobby coo
     
     <item>
       <title>Fresh greens all year long</title>
-      <link>https://erikvanek.com/aero/</link>
+      <link>/aero/</link>
       <pubDate>Fri, 23 Mar 2018 20:02:36 +0100</pubDate>
       
-      <guid>https://erikvanek.com/aero/</guid>
+      <guid>/aero/</guid>
       <description>This is one of my sideprojects I&amp;rsquo;ve been working on mainly during 2016 and 2017. It stems from two major facts (both connected though). First is that one of my biggest hobbies is food. Second is that it&amp;rsquo;s impossible to prepare good food (at least how I see it) without fine ingredients. I do not mean fancy. Rather fresh and full of taste, preferably seasonal and local.
 This is even more obvious outside of green season say between mid October til the beginning of May.</description>
     </item>
