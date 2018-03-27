@@ -34,18 +34,6 @@ Wanto to se those _hard skills_? Feel free to scan through my [CV](/docs/erik-va
 - "But we've always done it this way" mindset
 - overcooked pasta
 
-## Favourite
-- Food
-	- French onion soup
-- Book
-	- [Tao Te Ching](https://en.wikipedia.org/wiki/Tao_Te_Ching)
-- Movie
-	- [A beautiful mind](http://www.imdb.com/title/tt0268978/)
-- City
-	- Copenhagen
-- Music
-	- phew :) that's hard, say [A brief history of nothing](https://anetterecords.bandcamp.com/album/a-brief-history-of-nothing) by mattr.
-
 ## Get in touch
 via
 
