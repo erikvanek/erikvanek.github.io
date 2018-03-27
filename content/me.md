@@ -17,27 +17,27 @@ Professionally software developer for several years. Wannabe designer, hobby coo
 Wanto to se those _hard skills_? Feel free to scan through my [CV](/docs/erik-vanek-cv.pdf).
 
 ### What do I appreciate?
-- honesty
-- mediterranean food (peposo!)
-- getting to the core of the problem
-- useful tools
-- pragmatic mindset
-- challenging status quo
-- decisiveness
-- creative wordplay :)
+- honesty,
+- mediterranean food (peposo!),
+- getting to the core of the problem,
+- useful tools,
+- pragmatic mindset,
+- challenging status quo,
+- decisiveness,
+- creative wordplay.
 
 ### What I do not like?
-- bullshit
-- wasteful tools (e.g. dull knives)
-- stereotype
-- meal vouchers
-- "But we've always done it this way" mindset
-- overcooked pasta
+- bullshit,
+- wasteful tools (e.g. dull knives),
+- stereotype,
+- meal vouchers,
+- "But we've always done it this way" mindset,
+- overcooked pasta.
 
 ## Get in touch
 via
 
- - mail [vanek.erik@gmail.com](mailto:vanek.erik@gmail.com)
- - phone +420 608 409 497
- - [LinkedIn](https://www.linkedin.com/in/erikvanek/)
- - personally at Údolní 26, 602 00 Brno
+ - mail [vanek.erik@gmail.com](mailto:vanek.erik@gmail.com),
+ - phone +420 608 409 497,
+ - [LinkedIn](https://www.linkedin.com/in/erikvanek/),
+ - personally at Údolní 26, 602 00 Brno.
