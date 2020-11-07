@@ -1,0 +1,47 @@
+body {
+  background: green;
+  font-family: sans-serif;
+  color: white;
+  font-size: 24px;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.landing a {
+  font-size: 3rem;
+  margin: 1rem;
+  display: block;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: underline dotted;
+  transition: all 0.5s ease-out;
+  color: white;
+  font-weight: 700;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline dashed;
+  transition: all 0.5s ease-out;
+  background-color: lime;
+  color: fuchsia;
+}
+
+.landing ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+.article {
+  max-width: 75ch;
+  margin: 0 auto;
+}

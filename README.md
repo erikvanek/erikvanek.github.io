@@ -1,1 +1,1 @@
-This is generated output from [source repository](https://github.com/erikvanek/erikvanek.com). Never make changes in this one, rather generate new version from aformentioned repo.
+Personal site built using [eleventy](https://www.11ty.dev/).
