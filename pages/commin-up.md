@@ -17,11 +17,7 @@ For my masters, I decided to attend Information studies with emphasis on service
 
 Between spring and fall, I help digital designers to showcase their work at [water fountain](https://www.google.cz/search?q=fontana+u+janackova+divadla+brno&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjcsd_9-rvaAhVP2qQKHU2rAYAQ_AUICigB&biw=950&bih=1060) in Brno. 
 
-<!-- <div style="width: 100%; max-height: 480px; margin: 1em 0;">
-  <video style="width: 95%; height: 100%; margin: 0 auto;" loop  controls autoplay="true" muted src="/fountain.mp4"></video>
-</div> -->
-
-<video width="320" height="240" controls>
+<video width="100%" controls autoplay="true" loop onloadstart="this.volume=0.125">
   <source src="../videos/fountain.mp4" type="video/mp4">
 </video>
 
