@@ -1,7 +1,16 @@
+:root {
+  --bg-color: #F5E9E2;
+  /* --bg-color-darker: #BBB; */
+  --main-color: #773344;
+  --main-color-light: #E3B5A4;
+  --main-color-lightest: #d44d5c;
+  --main-color-darker: #0b0014;
+}
+
 body {
-  background: green;
+  background: var(--bg-color);
   font-family: sans-serif;
-  color: white;
+  color: var(--main-color);
   font-size: 24px;
 }
 
@@ -21,7 +30,7 @@ body {
 a {
   text-decoration: underline dotted;
   transition: all 0.5s ease-out;
-  color: white;
+  color: var(--main-color);
   font-weight: 700;
 }
 
@@ -29,8 +38,8 @@ a:hover,
 a:active {
   text-decoration: underline dashed;
   transition: all 0.5s ease-out;
-  background-color: lime;
-  color: fuchsia;
+  background-color: var(--main-color-light);
+  color: var(--main-color-darker);
 }
 
 .landing ul {
@@ -44,4 +53,8 @@ li {
 .article {
   max-width: 75ch;
   margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
 }
