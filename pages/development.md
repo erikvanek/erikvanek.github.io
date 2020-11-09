@@ -4,6 +4,7 @@ date: 2018-03-23T22:17:10+01:00
 draft: false
 layout: article.njk
 ---
+_(Disclaimer: this page is a bit dated - you know, technology changes...)_
 
 What is my favourite platform you may ask. [Open Web Platform](https://www.w3.org/standards/) I'd reply. Web is an amazing medium that is free to use to everyone. No vendor lock-in, no proprietary tools. On the other hand, it suffers from the fact that it was constructed as a network for exchange of documents. It was just simple hypertext back then. Times have changed. Today's internet users expect smooth, interactive yet reliable tools. It's challenging to deliver those, but pleasing when done properly.
 

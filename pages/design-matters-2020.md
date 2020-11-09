@@ -4,7 +4,6 @@ date: 2020-11-07
 draft: false
 layout: article.njk
 ---
-# Design matters 2020
 
 - Organized in Copenhagen in nicely renovated Copenhagen Contemporary industrial building.
 - Focused on digital design.

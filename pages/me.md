@@ -7,15 +7,9 @@ layout: article.njk
 
 I like to do stuff. Grow greens [for example](/aero/) or develop on the [web](/development/).
 
-## Who am I?
+Professionally software developer for several years. Wannabe designer, hobby cook. Sometimes constructive hater. Loyal person. I love my family, friends, sports and good sleep. Food indeed.
 
-That's a good one. Glad you ask. Trying to find out lately. At least 20 years.
-
-Overgrown brat? Hopefully not.
-
-Professionally software developer for several years. Wannabe designer, hobby cook. Sometimes constructive hater. Loyal person. You need to earn this loyalty though. I love my family, friends, sports and good sleep. Food indeed.
-
-Wanto to se those _hard skills_? Feel free to scan through my [CV](/docs/erik-vanek-cv.pdf).
+Wanto to se those _hard skills_? Feel free to scan through my [CV](/documents/erik-vanek-cv.pdf).
 
 ### What do I like?
 - honesty,
@@ -24,6 +18,7 @@ Wanto to se those _hard skills_? Feel free to scan through my [CV](/docs/erik-va
 - challenging status quo,
 - decisiveness,
 - creative wordplay.
+- independent musicians (see [my wishlist](https://bandcamp.com/falsepositive/wishlist))
 
 ### What I do not like?
 - bullshit,
