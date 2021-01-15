@@ -22,7 +22,7 @@
     <meta name="og:url" content="www.erikvanek.com/">
     <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
     
-    <title>Hi. I&#39;m Erik Vaněk</title>
+    <title>Tools I&#39;d like to build</title>
     <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
     <link rel="stylesheet" href="../css/style.css">
     
@@ -45,36 +45,19 @@
 </html><body><div class="section" id="splash">
 <div class="article">
 <a href="/">← go Home 🏠</a>
-<h1>Hi. I&#39;m Erik Vaněk</h1>
+<h1>Tools I&#39;d like to build</h1>
 
-<p>I like to do stuff. <a href="/aero/">Growing greens aeroponically</a> or develop on the <a href="/development/">web</a>.</p>
-<p>Professionally software developer for several years. Wannabe designer, hobby cook, constructive hater &amp; hopefully a loyal person. I love my family, friends, sports, good food &amp; sleep. I like mid-sized cities with around a half of milion population like <abbr title="If you ever visit, instead of saying 'Hi', use 'Zdarec' [zdareds].">Brno</abbr>, Copenhagen or Wrocław. You can also check some <a href="/links">articles I like</a>.</p>
-<p>Wanto to se those <em>hard skills</em>? Feel free to scan through my <a href="/documents/erik-vanek-cv.pdf">CV</a>. It is a bit dated though.</p>
-<h3>What do I like?</h3>
+<p>Unsctructured collection of ideas that I might spend some time on building.</p>
+<h2>Mind your time</h2>
+<p>Browser extension that focuses on digital well-being by monitoring where do you spend your time online. Main aim is to be mindful about time spent on social media which is one of the most risk factors for growing up teenagers as presented in <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9yWjBjWWsxMg/episode/YzZlY2VmMDQtOTVkYS00ZmY2LWFmYTQtNDgyNDQ0YWIwZTJh?sa=X&amp;ved=0CAUQkfYCahcKEwjw9PeaqYLtAhUAAAAAHQAAAAAQAQ">one episode</a> of Your Undivided Attention podcast.</p>
 <ul>
-<li>honesty,</li>
-<li>simple &amp; seasonal food,</li>
-<li>understanding root causes of things,</li>
-<li>decisiveness,</li>
-<li>creative wordplay.</li>
-<li>independent musicians (see <a href="https://bandcamp.com/falsepositive/wishlist">my wishlist</a>)</li>
-</ul>
-<h3>What I do not like?</h3>
-<ul>
-<li>bullshit and playing games,</li>
-<li>improper tooling (e.g. dull knives),</li>
-<li>stereotypes,</li>
-<li>&quot;But we've always done it this way&quot; mindset,</li>
-<li>overcooked pasta.</li>
-</ul>
-<h2>Get in touch</h2>
-<p>via</p>
-<ul>
-<li>mail <a href="mailto:vanek.erik@gmail.com">vanek.erik@gmail.com</a>,</li>
-<li>phone +420 608 409 497,</li>
-<li><a href="https://www.linkedin.com/in/erikvanek/">LinkedIn</a>,</li>
-<li>skype vanekerik,</li>
-<li>personally at Rybnická 8, 634 00 Brno.</li>
+<li>chrome extension</li>
+<li>goes from green happy smiley face :) to a red sad smiley face :( based on where the digital time is spent</li>
+<li>define &quot;healthy&quot; boundaries based on some research</li>
+<li>maybe after some time spent (30 mins, hour, ...) show a warning message (displaying it should be configurable)</li>
+<li>time should be measured only when the tab is focused by leveraging <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Page visibility API</a> or by using hooks that chrome extensions API offers</li>
+<li>the extension counts time only when the window is active (therefore the way to workaround it is to 'focus' another window) - that's fine cause interacting with a site requires switching focus back to that window</li>
+<li>let's try to use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter"><code>meter</code></a> element when visualizing results</li>
 </ul>
 
 </div>

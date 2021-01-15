@@ -1,0 +1,5 @@
+- city short distances
+- safe for all (weakest should be protected the most) [germany and france wants to tax more SUVs]
+- fair share for everyone (people, pubtran, bikes, cars)
+- give alternatives
+- fighting heating islands
