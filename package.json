@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node node_modules/eleventy/eleventy.js",
+    "build": "eleventy",
     "serve": "yarn eleventy --serve"
   },
   "repository": {
