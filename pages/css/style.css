@@ -69,3 +69,12 @@ h1, h2, h3, h4 {
   /* font-family: 'Times New Roman', Times, serif; */
   font-family: Georgia, 'Times New Roman', Times, serif
 }
+
+
+.tag {
+  padding: .25rem .5rem;
+  margin: .25rem;
+  border-radius: .5rem;
+  border: 2px solid var(--main-color);
+  background: var(--main-color-light);
+}

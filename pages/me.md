@@ -5,26 +5,24 @@ draft: false
 layout: article.njk
 ---
 
-I like to do stuff. Grow greens [for example](/aero/) or develop on the [web](/development/).
+I like to do stuff. [Growing greens aeroponically](/aero/) or develop on the [web](/development/).
 
-Professionally software developer for several years. Wannabe designer, hobby cook. Sometimes constructive hater. Loyal person. I love my family, friends, sports and good sleep. Food indeed.
+Professionally software developer for several years. Wannabe designer, hobby cook, constructive hater & hopefully a loyal person. I love my family, friends, sports, good food & sleep. I like mid-sized cities with around a half of milion population like <abbr title="If you ever visit, instead of saying 'Hi', use 'Zdarec' [zdareds].">Brno</abbr>, Copenhagen or Wrocław. You can also check some [articles I like](/links).
 
-Wanto to se those _hard skills_? Feel free to scan through my [CV](/documents/erik-vanek-cv.pdf).
+Wanto to se those _hard skills_? Feel free to scan through my [CV](/documents/erik-vanek-cv.pdf). It is a bit dated though.
 
 ### What do I like?
 - honesty,
-- food that makes sense (simple, seasonal, local, ...),
+- simple & seasonal food,
 - understanding root causes of things,
-- challenging status quo,
 - decisiveness,
 - creative wordplay.
 - independent musicians (see [my wishlist](https://bandcamp.com/falsepositive/wishlist))
 
 ### What I do not like?
-- bullshit,
+- bullshit and playing games,
 - improper tooling (e.g. dull knives),
 - stereotypes,
-- meal vouchers,
 - "But we've always done it this way" mindset,
 - overcooked pasta.
 
