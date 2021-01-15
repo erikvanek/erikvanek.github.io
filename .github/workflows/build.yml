@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        uses: yarn
+        run: yarn
 
       # Builds new version to the docs folder
       - name: Publish new version
