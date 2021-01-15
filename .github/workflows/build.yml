@@ -21,6 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        uses: yarn
+
       # Builds new version to the docs folder
       - name: Publish new version
         run: yarn build
