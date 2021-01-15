@@ -2,7 +2,7 @@ name: Publish new version
 
 # Run this workflow every time a new commit pushed to your repository
 on:
-  [push, pull-request]
+  [push, pull_request]
   
 
 
