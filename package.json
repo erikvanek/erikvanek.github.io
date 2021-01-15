@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve"
+    "build": "yarn eleventy",
+    "serve": "yarn eleventy --serve"
   },
   "repository": {
     "type": "git",
