@@ -8,7 +8,6 @@
   },
   "scripts": {
     "build": "eleventy",
-    "deploy": "node node_modules/.bin/eleventy",
     "serve": "eleventy --serve"
   },
   "repository": {

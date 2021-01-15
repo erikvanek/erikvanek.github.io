@@ -21,14 +21,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
         with:
-          install-command: yarn --frozen-lockfile --silent
+          install-command: yarn --frozen-lockfile
+          
+      - name: Build new version
+        run: yarn build
 
-      # - name: Install dependencies
-      #   run: yarn install
-
-      # Builds new version to the docs folder
-      - name: Publish new version
-        run: yarn deploy
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_SECRET }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
