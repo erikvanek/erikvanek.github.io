@@ -22,9 +22,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        - uses: bahmutov/npm-install@v1
-          with:
-            install-command: yarn --frozen-lockfile --silent
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --frozen-lockfile --silent
 
       # - name: Install dependencies
       #   run: yarn install
