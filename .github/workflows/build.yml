@@ -31,4 +31,4 @@ jobs:
 
       # Builds new version to the docs folder
       - name: Publish new version
-        run: yarn publish
+        run: yarn deploy
