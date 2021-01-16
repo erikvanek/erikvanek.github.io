@@ -1,5 +1,7 @@
 Personal site built using [eleventy](https://www.11ty.dev/).
 
+![Deployed](https://github.com/erikvanek/erikvanek.github.io/workflows/Deploy%20new%20version/badge.svg)
+
 ## How to edit?
 - clone repo
 - source for site content can be found in _pages_ folder
