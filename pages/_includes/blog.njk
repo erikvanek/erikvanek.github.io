@@ -44,25 +44,25 @@
 
 </head>
 
-</html><body><div class="section" id="splash">
+</html><body style="height: 100vh; overflow: hidden;"><div class="section" id="splash">
 <div class="article">
-<a href="/">← go Home 🏠</a>
+<a href="/">← back Home 🏠</a>
 {% if title !== "Blog" %}
-<a href="/blog">Blog</a>
+<a href="/blog">← Blog</a>
 {% endif %}
 <h1>{{title}}</h1>
 
 {% if title !== "Blog" %}
 <time>{{ date.toDateString('cs')}}</time>
 
-{% for tag in tags %}
+{# {% for tag in tags %}
 <label class="tag">{{tag}}</label>
-{% endfor %}
+{% endfor %} #}
 
 {% else %}
 {% for post in collections.posts %}
     <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    {# <em>{{ post.date | date: "%Y-%m-%d" }}</em> #}
+    <time>{{post.date.toDateString('cs')}}</time>
 {% endfor %}
 
 {% endif %}
