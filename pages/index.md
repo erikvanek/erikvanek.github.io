@@ -2,8 +2,10 @@
 layout: landingPage.njk
 ---
 
-- [about me](/me)
-- [I like to grow plants](/aero)
-- [develop on the web](/development)
-- [I might blog a bit](/blog)
-- [and some more](/commin-up)
+- [~ ~ ~ ~ waddup! ~ ~ ~ ~](/me)
+- [~ ~ ~ I like growing plants ~ ~ ~](/aero)
+- [~ ~ do web things ~ ~](/development)
+- [~ and might blog at some point ~](/blog)
+- [~ ~ and ~ ~](/commin-up)
+- [~ ~ ~ some ~ ~ ~](/things-to-build)
+- [~ ~ ~ ~ more ~ ~ ~ ~](/links)
