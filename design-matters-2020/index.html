@@ -1,23 +1,231 @@
-<p>bosu obloukem k zemi
-chytit na stranach
-rovne telo a narovnanyma rukama 20x doleva a doprava komihat 3 serie</p>
-<p>bosu flat down
-obe ruce doprostred a zpevnit
-stridave jedna ruka uprosted a zpevnene rotuju druhou kolem osy sveho tela
-3 x 10</p>
-<p>sideplank
-skoro jako 'dvere na terapii'
-kycel a cely predlokti opora
-na 10 vterin zvednout zadek do vzduchu
-2 x 10 x 6
-https://youtu.be/2_e4I-brfqs?t=272</p>
-<p>birddogs 2 x 6
-https://youtu.be/2_e4I-brfqs?t=299</p>
-<p>frog glute squeeze 3 x 10
-https://www.youtube.com/watch?v=DFDRpxaw9J0&amp;ab_channel=BOSU</p>
-<p>predkopy 3 x 2 x 8
-https://www.youtube.com/watch?v=u6iqa83ohK4&amp;ab_channel=BOSU</p>
-<p>labute 3 x 8
-https://www.youtube.com/watch?v=yeG6euc4EXg&amp;ab_channel=BOSU</p>
-<p>rotace wow
-https://www.youtube.com/watch?v=xgSHuB1IdR8&amp;ab_channel=BOSU</p>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta name="generator" content="Hugo 0.37.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <meta name="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="www.erikvanek.com/">
+    
+    <meta name="twitter:image" content="/tn.png">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Erik Vaněk - personal page.">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="www.erikvanek.com/">
+    <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+    
+    <title>Design matters 2020 conference review</title>
+    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116349788-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-116349788-1');
+    </script>
+    
+
+</head>
+
+</html><body style="height: 100vh; overflow: hidden;"><div class="section" id="splash">
+<div class="article">
+<a href="/">← back Home 🏠</a>
+
+<a href="/blog">← Blog</a>
+
+<h1>Design matters 2020 conference review</h1>
+
+
+<time>Wed Nov 11 2020</time>
+
+
+
+
+
+<article><ul>
+<li>Organized in Copenhagen in nicely renovated Copenhagen Contemporary industrial building.</li>
+<li>Focused on digital design.</li>
+<li>Includes several (also remote-first) workshops.</li>
+<li>Two day single track with few differences between physical and remote participation.</li>
+<li>Possibility to get remote-first tickets.</li>
+</ul>
+<h2>Review format</h2>
+<p>I'm going to cover most interesting talks from my point of view and then I'm adding few general remarks from remaining talks. Also I'd like to compile a set of pros and cons about the conference in general.</p>
+<h2>Talk notes</h2>
+<h3>Creating Friendly Web Forms For How Humans Really Think</h3>
+<h4>Vitaly Friedman</h4>
+<ul>
+<li>Super energetic talk driven by Vitaly's inner drive to make forms on web more helpful and usable to their users.</li>
+<li>Web forms often mimic what is being used in paperwork which does not need to necesarily work in digital world.</li>
+<li>It is generally good to <em>focus on tabbability</em> (to be able to navigate without the mouse / touchpad interaction). This leads to higher accessibility and helps to speed up user interaction.
+<ul>
+<li>&quot;Using mouse to move between fields, ready to type takes 1900ms&quot; - then multiply by the amount of user interface controls...</li>
+</ul>
+</li>
+<li><em>Forms should not mimic database structures</em> but rather human mental models. Bad example is to have two fields for first, second and maybe a middle name. Why can't we just have a name field?</li>
+<li>Avoid dropdowns whenever possbile. Prefer buttons, sliders or at least provide an autocomplete to them. If dropdown is a must, try to have ~ 7 items (7.5 is nice since it shows there's a scroll area) displayed in the list at most. Bad example are looong lists for country selectors.</li>
+<li>Try to pre-fill input fields if possible. It could be even dynamic (e.g. Volvo for Sweden users, Ford for people from USA).</li>
+<li><em>'Reward early, punish late'</em> - general mindset to adhere to when validating data. Good example would be typical 'Repeat your email field'. It is not needed when registering the user for example. If email is such a crucial information, why not double checking it during important action(e.g. first order being finalized)?
+<ul>
+<li>&quot;60% of customers will consistently copy/paste their email address when asked to verify it in the eCommerce checkout, especially on mobile&quot;.</li>
+</ul>
+</li>
+<li>There are three validation types - premature, immediate &amp; late and all of them are partially wrong and interrupt users. Bad validation can cause severe headache.</li>
+<li>Good practices - <a href="https://alistapart.com/article/inline-validation-in-web-forms/">Inline validation in Forms</a>, <a href="https://www.dropbox.com/s/ve6m3ngp5rmgu74/interface-design-patterns-checklist-2020.pdf?dl=0">Design checklists by smashing magazine</a>.</li>
+<li>There's long debate on whether to mark required or optional fields - ideally mark both. The amount of visual clutter is not high if form does not contain dozens of fields. Use red asterisk and grey (Optional) as investigated by Baymard institute.</li>
+<li>Few fun observations:
+<ul>
+<li>Datepickers for birthdays starting at current year should contain more sensible default value to limit user clicks .</li>
+<li>Slider for question: 'Do you have children?' capped with max value of 10.</li>
+<li>Disabled controls do not often tell the story why they are disabled, it is then hard to find out what needs to be done to enable them.</li>
+<li>Single column layouts just work the best, no need to be fancy here.</li>
+<li>Captcha is not what it used to be anymore - &quot;Bots got so advanced that it’s now nearly impossible to generate images that are easy to solve for humans but unsolvable for bots. AI can solve most difficult distorted texts with 99.8% accuracy while humans with 33%.&quot;.</li>
+</ul>
+</li>
+</ul>
+<h3>The future of workshops</h3>
+<h4>Kea Zhang</h4>
+<ul>
+<li><em>Difference between workshops and meetings</em> - workshops try to reach a consensus on a topic with active participation, meetings are more frontal and look more for passive listening.</li>
+<li>There's a significant change in how people collaborate and workshops should adopt to that due to COVID-19.</li>
+<li>What works in person does not need to necesarily work remotely.</li>
+<li>The most problematic part when conducting workshops remotely is <em>engaging participants</em>.</li>
+<li>It is way easier to context switch to a next Jira ticket or Slack notification when being participating remotely.</li>
+<li>Key ingredients for a good workshop are <em>goal, topics &amp; timing</em>. Those should be ideally prepared upfront so that participants can familiarise with them at their own speed.</li>
+<li>If there's a online workspace needed for a workshop, prepare it in advance.</li>
+<li>Each participant should participate equally (a bit difficult to measure in real world).</li>
+<li>Really important to <em>open</em> (e.g. present the agenda well) <em>and close</em> (e.g. summarize what was done and follow-up action items) well each session.</li>
+<li>Use warm-up icebreakers to raise the energy levels, even stupid questions like:
+<ul>
+<li>&quot;If last iteration was an animal, what would it be?&quot;, &quot;On a scale 1-10 how would you rate ...?&quot;, &quot;What single thing should we celebrate from work done in last iteration?&quot; - just to get people start talking.</li>
+<li>You can also use something like <a href="https://www.mentimeter.com/">mentimeter</a> to ask few easier questions connected to workshop topic. It is then easy to visualize participants energy / familiarity with the topic or whatever we ask them.</li>
+</ul>
+</li>
+<li>It is way harder to self-organize remotely, when a broader audience needs to be present. Consider breaking it into smaller sub-groups.
+<ul>
+<li>Zoom has a feature called 'break-out'.</li>
+<li>It could be that the session starts with all participants, then gets broken down into multiple smaller ones and it gets closed again together.</li>
+<li>Similar to <a href="https://miro.medium.com/max/700/1*3noihi4CGXPZAgevbk87Yg.jpeg">divergence and convergence</a> principle in double diamond.</li>
+<li>Goal is the main aim why the workshop.</li>
+</ul>
+</li>
+<li>Ensure at least 5 minutes per hour brakes to avoid fatigue.
+<ul>
+<li>Phrasing &quot;Let's start again 12:05&quot; is way better than &quot;Get back in 5 minutes&quot;.</li>
+</ul>
+</li>
+<li>Attention span is shorter remotely that in person due to the lack of non-verbal signals.</li>
+</ul>
+<h3>KHORA – When Virtual Reality becomes the key to treat schizophrenia</h3>
+<h4>Nicole Fronc Dumanski</h4>
+<ul>
+<li>Project funded by Danish inovation fund.</li>
+<li>Using VR to help people with schizophrenia to 'connect' to inner voices they are hearing in their daily lifes.</li>
+<li>Each delusion gets its own avatar created in virtual reality and voice profile connected to it so that it matches the voice in the head of the patient.</li>
+<li>It is a bit tricky to create the avatar though because it often exists only in a form of a voice.</li>
+<li>Avatar is then being impersonated by a therapist in a way that the patient can 'safely' interact with it.</li>
+<li>The main idea is by having this 'safe space environment' therapists can 'control' the behavior of avatars in a safe way.</li>
+<li>The main assumption is that when patients start to interact more with these visualised avatars, it decreases the chance of patients blindly following their instructions.</li>
+<li>Main focus is given to creating 'bond' between the patient and the avatar.</li>
+<li>Using this controlled environment can also decrease the amount of stress patients are suffering from when being exposed to their delusions.</li>
+<li>It is still experimental technology which demands a lot of technical skills from therapists which is often lacking in their skillsets.</li>
+<li><a href="https://www.youtube.com/watch?v=AHYau6kk8VI">Video</a> available here to showcase the whole project.</li>
+</ul>
+<h3>Unbiased design: Why it matters</h3>
+<h4>Kevin Bickham</h4>
+<ul>
+<li>Works for McKinsey &amp; Company which puts diversity and inclusion as one of their core values.</li>
+<li>Main aim of this talk is to identify and try to avoid unconscious biases during design process.</li>
+<li>Interesting question asked - <em>&quot;Should be design a tool for a political activism?&quot;</em>.</li>
+<li>&quot;Addressing racial inequities in customer experience can increase the
+effectiveness of public services where they are needed most&quot;</li>
+<li>The most important part when tackling the topic of a bias is to focus on empathizing properly.</li>
+<li>Proper empathy is the main tool for proper inclusive research.</li>
+<li>Accessibility should not be just an icing on top of a service but an integral part of service for broader audience.</li>
+<li>They are setting internal KPIs aligned to racial equity that are continously evaluated to promote diversity in McKinsey &amp; Company.</li>
+<li>&quot;Get comfortable with the uncomfortable&quot; mindset</li>
+<li><a href="https://www.etsy.com/listing/725094845/a-designers-critical-alphabet">Designer's critical alphabet</a> is a nice little tool to leverage when focusing on doing more inclusive research.</li>
+<li><em>meta analysis</em> - continuously assessing the research process itself and adopting it if has some missing parts / problems spotted.</li>
+<li>More empathy can be achieved by switching from more top-down HCD into more bottom-up <em><a href="https://jnd.org/community-based-human-centered-design/">CCD(Community-centered-design)</a></em>
+<ul>
+<li>HCD works better for mass production of individual products, CCD is aimed more towards self-organized communities that know what are their problems and can work on their solutions by themselves. They just need a bit of guidance or mentoring.</li>
+<li>These two approaches can also pretty well work together, not just one or the other.</li>
+<li><a href="https://reader.elsevier.com/reader/sd/pii/S2405872617300552?token=FE61644E6A6ECF126A16CED35303282DB4E9A3FA589F861FDCBF9D98CAF8D14F28E5BA42C8991E3903BBB486AF52A622">Scaling down</a> by Jeremy Meyerson proposes five main principles for CCD:
+<ul>
+<li>Cultivate a Participatory Mindset—Not an Expert One</li>
+<li>Make the Process Design-Infused—Not Design-Led</li>
+<li>Design for People—Not Personas</li>
+<li>Aim for Engagement—Not Abstraction</li>
+<li>Build on Assets—Don’t Just Minimize Deficits</li>
+</ul>
+</li>
+<li>As usual, it is not a silver bullet - CCD's main drawbacks are that it is easier to get stuck in some rabbit holes compared to HCD. Solutions working for one community does not need to work globally.</li>
+</ul>
+</li>
+</ul>
+<h3>Misinformation – A designer’s toolkit to managing misleading information on Twitter</h3>
+<h4>Anita Butler</h4>
+<ul>
+<li>Works as a designer in Twitter trying to reuse the spread of missleading information.</li>
+<li>Proactive X reactive approach - depends on the context where is user faced with the platform.</li>
+<li>Core design principals:
+<ul>
+<li>Encourage good behavior</li>
+<li>Be explicit about consequences and rewards</li>
+<li>Provide clarity</li>
+<li>Balance flow and friction</li>
+</ul>
+</li>
+<li>Main idea is to <em>elevate reliable and de-emphasize irrelevant content</em>.</li>
+<li>Proactive help in cases like “I stumble upon a news headline about the number of coronavirus cases in China and I immediately share it.” whereas reactive in “I’m angry....I wish there was a way we could know what is real and what is not.”.</li>
+<li><em>People share unread content</em> just based on its headline.</li>
+<li>Showcased their prototyping process with hypothesis &quot;Customers are less likely to retweet unreliable sources if they read the article and notice facts or evidence missing.&quot;.</li>
+<li>Case study mostly focused on retweeting behavior.</li>
+<li>Showcased one proactive approach - prompt displayed before retweeting and one reactive - possibly misleading content labeling.</li>
+<li>&quot;When Twitter detects a URL in someone’s tweet, the reader is prompted to consider reading the article before re-tweeting it.&quot;</li>
+<li>After few iterations, they were able to:
+<ul>
+<li>Increase the amount of users that read the content before they retweeted.</li>
+<li>Decreased the amount of retweets (that's debatable imo), amount of retweets and shares.</li>
+</ul>
+</li>
+</ul>
+<h2>Random notes</h2>
+<ul>
+<li>Interesting museum called <a href="https://www.museumofthefuture.ae/">Museum of the future</a> being constructed in Dubai</li>
+<li>Fun project called <a href="http://www.simonerebaudengo.com/project/objectiverealities">Objective realities</a> depicts how commonly IoT devices <em>might</em> perceive our world if those were alive</li>
+<li>Mozilla researched that In the US, teens spend ~7.5 hours on screens per day, pre-teens spend ~5 hours.</li>
+<li>Fortnight gets 2.4 bln $ yearly as ingame revenue - completely new in-app economy out there.</li>
+<li>Localizing a service like Wikipedia is a huge problem. Different reading direction, different interaction patterns, best practices, copyrighting. It's not really about <em>just translating those resources</em> to more languages.</li>
+<li><a href="https://phabricator.wikimedia.org/">Wikipedia</a> is radically open-sourcing its internal decision processes and product-related debates.</li>
+<li>Dropbox VP of design pro actively blocks part of his weekly schedule to mentor &amp; support colleagues from underrepresented communities.</li>
+</ul>
+<h2>Conference Pros &amp; cons</h2>
+<ul>
+<li>Remote-first tickets - it really felt genuine to participate remotely which is not easy to achieve.</li>
+<li>Everything really well on-time and well prepared.</li>
+<li>Vitaly's energy during his talk :)</li>
+</ul>
+<ul>
+<li>Maybe missed/false expectations - a good portion of talks were nice to listen to, but did not take that many takeaways from them.</li>
+<li>A lot of time spent saying 'who am I' versus the 'real' content of speakers talks. I'm not that much interested in them, I'm more into hearing their thoughts.</li>
+<li>It felt a bit unbalanced towards technooptimism from my perspective.</li>
+</ul>
+</article>
+</div>
+</div></body>
