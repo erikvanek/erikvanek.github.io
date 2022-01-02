@@ -33,4 +33,4 @@ via
  - phone +420 608 409 497,
  - [LinkedIn](https://www.linkedin.com/in/erikvanek/),
  - skype vanekerik,
- - personally at Rybnická 8, 634 00 Brno.
+ - personally at Bayerova 34, 602 00 Brno.

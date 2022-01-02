@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
-	<meta name="generator" content="Hugo 0.37.1" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    
-    <meta name="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
-    
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:domain" content="www.erikvanek.com/">
-    
-    <meta name="twitter:image" content="/tn.png">
-    <meta name="twitter:title" property="og:title" itemprop="title name" content="Erik Vaněk - personal page.">
-    <meta name="twitter:description" property="og:description" itemprop="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
-    <meta name="og:type" content="website">
-    <meta name="og:url" content="www.erikvanek.com/">
-    <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
-    
-    <title>{{ title }}</title>
-    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
-    <link rel="stylesheet" href="../css/style.css">
-    
-    {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic"> #}
-{#     
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script> #}
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116349788-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <head>
+        <meta name="generator" content="Hugo 0.37.1"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
 
-        gtag('config', 'UA-116349788-1');
-    </script>
-    
+        <meta name="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
 
-</head>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="www.erikvanek.com/">
 
-</html><body><div class="section" id="splash">
-<div class="article">
-<a href="/">← back Home 🏠</a>
-{% if title !== "Blog" %}
-<a href="/blog">← Blog</a>
-{% endif %}
-<h1>{{title}}</h1>
+        <meta name="twitter:image" content="/tn.png">
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="Erik Vaněk - personal page.">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
+        <meta name="og:type" content="website">
+        <meta name="og:url" content="www.erikvanek.com/">
+        <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
 
-{% if title !== "Blog" %}
-<time>{{ date.toDateString('cs')}}</time>
+        <title>{{ title }}</title>
+        <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
-{# {% for tag in tags %}
-<label class="tag">{{tag}}</label>
-{% endfor %} #}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116349788-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-{% else %}
-{% for post in collections.posts|sort(attribute='date', reverse=true) %}
-    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    <time>{{post.date.toDateString('cs')}}</time>
-{% endfor %}
+            gtag('config', 'UA-116349788-1');
+        </script>
 
-{% endif %}
+    </head>
 
-<article>{{content | safe}}</article>
-</div>
-</div></body>
+</html>
+<body>
+    <div class="section" id="splash">
+        <div class="article">
+            <a href="/">← back Home 🏠</a>
+            {% if title !== "Blog" %}
+                <a href="/blog">← Blog</a>
+            {% endif %}
+            <h1>{{title}}</h1>
+
+            {% if title !== "Blog" %}
+                <time>{{ date.toDateString('cs')}}</time>
+
+            {% else %}
+                {% for post in collections.posts | sort(attribute = 'date', reverse = true) %}
+                    <h2>
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+
+                    <div class="blog-subtitle">
+                        <div class="tags">
+                            {% for tag in post.data.tags | sort%}
+                                {%if tag != 'posts' %}
+                                    <span class="tag">{{tag}}</span>
+
+                                {% endif %}
+
+                            {% endfor %}
+                        </div>
+
+                        <time>{{post.date.toDateString('cs')}}</time>
+
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+
+            <article>{{content | safe}}</article>
+        </div>
+    </div>
+</body>
