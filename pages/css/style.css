@@ -1,10 +1,15 @@
 :root {
   --bg-color: #f5e9e2;
-  /* --bg-color-darker: #BBB; */
   --main-color: #773344;
   --main-color-light: #e3b5a4;
   --main-color-lightest: #d44d5c;
   --main-color-darker: #0b0014;
+  background: linear-gradient(0deg, var(--main-color-light), var(--bg-color));
+  /* background: 
+  That'd be cool to include!
+  url("../img/beet.jpg")  no-repeat center center,
+    linear-gradient(180deg, var(--main-color-light), var(--bg-color));
+ */
 }
 
 time {
@@ -13,12 +18,20 @@ time {
 }
 
 body {
-  /* background: var(--bg-color); */
-  background: linear-gradient(180deg, var(--bg-color), transparent);
-  /* font-family: sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
   color: var(--main-color);
   font-size: 24px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  /* @font-face {
+    font-family: ;
+    src: url();
+  } */
 }
 
 .landing {
@@ -28,41 +41,72 @@ body {
   text-align: center;
 }
 
+.landing ul {
+  margin: 0;
+  padding: 0;
+}
+
 .landing a {
-  font-size: 3rem;
-  margin: 1rem;
+  font-size: 2.5rem;
+  text-decoration: underline dashed;
+  text-decoration-color: var(--main-color);
+  text-decoration-thickness: 1.125rem;
   display: block;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   width: 100%;
   background: linear-gradient(0deg, transparent, var(--bg-color), transparent),
     linear-gradient(135deg, transparent, var(--bg-color));
   background-blend-mode: color-dodge;
   border-radius: 1rem;
-  border-width: 0.5rem;
-  /* border-width: 2.5rem;
-  border-color: black;
-  border: 10px solid var(--main-color-light); */
+  border: 0.25rem solid var(--main-color);
+  transition: all 0.25s ease-out;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .landing a {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .landing a {
+    text-decoration-thickness: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .landing a {
+    font-size: 1rem;
+    text-decoration-thickness: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .landing a:hover {
-  /* border-color: orange;
-  border-style: solid;
-  border-image: linear-gradient(90deg, red, transparent) 1 100%; */
+  background-color: var(--main-color-darker);
+  color: var(--bg-color);
+  border: 4px dotted var(--bg-color) !important;
+  transition: all 0.25s ease-out;
 }
 
 a {
   text-decoration: underline dotted;
-  transition: all 0.5s ease-out;
-  color: mediumvioletred;
+  transition: all 0.25s ease-out;
+  color: var(--main-color);
   font-weight: 700;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  padding: 0.125rem;
 }
 
 a:hover,
 a:active {
-  text-decoration: underline dashed;
-  transition: all 0.5s ease-out;
-  background-color: var(--main-color-light);
-  color: var(--main-color);
+  text-decoration: none;
+  transition: all 0.25s ease-out;
+  border-color: var(--main-color);
 }
 
 .landing ul {
@@ -82,18 +126,17 @@ img {
   max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  /* font-family: 'Times New Roman', Times, serif; */
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
 .tag {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
   border-radius: 0.5rem;
   border: 2px solid var(--main-color);
-  background: var(--main-color-light);
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.blog-subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
