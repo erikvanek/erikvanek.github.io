@@ -1,5 +1,7 @@
 ---
 title: "Deep work"
+subtitle: "Rules for focused success in a distracted world"
+author: "Cal Newport"
 date: 2022-01-02
 draft: false
 layout: blog.njk
