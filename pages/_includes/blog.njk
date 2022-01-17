@@ -26,8 +26,8 @@
         <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116349788-1"></script>
         <script>
@@ -51,7 +51,16 @@
                 <a href="/blog">← Blog</a>
             {% endif %}
             <h1>{{title}}</h1>
-
+            {% if subtitle %}
+                <h4>
+                    <em>"{{subtitle}}"</em>
+                </h4>
+            {% endif %}
+            {% if author %}
+                <h4>
+                    by {{author}}
+                </h4>
+            {% endif %}
             {% if title !== "Blog" %}
                 <time>{{ date.toDateString('cs')}}</time>
 
