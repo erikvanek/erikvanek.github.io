@@ -1,8 +1,9 @@
 
 
 <script type="text/javascript" src="../js/reveal.js"></script>
+{# <script type="text/javascript" src="../js/reveal-fullscreen.js"></script> #}
 <link rel="stylesheet" href="../css/revealjs/reveal.css"></link>
-<link rel="stylesheet" href="../css/revealjs/simple.css"></link>
+<link rel="stylesheet" href="../css/revealjs/black.css"></link>
 
 <div class="reveal">
   <div class="slides">
@@ -98,7 +99,11 @@
 			Reveal.initialize({
 				center: true,
 				hash: true,
+        
 			});
+
+ setTimeout(() => document.querySelector('.slides').style.width = '100%', 1000) 
+
 		</script>
 
 <style>
@@ -107,6 +112,7 @@
     min-width: 100% !important;
     height: 100% !important;
     min-height: 100% !important; */
+    width: 100% important;
   }
 
   .overlay {
@@ -138,13 +144,12 @@
   font: bold 80px Sans-Serif;
   padding: 40px 0;
 
-      /* .relief { */
   background-color: #3a50d9;
   color: #e0eff2 !important;
   font: italic bold 100px Georgia, Serif !important;
   text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27 !important;
-/* } */
-
+  padding-bottom: 1rem;
+    margin-bottom: 0;
     }
 
   </style>
