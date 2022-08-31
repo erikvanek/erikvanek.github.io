@@ -10,3 +10,6 @@ Personal site built using [eleventy](https://www.11ty.dev/).
 - final output should be regenerated in _docs_ folder
 - if everything went wrong, commit your changes and push to the `master` branch of this repo
 - in several seconds, new site version should be deployed
+
+## Converting videos to usable format
+- use `ffmpeg` bu running `ffmpeg -i input.mp4 -c:v libx264 -crf 15 -preset fast -c:a aac -b:a 1080k  output.mp4`
