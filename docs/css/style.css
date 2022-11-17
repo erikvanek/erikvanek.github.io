@@ -143,3 +143,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
+
+address {
+  display: inline;
+}
