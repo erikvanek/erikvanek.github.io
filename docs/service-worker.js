@@ -127,6 +127,10 @@ self.__precacheManifest = [
     "revision": "e608d340b33898473961296023022cde"
   },
   {
+    "url": "disri/index.html",
+    "revision": "b03489e4ac69b3a4adb58570e0d14e31"
+  },
+  {
     "url": "good-services/index.html",
     "revision": "8a130fa5a7ca3102ebda4cc6cf3d8895"
   },
@@ -219,12 +223,20 @@ self.__precacheManifest = [
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
+    "url": "servisni-cyklo-stojany-brno/index.html",
+    "revision": "baf2d0a513eb459e69242c333e008b9f"
+  },
+  {
     "url": "tepache/index.html",
     "revision": "7a1afd97cd601af0abedc152afc1526a"
   },
   {
     "url": "things-to-build/index.html",
     "revision": "376defd1e5f81591ae124efb258b93d0"
+  },
+  {
+    "url": "trychtyr copy/index.html",
+    "revision": "2901adc79ff36053819776c190eae419"
   },
   {
     "url": "trychtyr/index.html",
