@@ -128,7 +128,7 @@ self.__precacheManifest = [
   },
   {
     "url": "disri/index.html",
-    "revision": "b03489e4ac69b3a4adb58570e0d14e31"
+    "revision": "59580d9a6ba0e3a62f5b144f0b23c49e"
   },
   {
     "url": "good-services/index.html",
