@@ -32,7 +32,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "c1b1ea9bcc854737da2d589f5f5ad2d9"
+    "revision": "be22a07872f322133c64c0bbeb92c903"
   },
   {
     "url": "book-reviews/deep-work/index.html",
@@ -201,6 +201,10 @@ self.__precacheManifest = [
   {
     "url": "js/reveal.js",
     "revision": "cf1c3b45a51afa7020371baa9f04916d"
+  },
+  {
+    "url": "kombucha/index.html",
+    "revision": "2dc918c397d0cfe2d374aa43785d6c3f"
   },
   {
     "url": "links/index.html",
