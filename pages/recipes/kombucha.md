@@ -9,6 +9,9 @@ permalink: /{{page.fileSlug}}/
 
 Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se dopracoval v průběhu více než roční kontinuální výroby různých kombuch. Recept je pro výrobu zhruba 2l kombuchi.
 
+![3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté](/img/kombucha/kombucha-nalevy.jpg)
+3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté
+
 ## Suroviny
 - 100g cukru krystal / krupice
   - lze použít i hnědý cukr, ale bílý je pro kombuchu vhodnější
@@ -35,6 +38,10 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
   - neplňte lahev až úplně po okraj, nechte 2-3 cm vzduchu aby láhev případně neexplodovala
   - pokud chcete, aby výsledný nápoj perlil, můžete vyzkoušet [sekundární fermentaci](#sekundarni)
 - a zopakujte celý proces znovu a znovu a znovu a dělte se o výsledky :)
+
+![Nalahvovaná kombucha ochucená meruňkou](/img/kombucha/nalahvovana-kombucha.jpeg)
+Nalahvovaná kombucha ochucená meruňkou
+
 ### SCOBY {#scoby}
 - SCOBY je zkratka původem z angličtiny pro symbiotickou kulturu bakterií a kvasinek
 - dají se koupit například v různých zdravých výživách, ale bohužel často nejsou v dobrém stavu
@@ -44,6 +51,12 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
   - např 20g kombucha pravděpodobně nezvládne ufermentovat 5l tekutiny, 2l by zvládnout mohla
   - z mojí zkušenosti má silná SCOBY alespoň 100g, v tu chvíli dokáže zvládnout hravě 4l nálev a produkovat nové odnože
 - zdravá aktivní SCOBY je vláčná, lesklá, bílá až žlutohnědá
+
+![Kvalitní SCOBY](/img/kombucha/kvalitni-scoby.jpeg)
+Kvalitní SCOBY
+
+![Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu](/img/kombucha/ibiskova-scoby.jpeg)
+Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu
 
 ### Backslop {#backslop}
 - prakticky se jedná o už vyrobenou kombuchu, která v sobě obsahuje žádoucí mikroorganismy a má optimální pH
@@ -57,3 +70,6 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 
 ### Sekundární fermentace {#sekundarni}
 - TODO :)
+
+![Smíchaná ibišková a zázvorová kombucha ochucená rozinkami](/img/kombucha/kombucha-trikolora.jpeg)
+Smíchaná ibišková a zázvorová kombucha ochucená rozinkami
