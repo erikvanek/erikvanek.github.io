@@ -7,7 +7,7 @@ tags: ["posts", "recipes", "fermentation"]
 permalink: /{{page.fileSlug}}/
 ---
 
-Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se dopracoval v průběhu více než roční kontinuální výroby různých kombuch. Recept je pro výrobu zhruba 2l kombuchi.
+Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se dopracoval v průběhu více než roční kontinuální výroby různých kombuch. Recept je pro výrobu zhruba 2l kombuchy.
 
 ![3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté](/img/kombucha/kombucha-nalevy.jpg)
 3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté
@@ -64,7 +64,7 @@ Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY syt�
 - pravděpodobně jej získáte jedním z těchto způsobů:
   - odlijete si z předchozího fermentačního cyklu
   - koupíte si si nějakou nepasterovanou a ideálně nedoslazovanou kombuchu v obchodě např. v různých zdravých výživách
-  - SCOBY v nějaké kombuchi dost pravděpodobně bude plavat když si ji poprvé přinesete
+  - SCOBY v nějaké kombuchy dost pravděpodobně bude plavat když si ji poprvé přinesete
     - tohle množství nemusí pro nový nálev stačit tak bych doporučil zkombinovat s nějakou kombuchou z obchodu
 - funguje podobně jako když se přidává kvásek do těsta při pečení
 
