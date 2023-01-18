@@ -208,7 +208,7 @@ self.__precacheManifest = [
   },
   {
     "url": "kombucha/index.html",
-    "revision": "ef805179fa0fc8e642bb10fce6cb3e40"
+    "revision": "a63915855695ef3518241610092635d0"
   },
   {
     "url": "links/index.html",
