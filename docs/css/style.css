@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   overflow: auto;
   color: var(--main-color);
-  font-size: 24px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   overflow: auto;
@@ -146,4 +146,8 @@ img {
 
 address {
   display: inline;
+}
+
+ul {
+  margin-top: 0.5rem;
 }
