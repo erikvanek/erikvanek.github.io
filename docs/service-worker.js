@@ -159,6 +159,10 @@ self.__precacheManifest = [
     "revision": "c4d8a71bf5cd208b171d1cba10b8b887"
   },
   {
+    "url": "img/kombucha/kombucha-nalevy.jpg",
+    "revision": "2ff5251805305158f92b387011b3f6b2"
+  },
+  {
     "url": "img/leaf.jpg",
     "revision": "b72e5e30db239eb2ca3c12d780f177a2"
   },
@@ -204,7 +208,7 @@ self.__precacheManifest = [
   },
   {
     "url": "kombucha/index.html",
-    "revision": "2dc918c397d0cfe2d374aa43785d6c3f"
+    "revision": "ef805179fa0fc8e642bb10fce6cb3e40"
   },
   {
     "url": "links/index.html",

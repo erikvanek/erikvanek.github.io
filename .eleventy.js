@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
         templateFormats: [
             'md',
             'jpg',
+            'jpeg',
             'png',
             'mp4',
             'pdf',
