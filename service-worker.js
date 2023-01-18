@@ -112,7 +112,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/style.css",
-    "revision": "ad80835399051d8965764b9f8274b253"
+    "revision": "597686cd11a7f600cd11e63b739cab19"
   },
   {
     "url": "deep-work/index.html",
@@ -208,7 +208,7 @@ self.__precacheManifest = [
   },
   {
     "url": "kombucha/index.html",
-    "revision": "a63915855695ef3518241610092635d0"
+    "revision": "fe7dc422ff522a284cac27d243e42891"
   },
   {
     "url": "links/index.html",
