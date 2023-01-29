@@ -1,0 +1,3 @@
+- bullshit job
+- show-off heavy environment
+	- let actions speak for themselves

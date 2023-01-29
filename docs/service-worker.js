@@ -147,6 +147,10 @@ self.__precacheManifest = [
     "revision": "8dc88dfcc13758e14c77249aaa2f5ca7"
   },
   {
+    "url": "img/beet.jpg",
+    "revision": "552bd1b788459dbce233d3cc4768fb9b"
+  },
+  {
     "url": "img/box-in-system.jpg",
     "revision": "f0fe4464e0265b1c457353d66c337f96"
   },
