@@ -32,7 +32,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "be22a07872f322133c64c0bbeb92c903"
+    "revision": "1011c1ae850c7ac6becc7b7b5f6fc2f7"
   },
   {
     "url": "book-reviews/deep-work/index.html",
@@ -116,11 +116,11 @@ self.__precacheManifest = [
   },
   {
     "url": "deep-work/index.html",
-    "revision": "4c42f35becc91ea1a76e15e1b0441adc"
+    "revision": "47487dc56160e014d3e042f670451023"
   },
   {
     "url": "design-matters-2020/index.html",
-    "revision": "8bb33d656e6ed29deb015608547e81cd"
+    "revision": "0300b7345c25764f2d0f5b2debfd42fb"
   },
   {
     "url": "development/index.html",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
   },
   {
     "url": "good-services/index.html",
-    "revision": "8a130fa5a7ca3102ebda4cc6cf3d8895"
+    "revision": "9697240dc66b9eb592e21ef32de7e88d"
   },
   {
     "url": "hello-blog-2/index.html",
@@ -208,7 +208,7 @@ self.__precacheManifest = [
   },
   {
     "url": "kombucha/index.html",
-    "revision": "fe7dc422ff522a284cac27d243e42891"
+    "revision": "5cb565c11a3527390ce585e65ef163ee"
   },
   {
     "url": "links/index.html",
@@ -227,6 +227,18 @@ self.__precacheManifest = [
     "revision": "672cdefd7b7388d2659a5fd5f921511e"
   },
   {
+    "url": "notes/books/Hooked/index.html",
+    "revision": "95f6cd0e48c2ffe8e4aed596d9b77fbe"
+  },
+  {
+    "url": "notes/books/Prepisovat pravidla/index.html",
+    "revision": "ee03a9f7421bce49117d9bbfa407cdb4"
+  },
+  {
+    "url": "notes/books/Přepisovat pravidla/index.html",
+    "revision": "1908717ab2945be5a02e39a441b3dfee"
+  },
+  {
     "url": "recipes/tepache/index.html",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
@@ -236,7 +248,7 @@ self.__precacheManifest = [
   },
   {
     "url": "tepache/index.html",
-    "revision": "7a1afd97cd601af0abedc152afc1526a"
+    "revision": "bf1dcfedaa755acc8650fa9b2d92a2eb"
   },
   {
     "url": "things-to-build/index.html",
