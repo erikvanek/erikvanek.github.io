@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resume/experiences/Infarm.md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resume/experiences/\"No-bro camp\".md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "resume/experiences/Infarm.md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "resume/experiences/Infarm.md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "resume/experiences/Infarm.md"
+                "file": "resume/experiences/No-bro-camp.md"
               }
             }
           }
@@ -173,15 +173,15 @@
   },
   "active": "117bc471b2a208f2",
   "lastOpenFiles": [
+    "resume/experiences/Infarm.md",
     "resume/experiences/FNZ.md",
     "resume/experiences/Poker pro.md",
-    "resume/experiences/\"No-bro camp\".md",
+    "resume/experiences/No-bro-camp.md",
     "resume/experiences/Pudem pudem.md",
     "resume/experiences/Fermentation.md",
     "resume/experiences/GAB.md",
     "resume/experiences/Přístupnější stát.md",
     "resume/experiences/Trychtýř.md",
-    "resume/experiences/Adacta.md",
-    "resume/experiences/Volunteering.md"
+    "resume/experiences/Adacta.md"
   ]
 }
