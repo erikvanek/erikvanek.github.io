@@ -124,7 +124,7 @@ self.__precacheManifest = [
   },
   {
     "url": "development/index.html",
-    "revision": "e608d340b33898473961296023022cde"
+    "revision": "ac448c5b6dd3cab619522c0c053147fe"
   },
   {
     "url": "disri/index.html",
@@ -145,10 +145,6 @@ self.__precacheManifest = [
   {
     "url": "img/basil-crops.jpg",
     "revision": "8dc88dfcc13758e14c77249aaa2f5ca7"
-  },
-  {
-    "url": "img/beet.jpg",
-    "revision": "552bd1b788459dbce233d3cc4768fb9b"
   },
   {
     "url": "img/box-in-system.jpg",
@@ -228,7 +224,7 @@ self.__precacheManifest = [
   },
   {
     "url": "me/index.html",
-    "revision": "672cdefd7b7388d2659a5fd5f921511e"
+    "revision": "c26c07be42df1a8e10b0451d0ed6480e"
   },
   {
     "url": "notes/books/Hooked/index.html",

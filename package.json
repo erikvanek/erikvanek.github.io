@@ -1,29 +1,33 @@
 {
-  "name": "erikvanek.github.io",
-  "version": "1.0.0",
-  "description": "This is generated output from [source repository](https://github.com/erikvanek/erikvanek.com). Never make changes in this one, rather generate new version from aformentioned repo.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "build": "eleventy --passthroughall",
-    "serve": "eleventy --serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/erikvanek/erikvanek.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/erikvanek/erikvanek.github.io/issues"
-  },
-  "homepage": "https://github.com/erikvanek/erikvanek.github.io#readme",
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "eleventy-plugin-pwa": "^1.0.8",
-    "markdown-it-attrs": "^4.1.4"
-  }
+    "name": "erikvanek.github.io",
+    "version": "1.0.0",
+    "description": "This is generated output from [source repository](https://github.com/erikvanek/erikvanek.com). Never make changes in this one, rather generate new version from aformentioned repo.",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "build": "eleventy --passthroughall",
+        "serve": "eleventy --serve --config=.eleventy.js",
+        "format": "prettier **/*.md",
+        "format:fix": "prettier --write '**/*.md'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/erikvanek/erikvanek.github.io.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/erikvanek/erikvanek.github.io/issues"
+    },
+    "homepage": "https://github.com/erikvanek/erikvanek.github.io#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^0.11.1",
+        "eleventy-plugin-pwa": "^1.0.8",
+        "markdown-it-attrs": "^4.1.4"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.4"
+    }
 }

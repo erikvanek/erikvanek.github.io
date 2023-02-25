@@ -8,7 +8,9 @@ layout: article.njk
 Unsctructured collection of ideas that I might spend some time on building.
 
 ## Mind your time
+
 Browser extension that focuses on digital well-being by monitoring where do you spend your time online. Main aim is to be mindful about time spent on social media which is one of the most risk factors for growing up teenagers as presented in [one episode](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9yWjBjWWsxMg/episode/YzZlY2VmMDQtOTVkYS00ZmY2LWFmYTQtNDgyNDQ0YWIwZTJh?sa=X&ved=0CAUQkfYCahcKEwjw9PeaqYLtAhUAAAAAHQAAAAAQAQ) of Your Undivided Attention podcast.
+
 - chrome extension
 - goes from green happy smiley face :) to a red sad smiley face :( based on where the digital time is spent
 - define "healthy" boundaries based on some research

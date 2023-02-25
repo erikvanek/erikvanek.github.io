@@ -1,30 +1,48 @@
 ---
-title: "Hi. I'm Erik Vaněk"
-date: 2018-03-23T20:03:43+01:00
+title: Hey I'm Erik
+date: 2023-02-25
 draft: false
 layout: article.njk
 ---
 
-I like to do stuff. [Growing greens aeroponically](/aero/) or develop on the [web](/development/).
+## What I'm up to?
+- food
+- tech
+- design
+- being out
+
+I've been around in mainly software industry since 2013 wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/) for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure. After being impacted by [restructuring](https://www.infarm.com/news/note-from-infarm-s-founders-strategy-shift-and-profitability-at-infarm) in late 2022 I'm enjoying my garden leave until I decide what is my next journey to embark on.
+
+## In 2022 I was also
+
+-   brewing [kombucha](/kombucha) and fermenting things a lot
+-   doing a bit of [creative coding](https://www.erikvanek.com/pudem-pudem/) (some presets need a MIDI controller)
+-   volunteering in [Práh](https://www.prahjm.cz/), [Vesna](https://spolekvesna.cz/) and [ADRA](https://www.prahjm.cz/)
+-   ensuring [Sonda festival](https://www.youtube.com/watch?v=C4JHn8dAfMg&ab_channel=SONDAFestival) runs smoothly
+-   part of [Trychtýř collective](https://svitava.org/udalost/open-call-trychtyr/), see my [intro slides](http://www.erikvanek.com/trychtyr/)
+-   growing greens using my [aeroponics](/aero) setup
+
+<!-- I like to do stuff. [Growing greens aeroponically](/aero/) or develop on the [web](/development/).
 
 Working professionally as a software developer for several years capable of wearing a designer or a product hat. Otherwise you'll find me cooking often, fermenting things and spending my time outside preferably.
 
 ### What do I like?
 
--   honesty,
--   simple & seasonal food,
--   understanding root causes of things,
--   decisiveness,
--   creative wordplay.
--   independent musicians (see [my wishlist](https://bandcamp.com/falsepositive/wishlist))
+- honesty,
+- simple & seasonal food,
+- understanding root causes of things,
+- decisiveness,
+- creative wordplay.
+- independent musicians (see [my wishlist](https://bandcamp.com/falsepositive/wishlist))
 
 ### What I do not like?
 
--   bullshit and playing games,
--   improper tooling (e.g. dull knives),
--   stereotypes,
--   "But we've always done it this way" mindset,
--   overcooked pasta.
+- bullshit and playing games,
+- improper tooling (e.g. dull knives),
+- stereotypes,
+- "But we've always done it this way" mindset,
+- overcooked pasta.
+-->
 
 ## Get in touch {#contact}
 
