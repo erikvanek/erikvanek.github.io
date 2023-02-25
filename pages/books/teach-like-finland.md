@@ -2,7 +2,7 @@
 title: Teach Like Finland - 33 Simple Strategies _for_ Joyful Classrooms
 author: Timothy D. Walker
 date: 2021-01-05
-tags: teaching learning
+tags: [teaching, learning]
 category: book-reviews
 ---
 

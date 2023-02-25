@@ -1,8 +1,0 @@
-- remote
-	- yes?
-	- no?
-	- why?
-- how much local vs how much global
-- "Tech is a tool, not a solution."
-	- tech is fine but let's not end up fiddling with its particularities
-	- cause no one cares, people want things to work whatever is powering them

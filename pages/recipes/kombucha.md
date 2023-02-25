@@ -13,6 +13,7 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté
 
 ## Suroviny
+
 - 100g cukru krystal / krupice
   - lze použít i hnědý cukr, ale bílý je pro kombuchu vhodnější
 - kvalitní [SCOBY](#scoby), ideálně ať váží alespoň 20g
@@ -22,28 +23,30 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 - 2l vody
 
 ## Postup
+
 1. připravte zvolený čaj podle instrukcí, rozmíchejte v něm cukr a nechte vychladnout na pokojovou teplotu
 2. přelejte do skleněné nádoby, přilijte backslop a promíchejte
 3. přidejte do nádoby SCOBY, hrdlo přikryjte plátnem a utěsněte gumičkou
-    * SCOBY může zpočátku padnout na dno, různě se otáčet a v nálevu se pohybovat - je to naprosto v pořádku
-    * po nějaké době pravděpodobně vypluje na hladinu
-    * je dost možné, že v čase se v nálevu začne tvořit nová SCOBY na hladině - tu můžete použít v dalších nálevech, nebo se o ni třeba podělit :)
+   - SCOBY může zpočátku padnout na dno, různě se otáčet a v nálevu se pohybovat - je to naprosto v pořádku
+   - po nějaké době pravděpodobně vypluje na hladinu
+   - je dost možné, že v čase se v nálevu začne tvořit nová SCOBY na hladině - tu můžete použít v dalších nálevech, nebo se o ni třeba podělit :)
 4. nádobu dejte do běžné pokojové teploty, neměla by klesnout pod 15 a stoupnout nějak vysoko nad 30 stupňů, někde kolem 20 je ideál
 5. nechte fermentovat cca 2 týdny a v průběhu času ochutnávejte
-    * výsledná kyselost je na vás, někdo má radši míň, někdo víc - čím díl bude kombucha fermentovat, tím kyselejší bude
+   - výsledná kyselost je na vás, někdo má radši míň, někdo víc - čím díl bude kombucha fermentovat, tím kyselejší bude
 6. když kombucha chutná jak si přejete tak vyndejte SCOBY a nálev profiltrujte od usazenin a možných zbytků SCOBY přes sítko
 7. kus si odlijte a vytvořte si tak [backslop](#backslop) na příští kombuchu
 8. následně nalahvujte
-    * doporučil bych do nádob s uzavíratelným vrškem, případně se mi osvědčily sklenice od Vincentky
-    * neplňte lahev až úplně po okraj, nechte 2-3 cm vzduchu aby láhev případně neexplodovala
-    * pokud chcete, aby výsledný nápoj perlil, můžete vyzkoušet [sekundární fermentaci](#sekundarni)
+   - doporučil bych do nádob s uzavíratelným vrškem, případně se mi osvědčily sklenice od Vincentky
+   - neplňte lahev až úplně po okraj, nechte 2-3 cm vzduchu aby láhev případně neexplodovala
+   - pokud chcete, aby výsledný nápoj perlil, můžete vyzkoušet [sekundární fermentaci](#sekundarni)
 9. fermentační proces se zastaví chladem čili výsledný produkt uschovejte v lednici nebo někde v chladu, jinak by nápoj dál kvasil a byl kyselejší a kyselejší
-10.  a zopakujte celý proces znovu a znovu a znovu a dělte se o výsledky 🍿
+10. a zopakujte celý proces znovu a znovu a znovu a dělte se o výsledky 🍿
 
 ![Nalahvovaná kombucha ochucená meruňkou](/img/kombucha/nalahvovana-kombucha.jpeg)
 Nalahvovaná kombucha ochucená meruňkou
 
 ### SCOBY {#scoby}
+
 - SCOBY je zkratka původem z angličtiny pro symbiotickou kulturu bakterií a kvasinek
 - dají se koupit například v různých zdravých výživách, ale bohužel často nejsou v dobrém stavu
 - doporučuju kontaktovat někoho o kom víte, že kombuchu vyrábí a pokusit se SCOBY získat už od praktikujícího kvasitele
@@ -60,6 +63,7 @@ Kvalitní SCOBY
 Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu
 
 ### Backslop {#backslop}
+
 - jedná se o už vyrobenou kombuchu, která v sobě obsahuje potřebné mikroorganismy a má optimální pH
 - pomáhá v nálevu vytvořit ideální podmínky pro fermentaci
 - pravděpodobně jej získáte jedním z těchto způsobů:
@@ -70,6 +74,7 @@ Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY syt�
 - funguje podobně jako když se přidává kvásek do těsta při pečení
 
 ### Sekundární fermentace {#sekundarni}
+
 - postup, který nám umožňuje jednak výsledný nápoj dochutit a i jej nasytit CO<sub>2</sub> a dosáhneme tak příjemné perlivosti
 - během lahvování přidáme do lahví nějaký zdroj cukru, který rozběhne fermentační proces znovu → proto fermentace sekundární
 - přidat můžeme např:
@@ -88,4 +93,4 @@ Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY syt�
 - **POZOR** - při pokusech se sekundární fermentací je největší riziko vybuchnutí lahve - zatím nikdy se mi to s kombuchou nestalo, ale to riziko tady je tak opatrně
 
 ![Smíchaná ibišková a zázvorová kombucha ochucená rozinkami](/img/kombucha/kombucha-trikolora.jpeg)
-*Smíchaná ibišková a zázvorová kombucha ochucená rozinkami*
+_Smíchaná ibišková a zázvorová kombucha ochucená rozinkami_

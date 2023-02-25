@@ -4,6 +4,7 @@ date: 2018-03-23T22:17:10+01:00
 draft: false
 layout: article.njk
 ---
+
 _(Disclaimer: this page is a bit dated - you know, technology changes...)_
 
 What is my favourite platform you may ask. [Open Web Platform](https://www.w3.org/standards/) I'd reply. Web is an amazing medium that is free to use to everyone. No vendor lock-in, no proprietary tools. On the other hand, it suffers from the fact that it was constructed as a network for exchange of documents. It was just simple hypertext back then. Times have changed. Today's internet users expect smooth, interactive yet reliable tools. It's challenging to deliver those, but pleasing when done properly.
@@ -14,11 +15,10 @@ Professionally I've spent last five years or so working as a software developer 
 
 During those years spent as a software developer, I had a chance to get in touch with some incredibly skilled and open-minded people. It was also excellent opportunity to get my hands on useful technologies in web development space. To name a few:
 
-- JavasSript - Web's lingua franca these days. Hard to get stuff done without JavaScript. Recent ESx flavors make it more and more versatile and accessible tool in your toolbox. Slightly suffering from backwards compatibility though.
-  	- React - React is awesome, right? Yes, Vue is steadily growing, Angular has a huge community, but counting its pros and cons, I believe React still wins in frontend world. Feel free to prove me wrong.
-	- Redux - It is hard to build apps without them having state. React's heavy inspiration in Elm made me interested in Elm lately. Other than that, Dan Abramov has made a great yet simple to understand tool for React ecosystem. Kudos for that!
-	- Typescript - Type safety is nice. Typescript can help you prevent dumb errors, but also slow you down. Depends on optimally defined rules. At first, I was not a big fan, recently we have a good relationship.
-	- Also got in touch with other tools like Webpack, Reselect, Storybook, Jest for testing, postcss, npm and others.
+- JavasSript - Web's lingua franca these days. Hard to get stuff done without JavaScript. Recent ESx flavors make it more and more versatile and accessible tool in your toolbox. Slightly suffering from backwards compatibility though. - React - React is awesome, right? Yes, Vue is steadily growing, Angular has a huge community, but counting its pros and cons, I believe React still wins in frontend world. Feel free to prove me wrong.
+  - Redux - It is hard to build apps without them having state. React's heavy inspiration in Elm made me interested in Elm lately. Other than that, Dan Abramov has made a great yet simple to understand tool for React ecosystem. Kudos for that!
+  - Typescript - Type safety is nice. Typescript can help you prevent dumb errors, but also slow you down. Depends on optimally defined rules. At first, I was not a big fan, recently we have a good relationship.
+  - Also got in touch with other tools like Webpack, Reselect, Storybook, Jest for testing, postcss, npm and others.
 - .NET land - in all companies I've worked so far, backend was written in .NET. Last two years I've spent working with .NET Core. I aim at writing SOLID backend code, trying to keep minimum of logic in controllers when using MVC. If I could choose between frontend or backend, I'm all for frontend work though.
 - Responsive webdesign - feels like a proper mindset when building [web these days](http://bradfrost.com/blog/post/this-is-the-web/). It is crucial to deliver inclusive designs in the world of growing [device fragmentation](https://seesparkbox.com/foundry/there_is_no_breakpoint).
 - Progressive web apps - Again more of a mindset focusing on app interactivity and responsiveness. Every second wasted rendering, data fetching or parsing app content is wasted time for users. Or worse - we might lose them. Strong emphasis is put on user experience and is aligned with my core values in software development. Progressive web apps help delivering content even when users are suffering from [lie-fi](https://developers.google.com/web/fundamentals/performance/poor-connectivity/#what_is_lie-fi) or do not have any connection at all. I see it as a way of progressive enhancement to a standard online/offline duality.
