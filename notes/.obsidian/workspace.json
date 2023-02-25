@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "b03334858f409a54",
+        "id": "11f8d4bf11f2565b",
         "type": "tabs",
         "children": [
           {
-            "id": "ae35025b73675c03",
+            "id": "4651dd8ccda41f17",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/Přepisovat pravidla.md",
+                "file": "resume/experiences/FNZ.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "117bc471b2a208f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "resume/experiences/No-bro-camp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8073f0428b3f74c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "resume/experiences/No-bro-camp.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/Přepisovat pravidla.md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/Přepisovat pravidla.md",
+                "file": "resume/experiences/No-bro-camp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "books/Přepisovat pravidla.md"
+                "file": "resume/experiences/No-bro-camp.md"
               }
             }
           }
@@ -146,9 +171,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ae35025b73675c03",
+  "active": "117bc471b2a208f2",
   "lastOpenFiles": [
-    "books/Přepisovat pravidla.md",
-    "books/Hooked.md"
+    "resume/experiences/Infarm.md",
+    "resume/experiences/FNZ.md",
+    "resume/experiences/Poker pro.md",
+    "resume/experiences/No-bro-camp.md",
+    "resume/experiences/Pudem pudem.md",
+    "resume/experiences/Fermentation.md",
+    "resume/experiences/GAB.md",
+    "resume/experiences/Přístupnější stát.md",
+    "resume/experiences/Trychtýř.md",
+    "resume/experiences/Adacta.md"
   ]
 }
