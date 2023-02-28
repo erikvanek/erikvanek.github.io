@@ -6,12 +6,13 @@ layout: article.njk
 ---
 
 ## What I'm up to?
-- food
-- tech
-- design
-- being out
 
-I've been around in mainly software industry since 2013 wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/) for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure. After being impacted by [restructuring](https://www.infarm.com/news/note-from-infarm-s-founders-strategy-shift-and-profitability-at-infarm) in late 2022 I'm enjoying my garden leave until I decide what is my next journey to embark on.
+-   food
+-   tech
+-   design
+-   being out
+
+I've been around in mainly software industry since 2013 wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/) for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure. After being impacted by [restructuring](https://www.infarm.com/news/note-from-infarm-s-founders-strategy-shift-and-profitability-at-infarm) in late 2022 I'm enjoying my garden leave until I decide what is my next journey to embark on. More structured CV available [here](../documents/Erik-Vanek-cv.pdf){:target="_blank"}
 
 ## In 2022 I was also
 
@@ -21,6 +22,7 @@ I've been around in mainly software industry since 2013 wearing multiple hats. M
 -   ensuring [Sonda festival](https://www.youtube.com/watch?v=C4JHn8dAfMg&ab_channel=SONDAFestival) runs smoothly
 -   part of [Trychtýř collective](https://svitava.org/udalost/open-call-trychtyr/), see my [intro slides](http://www.erikvanek.com/trychtyr/)
 -   growing greens using my [aeroponics](/aero) setup
+-   co-curating a [Gallery of Architecture](https://www.galeriearchitekturybrno.cz/)
 
 <!-- I like to do stuff. [Growing greens aeroponically](/aero/) or develop on the [web](/development/).
 
