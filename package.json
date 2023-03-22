@@ -6,8 +6,10 @@
         "doc": "docs"
     },
     "scripts": {
-        "build": "eleventy --passthroughall",
-        "serve": "eleventy --serve --config=.eleventy.js",
+        "build": "eleventy",
+        "start": "eleventy --serve",
+        "debug:node": "node --trace-warnings node_modules/.bin/eleventy --serve",
+        "debug:eleventy": "DEBUG=Eleventy* node --trace-warnings node_modules/.bin/eleventy --serve",
         "format": "prettier **/*.md",
         "format:fix": "prettier --write '**/*.md'"
     },
@@ -23,8 +25,7 @@
     },
     "homepage": "https://github.com/erikvanek/erikvanek.github.io#readme",
     "dependencies": {
-        "@11ty/eleventy": "^0.11.1",
-        "eleventy-plugin-pwa": "^1.0.8",
+        "@11ty/eleventy": "^2.0.0",
         "markdown-it-attrs": "^4.1.4",
         "markdown-it-link-attributes": "^4.0.1"
     },
