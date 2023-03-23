@@ -1,0 +1,23 @@
+- co-create
+- can-do collective
+- max 50% sedentary
+  - is that realistic?
+- preferably in & out environment
+- people-oriented while leveraging tech savviness
+- learn where I suck
+  - inclusivity?
+  - dealing with ego beasts?
+- **autonomy + mastery + purpose**
+- diverse team
+  - i.e. like when I started at infarm
+- max 4 day work week, preferably 3 day
+- travel opportunity and English usage
+- contribute to regenerative economics
+- mid-long term, no jumping jobs now
+- role where I can actively contribute rather then just being the 'dog being wagged'
+- focus on _why_ rather than _how_
+  - I spent too much time focusing on the latter
+- bring the good stuff (what's that? from where?) to local context(s)
+  - ideally working on replicable projects
+  - mainstreaming / advocating the good stuff
+- sweet spot is an organization ~ 20 - 200 people
