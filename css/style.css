@@ -139,12 +139,13 @@ ul {
 }
 
 .main-claim {
-  animation: star 5s ease-out infinite;
   padding: 0;
-  margin: 0;
+  display: none;
+  margin: 2rem 0;
+  text-align: center;
 }
 
-.landing h2, .landing .main-claim, .landing li {
+.landing h2, .main-claim, .landing li {
   font-size: 3rem;
   background: linear-gradient(45deg, #eeaa52, #e73c6f, #2394d5, #2af3b7);
   color:  rgba(255, 128, 128, .875);
@@ -167,7 +168,7 @@ ul {
 
 @media screen and (max-width: 600px) {
   .main-claim {
-    font-size: 2rem;
+    font-size: 2.75rem;
     -webkit-text-stroke: 4px transparent; 
   }
 }
@@ -176,4 +177,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
