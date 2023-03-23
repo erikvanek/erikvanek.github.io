@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "6cc2fb4d2f08a26d",
+    "type": "split",
+    "children": [
+      {
+        "id": "45bcc041f41e5c42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f02ac2ed85800c5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3226a1a0f50535c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f8dd492768286fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee613e5f4402eea4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6b30415ae18c831f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fd2a826c6f924203",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5bde52dce7d98592",
+    "type": "split",
+    "children": [
+      {
+        "id": "35bfe64ff65e4e60",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac499b7e25539db9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e989cf5cb657cea1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9ce199c8ae5a37b8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cf5e7b28cd8db3c0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1f02ac2ed85800c5",
+  "lastOpenFiles": [
+    "resume/Nice-to-have.md",
+    "books/Cradle-to-cradle.md",
+    "books/Přepisovat-pravidla.md",
+    "books/Hooked.md",
+    "resume/experiences/FNZ.md",
+    "resume/experiences/Fermentation.md",
+    "resume/experiences/Adacta.md",
+    "resume/Questions.md",
+    "resume/What-I-want.md",
+    "resume/What-I-don't-want.md",
+    "resume/What-can-I-offer.md",
+    "resume/experiences/No-bro-camp.md",
+    "resume/experiences/Infarm.md",
+    "resume/experiences/Poker pro.md",
+    "resume/experiences/Pudem pudem.md"
+  ]
+}
