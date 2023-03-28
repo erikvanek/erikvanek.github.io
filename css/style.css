@@ -181,3 +181,7 @@ ul {
   width: 100vw;
   height: 100vh;
 }
+
+#notes, #review {
+  display: none;
+}
