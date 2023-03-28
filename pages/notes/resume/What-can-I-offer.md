@@ -3,7 +3,7 @@
   - team is as weak as its weakest link
 - rather a starter than finisher
   - willing to work on this
-- context overlap / knowledge
+- context overlap / knowledge -> empathy
 - event management (private e.g. team events, public e.g. public usability testing, festival prep)
 - open mindedness & looking to collaborate
 - switch hats quickly if needed

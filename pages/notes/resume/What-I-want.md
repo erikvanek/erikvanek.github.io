@@ -21,3 +21,4 @@
   - ideally working on replicable projects
   - mainstreaming / advocating the good stuff
 - sweet spot is an organization ~ 20 - 200 people
+	- short feedback loops & continous evaluation and discovery

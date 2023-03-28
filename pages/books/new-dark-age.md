@@ -1,11 +1,12 @@
 ---
-title: "New Dark Age: Technology and the End of the Future"
-author: MISSSSSINNNGGG
+title: "New Dark Age"
+subtitle: "Technology and the End of the Future"
+author: "James Bridle"
 date: 2021-01-02
-tags: technology
-category: book-reviews
 draft: true
-layout: article.njk
+layout: "blog.njk"
+tags: [books, posts, technology]
+
 ---
 
 New Dark Age brings rather critial (maybe even pesimistic) view on recent technology development. It also describes how did computers evolve into their current shape and which important players affected their historicla development.

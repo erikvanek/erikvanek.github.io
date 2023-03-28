@@ -2,13 +2,16 @@
 title: Hooked
 subtitle: How to Build Habit-Forming Products
 authors: ["Nir Eyal"]
-tags: [design, product-development]
+tags: [design, product-development, posts]
 started-reading: 2022-05-05
 finished-reading: 2023-01-05
-date: 2023-06-01
+date: 2023-01-06
 blog: true
 draft: false
+layout: blog.njk
 ---
+
+<div id="notes">
 
 ## Notes
 
@@ -65,8 +68,9 @@ draft: false
 - @208 - [Newsweek: The Internet? Bah!](http://www.nysaflt.org/workshops/colt/2010/The%20Internet.pdf)
 - @210 - "The creation of a new infrastructure often opens up unforseen ways to make other actions simpler or more rewarding"
   - e.g. internet thanks to the infrastructure comissioned by the US government during the cold ward, Google thanks to Yahoo, GUI thanks to terminal interfaces, Instagram thanks to embedded camera, ...
+</div>
 
-## Review
+## Review{#review}
 
 Despite the fact that the book is 9 years old still feels pretty relevant. An interesting look under the hood of how to design affective algorithms of persuasion 'to make users love / get addicted to your product'.
 I am not really interested in knowing how to design such products. Rather I'm interested in underlying mechanisms driving these products. Possibly this knowledge could help me to defend my own attention which seems to be a scarcier resource each day.
