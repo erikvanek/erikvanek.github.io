@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
         linkify: true
     };
 
+
+
     const markdownLib = markdownIt(options)
         .use(markdownItAttrs)
         .disable("code");
@@ -36,7 +38,6 @@ module.exports = function (eleventyConfig) {
         "ico",
         "md"
     ]);
-
 
     return {
         dir: {

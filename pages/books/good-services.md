@@ -5,7 +5,7 @@ author: "Lou Downe"
 date: 2022-01-17
 draft: false
 layout: blog.njk
-tags: ["posts", "books"]
+tags: ["posts", "books", "design"]
 permalink: /{{page.fileSlug}}/
 ---
 

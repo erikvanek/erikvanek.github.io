@@ -2,13 +2,16 @@
 title: Přepisovat pravidla
 subtitle: Antiprůvodce láskou, sexem a vztahy
 authors: ["Meg-John Barker"]
-tags: vztahy
+tags: [vztahy, "books", "posts"]
 started-reading: 2022-12-12
 finished-reading: 2023-01-27
 date: 2023-01-29
 blog: true
-draft: false
+layout: blog.njk
+
 ---
+
+<div id="notes">
 
 ## Notes
 
@@ -70,8 +73,12 @@ draft: false
 - @376 pravidla přepisujeme tak, abychom našli způsoby, jak být sami se sebou a svými blízkými, které jsou méně zpytující a méně hodnotící, a naopak otevřenější a laskavější
 - @390 krabí kýbl jako toxické okolí neumožňující jedinci se vyvinout nebo posunout směrem, který není běžně uznávaný nebo očekávaný
 - diagramy "šedá na šedé" jdou občas špatně číst
+- @383 přepisování pravidel jako strastiplná cesta ven z krabího kýblu
+- @389 krabí kýbly vedou k "oni versus my" mindsetu
 
-## Review
+</div>
+
+## Review{#review}
 
 Knížka na desíti kapitolách rozvíjí témata, týkající se partnerských vztahů a jakými změnami v dnešní době procházejí. Kniha se snaží poukazovat na nefungující vztahové vzorce, které často vedou k nespokojenosti ve vztazích a přináší sadu alternativních pravidel, která umožňují se na problémové situace koukat z jiné perspektivy.
 Zároveň si neklade za cíl podat vyčerpávající a nerozporovatelný výklad toho, jak by měl člověk ve vztazích fungovat, co je správně a co ne. Beru ji spíš jako sondu do jiných možných kontextů a inspiraci k tomu, jak na vztahy lze nahlížet a jak je možné přerámovat hluboce zažité vzorce ať už na úrovni jednotlivce nebo celé společnosti.

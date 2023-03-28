@@ -1,0 +1,16 @@
+- Tech rider & __knowing who is supposed to deliver what from the rider__
+- Duck tape
+- Scrap paper
+- Pencil(case)
+- Razor
+- Permanent markers
+- Power bank
+- Head torch
+- Snacks
+- Plasters
+- Scissors
+- Pliers
+- Masking tape
+- Rubber bands
+- Multitool
+- Printed Lineup multiple times with sound check times included

@@ -1,9 +1,10 @@
 ---
-title: Teach Like Finland - 33 Simple Strategies _for_ Joyful Classrooms
+title: Teach Like Finland
+subtitle: 33 Simple Strategies for Joyful Classrooms
 author: Timothy D. Walker
 date: 2021-01-05
-tags: [teaching, learning]
-category: book-reviews
+tags: [books, teaching, posts]
+layout: blog.njk
 ---
 
 Finland is world known for its well performing school system at least based on PISA scores. Is it really the case? Timothy D. Walker brings a comparison of his experience with american and finish school systems and provides 33 things which schools in Northern American can learn from schools in Finland.

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "45bcc041f41e5c42",
+        "id": "6881579133baa556",
         "type": "tabs",
         "children": [
           {
-            "id": "1f02ac2ed85800c5",
+            "id": "d77b5f125b5f6b21",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,22 +138,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1f02ac2ed85800c5",
+  "active": "d77b5f125b5f6b21",
   "lastOpenFiles": [
-    "resume/Nice-to-have.md",
-    "books/Cradle-to-cradle.md",
-    "books/Přepisovat-pravidla.md",
-    "books/Hooked.md",
-    "resume/experiences/FNZ.md",
-    "resume/experiences/Fermentation.md",
-    "resume/experiences/Adacta.md",
-    "resume/Questions.md",
+    "books/prepisovat-pravidla.md",
+    "books/hooked.md",
+    "resume/experiences/Trychtýř.md",
+    "random/imposter-syndrom-Adam-Grant.md",
     "resume/What-I-want.md",
-    "resume/What-I-don't-want.md",
+    "random/stage-management-kit.md",
+    "resume/experiences/Sonda.md",
+    "resume/experiences/Snapshot.md",
     "resume/What-can-I-offer.md",
-    "resume/experiences/No-bro-camp.md",
-    "resume/experiences/Infarm.md",
-    "resume/experiences/Poker pro.md",
-    "resume/experiences/Pudem pudem.md"
+    "resume/Nice-to-have.md"
   ]
 }

@@ -2,14 +2,18 @@
 title: Cradle to cradle
 subtitle: Re-making the way we make things
 authors: ["Michael Braungart, William McDonough"]
-tags: ["design", "cradle-to-cradle", "regenerative"]
-started-reading: 2023-06-02
-finished-reading: 2023-25-02
+tags: ["design", "cradle-to-cradle", "regenerative", "books", "posts"]
+started-reading: 2023-02-06
+finished-reading: 2023-02-25
 date: 2023-03-23
 blog: true
 draft: false
 permalink: /{{page.fileSlug}}/
+layout: blog.njk
+
 ---
+
+<div id="notes">
 
 ## Notes
 
@@ -99,7 +103,11 @@ permalink: /{{page.fileSlug}}/
 - Ford's Rouge factory as a good example of living in harmony with surrounding ecosystem
 - Einstein: __If we're to solve problems that plague us, our thiking must evolve beyond the level, we were using when we caused those problems in the first place__
 - __5 steps to eco-effectiveness__ - useful mindset for industrial designers when thking about what to work on next and how to do it well
-## Review
+
+</div>
+
+## Review{#review}
+
 One of the most important books I have read so far. I would call it the bible of upcycling but that would reduce its value and impact.
 For me it serves a good predecessor of transition design in a way that it does not leave the planetery and ecological aspect of designing behind. It rather puts it at the core of our thinking and as one of the highest priorities when working on new products. Also its concept of "product of service" seems to be one of the predecessors of _whatever_ as a service that is being coined around a lot around lately.
 Probably the most important aspect of the book is the focus on upcycling that really opened my eyes regarding how one can think about that. When we consider upcycling only as an afterthought we'll never get the most of the product we want to upcycle. What happens with a product after it has finished its primary journey needs to be embedded in its initial design. Only this way it can be then reused meaningfully and in the best case in a way, that does not decrease its value in contrast to downcycling.
