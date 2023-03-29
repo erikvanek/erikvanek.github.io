@@ -11,7 +11,7 @@ layout: article.njk
 -   design
 -   being out
 
-I've been around in mainly software industry since 2013 wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/) for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure. After being impacted by [restructuring](https://www.infarm.com/news/note-from-infarm-s-founders-strategy-shift-and-profitability-at-infarm) in late 2022 I'm enjoying my garden leave until I decide what is my next journey to embark on. More structured CV available [here](../documents/Erik-Vanek-cv.pdf){target="_blank"}
+Since 2013, I have worked mainly in the software industry wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/){target="_blank"} for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure. After being impacted by [restructuring](https://www.infarm.com/news/note-from-infarm-s-founders-strategy-shift-and-profitability-at-infarm){target="_blank"} in late 2022 I'm enjoying my garden leave until I decide what is my next journey to embark on. More structured CV available [here](../documents/Erik-Vanek-cv.pdf){target="_blank"}
 
 ## In 2022 I was also
 
