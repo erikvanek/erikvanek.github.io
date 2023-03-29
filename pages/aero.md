@@ -1,7 +1,6 @@
 ---
 title: "Fresh greens all year long"
 date: 2018-03-23T20:02:36+01:00
-draft: false
 layout: article.njk
 ---
 

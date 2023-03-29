@@ -3,7 +3,6 @@ title: "Good Services"
 subtitle: "How to design services that work"
 author: "Lou Downe"
 date: 2022-01-17
-draft: false
 layout: blog.njk
 tags: ["posts", "books", "design"]
 permalink: /{{page.fileSlug}}/

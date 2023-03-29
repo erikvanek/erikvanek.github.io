@@ -1,7 +1,6 @@
 ---
 title: "Tools I'd like to build"
 date: 2020-11-14
-draft: false
 layout: article.njk
 ---
 

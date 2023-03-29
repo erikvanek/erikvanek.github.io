@@ -1,7 +1,6 @@
 ---
 title: "Design matters 2020 conference review"
 date: 2020-11-11
-draft: false
 layout: blog.njk
 tags: ["posts", "conference"]
 permalink: /{{page.fileSlug}}/

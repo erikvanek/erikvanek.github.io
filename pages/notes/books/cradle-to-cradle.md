@@ -7,7 +7,6 @@ started-reading: 2023-02-06
 finished-reading: 2023-02-25
 date: 2023-03-23
 blog: true
-draft: false
 permalink: /{{page.fileSlug}}/
 layout: blog.njk
 

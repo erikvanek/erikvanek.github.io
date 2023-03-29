@@ -1,7 +1,6 @@
 ---
 title: "Other little things"
 date: 2018-03-23T22:43:35+01:00
-draft: false
 layout: article.njk
 ---
 

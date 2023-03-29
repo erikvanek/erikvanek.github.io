@@ -1,7 +1,6 @@
 ---
 title: "Software development"
 date: 2018-03-23T22:17:10+01:00
-draft: false
 layout: article.njk
 ---
 
