@@ -1,7 +1,6 @@
 ---
 title: Say Hi!
 date: 2022-11-16
-draft: false
 layout: article.njk
 ---
 

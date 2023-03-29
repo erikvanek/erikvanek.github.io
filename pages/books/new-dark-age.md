@@ -3,7 +3,6 @@ title: "New Dark Age"
 subtitle: "Technology and the End of the Future"
 author: "James Bridle"
 date: 2021-01-02
-draft: true
 layout: "blog.njk"
 tags: [books, posts, technology]
 

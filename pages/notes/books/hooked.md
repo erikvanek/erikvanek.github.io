@@ -7,7 +7,6 @@ started-reading: 2022-05-05
 finished-reading: 2023-01-05
 date: 2023-01-06
 blog: true
-draft: false
 layout: blog.njk
 ---
 

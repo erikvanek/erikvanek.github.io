@@ -1,7 +1,6 @@
 ---
 title: "Articles I like"
 date: 2018-11-08
-draft: false
 layout: article.njk
 ---
 

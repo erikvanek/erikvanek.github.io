@@ -1,7 +1,6 @@
 ---
 title: "Tepache"
 date: 2021-12-30
-draft: false
 layout: blog.njk
 tags: ["posts", "recipes", "fermentation"]
 permalink: /{{page.fileSlug}}/
