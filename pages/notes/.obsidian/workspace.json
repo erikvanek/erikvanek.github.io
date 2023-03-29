@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6881579133baa556",
+        "id": "5d61fb0f7c2d3796",
         "type": "tabs",
         "children": [
           {
-            "id": "d77b5f125b5f6b21",
+            "id": "3e356205fe817c25",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,11 +138,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d77b5f125b5f6b21",
+  "active": "3e356205fe817c25",
   "lastOpenFiles": [
+    "resume/organization-shortlist.md",
+    "Pábení.md",
+    "resume/experiences/Trychtýř.md",
+    "resume/experiences/Pudem-pudem.md",
+    "resume/experiences/No-bro-camp.md",
+    "resume/experiences/Fermentation.md",
     "books/prepisovat-pravidla.md",
     "books/hooked.md",
-    "resume/experiences/Trychtýř.md",
     "random/imposter-syndrom-Adam-Grant.md",
     "resume/What-I-want.md",
     "random/stage-management-kit.md",
