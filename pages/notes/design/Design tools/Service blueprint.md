@@ -1,0 +1,20 @@
+- an extension to [[Journey maps]]
+- connecting CX with front and back stage processes
+## Includes
+- phisical evidences
+	- physical objects that customers interact with & can be designed
+	- e.g. website, prints, phone
+- customer actions
+	- describe what customer does at each step
+- line of interaction
+	- divides customer X frontstage interactions
+- frontstage actions
+	- activities visible to the customer
+- line of visibility
+	- separates between front & back stage actions
+	- support is considered a backstage action
+- backstage actions
+- line of internal interactions
+	- makes the boundary to the rest of the organization
+- support processes
+	- done by the rest of the company or 3rd party

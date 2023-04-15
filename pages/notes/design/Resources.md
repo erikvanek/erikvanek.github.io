@@ -1,0 +1,3 @@
+- [Hall of shame](https://www.deceptive.design/hall-of-shame/all) of bad design
+- https://ddc.dk/tools-and-methods/
+- https://ddc.dk/articles/
