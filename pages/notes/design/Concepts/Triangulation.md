@@ -1,0 +1,2 @@
+- the way how to reduce bias during (not only) [[Design research]] by utilizing diffent methods and techniques
+- 

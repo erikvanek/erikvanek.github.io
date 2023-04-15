@@ -1,0 +1,61 @@
+- notes from [here](https://training.itcilo.org/delta/Foresight/3-Horizons.pdf)
+- useful conceptual model to aid people thinking about current assumptions, emerging changes and possible & desired futures
+- helps to think about potential changes in short/mid/long term and what impacts those might bring
+- helps to generate innovation by challenging assumptions from different perspectives
+- Horizons:
+	- First
+		- current context & conditions
+		- the focus is on maintaining stability
+	- Third
+		- transformative emerging changes, thoughts about possible futures and visions of preferred futures
+		- the focus is on transformation and disruption
+	- Second
+		- actions taken in the present to resist change, or to adapt to it or build on top of it
+		- the focus is on creating and managing change
+## Setup
+- large room with one blank wall for a long wall mural
+	- used for drawing three overlapping curves depicting the three horizons
+	- wall should be long enough so that it's comfy for participants to play with post-its around
+- ideally having 3 colors of post-its for each horizon
+## The process
+- Ask participants to work in pairs and each pair gets some pens & post-its
+	- Horizon 1
+		- 20-30 mins
+		- Ask pairs to brainstorm as many answers to questions:
+			- "What are current working assumptions about product, service, resource, staffu, customers"
+			- "What is the current state of play?"
+			- "What are managers taking for granted when making decisions?"
+		- 15 mins brainstorming, then posting to the mural
+		- 15 mins clustering, discussing
+	- Horizon 3
+		- 45 mins
+		- identification of emerging trends representing transformational shifts from the present
+		- Ask questions like:
+			- "What changes are emerging as new paradigms?" 
+			- "What new inventions has you worried or excited?"
+			- "What are visionary leaders saying?"
+		- 15 mins pair brainstorming
+			- it is expected to have fewer ideas generated as talking about the future is not easy
+				- a deck of 'change cards' can be useful to kickstart the ideation
+				- those can be also then used by teams to post on mural
+		- 15 mins reviewing the change deck cards, clustering & posting on the mural
+		- 15 mins to review all the changes posted on the mural
+	- Horizon 2
+		- 45 mins
+		- divide people into 4-6 sized tables
+		- review assumptions from Horizon 1 & emerging issues from Horizon 3
+		- the main question of this horizon is "What assumptions are challenged by those changes, and how can we respond to the resulting opportunities and risks?", i.e. more focused:
+			- "Which assumptions will be most challenged by change?"
+			- "Which are most vulnerable to these emerging changes?" 
+			- "Are there any which are being strengthened?" Pick one highly vulnerable assumption.
+			- "How can you use the emerging changes to create entirely new products, services and markets?"
+			- "Is there another business model that could replace a challenged model? Other production process(es)? New sources in the supply chain? Emerging customer segments?"
+		- Choose two to three emerging changes that could be used to build new models or processes
+		- Each group use an interesting transition idea to successfully bridge from Horizon 1 to Horizon 3
+	- Debrief
+		- 15 mins
+		- discussing key hightlights from the exercise
+		- What current assumptions will be most challenged by change?
+		- Will any become obsolete in the face of the changes we’ve identified?
+		- What changes offer the most promise and immediately actionable opportunities
+		- Which innovations or initiatives hold the most promise?

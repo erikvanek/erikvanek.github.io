@@ -1,0 +1,2 @@
+- usually utilize [[Design tools]]
+- particular procedures to accomplish something e.g. [[Interviews]], [[Walkthroughs]]

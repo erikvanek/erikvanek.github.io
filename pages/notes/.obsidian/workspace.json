@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5d61fb0f7c2d3796",
+        "id": "fa96444d4f355cbb",
         "type": "tabs",
         "children": [
           {
-            "id": "3e356205fe817c25",
+            "id": "30eeab5d443b4b62",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,22 +138,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3e356205fe817c25",
+  "active": "30eeab5d443b4b62",
   "lastOpenFiles": [
-    "resume/organization-shortlist.md",
-    "Pábení.md",
-    "resume/experiences/Trychtýř.md",
-    "resume/experiences/Pudem-pudem.md",
-    "resume/experiences/No-bro-camp.md",
-    "resume/experiences/Fermentation.md",
-    "books/prepisovat-pravidla.md",
-    "books/hooked.md",
-    "random/imposter-syndrom-Adam-Grant.md",
-    "resume/What-I-want.md",
-    "random/stage-management-kit.md",
-    "resume/experiences/Sonda.md",
-    "resume/experiences/Snapshot.md",
-    "resume/What-can-I-offer.md",
-    "resume/Nice-to-have.md"
+    "design/Design tools/Journey maps.md",
+    "design/Design tools/System maps.md",
+    "books/cradle-to-cradle.md",
+    "design/Concepts/Prototype.md",
+    "design/Concepts/Glossary.md",
+    "design/Design tools/Service blueprint.md",
+    "design/Design tools/Jobs to be done.md",
+    "design/Design tools/Design tools.md",
+    "design/Design tools/Persona.md",
+    "design/Concepts/Boundary objects.md",
+    "design/Concepts/Research data.md",
+    "design/Service design.md",
+    "design/Concepts/Iteration.md",
+    "design/Concepts/Double diamond.md",
+    "design/Design methods/Design methods.md",
+    "design/Design methods/Interviews.md",
+    "design/Design methods/Walkthroughs.md",
+    "design/Design.md",
+    "design/Three horizons.md",
+    "design/Research through design.md",
+    "design/Design research.md",
+    "design/Blogs and inspirations.md",
+    "design/Resources.md",
+    "design/Concepts/Triangulation.md",
+    "design/Tools and methods.md",
+    "design/Concepts",
+    "books/TISDD.md",
+    "design/Design methods",
+    "design/Design tools",
+    "Untitled.canvas",
+    "design"
   ]
 }

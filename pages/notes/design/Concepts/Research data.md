@@ -1,0 +1,11 @@
+- two types:
+	- raw
+		- transcripts, recordings, photos
+	- interpreted
+		- filtered through attemps to interpret them e.g. key insights, jobs to be done, user stories
+- two "fidelities"
+	- assumption-based ^236833
+		- as good as contextual knowledge of co-creators
+	- research-based ^00343f
+		- if done well, should have higher signification than [[#^236833|assumption-based]]
+- [[#^236833|assumption-based]] can turn into [[#^00343f|research-based]] as assumptions are challenged & validated

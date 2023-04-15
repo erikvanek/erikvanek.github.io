@@ -1,0 +1,9 @@
+- __to [[Design]] is a verb__
+- "Splitters" care about UX/[[Service design]]/[[Human-centered design]] differences vs lumpers don't care as long as you practice properly
+- when you start - be shitty, not pretty - throw away easily & iterate further
+- Two thinking types:
+	- Divergent
+		- "Yes, and ..."
+	- Convergent
+		- "Yes, but ..."
+- Uses [[Design tools]] to answer the question "What" & [[Design methods]] to answer the question "How"
