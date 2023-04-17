@@ -1,0 +1,18 @@
+- also called The cone of plausibility
+- created by Joseph Voros to navigate uncertainty & embrace possibility
+- categorizing future scenarios into four buckets
+	- Probable futures
+		- this is where design usually operates
+		- what is likely to happen
+		- very present-oriented
+	- Possible futures
+		- what could happen, even if it's difficult to imagine
+		- uses fiction as a reflection tool
+		- needs a believable series of events that connect even the most extreme situations
+	- Plausible futures
+		- refers to what could happen
+		- space about exploration, not prediction
+		- the filter for putting a scenario in this cone is whether various possible futures, including macro forces such as the economy or geopolitics, might allow a business to continue to survive and thrive.
+	- Preferred futures
+		- where you place the scenarios you want to happen
+		- not the answer but where most strategic debates happen

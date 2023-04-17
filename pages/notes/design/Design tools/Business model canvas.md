@@ -1,0 +1,49 @@
+- aims to design a business model that outperforms competitors
+- a simple template to sketch out business model with a blocks of questions
+- _any change to underlying organization changes the [[Business model canvas]] & vice versa_
+- can be used to map out competitors & compare their business models with yours which might give you [[Insight]]s where you need to differentiate
+- upper 7 blocks connected to [[Design tools]]
+## Include
+- value propositions
+	- summarizes the offering of the company including its unique selling proposition
+	- describes the frontstage part of the journey
+	- connected with
+		- [[Journey maps]]
+			- their summary describes the value proposition
+		- [[Prototype]]s
+			- can make the proposition tangible & testable
+- customer segments
+	- ~ core target groups
+	- connected with
+		- [[Persona]]s & [[System maps]] to visualize the flow
+- channels
+	- show how customers interact during the customer life-cycle
+	- include online & offline channels
+	- connected with [[Journey maps]] as they usually include information about which channels users use to buy a service
+- customer relationships
+	- describe what kind of relationship a company establishes & maintains with each customer segment
+	- connected with
+		- [[System maps]] as they have information on relationships between stakeholders
+		- [[Journey maps]] - E2E journey maps include information on the quality of relationships
+		- [[Prototype]]s - used to tangibilize relationships & test the tone of a service
+- key activities
+	- summarizes backstage processes needed to be executed to produce or offer its value proposition
+	- connected to
+		- [[Service blueprint]] - connect back & front stage processes thus give a comprehensive overview of activities
+		- [[Journey maps]]
+		- [[Prototype]]s - can test & identify key activities on human-human but also machine-machine, also internally X externally
+- key resources (people, things, money, ...)
+	- summarizes what company needs to sustain & support the business physically, intellectually or financially
+	- connected to
+		- [[System maps]] as they have info about stakeholders
+		- [[Service blueprint]] which has info on involved internal stakeholders
+		- [[Journey maps]] know which stakeholder is involved when, who are key stakeholders & when journey includes employees
+- key partners
+	- describes the ecosystem in which a company operates including stakeholders needed to supply key resources and key activities
+	- connected to:
+		- [[System maps]] info on internal & external stakeholders; gives info on stakeholder relationships & relationships between the company and stakeholders
+- cost structure
+	- outlines most important fixed & variable cost factors & __whether those can be affected by scale & scope__
+- revenue streams
+	- describe how a company generates income __from each customer segment__ or from key partners
+	- includes how much segment pays, for what, how & how much this contributes to the overall revenue

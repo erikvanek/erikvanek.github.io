@@ -1,2 +1,10 @@
-- the way how to reduce bias during (not only) [[Design research]] by utilizing diffent methods and techniques
-- 
+- the way how to reduce bias during (not only) [[Design research]] by utilizing different methods and techniques
+- types:
+	- data triangulation
+		- an attempt to more robust data collection by diversifying data formats
+			- text, photos, video, artifacts, ...
+		- allows for gathering more secondary data later on
+	- method triangulation
+		- improves (not only) research accuracy and richness by using different methods to cover the same phenomenon
+	- research triangulation
+		- including various researchers to reduce the bias/subjectivity

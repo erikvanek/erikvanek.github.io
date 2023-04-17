@@ -1,0 +1,22 @@
+- __to understand people & their behavior related to the product or service__
+- enables to _empathize_ & get to know the context
+- motivation to find out how customers or other relevant actors experience a given service
+- helps to move beyond assumptions
+- two main types:
+	- qualitative
+		- answers the question "Why?"
+	- quantitative
+		- answers the question "How?"
+- __starts with a [[Research question]] and aims to derive [[Insight]]s__
+- usually is based on ethnographic methods
+- typical process:
+	- research scope & planning -> data collection -> synthesis -> key [[Insight]]s
+- gives us:
+	- customer problems & needs
+	- experience gaps
+	- testing & feedback collection
+- outcomes should be _clear & understandable to the whole team_
+- use [[Triangulation]] - allows to have more & better [[Prototype]]s
+- starts with [[Research planning]]
+- results should be visualized by [[Research Visualization]]
+- "CX oriented research is rather inductive (finding out along the way), whereas testing prototypes is deductive (validating hypothesis)"

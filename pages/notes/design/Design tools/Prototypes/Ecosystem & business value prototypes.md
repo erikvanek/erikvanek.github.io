@@ -1,0 +1,1 @@
+- basically [[Business model canvas]]
