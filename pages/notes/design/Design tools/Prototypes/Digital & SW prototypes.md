@@ -1,0 +1,18 @@
+- from scribble through mock-ups & click-through to experimentally running piece of software
+## Include
+- display
+	- display area of the prototype
+- screens
+	- screens of interactive elements
+- interaction elements ^d91c3e
+	- buttons, links, sliders, ...
+- context elements
+	- headings, text, audio, ...
+- structure & flow
+	- ~ IA
+- function
+	- defines what it can do, linked with [[#^d91c3e]]
+- look & feel
+	- layout, animation, colors, microcopy, CRAP, ...
+- media & prototyping environment
+	- pen & paper vs Figma-like tools vs full-fledged, ...

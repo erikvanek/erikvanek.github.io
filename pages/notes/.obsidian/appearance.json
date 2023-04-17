@@ -1,3 +1,7 @@
 {
-  "accentColor": ""
+  "accentColor": "",
+  "theme": "moonstone",
+  "cssTheme": "Things",
+  "interfaceFontFamily": "RobotoMono Nerd Font",
+  "baseFontSize": 18
 }

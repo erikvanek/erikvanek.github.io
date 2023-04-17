@@ -5,6 +5,8 @@
 - no strong pressure on making it right the first time
 	- we can evolve & move on towards better solution
 - focuses not only on creating value for the customer, but also for surrounding ecosystems
+- the process is _not linear_
+	- builds on top of deepening, exploratory loops - [[Iteration]]s
 - Two main _spaces_, illustrated by [[Double diamond]]
 	- Problem
 		- Identifying & defining the right problem

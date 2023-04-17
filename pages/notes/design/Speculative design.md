@@ -1,0 +1,5 @@
+- compared to [[Human-centered design]] [[Speculative design]] envisions problems and solutions in the future
+- can use tools like [[Three horizons]] or [[Cone of possibilities]]
+- helps to suspend disbeliefs and allow imaginations to wonder to create fictional worlds, thought experiments or tales
+- can be helpful to frame activities like "What if ..." or "Imagine a world where ..."
+- the multiplicity of futures can be created and considered that is expansive, yet structured

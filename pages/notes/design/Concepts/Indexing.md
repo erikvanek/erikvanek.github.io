@@ -1,0 +1,1 @@
+- convention for labeling research data, e.g. "i6.17" means interview # 6, line 17 or "v12.3:22" for some video

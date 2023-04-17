@@ -1,0 +1,31 @@
+---
+source: https://www.youtube.com/watch?v=yLkBs6R8dJA
+---
+- _oholit horní 1/3 lýtka a spodní půlku stehna_
+- aplikovaný tejp by neměl zasahovat do čéšky
+- báze = koncová cca 5cm dlouhá část tejpu, která se lepí jako jeho ukotvení bez natahování tejpu
+- zažehlovat tejpy co nejdříve ať se dobře chytne lepidlo
+- nastřihnout:
+	- 3x20cm tejp
+	- 2x15cm tejp
+	- 2x23cm tejp
+- postup:
+	- podlep:
+		- ohnout koleno do 90 stupňů
+		- obnažit prostřední půlku 20cm tejpu
+		- natáhnout na 100% a lepit přes výstupek holeně vodorovně těsně pod kolenem a v klidu dolepit báze
+	- 1. vrstva
+		- ohnout koleno do cca 30 stupňů
+		- obnažit prostředních 5cm z 15cm tejpu
+		- natáhnout na 100% a aplikovat na boční vazy v koleni, následně dvě báze dolepit bez natažení
+		- aplikovat jak na vnější, tak na vnitřní stranu
+	- 2. vrstva
+		- odlepit 5cm bázi z 20cm tejpu
+		- nalepit bázi cca 5cm nad 1. vrstvou, tak aby zakrývala cca půlku předchozího tejpu podélně
+		- s cca 25% napětím jdu nad čéšku, pak s 75% do poloviny čéšky, pak 100% až do momentu, kdy mi zbyde spodní 5cm báze
+		- aplikovat jak na vnějši tak na vnitřní stranu
+	- 3. vrstva
+		- 5cm bázi začínám cca 5cm pod poslední tejpou na holeni
+		- bez napětí lepím až pod koleno a kopíruju předchozí tejp
+		- následně s až 100% napětím jdu šikmo pod čéškou na "počátek" předchozího tejpu, opět aby mi zbylo 5cm na zalepení báze bez napětí
+		- opět vnější a vnitřní strana

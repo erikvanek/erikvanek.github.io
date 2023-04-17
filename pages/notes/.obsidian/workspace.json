@@ -4,18 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "fa96444d4f355cbb",
+        "id": "db7102a9070dab1d",
         "type": "tabs",
         "children": [
           {
-            "id": "30eeab5d443b4b62",
+            "id": "f5a1ac7f13724edb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "design/Design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cf162473cb34711a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Speculative design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4d9ee0892d83d439",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Cone of possibilities.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f376f9e631cd7688",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "random/Tejpovani kolene.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -44,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "the obser",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "random/Tejpovani kolene.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "random/Tejpovani kolene.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +161,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "random/Tejpovani kolene.md"
+              }
             }
           }
         ]
@@ -138,38 +183,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30eeab5d443b4b62",
+  "active": "f376f9e631cd7688",
   "lastOpenFiles": [
-    "design/Design tools/Journey maps.md",
-    "design/Design tools/System maps.md",
-    "books/cradle-to-cradle.md",
-    "design/Concepts/Prototype.md",
-    "design/Concepts/Glossary.md",
-    "design/Design tools/Service blueprint.md",
-    "design/Design tools/Jobs to be done.md",
-    "design/Design tools/Design tools.md",
-    "design/Design tools/Persona.md",
-    "design/Concepts/Boundary objects.md",
-    "design/Concepts/Research data.md",
-    "design/Service design.md",
-    "design/Concepts/Iteration.md",
-    "design/Concepts/Double diamond.md",
-    "design/Design methods/Design methods.md",
-    "design/Design methods/Interviews.md",
-    "design/Design methods/Walkthroughs.md",
+    "design/Cone of possibilities.md",
+    "random/Tejpovani kolene.md",
+    "design/Speculative design.md",
     "design/Design.md",
-    "design/Three horizons.md",
-    "design/Research through design.md",
-    "design/Design research.md",
-    "design/Blogs and inspirations.md",
-    "design/Resources.md",
+    "design/Activities/Research planning.md",
+    "design/Activities/Design research/Participant approach.md",
+    "design/Activities/Design research/Self-ethnographic research.md",
+    "design/Activities/Design research/Secondary research.md",
+    "design/Activities/Design research/Desk research.md",
+    "design/Activities/Design research.md",
+    "design/Activities/Design research",
+    "design/Activities/Research Visualization.md",
+    "design/Concepts/Indexing.md",
+    "design/Concepts/Sense-making.md",
     "design/Concepts/Triangulation.md",
-    "design/Tools and methods.md",
+    "design/Design tools/Prototype.md",
+    "design/Activities",
+    "design/Concepts/Research question.md",
+    "design/Concepts/Implementation.md",
+    "design/Design activities.md",
+    "design/Concepts/Process management.md",
+    "design/Concepts/Prototyping.md",
+    "design/Concepts/Ideation.md",
+    "design/Service design.md",
+    "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
+    "design/Concepts/Design Thinking.md",
+    "design/Concepts/VUCA world.md",
+    "design/Design tools/Business model canvas.md",
+    "Untitled.canvas",
+    "design/Design/Design tools/Prototypes",
+    "design/Design/Design tools",
+    "design/Design",
+    "design/Design tools/Prototypes",
     "design/Concepts",
-    "books/TISDD.md",
     "design/Design methods",
     "design/Design tools",
-    "Untitled.canvas",
     "design"
   ]
 }

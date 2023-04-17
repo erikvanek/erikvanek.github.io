@@ -3,3 +3,7 @@
 ## List
 - [[Persona]]
 - [[Boundary objects]]
+- [[Prototype]]s
+- [[Service blueprint]]
+- [[System maps]]
+- [[Business model canvas]]

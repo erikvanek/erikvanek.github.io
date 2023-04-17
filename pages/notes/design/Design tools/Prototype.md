@@ -7,3 +7,10 @@
 - set up & built so that we can learn from them later
 - replace actual implementation to learn faster & the aim is to __maximize learning__ (because they are cheap to change / throw away)
 - [[Prototype]] is for [[Service design]] what learning is for humans
+- Act of creating and using [[Prototype]] is called [[Prototyping]]
+## Types
+[[Actions, processes & experiences prototype]]
+[[Physical prototypes]]
+[[Environment, spaces & architecture prototypes]]
+[[Digital & SW prototypes]]
+[[Ecosystem & business value prototypes]]

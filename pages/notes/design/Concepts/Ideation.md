@@ -1,0 +1,2 @@
+- gives starting points to bigger evolutionary process
+- the value of ideas is more in outcomes that stem from them

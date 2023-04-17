@@ -1,0 +1,30 @@
+## Research planning
+- includes research loops, sample size & selection & [[Design methods]] selection
+- _research loops are a tool to iterate_
+- don't forget about [[Triangulation]]
+- when deciding sample selection - beware of research bias
+- _emergent sampling_
+	- follow new leads during fieldwork as they unfold, leverage flexibly new knowledge
+	- i.e. when you find something interesting, don't ignore it
+- beware of research context
+	- e.g. when researching train station service
+		- what kind of people you need at train station during different day times
+- it us useful to engage with participants in their natural surroundings
+- when more research only confirms already identified patterns, __theoretical saturation__ is reached
+- research types
+	- overt
+		- you are open with your intent
+		- inherently biased with "the observer effect"
+	- covert
+		- your intent is hidden
+		- ethically problematic
+- a good method mix combines each of:
+	- [[Desk research]]
+		- before or in parallel - try to go through some [[Secondary research]]
+	- [[Self-ethnographic research]]
+	- [[Participant approach]]
+		- interviews, observation, focus groups
+	- Non-participant approaches
+		- non-participant observation, cultural probes, co-creating
+	- Co-creative workshops
+		- journey maps, system maps, co-creating personas
