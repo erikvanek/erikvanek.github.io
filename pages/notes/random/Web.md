@@ -1,0 +1,2 @@
+- [] landing page as a broken down 'pie chart' guiding into different sections
+- [] landing page voice control - shout "zdareeec" nebo "yoooo" to tweak its visual
