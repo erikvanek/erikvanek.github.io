@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "db7102a9070dab1d",
+        "id": "9139e0303fcbca1b",
         "type": "tabs",
         "children": [
           {
-            "id": "f5a1ac7f13724edb",
+            "id": "421126f9d153d50c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,43 +20,19 @@
             }
           },
           {
-            "id": "cf162473cb34711a",
+            "id": "61a45dd6e91329ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Speculative design.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4d9ee0892d83d439",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Cone of possibilities.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f376f9e631cd7688",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "random/Tejpovani kolene.md",
+                "file": "design/Social design.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/Tejpovani kolene.md",
+                "file": "design/Social design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/Tejpovani kolene.md",
+                "file": "design/Social design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "random/Tejpovani kolene.md"
+                "file": "design/Social design.md"
               }
             }
           }
@@ -183,12 +159,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f376f9e631cd7688",
+  "active": "61a45dd6e91329ad",
   "lastOpenFiles": [
+    "design/Design.md",
+    "design/Social design.md",
+    "random/Rabbit hole.md",
+    "random/Web.md",
+    "design/Speculative design.md",
     "design/Cone of possibilities.md",
     "random/Tejpovani kolene.md",
-    "design/Speculative design.md",
-    "design/Design.md",
     "design/Activities/Research planning.md",
     "design/Activities/Design research/Participant approach.md",
     "design/Activities/Design research/Self-ethnographic research.md",
@@ -210,9 +189,6 @@
     "design/Concepts/Ideation.md",
     "design/Service design.md",
     "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
-    "design/Concepts/Design Thinking.md",
-    "design/Concepts/VUCA world.md",
-    "design/Design tools/Business model canvas.md",
     "Untitled.canvas",
     "design/Design/Design tools/Prototypes",
     "design/Design/Design tools",
