@@ -1,7 +1,46 @@
 <title>Sousedské dětské skupiny</title>
 
-<link rel="stylesheet" href="/css/sds.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/sds.css" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+    rel="stylesheet"
+/>
 
-<div id="wrapper">{{content | safe}}
-    <div>
+<div id="wrapper">
+    <h3 id="disclaimer">
+        Upozornění: tato stránka slouží jako test nabídky nové služby - stále na ní
+        pracujeme a není plně funkční!
+    </h3>
+    {{ content | safe }}
+    <div id="buttons">
+        <a href="https://www.mpsv.cz/detske-skupiny" target="_blank"
+            ><button>Chci více informací</button></a
+        >
+        <button onclick="javascript:openModal()">Založit novou skupinu</button>
+    </div>
+    <div></div>
+</div>
+
+<div id="modal">
+    <span onclick="javascript:closeModal()" id="close">X</span>
+    <h2>Děkujeme!</h2>
+    <h3>Co byste rádi, aby se stalo teď?</h3>
+    <h3>Jaké máte pocity a očekávání?</h3>
+    <h3>Máte očekávání, jak dlouho by proces založení skupiny měl trvat?</h3>
+    <button onclick="javascript:closeModal()">Zavřít</button>
+</div>
+<div id="blur" onclick="javascript:closeModal()"></div>
+
+<script>
+    function openModal() {
+        console.log('open')
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('blur').style.display = 'block';
+    }
+    
+    function closeModal() {
+        console.log('close')
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('blur').style.display = 'none';
+    }
+</script>

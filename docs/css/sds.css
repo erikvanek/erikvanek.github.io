@@ -11,6 +11,11 @@ body {
     flex-direction: column;
     max-width: 60rem;
     align-self: center;
+    padding: 2rem;
+}
+
+h2 {
+    font-weight: 200;
 }
 
 h3 {
@@ -18,5 +23,80 @@ h3 {
 }
 
 li {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
+}
+
+#buttons {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+
+button {
+    border: 3px solid #444;
+    border-radius: 0.5rem;
+    background-color: #fcfcfc;
+    padding: 1rem;
+    cursor: pointer;
+    height: 4rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+@media (orientation:portrait) {
+    button {
+        font-size: 2rem;
+        height: 6rem;
+    }
+}
+
+
+#modal {
+    position: fixed;
+    z-index: 100;
+    background: white;
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    display: none;
+    bottom: 4rem;
+    max-width: 40rem;
+    left: calc(50% - 20rem);
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#modal button {
+    align-self: center;
+}
+
+#close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-weight: 800;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#blur {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    backdrop-filter: blur(10px);
+    transition: all 1s;
+}
+
+#disclaimer {
+    font-size: 1.25rem;
+    color: #8b8;
+    border: 1px dashed #8b8;
+    padding: .5rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
 }

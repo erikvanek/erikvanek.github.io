@@ -1,0 +1,5 @@
+- sometimes called paint-door tests
+- _important to communicate the intent well otherwise there's a risk of losing trust among users_
+- technique to prototype not-yet prepared service concept
+- using short slogans and texts to sell the service offering from emotional and factual perspective
+- useful to include specific call to action to see how users interpret them
