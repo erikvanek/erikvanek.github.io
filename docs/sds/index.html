@@ -1,9 +1,17 @@
 <title>Sousedské dětské skupiny</title>
 
-<link rel="stylesheet" href="/css/sds.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/sds.css" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+    rel="stylesheet"
+/>
 
-<div id="wrapper"><h2>Máte rádi malé děti? A chcete o ně pečovat?</h2>
+<div id="wrapper">
+    <h3 id="disclaimer">
+        Upozornění: tato stránka slouží jako test nabídky nové služby - stále na ní
+        pracujeme a není plně funkční!
+    </h3>
+    <h2>Máte rádi malé děti? A chcete o ně pečovat?</h2>
 <h1>Založte sousedskou dětskou skupinu!</h1>
 <p>Sousedské dětské skupiny přináší nový druh dětské předškolní péče v domácím prostředí. Důraz je kladen na přirozené a známé prostředí v menším kolektivu dětí. O kolektivy s nejvýše 4 dětmi se starají proškolení a certifikovaní provozovatelé a provozovatelky. Služba garantuje péči o děti v minimální délce 6 hodin za den.</p>
 <h3>Co získáte</h3>
@@ -57,4 +65,35 @@
 <li>Další provozní informace nabídnou <a href="https://www.mpsv.cz/web/cz/odpovedi-a-nejcastejsi-dotazy">nejčastější dotazy</a>, případně <a href="https://www.mpsv.cz/web/cz/metodicke-materialy">metodické materiály</a></li>
 </ul>
 
-    <div>
+    <div id="buttons">
+        <a href="https://www.mpsv.cz/detske-skupiny" target="_blank"
+            ><button>Chci více informací</button></a
+        >
+        <button onclick="javascript:openModal()">Založit novou skupinu</button>
+    </div>
+    <div></div>
+</div>
+
+<div id="modal">
+    <span onclick="javascript:closeModal()" id="close">X</span>
+    <h2>Děkujeme!</h2>
+    <h3>Co byste rádi, aby se stalo teď?</h3>
+    <h3>Jaké máte pocity a očekávání?</h3>
+    <h3>Máte očekávání, jak dlouho by proces založení skupiny měl trvat?</h3>
+    <button onclick="javascript:closeModal()">Zavřít</button>
+</div>
+<div id="blur" onclick="javascript:closeModal()"></div>
+
+<script>
+    function openModal() {
+        console.log('open')
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('blur').style.display = 'block';
+    }
+    
+    function closeModal() {
+        console.log('close')
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('blur').style.display = 'none';
+    }
+</script>
