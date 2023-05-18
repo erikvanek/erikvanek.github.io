@@ -2,20 +2,24 @@
 layout: sds.njk
 ---
 
-## Máte rádi malé děti? A chcete o ně pečovat?
+## Chybí Vám dostupná předškolní péče pro děti?
 
 # Založte sousedskou dětskou skupinu!
 
 Sousedské dětské skupiny přináší nový druh dětské předškolní péče v domácím prostředí. Důraz je kladen na přirozené a známé prostředí v menším kolektivu dětí. O kolektivy s nejvýše 4 dětmi se starají proškolení provozovatelé a provozovatelky. Služba garantuje péči o děti v minimální délce 6 hodin za den.
 
 ### Co získáte
--   Smysluplnou náplň Vašeho času
+
+-   Možnost přivýdělku při vlastní rodičovské dovolené
+-   Možnost péče o Vaše děti ve známém a bezpečném domácím prostředí
 -   Odpovídající příspěvek od státu na péči o děti
     -   Cca 6 tisíc příspěvek státu, až 4 tisíce příspěvek od rodiče dítěte
+-   Nové kamarády pro Vaše děti
 -   Šance podpořit rozvoj lokální komunity
 -   Nové kompetence a znalosti v oblasti péče o děti
 
 ### Vstupní podmínky
+
 1. Máte k dispozici prostor alespoň 3m<sup>2</sup> na jedno dítě
 2. Průkazná bezúhonnost a spolehlivost
 3. Vaše domácnost splňuje hygienické standardy pro péči o malé děti a stravování
@@ -26,6 +30,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 6. Zvládáte alespoň základní práci s počítačem pro vyplnění docházky dětí
 
 ### Založení krok za krokem
+
 1. Pokuste se si ověřit zájem o provoz skupiny ve Vašem okolí
 2. Shromážděte potřebné podklady pro založení skupiny:
     - Zkouška profesní úrovně
@@ -38,6 +43,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 5. Přivítejte první děti 🙂
 
 ### Poznámky
+
 -   V průběhu péče mohou být v domácnosti přítomny i jiné, předem nahlášené, osoby (např. partner během práce z domova apod.)
 -   Stravu zajišťuje rodič po vzájemné dohodě s provozovateli služby
 -   Služba je poskytována pouze očkovaným dětem
