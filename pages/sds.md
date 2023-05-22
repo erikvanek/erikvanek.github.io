@@ -21,18 +21,20 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 3. Vaše domácnost splňuje hygienické standardy pro péči o malé děti a stravování
     - běžná domácnost většinou podmínky splňuje až na přebalovací pult a vodovodní baterii s ochranou proti opaření
 4. Dokážete podstoupit jednou ročně školení o délce 4 hodiny
-5. Máte kompetence na profesní úrovni _Chůva pro děti do zahájení povinné školní docházky_ nebo _Chůva pro děti v dětské skupině_
+5. Máte kompetence na profesní úrovni [_Chůva pro děti do zahájení povinné školní docházky_ nebo _Chůva pro děti v dětské skupině_](https://www.mpsv.cz/documents/20142/225508/Odborn%C3%A9+kvalifikace+pe%C4%8Duj%C3%ADc%C3%AD+osoby+v+DS.pdf/063f8cbf-60c1-a2fb-a7c6-f05f98906484){target="_blank"}
     - Případně zvládnete absolvovat cca 2 měsíční kurz zakončený zkouškou
 6. Zvládáte alespoň základní práci s počítačem pro vyplnění docházky dětí
 
 ### Založení krok za krokem
 1. Pokuste se si ověřit zájem o provoz skupiny ve Vašem okolí
+    - zeptejte se u známých ve svém okolí, vylepte v okolí jednoduchý leták informující o Vašem záměru nebo zkuste provést malý [výzkum od stolu](https://kisk.phil.muni.cz/100metod/vyzkum-od-stolu){target="_blank"} a zjistěte jak službu nabízejí jiní
 2. Shromážděte potřebné podklady pro založení skupiny:
-    - Zkouška profesní úrovně
+    - [Zkouška profesní úrovně](https://www.narodnikvalifikace.cz/kvalifikace-2054-Chuva_pro_deti_v_detske_skupine){target="_blank"}
     - Pojištění odpovědnosti za újmu
     - Vlastnické nebo jiné právo k prostorám
-    - Průkaz o trestní bezúhonnosti
+    - [Prokažte trestní bezúhonnost](https://www.mvcr.cz/clanek/vypis-z-rejstriku-trestu-lze-nove-ziskat-kdykoliv-kdekoliv-a-zdarma.aspx){target="_blank"}
     - Stanovisko krajské hygienické stanice na splnění požadavků na stravování, prostory a provoz
+      - liší se dle krajů, např. pro Brno [zde](https://www.khsbrno.cz/?stav_menu=vzory){target="_blank"}
 3. Zaregistrujte se v registru poskytovatelů
 4. Uzavřete smlouvy o poskytování služby s rodiči
 5. Přivítejte první děti 🙂
@@ -43,5 +45,5 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 -   Služba je poskytována pouze očkovaným dětem
 -   Službu mohou provozovat pouze nepodnikající osoby
 -   Smlouvy s rodiči je třeba uchovat po dobu 10 let pro potřeby kontroly
--   Přečtěte si doporučení pro [rodiče](https://www.mpsv.cz/documents/20142/225508/Doporu%C4%8Den%C3%AD+pro+rodi%C4%8De+k+uzav%C3%ADr%C3%A1n%C3%AD+smluv+v+d%C4%9Btsk%C3%A9+skupin%C4%9B_16.3.pdf) a [poskytovatele](https://www.mpsv.cz/documents/20142/225508/Doporuceni_uzavirani_smlyuv_v_DS.pdf) při uzavírání smluv o péči
--   Další provozní informace nabídnou [nejčastější dotazy](https://www.mpsv.cz/web/cz/odpovedi-a-nejcastejsi-dotazy), případně [metodické materiály](https://www.mpsv.cz/web/cz/metodicke-materialy)
+-   Přečtěte si doporučení pro [rodiče](https://www.mpsv.cz/documents/20142/225508/Doporu%C4%8Den%C3%AD+pro+rodi%C4%8De+k+uzav%C3%ADr%C3%A1n%C3%AD+smluv+v+d%C4%9Btsk%C3%A9+skupin%C4%9B_16.3.pdf){target="_blank"} a [poskytovatele](https://www.mpsv.cz/documents/20142/225508/Doporuceni_uzavirani_smlyuv_v_DS.pdf){target="_blank"} při uzavírání smluv o péči
+-   Další provozní informace nabídnou [nejčastější dotazy](https://www.mpsv.cz/web/cz/odpovedi-a-nejcastejsi-dotazy), případně [metodické materiály](https://www.mpsv.cz/web/cz/metodicke-materialy){target="_blank"}
