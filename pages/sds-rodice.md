@@ -13,7 +13,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 -   Možnost přivýdělku při vlastní rodičovské dovolené
 -   Možnost péče o Vaše děti ve známém a bezpečném domácím prostředí
 -   Odpovídající příspěvek od státu na péči o děti
-    -   Cca 6 tisíc příspěvek státu, až 4 tisíce příspěvek od rodiče dítěte
+    -   Cca 6 tisíc příspěvek státu (nevztahuje se na Vaše dítě), až 4 tisíce příspěvek od rodiče dítěte
 -   Nové kamarády pro Vaše děti
 -   Šance podpořit rozvoj lokální komunity
 -   Nové kompetence a znalosti v oblasti péče o děti
@@ -21,16 +21,16 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 ### Vstupní podmínky
 
 1. Máte k dispozici prostor alespoň 3m<sup>2</sup> na jedno dítě
-2. Průkazná bezúhonnost a spolehlivost
+2. Umíte prokázat bezúhonnost a jste spolehlivi
 3. Vaše domácnost splňuje hygienické standardy pro péči o malé děti a stravování
     - běžná domácnost většinou podmínky splňuje až na přebalovací pult a vodovodní baterii s ochranou proti opaření
+    - službu lze poskytovat i v jiných prostorách než ve vlastní domácnosti
 4. Dokážete podstoupit jednou ročně školení o délce 4 hodiny
 5. Máte kompetence na profesní úrovni [_Chůva pro děti do zahájení povinné školní docházky_ nebo _Chůva pro děti v dětské skupině_](https://www.mpsv.cz/documents/20142/225508/Odborn%C3%A9+kvalifikace+pe%C4%8Duj%C3%ADc%C3%AD+osoby+v+DS.pdf/063f8cbf-60c1-a2fb-a7c6-f05f98906484){target="_blank"}
     - Případně zvládnete absolvovat cca 2 měsíční kurz zakončený zkouškou
 6. Zvládáte alespoň základní práci s počítačem pro vyplnění docházky dětí
 
 ### Založení krok za krokem
-
 1. Pokuste se si ověřit zájem o provoz skupiny ve Vašem okolí
     - zeptejte se u známých ve svém okolí, vylepte v okolí jednoduchý leták informující o Vašem záměru nebo zkuste provést malý [výzkum od stolu](https://kisk.phil.muni.cz/100metod/vyzkum-od-stolu){target="_blank"} a zjistěte jak službu nabízejí jiní
 2. Shromážděte potřebné podklady pro založení skupiny:
@@ -40,6 +40,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
     - [Prokažte trestní bezúhonnost](https://www.mvcr.cz/clanek/vypis-z-rejstriku-trestu-lze-nove-ziskat-kdykoliv-kdekoliv-a-zdarma.aspx){target="_blank"}
     - Stanovisko krajské hygienické stanice na splnění požadavků na stravování, prostory a provoz
       - liší se dle krajů, např. pro Brno [zde](https://www.khsbrno.cz/?stav_menu=vzory){target="_blank"}
+    - očekáváme, že celý tento proces by neměl trvat déle než tři mesíce
 3. Zaregistrujte se v registru poskytovatelů
 4. Uzavřete smlouvy o poskytování služby s rodiči
 5. Přivítejte první děti 🙂
