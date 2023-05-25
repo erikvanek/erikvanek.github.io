@@ -17,7 +17,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 
 ### Vstupní podmínky
 1. Máte k dispozici prostor alespoň 3m<sup>2</sup> na jedno dítě
-2. Umíte prokázat bezúhonnost a jste spolehlivi
+2. Umíte prokázat bezúhonnost (a i všech ostatních osob, které se v domácnosti běžně vyykytují) a jste spolehlivi
 3. Vaše domácnost splňuje hygienické standardy pro péči o malé děti a stravování
     - běžná domácnost většinou podmínky splňuje až na přebalovací pult a vodovodní baterii s ochranou proti opaření
     - službu lze poskytovat i v jiných prostorách než ve vlastní domácnosti
@@ -34,6 +34,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
     - Pojištění odpovědnosti za újmu
     - Vlastnické nebo jiné právo k prostorám
     - [Prokažte trestní bezúhonnost](https://www.mvcr.cz/clanek/vypis-z-rejstriku-trestu-lze-nove-ziskat-kdykoliv-kdekoliv-a-zdarma.aspx){target="_blank"}
+    - souhlas s vykonáváním služby od všech zletilých osob z domácnosti v případě poskytování v domácnosti
     - Stanovisko krajské hygienické stanice na splnění požadavků na stravování, prostory a provoz
       - liší se dle krajů, např. pro Brno [zde](https://www.khsbrno.cz/?stav_menu=vzory){target="_blank"}
     - očekáváme, že celý tento proces by neměl trvat déle než tři mesíce
