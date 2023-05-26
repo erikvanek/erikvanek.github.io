@@ -37,6 +37,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
     - souhlas s vykonáváním služby od všech zletilých osob z domácnosti v případě poskytování v domácnosti
     - Stanovisko krajské hygienické stanice na splnění požadavků na stravování, prostory a provoz
       - liší se dle krajů, např. pro Brno [zde](https://www.khsbrno.cz/?stav_menu=vzory){target="_blank"}
+    - souhlas HZS se splněním podmínek na požární bezpečnost staveb
     - očekáváme, že celý tento proces by neměl trvat déle než tři mesíce
 3. Zaregistrujte se v registru poskytovatelů
 4. Uzavřete smlouvy o poskytování služby s rodiči
@@ -46,6 +47,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 -   V průběhu péče mohou být v domácnosti přítomny i jiné, předem nahlášené, osoby (např. partner během práce z domova apod.)
 -   Stravu zajišťuje rodič po vzájemné dohodě s provozovateli služby
 -   Služba je poskytována pouze očkovaným dětem
+    -   případně těm, u kterých lékař/ka absenci očkování zdůvodní
 -   Službu mohou provozovat pouze nepodnikající osoby
 -   Smlouvy s rodiči je třeba uchovat po dobu 10 let pro potřeby kontroly
 -   Přečtěte si doporučení pro [rodiče](https://www.mpsv.cz/documents/20142/225508/Doporu%C4%8Den%C3%AD+pro+rodi%C4%8De+k+uzav%C3%ADr%C3%A1n%C3%AD+smluv+v+d%C4%9Btsk%C3%A9+skupin%C4%9B_16.3.pdf){target="_blank"} a [poskytovatele](https://www.mpsv.cz/documents/20142/225508/Doporuceni_uzavirani_smlyuv_v_DS.pdf){target="_blank"} při uzavírání smluv o péči
