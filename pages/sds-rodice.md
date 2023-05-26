@@ -21,7 +21,7 @@ Sousedské dětské skupiny přináší nový druh dětské předškolní péče
 ### Vstupní podmínky
 
 1. Máte k dispozici prostor alespoň 3m<sup>2</sup> na jedno dítě
-2. Umíte prokázat bezúhonnost(a i všech ostatních osob, které se v domácnosti běžně vyykytují) a jste spolehlivi
+2. Umíte prokázat bezúhonnost(a i všech ostatních osob, které se v domácnosti běžně vyskytují) a jste spolehliví
 3. Vaše domácnost splňuje hygienické standardy pro péči o malé děti a stravování
     - běžná domácnost většinou podmínky splňuje až na přebalovací pult a vodovodní baterii s ochranou proti opaření
     - službu lze poskytovat i v jiných prostorách než ve vlastní domácnosti
