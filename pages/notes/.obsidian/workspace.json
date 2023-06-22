@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4126545ccfec47f6",
+        "id": "3ed0173a90cd726f",
         "type": "tabs",
         "children": [
           {
-            "id": "b1f4c3dca22ca455",
+            "id": "16507b349a355bce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design tools/Prototype.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9073cb0a737b2e46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5cf1129707115741",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Fake door tests.md",
+                "file": "random/Workweek.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -89,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "98e456d68c14211f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -110,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Fake door tests.md",
+                "file": "random/Workweek.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Fake door tests.md",
+                "file": "random/Workweek.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Fake door tests.md"
+                "file": "random/Workweek.md"
               }
             }
           }
@@ -171,10 +154,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5cf1129707115741",
+  "active": "ee613e5f4402eea4",
   "lastOpenFiles": [
-    "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
+    "img/work.jpg",
+    "img/20230622_171524.jpg",
+    "img",
+    "untitled folder",
+    "random/Workweek.md",
     "design/Fake door tests.md",
+    "random/Tejpovani kolene.md",
+    "kolen.md",
+    "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
     "design/Design tools/Prototype.md",
     "design/Design tools/Persona.md",
     "design/Design tools/Journey maps.md",
@@ -190,16 +180,12 @@
     "random/Web.md",
     "design/Speculative design.md",
     "design/Cone of possibilities.md",
-    "random/Tejpovani kolene.md",
     "design/Activities/Design research/Participant approach.md",
     "design/Activities/Design research/Self-ethnographic research.md",
     "design/Activities/Design research/Secondary research.md",
     "design/Activities/Design research/Desk research.md",
     "design/Activities/Design research",
     "design/Activities/Research Visualization.md",
-    "design/Concepts/Indexing.md",
-    "design/Concepts/Sense-making.md",
-    "design/Concepts/Triangulation.md",
     "design/Activities",
     "Untitled.canvas",
     "design/Design/Design tools/Prototypes",
@@ -207,8 +193,6 @@
     "design/Design",
     "design/Design tools/Prototypes",
     "design/Concepts",
-    "design/Design methods",
-    "design/Design tools",
-    "design"
+    "design/Design methods"
   ]
 }
