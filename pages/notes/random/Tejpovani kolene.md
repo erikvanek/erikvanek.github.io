@@ -4,6 +4,7 @@ source: https://www.youtube.com/watch?v=yLkBs6R8dJA
 - _oholit horní 1/3 lýtka a spodní půlku stehna_
 - aplikovaný tejp by neměl zasahovat do čéšky
 - báze = koncová cca 5cm dlouhá část tejpu, která se lepí jako jeho ukotvení bez natahování tejpu
+- zatím nejlepší pásky z vyzkoušených dělá [GemMedical](https://gemmedical.cz/kineziologicke-tejpy-/131-bavlneny-tejp-5cm-x-5m.html#/14-barva-modra)
 - zažehlovat tejpy co nejdříve ať se dobře chytne lepidlo
 - nastřihnout:
 	- 3x20cm tejp
