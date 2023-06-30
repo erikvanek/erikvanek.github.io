@@ -55,3 +55,7 @@ via
 -   [LinkedIn](https://www.linkedin.com/in/erikvanek/){target="_blank"}
 -   [Github](https://github.com/erikvanek/){target="_blank"}
 -   physically at <address>[Bayerova 34, 602 00, Brno, Czechia](https://www.google.com/maps/place/Bayerova+803%2F34,+602+00+Brno-st%C5%99ed-Veve%C5%99%C3%AD,+%C4%8Cesko/@49.2085446,16.5990392,17z/data=!3m1!4b1!4m5!3m4!1s0x4712946a11225445:0x50532260eba4db3c!8m2!3d49.2085411!4d16.6012279){target="_blank"}</address>
+- IČO 08390754
+- Bank account 1953130028/3030
+- IBAN CZ8030300000001953130028
+- BIC AIRACZPP
