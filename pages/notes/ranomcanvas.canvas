@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"bf7d1d184f109f4d","x":-540,"y":-230,"width":300,"height":400,"type":"file","file":"img/work.jpg"},
+		{"id":"357d99b55c662a02","x":0,"y":-200,"width":540,"height":340,"color":"6","type":"file","file":"random/Tejpovani kolene.md"}
+	],
+	"edges":[
+		{"id":"3654e1eea862d7b5","fromNode":"bf7d1d184f109f4d","fromSide":"right","toNode":"357d99b55c662a02","toSide":"left"}
+	]
+}

@@ -65,14 +65,14 @@
                 <time>{{ date.toDateString('cs')}}</time>
 
             {% else %}
-                {% for post in collections.posts | sort(attribute = 'date', reverse = true) %}
+                {% for post in collections.posts | reverse %}
                     <h2>
                         <a href="{{ post.url }}">{{ post.data.title }}</a>
                     </h2>
 
                     <div class="blog-subtitle">
                         <div class="tags">
-                            {% for tag in post.data.tags | sort%}
+                            {% for tag in post.data.tags | reverse%}
                                 {%if tag != 'posts' %}
                                     <span class="tag">{{tag}}</span>
 
