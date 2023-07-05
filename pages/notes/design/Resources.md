@@ -1,3 +1,5 @@
 - [Hall of shame](https://www.deceptive.design/hall-of-shame/all) of bad design
 - https://ddc.dk/tools-and-methods/
 - https://ddc.dk/articles/
+- [Opencollective](https://opencollective.com/) can help funding projects
+- [Civil service](https://www.gov.uk/government/organisations/civil-service/about) as a way how to implement services in reality
