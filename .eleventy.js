@@ -11,14 +11,11 @@ module.exports = function (eleventyConfig) {
         },
     });
 
-
     let options = {
         html: true,
         breaks: true,
         linkify: true
     };
-
-
 
     const markdownLib = markdownIt(options)
         .use(markdownItAttrs)
