@@ -1,0 +1,1 @@
+- https://www.youtube.com/watch?v=dMugENc-6mg&ab_channel=WeCookVegan red lentils latkes
