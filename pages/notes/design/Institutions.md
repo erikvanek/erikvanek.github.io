@@ -1,0 +1,3 @@
+- https://www.aalto.fi/en/department-of-design/nodus-sustainable-design-research-group
+	- he NODUS group studies design solutions, business models, bottom up initiatives and governance innovations which hold potential to contribute to sustainability. NODUS utilises and promotes transdisciplinary research and co-creative approaches in knowledge generation.
+- 
