@@ -53,7 +53,8 @@ const repoVariables = {
 
 // const endpoint = "https://graphql.github.com/graphql/proxy";
 const endpoint = "https://api.github.com/graphql";
-token = "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";
+// token = "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";
+const token = process.env.obsidianizertoken;
 const docsFolderName = "docs";
 const notesFolderName = 'notes';
 
