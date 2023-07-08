@@ -1,5 +1,5 @@
 let counter = 0;
-let speed = 2000
+let speed = 5000
 
 const blobs = [
     {
@@ -106,13 +106,11 @@ const changeContent = (newNoun, newAdjective, color) => {
     const indexOfAdjective = Object.values(blobs).map(blob => blob.adjective).indexOf(newAdjective)
     console.log(indexOfAdjective)
     const randomValue = Math.round(Math.random() * 255 % 255).toString(16)
-    // body.style.backgroundColor = color ?? `#${randomValue}${randomValue}${randomValue}`;
-    const pattern = document.getElementById('pattern')
     body.style.color = Number.parseInt(randomValue, 16) % 2 === 1 ? `var(--color-1)` : `var(--color-2)`;
     changeCounter++;
-    setTimeout(() => document.getElementsByClassName('active')[0]?.classList.toggle('active'), speed * 1.5)
+    const activePattern = document.getElementsByClassName('active')[0];
+    activePattern?.classList.toggle('active')
     document.getElementById(`pattern-${indexOfAdjective + 1}`).classList.toggle('active')
-    // pattern.style.backgroundImage = `var(--pattern-${changeCounter % 8})`;
     document.getElementById('changeCounter').innerText = changeCounter;
 }
 
@@ -149,6 +147,7 @@ const restartLoop = () => {
 const slowDown = () => {
     speed = Math.floor(speed * 1.05);
     speedSpan.innerText = speed;
+    [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
     restartLoop();
 }
 
@@ -156,6 +155,7 @@ const speedUp = () => {
     speed = Math.floor(speed / 1.05);
     speedSpan.innerText = speed;
     restartLoop();
+    [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
 }
 
 const randomize = () => {
