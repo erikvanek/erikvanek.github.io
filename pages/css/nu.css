@@ -5,8 +5,8 @@
 */
 
 :root {
-    --color-1: navy;
-    --color-2: orange;
+    --color-1: white;
+    --color-2: red;
     --pattern-1: linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #4f46e4 25%, #4f46e4 30%, transparent 31%, transparent 39%, #4f46e4 40%, #4f46e4 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #4f46e4 25%, #4f46e4 30%, transparent 31%, transparent 39%, #4f46e4 40%, #4f46e4 45%, transparent 45%);
     --pattern-2: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px), repeating-linear-gradient(#444cf755, #444cf7);
     --pattern-3: linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
@@ -131,7 +131,7 @@ html {
 }
 
 body {
-    transition: all 0.5s steps(16, jump-end);
+    transition: all 5s ease-in-out;
     background-size: 100vw 100vh;
     background-blend-mode: multiply;
     /* background-color: pink; */
@@ -148,6 +148,7 @@ body {
 
 .pattern {
     opacity: 0;
+    transition: opacity 5s ease-in-out;
 }
 
 #wrapper {
@@ -164,7 +165,6 @@ body {
 }
 
 #wrapper div {
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,36 +176,30 @@ body {
     max-height: 4rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
-button {
-    min-width: 4rem;
-    height: 2rem;
-    font-size: 1.25rem;
+#adjective,
+#noun {
+    animation: fade-in-fade-out 5s infinite;
 }
 
-#wrapper #debug {
-    display: none;
+#intro {
+    animation-iteration-count: 1;
+    animation: fade-in-stay 5s;
 }
 
-.active {
-    animation-name: patternBackground;
-    animation-duration: 2000ms;
-
-    /* animation-iteration-count: infinite; */
-}
-
-h1 {
-    margin: 0;
-}
-
-
-@keyframes patternBackground {
-    from {
+@keyframes fade-in-fade-out {
+    0% {
         opacity: 0;
     }
 
-    20% {
+    30% {
+        opacity: 0;
+    }
+
+    55% {
         opacity: 1;
     }
 
@@ -213,7 +207,47 @@ h1 {
         opacity: 1;
     }
 
-    to {
+    100% {
         opacity: 0;
     }
+}
+
+
+@keyframes fade-in-stay {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0.5;
+    }
+}
+
+button {
+    min-width: 6rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    background-color: white;
+    border-radius: .25rem;
+    border: .125rem solid #eee;
+}
+
+button:hover {
+    border: .125rem solid #ccc;
+}
+
+#wrapper #debug {
+    display: none;
+}
+
+.active {
+    opacity: 1;
+}
+
+h1 {
+    margin: 0;
 }
