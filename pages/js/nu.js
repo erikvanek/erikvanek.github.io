@@ -106,7 +106,7 @@ const changeContent = (newNoun, newAdjective, color) => {
     const indexOfAdjective = Object.values(blobs).map(blob => blob.adjective).indexOf(newAdjective)
     console.log(indexOfAdjective)
     const randomValue = Math.round(Math.random() * 255 % 255).toString(16)
-    body.style.color = Number.parseInt(randomValue, 16) % 2 === 1 ? `var(--color-1)` : `var(--color-2)`;
+    body.style.color = Number.parseInt(randomValue, 16) % 2 === 1 ? `var(--color-primary)` : `var(--color-secondary)`;
     changeCounter++;
     const activePattern = document.getElementsByClassName('active')[0];
     activePattern?.classList.toggle('active')
