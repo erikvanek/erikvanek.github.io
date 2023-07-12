@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "b92ecd7182b5c7c2",
+        "id": "b1cf4d5cc8d8d3a5",
         "type": "tabs",
         "children": [
           {
-            "id": "287b36c18d578b03",
+            "id": "935ecec54341fb90",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "ranomcanvas.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": -30,
-                  "zoom": -1
-                }
+                "file": "fomo/Movies.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Fake door tests.md",
+                "file": "fomo/Movies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Fake door tests.md",
+                "file": "fomo/Movies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Fake door tests.md"
+                "file": "fomo/Movies.md"
               }
             }
           }
@@ -157,11 +154,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "287b36c18d578b03",
+  "active": "935ecec54341fb90",
   "lastOpenFiles": [
+    "fomo/Books.md",
+    "fomo/To read.md",
+    "fomo/Movies.md",
+    "resume/organization-shortlist.md",
+    "fomo",
+    "random/Untitled",
+    "ranomcanvas.canvas",
     "design/AI.md",
     "design/Resources.md",
-    "ranomcanvas.canvas",
     "random/Workweek.md",
     "img/work.jpg",
     "img/20230622_171524.jpg",
@@ -186,18 +189,12 @@
     "design/Design.md",
     "design/Social design.md",
     "random/Rabbit hole.md",
-    "random/Web.md",
-    "design/Speculative design.md",
-    "design/Cone of possibilities.md",
-    "design/Activities/Design research/Participant approach.md",
     "design/Activities/Design research",
     "design/Activities",
     "Untitled.canvas",
     "design/Design/Design tools/Prototypes",
     "design/Design/Design tools",
     "design/Design",
-    "design/Design tools/Prototypes",
-    "design/Concepts",
-    "design/Design methods"
+    "design/Design tools/Prototypes"
   ]
 }

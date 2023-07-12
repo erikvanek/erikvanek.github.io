@@ -1,0 +1,4 @@
+- https://medium.com/predict/five-human-dangers-of-artificial-intelligence-ccf2ae4b92c7
+	- deep dive into hazards connected with AI
+- https://www.linkedin.com/pulse/ai-first-new-ui-paradigm-60-years-jakob-nielsen/
+	- AI as a first new UI paradigm in 60 years
