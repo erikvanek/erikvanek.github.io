@@ -5,266 +5,512 @@
 */
 
 :root {
-    --color-primary: #FFF6FF;
-    --color-secondary: #E7F2FB;
+  --color-primary: #fff6ff;
+  --color-secondary: #fbe7f2;
 
-    --color-1: #9300FF;
-    --color-2: #FF00B9;
-    --color-3: #FF0076;
-    --color-4: #FF7E47;
-    --color-5: #FFC33E;
-    --color-6: #F9F871;
+  --color-1: #9300ff;
+  --color-2: #ff00b9;
+  --color-3: #ff0076;
+  --color-4: #ff7e47;
+  --color-5: #ffc33e;
+  --color-6: #f9f871;
 }
 
 #pattern-1 {
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--color-1) 1rem), repeating-linear-gradient(var(--color-2), var(--color-primary));
-    background-blend-mode: color-burn;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      var(--color-4) 0,
+      var(--color-1) 1rem
+    ),
+    repeating-linear-gradient(var(--color-1), var(--color-primary));
 }
 
-#pattern-2 {
-    /* background-color: var(--color-secondary); */
-    background-image: linear-gradient(135deg, var(--color-1) 25%, transparent 25%), linear-gradient(225deg, var(--color-1) 25%, transparent 25%), linear-gradient(45deg, var(--color-1) 25%, transparent 25%), linear-gradient(315deg, var(--color-1) 25%, var(--color-2) 25%);
-    background-position: 1rem 0, 1rem 0, 0 0, 0 0;
-    background-size: 1rem 1rem;
-    background-repeat: repeat;
+ #pattern-2 {
+  background-image: linear-gradient(135deg, var(--color-1) 25%, transparent 25%),
+    linear-gradient(225deg, var(--color-1) 25%, transparent 25%),
+    linear-gradient(45deg, var(--color-1) 25%, transparent 25%),
+    linear-gradient(315deg, var(--color-1) 25%, var(--color-2) 25%);
+  background-position: 1rem 0, 1rem 0, 0 0, 0 0;
+  background-size: 1rem 1rem;
+  background-repeat: repeat;
 }
 
 #pattern-3 {
-    /* background-color: var(--color-secondary); */
-    background-image: linear-gradient(135deg, var(--color-1) 25%, transparent 25%), linear-gradient(225deg, var(--color-2) 25%, transparent 25%), linear-gradient(45deg, var(--color-1) 25%, transparent 25%), linear-gradient(315deg, var(--color-2) 25%, var(--color-1) 25%);
-    background-position: 1rem 0, 1rem 0, 0 0, 0 0;
-    background-size: 2rem 2rem;
-    background-repeat: repeat;
+  background-image: linear-gradient(135deg, var(--color-1) 25%, transparent 25%),
+    linear-gradient(225deg, var(--color-2) 25%, transparent 25%),
+    linear-gradient(45deg, var(--color-1) 25%, transparent 25%),
+    linear-gradient(315deg, var(--color-2) 25%, var(--color-1) 25%);
+  background-position: 1rem 0, 1rem 0, 0 0, 0 0;
+  background-size: 2rem 2rem;
+  background-repeat: repeat;
 }
 
+
 #pattern-4 {
-    /* background-color: var(--color-secondary); */
-    background-image: radial-gradient(circle at center center, var(--color-1), var(--color-2)), repeating-radial-gradient(circle at center center, var(--color-1), var(--color-2), 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;
+  background-image: radial-gradient(
+      circle at center center,
+      var(--color-1),
+      var(--color-2)
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      var(--color-1),
+      var(--color-2),
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: multiply;
 }
 
 #pattern-5 {
-    /* background-color: var(--color-secondary); */
-    background-image: radial-gradient(ellipse farthest-corner at 10px 10px, var(--color-1), var(--color-1) 50%, var(--color-secondary) 50%);
-    background-size: 10px 10px;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 10px 10px,
+    var(--color-1),
+    var(--color-1) 50%,
+    var(--color-secondary) 50%
+  );
+  background-size: 10px 10px;
 }
 
 #pattern-6 {
-    /* background-color: var(--color-secondary); */
-    background-image: linear-gradient(30deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)), linear-gradient(150deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)), linear-gradient(30deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)), linear-gradient(150deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)), linear-gradient(60deg, var(--color-1)77 25%, transparent 25.5%, transparent 75%, var(--color-1)77 75%, var(--color-1)77), linear-gradient(60deg, var(--color-1)77 25%, transparent 25.5%, transparent 75%, var(--color-1)77 75%, var(--color-1)77);
-    background-size: 20px 35px;
-    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  background-image: linear-gradient(
+      30deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      150deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      30deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      150deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      60deg,
+      var(--color-1) 77 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color-1) 77 75%,
+      var(--color-1) 77
+    ),
+    linear-gradient(
+      60deg,
+      var(--color-1) 77 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color-1) 77 75%,
+      var(--color-1) 77
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
 }
-
-html {
-    --s: 150px;
-    /* control the size */
-    --c1: var(--color-1);
-    --c2: var(--color-2);
-    --c3: var(--color-3);
-    --c4: var(--color-4);
-
-    --_g:
-        var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%, var(--c1) 36% 45%,
-        var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%, var(--c2) 86% 95%,
-        var(--color-primary) 96%;
-
-}
-
 
 #pattern-7 {
-    background:
-        radial-gradient(50% 50% at 100% 0, var(--_g)),
-        radial-gradient(50% 50% at 0 100%, var(--_g)),
-        radial-gradient(50% 50%, var(--_g)),
-        radial-gradient(50% 50%, var(--_g)) calc(var(--s)/2) calc(var(--s)/2) var(--c1);
-    background-size: var(--s) var(--s);
+  background: radial-gradient(50% 50% at 100% 0, var(--_g)),
+    radial-gradient(50% 50% at 0 100%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
+      var(--c1);
+  background-size: var(--s) var(--s);
 }
 
-
 #pattern-8 {
-    background:
-        conic-gradient(from 45deg at 75% 75%, var(--c3) 90deg, var(--c1) 0 180deg, var(--color-primary) 0),
-        conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg, var(--color-primary) 0),
-        conic-gradient(from -45deg at 50% 100%, var(--color-primary) 180deg, var(--c3) 0),
-        conic-gradient(from -45deg, var(--c1) 90deg, var(--c2) 0 225deg, var(--c4) 0);
-    background-size: var(--s) var(--s);
+  background: conic-gradient(
+      from 45deg at 75% 75%,
+      var(--c3) 90deg,
+      var(--c1) 0 180deg,
+      var(--color-primary) 0
+    ),
+    conic-gradient(
+      from -45deg at 25% 25%,
+      var(--c3) 90deg,
+      var(--color-primary) 0
+    ),
+    conic-gradient(
+      from -45deg at 50% 100%,
+      var(--color-primary) 180deg,
+      var(--c3) 0
+    ),
+    conic-gradient(
+      from -45deg,
+      var(--c1) 90deg,
+      var(--c2) 0 225deg,
+      var(--c4) 0
+    );
+  background-size: var(--s) var(--s);
 }
 
 #pattern-9 {
-    background:
-        conic-gradient(from -60deg at 50% calc(100%/3), var(--_g)),
-        conic-gradient(from 120deg at 50% calc(200%/3), var(--_g)),
-        conic-gradient(from 60deg at calc(200%/3), var(--c3) 60deg, var(--c2) 0 120deg, var(--color-primary) 0),
-        conic-gradient(from 180deg at calc(100%/3), var(--c1) 60deg, var(--_g)),
-        linear-gradient(90deg, var(--c1) calc(100%/6), var(--c2) 0 50%,
-            var(--c1) 0 calc(500%/6), var(--c2) 0);
-    background-size: calc(1.732*var(--s)) var(--s);
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      var(--color-primary) 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  /* background-size: calc(1.732 * var(--s)) var(--s); */
+  background-size: 100% 100%;
 }
 
 #pattern-10 {
-    background-image:
-        radial-gradient(closest-side, transparent 0%, transparent 75%, var(--color-1) 76%, var(--color-1) 85%, var(--color-2) 86%, var(--color-2) 94%, var(--color-primary) 95%, var(--color-primary) 103%, var(--color-3) 104%, var(--color-3) 112%, var(--color-5) 113%, var(--color-5) 121%, var(--color-primary) 122%, var(--color-primary) 130%, var(--color-4) 131%, var(--color-4) 140%),
-        radial-gradient(closest-side, transparent 0%, transparent 75%, var(--color-1) 76%, var(--color-1) 85%, var(--color-2) 86%, var(--color-2) 94%, var(--color-primary) 95%, var(--color-primary) 103%, var(--color-3) 104%, var(--color-3) 112%, var(--color-5) 113%, var(--color-5) 121%, var(--color-primary) 122%, var(--color-primary) 130%, var(--color-4) 131%, var(--color-4) 140%);
-    background-size: 110px 110px;
-    /* background-color: var(--color-6); */
-    background-position: 0 0, 55px 55px;
+  background-image: radial-gradient(
+      closest-side,
+      transparent 0%,
+      transparent 75%,
+      var(--color-1) 76%,
+      var(--color-1) 85%,
+      var(--color-2) 86%,
+      var(--color-2) 94%,
+      var(--color-primary) 95%,
+      var(--color-primary) 103%,
+      var(--color-3) 104%,
+      var(--color-3) 112%,
+      var(--color-5) 113%,
+      var(--color-5) 121%,
+      var(--color-primary) 122%,
+      var(--color-primary) 130%,
+      var(--color-4) 131%,
+      var(--color-4) 140%
+    ),
+    radial-gradient(
+      closest-side,
+      transparent 0%,
+      transparent 75%,
+      var(--color-1) 76%,
+      var(--color-1) 85%,
+      var(--color-2) 86%,
+      var(--color-2) 94%,
+      var(--color-primary) 95%,
+      var(--color-primary) 103%,
+      var(--color-3) 104%,
+      var(--color-3) 112%,
+      var(--color-5) 113%,
+      var(--color-5) 121%,
+      var(--color-primary) 122%,
+      var(--color-primary) 130%,
+      var(--color-4) 131%,
+      var(--color-4) 140%
+    );
+  background-size: 110px 110px;
+  background-position: 0 0, 55px 55px;
 }
 
 #pattern-11 {
-    /* background-color: var(--color-4); */
-    background-image: linear-gradient(30deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)),
-        linear-gradient(150deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)),
-        linear-gradient(30deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)),
-        linear-gradient(150deg, var(--color-1) 12%, transparent 12.5%, transparent 87%, var(--color-1) 87.5%, var(--color-1)),
-        linear-gradient(60deg, var(--color-3) 25%, transparent 25.5%, transparent 75%, var(--color-3) 75%, var(--color-3)),
-        linear-gradient(60deg, var(--color-3) 25%, transparent 25.5%, transparent 75%, var(--color-3) 75%, var(--color-3));
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-image: linear-gradient(
+      30deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      150deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      30deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      150deg,
+      var(--color-1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color-1) 87.5%,
+      var(--color-1)
+    ),
+    linear-gradient(
+      60deg,
+      var(--color-3) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color-3) 75%,
+      var(--color-3)
+    ),
+    linear-gradient(
+      60deg,
+      var(--color-3) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color-3) 75%,
+      var(--color-3)
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 #pattern-12 {
-    background: linear-gradient(45deg, var(--color-2) 0%, var(--color-2) 5%, transparent 5%, transparent 10%, var(--color-2) 10%, var(--color-2) 15%, transparent 15%, transparent 20%, var(--color-2) 20%, var(--color-2) 25%, transparent 25%, transparent 30%, var(--color-2) 30%, var(--color-2) 35%, transparent 35%, transparent 40%, var(--color-2) 40%, var(--color-2) 45%, transparent 45%, transparent 50%, var(--color-2) 50%, var(--color-2) 100%, transparent 55%, transparent 60%, var(--color-2) 60%, var(--color-2) 65%, transparent 65%, transparent 70%, var(--color-2) 70%, var(--color-2) 75%, transparent 70%, transparent 80%, var(--color-2) 80%, var(--color-2) 85%, transparent 85%, transparent 90%, var(--color-2) 90%, var(--color-2) 95%, transparent 95%), linear-gradient(135deg, var(--color-2) 0%, var(--color-2) 5%, transparent 5%, transparent 10%, var(--color-2) 10%, var(--color-2) 15%, transparent 15%, transparent 20%, var(--color-2) 20%, var(--color-2) 25%, transparent 25%, transparent 30%, var(--color-2) 30%, var(--color-2) 35%, transparent 35%, transparent 40%, var(--color-2) 40%, var(--color-2) 45%, transparent 45%, transparent 50%, var(--color-2) 50%, var(--color-2) 55%, transparent 55%, transparent 60%, var(--color-2) 60%, var(--color-2) 65%, transparent 65%, transparent 70%, var(--color-2) 70%, var(--color-2) 75%, transparent 70%, transparent 80%, var(--color-2) 80%, var(--color-2) 85%, transparent 85%, transparent 90%, var(--color-2) 90%, var(--color-2) 95%, transparent 95%);
-    background-size: 3em 3em;
-    /* background-color: var(--color-primary); */
+  background: linear-gradient(
+      45deg,
+      var(--color-2) 0%,
+      var(--color-2) 5%,
+      transparent 5%,
+      transparent 10%,
+      var(--color-2) 10%,
+      var(--color-2) 15%,
+      transparent 15%,
+      transparent 20%,
+      var(--color-2) 20%,
+      var(--color-2) 25%,
+      transparent 25%,
+      transparent 30%,
+      var(--color-2) 30%,
+      var(--color-2) 35%,
+      transparent 35%,
+      transparent 40%,
+      var(--color-2) 40%,
+      var(--color-2) 45%,
+      transparent 45%,
+      transparent 50%,
+      var(--color-2) 50%,
+      var(--color-2) 100%,
+      transparent 55%,
+      transparent 60%,
+      var(--color-2) 60%,
+      var(--color-2) 65%,
+      transparent 65%,
+      transparent 70%,
+      var(--color-2) 70%,
+      var(--color-2) 75%,
+      transparent 70%,
+      transparent 80%,
+      var(--color-2) 80%,
+      var(--color-2) 85%,
+      transparent 85%,
+      transparent 90%,
+      var(--color-2) 90%,
+      var(--color-2) 95%,
+      transparent 95%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-2) 0%,
+      var(--color-2) 5%,
+      transparent 5%,
+      transparent 10%,
+      var(--color-2) 10%,
+      var(--color-2) 15%,
+      transparent 15%,
+      transparent 20%,
+      var(--color-2) 20%,
+      var(--color-2) 25%,
+      transparent 25%,
+      transparent 30%,
+      var(--color-2) 30%,
+      var(--color-2) 35%,
+      transparent 35%,
+      transparent 40%,
+      var(--color-2) 40%,
+      var(--color-2) 45%,
+      transparent 45%,
+      transparent 50%,
+      var(--color-2) 50%,
+      var(--color-2) 55%,
+      transparent 55%,
+      transparent 60%,
+      var(--color-2) 60%,
+      var(--color-2) 65%,
+      transparent 65%,
+      transparent 70%,
+      var(--color-2) 70%,
+      var(--color-2) 75%,
+      transparent 70%,
+      transparent 80%,
+      var(--color-2) 80%,
+      var(--color-2) 85%,
+      transparent 85%,
+      transparent 90%,
+      var(--color-2) 90%,
+      var(--color-2) 95%,
+      transparent 95%
+    );
+  background-size: 3em 3em;
+} 
+
+html {
+  --s: 150px;
+  --c1: var(--color-1);
+  --c2: var(--color-2);
+  --c3: var(--color-3);
+  --c4: var(--color-4);
+
+  --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%,
+    var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%,
+    var(--c1) 76% 85%, var(--c2) 86% 95%, var(--color-primary) 96%;
 }
 
 body {
-    transition: all 5s ease-in-out;
-    background-size: 100vw 100vh;
-    background-blend-mode: multiply;
-    overflow: hidden;
-    /* background-color: pink; */
+  transition: all 5s ease-in-out;
+  background-size: 100vw 100vh;
+  background-blend-mode: difference;
+  overflow: hidden;
+  /* background-color: pink; */
 }
 
 .pattern,
 #wrapper {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .pattern {
-    opacity: 0;
-    transition: opacity 5s ease-in-out;
-    background-color: var(--color-1);
-    background-blend-mode: color-burn;
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+  background-color: var(--color-1);
+  background-blend-mode: difference;
 }
 
 #wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5rem;
 }
 
 #wrapper #content {
-    flex: 1;
-    justify-content: center;
+  flex: 1;
+  justify-content: center;
 }
 
 #wrapper div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #wrapper #controls {
-    flex-direction: row;
-    gap: 1rem;
-    max-height: 4rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  max-height: 4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 #adjective,
 #noun {
-    animation: fade-in-fade-out 5s infinite;
+  animation: fade-in-fade-out 5s infinite;
 }
 
 #intro {
-    animation-iteration-count: 1;
-    animation: fade-in-stay 5s;
+  animation-iteration-count: 1;
+  animation: fade-in-stay 5s;
 }
 
 @keyframes fade-in-fade-out {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    30% {
-        opacity: 0;
-    }
+  30% {
+    opacity: 0;
+  }
 
-    55% {
-        opacity: 1;
-    }
+  55% {
+    opacity: 1;
+  }
 
-    80% {
-        opacity: 1;
-    }
+  80% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
-
 @keyframes fade-in-stay {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    30% {
-        opacity: 0;
-    }
+  30% {
+    opacity: 0;
+  }
 
-    55% {
-        opacity: 0.5;
-    }
+  55% {
+    opacity: 0.5;
+  }
 }
 
 button {
-    min-width: 6rem;
-    height: 2.5rem;
-    font-size: 1.25rem;
-    background-color: white;
-    border-radius: .25rem;
-    border: .125rem solid #eee;
+  min-width: 6rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 0.125rem solid #eee;
 }
 
 button:hover {
-    border: .125rem solid #ccc;
+  border: 0.125rem solid #ccc;
 }
 
 #wrapper #debug {
-    display: none;
+  display: none;
 }
 
 .active {
-    opacity: 1;
+  opacity: 1;
 }
 
 h1 {
-    margin: 0;
-    font-size: 4rem;
-
+  margin: 0;
+  font-size: 4rem;
 }
 
 @media screen and (min-width: 600px) {
-    h1 {
-        font-size: 5rem;
-    }
+  h1 {
+    font-size: 5rem;
+  }
 }
 
-
 @media screen and (min-width: 960px) {
-    h1 {
-        font-size: 6rem;
-    }
+  h1 {
+    font-size: 6rem;
+  }
 }
