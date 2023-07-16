@@ -6,6 +6,9 @@
 - Welcome to Sodom
 	- covering topics of electronic waste and disposal
 	- https://www.imdb.com/title/tt8116550/
+- Reject
+	- portraits of different social exclusions
+	- https://www.imdb.com/title/tt2996696/
 ## Series
 - Chimp empire
 	- https://www.netflix.com/cz/title/81311783

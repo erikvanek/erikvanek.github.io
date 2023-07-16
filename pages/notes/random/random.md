@@ -1,0 +1,2 @@
+- technological determinism ^1c5de7
+	- a theory that assumes that a society's technology progresses by following its own internal logic of efficiency
