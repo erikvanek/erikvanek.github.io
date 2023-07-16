@@ -3,4 +3,4 @@
 - when you start - be shitty, not pretty - throw away easily & iterate further
 - [[Design Thinking]]
 - Uses [[Design tools]] to answer the question "What" & [[Design methods]] to answer the question "How"
-- 
+- Kat Holmes: __"Design as a practice that contributes to the society in meaningful ways"__ 

@@ -4,16 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "b1cf4d5cc8d8d3a5",
+        "id": "3ec26119c00e3d86",
         "type": "tabs",
         "children": [
           {
-            "id": "935ecec54341fb90",
+            "id": "6d87829be0da24db",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "books/mismatch.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "eeb76f2154352d7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fomo/Movies.md",
+                "file": "fomo/To read.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6fe589df60cd356e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "books/prepisovat-pravidla.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fomo/Movies.md",
+                "file": "books/mismatch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "fomo/Movies.md",
+                "file": "books/mismatch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "fomo/Movies.md"
+                "file": "books/mismatch.md"
               }
             }
           }
@@ -154,11 +180,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "935ecec54341fb90",
+  "active": "6d87829be0da24db",
   "lastOpenFiles": [
-    "fomo/Books.md",
+    "books/prepisovat-pravidla.md",
+    "books/mismatch.md",
     "fomo/To read.md",
+    "design/Design.md",
     "fomo/Movies.md",
+    "design/random.md",
+    "books/filling-the-void.md",
+    "books/book-notes-template.md",
+    "random/random.md",
+    "books/TISDD.md",
+    "books/cradle-to-cradle.md",
+    "fomo/Books.md",
     "resume/organization-shortlist.md",
     "fomo",
     "random/Untitled",
@@ -180,15 +215,6 @@
     "design/Design tools/Prototype.md",
     "design/Design tools/Persona.md",
     "design/Design tools/Journey maps.md",
-    "design/Design tools/Jobs to be done.md",
-    "design/Design tools/Design tools.md",
-    "design/Design tools/Prototypes/Digital & SW prototypes.md",
-    "design/Concepts/Prototyping.md",
-    "design/Activities/Research planning.md",
-    "design/Activities/Design research.md",
-    "design/Design.md",
-    "design/Social design.md",
-    "random/Rabbit hole.md",
     "design/Activities/Design research",
     "design/Activities",
     "Untitled.canvas",
