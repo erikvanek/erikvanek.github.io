@@ -1,0 +1,3 @@
+- [ ] sluneční brýle
+- [ ] opalovací krém
+- [ ] nazouváky

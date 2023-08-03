@@ -1,0 +1,3 @@
+- zalít kytky před odjezdem a zajistit zalívání v průběhu
+- vynést koše (aspoň bio a rest)
+- zavřít okna a zajistit větrání v průběhu

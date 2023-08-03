@@ -1,0 +1,7 @@
+- co nejlehčí čtení 
+- co nejlehčí psaní
+- snacky
+- jízdenky
+- pas když non-EU
+- mikina
+- komp v případě potřeby
