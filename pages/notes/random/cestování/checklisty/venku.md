@@ -1,0 +1,11 @@
+- [ ] dobrý ponožky
+- [ ] lékarnička
+- [ ] nádoby na vodu
+- [ ] plán na jídlo
+- [ ] hroznový cukr
+- v závislosti na náročnosti
+	- [ ] hůlky
+	- [ ] nesmeky
+	- [ ] nepromokavý šusťáky
+	- [ ] nepromokavá bunda
+	- [ ] péřovka

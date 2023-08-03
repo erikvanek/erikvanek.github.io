@@ -1,0 +1,4 @@
+- [ ] rukavice
+- [ ] teplý boty
+- [ ] vlněný ponožky
+- [ ] dobrý pyžamo

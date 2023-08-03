@@ -22,30 +22,19 @@
             }
           },
           {
-            "id": "eeb76f2154352d7d",
+            "id": "99c170b41ad7f4ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fomo/To read.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6fe589df60cd356e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "books/prepisovat-pravidla.md",
+                "file": "random/cestování/cestovní-checklist.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -119,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/mismatch.md",
+                "file": "random/cestování/cestovní-checklist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/mismatch.md",
+                "file": "random/cestování/cestovní-checklist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "books/mismatch.md"
+                "file": "random/cestování/cestovní-checklist.md"
               }
             }
           }
@@ -180,10 +169,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d87829be0da24db",
+  "active": "99c170b41ad7f4ee",
   "lastOpenFiles": [
-    "books/prepisovat-pravidla.md",
+    "random/cestování/checklisty/s sebou.md",
+    "random/cestování/cestovní-checklist.md",
+    "random/cestování/checklisty/město.md",
+    "random/cestování/checklisty/dlouhý.md",
+    "random/cestování/checklisty/domáci rutiny.md",
+    "random/cestování/checklisty/venku.md",
     "books/mismatch.md",
+    "random/cestování/checklisty/déšť.md",
+    "random/cestování/checklisty/zima.md",
+    "random/cestování/checklisty/teplo.md",
+    "random/cestování/checklisty/zahraničí.md",
+    "random/cestování/checklisty/cyklo.md",
+    "random/cestování/checklisty/ČR.md",
+    "random/cestování/checklisty/krátký.md",
+    "random/cestování/checklisty",
+    "random/cestování",
+    "books/prepisovat-pravidla.md",
     "fomo/To read.md",
     "design/Design.md",
     "fomo/Movies.md",
@@ -196,31 +200,16 @@
     "fomo/Books.md",
     "resume/organization-shortlist.md",
     "fomo",
-    "random/Untitled",
     "ranomcanvas.canvas",
-    "design/AI.md",
-    "design/Resources.md",
-    "random/Workweek.md",
     "img/work.jpg",
     "img/20230622_171524.jpg",
     "img",
     "untitled folder",
-    "random/Workweek.md",
-    "design/Fake door tests.md",
-    "random/Tejpovani kolene.md",
-    "kolen.md",
-    "Untitled.md",
-    "design/Fake door tests.md",
-    "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
-    "design/Design tools/Prototype.md",
-    "design/Design tools/Persona.md",
-    "design/Design tools/Journey maps.md",
     "design/Activities/Design research",
     "design/Activities",
     "Untitled.canvas",
     "design/Design/Design tools/Prototypes",
     "design/Design/Design tools",
-    "design/Design",
-    "design/Design tools/Prototypes"
+    "design/Design"
   ]
 }
