@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "random/cestování/cestovní-checklist.md",
+                "file": "random/cestování/checklisty/s sebou.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/cestování/cestovní-checklist.md",
+                "file": "random/cestování/checklisty/s sebou.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/cestování/cestovní-checklist.md",
+                "file": "random/cestování/checklisty/s sebou.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "random/cestování/cestovní-checklist.md"
+                "file": "random/cestování/checklisty/s sebou.md"
               }
             }
           }
@@ -171,16 +171,16 @@
   },
   "active": "99c170b41ad7f4ee",
   "lastOpenFiles": [
-    "random/cestování/checklisty/s sebou.md",
     "random/cestování/cestovní-checklist.md",
+    "random/cestování/checklisty/zima.md",
+    "random/cestování/checklisty/teplo.md",
+    "random/cestování/checklisty/s sebou.md",
     "random/cestování/checklisty/město.md",
     "random/cestování/checklisty/dlouhý.md",
     "random/cestování/checklisty/domáci rutiny.md",
     "random/cestování/checklisty/venku.md",
     "books/mismatch.md",
     "random/cestování/checklisty/déšť.md",
-    "random/cestování/checklisty/zima.md",
-    "random/cestování/checklisty/teplo.md",
     "random/cestování/checklisty/zahraničí.md",
     "random/cestování/checklisty/cyklo.md",
     "random/cestování/checklisty/ČR.md",
