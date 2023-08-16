@@ -1,215 +1,233 @@
 {
-  "main": {
-    "id": "6cc2fb4d2f08a26d",
-    "type": "split",
-    "children": [
-      {
-        "id": "3ec26119c00e3d86",
-        "type": "tabs",
+    "main": {
+        "id": "6cc2fb4d2f08a26d",
+        "type": "split",
         "children": [
-          {
-            "id": "6d87829be0da24db",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "books/mismatch.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
+            {
+                "id": "3704b2170cacafe2",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "6d87829be0da24db",
+                        "type": "leaf",
+                        "pinned": true,
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "books/mismatch.md",
+                                "mode": "source",
+                                "source": false
+                            },
+                            "pinned": true
+                        }
+                    },
+                    {
+                        "id": "99c170b41ad7f4ee",
+                        "id": "b6d9dff66e847b72",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "random/cestování/checklisty/s sebou.md",
+                                "file": "design/Education.md",
+                                "mode": "source",
+                                "source": false
+                            }
+                        }
+                    }
+                ],
+                "currentTab": 1
             }
-          },
-          {
-            "id": "99c170b41ad7f4ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "random/cestování/checklisty/s sebou.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
         ],
-        "currentTab": 1
-      }
-    ],
-    "direction": "vertical"
-  },
-  "left": {
-    "id": "3226a1a0f50535c3",
-    "type": "split",
-    "children": [
-      {
-        "id": "5f8dd492768286fe",
-        "type": "tabs",
+        "direction": "vertical"
+    },
+    "left": {
+        "id": "3226a1a0f50535c3",
+        "type": "split",
         "children": [
-          {
-            "id": "ee613e5f4402eea4",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
+            {
+                "id": "5f8dd492768286fe",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "ee613e5f4402eea4",
+                        "type": "leaf",
+                        "state": {
+                            "type": "file-explorer",
+                            "state": {
+                                "sortOrder": "alphabetical"
+                            }
+                        }
+                    },
+                    {
+                        "id": "6b30415ae18c831f",
+                        "type": "leaf",
+                        "state": {
+                            "type": "search",
+                            "state": {
+                                "query": "the obser",
+                                "matchingCase": false,
+                                "explainSearch": false,
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical"
+                            }
+                        }
+                    },
+                    {
+                        "id": "fd2a826c6f924203",
+                        "type": "leaf",
+                        "state": {
+                            "type": "starred",
+                            "state": {}
+                        }
+                    },
+                    {
+                        "id": "98e456d68c14211f",
+                        "type": "leaf",
+                        "state": {
+                            "type": "bookmarks",
+                            "state": {}
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "id": "6b30415ae18c831f",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "the obser",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "fd2a826c6f924203",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "98e456d68c14211f",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "5bde52dce7d98592",
-    "type": "split",
-    "children": [
-      {
-        "id": "35bfe64ff65e4e60",
-        "type": "tabs",
+        ],
+        "direction": "horizontal",
+        "width": 300
+    },
+    "right": {
+        "id": "5bde52dce7d98592",
+        "type": "split",
         "children": [
-          {
-            "id": "ac499b7e25539db9",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "random/cestování/checklisty/s sebou.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
+            {
+                "id": "35bfe64ff65e4e60",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "ac499b7e25539db9",
+                        "type": "leaf",
+                        "state": {
+                            "type": "backlink",
+                            "state": {
+                                "file": "random/cestování/checklisty/s sebou.md",
+                                "file": "design/Education.md",
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical",
+                                "showSearch": false,
+                                "searchQuery": "",
+                                "backlinkCollapsed": false,
+                                "unlinkedCollapsed": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "e989cf5cb657cea1",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outgoing-link",
+                            "state": {
+                                "file": "random/cestování/checklisty/s sebou.md",
+                                "linksCollapsed": false,
+                                "unlinkedCollapsed": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "9ce199c8ae5a37b8",
+                        "type": "leaf",
+                        "state": {
+                            "type": "tag",
+                            "state": {
+                                "sortOrder": "frequency",
+                                "useHierarchy": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "cf5e7b28cd8db3c0",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outline",
+                            "state": {
+                                "file": "design/Education.md"
+                            }
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "id": "e989cf5cb657cea1",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "random/cestování/checklisty/s sebou.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "9ce199c8ae5a37b8",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "cf5e7b28cd8db3c0",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "random/cestování/checklisty/s sebou.md"
-              }
-            }
-          }
-        ]
-      }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+    },
+    "left-ribbon": {
+        "hiddenItems": {
+            "switcher:Open quick switcher": false,
+            "graph:Open graph view": false,
+            "canvas:Create new canvas": false,
+            "daily-notes:Open today's daily note": false,
+            "templates:Insert template": false,
+            "command-palette:Open command palette": false
+        }
+    },
+    "active": "99c170b41ad7f4ee",
+    "lastOpenFiles": [
+        "random/cestování/cestovní-checklist.md",
+        "random/cestování/checklisty/domáci rutiny.md",
+        "random/cestování/checklisty/venku.md",
+        "random/cestování/checklisty/město.md",
+        "random/cestování/checklisty/zima.md",
+        "random/cestování/checklisty/teplo.md",
+        "random/cestování/checklisty/zahraničí.md",
+        "random/cestování/checklisty/dlouhý.md",
+        "random/cestování/checklisty/krátký.md",
+        "random/cestování/checklisty/s sebou.md",
+        "random/imposter-syndrom-Adam-Grant.md",
+        "random/cestování/checklisty/ČR.md",
+        "books/mismatch.md",
+        "random/cestování/checklisty/déšť.md",
+        "random/cestování/checklisty/cyklo.md",
+        "random/cestování/checklisty",
+        "random/cestování",
+        "books/prepisovat-pravidla.md"
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
-    }
-  },
-  "active": "99c170b41ad7f4ee",
-  "lastOpenFiles": [
-    "random/cestování/cestovní-checklist.md",
-    "random/cestování/checklisty/domáci rutiny.md",
-    "random/cestování/checklisty/venku.md",
-    "random/cestování/checklisty/město.md",
-    "random/cestování/checklisty/zima.md",
-    "random/cestování/checklisty/teplo.md",
-    "random/cestování/checklisty/zahraničí.md",
-    "random/cestování/checklisty/dlouhý.md",
-    "random/cestování/checklisty/krátký.md",
-    "random/cestování/checklisty/s sebou.md",
-    "random/imposter-syndrom-Adam-Grant.md",
-    "random/cestování/checklisty/ČR.md",
-    "books/mismatch.md",
-    "random/cestování/checklisty/déšť.md",
-    "random/cestování/checklisty/cyklo.md",
-    "random/cestování/checklisty",
-    "random/cestování",
-    "books/prepisovat-pravidla.md",
-    "fomo/To read.md",
-    "design/Design.md",
-    "fomo/Movies.md",
-    "design/random.md",
-    "books/filling-the-void.md",
-    "books/book-notes-template.md",
-    "random/random.md",
-    "books/TISDD.md",
-    "books/cradle-to-cradle.md",
-    "fomo/Books.md",
-    "fomo",
-    "ranomcanvas.canvas",
-    "img/work.jpg",
-    "img/20230622_171524.jpg",
-    "img",
-    "untitled folder",
-    "design/Activities/Design research",
-    "design/Activities",
-    "Untitled.canvas",
-    "design/Design/Design tools/Prototypes",
-    "design/Design/Design tools",
-    "design/Design"
-  ]
+    "active": "b6d9dff66e847b72",
+    "lastOpenFiles": [
+        "design/Education.md",
+        "fomo/To read.md",
+        "design/random.md",
+        "Untitled.md",
+        "design/Design methods/Design methods.md",
+        "design/Design tools/Persona.md",
+        "books/mismatch.md",
+        "books/prepisovat-pravidla.md",
+        "design/Design.md",
+        "fomo/Movies.md",
+        "books/filling-the-void.md",
+        "books/book-notes-template.md",
+        "random/random.md",
+        "books/TISDD.md",
+        "books/cradle-to-cradle.md",
+        "fomo/Books.md",
+        "fomo",
+        "ranomcanvas.canvas",
+        "img/work.jpg",
+        "img/20230622_171524.jpg",
+        "img",
+        "untitled folder",
+        "random/Workweek.md",
+        "design/Fake door tests.md",
+        "random/Tejpovani kolene.md",
+        "kolen.md",
+        "design/Fake door tests.md",
+        "design/Design tools/Prototypes/Actions, processes & experiences prototype.md",
+        "design/Activities/Design research",
+        "design/Activities",
+        "Untitled.canvas",
+        "design/Design/Design tools/Prototypes",
+        "design/Design/Design tools",
+        "design/Design"
+    ]
 }
