@@ -22,11 +22,10 @@
         <meta name="og:url" content="www.erikvanek.com/">
         <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
 
-        <title>{{ title }}</title>
+        <title>Hi, I'm Erik</title>
         <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/nu.css">
-        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="css/style.css">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
@@ -41,58 +40,15 @@
 
             gtag('config', 'UA-116349788-1');
         </script>
+        <script src="js/landing.js"></script>
 
     </head>
 
 </html>
-<body id="pattern-1" class="active">
+<body>
     <div class="section" id="splash">
-        <div class="article">
-            <a href="/">← back Home 🏠</a>
-            {% if title !== "Blog" %}
-                <a href="/blog">← Blog</a>
-            {% endif %}
-            <h1>{{title}}</h1>
-            {% if subtitle %}
-                <h4>
-                    <em>"{{subtitle}}"</em>
-                </h4>
-            {% endif %}
-            {% if author %}
-                <h4>
-                    by {{author}}
-                </h4>
-            {% endif %}
-            {% if title !== "Blog" %}
-
-                {% if title !== "Hey! I'm Erik" %}
-                    <time>{{ date.toDateString('cs')}}</time>
-                {% endif %}
-            {% else %}
-                {% for post in collections.posts | reverse %}
-                    <h2>
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
-                    </h2>
-
-                    <div class="blog-subtitle">
-                        <div class="tags">
-                            {% for tag in post.data.tags | reverse%}
-                                {%if tag != 'posts' %}
-                                    <span class="tag">{{tag}}</span>
-
-                                {% endif %}
-
-                            {% endfor %}
-                        </div>
-
-                        <time>{{post.date.toDateString('cs')}}</time>
-
-                    </div>
-                {% endfor %}
-
-            {% endif %}
-
-            <article>{{content | safe}}</article>
+        <div class="landing">
+            {{ content | safe}}
         </div>
     </div>
 </body>

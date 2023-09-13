@@ -1,69 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
-    <head>
-        <meta name="generator" content="Hugo 0.37.1"/>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="referrer" content="no-referrer">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nu</title>
+    <link rel="stylesheet" href="/css/nu.css">
+</head>
 
-        <meta name="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
-
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:domain" content="www.erikvanek.com/">
-
-        <meta name="twitter:image" content="/tn.png">
-        <meta name="twitter:title" property="og:title" itemprop="title name" content="Erik Vaněk - personal page.">
-        <meta name="twitter:description" property="og:description" itemprop="description" content="Hi. I'm Erik. I like to make stuff. Food, software, plants and many others.">
-        <meta name="og:type" content="website">
-        <meta name="og:url" content="www.erikvanek.com/">
-        <meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
-
-        <title>Hi, I'm Erik</title>
-        <link rel="shortcut icon" href="/zen-circle.ico" id="favicon">
-        <link rel="stylesheet" href="css/style.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116349788-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-116349788-1');
-        </script>
-        <script src="js/landing.js"></script>
-
-    </head>
-
-</html>
 <body>
-    <div class="section" id="splash">
-        <div class="landing">
-            <!-- - [hey!](/me)
-- [I like to grow plants](/aero)
-- [do web things](/development)
-- [might blog](/blog)
-- [and](/commin-up)
-- [more](/things-to-build)
-- [stuff](/links) -->
-<h1 class="main-claim">Under <em>permanent</em> reconstruction</h1>
-<h2>I'm Erik Vaněk</h2>
-<ul>
-<li>find more about <a href="/me">me</a></li>
-<li>see me <a href="/blog">blogging</a></li>
-<li>building <a href="/aero">DIY aeroponics</a></li>
-<li>or presenting <a href="/disri">other</a> <a href="/trychtyr">projects</a></li>
-</ul>
-
+    <script src="/js/nu.js"></script>
+    <div class="pattern" id="pattern-1"></div>
+    <div class="pattern" id="pattern-2"></div>
+    <div class="pattern" id="pattern-3"></div>
+    <div class="pattern" id="pattern-4"></div>
+    <div class="pattern" id="pattern-5"></div>
+    <div class="pattern" id="pattern-6"></div>
+    <div id="wrapper">
+        <div id="debug">
+            <span id="speed"></span>
+            <span id="changeCounter"></span>
+        </div>
+        <div id="content">
+            <span id="intro">I'm a<span id="n">(n)</span></span>
+            <h1 id="adjective"></h1>
+            <h1 id="noun"></h1>
+            <div id="sections">
+                <span id="findme">find me</span>
+                <a href="/me">online</a>
+                <a href="/blog">blogging</a>
+                <span>or</span>
+                <a href="/aero">growing greens</a>
+            </div>
+        </div>
+        <div id="controls">
+            <button onclick="javascript:speedUp()">↑ speed up ↑</button>
+            <button onclick="javascript:slowDown()">↓ slow down ↓</button>
+            <button onclick="javascript:randomize()">randomize</button>
+            <button onclick="javascript:togglePause()">pause</button>
         </div>
     </div>
 </body>
+
+</html>
