@@ -63,6 +63,10 @@ const blobs = [
         noun: 'idealist',
         hint: 'sounds weird but I got both'
     },
+    {
+        adjective: 'sometimes just',
+        noun: 'pure hater'
+    }
 ]
 
 const entries = Object.entries(blobs);
