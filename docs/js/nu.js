@@ -1,12 +1,9 @@
-let counter = 0;
-let speed = 5000
-
 const blobs = [
     {
         adjective: 'critical',
         noun: 'optimist',
         color: '#800080',
-        pattern: 'yolo'
+        pattern: 'yolo',
     },
     {
         adjective: 'inexhaustible',
@@ -18,162 +15,196 @@ const blobs = [
         adjective: 'curious',
         noun: 'cook',
         link: '/food -> page sourced from google photos',
-        color: '#12c1dd'
+        color: '#12c1dd',
     },
     {
         adjective: 'can do',
         noun: 'designer',
         link: '/hire-me -> page about my thoughts + tykani',
-        color: '#158f49'
+        color: '#158f49',
     },
     {
         adjective: 'nerdy',
         noun: 'fermenter',
-        link: '/fermantation -> page sourced from google photos'
+        // nebo link to tag 'fermentation' na blogu
+        link: '/fermantation -> page sourced from google photos',
     },
     {
         adjective: 'obnoxious',
-        noun: 'know-it-all'
+        noun: 'know-it-all',
     },
     {
         adjective: 'sensitive',
-        noun: 'observer'
+        noun: 'observer',
     },
     {
         adjective: 'open-eyed',
         noun: 'glitch explorer',
-        link: '/yagni -> page sourced from google photos'
+        link: '/yagni -> page sourced from google photos',
     },
     {
         adjective: 'playful',
         noun: 'word maker',
-        hint: 'I make up new words. Constantly.'
+        hint: 'I make up new words. Constantly.',
     },
     {
         adjective: 'lazy',
         noun: 'maškrtník',
-        hint: 'what it is?'
+        hint: 'what it is?',
     },
     {
         adjective: 'open-minded',
-        noun: 'people person'
+        noun: 'people person',
     },
     {
         adjective: 'pragmatic',
         noun: 'idealist',
-        hint: 'sounds weird but I got both'
+        hint: 'sounds weird but I got both',
     },
-]
+    {
+        adjective: 'sometimes just',
+        noun: 'pure hater',
+    },
+];
+
+let counter = 0;
+let speed = 5000;
 
 const entries = Object.entries(blobs);
 let currentTimer;
 let lastStart;
-let speedSpan, changeCounter = 0;
+let speedSpan,
+    changeCounter = 0;
 let lastNoun, lastAdjective, adjective, noun, body;
 let running = true;
 let remainsAfterPause;
 
 const init = () => {
-    adjective = document.getElementById('adjective')
-    noun = document.getElementById('noun')
-    body = document.getElementsByTagName('body')[0]
-    generateContent()
+    adjective = document.getElementById('adjective');
+    noun = document.getElementById('noun');
+    body = document.getElementsByTagName('body')[0];
+    // this seems like a kind of random timeout but helps preventing jumping the animation
+    setTimeout(() => {
+        document.getElementById('adjective').style.animation =
+            'fade-in-fade-out 5s infinite';
+        document.getElementById('noun').style.animation =
+            'fade-in-fade-out 5s infinite';
+    }, 100);
+
+    generateContent();
     currentTimer = setInterval(() => generateContent(), speed);
     lastStart = Date.now();
-    speedSpan = document.getElementById('speed')
+    speedSpan = document.getElementById('speed');
     speedSpan.innerText = speed;
-}
+};
 
 const memoizeLastContent = (adjective, noun) => {
     lastNoun = noun;
     lastAdjective = adjective;
-}
+};
 
 const generateContent = () => {
     if (counter < entries.length - 1) {
         const entry = entries[counter][1];
-        changeContent(entry.noun, entry.adjective, entry.color)
+        changeContent(entry.noun, entry.adjective, entry.color);
     } else {
-        randomize()
+        randomize();
     }
     counter++;
-}
+};
 
 const changeContent = (newNoun, newAdjective, color) => {
-    adjective.innerText = newAdjective
-    noun.innerText = newNoun
-    memoizeLastContent(newAdjective, newNoun)
-    const indexOfAdjective = Object.values(blobs).map(blob => blob.adjective).indexOf(newAdjective)
-    console.log(indexOfAdjective)
-    const randomValue = Math.round(Math.random() * 255 % 255).toString(16)
-    body.style.color = Number.parseInt(randomValue, 16) % 2 === 1 ? `var(--color-primary)` : `var(--color-secondary)`;
+    adjective.innerText = newAdjective;
+    noun.innerText = newNoun;
+    memoizeLastContent(newAdjective, newNoun);
+    const availableBackgroundsLength = [
+        ...document.querySelectorAll('.pattern'),
+    ].length;
+    indexOfAdjective = Object.values(blobs)
+        .map((blob) => blob.adjective)
+        .indexOf(newAdjective);
+    // todo make better
+    if (indexOfAdjective >= availableBackgroundsLength) {
+        indexOfAdjective = indexOfAdjective % availableBackgroundsLength;
+    }
+    console.log(indexOfAdjective);
+    const randomValue = Math.round((Math.random() * 255) % 255).toString(16);
+    body.style.color =
+        Number.parseInt(randomValue, 16) % 2 === 1
+            ? `var(--color-primary)`
+            : `var(--color-secondary)`;
     changeCounter++;
     const activePattern = document.getElementsByClassName('active')[0];
-    activePattern?.classList.toggle('active')
-    document.getElementById(`pattern-${indexOfAdjective + 1}`).classList.toggle('active')
+    activePattern?.classList.toggle('active');
+    document
+        .querySelectorAll('.pattern')
+        [indexOfAdjective].classList.toggle('active');
+    // document
+    //     .getElementById(`pattern-${indexOfAdjective + 1}`)
+    //     .classList.toggle('active');
     document.getElementById('changeCounter').innerText = changeCounter;
-}
+};
 
 const randomizeContent = () => {
     const random = Math.floor(Math.random() * 10, 10) % entries.length;
     const random2 = Math.floor(Math.random() * 10, 10) % entries.length;
-    const entry = entries[random][1]
-    const entry2 = entries[random2][1]
-    changeContent(entry2.noun, entry.adjective, entry.color)
-}
+    const entry = entries[random][1];
+    const entry2 = entries[random2][1];
+    changeContent(entry2.noun, entry.adjective, entry.color);
+};
 
-document.addEventListener('DOMContentLoaded', init)
+document.addEventListener('DOMContentLoaded', init);
 
 document.addEventListener('keypress', () => {
-    console.log('keypress')
-})
+    console.log('keypress');
+});
 
 document.addEventListener('keydown', (e) => {
     const { key } = e;
     if (key === 'ArrowDown') {
-        slowDown()
+        slowDown();
     } else if (key === 'ArrowUp') {
-        speedUp()
+        speedUp();
     }
-})
+});
 
 // could be smarter to resume current loop but easier it is to just 'hard' restart when speed changed
 const restartLoop = () => {
     clearInterval(currentTimer);
     currentTimer = setInterval(() => generateContent(), speed);
     lastStart = Date.now();
-}
+};
 
-const slowDown = () => {
-    speed = Math.floor(speed * 1.05);
-    speedSpan.innerText = speed;
-    [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
-    restartLoop();
-}
+// const slowDown = () => {
+//     speed = Math.floor(speed * 1.05);
+//     speedSpan.innerText = speed;
+//     [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
+//     restartLoop();
+// }
 
-const speedUp = () => {
-    speed = Math.floor(speed / 1.05);
-    speedSpan.innerText = speed;
-    restartLoop();
-    [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
-}
+// const speedUp = () => {
+//     speed = Math.floor(speed / 1.05);
+//     speedSpan.innerText = speed;
+//     restartLoop();
+//     [...document.getElementsByClassName('pattern')].forEach(pattern => pattern.style.transitionDuration = `${speed / 8}ms`)
+// }
 
 const randomize = () => {
-    randomizeContent()
-    restartLoop()
-}
+    randomizeContent();
+    restartLoop();
+};
 
 // not sure about this
-const togglePause = () => {
-    const now = Date.now()
-    if (running) {
-        remainsAfterPause = (now - lastStart) % speed;
-        clearInterval(currentTimer)
-    } else {
-        currentTimer = setTimeout(() => {
-            generateContent();
-            restartLoop()
-        }, remainsAfterPause)
-    }
-    running = !running;
-}
+// const togglePause = () => {
+//     const now = Date.now()
+//     if (running) {
+//         remainsAfterPause = (now - lastStart) % speed;
+//         clearInterval(currentTimer)
+//     } else {
+//         currentTimer = setTimeout(() => {
+//             generateContent();
+//             restartLoop()
+//         }, remainsAfterPause)
+//     }
+//     running = !running;
+// }
