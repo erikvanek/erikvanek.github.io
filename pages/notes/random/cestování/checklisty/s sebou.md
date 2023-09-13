@@ -7,6 +7,7 @@
 - nabíječku
 - nesesér
 	- kartáček
+	- mezizubní kartáček
 	- pasta
 	- sprcháč
 	- hřeben
