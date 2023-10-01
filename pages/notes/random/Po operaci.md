@@ -1,0 +1,27 @@
+
+## Vzdělání
+- https://course.elementsofai.com/cs/
+	- kurz o AI zdarma
+- https://docs.kumu.io/getting-started/kumu-101
+	- mrknout se na kumu
+	- dát tomu dvě tři čtyři hoďky a zkusit si v tom udělat nějaký sample projekt
+- https://learnprompting.org/
+	- art of prompting
+- mrknout na články na SSIR
+	- https://ssir.org/articles/entry/how_to_tell_stories_about_complex_issues
+	- https://ssir.org/articles/entry/how_to_tell_real_stories_about_impact
+	- https://ssir.org/articles/entry/the_innovators_tale_of_the_phoenix_and_dragon
+	- https://ssir.org/books/excerpts/entry/thinking_about_thinking
+	- https://ssir.org/articles/entry/social_innovation_that_leads_to_liberation
+	- https://ssir.org/articles/entry/rediscovering_social_innovation
+- kick-off meetingy
+	- https://www.smashingmagazine.com/2015/01/hold-a-kickoff-meeting-before-diving-into-the-design/
+	- https://alistapart.com/article/kick-ass-kickoff-meetings/
+- Mrknout na WBW
+	- o kariéře https://waitbutwhy.com/2018/04/picking-career.html
+	- a AI revolution https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html
+## Todo
+- sezónní recepty
+	- sepsat si nějaké recepty podle toho co kdy je jak dostupné a co na kdy chystat
+	- prostě si udělat "vlastní kuchařku", která klidně může odkazovat na internetový zdroje
+	- 
