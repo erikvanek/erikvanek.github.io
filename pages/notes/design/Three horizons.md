@@ -1,4 +1,5 @@
 - notes from [here](https://training.itcilo.org/delta/Foresight/3-Horizons.pdf)
+- origin [here](https://www.iffpraxis.com/3h-approach)
 - useful conceptual model to aid people thinking about current assumptions, emerging changes and possible & desired futures
 - helps to think about potential changes in short/mid/long term and what impacts those might bring
 - helps to generate innovation by challenging assumptions from different perspectives

@@ -12,4 +12,7 @@
 - https://www.kosmas.cz/knihy/503073/nad-ocekavani/
 	- Kintera should be inspiring and fun
  - https://www.triballeadership.net/
-        - a great book about leadership 
+        - a great book about leadership
+- Future by design
+	- https://expandingthefuture.com/
+	- A new book by Bason

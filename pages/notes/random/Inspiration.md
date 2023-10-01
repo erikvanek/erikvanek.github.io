@@ -1,0 +1,3 @@
+- limit this list to 10 tops
+- David Heinmeier Hansson
+	- https://world.hey.com/dhh

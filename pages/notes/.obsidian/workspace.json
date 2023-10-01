@@ -10,16 +10,43 @@
           {
             "id": "125f090760ae3b5e",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "random/Po operaci.md",
+                "file": "design/Activities/Design research/Thematic analysis.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "494699008f6aff2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Research through design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb262657c3a6a93e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "random/Inspiration.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "the obser",
+                "query": "tag:#design",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/Po operaci.md",
+                "file": "random/Inspiration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/Po operaci.md",
+                "file": "random/Inspiration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "random/Po operaci.md"
+                "file": "random/Inspiration.md"
               }
             }
           }
@@ -154,39 +181,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "125f090760ae3b5e",
+  "active": "bb262657c3a6a93e",
   "lastOpenFiles": [
+    "design/Activities/Design research/Focus groups.md",
+    "random/Inspiration.md",
+    "fomo/Books.md",
+    "design/Activities/Design research/Thematic analysis.md",
+    "design/Research through design.md",
+    "design/Institutions.md",
+    "design/Fake door tests.md",
+    "design/Design.md",
+    "design/Cone of possibilities.md",
+    "design/Activities/Design research/Desk research.md",
+    "design/Activities/Design research/Participant approach.md",
+    "design/Activities/Design research/Secondary research.md",
+    "design/Activities/Research Visualization.md",
+    "design/Activities/Design research.md",
+    "design/random.md",
+    "design/Agencies.md",
+    "design/Resources.md",
     "random/Po operaci.md",
+    "design/Design tools/Persona.md",
+    "design/Design tools/Prototype.md",
+    "design/Three horizons.md",
     "books/mismatch.md",
     "books/book-notes-template.md",
     "books/cradle-to-cradle.md",
     "books/prepisovat-pravidla.md",
     "books/hooked.md",
-    "random/cestování/cestovní-checklist.md",
-    "random/cestování/výlety.md",
-    "design/Education.md",
-    "fomo/To read.md",
-    "design/random.md",
-    "Untitled.md",
-    "design/Design methods/Design methods.md",
-    "design/Design tools/Persona.md",
-    "design/Design.md",
-    "fomo/Movies.md",
-    "books/filling-the-void.md",
-    "random/random.md",
-    "books/TISDD.md",
-    "fomo/Books.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/work.jpg",
     "img/20230622_171524.jpg",
     "img",
     "untitled folder",
-    "random/Workweek.md",
-    "design/Fake door tests.md",
-    "random/Tejpovani kolene.md",
-    "kolen.md",
-    "design/Fake door tests.md",
     "design/Activities/Design research",
     "design/Activities",
     "Untitled.canvas",

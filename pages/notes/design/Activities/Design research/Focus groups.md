@@ -1,0 +1,1 @@
+- good resource https://www.youtube.com/watch?v=cCAPz14yjd4&t=873s&ab_channel=YaleUniversity
