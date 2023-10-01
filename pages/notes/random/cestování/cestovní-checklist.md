@@ -1,3 +1,7 @@
+---
+tags:
+  - trips
+---
 - Výlet může být:
 	- [[krátký]] nebo [[dlouhý]]
 	- do [[ČR]] nebo [[zahraničí]]
