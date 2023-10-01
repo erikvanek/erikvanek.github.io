@@ -1,1 +1,8 @@
 - random blahs etc
+- Groan zone
+	- https://www.nceas.ucsb.edu/news/how-spark-joy-groan-zone-collaboration
+	- https://futuropolis.cz/knihovna/groan-zone-zona-kvileni/
+	- what it is and how to work with it
+- https://www.liberatingstructures.com/1-1-2-4-all/
+- using behavioral design during design
+	- https://wearesnook.com/applying-behavioural-design-to-help-people-make-more-sustainable-choices/

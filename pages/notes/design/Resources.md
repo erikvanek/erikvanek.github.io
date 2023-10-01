@@ -3,3 +3,6 @@
 - https://ddc.dk/articles/
 - [Opencollective](https://opencollective.com/) can help funding projects
 - [Civil service](https://www.gov.uk/government/organisations/civil-service/about) as a way how to implement services in reality
+- Liberating structures
+	- nice method toolset https://www.liberatingstructures.com/
+	- e.g. https://www.liberatingstructures.com/1-1-2-4-all/

@@ -8,18 +8,23 @@
 - https://learnprompting.org/
 	- art of prompting
 - mrknout na články na SSIR
+	- https://ssir.org/articles/entry/design_thinking_for_social_innovation#
 	- https://ssir.org/articles/entry/how_to_tell_stories_about_complex_issues
 	- https://ssir.org/articles/entry/how_to_tell_real_stories_about_impact
 	- https://ssir.org/articles/entry/the_innovators_tale_of_the_phoenix_and_dragon
 	- https://ssir.org/books/excerpts/entry/thinking_about_thinking
 	- https://ssir.org/articles/entry/social_innovation_that_leads_to_liberation
 	- https://ssir.org/articles/entry/rediscovering_social_innovation
+	- https://ssir.org/articles/entry/can_cities_be_the_source_of_scalable_innovations
+	- https://www.tandfonline.com/doi/full/10.1080/15710882.2021.2021244
 - kick-off meetingy
 	- https://www.smashingmagazine.com/2015/01/hold-a-kickoff-meeting-before-diving-into-the-design/
 	- https://alistapart.com/article/kick-ass-kickoff-meetings/
 - Mrknout na WBW
 	- o kariéře https://waitbutwhy.com/2018/04/picking-career.html
 	- a AI revolution https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html
+- Khan academy
+	- neco zajimavyho tam :)
 ## Todo
 - sezónní recepty
 	- sepsat si nějaké recepty podle toho co kdy je jak dostupné a co na kdy chystat

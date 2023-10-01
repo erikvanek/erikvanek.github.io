@@ -1,0 +1,23 @@
+---
+sources: ["https://www.nngroup.com/articles/thematic-analysis/"]
+---
+- A systematic method of breaking down and organizing rich data from qualitative research
+- A rule of thumb - _Analysis can be a lengthy process - budget at least as much time as you had for the data collection to complete it_
+- Qualitative data -> Codes -> Themes
+- Code
+	- a word or phrase that acts as a labe for a segment of text
+	- a shorthand for more complicated information
+	- types:
+		- Descriptive
+			- They describe what the data is about
+		- Interpretive
+			- Analytical reading of the data, adding researcher's interpretation
+- Coding
+	- process of labeling segments of text with appropriate codes
+- Process in 6 steps:
+	- gather your data
+	- read all your date from beginning to end
+	- code the data
+	- create codes that encapsulate potential themes
+	- take a break :)
+	- re-evaluate identified themes and return to step 4 if needed
