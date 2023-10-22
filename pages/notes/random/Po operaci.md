@@ -29,4 +29,12 @@
 - sezónní recepty
 	- sepsat si nějaké recepty podle toho co kdy je jak dostupné a co na kdy chystat
 	- prostě si udělat "vlastní kuchařku", která klidně může odkazovat na internetový zdroje
-	- 
+	- spočítat si jak je to s nájmama
+	- dát si online kurz na kreslení
+	- ujasnit si kam jdu
+	- spočítat si cash flow a peníze obecně
+		- kolik potřebuju za měsíc, kolik jsem urval letos, kolik chci příští rok, kolik kam cpát atd
+		- nastavit pravidelné investice
+		- jednou za měsíc si udělat revizi
+		- nastavit si nějaký cíl vzhledem k bydlení
+		- proč pořád ponižuju to co dělám? proč nedokážu být víc hrdej na to kam jsem se dokázal dostat?

@@ -44,9 +44,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "35c640bd6afc539b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Design checklist.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -120,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/Inspiration.md",
+                "file": "design/Design checklist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/Inspiration.md",
+                "file": "design/Design checklist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "random/Inspiration.md"
+                "file": "design/Design checklist.md"
               }
             }
           }
@@ -181,8 +193,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bb262657c3a6a93e",
+  "active": "35c640bd6afc539b",
   "lastOpenFiles": [
+    "design/Design checklist.md",
     "design/Activities/Design research/Focus groups.md",
     "random/Inspiration.md",
     "fomo/Books.md",
@@ -208,7 +221,6 @@
     "books/book-notes-template.md",
     "books/cradle-to-cradle.md",
     "books/prepisovat-pravidla.md",
-    "books/hooked.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/work.jpg",
