@@ -6,3 +6,15 @@
 - Liberating structures
 	- nice method toolset https://www.liberatingstructures.com/
 	- e.g. https://www.liberatingstructures.com/1-1-2-4-all/
+- Boxes and arrows
+	- 20 years of hi quality articles
+	- https://boxesandarrows.com/
+- Alistapart
+	- https://alistapart.com/
+- Smashing magazine
+	- https://www.smashingmagazine.com/
+	- more related to digital design
+- Good services
+	- https://good.services/
+- Inclusive hiring / workshop setup
+  - second half of [this podcast](https://www.ted.com/talks/worklife_with_adam_grant_it_s_time_to_stop_ignoring_disability/transcript)

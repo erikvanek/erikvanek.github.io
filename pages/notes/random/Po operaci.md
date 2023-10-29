@@ -25,8 +25,17 @@
 	- a AI revolution https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html
 - Khan academy
 	- neco zajimavyho tam :)
+- Investovani
+	- investicni brambora
+	- najmy hypiny uroky
+	- neinvestovat do něčeho, čemu člověk nerozumí
+		- čemu rozumím?
+	- největší riziko investování je sám člověk, který investuje
+	- je důležitý si transakce promyslet
+	- daniel gladiš
+	- ondřej koběrský
 ## Todo
 - sezónní recepty
 	- sepsat si nějaké recepty podle toho co kdy je jak dostupné a co na kdy chystat
 	- prostě si udělat "vlastní kuchařku", která klidně může odkazovat na internetový zdroje
-	- 
+- 

@@ -4,49 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4713599e26380835",
+        "id": "fe1a79e5f49a63b2",
         "type": "tabs",
         "children": [
           {
-            "id": "125f090760ae3b5e",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Activities/Design research/Thematic analysis.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "494699008f6aff2e",
+            "id": "4460b1b413d83d49",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Research through design.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bb262657c3a6a93e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "random/Inspiration.md",
+                "file": "design/Resources.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/Inspiration.md",
+                "file": "design/Resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/Inspiration.md",
+                "file": "design/Resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "random/Inspiration.md"
+                "file": "design/Resources.md"
               }
             }
           }
@@ -181,13 +154,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bb262657c3a6a93e",
+  "active": "4460b1b413d83d49",
   "lastOpenFiles": [
-    "design/Activities/Design research/Focus groups.md",
-    "random/Inspiration.md",
-    "fomo/Books.md",
+    "design/random.md",
+    "design/Resources.md",
+    "design/Service design.md",
+    "random/Po operaci.md",
     "design/Activities/Design research/Thematic analysis.md",
     "design/Research through design.md",
+    "random/Inspiration.md",
+    "design/Activities/Design research/Focus groups.md",
+    "fomo/Books.md",
     "design/Institutions.md",
     "design/Fake door tests.md",
     "design/Design.md",
@@ -197,10 +174,7 @@
     "design/Activities/Design research/Secondary research.md",
     "design/Activities/Research Visualization.md",
     "design/Activities/Design research.md",
-    "design/random.md",
     "design/Agencies.md",
-    "design/Resources.md",
-    "random/Po operaci.md",
     "design/Design tools/Persona.md",
     "design/Design tools/Prototype.md",
     "design/Three horizons.md",
@@ -208,7 +182,6 @@
     "books/book-notes-template.md",
     "books/cradle-to-cradle.md",
     "books/prepisovat-pravidla.md",
-    "books/hooked.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/work.jpg",
