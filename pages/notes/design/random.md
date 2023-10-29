@@ -6,3 +6,10 @@
 - https://www.liberatingstructures.com/1-1-2-4-all/
 - using behavioral design during design
 	- https://wearesnook.com/applying-behavioural-design-to-help-people-make-more-sustainable-choices/
+- Sprint instead of brainstorming
+	- https://jakek.medium.com/stop-brainstorming-and-start-sprinting-16180839b43d#.vx9t5k2kz
+	- brainstorms are flawed, design sprint is more methodologically mature evolution which gives ideation some structure
+- It's easier to plan research than prototyping, it is hard to foresee phases that are supposed to follow research phase at the beginning
+- Service evaluation
+	- https://good.services/the-good-services-scale
+	- https://good.services/good-service-scale-how-to
