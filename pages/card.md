@@ -1,7 +1,7 @@
 ---
 title: Say Hi!
 date: 2022-11-16
-layout: article.njk
+layout: landingPage.njk
 ---
 
 <!-- this one is for https://192.168.0.109:8080/me
