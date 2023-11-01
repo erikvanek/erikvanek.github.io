@@ -13,3 +13,7 @@
 - Service evaluation
 	- https://good.services/the-good-services-scale
 	- https://good.services/good-service-scale-how-to
+- what is the problem of the problem?
+	- what's the underlying problem?
+- how do you know that the thing you found is the thing you did not know?
+- Name -> Frame -> Act -> Reflect paradigm from the theory Reflective practice
