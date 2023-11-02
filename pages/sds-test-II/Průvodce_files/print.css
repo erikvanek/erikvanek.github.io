@@ -1,0 +1,777 @@
+/*
+ -	Print
+ -
+ -	This file describes print view
+ */
+/* stylelint-disable */
+* {
+  text-shadow: none !important;
+  color: #000 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  height: auto !important;
+  width: auto !important;
+  font-size: 1.5rem; }
+
+a,
+a:visited {
+  text-decoration: underline; }
+
+a[href]:after {
+  content: " (" attr(href) ")"; }
+
+abbr[title]:after {
+  content: " (" attr(title) ")"; }
+
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+  content: ""; }
+
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid; }
+
+thead {
+  display: table-header-group; }
+
+tr,
+img {
+  page-break-inside: avoid; }
+
+img {
+  max-width: 100% !important; }
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3; }
+
+h2,
+h3 {
+  page-break-after: avoid; }
+
+h1 {
+  font-size: 2.2rem; }
+
+h2 {
+  font-size: 2.1rem; }
+
+h3 {
+  font-size: 1.9rem; }
+
+h4 {
+  font-size: 1.8rem; }
+
+select {
+  background: #fff !important; }
+
+.navbar {
+  display: none; }
+
+.table td,
+.table th {
+  background-color: #fff !important; }
+
+.btn > .caret,
+.dropup > .btn > .caret {
+  border-top-color: #000 !important; }
+
+.label {
+  border: 1px solid #000; }
+
+.table {
+  border-collapse: collapse !important; }
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #ddd !important; }
+
+/**
+ *	Theme variables
+ *
+ *	This file defines new variables and extends standards variables from Bootstrap.
+ */
+/*
+ -	Theme mixins
+ -
+ -	This file defines new mixins and extends standards mixins from Bootstrap.
+ */
+/*
+ -	Font-size mixin
+ -
+ -	Mixin for rem font sizing with fallback, use it with only if you need browser support < IE11
+ -	@param {Number} [size-value] - Size of text
+ */
+/*
+ -  Disabled outline
+ */
+/*
+ -  Placeholder
+ -
+ -  Change color of font in placeholder for input
+ -  @param {HEX Color} [color]
+ */
+/*
+ -  Selection Style
+ -
+ -  Change appearence of highlighted text
+ -  @param {HEX Color} [highlight-color]
+ -  @param {HEX Color} [font-color]
+ */
+/*
+ -	Reset parameters padding and margin
+ -	@param {Number} [value=0] - Set padding and margin to all sides
+ */
+/*
+ -	Micro-clearfix method
+ */
+/*
+ -	Font-face declaration for custom typography
+ -	@param {String} [font-name] - Name of the font family
+ -	@param {url} [file-name] - URL address for font files
+ -	@param {Number} [weight=400] - Weight or boldness of the font
+ -	@param {String} [style=normal] - Face of the font-family (normal, italic or oblique)
+ */
+/*
+ -	Absolute positioning of element to the center
+ -	@param {Boolean} [vertical=true] - Vertical positioning of the element
+ -	@param {Boolean} [horizontal=true] - Horizontal positioning of the element
+ */
+/*
+ -	Center positioning of the block content
+ -	@param {String} [mode=row] - Direction of block elements in flex box (row or column)
+ -	@param {Boolean} [vertical=true] - Vertical positioning of the element
+ -	@param {Boolean} [horizontal=true] - Horizontal positioning of the element
+ */
+/*
+ *	Primary font family
+ */
+/*
+ *	Secondary font family
+ */
+/*
+ *	Mixin for rem font sizing with fallback
+ *	@param {Number} [sizeValue] - Size of text
+ */
+/**
+ *	Reset parameters padding and margin
+ *	@param {Number} [value=0] - Set padding and margin to all sides
+ */
+/**
+ *	Clear on end / after end
+ */
+/**
+ *	Appearance
+ */
+/*
+ *	Box properties
+ *	@param {Number} [radius] - size of border radius
+ */
+/*
+ *	Box border bottom
+ *	@param {Number} [radius] - size of border radius
+ */
+/*
+ *	Same width for table columns
+ *	@param {Number} [val] - width of columns
+ */
+/*
+ *	Disabled state
+ */
+/*
+ -  Theme icons
+ -
+ -  This file contains all used custom icons.
+ */
+@font-face {
+  font-family: "mpsv-icons";
+  src: url("../fonts/icons/mpsv-icons-v3.woff") format("woff"), url("../fonts/icons/mpsv-icons-v3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Custom styly pre ikony, pre ktore nemame vytvorenu ikonu vo fonts/icons/mpsv-icons */
+/* Custom styly pre ikony s textom na 2 riadky, pre ktore nemame vytvorenu ikonu */
+[class^='mpsv-icons'],
+[class*='mpsv-icons'] {
+  font-family: "mpsv-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.mpsv-icons-search::before {
+  content: '\e904'; }
+
+.mpsv-icons-cssz-logo::before {
+  content: '\e903'; }
+
+.mpsv-icons-rss::before {
+  content: '\e900'; }
+
+.mpsv-icons-twitter::before {
+  content: '\e901'; }
+
+.mpsv-icons-facebook::before {
+  content: '\e902'; }
+
+.mpsv-icons-arrow-up::before {
+  content: '\e905'; }
+
+.mpsv-icons-arrow-right::before {
+  content: '\e906'; }
+
+.mpsv-icons-arrow-down::before {
+  content: '\e907'; }
+
+.mpsv-icons-arrow-left::before {
+  content: '\e908'; }
+
+.mpsv-icons-check::before {
+  content: '\e909'; }
+
+.mpsv-icons-view-list::before {
+  content: '\e90b'; }
+
+.mpsv-icons-view-module::before {
+  content: '\e90c'; }
+
+.mpsv-icons-external::before {
+  content: '\e90a'; }
+
+.mpsv-icons-go-end::before {
+  content: '\e90d'; }
+
+.mpsv-icons-go-first::before {
+  content: '\e90e'; }
+
+.mpsv-icons-go-next::before {
+  content: '\e90f'; }
+
+.mpsv-icons-go-prev::before {
+  content: '\e910'; }
+
+.mpsv-icons-read-more::before {
+  content: '\e929'; }
+
+.mpsv-icons-accessibility-01::before {
+  content: '\e911'; }
+
+.mpsv-icons-accessibility-02::before {
+  content: '\e912'; }
+
+.mpsv-icons-accessibility-03::before {
+  content: '\e913'; }
+
+.mpsv-icons-accessibility-04::before {
+  content: '\e914'; }
+
+.mpsv-icons-accessibility-05::before {
+  content: '\e915'; }
+
+.mpsv-icons-accessibility-06::before {
+  content: '\e916'; }
+
+.mpsv-icons-accessibility-07::before {
+  content: '\e917'; }
+
+.mpsv-icons-accessibility-08::before {
+  content: '\e918'; }
+
+.mpsv-icons-accessibility-09::before {
+  content: '\e919'; }
+
+.mpsv-icons-accessibility-10::before {
+  content: '\e91a'; }
+
+.mpsv-icons-accessibility-11::before {
+  content: '\e91b'; }
+
+.mpsv-icons-accessibility-12::before {
+  content: '\e91c'; }
+
+.mpsv-icons-accessibility-13::before {
+  content: '\e91d'; }
+
+.mpsv-icons-accessibility-14::before {
+  content: '\e91e'; }
+
+.mpsv-icons-accessibility-15::before {
+  content: '\e91f'; }
+
+.mpsv-icons-accessibility-16::before {
+  content: '\e920'; }
+
+.mpsv-icons-accessibility-17::before {
+  content: '\e921'; }
+
+.mpsv-icons-accessibility-18::before {
+  content: '\e922'; }
+
+.mpsv-icons-accessibility-19::before {
+  content: '\e923'; }
+
+.mpsv-icons-accessibility-20::before {
+  content: '\e924'; }
+
+.mpsv-icons-accessibility-21::before {
+  content: '\e925'; }
+
+.mpsv-icons-accessibility-22::before {
+  content: '\e926'; }
+
+.mpsv-icons-accessibility-23::before {
+  content: '\e927'; }
+
+.mpsv-icons-accessibility-24::before {
+  content: '\e928'; }
+
+.mpsv-icons-close::before {
+  content: '\e92e'; }
+
+.mpsv-icons-menu::before {
+  content: '\e92f'; }
+
+.mpsv-icons-pdf::before {
+  content: '\e92d'; }
+
+.mpsv-icons-word::before {
+  content: '\e930'; }
+
+.mpsv-icons-docm::before {
+  content: '\e930'; }
+
+.mpsv-icons-doc::before {
+  content: '\e930'; }
+
+.mpsv-icons-docx::before {
+  content: '\e930'; }
+
+.mpsv-icons-dotx::before {
+  content: '\e930'; }
+
+.mpsv-icons-odt::before {
+  content: '\e930'; }
+
+.mpsv-icons-map-pin::before {
+  content: '\e931'; }
+
+.mpsv-icons-circle-plus::before {
+  content: '\e932'; }
+
+.mpsv-icons-refresh::before {
+  content: '\e933'; }
+
+.mpsv-icons-info::before {
+  content: '\e934'; }
+
+.mpsv-icons-circle-minus::before {
+  content: '\e935'; }
+
+.mpsv-icons-datepicker::before {
+  content: '\e936'; }
+
+.mpsv-icons-calendar-prev::before {
+  content: '\e937'; }
+
+.mpsv-icons-calendar-next::before {
+  content: '\e938'; }
+
+.mpsv-icons-accordion-open::before {
+  content: '\e939'; }
+
+.mpsv-icons-accordion-close::before {
+  content: '\e93a'; }
+
+.mpsv-icons-anon-user::before {
+  content: '\e93b'; }
+
+.mpsv-icons-add-user::before {
+  content: '\e93c'; }
+
+.mpsv-icons-avatar::before {
+  content: '\e93d'; }
+
+.mpsv-icons-zoom-in::before {
+  content: '\e93e'; }
+
+.mpsv-icons-zoom-out::before {
+  content: '\e93f'; }
+
+.mpsv-icons-square-close::before {
+  content: '\e940'; }
+
+.mpsv-icons-edit::before {
+  content: '\e941'; }
+
+.mpsv-icons-message::before {
+  content: '\e942'; }
+
+.mpsv-icons-upload::before {
+  content: '\e943'; }
+
+.mpsv-icons-download::before {
+  content: '\e944'; }
+
+.mpsv-icons-excel::before {
+  content: '\e945'; }
+
+.mpsv-icons-xls::before {
+  content: '\e945'; }
+
+.mpsv-icons-xlsx::before {
+  content: '\e945'; }
+
+.mpsv-icons-xlsm::before {
+  content: '\e945'; }
+
+.mpsv-icons-xlt::before {
+  content: '\e945'; }
+
+.mpsv-icons-drag-and-drop::before {
+  content: '\e946'; }
+
+.mpsv-icons-time::before {
+  content: '\e947'; }
+
+.mpsv-icons-filter::before {
+  content: '\e948'; }
+
+.mpsv-icons-xml::before {
+  content: '\e949'; }
+
+.mpsv-icons-gif::before {
+  content: '\e94a'; }
+
+.mpsv-icons-png::before {
+  content: '\e94b'; }
+
+.mpsv-icons-zip::before {
+  content: '\e94c'; }
+
+.mpsv-icons-jpg::before {
+  content: '\e94d'; }
+
+.mpsv-icons-jpeg::before {
+  content: '\e94d'; }
+
+.mpsv-icons-ppt::before {
+  content: '\e94e'; }
+
+.mpsv-icons-pptx::before {
+  content: '\e94e'; }
+
+.mpsv-icons-pptm::before {
+  content: '\e94e'; }
+
+.mpsv-icons-pps::before {
+  content: '\e94f'; }
+
+.mpsv-icons-csv::before {
+  content: '\e950'; }
+
+.mpsv-icons-rtf::before {
+  content: '\e951'; }
+
+.mpsv-icons-xsd::before {
+  content: '\e952'; }
+
+.mpsv-icons-zfo::before {
+  content: '\e953'; }
+
+.mpsv-icons-pin-outline-no::before {
+  content: '\e954'; }
+
+.mpsv-icons-pin-outline::before {
+  content: '\e955'; }
+
+.mpsv-icons-instagram::before {
+  content: '\e956'; }
+
+.mpsv-icons-star-empty::before {
+  content: '\e957'; }
+
+.mpsv-icons-star-fill::before {
+  content: '\e958'; }
+
+.mpsv-icons-json::before {
+  content: "json";
+  background-color: #393939;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  display: block;
+  text-transform: uppercase;
+  width: 34.5px;
+  height: 34px;
+  padding: 12px 3.5px;
+  font-size: 10px; }
+
+a.download-icon:hover .mpsv-icons-json::before {
+  background-color: #f2bd3e; }
+
+.mpsv-icons-jsonld::before {
+  content: "json -ld";
+  background-color: #393939;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  display: block;
+  text-transform: uppercase;
+  width: 34.5px;
+  height: 34px;
+  padding: 8px 3.5px;
+  font-size: 10px;
+  text-align: center; }
+
+a.download-icon:hover .mpsv-icons-jsonld::before {
+  background-color: #f2bd3e; }
+
+/*
+ -  Theme typography
+ -
+ -  This file contains @font-face declarations.
+ */
+/*
+ -	PT Sans
+ */
+@font-face {
+  font-family: "pt_sans";
+  src: url("../fonts/pt-sans/pt_sans-web-regular.woff") format("woff"), url("../fonts/pt-sans/pt_sans-web-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "pt_sans";
+  src: url("../fonts/pt-sans/pt_sans-web-italic.woff") format("woff"), url("../fonts/pt-sans/pt_sans-web-italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "pt_sans";
+  src: url("../fonts/pt-sans/pt_sans-web-bold.woff") format("woff"), url("../fonts/pt-sans/pt_sans-web-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "pt_sans";
+  src: url("../fonts/pt-sans/pt_sans-web-bolditalic.woff") format("woff"), url("../fonts/pt-sans/pt_sans-web-bolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+div.lfr-notification-container {
+  display: none; }
+
+.asseco-theme.body__wrapper {
+  /*
+ -  Scaffolding
+ -
+ -  This file defines content scaffolding for Liferay theme
+ */ }
+  .asseco-theme.body__wrapper {
+    font-family: "pt_sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.42857;
+    color: #393939;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .asseco-theme.body__wrapper .body__wrapper-in {
+    padding-top: 40px; }
+  .asseco-theme.body__wrapper .box {
+    padding: 10px 0;
+    border-radius: 0;
+    border-bottom: 1px solid #000; }
+    .asseco-theme.body__wrapper .box .box__icon-bg,
+    .asseco-theme.body__wrapper .box .box__icon {
+      display: none; }
+    .asseco-theme.body__wrapper .box--small__icon {
+      height: 50px !important; }
+  .asseco-theme.body__wrapper a.btn[href]::after,
+  .asseco-theme.body__wrapper .navigation-list__item a::after {
+    content: none; }
+  .asseco-theme.body__wrapper .alert-info {
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid #000; }
+  .asseco-theme.body__wrapper .header-banner {
+    display: block !important;
+    padding: 0 30px;
+    margin-bottom: 20px; }
+  .asseco-theme.body__wrapper .header__logo-holder {
+    padding: 10px 0;
+    border-bottom: 1px solid #000; }
+  .asseco-theme.body__wrapper .logo {
+    display: block !important;
+    height: 65px !important;
+    width: 280px !important;
+    background-repeat: no-repeat !important;
+    background-position: center center;
+    background-size: contain !important;
+    text-indent: -9999px;
+    -webkit-print-color-adjust: exact; }
+  .asseco-theme.body__wrapper.mpsv-theme .logo {
+    background-image: url("../images/layout/mpsv_logo-black.svg") !important; }
+  .asseco-theme.body__wrapper.rpss-theme .logo {
+    background-image: url("../images/layout/rpss_logo-black.svg") !important; }
+  .asseco-theme.body__wrapper.up-theme .logo {
+    background-image: url("../images/layout/up_logo-black.svg") !important; }
+  .asseco-theme.body__wrapper .breadcrumb {
+    padding: 0 30px; }
+    .asseco-theme.body__wrapper .breadcrumb li {
+      display: inline-block; }
+    .asseco-theme.body__wrapper .breadcrumb li + li::before {
+      content: "-";
+      padding: 0 6px; }
+    .asseco-theme.body__wrapper .breadcrumb a[href]::after {
+      content: none; }
+  .asseco-theme.body__wrapper .footer .footer__bottom,
+  .asseco-theme.body__wrapper .footer .footer__inner {
+    padding: 0;
+    margin: 0; }
+  .asseco-theme.body__wrapper .footer .footer__inner {
+    padding-left: 30px; }
+    .asseco-theme.body__wrapper .footer .footer__inner h3,
+    .asseco-theme.body__wrapper .footer .footer__inner ul {
+      display: none; }
+    .asseco-theme.body__wrapper .footer .footer__inner .box-inner {
+      padding: 0;
+      margin: 0; }
+    .asseco-theme.body__wrapper .footer .footer__inner .footer__brand {
+      margin: 0;
+      display: block;
+      padding: 10px 0; }
+  .asseco-theme.body__wrapper .box__title br {
+    display: none; }
+  .asseco-theme.body__wrapper .js-disclaimer,
+  .asseco-theme.body__wrapper .close,
+  .asseco-theme.body__wrapper .search-controls-holder,
+  .asseco-theme.body__wrapper .hero__controls,
+  .asseco-theme.body__wrapper .message__controls,
+  .asseco-theme.body__wrapper .message__icon,
+  .asseco-theme.body__wrapper .navigation,
+  .asseco-theme.body__wrapper .navigation-context,
+  .asseco-theme.body__wrapper .box--print-hide,
+  .asseco-theme.body__wrapper .list__controls,
+  .asseco-theme.body__wrapper .list__image,
+  .asseco-theme.body__wrapper .list__picture,
+  .asseco-theme.body__wrapper .select,
+  .asseco-theme.body__wrapper .map,
+  .asseco-theme.body__wrapper .list-type-switch,
+  .asseco-theme.body__wrapper .t-offset--double,
+  .asseco-theme.body__wrapper .pagination,
+  .asseco-theme.body__wrapper .news-date,
+  .asseco-theme.body__wrapper .debug-viewports,
+  .asseco-theme.body__wrapper .back-to-top,
+  .asseco-theme.body__wrapper .hero,
+  .asseco-theme.body__wrapper .haddons,
+  .asseco-theme.body__wrapper .btn-carousel-prev,
+  .asseco-theme.body__wrapper .btn-carousel-next {
+    display: none !important; }
+  .asseco-theme.body__wrapper .highlights {
+    border: none; }
+  .asseco-theme.body__wrapper .message {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #000; }
+  .asseco-theme.body__wrapper .list.list--eq {
+    padding: 0 30px; }
+  .asseco-theme.body__wrapper .list__item-holder,
+  .asseco-theme.body__wrapper .select-place__direct,
+  .asseco-theme.body__wrapper .select-place__static,
+  .asseco-theme.body__wrapper .change-role-content {
+    display: block !important; }
+  .asseco-theme.body__wrapper .change-role-content {
+    border-bottom: 1px solid #929292; }
+    .asseco-theme.body__wrapper .change-role-content:last-child {
+      border-bottom: none; }
+  .asseco-theme.body__wrapper .hero {
+    border-bottom: 1px dotted #000; }
+    .asseco-theme.body__wrapper .hero::before {
+      content: none; }
+  .asseco-theme.body__wrapper .search-results__filter a {
+    position: relative;
+    display: block;
+    padding-bottom: 25px; }
+    .asseco-theme.body__wrapper .search-results__filter a:after {
+      content: attr(href) !important;
+      position: absolute;
+      top: 15px;
+      left: 0; }
+  .asseco-theme.body__wrapper .list__wrapper a,
+  .asseco-theme.body__wrapper .search-results a,
+  .asseco-theme.body__wrapper .content__block a,
+  .asseco-theme.body__wrapper .select-place a {
+    display: block;
+    text-decoration: none;
+    cursor: default; }
+    .asseco-theme.body__wrapper .list__wrapper a::after,
+    .asseco-theme.body__wrapper .search-results a::after,
+    .asseco-theme.body__wrapper .content__block a::after,
+    .asseco-theme.body__wrapper .select-place a::after {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .asseco-theme.body__wrapper .news-gallery a {
+    display: none; }
+  .asseco-theme.body__wrapper .news-gallery img {
+    width: 30% !important; }
+  .asseco-theme.body__wrapper .news-gallery__modal {
+    margin-top: 20px;
+    border-bottom: 1px solid #ebebeb; }
+    .asseco-theme.body__wrapper .news-gallery__modal:last-child {
+      border-bottom: none; }
+  .asseco-theme.body__wrapper .box__block .btn {
+    display: none; }
+  .asseco-theme.body__wrapper .list__item,
+  .asseco-theme.body__wrapper .search-result {
+    display: block;
+    border-bottom: 1px solid #ebebeb; }
+    .asseco-theme.body__wrapper .list__item:last-child,
+    .asseco-theme.body__wrapper .search-result:last-child {
+      border-bottom: none; }
+  .asseco-theme.body__wrapper .search-result {
+    padding-bottom: 10px; }
+  .asseco-theme.body__wrapper table {
+    margin-bottom: 40px;
+    text-align: left;
+    border-collapse: collapse; }
+  .asseco-theme.body__wrapper thead th {
+    padding-left: 10px;
+    padding-bottom: 5px; }
+    .asseco-theme.body__wrapper thead th:first-child {
+      padding-left: 0; }
+  .asseco-theme.body__wrapper tbody {
+    padding-top: 5px; }
+    .asseco-theme.body__wrapper tbody td,
+    .asseco-theme.body__wrapper tbody th {
+      border-bottom: 1px solid #ebebeb; }
+    .asseco-theme.body__wrapper tbody tr:last-child td,
+    .asseco-theme.body__wrapper tbody tr:last-child th {
+      border-bottom: none; }
+    .asseco-theme.body__wrapper tbody td {
+      padding: 5px 10px; }
+  .asseco-theme.body__wrapper .accordion:last-child table {
+    border-bottom: none; }
+  .asseco-theme.body__wrapper .info-symbols {
+    padding: 10px 0; }
+  .asseco-theme.body__wrapper .info-symbol__icon {
+    display: inline-block;
+    padding: 10px 0; }
+  .asseco-theme.body__wrapper .highlights hr {
+    border: none; }
+  .asseco-theme.body__wrapper .highlight-section {
+    border-bottom: 1px solid #ebebeb; }
+  .asseco-theme.body__wrapper .job-position-form h3,
+  .asseco-theme.body__wrapper .job-position-form input,
+  .asseco-theme.body__wrapper .job-position-form .form-group {
+    display: none; }
+
+/* stylelint-enable */
