@@ -18,3 +18,8 @@
 	- https://good.services/
 - Inclusive hiring / workshop setup
   - second half of [this podcast](https://www.ted.com/talks/worklife_with_adam_grant_it_s_time_to_stop_ignoring_disability/transcript)
+- D.school
+  - [Design questions library](https://dlibrary.stanford.edu/questions#questions)
+    - resources for thinking about design, creativity etc
+  - [Library of ambiguity](https://dlibrary.stanford.edu/ambiguity)
+    - resources for designing in a wicked world
