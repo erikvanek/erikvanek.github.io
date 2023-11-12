@@ -2,7 +2,7 @@
 title: "Kombucha"
 date: 2023-01-18
 layout: blog.njk
-tags: ["posts", "recipes", "fermentation"]
+tags: ["posts", "recipes", "fermentation", "česky"]
 permalink: /{{page.fileSlug}}/
 ---
 

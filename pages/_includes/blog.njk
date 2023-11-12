@@ -48,8 +48,11 @@
 <body id="pattern-1" class="active">
     <div class="section" id="splash">
         <div class="article">
-            <a href="/">← back Home 🏠</a>
-            {% if title !== "Blog" %}
+            {% if hideNavigation !== true%}
+                <a href="/">← back Home 🏠</a>
+            {% endif %}
+
+            {% if title !== "Blog" and (hideBlog !== true) and (hideNavigation !== true)%}
                 <a href="/blog">← Blog</a>
             {% endif %}
             <h1>{{title}}</h1>
@@ -65,7 +68,7 @@
             {% endif %}
             {% if title !== "Blog" %}
 
-                {% if title !== "Hey! I'm Erik" %}
+                {% if (title !== "Hey! I'm Erik") and (hideDate !== true)%}
                     <time>{{ date.toDateString('cs')}}</time>
                 {% endif %}
             {% else %}

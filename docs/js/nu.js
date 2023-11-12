@@ -6,23 +6,25 @@ const blobs = [
         pattern: 'yolo',
     },
     {
-        adjective: 'inexhaustible',
-        noun: 'city biker',
-        hint: 'not a biker but a commuter',
-        color: '#f77446',
-    },
-    {
         adjective: 'curious',
         noun: 'cook',
         link: '/food -> page sourced from google photos',
         color: '#12c1dd',
     },
+
     {
         adjective: 'can do',
         noun: 'designer',
         link: '/hire-me -> page about my thoughts + tykani',
         color: '#158f49',
     },
+    {
+        adjective: 'inexhaustible',
+        noun: 'city biker',
+        hint: 'not a biker but a commuter',
+        color: '#f77446',
+    },
+
     {
         adjective: 'nerdy',
         noun: 'fermenter',
@@ -68,7 +70,7 @@ const blobs = [
 ];
 
 let counter = 0;
-let speed = 5000;
+let speed = 7000;
 
 const entries = Object.entries(blobs);
 let currentTimer;
@@ -86,16 +88,15 @@ const init = () => {
     // this seems like a kind of random timeout but helps preventing jumping the animation
     setTimeout(() => {
         document.getElementById('adjective').style.animation =
-            'fade-in-fade-out 5s infinite';
+            'fade-in-fade-out 7s infinite';
         document.getElementById('noun').style.animation =
-            'fade-in-fade-out 5s infinite';
+            'fade-in-fade-out 7s infinite';
+        generateContent();
+        currentTimer = setInterval(() => generateContent(), speed);
+        lastStart = Date.now();
+        speedSpan = document.getElementById('speed');
+        speedSpan.innerText = speed;
     }, 100);
-
-    generateContent();
-    currentTimer = setInterval(() => generateContent(), speed);
-    lastStart = Date.now();
-    speedSpan = document.getElementById('speed');
-    speedSpan.innerText = speed;
 };
 
 const memoizeLastContent = (adjective, noun) => {
@@ -138,7 +139,7 @@ const changeContent = (newNoun, newAdjective, color) => {
     activePattern?.classList.toggle('active');
     document
         .querySelectorAll('.pattern')
-        [indexOfAdjective].classList.toggle('active');
+    [indexOfAdjective].classList.toggle('active');
     // document
     //     .getElementById(`pattern-${indexOfAdjective + 1}`)
     //     .classList.toggle('active');

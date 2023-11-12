@@ -2,7 +2,7 @@
 title: Přepisovat pravidla
 subtitle: Antiprůvodce láskou, sexem a vztahy
 authors: ["Meg-John Barker"]
-tags: [vztahy, "books", "posts"]
+tags: [vztahy, "books", "posts", "česky"]
 started-reading: 2022-12-12
 finished-reading: 2023-01-27
 date: 2023-01-29
