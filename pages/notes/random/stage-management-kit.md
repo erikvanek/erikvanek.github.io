@@ -12,5 +12,6 @@
 - Pliers
 - Masking tape
 - Rubber bands
+- Work gloves
 - Multitool
 - Printed Lineup multiple times with sound check times included
