@@ -4,36 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fe1a79e5f49a63b2",
+        "id": "ad22cbf52b182832",
         "type": "tabs",
         "children": [
           {
-            "id": "4460b1b413d83d49",
+            "id": "eb922c21fa9dc1cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Resources.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35c640bd6afc539b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Design checklist.md",
+                "file": "random/stage-management-kit.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,8 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Resources.md",
-                "file": "design/Design checklist.md",
+                "file": "random/stage-management-kit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,8 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Resources.md",
-                "file": "design/Design checklist.md",
+                "file": "random/stage-management-kit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,8 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Resources.md",
-                "file": "design/Design checklist.md"
+                "file": "random/stage-management-kit.md"
               }
             }
           }
@@ -171,8 +154,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "35c640bd6afc539b",
+  "active": "eb922c21fa9dc1cc",
   "lastOpenFiles": [
+    "design/Resources.md",
     "design/Design checklist.md",
     "design/Activities/Design research/Focus groups.md",
     "random/Inspiration.md",
@@ -198,7 +182,6 @@
     "books/mismatch.md",
     "books/book-notes-template.md",
     "books/cradle-to-cradle.md",
-    "books/prepisovat-pravidla.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/work.jpg",

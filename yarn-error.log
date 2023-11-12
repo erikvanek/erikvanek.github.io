@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/ezekiel/.nvm/versions/node/v14.21.2/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js debug
+  /Users/ezekiel/.nvm/versions/node/v14.21.2/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add CNAME README.md docs gallery localhost.cert localhost.key node_modules nu-todo.md package.json pages tn.png yarn-error.log yarn.lock
 
 PATH: 
   /Users/ezekiel/.nvm/versions/node/v14.21.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/:/usr/local/go/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS
@@ -14,12 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/ezekiel/dev/erikvanek.github.io/package.json: Unexpected string in JSON at position 419
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:1631:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:304:30)
-      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:315:13
+  Error: https://registry.yarnpkg.com/CNAME: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:65894:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129018:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129990:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1333:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
 
 npm manifest: 
   {
@@ -30,8 +35,11 @@ npm manifest:
           "doc": "docs"
       },
       "scripts": {
+          "build": "eleventy",
           "start": "eleventy --serve",
-          "debug": "eleventy --serve --trace-warnings""format": "prettier **/*.md",
+          "debug:node": "node --trace-warnings node_modules/.bin/eleventy --serve",
+          "debug:eleventy": "DEBUG=Eleventy* node --trace-warnings node_modules/.bin/eleventy --serve",
+          "format": "prettier **/*.md",
           "format:fix": "prettier --write '**/*.md'"
       },
       "repository": {
