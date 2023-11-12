@@ -1,8 +1,15 @@
 ---
-title: Hey! I'm Erik
+title: Hey! I'm Erik. Nice to meet you!
 date: 2023-02-25
 layout: blog.njk
+hideBlog: true
+hideDate: true
 ---
+
+<!-- Hey, I'm Erik. Nice to meet you.
+
+![Me with a melon](/img/me-melon.jpeg)
+_Me with a melon_ -->
 
 ## What I'm up to?
 
