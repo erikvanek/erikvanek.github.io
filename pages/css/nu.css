@@ -419,6 +419,8 @@ button:hover {
 h1 {
     margin: 0;
     font-size: 4rem;
+    mix-blend-mode: plus-lighter;
+    text-shadow: var(--color-1) 4px 4px 4px;
 }
 
 @media screen and (min-width: 600px) {
