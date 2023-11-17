@@ -4,6 +4,7 @@ date: 2023-01-18
 layout: blog.njk
 tags: ["posts", "recipes", "fermentation", "česky"]
 permalink: /{{page.fileSlug}}/
+description: Kombucha - jednoduchý návod na domácí přípravu. Potřebuješ jen čaj, cukr, skleněnou nádobu a násadu. Za dva týdny máš hotovo!
 ---
 
 Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se dopracoval v průběhu více než roční kontinuální výroby různých kombuch. Recept je pro výrobu zhruba 2l kombuchy.

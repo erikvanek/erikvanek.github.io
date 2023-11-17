@@ -8,7 +8,7 @@ finished-reading: 2023-01-27
 date: 2023-01-29
 blog: true
 layout: blog.njk
-
+description: Recenze knížky Přepisovat pravidla, která se kouká na (zejména) romantické a partnerské vztahy z různých perspektiv.
 ---
 
 <div id="notes">

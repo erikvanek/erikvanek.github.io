@@ -5,6 +5,7 @@ author: "James Bridle"
 date: 2021-01-02
 layout: "blog.njk"
 tags: [books, posts, technology]
+description: Review of the book New Dark age by James Bridle
 
 ---
 

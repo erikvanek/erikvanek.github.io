@@ -4,6 +4,8 @@ date: 2021-12-30
 layout: blog.njk
 tags: ["posts", "recipes", "fermentation"]
 permalink: /{{page.fileSlug}}/
+description: Tepache - one of the funkiest fermented drinks made from leftover pineapple rind and core. Ideal for winter time.
+
 ---
 
 Wonderful spicy refreshing drink born in Mexico. You can give a second life to your usually thrown away pineapple skins & core. It ferments really well even in standard winter room temperature.

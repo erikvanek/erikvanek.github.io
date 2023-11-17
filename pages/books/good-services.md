@@ -6,6 +6,8 @@ date: 2022-01-17
 layout: blog.njk
 tags: ["posts", "books", "design"]
 permalink: /{{page.fileSlug}}/
+description: Good services - everyone wants them. Lou Downe brings in her book 15 simple rules to follow to deliver better services for your clients.
+
 ---
 
 Well crafted handbook on how to create and think of services that are surrounding us in our daily lives. Vast majority of chapters was introduced by a real life story that then helped to illustrate chapter's topic. I found this storytelling helpful and gave me more hands-on feeling when reading through the book. Last but not least I really like book's typography and typesetting.

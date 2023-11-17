@@ -11,14 +11,15 @@ hideDate: true
 ![Me with a melon](/img/me-melon.jpeg)
 _Me with a melon_ -->
 
-## What I'm up to?
+Hey! My name is Erik Vaněk and I make my living as a freelance service designer for two projects revolving around social innovation. First project is focused on estabilishing a new childcare service similar to [Tagesmutter](https://de.wikipedia.org/wiki/Kindertagespflege) in Czech republic. The second project addresses the pressing need for support systems for individuals navigating the challenging period between the pronouncement of a court sentence and their subsequent incarceration.
 
--   food
--   tech
--   design
+ Since 2013, I have worked mainly in the software industry wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/){target="_blank"} for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure.
+ 
+## What brings me joy?
+-   food & fermentation
+-   honest people & dogs
+-   purposeful design
 -   being out
-
-Since 2013, I have worked mainly in the software industry wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/){target="_blank"} for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure.  Currently I'm working as a designer of social innovations for several projects supported by the Ministry of social affairs in Prague.
 
 ## In 2022 I was also
 

@@ -9,7 +9,7 @@ date: 2023-03-23
 blog: true
 permalink: /{{page.fileSlug}}/
 layout: blog.njk
-
+description: Cradle to cradle - One of the most important books for regenerative design. A bible for cradle-to-cradle way of thinking. A must-read for upcycling souls.
 ---
 
 <div id="notes">
