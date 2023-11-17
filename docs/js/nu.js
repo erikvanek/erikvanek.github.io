@@ -95,7 +95,7 @@ const init = () => {
         currentTimer = setInterval(() => generateContent(), speed);
         lastStart = Date.now();
         speedSpan = document.getElementById('speed');
-        speedSpan.innerText = speed;
+        // speedSpan.innerText = speed;
     }, 100);
 };
 
@@ -128,7 +128,7 @@ const changeContent = (newNoun, newAdjective, color) => {
     if (indexOfAdjective >= availableBackgroundsLength) {
         indexOfAdjective = indexOfAdjective % availableBackgroundsLength;
     }
-    console.log(indexOfAdjective);
+    // console.log(indexOfAdjective);
     const randomValue = Math.round((Math.random() * 255) % 255).toString(16);
     body.style.color =
         Number.parseInt(randomValue, 16) % 2 === 1
@@ -143,7 +143,7 @@ const changeContent = (newNoun, newAdjective, color) => {
     // document
     //     .getElementById(`pattern-${indexOfAdjective + 1}`)
     //     .classList.toggle('active');
-    document.getElementById('changeCounter').innerText = changeCounter;
+    // document.getElementById('changeCounter').innerText = changeCounter;
 };
 
 const randomizeContent = () => {
