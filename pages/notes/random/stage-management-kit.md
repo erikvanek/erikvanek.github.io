@@ -15,3 +15,8 @@
 - Work gloves
 - Multitool
 - Printed Lineup multiple times with sound check times included
+- prepare packs for each artist
+	- table
+	- extender
+	- cabling
+	- stuff from the rider
