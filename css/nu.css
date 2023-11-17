@@ -20,20 +20,16 @@
 }
 
 #pattern-1 {
-    background-image: repeating-radial-gradient(
-            circle at 0 0,
+    background-image: repeating-radial-gradient(circle at 0 0,
             var(--color-4) 0,
-            var(--color-1) 1rem
-        ),
+            var(--color-1) 1rem),
         repeating-linear-gradient(var(--color-1), var(--color-primary));
 }
 
 #pattern-2 {
-    background-image: linear-gradient(
-            135deg,
+    background-image: linear-gradient(135deg,
             var(--color-1) 25%,
-            transparent 25%
-        ),
+            transparent 25%),
         linear-gradient(225deg, var(--color-1) 25%, transparent 25%),
         linear-gradient(45deg, var(--color-1) 25%, transparent 25%),
         linear-gradient(315deg, var(--color-1) 25%, var(--color-2) 25%);
@@ -43,103 +39,80 @@
 }
 
 #pattern-3 {
-  background-image: linear-gradient(
-          30deg,
-          var(--color-1) 12%,
-          transparent 12.5%,
-          transparent 87%,
-          var(--color-1) 87.5%,
-          var(--color-1)
-      ),
-      linear-gradient(
-          150deg,
-          var(--color-1) 12%,
-          transparent 12.5%,
-          transparent 87%,
-          var(--color-1) 87.5%,
-          var(--color-1)
-      ),
-      linear-gradient(
-          30deg,
-          var(--color-1) 12%,
-          transparent 12.5%,
-          transparent 87%,
-          var(--color-1) 87.5%,
-          var(--color-1)
-      ),
-      linear-gradient(
-          150deg,
-          var(--color-1) 12%,
-          transparent 12.5%,
-          transparent 87%,
-          var(--color-1) 87.5%,
-          var(--color-1)
-      ),
-      linear-gradient(
-          60deg,
-          var(--color-2) 25%,
-          transparent 25.5%,
-          transparent 75%,
-          var(--color-2) 75%,
-          var(--color-2)
-      ),
-      linear-gradient(
-          60deg,
-          var(--color-1) 25%,
-          transparent 25.5%,
-          transparent 75%,
-          var(--color-1) 75%,
-          var(--color-1)
-      );
-  background-size: 80px 140px;
-  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    background-image: linear-gradient(30deg,
+            var(--color-1) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            var(--color-1) 87.5%,
+            var(--color-1)),
+        linear-gradient(150deg,
+            var(--color-1) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            var(--color-1) 87.5%,
+            var(--color-1)),
+        linear-gradient(30deg,
+            var(--color-1) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            var(--color-1) 87.5%,
+            var(--color-1)),
+        linear-gradient(150deg,
+            var(--color-1) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            var(--color-1) 87.5%,
+            var(--color-1)),
+        linear-gradient(60deg,
+            var(--color-2) 25%,
+            transparent 25.5%,
+            transparent 75%,
+            var(--color-2) 75%,
+            var(--color-2)),
+        linear-gradient(60deg,
+            var(--color-1) 25%,
+            transparent 25.5%,
+            transparent 75%,
+            var(--color-1) 75%,
+            var(--color-1));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 #pattern-4 {
-    background-image: radial-gradient(
-            circle at center center,
+    background-image: radial-gradient(circle at center center,
             var(--color-1),
-            var(--color-2)
-        ),
-        repeating-radial-gradient(
-            circle at center center,
+            var(--color-2)),
+        repeating-radial-gradient(circle at center center,
             var(--color-1),
             var(--color-2),
             10px,
             transparent 20px,
-            transparent 10px
-        );
+            transparent 10px);
     background-blend-mode: multiply;
 }
 
 #pattern-9 {
     background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
         conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
-        conic-gradient(
-            from 60deg at calc(200% / 3),
+        conic-gradient(from 60deg at calc(200% / 3),
             var(--c3) 60deg,
             var(--c2) 0 120deg,
-            var(--color-primary) 0
-        ),
-        conic-gradient(
-            from 180deg at calc(100% / 3),
+            var(--color-primary) 0),
+        conic-gradient(from 180deg at calc(100% / 3),
             var(--c1) 60deg,
-            var(--_g)
-        ),
-        linear-gradient(
-            90deg,
+            var(--_g)),
+        linear-gradient(90deg,
             var(--c1) calc(100% / 6),
             var(--c2) 0 50%,
             var(--c1) 0 calc(500% / 6),
-            var(--c2) 0
-        );
+            var(--c2) 0);
     /* background-size: calc(1.732 * var(--s)) var(--s); */
     background-size: 100% 100%;
 }
 
 #pattern-5 {
-    background-image: radial-gradient(
-            closest-side,
+    background-image: radial-gradient(closest-side,
             transparent 0%,
             transparent 75%,
             var(--color-1) 76%,
@@ -155,10 +128,8 @@
             var(--color-primary) 122%,
             var(--color-primary) 130%,
             var(--color-4) 131%,
-            var(--color-4) 140%
-        ),
-        radial-gradient(
-            closest-side,
+            var(--color-4) 140%),
+        radial-gradient(closest-side,
             transparent 0%,
             transparent 75%,
             var(--color-1) 76%,
@@ -174,62 +145,49 @@
             var(--color-primary) 122%,
             var(--color-primary) 130%,
             var(--color-4) 131%,
-            var(--color-4) 140%
-        );
+            var(--color-4) 140%);
     background-size: 110px 110px;
     background-position: 0 0, 55px 55px;
     background-blend-mode: color-burn;
-  }
+}
 
 #pattern-6 {
-    background-image: linear-gradient(
-            30deg,
+    background-image: linear-gradient(30deg,
             var(--color-1) 12%,
             transparent 12.5%,
             transparent 87%,
             var(--color-1) 87.5%,
-            var(--color-1)
-        ),
-        linear-gradient(
-            150deg,
+            var(--color-1)),
+        linear-gradient(150deg,
             var(--color-1) 12%,
             transparent 12.5%,
             transparent 87%,
             var(--color-1) 87.5%,
-            var(--color-1)
-        ),
-        linear-gradient(
-            30deg,
+            var(--color-1)),
+        linear-gradient(30deg,
             var(--color-1) 12%,
             transparent 12.5%,
             transparent 87%,
             var(--color-1) 87.5%,
-            var(--color-1)
-        ),
-        linear-gradient(
-            150deg,
+            var(--color-1)),
+        linear-gradient(150deg,
             var(--color-1) 12%,
             transparent 12.5%,
             transparent 87%,
             var(--color-1) 87.5%,
-            var(--color-1)
-        ),
-        linear-gradient(
-            60deg,
+            var(--color-1)),
+        linear-gradient(60deg,
             var(--color-3) 25%,
             transparent 25.5%,
             transparent 75%,
             var(--color-3) 75%,
-            var(--color-3)
-        ),
-        linear-gradient(
-            60deg,
+            var(--color-3)),
+        linear-gradient(60deg,
             var(--color-3) 25%,
             transparent 25.5%,
             transparent 75%,
             var(--color-3) 75%,
-            var(--color-3)
-        );
+            var(--color-3));
     background-size: 80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
@@ -284,33 +242,34 @@ body {
 
 
 #sections {
-  /* margin-top: 2rem; */
+    /* margin-top: 2rem; */
 }
 
 #sections a,
 #sections span {
-  color: var(--color-primary) !important;
-  margin-top: 1rem;
-  padding: 0.25rem;
+    color: var(--color-primary) !important;
+    margin-top: 1rem;
+    padding: 0.25rem;
 }
 
 
-#sections #or, #sections #findme{
-  color: var(--color-semi-transparent) !important;
-  margin: 0;
-  font-size: 2rem;
+#sections #or,
+#sections #findme {
+    color: var(--color-semi-transparent) !important;
+    margin: 0;
+    font-size: 2rem;
 }
 
 #sections a {
-  text-decoration: none;
-  border: 0.5rem dotted var(--color-gray);
-  border-radius: 1rem;
-  transition: all .25s;
-
-  &:hover {
-    background: var(--color-2);
+    text-decoration: none;
+    border: 0.5rem dotted var(--color-gray);
+    border-radius: 1rem;
     transition: all .25s;
-  }
+
+    &:hover {
+        background: var(--color-2);
+        transition: all .25s;
+    }
 }
 
 @media (min-width: 600px) {
@@ -327,9 +286,9 @@ body {
 
     #sections a,
     #sections span {
-      margin-top: .25rem;
-      padding: .25rem;
-      border-width: .25rem;
+        margin-top: .25rem;
+        padding: .25rem;
+        border-width: .25rem;
     }
 }
 
@@ -369,7 +328,7 @@ body {
     }
 
     50% {
-       opacity: 1;
+        opacity: 1;
     }
 
     90% {
