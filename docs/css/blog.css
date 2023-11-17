@@ -1,5 +1,5 @@
 :root {
-    --color-text: rgba(255,255,255,.8);
+    --color-text: rgba(255, 255, 255, .8);
     --color-1: #9300ff;
 }
 
@@ -20,9 +20,9 @@ h1 {
     line-height: 3rem;
 }
 
-
 h2 {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    line-height: 2rem;
 }
 
 time {
@@ -38,17 +38,18 @@ time {
         margin-bottom: 0;
     }
 
-    h2 {
-        margin-top: 2rem;
-    }
-
-    h4{
+    h4 {
         margin: 0;
         margin-bottom: 2rem;
     }
+
+    h2 {
+        margin-top: .5rem;
+    }
 }
 
-a, time {
+a,
+time {
     color: var(--color-text);
 }
 
@@ -56,7 +57,8 @@ a {
     border: 3px solid transparent;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     border: 3px dotted var(--color-text);
 }
 
@@ -67,4 +69,30 @@ a:hover, a:active {
 
 p {
     margin-bottom: 1rem;
+}
+
+.blog-row {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    border-bottom: 3px solid var(--color-text);
+    border-top: 3px solid var(--color-1);
+    border-right: 3px solid var(--color-1);
+    border-left: 3px solid var(--color-1);
+    mix-blend-mode: luminosity;
+    display: block;
+    text-decoration: none;
+}
+
+.blog-row:hover {
+    background-color: lime;
+    transition: all .25s;
+}
+
+.blog-subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

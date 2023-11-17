@@ -5,6 +5,8 @@ author: Timothy D. Walker
 date: 2021-01-05
 tags: [books, teaching, posts]
 layout: blog.njk
+description: Review of the book Teach like Finland by Timothy D. Walker
+
 ---
 
 Finland is world known for its well performing school system at least based on PISA scores. Is it really the case? Timothy D. Walker brings a comparison of his experience with american and finish school systems and provides 33 things which schools in Northern American can learn from schools in Finland.

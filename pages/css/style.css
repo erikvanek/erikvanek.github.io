@@ -106,12 +106,6 @@ img {
   color: var(--bg-color);
 }
 
-.blog-subtitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 address {
   display: inline;
 }

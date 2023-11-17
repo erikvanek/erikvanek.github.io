@@ -8,6 +8,8 @@ finished-reading: 2023-01-05
 date: 2023-01-06
 blog: true
 layout: blog.njk
+description: Nir Eyal looks at affective design patterns and mechanisms in his book Hooked - How to Build Habit-Forming Products
+
 ---
 
 <div id="notes">

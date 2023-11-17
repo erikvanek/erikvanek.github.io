@@ -6,6 +6,7 @@ date: 2022-01-02
 layout: blog.njk
 tags: ["posts", "books"]
 permalink: /{{page.fileSlug}}/
+description: Review of the book Deep work by Cal Newport
 ---
 
 The main reason to read this book was to dive in a bit into how focus works. Sometimes I feel like I spend way to much doing shallow things so I wanted to know more about this topic.

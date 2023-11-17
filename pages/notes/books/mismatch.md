@@ -8,6 +8,7 @@ finished-reading: 2023-07-16
 date: 2023-07-16
 blog: true
 layout: blog.njk
+description: Mismatch by Kat Holmes reshaped my thinking about inclusive design. Think of an inclusion as not something that goes 'on top' of things but rather it should be embedded in them. A huge paradigm and a mindset shift for me.
 ---
 
 

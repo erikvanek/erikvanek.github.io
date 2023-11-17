@@ -4,6 +4,7 @@ date: 2020-11-11
 layout: blog.njk
 tags: ["posts", "conference"]
 permalink: /{{page.fileSlug}}/
+description: Review of Design matters 2020 conference in Copenhagen
 ---
 
 - Organized in Copenhagen in nicely renovated Copenhagen Contemporary industrial building.
