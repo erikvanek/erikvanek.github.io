@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
         "svg",
         "html",
         "ico",
-        "md"
+        "md",
     ]);
 
     return {
