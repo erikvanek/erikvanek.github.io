@@ -86,8 +86,11 @@ p {
 }
 
 .blog-row:hover {
-    background-color: lime;
-    transition: all .25s;
+    transition: all 2s;
+    box-shadow: 0rem 0.5rem 2rem orange;
+    background-color: orange;
+    /* transition: background-color 5s;
+    transition: box-shadow 2.5s; */
 }
 
 .blog-subtitle {
