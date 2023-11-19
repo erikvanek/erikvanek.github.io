@@ -107,30 +107,3 @@ description: Service design - co to je a proč by mě to mělo zajímat?
     </section>
 
 </body>
-
-<style>
-    footer {
-        opacity: 80% !important;
-        background-color: rgba(255, 255, 255, .5) !important;
-        border: 2px dotted rgba(255, 255, 255, .8) !important;
-        display: inline-block !important;
-        padding: .5rem !important;
-        border-radius: .5rem;
-    }
-
-    a {
-        border-bottom: 2px dotted lightskyblue;
-        color: lightskyblue;
-        background-color: rgba(0, 0, 0, .4) !important;
-        border-radius: .5rem;
-        padding: .125rem;
-        z-index: 100;
-    }
-
-
-    footer a {
-        color: purple !important;
-        background-color: transparent !important;
-        border: none;
-    }
-</style>
