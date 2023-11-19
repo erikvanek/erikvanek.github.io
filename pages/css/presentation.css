@@ -1,5 +1,7 @@
 .slides {
     width: 100% important;
+    inset: 30% auto auto 50% !important;
+    text-shadow: black 2px 2px 5px !important;
 }
 
 .overlay {
@@ -101,10 +103,13 @@ ul {
     padding-inline-start: 1rem;
 }
 
+h2 {
+    text-shadow: black 0px 0px 20px !important;
+}
 
 @media (orientation:portrait) {
     footer {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     li {
@@ -115,5 +120,6 @@ ul {
 
     h2 {
         margin-bottom: 3rem !important;
+        font-size: 5rem !important;
     }
 }
