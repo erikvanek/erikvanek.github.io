@@ -33,7 +33,7 @@ description: Service design - co to je a proč by mě to mělo zajímat?
     <section>
         <h2>Dobré služby</h2>
         <ul>
-            <li>Se snadno využívají</li>
+            <li>Se snadno používají</li>
             <li>Jsou pro široké spektrum lidí</li>
             <li>Nekladou zbytečné bariéry</li>
             <li>Jsou efektivně navrženy pro potřeby jejich uživatelů</li>
