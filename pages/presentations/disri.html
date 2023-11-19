@@ -1,11 +1,12 @@
-<script type="text/javascript" src="../js/reveal.js"></script>
-<link rel="stylesheet" href="../css/revealjs/reveal.css">
-</link>
-<link rel="stylesheet" href="../css/revealjs/black.css">
-</link>
+---
+title: Service design
+date: 2022-12-15
+layout: presentation.njk
+permalink: /{{page.fileSlug}}/
+eleventyExcludeFromCollections: true
+description: Prezentace do předmětu DISRI na KISK FF MU
+---
 
-<div class="reveal">
-  <div class="slides">
     <section>
       <h1>DISRI tales</h1>
       <h5>Erik Vaněk</h5>
@@ -120,125 +121,28 @@
     <section>
       <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop
         onloadstart="this.volume=0; this.playbackRate = 3">
-        <source src="../videos/Kinect.mp4" type="video/mp4">
+        <source src="../../videos/Kinect.mp4" type="video/mp4">
       </video>
-      <!-- <h1 class="overlay white">Kinect</h1> -->
     </section>
     <section>
       <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop onloadstart="this.volume=0">
-        <source src="../videos/aero-timelapse.mp4" type="video/mp4">
+        <source src="../../videos/aero-timelapse.mp4" type="video/mp4">
       </video>
-      <!-- <h1 class="overlay white">Domácí aeroponie</h1> -->
     </section>
     <section>
       <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop onloadstart="this.volume=0">
-        <source src="../videos/web-midi-api-converted.mp4" type="video/mp4">
+        <source src="../../videos/web-midi-api-converted.mp4" type="video/mp4">
       </video>
-      <!-- <h1 class="overlay white fromTop">Web MIDI API</h1> -->
     </section>
     <section>
       <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop onloadstart="this.volume=0">
-        <source src="../videos/fountain.mp4" type="video/mp4">
+        <source src="../../videos/fountain.mp4" type="video/mp4">
       </video>
-      <!-- <h1 class="overlay white">Fontána u Janáčkova divadla</h1> -->
     </section>
-    
-    <!-- <section>
-      <h1>Motivace</h1>
-      <ul>
-        <li>Návrat k "vizualitě"</li>
-        <li>Multi-žánrovost (inovace)</li>
-        <li>Obousměrná inspirace</li>
-        <li>
-          "Kreslit zvuk"
-          <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a></li>
-          </ul>
-        </li>
-        <li>Zajímavý lidi</li>
-        <li>Zábava :)</li>
-      </ul>
-    </section>
-    <section>
-      <h1>Atd...</h1>
-      <ul>
-        <li>Trávit čas venku</li>
-        <li>Glitche a limitace</li>
-        <li>Jídlo a fermentace</li>
-        <li>Upřímnost a přímost</li>
-      </ul>
-    </section> -->
     <section>
       <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop
         onloadstart="this.volume=0; this.playbackrate=3;">
-        <source src="../videos/kombucha-compressed.mp4" type="video/mp4">
+        <source src="../../videos/kombucha-compressed.mp4" type="video/mp4">
       </video>
       <h1 class="overlay white fromTop">Dík a čau :)</h1>
     </section>
-  </div>
-  <footer>Prezentace na <a href="http://erikvanek.com/disri/" target="_blank">erikvanek.com/disri</footer>
-</div>
-
-<script>
-  Reveal.initialize({
-    center: true,
-    hash: true,
-
-  });
-</script>
-
-<style>
-  .slides {
-    /* width: 100% !important;
-    min-width: 100% !important;
-    height: 100% !important;
-    min-height: 100% !important; */
-    width: 100% important;
-  }
-
-  .overlay {
-    position: fixed;
-    width: 100%;
-    top: 5vh;
-  }
-
-  .fromTop {
-    top: 20vh;
-  }
-
-  .white {
-    color: white !important;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 2rem;
-    left: 20vw;
-    /* color: gainsboro;
-     */
-    opacity: 25%;
-    font-size: 1.5rem;
-    text-align: center;
-    left: 35%;
-    /* width: 100%; */
-  }
-
-  h1 {
-    background: none !important;
-    font-size: 8rem !important;
-    text-align: center;
-    font: bold 80px Sans-Serif;
-    padding: 40px 0;
-
-    background-color: #3a50d9;
-    color: #e0eff2 !important;
-    font: italic bold 100px Georgia, Serif !important;
-    text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27 !important;
-    padding-bottom: 1rem;
-    margin-bottom: 0;
-  }
-
-  li {
-    font-size: 2rem;
-  }
-</style>

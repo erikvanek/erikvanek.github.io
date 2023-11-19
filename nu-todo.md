@@ -1,6 +1,7 @@
 Things to do before launching a redesign of this page
  - [x] fix mobile layout
  - [x] fix fixable backgrounds
+ - intl
  - implement hinting
  - [x] checksubpages
  - [x] check stability
