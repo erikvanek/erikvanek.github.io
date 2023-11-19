@@ -12,7 +12,7 @@ description: Service design - co to je a proč by mě to mělo zajímat?
 <body id="pattern-1" class="active">
     <section>
         <h1>Service design</h1>
-        <h4>Co to je a proč by mě to mělo zajímat?</h4>
+        <h4>Co to je a proč je to důležitý?</h4>
         <br>
         <span class="hint">(Ťukni na mezerník, šipku doprava anebo <i>svajpni</i>)</span>
     </section>
