@@ -37,19 +37,6 @@ footer {
     bottom: 1rem;
 }
 
-
-@media (orientation:portrait) {
-    footer {
-        font-size: 2rem;
-    }
-
-    li {
-        max-width: 90%;
-    }
-}
-
-footer {}
-
 .reveal {
     display: flex;
     flex-direction: column;
@@ -88,6 +75,7 @@ h1 {
 
 li {
     font-size: 2rem;
+    margin-bottom: .5rem;
 }
 
 li:before {
@@ -106,4 +94,26 @@ ul {
 
 .hint {
     opacity: 80%;
+}
+
+ul {
+    margin: 0 !important;
+    padding-inline-start: 1rem;
+}
+
+
+@media (orientation:portrait) {
+    footer {
+        font-size: 2rem;
+    }
+
+    li {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    h2 {
+        margin-bottom: 3rem !important;
+    }
 }
