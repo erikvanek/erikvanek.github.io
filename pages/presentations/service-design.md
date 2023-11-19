@@ -50,7 +50,7 @@ description: Service design - co to je a proč by mě to mělo zajímat?
         <ul>
             <li>Můžou, ale bez naslouchání uživatelům nebudou tolik kvalitní</li>
             <li>Kognitivní zkreslení nám kalí úsudek a ne všechno tak umíme vidět</li>
-            <li>Uživatelský výzkum nám pomáhá lépe porozumět potřebám uživatelů</li>
+            <li>Zkoumání uživatelů nám pomáhá lépe porozumět jejich potřebám</li>
             <li>A když známe potřeby, můžeme vymýšlet, jak je nasytit 😊</li>
             <li>Do kavárny nejdu jenom pro nápoj, ale pro celý prožitek okolo</li>
         </ul>
