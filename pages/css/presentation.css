@@ -130,3 +130,9 @@ h2 {
         inset: 30% auto auto 50% !important;
     }
 }
+
+.active {
+    background-blend-mode: color !important;
+    color: pink !important;
+    backdrop-filter: hue-rotate(-45deg);
+}
