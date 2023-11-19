@@ -20,14 +20,14 @@ description: Service design - co to je a proč by mě to mělo zajímat?
         <h2>Zapátrejte v paměti</h2>
         <ul>
             <li>
-                Na moment, kdy jste chtěli projít on-line formulářem, ale nešlo to, protože <i>"data nebyla
+                Po situaci, kdy jste chtěli projít on-line formulářem, ale nešlo to, protože <i>"data nebyla
                     správná"</i>
             </li>
             <li>Na něco jste čekali aniž byste věděli jak dlouho ještě budete čekat</li>
             <li>Když informační tabule poskytovala zavádějící informace</li>
             <li>Situaci kdy jste personálu byli úplně ukradeni</li>
             <li>Vystáli jste frontu abyste posléze zjistili, že jste stáli <i>"blbě"</i></li>
-            <li><strong>Všechny tyto situace ilustrují špatně navržené služby</strong></li>
+            <li><strong>Všechny tyto situace jsou projevy špatně navržených služeb</strong></li>
         </ul>
     </section>
     <section>
@@ -59,7 +59,9 @@ description: Service design - co to je a proč by mě to mělo zajímat?
     <section>
         <h2>Design zaměřený<br><strong>na člověka</strong></h2>
         <ul>
-            <li>Dle <a href="https://cs.wikipedia.org/wiki/Human_Centered_Design" target="_blank">wiki</a></li>
+            <li>Dle <a href="https://cs.wikipedia.org/wiki/Human_Centered_Design" target="_blank">wiki</a> <span
+                    class="gray">HCD -
+                    human-centered design</span></li>
             <ul>
                 <li><i>"je soubor technik a procesů, které se zaměřují na člověka, což jim umožňuje nacházet nová
                         konstruktivní řešení stávajících problémů"</i></li>
@@ -97,6 +99,11 @@ description: Service design - co to je a proč by mě to mělo zajímat?
                 Studenti ze Stanfordské univerzity se zamýšleli nad tím jak <a
                     href="https://med.stanford.edu/news/all-news/2016/06/design-thinking-as-a-way-to-improve-patient-experience.html"
                     target="_blank">vylepšit fungování čekáren</a> v oddělení akutní péče
+            </li>
+            <li>
+                Nemocnice v Allborgu ilustruje <a
+                    href="https://projekter.aau.dk/projekter/files/288870972/Tania_Willesen_Thesis_2018.pdf">použití
+                    HCD</a> při vytváření vlastní inovační laboratoře
             </li>
             <li>Konzultantská společnost IDEO ukazuje jak pomohla na svět startupu <a
                     href="https://www.ideo.com/works/this-startup-revolutionized-an-industry-through-design"

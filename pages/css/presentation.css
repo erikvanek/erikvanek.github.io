@@ -1,6 +1,5 @@
 .slides {
     width: 100% important;
-    inset: 30% auto auto 50% !important;
     text-shadow: black 2px 2px 5px !important;
 }
 
@@ -94,6 +93,10 @@ ul {
     opacity: 80%;
 }
 
+.gray {
+    opacity: 80%;
+}
+
 .hint {
     opacity: 80%;
 }
@@ -121,5 +124,9 @@ h2 {
     h2 {
         margin-bottom: 3rem !important;
         font-size: 5rem !important;
+    }
+
+    .slides {
+        inset: 30% auto auto 50% !important;
     }
 }
