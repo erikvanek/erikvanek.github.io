@@ -11,7 +11,7 @@ hideDate: true
 ![Me with a melon](/img/me-melon.jpeg)
 _Me with a melon_ -->
 
-I make my living as a freelance <a href="/service-design">service designer</a> for two projects revolving around social innovation. First project is focused on estabilishing a new childcare service similar to [Tagesmutter](https://de.wikipedia.org/wiki/Kindertagespflege){target="_blank"} in Czech republic. The second project addresses the pressing need for support systems for individuals navigating the challenging period between the pronouncement of a court sentence and their subsequent incarceration.
+I make my living as a freelance service designer for two projects revolving around social innovation. First project is focused on estabilishing a new childcare service similar to [Tagesmutter](https://de.wikipedia.org/wiki/Kindertagespflege){target="_blank"} in Czech republic. The second project addresses the pressing need for support systems for individuals navigating the challenging period between the pronouncement of a court sentence and their subsequent incarceration.
 
  Since 2013, I have worked mainly in the software industry wearing multiple hats. Most recently I was part of [infarm](https://www.infarm.com/){target="_blank"} for more than four years. I was contributing to its hydroponic farm controlling services as an engineer, team lead and a designer at times. Also helped to kick-off a vertical team initiative that was aiming to disrupt companies' mostly siloed team structure.
  
