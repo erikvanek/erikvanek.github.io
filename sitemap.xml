@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
-            <loc>/</loc>
+            <loc>https://www.erikvanek.com</loc>
             <lastmod>2018-03-23T19:02:36.000Z</lastmod>
             <changefreq>monthly</changefreq>|
         </url>
 
         <url>
-            <loc>/me</loc>
+            <loc>https://www.erikvanek.com/me</loc>
             <lastmod>2018-03-23T19:02:36.000Z</lastmod>
             <changefreq>monthly</changefreq>|
         </url>
 
         <url>
-            <loc>/sitemap.xml</loc>
+            <loc>https://www.erikvanek.com/sitemap.xml</loc>
             <lastmod>2023-12-02T20:48:13.333Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -21,7 +21,7 @@
     
        
         <url>
-            <loc>/aero/</loc>
+            <loc>https://www.erikvanek.com/aero/</loc>
             <lastmod>2018-03-23T19:02:36.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -29,7 +29,7 @@
     
        
         <url>
-            <loc>/design-matters-2020/</loc>
+            <loc>https://www.erikvanek.com/design-matters-2020/</loc>
             <lastmod>2020-11-11T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -37,7 +37,7 @@
     
        
         <url>
-            <loc>/books/new-dark-age/</loc>
+            <loc>https://www.erikvanek.com/books/new-dark-age/</loc>
             <lastmod>2021-01-02T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -45,7 +45,7 @@
     
        
         <url>
-            <loc>/books/teach-like-finland/</loc>
+            <loc>https://www.erikvanek.com/books/teach-like-finland/</loc>
             <lastmod>2021-01-05T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -53,7 +53,7 @@
     
        
         <url>
-            <loc>/tepache/</loc>
+            <loc>https://www.erikvanek.com/tepache/</loc>
             <lastmod>2021-12-30T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -61,7 +61,7 @@
     
        
         <url>
-            <loc>/deep-work/</loc>
+            <loc>https://www.erikvanek.com/deep-work/</loc>
             <lastmod>2022-01-02T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -69,7 +69,7 @@
     
        
         <url>
-            <loc>/good-services/</loc>
+            <loc>https://www.erikvanek.com/good-services/</loc>
             <lastmod>2022-01-17T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -77,7 +77,7 @@
     
        
         <url>
-            <loc>/notes/books/hooked/</loc>
+            <loc>https://www.erikvanek.com/notes/books/hooked/</loc>
             <lastmod>2023-01-06T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -85,7 +85,7 @@
     
        
         <url>
-            <loc>/kombucha/</loc>
+            <loc>https://www.erikvanek.com/kombucha/</loc>
             <lastmod>2023-01-18T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -93,7 +93,7 @@
     
        
         <url>
-            <loc>/notes/books/prepisovat-pravidla/</loc>
+            <loc>https://www.erikvanek.com/notes/books/prepisovat-pravidla/</loc>
             <lastmod>2023-01-29T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -101,7 +101,7 @@
     
        
         <url>
-            <loc>/cradle-to-cradle/</loc>
+            <loc>https://www.erikvanek.com/cradle-to-cradle/</loc>
             <lastmod>2023-03-23T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -109,7 +109,7 @@
     
        
         <url>
-            <loc>/notes/books/filling-the-void/</loc>
+            <loc>https://www.erikvanek.com/notes/books/filling-the-void/</loc>
             <lastmod>2023-07-13T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -117,7 +117,7 @@
     
        
         <url>
-            <loc>/notes/books/mismatch/</loc>
+            <loc>https://www.erikvanek.com/notes/books/mismatch/</loc>
             <lastmod>2023-07-16T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
@@ -125,7 +125,7 @@
     
        
         <url>
-            <loc>/transformacni-2023/</loc>
+            <loc>https://www.erikvanek.com/transformacni-2023/</loc>
             <lastmod>2023-11-12T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
