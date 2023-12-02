@@ -1,7 +1,6 @@
 ---
 title: "Articles I like"
 date: 2018-11-08
-layout: article.njk
 ---
 
 A set of links that I found at some points interesting and inspiring.
