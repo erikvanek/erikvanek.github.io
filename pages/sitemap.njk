@@ -21,4 +21,15 @@ eleventyExcludeFromCollections: true
             <lastmod>{{ page.date.toISOString() }}</lastmod>
             <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
         </url>
+
+    {% for page in collections.posts %}
+       {% if not page.data.eleventyExcludeFromCollections %}
+        <url>
+            <loc>{{ site.url }}{{ page.url | url }}</loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+            <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+        </url>
+        {% endif %}
+    {% endfor %}
+
 </urlset>
