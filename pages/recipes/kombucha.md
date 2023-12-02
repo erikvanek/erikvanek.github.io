@@ -9,8 +9,10 @@ description: Kombucha - jednoduchý návod na domácí přípravu. Potřebuješ 
 
 Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se dopracoval v průběhu více než roční kontinuální výroby různých kombuch. Recept je pro výrobu zhruba 2l kombuchy.
 
-![3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté](/img/kombucha/kombucha-nalevy.jpg)
-3 různé kombuchové nálevy - jasmínový, ibiškový čaj a vpravo maté
+{% assign nalevyPath = '/img/kombucha/kombucha-nalevy.jpg' %}
+{% assign nalevyTitle = '3 různé kombuchové nálevy - jasmínový, ibiškový čaj \na vpravo maté' %}
+
+{% render 'figure.njk', path: nalevyPath, title: nalevyTitle %}
 
 ## Suroviny
 
@@ -42,8 +44,10 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 9. fermentační proces se zastaví chladem čili výsledný produkt uschovejte v lednici nebo někde v chladu, jinak by nápoj dál kvasil a byl kyselejší a kyselejší
 10. a zopakujte celý proces znovu a znovu a znovu a dělte se o výsledky 🍿
 
-![Nalahvovaná kombucha ochucená meruňkou](/img/kombucha/nalahvovana-kombucha.jpeg)
-Nalahvovaná kombucha ochucená meruňkou
+{% assign lahvacePath = '/img/kombucha/nalahvovana-kombucha.jpeg' %}
+{% assign lahvaceTitle = 'Nalahvovaná kombucha ochucená meruňkou' %}
+
+{% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %}
 
 ### SCOBY {#scoby}
 
@@ -56,11 +60,14 @@ Nalahvovaná kombucha ochucená meruňkou
   - z mojí zkušenosti má silná SCOBY alespoň 100g, v tu chvíli dokáže zvládnout hravě 4l nálev a produkovat nové odnože
 - zdravá aktivní SCOBY je vláčná, lesklá, bílá až žlutohnědá
 
-![Kvalitní SCOBY](/img/kombucha/kvalitni-scoby.jpeg)
-Kvalitní SCOBY
+{% assign scobyPath = '/img/kombucha/kvalitni-scoby.jpeg' %}
+{% assign scobyTitle = 'Kvalitní SCOBY' %}
+{% render 'figure.njk', path: scobyPath, title: scobyTitle %}
 
-![Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu](/img/kombucha/ibiskova-scoby.jpeg)
-Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu
+<br/>
+{% assign ibyScobyPath = '/img/kombucha/ibiskova-scoby.jpeg' %}
+{% assign ibyScobyTitle = 'Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY sytě vínovou barvu' %}
+{% render 'figure.njk', path: ibyScobyPath, title: ibyScobyTitle %}
 
 ### Backslop {#backslop}
 
@@ -92,5 +99,6 @@ Ibišková SCOBY - po několika nálevech v ibiškovém čaji získá SCOBY syt�
   - dobrá zkouška jak moc už sekundární fermentace proběhla je když lahev obrátite dnem vzhůru a zpět tak byste měli vidět pěkné řetízkování bublin uvnitř
 - **POZOR** - při pokusech se sekundární fermentací je největší riziko vybuchnutí lahve - zatím nikdy se mi to s kombuchou nestalo, ale to riziko tady je tak opatrně
 
-![Smíchaná ibišková a zázvorová kombucha ochucená rozinkami](/img/kombucha/kombucha-trikolora.jpeg)
-_Smíchaná ibišková a zázvorová kombucha ochucená rozinkami_
+{% assign mixedPath = '/img/kombucha/kombucha-trikolora.jpeg' %}
+{% assign mixedTitle = 'Smíchaná ibišková a zázvorová kombucha ochucená rozinkami' %}
+{% render 'verticalFigure.njk', path: mixedPath, title: mixedTitle %}
