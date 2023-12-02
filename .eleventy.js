@@ -35,7 +35,8 @@ module.exports = function (eleventyConfig) {
         "html",
         "ico",
         "md",
-        "njk"
+        "njk",
+        "xml"
     ]);
 
     return {
