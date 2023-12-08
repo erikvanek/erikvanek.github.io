@@ -105,7 +105,7 @@ const memoizeLastContent = (adjective, noun) => {
 };
 
 const generateContent = () => {
-    if (counter < entries.length - 1) {
+    if (counter < 1) {
         const entry = entries[counter][1];
         changeContent(entry.noun, entry.adjective, entry.color);
     } else {
@@ -139,7 +139,7 @@ const changeContent = (newNoun, newAdjective, color) => {
     activePattern?.classList.toggle('active');
     document
         .querySelectorAll('.pattern')
-    [indexOfAdjective].classList.toggle('active');
+        [indexOfAdjective].classList.toggle('active');
     // document
     //     .getElementById(`pattern-${indexOfAdjective + 1}`)
     //     .classList.toggle('active');

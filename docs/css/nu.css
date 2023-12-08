@@ -22,9 +22,9 @@
 #pattern-1 {
     background-image: repeating-radial-gradient(circle at 0 0,
             var(--color-4) 0,
-            var(--color-1) 1rem),
+            var(--color-1) 2rem),
         repeating-linear-gradient(var(--color-1), var(--color-primary));
-}
+    }
 
 #pattern-2 {
     background-image: linear-gradient(135deg,
@@ -377,19 +377,19 @@ button:hover {
 
 h1 {
     margin: 0;
-    font-size: 4rem;
+    font-size: 3rem;
     mix-blend-mode: plus-lighter;
     text-shadow: var(--color-1) 4px 4px 4px;
 }
 
 @media screen and (min-width: 600px) {
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
 @media screen and (min-width: 960px) {
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 }
