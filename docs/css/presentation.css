@@ -59,16 +59,16 @@ a {
     z-index: 100;
 }
 
-h1 {
+.reveal h1 {
     background: none !important;
-    font-size: 8rem !important;
+    font-size: 4rem !important;
     text-align: center;
     font: bold 80px Sans-Serif;
     padding: 40px 0;
 
     background-color: #3a50d9;
     color: #e0eff2 !important;
-    font: italic bold 100px Georgia, Serif !important;
+    font: italic bold Georgia, Serif !important;
     text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27 !important;
     padding-bottom: 1rem;
     margin-bottom: 0;
@@ -173,7 +173,7 @@ figcaption {
 
 #three figure:nth-child(1) {
     left: 15%;
-    top: -10rem;
+    /* top: -10rem; */
 }
 
 
