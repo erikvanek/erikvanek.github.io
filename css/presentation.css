@@ -28,11 +28,11 @@ footer {
     z-index: 100 !important;
 
     opacity: 80% !important;
-    background-color: rgba(0, 0, 0, .5) !important;
-    border: 2px dotted rgba(255, 255, 255, .8) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 2px dotted rgba(255, 255, 255, 0.8) !important;
     display: inline-block !important;
-    padding: .5rem !important;
-    border-radius: .5rem;
+    padding: 0.5rem !important;
+    border-radius: 0.5rem;
     align-self: center;
     position: absolute;
     bottom: 1rem;
@@ -53,9 +53,9 @@ footer a {
 a {
     border-bottom: 2px dotted lightskyblue;
     color: lightskyblue;
-    background-color: rgba(0, 0, 0, .4) !important;
-    border-radius: .5rem;
-    padding: .125rem;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 0.5rem;
+    padding: 0.125rem;
     z-index: 100;
 }
 
@@ -76,13 +76,13 @@ h1 {
 
 li {
     font-size: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-indent: -2.25rem;
     padding-left: 2rem;
 }
 
 li:before {
-    content: "→ ";
+    content: '→ ';
 }
 
 ul {
@@ -112,7 +112,7 @@ h2 {
     text-shadow: black 0px 0px 20px !important;
 }
 
-@media (orientation:portrait) {
+@media (orientation: portrait) {
     footer {
         font-size: 1rem;
     }
@@ -139,4 +139,50 @@ h2 {
     background-blend-mode: color !important;
     color: pink !important;
     backdrop-filter: hue-rotate(-45deg);
+}
+
+.font-outline {
+    color: transparent !important;
+    -webkit-text-stroke: 0.25rem violet;
+}
+
+.overblown-font {
+    /* font-size: 12rem !important; */
+}
+
+.center-rotated {
+    /* position: absolute;
+    transform: rotateZ(45deg); */
+}
+
+figcaption {
+    font-size: 0.5rem;
+    padding-top: 0;
+}
+
+.reveal img {
+    margin: 0;
+    padding: 0;
+}
+
+#three figure {
+    position: fixed;
+    box-shadow: #0a0e27;
+    filter: drop-shadow(1rem 1rem 1rem black);
+}
+
+#three figure:nth-child(1) {
+    left: 15%;
+    top: -10rem;
+}
+
+
+#three figure:nth-child(2) {
+    top: 10rem;
+}
+
+
+#three figure:nth-child(3) {
+    left: 25%;
+    top: 20rem;
 }
