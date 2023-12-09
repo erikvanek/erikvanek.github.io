@@ -1,0 +1,64 @@
+---
+title: Disri 2023 přednáška
+date: 2023-12-09
+layout: presentation.njk
+permalink: /{{page.fileSlug}}/
+eleventyExcludeFromCollections: true
+description: Prezentace do předmětu DISRI na KISK FF MU
+---
+
+<section>
+    <h1>DISRI tales</h1>
+    <h2>Erik Vaněk</h2>
+    <h4>Od jednorožcům k datovkám během 2023</h4>
+    <h5>
+        <a href="https://www.erikvanek.com" target="_blank">erikvanek.com</a>
+    </h5>
+</section>
+<section data-background-color="black" data-autoslide="2000">
+    <!-- <h2 class="font-outline overblown-font center-rotated"> -->
+    <h2>16. prosince 2021</h2>
+    <iframe
+        class="stretch"
+        src="https://www.youtube.com/embed/xv8yY9TUMeQ?si=yTsUzgKqsJfVqvuE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        allow="fullscreen;"
+    ></iframe>
+</section>
+<section id="three">
+    {% assign lahvacePath =
+    '/presentations/infarm-bankrupt/linkedin-news-europe.png' %} {% assign
+    lahvaceTitle = 'Zdroj:
+    https://www.linkedin.com/posts/linkedin-news-europe_infarm-once-the-poster-child-of-european-activity-7077259497261445120-X5A4/?trk=public_profile_like_view'
+    %} {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %} {%
+    assign lahvacePath =
+    '/presentations/infarm-bankrupt/vertical-farm-daily.png' %} {% assign
+    lahvaceTitle = 'Zdroj:
+    https://www.verticalfarmdaily.com/article/9563262/infarm-s-dutch-branch-declared-bankrupt/'
+    %} {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %} {%
+    assign lahvacePath = '/presentations/infarm-bankrupt/wired-infarm.png' %} {%
+    assign lahvaceTitle = 'Zdroj:
+    https://www.wired.co.uk/article/vertical-farms-energy-crisis' %} {% render
+    'figure.njk', path: lahvacePath, title: lahvaceTitle %}
+</section>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const figures = document.querySelectorAll('#three figure');
+        for (const figure of figures) {
+            figure.style.position = 'absolute';
+            const left =
+                (Math.abs(document.body.clientWidth - figure.clientWidth) / 2) *
+                Math.random();
+            const top =
+                (Math.abs(document.body.clientHeight - figure.clientHeight) /
+                    2) *
+                Math.random();
+            figure.style.left = `${left}px`;
+            figure.style.top = `${top}px`;
+        }
+    });
+</script> -->
