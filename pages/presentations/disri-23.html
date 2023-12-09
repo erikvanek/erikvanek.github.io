@@ -33,9 +33,8 @@ description: Prezentace do předmětu DISRI na KISK FF MU
         <li>A teď budu povídat o tom, co se mi dělo poslední rok</li>
     </ul>
 </section>
-<!-- <section data-background-color="black" data-autoslide="42000"> -->
+
 <section data-background-color="black" data-autoslide="42000">
-    <!-- <h2 class="font-outline overblown-font center-rotated"> -->
     <h2>16. prosince 2021</h2>
     <iframe class="stretch" src="https://www.youtube.com/embed/xv8yY9TUMeQ?si=yTsUzgKqsJfVqvuE"
         title="YouTube video player" frameborder="0"
@@ -153,12 +152,11 @@ description: Prezentace do předmětu DISRI na KISK FF MU
         <li>Málo muziky za 6 měsíců práce na projektu</li>
     </ul>
 </section>
-<section>
-    {% assign lahvacePath =
-    '/presentations/datovky.jpeg' %} {% assign
-    lahvaceTitle = 'A já už vím, kde spinkají datovky!'
-    %} {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %}
+
+<section data-background="/presentations/datovky.jpeg">
+    <h2>Každopádně už aspoň vím, kde spinkají datovky!</h2>
 </section>
+
 
 <section>
     <h2><a href="https://sovia.cz/projekt/" target="_blank">Mám rozsudek a co dál?</a></h2>
@@ -196,18 +194,12 @@ description: Prezentace do předmětu DISRI na KISK FF MU
     </ul>
 </section>
 
-<section>
-    {% assign lahvacePath =
-    '/presentations/workshop-sovia.jpeg' %} {% assign
-    lahvaceTitle = 'Workshop s odbornictvem z oblasti vězeňství'
-    %} {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %}
+<section data-background="/presentations/workshop-sovia.jpeg">
+    <h2>Workshop s odbornictvem z oblasti vězeňství</h2>
 </section>
 
-<section>
-    {% assign lahvacePath =
-    '/presentations/jirina-osa.jpeg' %} {% assign
-    lahvaceTitle = 'Evaluátorka prezentuje skvělou časovou osu'
-    %} {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %}
+<section data-background="/presentations/jirina-osa.jpeg">
+    <h2>Kolegyně prezentuje časovou osu reprezentující průchod člověka systémem po vynesení rozsudku</h2>
 </section>
 
 <section>
@@ -239,10 +231,14 @@ description: Prezentace do předmětu DISRI na KISK FF MU
     </ul>
 </section> -->
 
-<section data-background-color="black">
+
+<section data-background-video="../../videos/kombucha-compressed.mp4">
+    <h1 class="overlay white fromTop">Dík a čau :)</h1>
+</section>
+<!-- {# <section data-background-color="black">
     <video width="100%" style="width: 100%; height: 100%;" controls autoplay="true" loop
         onloadstart="this.volume=0; this.playbackrate=3;">
         <source src="../../videos/kombucha-compressed.mp4" type="video/mp4">
     </video>
     <h1 class="overlay white fromTop">Dík a čau :)</h1>
-</section>
+</section> #} -->
