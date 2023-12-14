@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ad22cbf52b182832",
+        "id": "33fd8b011191ed05",
         "type": "tabs",
         "children": [
           {
-            "id": "eb922c21fa9dc1cc",
+            "id": "27250d94d8fedbf3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "random/stage-management-kit.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/stage-management-kit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/stage-management-kit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "random/stage-management-kit.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -154,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eb922c21fa9dc1cc",
+  "active": "27250d94d8fedbf3",
   "lastOpenFiles": [
+    "random/stage-management-kit.md",
     "design/Resources.md",
     "design/Design checklist.md",
     "design/Activities/Design research/Focus groups.md",
@@ -181,7 +174,6 @@
     "design/Three horizons.md",
     "books/mismatch.md",
     "books/book-notes-template.md",
-    "books/cradle-to-cradle.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/work.jpg",
