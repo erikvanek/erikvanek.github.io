@@ -1,9 +1,8 @@
-body {
-    /* background-image: repeating-radial-gradient(circle at 0 0,
-            navy 0,
-            pink 2rem,
-            repeating-linear-gradient(navy, pink)); */
-    
+#pattern-1 {
+    background-image: repeating-radial-gradient(circle at 0 0,
+            black 0,
+            rgb(8,8,128) 2rem),
+        repeating-linear-gradient(rgb(8,8,128), navy);
 }
 
 .slides {
