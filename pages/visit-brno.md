@@ -1,7 +1,7 @@
 ---
 title: Visit Brno!
 date: 2023-10-29
-layout: landingPage.njk
+# layout: -notyet-
 ---
 Why? Because it's dope & fun 😊
 
