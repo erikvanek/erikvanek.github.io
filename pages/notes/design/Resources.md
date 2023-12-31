@@ -23,3 +23,7 @@
     - resources for thinking about design, creativity etc
   - [Library of ambiguity](https://dlibrary.stanford.edu/ambiguity)
     - resources for designing in a wicked world
+- [Reading list](https://dschool.stanford.edu/resources/dschool-reading-list)
+- Gamestorming
+	- https://gamestorming.com/
+	- workshops & tools

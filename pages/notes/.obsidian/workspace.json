@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "33fd8b011191ed05",
+        "id": "b79fc88f3e99cf2b",
         "type": "tabs",
         "children": [
           {
-            "id": "27250d94d8fedbf3",
+            "id": "01bf7955f6189dd5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "fomo/Books.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2dff763f38429077",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Social design.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#design",
+                "query": "ssir.org",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "design/Social design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "design/Social design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +145,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "design/Social design.md"
+              }
             }
           }
         ]
@@ -146,37 +167,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "27250d94d8fedbf3",
+  "active": "2dff763f38429077",
   "lastOpenFiles": [
-    "random/stage-management-kit.md",
+    "design/Quotes.md",
+    "Quotes.md",
+    "fomo/Books.md",
+    "design/People.md",
     "design/Resources.md",
-    "design/Design checklist.md",
-    "design/Activities/Design research/Focus groups.md",
-    "random/Inspiration.md",
-    "fomo/Books.md",
-    "design/Activities/Design research/Thematic analysis.md",
-    "design/Research through design.md",
-    "random/Inspiration.md",
-    "design/Activities/Design research/Focus groups.md",
-    "fomo/Books.md",
+    "design/random.md",
     "design/Institutions.md",
+    "design/Research through design.md",
+    "design/Human-centered design.md",
     "design/Fake door tests.md",
+    "design/Education.md",
+    "design/Design for public.md",
+    "design/Design checklist.md",
+    "design/Design activities.md",
     "design/Design.md",
+    "design/Treninky.md",
+    "design/Service design.md",
+    "food/to cook.md",
+    "img/work.jpg",
+    "random/stage-management-kit.md",
+    "design/Activities/Design research/Focus groups.md",
+    "random/Inspiration.md",
+    "design/Activities/Design research/Thematic analysis.md",
+    "random/Inspiration.md",
+    "design/Activities/Design research/Focus groups.md",
     "design/Cone of possibilities.md",
     "design/Activities/Design research/Desk research.md",
-    "design/Activities/Design research/Participant approach.md",
-    "design/Activities/Design research/Secondary research.md",
-    "design/Activities/Research Visualization.md",
-    "design/Activities/Design research.md",
-    "design/Agencies.md",
-    "design/Design tools/Persona.md",
-    "design/Design tools/Prototype.md",
-    "design/Three horizons.md",
-    "books/mismatch.md",
-    "books/book-notes-template.md",
     "fomo",
     "ranomcanvas.canvas",
-    "img/work.jpg",
     "img/20230622_171524.jpg",
     "img",
     "untitled folder",
