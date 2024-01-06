@@ -29,20 +29,25 @@ body {
 }
 
 #intro,
+#bio,
 .expandable {
     width: 50rem;
 }
 
 @media (max-width: 800px) {
     #intro,
+    #bio,
     .expandable {
         width: 90%;
     }
 }
 
+#bio-text,
 .expandable {
     background-color: var(--gray-color);
     color: var(--dark-color);
+}
+.expandable {
     padding: 0.5rem;
     border: 1px dashed var(--gray-color);
     border-radius: 0.25rem;
@@ -73,4 +78,35 @@ a {
     text-decoration: none;
     border: 2px dotted var(--dark-color);
     border-radius: 0.25rem;
+}
+
+#bio {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+}
+
+#bio img {
+    object-fit: cover;
+    max-width: 35%;
+    clip-path: circle(40%);
+    margin: 1rem;
+}
+
+@media (max-width: 800px) {
+    #bio {
+        flex-direction: column;
+    }
+
+    #bio img {
+        max-width: 100%;
+        clip-path: circle(50%);
+        order: 2;
+    }
+}
+
+#bio-text {
+    padding: 0rem 1%;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
 }
