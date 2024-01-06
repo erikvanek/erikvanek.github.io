@@ -20,7 +20,7 @@ body {
 #wrapper {
     margin: 0 auto;
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -31,6 +31,13 @@ body {
 #intro,
 .expandable {
     width: 50rem;
+}
+
+@media (max-width: 800px) {
+    #intro,
+    .expandable {
+        width: 90%;
+    }
 }
 
 .expandable {
@@ -56,7 +63,7 @@ body {
 }
 
 h3 {
-    margin: .5rem;
+    margin: 0.5rem;
     padding: 0;
 }
 
@@ -65,5 +72,5 @@ a {
     font-weight: 800;
     text-decoration: none;
     border: 2px dotted var(--dark-color);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
 }
