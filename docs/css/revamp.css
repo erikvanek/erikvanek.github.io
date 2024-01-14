@@ -1,16 +1,24 @@
+:root {
+    --dark-color: #222;
+    --gray-color: #ddd;
+    --gray-light-color: #eee;
+}
+
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
 }
 
 body {
     font-size: 16px;
-    background-color: #222;
-    color: #ddd;
+    background-color: var(--dark-color);
+    color: var(--gray-color);
 }
 
 a {
     text-decoration: underline;
-    color: #eee;
+    color: var(--gray-light-color);
     font-weight: 800;
 }
 
@@ -20,6 +28,11 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    text-align: left;
 }
 
 span {
@@ -40,3 +53,27 @@ span {
     align-items: center;
     line-height: 2rem;
 }
+
+.block {
+    display: flex;
+max-width: 50rem;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 !important;
+    margin-top: 2rem;
+}
+
+.contrast {
+    background-color: var(--gray-light-color);
+    color: var(--dark-color);
+}
+
+.contrast a {
+    color: var(--dark-color);
+}
+
+p {
+    line-height: 1.5rem;
+    margin-bottom: 0;
+}
+
