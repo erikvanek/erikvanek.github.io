@@ -17,3 +17,4 @@
 	- what's the underlying problem?
 - how do you know that the thing you found is the thing you did not know?
 - Name -> Frame -> Act -> Reflect paradigm from the theory Reflective practice
+- a nicely curated list of biases https://thedecisionlab.com/biases
