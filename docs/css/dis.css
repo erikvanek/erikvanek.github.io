@@ -2,13 +2,26 @@
     --dark-color: #222;
     --gray-color: #ddd;
     --gray-light-color: #eee;
-    --green-color: #2a2;
+    --s1-color: #48d;
+    --s2-color: #b84;
+    --s3-color: #8b4;
+    --s4-color: #84b;
+    --s5-color: #b48;
+    --s6-color: #4b2;
 }
 
 body {
     background-color: var(--dark-color);
     font-size: 20px;
     color: var(--gray-light-color);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
 }
 
 * {
@@ -22,16 +35,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50rem;
 }
 
 #intro {
     text-align: center;
-}
-
-#intro,
-#bio,
-.expandable {
-    width: 50rem;
 }
 
 @media (max-width: 800px) {
@@ -49,22 +57,18 @@ body {
 }
 .expandable {
     padding: 0.5rem;
-    border: 1px dashed var(--gray-color);
+    border: 3px dashed var(--gray-light-color);
     border-radius: 0.25rem;
     margin: 0.25rem;
     flex-grow: 1;
+    width: 100%;
 }
-
-.done {
-    background-color: var(--green-color);
-}
-
 .active::after {
     /* content: ' – probíhá'; */
 }
 
 .active {
-    border: 1px dotted var(--dark-color);
+    border-style: dotted;
 }
 
 h3 {
@@ -73,11 +77,17 @@ h3 {
 }
 
 a {
-    color: var(--dark-color);
+    color: var(--gray-light-color);
     font-weight: 800;
     text-decoration: none;
-    border: 2px dotted var(--dark-color);
     border-radius: 0.25rem;
+    border: 2px dotted var(--gray-light-color);
+}
+
+#bio-text a,
+.expandable a {
+    color: var(--dark-color);
+    border: 2px dotted var(--dark-color);
 }
 
 #bio {
@@ -110,3 +120,58 @@ a {
     line-height: 1.5rem;
     border-radius: 0.5rem;
 }
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    margin: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+img {
+    max-width: 60rem;
+}
+
+figcaption {
+    color: var(--gray-color);
+    padding-top: 1rem;
+    text-decoration: overline;
+}
+
+/* .s1 {
+    border-color: var(--s1-color);
+} */
+
+.s1 h3 {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+/* .s2 {
+    border-color: var(--s2-color);
+}
+
+.s3 {
+    border-color: var(--s3-color);
+}
+
+.s4 {
+    border-color: var(--s4-color);
+}
+
+.s5 {
+    border-color: var(--s5-color);
+}
+
+.s6 {
+    border-color: var(--s6-color);
+} */
