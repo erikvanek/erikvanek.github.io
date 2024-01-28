@@ -1,7 +1,7 @@
 ---
 title: 'VR intro'
 date: 2024-01-28
-layout: dis-kisk-note.njk
+layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
 permalink: /{{page.fileSlug}}/

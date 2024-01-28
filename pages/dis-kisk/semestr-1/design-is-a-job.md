@@ -1,8 +1,8 @@
 ---
 title: "Design is a job"
-subtitle: "A Mark Monteiro je král"
+subtitle: "a Mark Monteiro je král"
 date: 2024-01-28
-layout: dis-kisk-note.njk
+layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
 permalink: /{{page.fileSlug}}/

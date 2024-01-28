@@ -2,14 +2,14 @@
 title: 'Hackaton'
 subtitle: 'jako hutný zakončení prvního semestru'
 date: 2024-01-28
-layout: dis-kisk-note.njk
+layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
 permalink: /{{page.fileSlug}}/
 ---
 
-Jedna z posledních aktivit, která mě v 1. semestru byla účast na společném hackatonu, do kterého jsme s týmem šli s výzvou, která se týkala zkompetentňování dospělých ve vztahu k duševnímu zdraví dětí ve věku cca 2. stupně základní školy.
-Vycházeli jsme [ze](https://nevypustdusi.cz/2023/10/20/dusevni-zdravi-zajima-dve-tretiny-deti-vysledky-noveho-pruzkumu-spolecnosti-t-mobile-organizace-nevypust-dusi-a-agentury-g82-ukazuji-ze-mladi-lide-hledaji-pomoc-hlavne-ve-svem-okoli/){target="\_blank"} [spousty](https://open.spotify.com/episode/30d7thGp3MoTEudV552wfM?si=84e5fcd5756b4096&nd=1&dlsi=b76848c375104871){target="\_blank"} [dat](https://www.nudz.cz/pro-media/tiskove-zpravy/narodni-monitoring-dusevniho-zdravi-deti-40-vykazuje-znamky-stredni-az-tezke-deprese-30-uzkosti-odbornici-pripravuji-preventivni-opatreni){target="\_blank"}, která popisují špatný a ne zrovna lepšící se stav duševního zdraví u nastupující generace. Zároveň jsme věděli, že se jedná o obrovský problém, který bude náročný rozseknout v průběhu den a půl dlouhého setkání. V týmu lidí, kteří spolu nikdy pořádně nepracovali, s hodně narychlo spíchnutým výzkumem a taky možná s chutí se trošku spolu i seznámit když už spolu studujem během těch dvou společných dní.
+Jedna z posledních aktivit, která mě v 1. semestru čekala, byla účast na společném hackatonu, do kterého jsme s týmem šli s [výzvou](https://kisk.phil.muni.cz/100metod/designova-vyzva){target="_blank"}, která se týkala zkompetentňování dospělých ve vztahu k duševnímu zdraví dětí ve věku cca 2. stupně základní školy.
+Vycházeli jsme [ze](https://nevypustdusi.cz/2023/10/20/dusevni-zdravi-zajima-dve-tretiny-deti-vysledky-noveho-pruzkumu-spolecnosti-t-mobile-organizace-nevypust-dusi-a-agentury-g82-ukazuji-ze-mladi-lide-hledaji-pomoc-hlavne-ve-svem-okoli/){target="_blank"} [spousty](https://open.spotify.com/episode/30d7thGp3MoTEudV552wfM?si=84e5fcd5756b4096&nd=1&dlsi=b76848c375104871){target="_blank"} [dat](https://www.nudz.cz/pro-media/tiskove-zpravy/narodni-monitoring-dusevniho-zdravi-deti-40-vykazuje-znamky-stredni-az-tezke-deprese-30-uzkosti-odbornici-pripravuji-preventivni-opatreni){target="_blank"}, která popisují špatný a ne zrovna lepšící se stav duševního zdraví u nastupující generace. Zároveň jsme věděli, že se jedná o obrovský problém, který bude náročný rozseknout v průběhu den a půl dlouhého setkání. V týmu lidí, kteří spolu nikdy pořádně nepracovali, s hodně narychlo spíchnutým výzkumem a taky možná s chutí se trošku spolu i seznámit když už spolu studujem během těch dvou společných dní.
 
 ## Jak to šlo?
 
@@ -22,7 +22,7 @@ Nebylo úplně snadný se někdy v týmu o osmi lidech dohodnout na tom, jakým 
 Nakonec jsme během naší spolupráce vygenerovali dva hlavní výstupy. Jedním z nich byl klikatelný prototyp pro mobilní aplikaci, která dospělým přibližuje svět mladší generace. Naše hypotéza je, že existuje část dospělých, pro které je náročné držet tempo s tématy, která jsou relevantní pro mladší generaci. Může to být jazyk, kulturní reference, sociální preference apod. Pomocí gamifikovaného nástroje jsme chtěli nastínit jednu možností jak tuto propast postupně zacelovat.
 
 
-{% assign path = 'dis-kisk/img/testing-pavucina.jpg' %}
+{% assign path = '../dis-kisk/img/testing-pavucina-rotated.jpg' %}
 {% assign title = 'Testování návrhu systémové změny' %}
 {% render 'figure.njk', path: path, title: title %}
 
