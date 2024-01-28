@@ -2,7 +2,7 @@
 title: "Motivační rozhovory"
 subtitle: "aneb hledání cesty k trvalé změně"
 date: 2024-01-14
-layout: blog.njk
+layout: dis-kisk-note.njk
 hideNavigation: true
 tags: ["dis", "semestr1"]
 permalink: /{{page.fileSlug}}/

@@ -2,7 +2,7 @@
 title: "Erik Vaněk | DIS KISK portfolio"
 subtitle: "Moje 2. cesta KISKem, tentokrát plně digitální a plně o designu"
 date: 2024-01-14
-layout: dis.njk
+layout: dis-kisk.njk
 tags: ["dis", "semestr1"]
 permalink: /{{page.fileSlug}}/
 ---
