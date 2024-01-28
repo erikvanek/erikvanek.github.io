@@ -22,6 +22,8 @@ p {
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
+    max-width: 55ch;
+    line-height: 1.625rem;
 }
 
 * {
@@ -113,6 +115,17 @@ a {
         clip-path: circle(50%);
         order: 2;
     }
+
+
+    #wrapper {
+        width: auto;
+        margin: .5rem;
+        font-size: 16px;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
 }
 
 #bio-text {
@@ -122,7 +135,9 @@ a {
 }
 
 li {
+    max-width: 55ch;
     margin-bottom: 0.75rem;
+    line-height: 1.5rem;
 }
 
 h1 {
@@ -135,6 +150,7 @@ h1 {
     margin-top: 0;
     margin-bottom: 2rem;
     font-style: italic;
+    color: var(--gray-color);
 }
 
 img {
