@@ -40,6 +40,13 @@ p {
 }
 
 
+.s2,
+.s3,
+.s4,
+.s5,
+.s6 {
+    width: 55ch;
+}
 
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -184,16 +191,6 @@ figcaption {
     padding: 0.5rem;
 }
 
-.s2,
-.s3,
-.s4,
-.s5,
-.s6 {
-    /* --angle: -180deg; */
-    /* border-width: .125rem; */
-    width: 55ch;
-    /* background-color: rgba(255, 255, 255, .6); */
-}
 
 /* .s2 {
     --angle: 60deg;
