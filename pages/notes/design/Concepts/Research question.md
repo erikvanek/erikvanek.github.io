@@ -1,5 +1,5 @@
 - is the bare bone of [[Design research]]
-- when developing research questions - think ahead of what will happen to answers - we receive  since I know what comes next in the process after I have concluded it
+- when developing research questions - think ahead of what will happen to answers - we receive since I know what comes next in the process after I have concluded it
 	- i.e. don't do research just for the sake of doing research, think of how gathered [[Insight]]s help us to move forward in the next phase
 	- ask a question __"How will the answer to this question help to generate a range of insights & ideas to create a new value?"__
 - [[Research question]] is often vague at the beginning but it _gets precised_ over time
