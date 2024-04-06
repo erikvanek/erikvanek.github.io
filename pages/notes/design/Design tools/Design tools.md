@@ -7,3 +7,4 @@
 - [[Service blueprint]]
 - [[System maps]]
 - [[Business model canvas]]
+- Service design scoresheet to fight the [[Groan zone]]

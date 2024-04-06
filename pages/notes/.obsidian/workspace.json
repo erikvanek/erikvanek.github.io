@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b79fc88f3e99cf2b",
+        "id": "339bfd14639716d2",
         "type": "tabs",
         "children": [
           {
-            "id": "01bf7955f6189dd5",
+            "id": "ee10afbebca1b79a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fomo/Books.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2dff763f38429077",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Social design.md",
+                "file": "design/Design conferences.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssir.org",
+                "query": "graphy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Social design.md",
+                "file": "design/Design conferences.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Social design.md",
+                "file": "design/Design conferences.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Social design.md"
+                "file": "design/Design conferences.md"
               }
             }
           }
@@ -167,16 +154,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2dff763f38429077",
+  "active": "ee10afbebca1b79a",
   "lastOpenFiles": [
+    "design/Activities/Research planning.md",
+    "design/Design conferences.md",
+    "design/Activities/Design research/Participant approach.md",
+    "design/Concepts/Triangulation.md",
+    "design/Activities/Design research.md",
+    "design/Activities/Design research/Ethnographic methods.md",
+    "design/Concepts/Research question.md",
+    "design/Activities/Design research/Desk research.md",
+    "design/Activities/Research Visualization.md",
+    "design/Activities/Design research/Self-ethnographic research.md",
+    "design/Research through design.md",
+    "fomo/Books.md",
+    "design/Social design.md",
     "design/Quotes.md",
     "Quotes.md",
-    "fomo/Books.md",
     "design/People.md",
     "design/Resources.md",
     "design/random.md",
     "design/Institutions.md",
-    "design/Research through design.md",
     "design/Human-centered design.md",
     "design/Fake door tests.md",
     "design/Education.md",
@@ -184,18 +182,7 @@
     "design/Design checklist.md",
     "design/Design activities.md",
     "design/Design.md",
-    "design/Treninky.md",
-    "design/Service design.md",
-    "food/to cook.md",
     "img/work.jpg",
-    "random/stage-management-kit.md",
-    "design/Activities/Design research/Focus groups.md",
-    "random/Inspiration.md",
-    "design/Activities/Design research/Thematic analysis.md",
-    "random/Inspiration.md",
-    "design/Activities/Design research/Focus groups.md",
-    "design/Cone of possibilities.md",
-    "design/Activities/Design research/Desk research.md",
     "fomo",
     "ranomcanvas.canvas",
     "img/20230622_171524.jpg",
