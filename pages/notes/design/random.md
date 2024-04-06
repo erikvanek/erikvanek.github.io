@@ -3,6 +3,7 @@
 	- https://www.nceas.ucsb.edu/news/how-spark-joy-groan-zone-collaboration
 	- https://futuropolis.cz/knihovna/groan-zone-zona-kvileni/
 	- what it is and how to work with it
+	- 
 - https://www.liberatingstructures.com/1-1-2-4-all/
 - using behavioral design during design
 	- https://wearesnook.com/applying-behavioural-design-to-help-people-make-more-sustainable-choices/
@@ -18,3 +19,7 @@
 - how do you know that the thing you found is the thing you did not know?
 - Name -> Frame -> Act -> Reflect paradigm from the theory Reflective practice
 - a nicely curated list of biases https://thedecisionlab.com/biases
+- let's unleash our inner creator https://erinremblance.substack.com/p/we-are-not-supposed-to-live-like
+
+- super podcast o leadershipu https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucmVzcGVrdC5jei9wb2RjYXN0LnJzcw/episode/aHR0cHM6Ly9kYXRhLmV1LmNudG1ici5jb20vcmVzcGVrdC1wcm9kL3Jlc3Bla3QtcHJvZC8zYTQ4YzM5MS0xZTFlLTRiOTEtYTcyYS0zOTk5YzIxZWRkYjIubXAz
+- pěkná inovační agoška https://www.themoment.is/

@@ -10,7 +10,7 @@
 	- e.g. when researching train station service
 		- what kind of people you need at train station during different day times
 - it us useful to engage with participants in their natural surroundings
-- when more research only confirms already identified patterns, __theoretical saturation__ is reached
+- when more research only confirms already identified patterns, [theoretical saturation is reached](https://dovetail.com/research/data-saturation/), then it is possible to [iterate](https://medium.com/idinsight-blog/the-case-for-iteration-in-qualitative-research-design-e07ed1314756)
 - research types
 	- overt
 		- you are open with your intent
@@ -22,6 +22,7 @@
 	- [[Desk research]]
 		- before or in parallel - try to go through some [[Secondary research]]
 	- [[Self-ethnographic research]]
+	- [[Ethnographic methods]]
 	- [[Participant approach]]
 		- interviews, observation, focus groups
 	- Non-participant approaches

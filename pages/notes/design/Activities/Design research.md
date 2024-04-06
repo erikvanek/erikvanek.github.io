@@ -21,3 +21,4 @@
 - results should be visualized by [[Research Visualization]]
 - "CX oriented research is rather inductive (finding out along the way), whereas testing prototypes is deductive (validating hypothesis)"
 - Important to take notes [well][https://condens.io/user-research-note-taking/]
+- **The mismatches between user attitudes and user actions are often a great source of insights**.
