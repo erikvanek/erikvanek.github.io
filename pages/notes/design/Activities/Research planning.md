@@ -29,4 +29,5 @@
 		- non-participant observation, cultural probes, co-creating
 	- Co-creative workshops
 		- journey maps, system maps, co-creating personas
+		- Great workshop ideas in [this](https://dovetail.com/blog/researching-right-thing-versus-researching-thing-right/) article to kick start the research scope
 - check a [Design Research Framework](https://www.muledesign.com/blog/design-research-framework) by Erika Hall to see what could work for you

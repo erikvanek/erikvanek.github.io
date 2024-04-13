@@ -1,5 +1,6 @@
 - __to understand people & their behavior related to the product or service__
 - enables to _empathize_ & get to know the context
+- is *"Becoming friends with reality"* - Erika Hall
 - motivation to find out how customers or other relevant actors experience a given service
 - helps to move beyond assumptions
 - two main types:
@@ -22,3 +23,7 @@
 - "CX oriented research is rather inductive (finding out along the way), whereas testing prototypes is deductive (validating hypothesis)"
 - Important to take notes [well][https://condens.io/user-research-note-taking/]
 - **The mismatches between user attitudes and user actions are often a great source of insights**.
+- Two main fidelities
+	- pure - rigorous research uncovering completely new knowledge 
+	- applied - less rigorous, borrows ideas and techniques from pure research but is more relaxed
+- Research can be also looked through the [double diamond](https://dovetail.com/blog/researching-right-thing-versus-researching-thing-right/) paradigm

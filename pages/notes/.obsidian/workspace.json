@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design conferences.md",
+                "file": "design/Design tools/Jobs to be done.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "graphy",
+                "query": "innova",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Design conferences.md",
+                "file": "design/Design tools/Jobs to be done.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Design conferences.md",
+                "file": "design/Design tools/Jobs to be done.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Design conferences.md"
+                "file": "design/Design tools/Jobs to be done.md"
               }
             }
           }
@@ -154,34 +155,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee10afbebca1b79a",
+  "active": "6b30415ae18c831f",
   "lastOpenFiles": [
+    "design/Resources.md",
+    "design/Quotes.md",
+    "Quotes.md",
+    "design/Design tools/Jobs to be done.md",
     "design/Activities/Research planning.md",
+    "design/Activities/Research Visualization.md",
+    "design/Activities/Design research.md",
+    "design/Treninky.md",
+    "design/Concepts/Double diamond.md",
+    "design/Service design.md",
     "design/Design conferences.md",
     "design/Activities/Design research/Participant approach.md",
     "design/Concepts/Triangulation.md",
-    "design/Activities/Design research.md",
     "design/Activities/Design research/Ethnographic methods.md",
     "design/Concepts/Research question.md",
     "design/Activities/Design research/Desk research.md",
-    "design/Activities/Research Visualization.md",
     "design/Activities/Design research/Self-ethnographic research.md",
     "design/Research through design.md",
     "fomo/Books.md",
     "design/Social design.md",
-    "design/Quotes.md",
-    "Quotes.md",
     "design/People.md",
-    "design/Resources.md",
     "design/random.md",
     "design/Institutions.md",
     "design/Human-centered design.md",
     "design/Fake door tests.md",
     "design/Education.md",
-    "design/Design for public.md",
-    "design/Design checklist.md",
-    "design/Design activities.md",
-    "design/Design.md",
     "img/work.jpg",
     "fomo",
     "ranomcanvas.canvas",
