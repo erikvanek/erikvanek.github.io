@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Agencies.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "innova",
+                "query": "client",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Agencies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Agencies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md"
+                "file": "design/Agencies.md"
               }
             }
           }
@@ -155,12 +154,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6b30415ae18c831f",
+  "active": "ee10afbebca1b79a",
   "lastOpenFiles": [
+    "design/working with clients.md",
+    "design/Design tools/Design brief.md",
+    "design/random.md",
     "design/Resources.md",
+    "design/Concepts/Glossary.md",
+    "design/Design methods/Interviews.md",
+    "tools/tools in 2024.md",
+    "design/Activities/Design research/Thematic analysis.md",
+    "tools",
+    "food/Cold-breg long-infused kombucha.md",
+    "food/to cook.md",
+    "design/Design tools/Jobs to be done.md",
     "design/Quotes.md",
     "Quotes.md",
-    "design/Design tools/Jobs to be done.md",
     "design/Activities/Research planning.md",
     "design/Activities/Research Visualization.md",
     "design/Activities/Design research.md",
@@ -174,15 +183,6 @@
     "design/Concepts/Research question.md",
     "design/Activities/Design research/Desk research.md",
     "design/Activities/Design research/Self-ethnographic research.md",
-    "design/Research through design.md",
-    "fomo/Books.md",
-    "design/Social design.md",
-    "design/People.md",
-    "design/random.md",
-    "design/Institutions.md",
-    "design/Human-centered design.md",
-    "design/Fake door tests.md",
-    "design/Education.md",
     "img/work.jpg",
     "fomo",
     "ranomcanvas.canvas",

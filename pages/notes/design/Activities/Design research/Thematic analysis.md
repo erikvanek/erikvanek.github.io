@@ -1,11 +1,13 @@
 ---
-sources: ["https://www.nngroup.com/articles/thematic-analysis/"]
+sources:
+  - https://www.nngroup.com/articles/thematic-analysis/
+  - https://www.interaction-design.org/literature/article/how-to-do-a-thematic-analysis-of-user-interviews
 ---
 - A systematic method of breaking down and organizing rich data from qualitative research
 - A rule of thumb - _Analysis can be a lengthy process - budget at least as much time as you had for the data collection to complete it_
 - Qualitative data -> Codes -> Themes
 - Code
-	- a word or phrase that acts as a labe for a segment of text
+	- a word or phrase that acts as a lable for a segment of text
 	- a shorthand for more complicated information
 	- types:
 		- Descriptive

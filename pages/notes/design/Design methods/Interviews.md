@@ -1,0 +1,1 @@
+- tips here https://dovetail.com/blog/qualitative-research-skills/

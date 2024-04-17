@@ -6,3 +6,7 @@
 ## Snook
 - https://wearesnook.com/about/
 - working with NHS & UK government
+## Harmonic
+- https://thisisharmonic.com/
+## The moment
+- https://www.themoment.is/
