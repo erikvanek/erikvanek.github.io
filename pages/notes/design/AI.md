@@ -3,3 +3,4 @@
 	- [elicit](https://elicit.org/) to go through academic databases
 	- [pairwith.google](https://pair.withgoogle.com/) multidisciplinary team in Google focused on AI providing multiple tools and knowledge (e.g. authoring TensorFlow.js)
 		- its [research](https://pair.withgoogle.com/research/) or [guidebook](https://pair.withgoogle.com/guidebook/) can be interesting
+- patterns for AI https://www.shapeof.ai/g
