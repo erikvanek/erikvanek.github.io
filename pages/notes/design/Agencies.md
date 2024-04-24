@@ -10,3 +10,6 @@
 - https://thisisharmonic.com/
 ## The moment
 - https://www.themoment.is/
+## Center Centre
+- https://centercentre.com/
+- strategic design, leadership

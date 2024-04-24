@@ -3,4 +3,6 @@
 - when you start - be shitty, not pretty - throw away easily & iterate further
 - [[Design Thinking]]
 - Uses [[Design tools]] to answer the question "What" & [[Design methods]] to answer the question "How"
-- Kat Holmes: __"Design as a practice that contributes to the society in meaningful ways"__ 
+- Kat Holmes: __"Design as a practice that contributes to the society in meaningful ways"__
+- [is a rendering of an intent](https://articles.centercentre.com/design_rendering_intent/)
+	- when designing for radical innovation we need to [inform our intuition](obsidian://open?vault=notes&file=design%2Fresources%2FInforming_Our_Intuition.pdf)
