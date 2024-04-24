@@ -27,3 +27,4 @@
 	- pure - rigorous research uncovering completely new knowledge 
 	- applied - less rigorous, borrows ideas and techniques from pure research but is more relaxed
 - Research can be also looked through the [double diamond](https://dovetail.com/blog/researching-right-thing-versus-researching-thing-right/) paradigm
+- 
