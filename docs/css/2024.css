@@ -1,0 +1,40 @@
+:root {
+
+    --space-unit: 1em;
+    --space-xxs: calc(0.25 * var(--space-unit));
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.75 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
+    --space-lg: calc(2 * var(--space-unit));
+    --space-xl: calc(3.25 * var(--space-unit));
+    --space-xxl: calc(5.25 * var(--space-unit));
+}
+
+* {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+.feat {}
+
+svg {
+    stroke: green;
+    stroke-width: 2px;
+    /* stroke-dasharray: 2px; */
+    border: 2px solid green;
+    border-radius: .5rem;
+    width: 2rem;
+    height: 2rem;
+    padding: .25rem;
+}
+
+#partners img {
+    max-width: 4rem;
+}
+
+#cases img {
+    max-height: 12rem;
+}
+
+#email-contact {
+    font-size: 1.5rem;
+}
