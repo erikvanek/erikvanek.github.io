@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nu</title>
+    <link rel="stylesheet" href="/css/nu.css">
+</head>
+
+<body>
+    <script src="/js/nu.js"></script>
+    <div class="pattern" id="pattern-1"></div>
+    <div class="pattern" id="pattern-2"></div>
+    <div class="pattern" id="pattern-3"></div>
+    <div class="pattern" id="pattern-4"></div>
+    <div class="pattern" id="pattern-5"></div>
+    <div class="pattern" id="pattern-6"></div>
+    <div id="wrapper">
+        <div id="debug">
+            <span id="speed"></span>
+            <span id="changeCounter"></span>
+        </div>
+        <div id="content">
+            <span id="intro">I'm a<span id="n">(n)</span></span>
+            <h1 id="adjective"></h1>
+            <h1 id="noun"></h1>
+            <div id="sections">
+                <span id="findme">find me</span>
+                <a href="/me">online</a>
+                <a href="/blog">blogging</a>
+                <span>or</span>
+                <a href="/aero">growing greens</a>
+            </div>
+        </div>
+        <div id="controls">
+            <button onclick="javascript:speedUp()">↑ speed up ↑</button>
+            <button onclick="javascript:slowDown()">↓ slow down ↓</button>
+            <button onclick="javascript:randomize()">randomize</button>
+            <button onclick="javascript:togglePause()">pause</button>
+        </div>
+    </div>
+</body>
+
+</html>
