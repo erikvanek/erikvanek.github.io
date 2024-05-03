@@ -1,6 +1,5 @@
-
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./pages');
@@ -14,29 +13,29 @@ module.exports = function (eleventyConfig) {
     let options = {
         html: true,
         breaks: true,
-        linkify: true
+        linkify: true,
     };
 
     const markdownLib = markdownIt(options)
         .use(markdownItAttrs)
-        .disable("code");
+        .disable('code');
 
-    eleventyConfig.setLibrary("md", markdownLib);
+    eleventyConfig.setLibrary('md', markdownLib);
 
     eleventyConfig.setTemplateFormats([
-        "css",
-        "pdf",
+        'css',
+        'pdf',
         'mp4',
-        "js",
-        "jpg",
-        "jpeg",
-        "png",
-        "svg",
-        "html",
-        "ico",
-        "md",
-        "njk",
-        "xml"
+        'js',
+        'jpg',
+        'jpeg',
+        'png',
+        'svg',
+        'html',
+        'ico',
+        'md',
+        'njk',
+        'xml',
     ]);
 
     return {
