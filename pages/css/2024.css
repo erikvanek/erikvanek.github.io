@@ -1,30 +1,35 @@
 :root {
-
-    --space-unit: 1em;
-    --space-xxs: calc(0.25 * var(--space-unit));
-    --space-xs: calc(0.5 * var(--space-unit));
-    --space-sm: calc(0.75 * var(--space-unit));
-    --space-md: calc(1.25 * var(--space-unit));
-    --space-lg: calc(2 * var(--space-unit));
-    --space-xl: calc(3.25 * var(--space-unit));
-    --space-xxl: calc(5.25 * var(--space-unit));
+    --base-size: 16px;
+    --dark-color: navy;
+    --text-color: #eee;
+    --lighter-color: #efe;
+    --dark-text-color: #222;
 }
 
 * {
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue',
+        sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.feat {}
+body {
+    background: var(--dark-color);
+    color: var(--text-color);
+}
+
+.feat {
+}
 
 svg {
-    stroke: green;
+    stroke: var(--text-color);
     stroke-width: 2px;
-    /* stroke-dasharray: 2px; */
-    border: 2px solid green;
-    border-radius: .5rem;
-    width: 2rem;
+    border: 2px solid var(--text-color);
+    border-radius: 0.5rem;
+    /* width: 2rem;
     height: 2rem;
-    padding: .25rem;
+    padding: 0.25rem; */
 }
 
 #partners img {
@@ -38,3 +43,143 @@ svg {
 #email-contact {
     font-size: 1.5rem;
 }
+
+.hamburger {
+    position: fixed;
+    /* a large z-index puts the ham button above the rest of the page*/
+    z-index: 99;
+    background: white;
+    border: none;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+}
+
+.menu {
+    position: fixed;
+    /* give the menu a larger z-index than the ham link
+    to put the menu above it */
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    /* basic menu styling*/
+    list-style: none;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+
+    flex-direction: column;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+.close {
+    position: absolute;
+    border: none;
+    color: white;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+}
+
+.menu:target {
+    /* show menu */
+    transform: translateY(0);
+}
+
+nav ul {
+    display: flex;
+    font-size: calc(var(--base-size) * 2);
+    align-items: center;
+}
+
+#menu li {
+    margin: 1rem 0;
+}
+
+#menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+#menu li:first-child {
+    margin-top: calc(var(--base-size) * 3 + 2rem);
+}
+
+nav {
+    display: block;
+    height: calc(var(--base-size) * 3 + 2rem);
+    margin: 0;
+    padding: 0;
+    background-color: var(--text-color);
+}
+
+section {
+    padding: 1rem;
+}
+
+.feat {
+    margin: 1rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    word-wrap: normal;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+#pitch,
+#cases,
+#partners {
+    background-color: var(--text-color);
+    color: var(--dark-text-color);
+}
+
+.case-study {
+    margin-bottom: 2rem;
+}
+
+.feat{
+    display: flex;
+    /* flex: 1 2; */
+}
+
+.feat svg {
+    width: max-content;
+}
+
+
+/* .feat svg {
+    flex-grow: 1;
+}
+
+.feat span {
+    flex-grow: 2;
+} */
+
+/* let's break at 660 */
