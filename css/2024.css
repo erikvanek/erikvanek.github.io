@@ -142,7 +142,7 @@ nav ul {
 nav svg {
     width: 2rem;
     height: 2rem;
-    ƒ color: var(--dark-text-color);
+    color: var(--dark-text-color);
     border: none;
 }
 
@@ -152,6 +152,12 @@ nav span {
     right: 4rem;
     color: var(--gray-color);
     font-size: 2rem;
+}
+
+nav #home {
+    color: var(--light-gray-color);
+    margin-right: calc(var(--base-size) * 2);
+    border: none;
 }
 
 .close {
@@ -166,6 +172,7 @@ nav span {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 800;
+    border: none;
 }
 
 #menu li:first-child {
@@ -178,12 +185,17 @@ nav {
     flex-direction: row-reverse;
     height: 4rem;
     width: 100%;
+    top: 0;
     background-color: var(--text-color);
     background-color: white;
     align-items: center;
     z-index: 100;
     border-bottom: var(--line-width) solid var(--light-gray-color);
     box-shadow: 0 2px 4px 0 var(--light-gray-color);
+}
+
+#menu .nav-active a {
+    color: var(--accent-color);
 }
 
 #wrapper {
@@ -202,8 +214,14 @@ span {
 h1 {
     font-size: calc(var(--base-size) * 3);
     word-wrap: normal;
-    margin: calc(var(--base-size) * 2) 0;
+    margin: calc(var(--base-size) * 3) 0;
     font-weight: 800;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        margin: calc(var(--base-size) * 2) 0;
+    }
 }
 
 h2 {
@@ -214,7 +232,7 @@ h2 {
 
 h3 {
     font-size: calc(var(--base-size) * 2);
-    margin: var(--base-size) 0;
+    margin-bottom: var(--base-size);
 }
 
 h4 {
@@ -222,10 +240,18 @@ h4 {
     margin: calc(var(--base-size) * 2) 0;
 }
 
+strong {
+    color: white;
+}
+
+.darker {
+    color: var(--gray-color);
+}
+
 /* sections */
 
 section {
-    padding: calc(var(--base-size) * 2);
+    padding: calc(var(--base-size) * 1.5);
 }
 
 #pitch {
@@ -269,6 +295,10 @@ section {
     border: var(--line-width) dashed var(--text-color);
     transition: transform 0.2s ease;
     cursor: pointer;
+}
+
+.case-studies a {
+    color: var(--dark-text-color);
 }
 
 @media (min-width: 1000px) {
@@ -318,16 +348,23 @@ section {
     gap: calc(var(--base-size) * 2);
 }
 
+.feat h4 {
+    margin: calc(var(--base-size) / 4) 0;
+}
+
 @media (min-width: 1000px) {
 
     .feats {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     .feat {
         flex-direction: column;
         border: var(--line-width) solid var(--accent-color);
         padding: var(--base-size);
+        max-width: 25%;
     }
 }
 
@@ -349,10 +386,8 @@ section {
 /* call to action  */
 
 #cta a {
-    color: var(--text-color);
     text-decoration: none;
     font-weight: 800;
-    border-bottom: var(--line-width) dashed var(--accent-color);
     font-size: var(--base-size);
 }
 
@@ -373,8 +408,91 @@ section {
 }
 
 
-#email-contact {
-    font-size: 1.5rem;
+a {
+    font-size: var(--base-size);
+    border-bottom: var(--line-width) dashed var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    color: white;
 }
 
-/* let's break at 800 */
+/* profile */
+
+.profile-start {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-size);
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: var(--base-size);
+    border-radius: var(--border-radius);
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 800px) {
+    .profile-start {
+        flex-direction: row;
+    }
+
+    #intro {
+        flex: 2;
+    }
+
+    #pic {
+        flex: 1;
+        margin-right: calc(var(--base-size) * 10);
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    #intro {
+        flex: 3;
+    }
+}
+
+.contact-line {
+    display: flex;
+    gap: var(--base-size);
+    margin-bottom: calc(var(--base-size) / 2);
+}
+
+.contact-line a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-line svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--dark-text-color);
+    border: none;
+}
+
+.contact-line span {
+    margin: 0;
+}
+
+.case {
+    margin: var(--base-size);
+}
+
+.case h1 {
+    margin-top: calc(var(--base-size) * 4);
+}
+
+.case h2 {
+    color: var(--text-color);
+}
+
+.case ul {
+    font-size: var(--base-size);
+}
