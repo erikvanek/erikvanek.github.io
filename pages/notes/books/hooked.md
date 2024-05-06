@@ -74,5 +74,7 @@ description: Nir Eyal looks at affective design patterns and mechanisms in his b
 ## Review{#review}
 
 Despite the fact that the book is 9 years old still feels pretty relevant. An interesting look under the hood of how to design affective algorithms of persuasion 'to make users love / get addicted to your product'.
+
 I am not really interested in knowing how to design such products. Rather I'm interested in underlying mechanisms driving these products. Possibly this knowledge could help me to defend my own attention which seems to be a scarcier resource each day.
+
 The hook model is pretty easy to understand and builds on top of primitive human instincts. One could expect some sort of rocket science but it is quite the opposite. This book made me to question ethics a lot as designing (especially) cloud never shutting down services could yield a masive amount of unintended consiquences e.g. lowering one's self-esteem due to the excessive consumption of social media.

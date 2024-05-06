@@ -1,0 +1,69 @@
+
+
+/* TODO REUSE VARS */
+
+
+.article {
+    color: var(--text-color);
+    padding: var(--base-size);
+    padding-top: calc(var(--base-size) * 4);
+    margin: 0 var(--base-size);
+}
+
+@media (min-width: 600px) {
+    .article {
+        padding-top: calc(var(--base-size) * 2);
+    }
+}
+
+h1, h2 {
+    color: white;
+}
+
+h2 {
+    margin-bottom: var(--base-size);
+}
+
+
+ul li {
+    margin-bottom: calc(var(--base-size) / 2);
+}
+
+#home, #blog-root {
+    margin-right: var(--base-size);
+}
+
+.tag {
+    background-color: var(--accent-color);
+    margin: calc(var(--base-size) / 4);
+    padding: calc(var(--base-size) / 4);
+    border-radius: var(--border-radius);
+}
+
+.tags {
+    margin: calc(var(--base-size) / 2) 0;
+}
+
+#notes, #review {
+    display: none;
+}
+
+time {
+    margin-bottom: var(--base-size);
+    display: block;
+}
+
+p {
+    margin-bottom: var(--base-size);
+}
+
+li {
+    font-size: var(--base-size);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: var(--base-size);
+}

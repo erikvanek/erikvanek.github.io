@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta name="generator" content="Hugo 0.37.1" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="no-referrer" />
+    <meta name="generator" content="Hugo 0.37.1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="referrer" content="no-referrer"/>
 
-    <meta name="description" content="" />
+    <meta name="description" content=""/>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:domain" content="www.erikvanek.com" />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:domain" content="www.erikvanek.com"/>
 
-    <meta name="twitter:image" content="/zen-circle.ico" />
+    <meta name="twitter:image" content="/zen-circle.ico"/>
     <meta
       name="twitter:title"
       property="og:title"
       itemprop="title name"
       content="Fresh greens all year long | Erik Vaněk"
-    />
+/>
     <meta
       name="twitter:description"
       property="og:description"
       itemprop="description"
       content=""
-    />
-    <meta name="og:type" content="website" />
-    <meta name="og:url" content="www.erikvanek.com/" />
+/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:url" content="www.erikvanek.com/"/>
     <meta
       name="og:image"
       itemprop="image primaryImageOfPage"
       content="/zen-circle.ico"
-    />
+/>
 
     <title>Fresh greens all year long | Erik Vaněk</title>
-    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/nu.css" />
-    <link rel="stylesheet" href="/css/blog.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon"/>
+    <link rel="stylesheet" href="/css/2024.css"/>
+    <link rel="stylesheet" href="/css/blog-2024.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
       rel="stylesheet"
-    />
+/>
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -63,18 +62,49 @@
     gtag("config", "G-PV96BQFY9Y");
   </script>
 </html>
-<body id="pattern-1" class="active">
+<body>
+
+  <nav>
+    <ul class="menu" id="menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/profile">Profile</a>
+      </li>
+      <!-- <li>
+                        <a href="/work">Work</a>
+                    </li> -->
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+      <a class="close" href="#">
+        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </ul>
+    <span>erikvanek.com</span>
+    <a class="hamburger" href="#menu">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </nav>
+
   <div class="section" id="splash">
     <div class="article">
       
-      <a href="/">← back Home 🏠</a>
-       
-      <a href="/blog">← Blog</a>
-      
       <h1>Fresh greens all year long</h1>
-         
-      <time>Fri Mar 23 2018</time>
-       
+      
+      
+      
+        
+          <time>Fri Mar 23 2018</time>
+        
+      
 
       <article><p>This is one of my sideprojects I've been working on mainly during 2016 and 2017. It stems from two connected facts. First is that one of my biggest hobbies is food. Second is that it's hard to prepare tasty meals without fine ingredients. I do not mean fancy. Rather fresh and full of taste, preferably seasonal and local.</p>
 <p>This is even more obvious outside of green season say between mid-October til the beginning of May. Grocery stores offer some kind of veg and fruit, but usually quite blend and tasteless. Not mentioning their carbon footprint. Or is it too much not to expect apples from South America in Central Europe? This easily can get to some rant about globalization, multinational corporations etc. I do not want to get there. After all, it's the people's wallets that drive the economy.</p>
@@ -136,4 +166,20 @@ Second big reason is more of a strategic / ecological one. Big advantage of aero
 </article>
     </div>
   </div>
+
+<script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const path = window.location.pathname.replaceAll('/', '');
+            const children = document.querySelectorAll('nav > ul > li');
+            console.log(path)
+            if (path === '') {
+                children[0].classList.add('nav-active')
+            } else if (path === 'profile') {
+                children[1].classList.add('nav-active')
+            } else if (path === 'blog') {
+                children[2].classList.add('nav-active')
+            }
+        }) 
+    </script>
+
 </body>

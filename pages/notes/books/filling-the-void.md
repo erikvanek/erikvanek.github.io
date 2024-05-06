@@ -88,5 +88,7 @@ description: Filling the void by Marcus Gilroy-Ware is an inspiring critique of 
 
 ## Review{#review}
 A bit older but still heavily relevant book on how affective media tend to drain our emotional resources. It is interesting to observe and analyze how emotionally and hormonally susceptible we are to social media triggers and design. The abuse of our brain's dopamine circuit to thrive for _new_ things is just so sad.
+
 It is good to be aware of affective mechanisms that are being used against us in our daily lives. The most dangerous situation is when we're not even aware we're being the product (which happens especially when using free digital tools). Additionaly it is worth noting that the more products become synonymous to things in your life (e.g. "to Google something") the harder is to abandon them (if needed). Extracting surplus value from causing emotional distress seems to be a common pattern especially in social media world and it is more than sad that general public does not know more about that phenomenon.
+
 We're trying so hard to fill in our inner voids by consuming more, either digitally or physically but we fail to recognize that that's a failed attempt to resist capitalism. Also we should be aware that there's no such thing as harmless use of social media - if you want to use them to any degree, they will use you too.

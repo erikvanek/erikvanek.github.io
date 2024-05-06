@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta name="generator" content="Hugo 0.37.1" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="no-referrer" />
+    <meta name="generator" content="Hugo 0.37.1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="referrer" content="no-referrer"/>
 
-    <meta name="description" content="Tepache - one of the funkiest fermented drinks made from leftover pineapple rind and core. Ideal for winter time." />
+    <meta name="description" content="Tepache - one of the funkiest fermented drinks made from leftover pineapple rind and core. Ideal for winter time."/>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:domain" content="www.erikvanek.com" />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:domain" content="www.erikvanek.com"/>
 
-    <meta name="twitter:image" content="/zen-circle.ico" />
+    <meta name="twitter:image" content="/zen-circle.ico"/>
     <meta
       name="twitter:title"
       property="og:title"
       itemprop="title name"
       content="Tepache | Erik Vaněk"
-    />
+/>
     <meta
       name="twitter:description"
       property="og:description"
       itemprop="description"
       content="Tepache - one of the funkiest fermented drinks made from leftover pineapple rind and core. Ideal for winter time."
-    />
-    <meta name="og:type" content="website" />
-    <meta name="og:url" content="www.erikvanek.com/" />
+/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:url" content="www.erikvanek.com/"/>
     <meta
       name="og:image"
       itemprop="image primaryImageOfPage"
       content="/zen-circle.ico"
-    />
+/>
 
     <title>Tepache | Erik Vaněk</title>
-    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/nu.css" />
-    <link rel="stylesheet" href="/css/blog.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon"/>
+    <link rel="stylesheet" href="/css/2024.css"/>
+    <link rel="stylesheet" href="/css/blog-2024.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
       rel="stylesheet"
-    />
+/>
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -63,18 +62,49 @@
     gtag("config", "G-PV96BQFY9Y");
   </script>
 </html>
-<body id="pattern-1" class="active">
+<body>
+
+  <nav>
+    <ul class="menu" id="menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/profile">Profile</a>
+      </li>
+      <!-- <li>
+                        <a href="/work">Work</a>
+                    </li> -->
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+      <a class="close" href="#">
+        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </ul>
+    <span>erikvanek.com</span>
+    <a class="hamburger" href="#menu">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </nav>
+
   <div class="section" id="splash">
     <div class="article">
       
-      <a href="/">← back Home 🏠</a>
-       
-      <a href="/blog">← Blog</a>
-      
       <h1>Tepache</h1>
-         
-      <time>Thu Dec 30 2021</time>
-       
+      
+      
+      
+        
+          <time>Thu Dec 30 2021</time>
+        
+      
 
       <article><p>Wonderful spicy refreshing drink born in Mexico. You can give a second life to your usually thrown away pineapple skins &amp; core. It ferments really well even in standard winter room temperature.</p>
 <p>It takes less then a week to get this amazing winter refreshment ready to enjoy. Fun fact is that you can get more flushes from one pineapple. To me personally it seems that even a 3rd flush is pretty potent, 4th one is starting to weaken a bit.</p>
@@ -135,4 +165,20 @@
 </article>
     </div>
   </div>
+
+<script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const path = window.location.pathname.replaceAll('/', '');
+            const children = document.querySelectorAll('nav > ul > li');
+            console.log(path)
+            if (path === '') {
+                children[0].classList.add('nav-active')
+            } else if (path === 'profile') {
+                children[1].classList.add('nav-active')
+            } else if (path === 'blog') {
+                children[2].classList.add('nav-active')
+            }
+        }) 
+    </script>
+
 </body>
