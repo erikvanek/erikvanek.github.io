@@ -156,7 +156,7 @@ nav span {
 
 nav #home {
     color: var(--light-gray-color);
-    margin-right: calc(var(--base-size) * 2);
+    margin-right: 4rem;
     border: none;
 }
 
