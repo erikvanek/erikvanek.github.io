@@ -1,12 +1,35 @@
 :root {
     --base-size: 16px;
-    --dark-color: navy;
+    --line-width: 1px;
+    --border-radius: .25rem;
+
+    --dark-color: #44d;
+    --accent-color: #bcf;
+
     --text-color: #eee;
-    --lighter-color: #efe;
-    --dark-text-color: #222;
+    --gray-color: #888;
     --light-gray-color: #ddd;
-    --dark-gray-color: #888;
-    --darker-gray-color: #444;
+    --dark-text-color: #222;
+    --darkest-gray-color: #444;
+}
+
+@media (min-width: 600px) {
+    :root {
+        /* Change base variable used for element variable */
+        --base-size: 24px;
+        --line-width: 2px;
+        --border-radius: .5rem;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    :root {
+        /* Change base variable used for element variable */
+        --base-size: 30px;
+        --line-width: 2px;
+        --border-radius: 1rem;
+    }
 }
 
 * {
@@ -24,16 +47,15 @@ body {
 
 svg {
     stroke: var(--text-color);
-    stroke-width: 2px;
-    border: 2px solid var(--text-color);
-    border-radius: 1rem;
-    /* width: 2rem;
-    height: 2rem;
-    padding: 0.25rem; */
+    stroke-width: var(--line-width);
+    border: var(--line-width) solid var(--accent-color);
 }
 
+/* partners */
+
+
 #partners img {
-    max-width: 4rem;
+    max-width: calc(var(--base-size) * 4);
 }
 
 #partners-list {
@@ -45,22 +67,24 @@ svg {
 }
 
 #partners a {
-    margin: 2rem;
+    padding: 2rem;
     text-decoration: none;
     display: block;
+    border: var(--line-width) solid transparent;
+    border-radius: var(--border-radius);
+    transition: transform all 0.5s ease;
 }
 
-#cases img {
-    max-height: 12rem;
+#partners a:hover {
+    transition: transform all 0.5s ease;
+    border: var(--line-width) dashed var(--accent-color);
+    background-color: var(--accent-color);
 }
 
-#email-contact {
-    font-size: 1.5rem;
-}
+/* navigation */
 
 .hamburger {
     position: fixed;
-    /* a large z-index puts the ham button above the rest of the page*/
     z-index: 99;
     border: none;
     cursor: pointer;
@@ -68,13 +92,9 @@ svg {
     right: 1rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: var(--base-size);
     text-decoration: none;
     color: var(--dark-text-color);
-    /* font-size: 1.25rem;
-    border: 1px solid var(--light-gray-color);
-    padding: .25rem;
-    border-radius: .25rem; */
 }
 
 .menu {
@@ -122,7 +142,7 @@ nav ul {
 nav svg {
     width: 2rem;
     height: 2rem;
-    color: var(--dark-text-color);
+    ƒ color: var(--dark-text-color);
     border: none;
 }
 
@@ -130,7 +150,7 @@ nav span {
     position: fixed;
     top: .75rem;
     right: 4rem;
-    color: var(--dark-gray-color);
+    color: var(--gray-color);
     font-size: 2rem;
 }
 
@@ -162,7 +182,7 @@ nav {
     background-color: white;
     align-items: center;
     z-index: 100;
-    border-bottom: 1px solid var(--light-gray-color);
+    border-bottom: var(--line-width) solid var(--light-gray-color);
     box-shadow: 0 2px 4px 0 var(--light-gray-color);
 }
 
@@ -170,72 +190,99 @@ nav {
     width: 100%;
 }
 
-section {
-    padding: 1rem;
-}
+/* visual rhythm and typography */
 
-p {
-    margin-bottom: 1.5rem;
+p,
+span {
+    margin-bottom: calc(var(--base-size) * 1.5);
+    font-size: var(--base-size);
+    max-width: 60ch;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: calc(var(--base-size) * 3);
     word-wrap: normal;
-    margin: 1.5rem 0;
+    margin: calc(var(--base-size) * 2) 0;
     font-weight: 800;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin: 2.5rem 0;
-    color: var(--darker-gray-color);
+    font-size: calc(var(--base-size) * 2.5);
+    margin: calc(var(--base-size) * 2.5) 0;
+    color: var(--darkest-gray-color);
 }
 
 h3 {
-    font-size: 2rem;
-    margin: 2rem 0;
+    font-size: calc(var(--base-size) * 2);
+    margin: var(--base-size) 0;
 }
 
 h4 {
-    font-size: 1.5rem;
-    margin: 2rem 0;
+    font-size: calc(var(--base-size) * 1.5);
+    margin: calc(var(--base-size) * 2) 0;
+}
+
+/* sections */
+
+section {
+    padding: calc(var(--base-size) * 2);
 }
 
 #pitch {
-    padding-top: 4rem;
+    padding-top: calc(var(--base-size) * 4);
 }
+
 
 #pitch,
 #cases,
 #partners {
     background-color: var(--text-color);
     color: var(--dark-text-color);
-
 }
+
+
+/* case studies */
+
 
 #cases {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
 }
 
 .case-study {
     margin-bottom: 2rem;
-    /* max-height: 12rem; */
     display: flex;
-    gap: 1rem;
+    gap: var(--base-size);
     justify-content: space-evenly;
     flex-direction: column;
-    padding: 1rem;
-    border: 2px dashed var(--dark-color);
-    border-radius: .5rem;
+    padding: var(--base-size);
+    border: var(--line-width) dashed var(--dark-color);
+    border-radius: var(--border-radius);
     transition: transform 0.2s ease;
 }
 
-.case-study:active {
+.case-study:active,
+.case-study:hover {
     background-color: var(--dark-color);
     color: var(--text-color);
-    border: 2px dashed var(--text-color);
+    border: var(--line-width) dashed var(--text-color);
     transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .case-studies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--base-size);
+    }
+
+    .case-study {
+        /* max-width: calc(var(--base-size) * 10); */
+        max-width: 25%;
+    }
 }
 
 .case-study h4 {
@@ -251,11 +298,37 @@ h4 {
     display: none;
 }
 
+
+/* features  */
+
 .feat {
-    margin: 2rem 0;
-    gap: 2rem;
     display: flex;
     align-items: center;
+    gap: var(--base-size);
+    border-radius: var(--border-radius);
+}
+
+.feat span {
+    margin: 0;
+}
+
+.feats {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--base-size) * 2);
+}
+
+@media (min-width: 1000px) {
+
+    .feats {
+        flex-direction: row;
+    }
+
+    .feat {
+        flex-direction: column;
+        border: var(--line-width) solid var(--accent-color);
+        padding: var(--base-size);
+    }
 }
 
 .feat svg {
@@ -264,17 +337,23 @@ h4 {
     max-width: 4rem;
     padding: 1rem;
     margin: 0 .5rem;
+    background-color: var(--accent-color);
+    stroke: var(--dark-color);
+    border-radius: calc(var(--border-radius) * 2);
 }
 
 .feat * {
     flex: 2;
 }
 
-#cta a{
+/* call to action  */
+
+#cta a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 800;
-    border-bottom: 1px dashed var(--text-color);
+    border-bottom: var(--line-width) dashed var(--accent-color);
+    font-size: var(--base-size);
 }
 
 .mail-line {
@@ -289,7 +368,13 @@ h4 {
     border: none;
     margin: 0;
     padding: 0;
-    border-radius: 0;
+    width: var(--base-size);
+    height: var(--base-size);
 }
 
-/* let's break at 600, maybe 660 */
+
+#email-contact {
+    font-size: 1.5rem;
+}
+
+/* let's break at 800 */
