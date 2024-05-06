@@ -26,7 +26,7 @@ svg {
     stroke: var(--text-color);
     stroke-width: 2px;
     border: 2px solid var(--text-color);
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     /* width: 2rem;
     height: 2rem;
     padding: 0.25rem; */
@@ -34,6 +34,20 @@ svg {
 
 #partners img {
     max-width: 4rem;
+}
+
+#partners-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#partners a {
+    margin: 2rem;
+    text-decoration: none;
+    display: block;
 }
 
 #cases img {
@@ -52,6 +66,15 @@ svg {
     cursor: pointer;
     top: 1rem;
     right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--dark-text-color);
+    /* font-size: 1.25rem;
+    border: 1px solid var(--light-gray-color);
+    padding: .25rem;
+    border-radius: .25rem; */
 }
 
 .menu {
@@ -122,12 +145,18 @@ nav svg {
 }
 
 nav {
-    display: block;
+    display: flex;
+    position: fixed;
+    flex-direction: row-reverse;
     height: 4rem;
     width: 100%;
     background-color: var(--text-color);
     background-color: white;
-    position: fixed;
+    align-items: center;
+}
+
+#wrapper {
+    width: 100%;
 }
 
 section {
@@ -135,11 +164,11 @@ section {
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     word-wrap: normal;
     margin: 1.5rem 0;
     font-weight: 800;
@@ -147,7 +176,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+    margin: 2.5rem 0;
 }
 
 h3 {
@@ -193,7 +222,7 @@ h4 {
 }
 
 .feat {
-    margin: 1rem 0;
+    margin: 2rem 0;
     gap: 2rem;
     display: flex;
 }
@@ -202,10 +231,11 @@ h4 {
     flex: 1;
     max-height: 4rem;
     max-width: 4rem;
+    padding: 1rem;
 }
 
 .feat * {
-    flex: 3;
+    flex: 2;
 }
 
 
