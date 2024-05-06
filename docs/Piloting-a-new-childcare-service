@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Erik Vaněk – I build meaningful services with empathy-driven design
+    </title>
+    <meta name="description" content="Erik Vaněk – I build meaningful services with empathy-driven design" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/2024.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+            <ul class="menu" id="menu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/profile">Profile</a>
+                </li>
+                <!-- <li>
+                        <a href="/work">Work</a>
+                    </li> -->
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <a class="close" href="#">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </ul>
+            <a href="/" id="home">erikvanek.com</a>
+            <a class="hamburger" href="#menu">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </nav>
+    <div id="wrapper">
+        
+
+        
+<div class="case">
+    <h1>Piloting a new childcare service</h1>
+    <sub>(More details soon)</sub>
+    <h2>Project goals</h2>
+    <h3>Pilot a not-yet established childcare service with selected participants</h3>
+    <p>The main aim of the project is to pilot a gradually emerging childcare service called <em>Sousedské dětské
+            skupiny</em>. The
+        rigid structure and rules obsessed environment turns this problem into a chicken-egg situation. The pilot programme
+        can’t be started until the legislation is signed off and vice versa. That brings severe roadblocks and obstacles
+        throughout the project lifetime.
+    </p>
+    <h3>Increase design awareness at the ministry</h3>
+    <p>
+        It is one of the first in-house led projects that involves designers’ expertise. One of the key goals is to share
+        knowledge among colleagues about design approaches and techniques. We’re focusing strongly on co-creating with the
+        rest of the project team to maximize the possibility to share knowledge.
+    </p>
+    <h3>
+        Help the organization understand better user's needs
+    </h3>
+    <p>
+        The project invests a lot of resources into understanding users’ needs to be able to configure service’s parameters
+        correctly. We’re using a variation of methods like in-depth interviews, fake-door tests or ethnographic probes to
+        understand what are the needs, motivations and expectations of our target groups.
+    </p>
+    <h3>Share lessons learnt and key findings with the innovation department</h3>
+    <p>
+        The value of the project is to share back with the innovation department what are the main obstacles to bring more
+        innovation to the standard ways of working of the organization. We’re continuously documenting and sharing
+        peculiarities and constraints that the ministry’s environment brings.
+    </p>
+    
+    <h2>Key activities</h2>
+    <ul>
+        <li>Conducting user research</li>
+        <li>Prototyping service touchpoints and its aspects</li>
+        <li>Design advocation and “selling” its value and benefits</li>
+        <li>Increasing organization's design maturity</li>
+        <li>Helping the team to use appropriate collaboration and project management tools and best practices</li>
+        <li>Workshop and round tables preparation and facilitation</li>
+    </ul>
+</div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const path = window.location.pathname.replaceAll('/', '');
+            const children = document.querySelectorAll('nav > ul > li');
+            console.log(path)
+            if (path === '') {
+                children[0].classList.add('nav-active')
+            } else if (path === 'profile') {
+                children[1].classList.add('nav-active')
+            } else if (path === 'blog') {
+                children[2].classList.add('nav-active')
+            }
+        }) 
+    </script>
+</body>
+
+</html>

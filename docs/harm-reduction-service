@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav>
+    <nav>
             <ul class="menu" id="menu">
                 <li>
                     <a href="/">Home</a>
@@ -37,7 +36,7 @@
                     </svg>
                 </a>
             </ul>
-            <span>erikvanek.com</span>
+            <a href="/" id="home">erikvanek.com</a>
             <a class="hamburger" href="#menu">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -45,14 +44,46 @@
                 </svg>
             </a>
         </nav>
+    <div id="wrapper">
+        
 
-        {{ content }}
+        
+<div class="case">
+    <h1>Harm reduction service for first-time prisoners</h1>
+    <sub>(More details soon)</sub>
+    <h2>Project goals</h2>
+    <ul>
+        <li>
+            Identify and describe systematic gap in czech prison system
+        </li>
+        <li>
+            Prototyping and testing of tools to offer help to project’s target group
+        </li>
+        <li>Identify a network of actors that could participate in a systemic change</li>
+        <li>
+            Facilitate knowledge transfer between participating organizations
+        </li>
+    </ul>
+    <h2>Key activities</h2>
+    <ul>
+        <li>Stakeholder and client needs mapping</li>
+        <li>
+            Workshop preparation and facilitation
+        </li>
+        <li>
+            Networking with newly identified system actors and strengthening relationships
+        </li>
+        <li>
+            Disseminate design practices among members of participating organizations
+        </li>
+        <li>
+            Facilitate research with people facing incarceration and conduct workshops with incarcerated people
+        </li>
+    </ul>
+</div>
 
     </div>
 
-    <!--
-
-     -->
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", (event) => {

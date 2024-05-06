@@ -85,7 +85,7 @@
         </svg>
       </a>
     </ul>
-    <span>erikvanek.com</span>
+    <a href="/" id="home">erikvanek.com</a>
     <a class="hamburger" href="#menu">
       <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -109,19 +109,28 @@
     </div>
   </div>
 
-<script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", (event) => {
-            const path = window.location.pathname.replaceAll('/', '');
-            const children = document.querySelectorAll('nav > ul > li');
-            console.log(path)
-            if (path === '') {
-                children[0].classList.add('nav-active')
-            } else if (path === 'profile') {
-                children[1].classList.add('nav-active')
-            } else if (path === 'blog') {
-                children[2].classList.add('nav-active')
-            }
-        }) 
-    </script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const path = window
+        .location
+        .pathname
+        .replaceAll('/', '');
+      const children = document.querySelectorAll('nav > ul > li');
+      console.log(path)
+      if (path === '') {
+        children[0]
+          .classList
+          .add('nav-active')
+      } else if (path === 'profile') {
+        children[1]
+          .classList
+          .add('nav-active')
+      } else if (path === 'blog') {
+        children[2]
+          .classList
+          .add('nav-active')
+      }
+    })
+  </script>
 
 </body>
