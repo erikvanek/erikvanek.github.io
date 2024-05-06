@@ -1,5 +1,7 @@
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./pages');
@@ -21,6 +23,8 @@ module.exports = function (eleventyConfig) {
         .disable('code');
 
     eleventyConfig.setLibrary('md', markdownLib);
+
+    eleventyConfig.addPlugin(pluginWebc);
 
     eleventyConfig.setTemplateFormats([
         'css',

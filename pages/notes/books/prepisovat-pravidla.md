@@ -81,7 +81,11 @@ description: Recenze knížky Přepisovat pravidla, která se kouká na (zejmén
 ## Review{#review}
 
 Knížka na desíti kapitolách rozvíjí témata, týkající se partnerských vztahů a jakými změnami v dnešní době procházejí. Kniha se snaží poukazovat na nefungující vztahové vzorce, které často vedou k nespokojenosti ve vztazích a přináší sadu alternativních pravidel, která umožňují se na problémové situace koukat z jiné perspektivy.
+
 Zároveň si neklade za cíl podat vyčerpávající a nerozporovatelný výklad toho, jak by měl člověk ve vztazích fungovat, co je správně a co ne. Beru ji spíš jako sondu do jiných možných kontextů a inspiraci k tomu, jak na vztahy lze nahlížet a jak je možné přerámovat hluboce zažité vzorce ať už na úrovni jednotlivce nebo celé společnosti.
+
 Odnáším si spoustu zajímavých podnětů i přestože ne všechny budu chtít nebo moct aplikovat ve svém běžném fungování. Přijde mi super perspektiva se na vztahy dívat jako na nekonečně se proměňující organismy, které nelze "zamknout" v čase. Běžně používaná výčitka "změnila ses" pro mě po přečetení knížky už není výčitkou, ale jen pouhým poukázáním na něco, co je úplně normální a hodné podpory a porozumění.
+
 Občas mi během čtení zavazelo sokratovské "Question everything" a za mě možná až zbytečná míra rozporování a dekonstrukce norem, které bych považoval za běžné. I přestože vnímám, že knížka nepředepisuje jediný správný návod, chvíiemi jsem pociťoval jakoby "mainstreamové" normy byly absolutně přežité a nefunkční.
+
 Praktický kompliment na závěr - je super, že byla v knížce přiložená záložka stylizovaná do motivu z přebalu. Je to sice drobnost, ale vlastně dost praktická.

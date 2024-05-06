@@ -108,5 +108,7 @@ description: Cradle to cradle - One of the most important books for regenerative
 ## Review{#review}
 
 One of the most important books I have read so far. I would call it the bible of upcycling but that would reduce its value and impact.
+
 For me it serves a good predecessor of transition design in a way that it does not leave the planetery and ecological aspect of designing behind. It rather puts it at the core of our thinking and as one of the highest priorities when working on new products. Also its concept of "product of service" seems to be one of the predecessors of _whatever_ as a service that is being coined around a lot around lately.
+
 Probably the most important aspect of the book is the focus on upcycling that really opened my eyes regarding how one can think about that. When we consider upcycling only as an afterthought we'll never get the most of the product we want to upcycle. What happens with a product after it has finished its primary journey needs to be embedded in its initial design. Only this way it can be then reused meaningfully and in the best case in a way, that does not decrease its value in contrast to downcycling.

@@ -6,7 +6,4 @@ hideNavigation: true
 layout: blog.njk
 ---
 
-<!-- this one is for https://192.168.0.109:8080/me
-<img src="/img/qrcode_chrome.png" style="mix-blend-mode: color-burn"></img> -->
-
 <img src="/img/qrcode_erikvanek.com.png" style="mix-blend-mode: color-dodge"></img>
