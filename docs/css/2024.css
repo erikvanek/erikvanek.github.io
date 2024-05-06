@@ -5,6 +5,8 @@
     --lighter-color: #efe;
     --dark-text-color: #222;
     --light-gray-color: #ddd;
+    --dark-gray-color: #888;
+    --darker-gray-color: #444;
 }
 
 * {
@@ -20,13 +22,11 @@ body {
     color: var(--text-color);
 }
 
-.feat {}
-
 svg {
     stroke: var(--text-color);
     stroke-width: 2px;
     border: 2px solid var(--text-color);
-    border-radius: 2rem;
+    border-radius: 1rem;
     /* width: 2rem;
     height: 2rem;
     padding: 0.25rem; */
@@ -126,6 +126,14 @@ nav svg {
     border: none;
 }
 
+nav span {
+    position: fixed;
+    top: .75rem;
+    right: 4rem;
+    color: var(--dark-gray-color);
+    font-size: 2rem;
+}
+
 .close {
     color: var(--text-color);
 }
@@ -153,6 +161,9 @@ nav {
     background-color: var(--text-color);
     background-color: white;
     align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid var(--light-gray-color);
+    box-shadow: 0 2px 4px 0 var(--light-gray-color);
 }
 
 #wrapper {
@@ -177,6 +188,7 @@ h1 {
 h2 {
     font-size: 2.5rem;
     margin: 2.5rem 0;
+    color: var(--darker-gray-color);
 }
 
 h3 {
@@ -198,33 +210,52 @@ h4 {
 #partners {
     background-color: var(--text-color);
     color: var(--dark-text-color);
+
+}
+
+#cases {
+    display: flex;
+    flex-direction: column;
 }
 
 .case-study {
     margin-bottom: 2rem;
-    max-height: 12rem;
+    /* max-height: 12rem; */
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px dashed var(--dark-color);
+    border-radius: .5rem;
+    transition: transform 0.2s ease;
+}
+
+.case-study:active {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    border: 2px dashed var(--text-color);
+    transition: transform 0.2s ease;
 }
 
 .case-study h4 {
-    font-size: 2.5rem;
-    align-self: center;
-    position: absolute;
-    text-align: center;
-    max-width: 80%;
-    text-shadow: var(--light-gray-color) 4px 2px 4px;
+    font-size: 2rem;
+    margin: .5rem;
 }
 
 .case-study img {
-    width: 100%;
-    height: 100%;
+    display: block;
+}
+
+.case-study span {
+    display: none;
 }
 
 .feat {
     margin: 2rem 0;
     gap: 2rem;
     display: flex;
+    align-items: center;
 }
 
 .feat svg {
@@ -232,11 +263,33 @@ h4 {
     max-height: 4rem;
     max-width: 4rem;
     padding: 1rem;
+    margin: 0 .5rem;
 }
 
 .feat * {
     flex: 2;
 }
 
+#cta a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 800;
+    border-bottom: 1px dashed var(--text-color);
+}
+
+.mail-line {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mail-line svg {
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
 
 /* let's break at 600, maybe 660 */
