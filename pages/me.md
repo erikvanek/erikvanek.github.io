@@ -4,6 +4,7 @@ date: 2023-02-25
 layout: blog.njk
 hideBlog: true
 hideDate: true
+noIndex: true
 ---
 
 <!-- Hey, I'm Erik. Nice to meet you.

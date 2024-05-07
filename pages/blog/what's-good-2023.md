@@ -5,6 +5,8 @@ layout: blog.njk
 tags: ["posts"]
 permalink: /{{page.fileSlug}}/
 eleventyExcludeFromCollections: true
+noIndex: true
+
 ---
 - what I've done up until now
   - software, a bit of traveling, a bit of hydroponics
