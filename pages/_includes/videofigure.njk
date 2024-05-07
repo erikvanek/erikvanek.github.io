@@ -1,5 +1,5 @@
 <figure>
-    <video width="100%" controls autoplay loop allow="autoplay">
+    <video width="100%" controls autoplay loop onloadstart="this.volume=0.125" allow="autoplay" playsinline>
         <source src={{path}} type="video/mp4">
     </video>
     <figcaption>{{title}}</figcaption>
