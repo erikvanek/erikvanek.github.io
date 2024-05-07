@@ -3,9 +3,9 @@ title: 'Transformační rok 2023'
 subtitle: Aneb co se mi to letos všechno děje?
 date: 2023-11-12
 layout: blog.njk
-blog: true
+draft: true
 hideDate: true
-tags: ['posts', 'design', 'blah', 'česky']
+tags: [ 'design', 'blah', 'česky']
 description: Rok 2023 je vážně divokej. V dobrým i ve zlým. Je to rok průlomů, transformací, frustrací a velkýho kvanta učení se nových věcí.
 ---
 
