@@ -6,6 +6,7 @@ layout: blog.njk
 draft: true
 hideDate: true
 tags: [ 'design', 'blah', 'česky']
+noIndex: true
 description: Rok 2023 je vážně divokej. V dobrým i ve zlým. Je to rok průlomů, transformací, frustrací a velkýho kvanta učení se nových věcí.
 ---
 
