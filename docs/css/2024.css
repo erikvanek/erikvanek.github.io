@@ -3,9 +3,11 @@
     --line-width: 1px;
     --border-radius: .25rem;
 
-    --dark-color: #44d;
+    --dark-color: #22a;
+    --darker-color: #008;
     --accent-color: #bcf;
 
+    --white-color: #fff;
     --text-color: #eee;
     --gray-color: #888;
     --light-gray-color: #ddd;
@@ -27,7 +29,6 @@
     :root {
         /* Change base variable used for element variable */
         --base-size: 30px;
-        --line-width: 2px;
         --border-radius: 1rem;
     }
 }
@@ -41,7 +42,8 @@
 }
 
 body {
-    background: var(--dark-color);
+    background-color: var(--dark-color);
+    background-image: linear-gradient(62deg, var(--dark-color) 0%, var(--darker-color) 100%);
     color: var(--text-color);
 }
 
@@ -69,7 +71,7 @@ svg {
 #partners a {
     padding: 2rem;
     text-decoration: none;
-    display: block;
+    display: flex;
     border: var(--line-width) solid transparent;
     border-radius: var(--border-radius);
     transition: transform all 0.5s ease;
@@ -122,7 +124,7 @@ svg {
 .close {
     position: absolute;
     border: none;
-    color: white;
+    color: var(--white-color);
     cursor: pointer;
     top: 1rem;
     right: 1rem;
@@ -187,7 +189,7 @@ nav {
     width: 100%;
     top: 0;
     background-color: var(--text-color);
-    background-color: white;
+    background-color: var(--white-color);
     align-items: center;
     z-index: 100;
     border-bottom: var(--line-width) solid var(--light-gray-color);
@@ -241,7 +243,7 @@ h4 {
 }
 
 strong {
-    color: white;
+    color: var(--white-color);
 }
 
 .darker {
@@ -349,7 +351,8 @@ section {
 }
 
 .feat h4 {
-    margin: calc(var(--base-size) / 4) 0;
+    margin: 0;
+    margin-bottom: calc(var(--base-size) / 2);
 }
 
 @media (min-width: 1000px) {
@@ -365,6 +368,10 @@ section {
         border: var(--line-width) solid var(--accent-color);
         padding: var(--base-size);
         max-width: 25%;
+    }
+
+    .feat h4 {
+        margin-bottom: var(--base-size);
     }
 }
 
@@ -391,6 +398,10 @@ section {
     font-size: var(--base-size);
 }
 
+#cta p {
+    margin-bottom: var(--base-size);
+}
+
 .mail-line {
     display: flex;
     flex-direction: row;
@@ -413,7 +424,8 @@ a {
     border-bottom: var(--line-width) dashed var(--accent-color);
     color: var(--text-color);
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
+    font-weight: 600;
 }
 
 /* profile */
@@ -424,7 +436,8 @@ a {
     gap: var(--base-size);
 }
 
-img {
+img,
+video {
     max-width: 100%;
     margin-bottom: var(--base-size);
     border-radius: var(--border-radius);
@@ -463,10 +476,11 @@ figure {
     display: flex;
     gap: var(--base-size);
     margin-bottom: calc(var(--base-size) / 2);
+    align-items: center;
 }
 
 .contact-line a {
-    color: var(--text-color);
+    color: var(--white-color);
     text-decoration: none;
 }
 
@@ -483,16 +497,59 @@ figure {
 
 .case {
     margin: var(--base-size);
+    display: flex;
+    flex-direction: column;
 }
 
 .case h1 {
     margin-top: calc(var(--base-size) * 4);
+    margin-left: calc(var(--base-size) * 2);
+    margin-bottom: calc(var(--base-size) * 1);
+
 }
 
-.case h2 {
-    color: var(--text-color);
+.case section {
+    padding-top: 0;
+}
+
+.case h2,
+.case h3,
+.case h2,
+.case h4 {
+    color: var(--white-color);
+    margin-top: var(--base-size);
+    margin-top: var(--base-size);
+}
+
+.case section h4 {
+    font-size: calc(var(--base-size) * 1.25);
+    margin: var(--base-size) 0;
 }
 
 .case ul {
     font-size: var(--base-size);
+}
+
+.case figure {
+    flex-direction: column;
+    padding: var(--base-size);
+}
+
+@media (min-width: 800px) {
+
+    .case {
+        flex-direction: row;
+        gap: var(--base-size);
+        flex-wrap: wrap;
+    }
+
+    .perex {
+        display: flex;
+        flex-direction: row;
+        gap: calc(var(--base-size) * 2);
+    }
+
+    .half {
+        max-width: 40%;
+    }
 }
