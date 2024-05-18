@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Concepts/Insight.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Concepts/Insight.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md",
+                "file": "design/Concepts/Insight.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Design tools/Jobs to be done.md"
+                "file": "design/Concepts/Insight.md"
               }
             }
           }
@@ -156,6 +156,7 @@
   },
   "active": "603f4b03ca4792e1",
   "lastOpenFiles": [
+    "design/Design tools/Jobs to be done.md",
     "design/working with clients.md",
     "design/resources/Informing_Our_Intuition.pdf",
     "design/Design.md",
@@ -174,7 +175,6 @@
     "tools",
     "food/Cold-breg long-infused kombucha.md",
     "food/to cook.md",
-    "design/Design tools/Jobs to be done.md",
     "design/Quotes.md",
     "Quotes.md",
     "design/Activities/Research planning.md",
