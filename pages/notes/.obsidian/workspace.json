@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0d8b384ac563bd83",
+        "id": "6c814c1a5d58ac26",
         "type": "tabs",
         "children": [
           {
-            "id": "603f4b03ca4792e1",
+            "id": "a931fb34496e83b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/misc/Business analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/misc/Business analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/misc/Business analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Concepts/Insight.md"
+                "file": "design/misc/Business analysis.md"
               }
             }
           }
@@ -154,8 +154,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "603f4b03ca4792e1",
+  "active": "a931fb34496e83b4",
   "lastOpenFiles": [
+    "tools/tools in 2024.md",
+    "design/misc/Business analysis.md",
+    "design/misc",
+    "design/Concepts/Insight.md",
     "design/Design tools/Jobs to be done.md",
     "design/working with clients.md",
     "design/resources/Informing_Our_Intuition.pdf",
@@ -170,7 +174,6 @@
     "design/Resources.md",
     "design/Concepts/Glossary.md",
     "design/Design methods/Interviews.md",
-    "tools/tools in 2024.md",
     "design/Activities/Design research/Thematic analysis.md",
     "tools",
     "food/Cold-breg long-infused kombucha.md",
@@ -182,7 +185,6 @@
     "design/Treninky.md",
     "design/Concepts/Double diamond.md",
     "design/Service design.md",
-    "design/Design conferences.md",
     "img/work.jpg",
     "fomo",
     "ranomcanvas.canvas",
@@ -193,7 +195,6 @@
     "design/Activities",
     "Untitled.canvas",
     "design/Design/Design tools/Prototypes",
-    "design/Design/Design tools",
-    "design/Design"
+    "design/Design/Design tools"
   ]
 }
