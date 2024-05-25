@@ -24,14 +24,14 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 - 2,5l skleněná nádoba s hrdlem, které se dá překrýt plátnem a utěsnit gumičkou
 - 2l vody
 
-## Postup
+## 10 kroků ke skvělé kombuche
 
 1. připravte zvolený čaj podle instrukcí, rozmíchejte v něm cukr a nechte vychladnout na pokojovou teplotu
 2. přelejte do skleněné nádoby, přilijte backslop a promíchejte
 3. přidejte do nádoby SCOBY, hrdlo přikryjte plátnem a utěsněte gumičkou
    - SCOBY může zpočátku padnout na dno, různě se otáčet a v nálevu se pohybovat - je to naprosto v pořádku
    - po nějaké době pravděpodobně vypluje na hladinu
-   - je dost možné, že v čase se v nálevu začne tvořit nová SCOBY na hladině - tu můžete použít v dalších nálevech, nebo se o ni třeba podělit :)
+   - je dost možné, že v čase se v nálevu začne tvořit nová SCOBY na hladině - tu můžete použít v dalších nálevech, nebo se o ni lze třeba podělit 🙌 
 4. nádobu dejte do běžné pokojové teploty, neměla by klesnout pod 15 a stoupnout nějak vysoko nad 30 stupňů, někde kolem 20 je ideál
 5. nechte fermentovat cca 2 týdny a v průběhu času ochutnávejte
    - výsledná kyselost je na vás, někdo má radši míň, někdo víc - čím díl bude kombucha fermentovat, tím kyselejší bude
@@ -49,7 +49,7 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 
 {% render 'figure.njk', path: lahvacePath, title: lahvaceTitle %}
 
-### SCOBY {#scoby}
+### 🍄 SCOBY {#scoby}
 
 - SCOBY je zkratka původem z angličtiny pro symbiotickou kulturu bakterií a kvasinek
 - dají se koupit například v různých zdravých výživách, ale bohužel často nejsou v dobrém stavu

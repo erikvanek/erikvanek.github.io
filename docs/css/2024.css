@@ -193,6 +193,8 @@ nav {
     align-items: center;
     z-index: 100;
     border-bottom: var(--line-width) solid var(--light-gray-color);
+    /* box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44); */
+
     box-shadow: 0 2px 4px 0 var(--light-gray-color);
 }
 
@@ -209,6 +211,7 @@ nav {
 p,
 span {
     margin-bottom: calc(var(--base-size) * 1.5);
+    line-height: calc(var(--base-size) * 1.375);
     font-size: var(--base-size);
     max-width: 60ch;
 }
@@ -248,7 +251,7 @@ strong {
 }
 
 .darker {
-    color: var(--gray-color);
+    color: var(--light-gray-color);
 }
 
 /* sections */
@@ -458,20 +461,11 @@ figure {
     }
 
     #intro {
-        flex: 2;
+        flex: 1;
     }
 
     #pic {
         flex: 1;
-        margin-right: calc(var(--base-size) * 10);
-    }
-}
-
-
-@media (min-width: 1200px) {
-
-    #intro {
-        flex: 3;
     }
 }
 
@@ -535,7 +529,22 @@ figure {
 
 .case figure {
     flex-direction: column;
-    padding: var(--base-size);
+    /* padding: var(--base-size); */
+}
+
+
+
+/* case studies */
+
+.case-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.case-title svg {
+    max-width: calc(var(--base-size) * 2);
+    border: none;
 }
 
 @media (min-width: 800px) {
@@ -555,6 +564,53 @@ figure {
     .half {
         max-width: 40%;
     }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--base-size);
+    gap: var(--base-size);
+    justify-content: space-around;
+    background-color: var(--darker-color);
+}
+
+@media (min-width: 1000px) {
+    footer {
+        gap: calc(var(--base-size) / 2);
+        flex-direction: row;
+    }
+
+    footer * {
+        font-size: calc(var(--base-size) / 1.5);
+    }
+}
+
+footer>* {
+    margin: 0;
+}
+
+/* blog */
+article ul {
+    margin-left: var(--base-size);
+}
+
+article li {
+    margin-bottom: calc(var(--base-size) / 2);
+    border-radius: var(--border-radius);
+    padding: calc(var(--base-size) / 4);
+}
+
+article li:nth-child(2n) {
+    background-color: var(--darker-color)
+}
+
+
+article {
+    max-width: 120ch;
 }
 
 /* Fun stuff */
@@ -581,4 +637,5 @@ figure {
         1px 2px 4px hsl(0deg 0% 0% / 0.01625),
         2px 4px 8px hsl(0deg 0% 0% / 0.125),
         4px 8px 16px hsl(0deg 0% 0% / 0.25);
+    /* 8px 16px 16px hsl(0deg 0% 0% / 0.375); */
 }
