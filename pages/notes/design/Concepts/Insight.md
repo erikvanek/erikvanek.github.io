@@ -9,6 +9,12 @@
 	- helping to understand users' mental models
 	- written in clear, simple, and precise language
 - findings are not enough as they don't provide context
+- user insights typically focus on the user's **unmet needs**, **underlying motivations**, and **surprising behaviors**.
+## Insight anatomy
+__“I saw this” + “I know this” = insight__
+- **“I saw this”** - user research data gathered through research, ideally from various sources
+- **“I know this”** - accumulated life experience, worldview, and meaning for the insight creator(s)
+- **Insight** - deep, meaningful, and contextual perception
 ## Communicating insights
 - Be Evidence-Based
 - Be Visual
