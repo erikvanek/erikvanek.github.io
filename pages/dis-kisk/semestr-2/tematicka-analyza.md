@@ -27,6 +27,9 @@ permalink: /{{page.fileSlug}}/
   - metafora pro kódování jako hranice ve vlastní hlavě kterou si člověk nastaví sám
   - není čas a prostor na ladění věcí jako práce s Condens apod
 
+## Zakotvená teorie
+- https://dovetail.com/research/qualitative-research-codebook/
+
 ## Použité zdroje
 - https://uk.sagepub.com/en-gb/eur/successful-qualitative-research/book233059
 - https://www.interaction-design.org/literature/article/how-to-do-a-thematic-analysis-of-user-interviews
@@ -34,6 +37,7 @@ permalink: /{{page.fileSlug}}/
 - https://dovetail.com/research/qualitative-data-analysis/
 - https://dovetail.com/research/thematic-analysis/
 - https://dovetail.com/research/inductive-coding/
+- https://maze.co/blog/thematic-analysis/
 
 ## Zdroje na insighty
 - https://medium.com/uber-design/the-power-of-insights-a-behind-the-scenes-look-at-the-new-insights-platform-at-uber-26f85becc2e6
