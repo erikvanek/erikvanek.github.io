@@ -260,10 +260,33 @@ section {
     padding: calc(var(--base-size) * 1.5);
 }
 
-#pitch {
-    padding-top: calc(var(--base-size) * 4);
+/* @keyframes t {
+    to {
+        background-size: 150% 100%
+    }
 }
 
+@keyframes b {
+    to {
+        background-position: -200% 0, 100% 0
+    }
+}
+
+#pitch {
+    padding-top: calc(var(--base-size) * 4);
+    color: #0000;
+}
+
+h1 {
+    --g: linear-gradient(var(--accent-color) 0 0) no-repeat;
+    background: var(--g), var(--g);
+    background-size: 0% 10%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    animation:
+        t 1.2s .5s both,
+        b 1.2s 4.3s both;
+} */
 
 #pitch,
 #cases,
