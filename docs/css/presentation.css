@@ -1,8 +1,10 @@
 #pattern-1 {
-    background-image: repeating-radial-gradient(circle at 0 0,
+    background-image: repeating-radial-gradient(
+            circle at 0 0,
             black 0,
-            rgb(8,8,128) 2rem),
-        repeating-linear-gradient(rgb(8,8,128), navy);
+            rgb(8, 8, 128) 2rem
+        ),
+        repeating-linear-gradient(rgb(8, 8, 128), navy);
 }
 
 .slides {
@@ -183,13 +185,23 @@ figcaption {
     /* top: -10rem; */
 }
 
-
 #three figure:nth-child(2) {
     top: 10rem;
 }
 
-
 #three figure:nth-child(3) {
     left: 25%;
     top: 20rem;
+}
+
+.equal-columns {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.qr {
+    max-width: 20rem !important;
+    max-height: 20rem !important;
 }
