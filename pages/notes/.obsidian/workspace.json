@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0d8b384ac563bd83",
+        "id": "08bff984db7f9354",
         "type": "tabs",
         "children": [
           {
-            "id": "603f4b03ca4792e1",
+            "id": "bf74f925d1c0d611",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/working with clients.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/working with clients.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/Concepts/Insight.md",
+                "file": "design/working with clients.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/Concepts/Insight.md"
+                "file": "design/working with clients.md"
               }
             }
           }
@@ -154,8 +154,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "603f4b03ca4792e1",
+  "active": "bf74f925d1c0d611",
   "lastOpenFiles": [
+    "design/Design methods/Interviews.md",
+    "design/Concepts/Insight.md",
     "design/misc/Business analysis.md",
     "design/misc",
     "design/Design tools/Jobs to be done.md",
@@ -171,7 +173,6 @@
     "design/random.md",
     "design/Resources.md",
     "design/Concepts/Glossary.md",
-    "design/Design methods/Interviews.md",
     "tools/tools in 2024.md",
     "design/Activities/Design research/Thematic analysis.md",
     "tools",
