@@ -1,0 +1,2 @@
+- the act of choosing a core variable or concept amont the existing categories to start forming the overarching theme
+- identifying the relationship between the data

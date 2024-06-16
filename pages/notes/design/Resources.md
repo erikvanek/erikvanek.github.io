@@ -27,3 +27,9 @@
 - Gamestorming
 	- https://gamestorming.com/
 	- workshops & tools
+- Qualitative research
+	- NNg
+	- Maze blog
+	- Smashing magazine
+	- Atlas.ti
+	- Dovetail blog

@@ -9,3 +9,4 @@
 	- research-based ^00343f
 		- if done well, should have higher signification than [[#^236833|assumption-based]]
 - [[#^236833|assumption-based]] can turn into [[#^00343f|research-based]] as assumptions are challenged & validated
+- Qualitative data is _non-numerical_

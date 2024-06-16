@@ -1,0 +1,5 @@
+- before doing axial coding you should have a set of open codes, that have seemingly little to do with each other
+	- they might be very discrete
+- _the process of identifying larger themes relevant to your research question_
+- those themes define the 'axes' around which the codes can be organized
+- axial code represents a potentially key theme that might be significant to your data analysis and theory generation

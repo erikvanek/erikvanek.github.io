@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "08bff984db7f9354",
+        "id": "62a6ae5e684f3492",
         "type": "tabs",
         "children": [
           {
-            "id": "bf74f925d1c0d611",
+            "id": "cf83748d6cc7c2a0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/working with clients.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/working with clients.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/working with clients.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "design/working with clients.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -154,14 +146,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf74f925d1c0d611",
+  "active": "cf83748d6cc7c2a0",
   "lastOpenFiles": [
+    "Coding.md",
+    "Untitled.md",
+    "design/Activities/Design research/Thematic analysis.md",
+    "Qualitative research.md",
+    "Codebook.md",
+    "design/Concepts/Research data.md",
+    "Closed coding.md",
+    "Open coding.md",
+    "Selective coding.md",
+    "Axial coding.md",
+    "design/Activities/Design research/Grounded theory.md",
+    "design/Activities/Research planning.md",
+    "design/Resources.md",
+    "design/working with clients.md",
     "design/Design methods/Interviews.md",
     "design/Concepts/Insight.md",
     "design/misc/Business analysis.md",
     "design/misc",
     "design/Design tools/Jobs to be done.md",
-    "design/working with clients.md",
     "design/resources/Informing_Our_Intuition.pdf",
     "design/Design.md",
     "design/Good design.md",
@@ -171,20 +176,7 @@
     "design/Agencies.md",
     "design/Design tools/Design brief.md",
     "design/random.md",
-    "design/Resources.md",
-    "design/Concepts/Glossary.md",
-    "tools/tools in 2024.md",
-    "design/Activities/Design research/Thematic analysis.md",
     "tools",
-    "food/Cold-breg long-infused kombucha.md",
-    "food/to cook.md",
-    "design/Quotes.md",
-    "Quotes.md",
-    "design/Activities/Research planning.md",
-    "design/Activities/Research Visualization.md",
-    "design/Treninky.md",
-    "design/Concepts/Double diamond.md",
-    "design/Service design.md",
     "img/work.jpg",
     "fomo",
     "ranomcanvas.canvas",
