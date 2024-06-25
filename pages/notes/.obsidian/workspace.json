@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "08bff984db7f9354",
+        "id": "d026f88ee44d5b40",
         "type": "tabs",
         "children": [
           {
-            "id": "bf74f925d1c0d611",
+            "id": "10cf1c977439b2e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/working with clients.md",
+                "file": "design/Design tools/Persona.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "5e092f464f6943b7",
+            "id": "d5c8f3372eefd64c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Interview intro.md",
+                "file": "Problem framing.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Interview intro.md",
+                "file": "Problem framing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Interview intro.md",
+                "file": "Problem framing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Interview intro.md"
+                "file": "Problem framing.md"
               }
             }
           }
@@ -167,8 +167,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5e092f464f6943b7",
+  "active": "d5c8f3372eefd64c",
   "lastOpenFiles": [
+    "design/Resources.md",
+    "random/Inspiration.md",
+    "Problem framing.md",
+    "design/resources/Problem Framing Handbook.pdf",
+    "design/resources/Problem-Framing-Canvas-Handbook.pdf",
+    "design/Design tools/Persona.md",
+    "Workshopy.md",
     "design/working with clients.md",
     "Interview intro.md",
     "Untitled.md",
@@ -188,15 +195,10 @@
     "design/Design.md",
     "design/Good design.md",
     "design/Activities/Design research.md",
-    "random/Inspiration.md",
     "design/Institutions.md",
     "design/Agencies.md",
     "design/Design tools/Design brief.md",
     "design/random.md",
-    "design/Resources.md",
-    "design/Concepts/Glossary.md",
-    "tools/tools in 2024.md",
-    "design/Activities/Design research/Thematic analysis.md",
     "tools",
     "img/work.jpg",
     "fomo",
@@ -206,8 +208,6 @@
     "untitled folder",
     "design/Activities/Design research",
     "design/Activities",
-    "Untitled.canvas",
-    "design/Design/Design tools/Prototypes",
-    "design/Design/Design tools"
+    "Untitled.canvas"
   ]
 }
