@@ -1,0 +1,42 @@
+---
+resources:
+  - https://makeiterate.com/how-to-define-in-design-thinking/
+  - https://gamestorming.com/nuf-test/
+  - https://www.griffith.edu.au/__data/assets/pdf_file/0025/1750570/Problem-Framing-Canvas-Handbook.pdf
+  - https://hbr.org/2017/01/are-you-solving-the-right-problems
+  - https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it
+---
+
+- YOUR NEW USER IS THE DECISION MAKERs
+- YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS
+- [assumptions mapping](https://www.mural.co/blog/intro-assumptions-mapping) is a tool how to mitigate different stakeholder perspectives or views
+	- assumptions are fine but mark them as assumptions - I'd rather know that assumptions are assumptions then being tricked by them later
+- _"for every 45 mins of a workshop I have a 45 minutes working out who should be there - the key is to identify the right people to have in the room"_ - Angela Arnold
+- **the goal is get everyone on the same page
+- two halves
+	- business half
+	- user half
+- _the business wants to get to the outcome but only can see the output, our role is to help them see beyond outputs_
+- Decisions are made and tracked _somewhere else_
+	- don't mix decision making and tracking
+- Problem statement roughly corresponds to the epic
+	- epic title should not be vague but way more specific
+	- __the problem describes the shift in customer behavior__
+- _The goal of problem framing is not what to do, but what not to do and to remove the distraction from the most efficient thing to do_
+- storytelling gives problem a life and sustains it
+- 5 Ws:
+	- What
+		- What is the focus of the problem?
+		- What supporting evidence is there about this problem?
+	- Who
+		- Who is affected by the problem?
+		- How do we know?
+		- How are their voices present in the problem statement?
+	- Where
+		- Where does this problem occur?
+		- How does the context of the problem impact its expression?
+	- When
+		- When does the problem occur - and what is the timeframe in which it has developed?
+	- Why
+		- Why is this problem worth addressing?
+		- What impact will addressing it have?

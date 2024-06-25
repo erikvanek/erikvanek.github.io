@@ -33,3 +33,5 @@
 	- Smashing magazine
 	- Atlas.ti
 	- Dovetail blog
+- Griffith Centre for systems innovation
+	- https://medium.com/@gucentreforsystemsinnovation
