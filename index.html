@@ -35,6 +35,7 @@
 
         <link rel="shortcut icon" href="/zen-circle.ico" id="favicon" />
         <link rel="stylesheet" href="/css/2024.css" />
+        <link rel="stylesheet" href="/css/lightbox.css" />
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
@@ -59,54 +60,54 @@
 
     <body>
         <nav>
-            <ul class="menu" id="menu">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/profile">Profile</a>
-                </li>
-                <!-- <li>
-                        <a href="/work">Work</a>
-                    </li> -->
-                <li>
-                    <a href="/blog">Blog</a>
-                </li>
-                <a class="close" href="#">
-                    <svg
-                        width="100%"
-                        height="100%"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M18 6L6 18M6 6L18 18"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    </svg>
-                </a>
-            </ul>
-            <a href="/" id="home">erikvanek.com</a>
-            <a class="hamburger" href="#menu">
-                <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M3 12H21M3 6H21M9 18H21"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                </svg>
-            </a>
-        </nav>
+    <ul class="menu" id="menu">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/profile">Profile</a>
+        </li>
+        <!-- <li>
+                <a href="/work">Work</a>
+            </li> -->
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+        <a class="close" href="#">
+            <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </a>
+    </ul>
+    <a href="/" id="home">erikvanek.com</a>
+    <a class="hamburger" href="#menu">
+        <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M3 12H21M3 6H21M9 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    </a>
+</nav>
         <div id="wrapper">
             
 <section id="pitch">
@@ -118,14 +119,14 @@
     <h3>Let's build them together!</h3>
     <p>
         Intuitive, efficient, and impactful – these are the traits of services built with a cross-disciplinary approach.
-        By combining together expertise in design, software, and product management, I create solutions that don't just
+        By combining together <strong>expertise in design, software, and product management</strong>, I create solutions that don't just
         meet
         needs, but anticipate them.
     </p>
     <p>
         Strong focus on agile principles, rapid adaptation in an ever-changing environment while following a strong
         vision are my key values. By understanding the complexities of your organization and the
-        needs of your customers, I help to deliver services that are intuitive, efficient and impactful.
+        needs of your customers, I help to deliver <strong>services that are intuitive, efficient and impactful</strong>.
     </p>
     <!-- <p>
         My name is Erik Vaněk and I help organizations build services that make sense. Having experienced different
@@ -270,19 +271,8 @@
             </footer>
         </div>
 
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', (event) => {
-                const path = window.location.pathname.replaceAll('/', '');
-                const children = document.querySelectorAll('nav > ul > li');
-                console.log(path);
-                if (path === '') {
-                    children[0].classList.add('nav-active');
-                } else if (path === 'profile') {
-                    children[1].classList.add('nav-active');
-                } else if (path === 'blog') {
-                    children[2].classList.add('nav-active');
-                }
-            });
-        </script>
+        <script src="/js/navbar.js"></script>
+<script src="/js/figure.js"></script>
+
     </body>
 </html>
