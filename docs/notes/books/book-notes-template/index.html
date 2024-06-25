@@ -41,6 +41,7 @@
     <link rel="shortcut icon" href="/zen-circle.ico" id="favicon"/>
     <link rel="stylesheet" href="/css/2024.css"/>
     <link rel="stylesheet" href="/css/blog-2024.css"/>
+    <link rel="stylesheet" href="/css/lightbox.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -49,7 +50,7 @@
 />
   </head>
 
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
@@ -70,33 +71,53 @@
 
   <nav>
     <ul class="menu" id="menu">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/profile">Profile</a>
-      </li>
-      <!-- <li>
-                        <a href="/work">Work</a>
-                    </li> -->
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-      <a class="close" href="#">
-        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L6 18M6 6L18 18" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"/>
-        </svg>
-      </a>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/profile">Profile</a>
+        </li>
+        <!-- <li>
+                <a href="/work">Work</a>
+            </li> -->
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+        <a class="close" href="#">
+            <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </a>
     </ul>
     <a href="/" id="home">erikvanek.com</a>
     <a class="hamburger" href="#menu">
-      <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12H21M3 6H21M9 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-      </svg>
+        <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M3 12H21M3 6H21M9 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
     </a>
-  </nav>
+</nav>
 
   <div class="section" id="splash">
     <div class="article">
@@ -122,28 +143,8 @@ Broader review here</article>
     </div>
   </div>
 
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", (event) => {
-      const path = window
-        .location
-        .pathname
-        .replaceAll('/', '');
-      const children = document.querySelectorAll('nav > ul > li');
-      console.log(path)
-      if (path === '') {
-        children[0]
-          .classList
-          .add('nav-active')
-      } else if (path === 'profile') {
-        children[1]
-          .classList
-          .add('nav-active')
-      } else if (path === 'blog') {
-        children[2]
-          .classList
-          .add('nav-active')
-      }
-    })
-  </script>
+  <script src="/js/navbar.js"></script>
+<script src="/js/figure.js"></script>
+
 
 </body>

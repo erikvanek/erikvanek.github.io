@@ -1,7 +1,4 @@
-
-
 /* TODO REUSE VARS */
-
 
 .article {
     color: var(--text-color);
@@ -16,20 +13,25 @@
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     color: white;
+}
+
+.blog-row {
+    border-bottom: 2px dashed var(--accent-color);
 }
 
 h2 {
     margin-bottom: var(--base-size);
 }
 
-
 ul li {
     margin-bottom: calc(var(--base-size) / 2);
 }
 
-#home, #blog-root {
+#home,
+#blog-root {
     margin-right: var(--base-size);
 }
 
@@ -44,7 +46,8 @@ ul li {
     margin: calc(var(--base-size) / 2) 0;
 }
 
-#notes, #review {
+#notes,
+#review {
     display: none;
 }
 
