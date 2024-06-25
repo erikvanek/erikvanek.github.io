@@ -4,31 +4,41 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url>
-            <loc>{{ site.url }}</loc>
-            <lastmod>2018-03-23T19:02:36.000Z</lastmod>
-            <changefreq>monthly</changefreq>|
+    <url>
+        <loc>{{ site.url }}</loc>
+        <lastmod>2018-03-23T19:02:36.000Z</lastmod>
+        <changefreq>monthly</changefreq>|
         </url>
 
-        <url>
-            <loc>{{ site.url }}/me</loc>
-            <lastmod>2018-03-23T19:02:36.000Z</lastmod>
-            <changefreq>monthly</changefreq>|
+    <url>
+        <loc>{{ site.url }}/profile</loc>
+        <lastmod>2018-03-23T19:02:36.000Z</lastmod>
+        <changefreq>monthly</changefreq>|
         </url>
 
-        <url>
-            <loc>{{ site.url }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
-            <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
-        </url>
+    <url>
+        <loc>{{ site.url }}{{ page.url | url }}</loc>
+        <lastmod>{{ page.date.toISOString() }}</lastmod>
+        <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+    </url>
 
     {% for page in collections.posts %}
-       {% if not page.data.eleventyExcludeFromCollections %}
-        <url>
-            <loc>{{ site.url }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
-            <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
-        </url>
+        {% if not page.data.eleventyExcludeFromCollections %}
+            <url>
+                <loc>{{ site.url }}{{ page.url | url }}</loc>
+                <lastmod>{{ page.date.toISOString() }}</lastmod>
+                <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+    {% for page in collections.cases %}
+        {% if not page.data.eleventyExcludeFromCollections %}
+            <url>
+                <loc>{{ site.url }}{{ page.url | url }}</loc>
+                <lastmod>{{ page.date.toISOString() }}</lastmod>
+                <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+            </url>
         {% endif %}
     {% endfor %}
 
