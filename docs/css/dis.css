@@ -38,7 +38,8 @@ p {
     width: 100%;
 }
 
-li, p {
+li,
+p {
     line-height: 1.75rem;
     max-width: 55ch;
 }
@@ -164,6 +165,24 @@ li {
 
 h1 {
     margin: 1.5rem;
+}
+
+h2,
+h3,
+h4 {
+    align-self: flex-start;
+    margin-left: 6rem;
+}
+
+
+@media (max-width: 800px) {
+
+h2,
+h3,
+h4 {
+    align-self: flex-start;
+    margin-left: 3rem;
+}
 }
 
 .subtitle {
