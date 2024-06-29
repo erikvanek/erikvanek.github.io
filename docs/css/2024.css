@@ -474,9 +474,20 @@ video {
 
 figure {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
+.smaller {
+    flex: 1
+}
+
+.bigger {
+    flex: 2
+}
+
+.half {
+    flex: 1
+}
 
 @media (min-width: 800px) {
     .profile-start {
@@ -516,8 +527,10 @@ figure {
 }
 
 .case {
-    margin: var(--base-size);
+    /* margin: var(--base-size); */
+    padding: calc(var(--base-size) * 2);
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
 }
 
@@ -537,24 +550,60 @@ figure {
 .case h2,
 .case h4 {
     color: var(--white-color);
-    margin-top: var(--base-size);
-    margin-top: var(--base-size);
+    margin-top: calc(var(--base-size) / 2);
+    margin-bottom: calc(var(--base-size) / 2);
+    margin-left: var(--base-size);
+    display: inline-flex;
 }
 
-.case section h4 {
+.case .case h1,
+.case h2,
+.case h3,
+.case h4 {
+    width: 100%;
+}
+
+.case h2 {
+    font-size: calc(var(--base-size) * 2);
+}
+
+
+.case h3 {
+    font-size: calc(var(--base-size) * 1.5);
+}
+
+
+.case h4 {
     font-size: calc(var(--base-size) * 1.25);
-    margin: var(--base-size) 0;
 }
 
 .case ul {
     font-size: var(--base-size);
 }
 
-.case figure {
-    flex-direction: column;
-    /* padding: var(--base-size); */
+.case li {
+    margin-bottom: calc(var(--base-size) * .5);
 }
 
+.case figure {
+    flex-direction: column;
+}
+
+.halved {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--base-size) * 2);
+}
+
+@media (max-width: 800px) {
+    .halved {
+        flex-direction: column;
+    }
+
+    .bigger {
+        flex: 1;
+    }
+}
 
 
 /* case studies */
@@ -582,10 +631,6 @@ figure {
         display: flex;
         flex-direction: row;
         gap: calc(var(--base-size) * 2);
-    }
-
-    .half {
-        max-width: 40%;
     }
 }
 
