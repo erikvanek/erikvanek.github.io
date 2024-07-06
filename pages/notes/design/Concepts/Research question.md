@@ -4,3 +4,7 @@
 	- ask a question __"How will the answer to this question help to generate a range of insights & ideas to create a new value?"__
 - [[Research question]] is often vague at the beginning but it _gets precised_ over time
 - helpful to come up with more to start with and then conclude with one
+- should start with _"How"_
+- clear, focused, and concise statement that conveys the objectives of the research and its potential findings
+- Shoud meet [Finer](https://scientific-publishing.webshop.elsevier.com/research-process/finer-research-framework/) and [PICO](https://www.library.sydney.edu.au/support/searching/pico) criteria
+- Dive deep into [framing research questions](https://research.com/research/how-to-write-a-research-question)
