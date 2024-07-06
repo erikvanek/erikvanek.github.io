@@ -21,6 +21,7 @@
 - a good method mix combines each of:
 	- [[Desk research]]
 		- before or in parallel - try to go through some [[Secondary research]]
+		- try to maximize the learning from secondary research as it is cheaper than conducting research on your own
 	- [[Self-ethnographic research]]
 	- [[Ethnographic methods]]
 	- [[Participant approach]]
