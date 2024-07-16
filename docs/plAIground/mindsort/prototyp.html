@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Social Services Categorization Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #game-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: move;
+            user-select: none;
+        }
+        .category {
+            border: 2px dashed #999;
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 200px;
+            min-height: 100px;
+        }
+        #reset {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Health and Social Services Categorization Game</h1>
+    <p>Drag and drop the cards to create your own categories. Double-click a card to create a new category.</p>
+    <div id="game-area"></div>
+    <button id="reset">Reset Game</button>
+
+    <script>
+        const categories = [
+            "Primary Care", "Specialized Medical Care", "Pediatric Services", "Mental Health Services",
+            "Surgical Services", "Diagnostic Services", "Emergency and Urgent Care", "Rehabilitation Services",
+            "Elderly Care", "Disability Support", "Addiction Services", "Family and Child Support",
+            "Housing Assistance", "Crisis Intervention", "Day Services", "Residential Care",
+            "Home Care Services", "Counseling and Therapy", "Community Support", "Specialized Support Services"
+        ];
+
+        const gameArea = document.getElementById('game-area');
+        const resetButton = document.getElementById('reset');
+
+        function createCard(text) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.textContent = text;
+            card.draggable = true;
+            card.addEventListener('dragstart', dragStart);
+            card.addEventListener('dblclick', createCategory);
+            return card;
+        }
+
+        function createCategory(event) {
+            const category = document.createElement('div');
+            category.className = 'category';
+            category.addEventListener('dragover', dragOver);
+            category.addEventListener('drop', drop);
+            gameArea.appendChild(category);
+
+            if (event.target.classList.contains('card')) {
+                category.appendChild(event.target);
+            }
+        }
+
+        function dragStart(event) {
+            event.dataTransfer.setData('text/plain', event.target.id);
+        }
+
+        function dragOver(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const cardId = event.dataTransfer.getData('text');
+            const card = document.getElementById(cardId);
+            event.target.appendChild(card);
+        }
+
+        function initGame() {
+            gameArea.innerHTML = '';
+            categories.forEach((category, index) => {
+                const card = createCard(category);
+                card.id = `card-${index}`;
+                gameArea.appendChild(card);
+            });
+        }
+
+        resetButton.addEventListener('click', initGame);
+
+        initGame();
+    </script>
+</body>
+</html>
