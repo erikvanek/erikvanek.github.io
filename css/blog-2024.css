@@ -70,3 +70,23 @@ figure {
     max-width: 80%;
     margin: var(--base-size);
 }
+
+code {
+    /* font-size: var(--base-size * 1.5); */
+    font: 'mono';
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+
+.prompt {
+    display: block;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--base-size);
+    margin-bottom: calc(var(--base-size) / 2);
+}
+
+.prompt span {
+    margin-bottom: calc(var(--base-size) / 2);
+}
