@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:06,000
+1. Scrape two websites: registry of social services in your region and health services nationwide. Extract all types of services.
+2. Reduce the scraped categories to 20-30 broader categories based on similarity.
+
+3
+00:00:06,000 --> 00:00:09,600
+Create an interactive single-page website for a card-sorting game. Users start by seeing all categories and can intuitively combine them.
+
+4
+00:00:09,600 --> 00:00:13,200
+Add a feature that allows users to name each cluster of categories they create during the card-sorting process.
+
+5
+00:00:13,200 --> 00:00:16,800
+Implement a feature to send the results of the categorization to the email address 'kemboi@ezekiel.yup' for analysis.
+
+6
+00:00:16,800 --> 00:00:20,400
+Add visual cues to encourage 6-8 categories. Use mild pastel colors and a counter to nudge users. Be playful in copywriting and use gratification patterns.
+
+7
+00:00:20,400 --> 00:00:24,000
+Add a feature to delete categories while keeping services in the list. Use different colors for each category. Implement 'Roboto' font and improve visual rhythm.
+
+8
+00:00:24,000 --> 00:00:27,600
+Provide clearer guidance to users. Consider using bullet points or emojis. Replace the generic headline with a more engaging, funky name.
+
+9
+00:00:27,600 --> 00:00:31,200
+When sending the email, include three open-ended questions about categorization choices, missing categories, and interest in overall results.
+
+10
+00:00:31,200 --> 00:00:34,800
+Ensure the website is mobile-friendly to accommodate users on various devices and screen sizes.
+
+11
+00:00:34,800 --> 00:00:38,400
+Ensure each new category has a unique name (e.g., "group1", "group2"). Prompt users for their name and include it in the email signature with results.

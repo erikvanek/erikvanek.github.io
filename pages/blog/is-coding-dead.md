@@ -8,9 +8,14 @@ permalink: /{{page.fileSlug}}/
 
 As a service designer with a background in coding, I've always been fascinated by the intersection of design and technology. I have experimented with a tiny pet project that showcases the transformative power of AI in the prototyping process.
 
+{% assign nalevyPath = '/plaAIground/mindsort/mindsort.mp4' %}
+{% assign nalevyTitle = 'Evolving prototype in time. Check out the live version!' %}
+{% render 'videofigure.njk', path: nalevyPath, title: nalevyTitle %}
+
 This article provides a detailed walkthrough of how I used AI to rapidly prototype a web application, offering insights for designers looking to leverage similar tools. Whole process did not take more than 30 minutes.
 
 See interactive demo of what we're building [here](www.erikvanek.com/plAIground/mindsort/) 🚀
+
 
 #### Step 1: Data Gathering and Initial Concept
 {% render 'prompt.njk', code: 'Scrape to the bone two websites I give you as an attachment. One is a registry of social services in my region, the other one is a registry of health services in whole country. I want you to scrape all different types of services those two pillars serve to their clients and customers and then we do something more with it. Display those services you scraped as a comma-separated list of services.' %}
