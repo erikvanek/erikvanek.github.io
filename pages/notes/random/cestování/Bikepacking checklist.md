@@ -1,0 +1,11 @@
+- plavky
+- náhradní duše, kompatibilní náhradní spojka na řetěz
+- gear na fixnutí kola
+- lepení
+- přední zadní světlo
+- powerbanka
+- itinerář v GPX
+- opalovák
+- bib shorts
+- brýle s futrálem
+- rukavice
