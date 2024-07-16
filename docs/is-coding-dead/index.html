@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="generator" content="Hugo 0.37.1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="referrer" content="no-referrer"/>
+
+    
+
+    <meta name="description" content=""/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:domain" content="www.erikvanek.com"/>
+
+    <meta name="twitter:image" content="/zen-circle.ico"/>
+    <meta
+      name="twitter:title"
+      property="og:title"
+      itemprop="title name"
+      content="Is Coding dead? A LLM-assisted prototyping case study | Erik Vaněk"
+/>
+    <meta
+      name="twitter:description"
+      property="og:description"
+      itemprop="description"
+      content=""
+/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:url" content="www.erikvanek.com/"/>
+    <meta
+      name="og:image"
+      itemprop="image primaryImageOfPage"
+      content="/zen-circle.ico"
+/>
+
+    <title>Is Coding dead? A LLM-assisted prototyping case study | Erik Vaněk</title>
+    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon"/>
+    <link rel="stylesheet" href="/css/2024.css"/>
+    <link rel="stylesheet" href="/css/blog-2024.css"/>
+    <link rel="stylesheet" href="/css/lightbox.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+/>
+  </head>
+
+  <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+</html>
+<body>
+
+  <nav>
+    <ul class="menu" id="menu">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/profile">Profile</a>
+        </li>
+        <!-- <li>
+                <a href="/work">Work</a>
+            </li> -->
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+        <a class="close" href="#">
+            <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </a>
+    </ul>
+    <a href="/" id="home">erikvanek.com</a>
+    <a class="hamburger" href="#menu">
+        <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M3 12H21M3 6H21M9 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    </a>
+</nav>
+
+  <div class="section" id="splash">
+    <div class="article">
+      
+      <h1>Is Coding dead? A LLM-assisted prototyping case study</h1>
+      
+      
+      
+        
+          <time>Tue Jul 16 2024</time>
+        
+      
+
+      <article><p>As a service designer with a background in coding, I've always been fascinated by the intersection of design and technology. I have experimented with a tiny pet project that showcases the transformative power of AI in the prototyping process.</p>
+<p>This article provides a detailed walkthrough of how I used AI to rapidly prototype a web application, offering insights for designers looking to leverage similar tools. Whole process did not take more than 30 minutes.</p>
+<p>See interactive demo of what we're building <a href="www.erikvanek.com/plAIground/mindsort/">here</a> 🚀</p>
+<h4>Step 1: Data Gathering and Initial Concept</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Scrape to the bone two websites I give you as an attachment. One is a registry of social services in my region, the other one is a registry of health services in whole country. I want you to scrape all different types of services those two pillars serve to their clients and customers and then we do something more with it. Display those services you scraped as a comma-separated list of services.
+    </code>
+</div>
+<p>This prompt kickstarted the project. While the AI couldn't actually scrape websites, it provided a comprehensive list of health and social services based on the information shared. This step simulated the data gathering process that would typically involve actual web scraping or data analysis.</p>
+<h4>Step 2: Data Processing and Categorization</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Reduce them to some broader categories based on similarity, say 20-30 tops.
+    </code>
+</div>
+<p>The AI condensed the extensive list into 20 broader categories. This step mimics the data analysis and synthesis phase of a design process, where raw data is transformed into more manageable, meaningful categories.</p>
+<h4>Step 3: Designing the Game Interface</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        From those categories create an interactive single page website that is an interactive card-sorting game which starts with user seeing all those categories. And then by intuitively combing them they can combine and thus categories of services.
+    </code>
+</div>
+<p>This prompt led to the creation of a basic HTML structure for the card sorting game, including drag-and-drop functionality and category creation. It demonstrates how complex design requirements can be communicated to AI and translated into functional code.</p>
+<h4>Step 4: Enhancing User Experience</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Add a feature that allows to name each cluster
+    </code>
+</div>
+<p>The AI added functionality for users to name their created categories, enhancing the game's interactivity. This illustrates how specific feature requests can be easily implemented through AI assistance.</p>
+<h4>Step 5: Adding Result Submission</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Add a feature that allows to send the results of the categorization to an email address kemboi@ezekiel.yup
+    </code>
+</div>
+<p>This prompt resulted in the addition of a &quot;Send Results&quot; button that compiles the user's categorizations and opens an email client with a pre-filled message. It showcases how AI can handle more complex functionalities involving data compilation and external actions.</p>
+<h4>Step 6: Improving Visual Design and User Guidance</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Add a visual cue to nudge users to create between 6-8 categories. Use mild tones of pastel colors and add a counter that nudges positively to create more categories if there are less than 6. Be playful in copyrighting and use some sort of gratification pattern when there are 3, 2 and 1 category remaining to 6.
+    </code>
+</div>
+<p>The AI implemented a category counter with encouraging messages and visual feedback, using pastel colors to enhance the game's aesthetic appeal. This step demonstrates how AI can be directed to implement specific design patterns and user experience enhancements.</p>
+<h4>Step 7: Mobile Optimization</h4>
+<div class="prompt">
+    <span>Prompt: </span>
+    <code>
+        Make it mobile friendly
+    </code>
+</div>
+<p>This led to responsive design changes, ensuring the game works well on both desktop and mobile devices. It shows how AI can adapt existing code to meet different device requirements.</p>
+<h4>Step 8: Bug Fixes and Final Touches</h4>
+<p>The last few exchanges involved identifying and fixing a bug with the double-click functionality and making final adjustments to the code. This iterative process mirrors real-world development cycles where testing and refinement are crucial.<br>
+Reflections on the Process</p>
+<h3>This project demonstrates several key points about AI-assisted prototyping in service design:</h3>
+<ul>
+<li>Rapid Iteration: The ability to quickly generate and modify code allows for fast prototyping and experimentation.</li>
+<li>Bridging Design and Development: Designers with basic coding knowledge can create functional prototypes without extensive development skills.</li>
+<li>AI as a Collaborative Tool: The AI serves as a knowledgeable partner, offering solutions and suggestions throughout the design process.</li>
+<li>Importance of Clear Communication: The quality of the output heavily depends on the clarity and specificity of the prompts.</li>
+<li>Limitations and Oversight: While AI can generate code quickly, human oversight is crucial for ensuring functionality, security, and alignment with design goals.</li>
+<li>Learning Opportunity: Working with AI can help designers better understand coding principles and best practices.</li>
+</ul>
+<h3>Challenges and Considerations</h3>
+<p>While this process was highly efficient, it's important to note some challenges:</p>
+<ul>
+<li>Prompt Engineering: Crafting effective prompts is a skill that requires practice and refinement.</li>
+<li>Consistency: Ensuring consistency across different AI-generated code segments can be challenging.</li>
+<li>Complex Functionalities: More advanced features may require more detailed prompts or human intervention.</li>
+<li>Testing and Validation: Thorough testing is crucial, as AI-generated code may contain unforeseen bugs or issues.</li>
+</ul>
+<h1>Conclusion</h1>
+<p>AI-assisted prototyping represents a significant leap forward in the field of service or digital design. It allows designers to rapidly bring ideas to life, test concepts, and iterate quickly. However, it doesn't replace the need for design thinking or coding knowledge. Instead, it amplifies these skills, allowing designers to work more efficiently and focus on higher-level design challenges.</p>
+<p>As this technology continues to evolve, we can expect even more sophisticated tools that further blur the lines between design and development. For service designers, embracing these tools while maintaining a critical eye and strong design principles will be key to success in this new landscape.</p>
+<p>I encourage fellow designers to experiment with AI in their prototyping process. Start small, be curious, and don't be afraid to iterate. The future of design is here, and it's more accessible than ever.</p>
+</article>
+    </div>
+  </div>
+
+  <script src="/js/navbar.js"></script>
+<script src="/js/figure.js"></script>
+
+
+</body>

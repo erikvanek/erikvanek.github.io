@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Social Services Categorization Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #game-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: move;
+            user-select: none;
+        }
+        .category {
+            border: 2px dashed #999;
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 200px;
+            min-height: 100px;
+            position: relative;
+        }
+        .category-name {
+            position: absolute;
+            top: -20px;
+            left: 5px;
+            background-color: white;
+            padding: 0 5px;
+            font-weight: bold;
+        }
+        #reset, #send-results {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Health and Social Services Categorization Game</h1>
+    <p>Drag and drop the cards to create your own categories. Double-click a card to create a new category. Click on a category name to rename it.</p>
+    <div id="game-area"></div>
+    <button id="reset">Reset Game</button>
+    <button id="send-results">Send Results</button>
+
+    <script>
+        const categories = [
+            "Primary Care", "Specialized Medical Care", "Pediatric Services", "Mental Health Services",
+            "Surgical Services", "Diagnostic Services", "Emergency and Urgent Care", "Rehabilitation Services",
+            "Elderly Care", "Disability Support", "Addiction Services", "Family and Child Support",
+            "Housing Assistance", "Crisis Intervention", "Day Services", "Residential Care",
+            "Home Care Services", "Counseling and Therapy", "Community Support", "Specialized Support Services"
+        ];
+
+        const gameArea = document.getElementById('game-area');
+        const resetButton = document.getElementById('reset');
+        const sendResultsButton = document.getElementById('send-results');
+
+        function createCard(text) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.textContent = text;
+            card.draggable = true;
+            card.addEventListener('dragstart', dragStart);
+            card.addEventListener('dblclick', createCategory);
+            return card;
+        }
+
+        function createCategory(event) {
+            const category = document.createElement('div');
+            category.className = 'category';
+            category.addEventListener('dragover', dragOver);
+            category.addEventListener('drop', drop);
+
+            const categoryName = document.createElement('div');
+            categoryName.className = 'category-name';
+            categoryName.textContent = 'New Category';
+            categoryName.addEventListener('click', renameCategory);
+            category.appendChild(categoryName);
+
+            gameArea.appendChild(category);
+
+            if (event.target.classList.contains('card')) {
+                category.appendChild(event.target);
+            }
+        }
+
+        function renameCategory(event) {
+            const newName = prompt('Enter a new name for this category:', event.target.textContent);
+            if (newName !== null && newName.trim() !== '') {
+                event.target.textContent = newName.trim();
+            }
+        }
+
+        function dragStart(event) {
+            event.dataTransfer.setData('text/plain', event.target.id);
+        }
+
+        function dragOver(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const cardId = event.dataTransfer.getData('text');
+            const card = document.getElementById(cardId);
+            if (event.target.classList.contains('category')) {
+                event.target.appendChild(card);
+            } else if (event.target.closest('.category')) {
+                event.target.closest('.category').appendChild(card);
+            }
+        }
+
+        function initGame() {
+            gameArea.innerHTML = '';
+            categories.forEach((category, index) => {
+                const card = createCard(category);
+                card.id = `card-${index}`;
+                gameArea.appendChild(card);
+            });
+        }
+
+        function sendResults() {
+            const results = {};
+            const categoryElements = gameArea.querySelectorAll('.category');
+            
+            categoryElements.forEach(category => {
+                const categoryName = category.querySelector('.category-name').textContent;
+                const cards = Array.from(category.querySelectorAll('.card')).map(card => card.textContent);
+                results[categoryName] = cards;
+            });
+
+            const subject = 'Health and Social Services Categorization Results';
+            const body = JSON.stringify(results, null, 2);
+            const mailtoLink = `mailto:kemboi@ezekiel.yup?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.open(mailtoLink, '_blank');
+        }
+
+        resetButton.addEventListener('click', initGame);
+        sendResultsButton.addEventListener('click', sendResults);
+
+        initGame();
+    </script>
+</body>
+</html>
