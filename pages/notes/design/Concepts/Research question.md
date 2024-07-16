@@ -1,3 +1,10 @@
+---
+resources:
+  - https://www.muledesign.com/blog/research-questions-are-not-interview-questions
+  - https://www.muledesign.com/blog/quick-tips-for-picking-design-research-activities
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6691636/
+---
+
 - is the bare bone of [[Design research]]
 - when developing research questions - think ahead of what will happen to answers - we receive since I know what comes next in the process after I have concluded it
 	- i.e. don't do research just for the sake of doing research, think of how gathered [[Insight]]s help us to move forward in the next phase
@@ -7,4 +14,31 @@
 - should start with _"How"_
 - clear, focused, and concise statement that conveys the objectives of the research and its potential findings
 - Shoud meet [Finer](https://scientific-publishing.webshop.elsevier.com/research-process/finer-research-framework/) and [PICO](https://www.library.sydney.edu.au/support/searching/pico) criteria
-- Dive deep into [framing research questions](https://research.com/research/how-to-write-a-research-question)
+- A good research question is specific, actionable, and practical:
+	- 1. It is possible to answer the question using the techniques and methods available to you
+	- 1. It’s possible (but not guaranteed) that you can arrive at an answer with a sufficient degree of confidence to base decisions on what you’ve learned
+- Dive deep into ]framing research questions
+- __Only _after_ you have identified your research questions can you select the best way to answer the question.__
+	- first research question, then research plan and activities
+- Research X Interview question
+	- RQ - **How do families with school-age children decide how to spend money on vacations?**
+	- IQ - **Walk me through your last vacation from planning it until when you arrived back home.**
+- 4 main categories:
+	- Generative/Exploratory: How will this activity yield the kind of deep understanding we seek?
+	- Descriptive: How will this activity provide a detailed, truthful, and accurate picture of the situation or sequence of events?
+		- Evaluative: How will this activity enable a reliable assessment based on a clear set of criteria?
+	- Causal: How will this activity establish a cause and effect relationship, beyond simple correlation?
+- 5 main characteristics:
+	- **Feasible.** You need to have the resources and abilities to examine the question, collect the data, and give answers.
+	- **Interesting.** Create research questions that offer fascinating insights into your industry.
+	- **Novel.** Research questions have to offer something new within your field of study.
+	- **Ethical.** The research question topic should be approved by the relevant authorities and review boards.
+	- **Relevant.** Your research question should lead to visible changes in society or your industry.
+	7 types of quali research questions:
+	- [Explanatory research](https://dovetail.com/research/explanatory-research/) questions investigate particular topic areas that aren't well known.
+	- **Contextual** research questions describe the workings of what is already in existence.
+	- **Evaluative** research questions examine the effectiveness of specific paradigms or methods.
+	- **Ideological** research questions aim to advance existing ideologies.
+	- **Descriptive** research questions describe an event.
+	- [Generative research](https://dovetail.com/ux/generative-research/) questions help develop actions and theories by providing new ideas.
+	- **Emancipatory** research questions increase social action engagement, usually to benefit disadvantaged people.
