@@ -673,7 +673,7 @@ article li {
 }
 
 article li:nth-child(2n) {
-    background-color: var(--darker-color)
+    background-color: var(--dark-color)
 }
 
 
