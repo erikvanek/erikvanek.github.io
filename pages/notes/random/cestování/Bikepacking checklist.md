@@ -7,5 +7,6 @@
 - itinerář v GPX
 - opalovák
 - bib shorts
-- brýle s futrálem
+- sluneční brýle
 - rukavice
+- diářek
