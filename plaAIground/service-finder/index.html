@@ -26,12 +26,28 @@
             <div id="question-container" style="display: none;">
                 <h2 id="question"></h2>
                 <div id="options"></div>
+                <button id="step-back" class="secondary-button" style="display: none;">Krok zpět</button>
             </div>
 
             <div id="results" style="display: none;">
                 <h2>Doporučené služby:</h2>
                 <div id="services-list"></div>
                 <button id="start-over" class="secondary-button">Začít znovu</button>
+                <div id="feedback-section">
+                    <p>Nenašli jste, co jste hledali?</p>
+                    <button id="feedback-button" class="tertiary-button">Napište nám</button>
+                </div>
+            </div>
+
+            <div id="feedback-form" style="display: none;">
+                <h2>Napište nám</h2>
+                <form id="email-form">
+                    <label for="email">Váš email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Vaše zpráva:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="primary-button">Odeslat</button>
+                </form>
             </div>
         </div>
         <script src="script.js"></script>
