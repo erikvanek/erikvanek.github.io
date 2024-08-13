@@ -1235,6 +1235,8 @@ const decisionTree =
         }
     }
 }
+
+
 const serviceRepresentatives = {
     "zdravotnická záchranná služba": [
         {
@@ -1280,10 +1282,12 @@ const serviceRepresentatives = {
 };
 
 let currentNode = decisionTree;
+let history = [];
 
 function displayQuestion() {
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
+    const stepBackButton = document.getElementById('step-back');
 
     questionElement.textContent = currentNode.question;
     optionsElement.innerHTML = '';
@@ -1294,9 +1298,12 @@ function displayQuestion() {
         button.addEventListener('click', () => selectOption(option));
         optionsElement.appendChild(button);
     }
+
+    stepBackButton.style.display = history.length > 0 ? 'block' : 'none';
 }
 
 function selectOption(option) {
+    history.push(currentNode);
     currentNode = currentNode.options[option];
     if (currentNode.services) {
         displayResults(currentNode.services);
@@ -1304,6 +1311,14 @@ function selectOption(option) {
         displayQuestion();
     }
 }
+
+function stepBack() {
+    if (history.length > 0) {
+        currentNode = history.pop();
+        displayQuestion();
+    }
+}
+
 
 function displayResults(services) {
     const questionContainer = document.getElementById('question-container');
@@ -1378,13 +1393,36 @@ function displayResults(services) {
 
 function startOver() {
     currentNode = decisionTree;
+    history = [];
+    const instructionsContainer = document.getElementById('instructions');
     const questionContainer = document.getElementById('question-container');
     const resultsContainer = document.getElementById('results');
+    const feedbackForm = document.getElementById('feedback-form');
 
-    questionContainer.style.display = 'block';
+    instructionsContainer.style.display = 'block';
+    questionContainer.style.display = 'none';
     resultsContainer.style.display = 'none';
-    displayQuestion();
+    feedbackForm.style.display = 'none';
 }
+
+function showFeedbackForm() {
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('feedback-form').style.display = 'block';
+}
+
+function handleFeedbackSubmit(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Here you would typically send this data to your server
+    console.log('Feedback submitted:', { email, message });
+
+    alert('Děkujeme za vaši zpětnou vazbu. Budeme vás kontaktovat co nejdříve.');
+    document.getElementById('feedback-form').style.display = 'none';
+    document.getElementById('results').style.display = 'block';
+}
+
 
 document.getElementById('start-over').addEventListener('click', startOver);
 document.getElementById('start-questionnaire').addEventListener('click', function () {
@@ -1392,6 +1430,10 @@ document.getElementById('start-questionnaire').addEventListener('click', functio
     document.getElementById('question-container').style.display = 'block';
     displayQuestion();
 });
+document.getElementById('step-back').addEventListener('click', stepBack);
+document.getElementById('feedback-button').addEventListener('click', showFeedbackForm);
+document.getElementById('email-form').addEventListener('submit', handleFeedbackSubmit);
+
 
 // Start the questionnaire
 displayQuestion();
