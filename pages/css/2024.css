@@ -210,8 +210,8 @@ nav {
 
 p,
 span {
-    margin-bottom: calc(var(--base-size) * 1.5);
-    line-height: calc(var(--base-size) * 1.375);
+    margin-bottom: calc(var(--base-size) * .75);
+    line-height: calc(var(--base-size) * 1.5);
     font-size: var(--base-size);
     max-width: 60ch;
 }
@@ -536,7 +536,6 @@ figure {
 
 .case h1 {
     margin-top: calc(var(--base-size) * 4);
-    margin-left: calc(var(--base-size) * 2);
     margin-bottom: calc(var(--base-size) * 1);
 
 }
@@ -552,7 +551,6 @@ figure {
     color: var(--white-color);
     margin-top: calc(var(--base-size) / 2);
     margin-bottom: calc(var(--base-size) / 2);
-    margin-left: var(--base-size);
     display: inline-flex;
 }
 
@@ -581,8 +579,18 @@ figure {
     font-size: var(--base-size);
 }
 
+.no-icons {
+    list-style: none;
+}
+
+
 .case li {
     margin-bottom: calc(var(--base-size) * .5);
+}
+
+.no-icons li {
+    margin-left: var(--base-size);
+    margin-bottom: var(--base-size);
 }
 
 .case figure {
