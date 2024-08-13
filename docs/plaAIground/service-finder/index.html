@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rozcestník zdravotních a sociálních služeb</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rozcestník zdravotních a sociálních služeb</h1>
+
+            <div id="instructions">
+                <h2>Jak používat tento rozcestník:</h2>
+                <ol>
+                    <li>Přečtěte si pozorně každou otázku.</li>
+                    <li>Vyberte odpověď, která nejlépe vystihuje vaši situaci.</li>
+                    <li>Klikněte na tlačítko s vybranou odpovědí.</li>
+                    <li>Pokračujte v odpovídání na následující otázky.</li>
+                    <li>Na konci se vám zobrazí seznam doporučených služeb s kontaktními informacemi.</li>
+                </ol>
+                <p>Můžete se kdykoli vrátit na začátek kliknutím na tlačítko "Začít znovu".</p>
+                <button id="start-questionnaire" class="primary-button">Začít dotazník</button>
+            </div>
+
+            <div id="question-container" style="display: none;">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+            </div>
+
+            <div id="results" style="display: none;">
+                <h2>Doporučené služby:</h2>
+                <div id="services-list"></div>
+                <button id="start-over" class="secondary-button">Začít znovu</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
