@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pomocník pro životní situace</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+            .container {
+                text-align: center;
+                max-width: 600px;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .search-container {
+                margin-top: 20px;
+            }
+            #search-input {
+                width: 70%;
+                max-width: 300px;
+                padding: 10px;
+                font-size: 16px;
+            }
+            #search-button,
+            .option-button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                cursor: pointer;
+                margin: 10px 5px;
+            }
+            .progress-bar {
+                width: 100%;
+                height: 20px;
+                background-color: #e0e0e0;
+                margin-top: 20px;
+            }
+            .progress {
+                width: 0;
+                height: 100%;
+                background-color: #4285f4;
+                transition: width 0.3s ease-in-out;
+            }
+            .navigation {
+                margin-top: 20px;
+            }
+            .navigation button {
+                margin: 0 10px;
+                padding: 5px 10px;
+            }
+            .results {
+                text-align: left;
+                margin-top: 20px;
+            }
+            .service {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Pomocník pro životní situace</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Čelíte citlivé životní situaci?">
+                <button id="search-button">Hledat pomoc</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="navigation">
+                <button id="back-button">Zpět</button>
+                <button id="reset-button">Začít znovu</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const searchButton = document.getElementById('search-button');
+                const searchInput = document.getElementById('search-input');
+                const progressBar = document.querySelector('.progress-bar');
+                const progress = document.querySelector('.progress');
+                const navigation = document.querySelector('.navigation');
+                const backButton = document.getElementById('back-button');
+                const resetButton = document.getElementById('reset-button');
+
+                let currentStep = 0;
+                const totalSteps = 6;
+                let answers = [];
+
+                searchButton.addEventListener('click', startQuestionnaire);
+
+                function startQuestionnaire() {
+                    if (searchInput.value.trim() === '') {
+                        alert('Prosím, odpovězte na úvodní otázku.');
+                        return;
+                    }
+
+                    answers.push(searchInput.value.trim());
+                    currentStep = 1;
+                    updateProgressBar();
+                    showQuestion(currentStep);
+                }
+
+                function updateProgressBar() {
+                    progressBar.style.display = 'block';
+                    navigation.style.display = 'block';
+                    progress.style.width = `${ (currentStep / totalSteps) * 100}%`;
+                }
+
+                function showQuestion(step) {
+                    const container = document.querySelector('.container');
+                    container.innerHTML = '';
+
+                    let question = '';
+                    let options = [];
+
+                    switch (step) {
+                        case 1:
+                            question = 'Jak byste charakterizovali časový aspekt vaší situace?';
+                            options = ['Akutní', 'Dlouhodobá', 'Plánování do budoucna'];
+                            break;
+                        case 2:
+                            question = 'Jaká je vaše role v této situaci?';
+                            options = ['Osoba v nouzi', 'Pečovatel', 'Obojí'];
+                            break;
+                        case 3:
+                            question = 'Které z následujících oblastí se vaše situace nejvíce týká?';
+                            options = ['Zdravotní stav', 'Sociální situace', 'Finanční problémy', 'Bydlení'];
+                            break;
+                        case 4:
+                            question = 'Potřebujete pomoc s péčí o sebe nebo o někoho blízkého?';
+                            options = ['Ano, o sebe', 'Ano, o někoho blízkého', 'Ne'];
+                            break;
+                        case 5:
+                            question = 'Máte děti, kterých se situace týká?';
+                            options = ['Ano', 'Ne'];
+                            break;
+                        case 6:
+                            question = 'Jste v kontaktu s nějakými sociálními službami?';
+                            options = ['Ano', 'Ne', 'Nevím'];
+                            break;
+                    }
+
+                    const questionElement = document.createElement('h2');
+                    questionElement.textContent = question;
+                    container.appendChild(questionElement);
+
+                    options.forEach(option => {
+                        const button = document.createElement('button');
+                        button.textContent = option;
+                        button
+                            .classList
+                            .add('option-button');
+                        button.addEventListener('click', () => handleAnswer(option));
+                        container.appendChild(button);
+                    });
+
+                    container.appendChild(progressBar);
+                    container.appendChild(navigation);
+                }
+
+                function handleAnswer(answer) {
+                    answers.push(answer);
+                    currentStep++;
+                    if (currentStep <= totalSteps) {
+                        updateProgressBar();
+                        showQuestion(currentStep);
+                    } else {
+                        showResults();
+                    }
+                }
+
+                function showResults() {
+                    const container = document.querySelector('.container');
+                    container.innerHTML = '<h2>Doporučené služby</h2>';
+
+                    const resultsDiv = document.createElement('div');
+                    resultsDiv
+                        .classList
+                        .add('results');
+
+                    // This is where you would implement the logic to determine which services to recommend
+                    // based on the user's answers. For now, we'll just show some example services.
+                    const exampleServices = [
+                        {
+                            name: 'Krizové centrum',
+                            description: 'Poskytuje okamžitou pomoc v akutních situacích.',
+                            contact: 'Tel: 123 456 789'
+                        }, {
+                            name: 'Sociální poradenství',
+                            description: 'Nabízí konzultace v oblasti sociálních služeb a dávek.',
+                            contact: 'Email: poradenstvi@example.com'
+                        }, {
+                            name: 'Pečovatelská služba',
+                            description: 'Pomáhá s péčí o sebe nebo blízké osoby v domácím prostředí.',
+                            contact: 'Tel: 987 654 321'
+                        }
+                    ];
+
+                    exampleServices.forEach(service => {
+                        const serviceDiv = document.createElement('div');
+                        serviceDiv
+                            .classList
+                            .add('service');
+                        serviceDiv.innerHTML = `
+                        <h3>${service.name}</h3>
+                        <p>${service.description}</p>
+                        <p><strong>${service.contact}</strong></p>
+                    `;
+                        resultsDiv.appendChild(serviceDiv);
+                    });
+
+                    container.appendChild(resultsDiv);
+                    container.appendChild(navigation);
+                }
+
+                backButton.addEventListener('click', () => {
+                    if (currentStep > 1) {
+                        currentStep--;
+                        answers.pop();
+                        updateProgressBar();
+                        showQuestion(currentStep);
+                    } else if (currentStep === 1) {
+                        location.reload();
+                    }
+                });
+
+                resetButton.addEventListener('click', () => {
+                    location.reload();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1235 @@
+{
+  "question": "Are you seeking support for yourself or for someone else?",
+  "options": {
+    "for myself": {
+      "question": "Are you facing an immediate crisis or looking for ongoing support?",
+      "options": {
+        "immediate crisis": {
+          "question": "Is this a life-threatening emergency?",
+          "options": {
+            "yes": {
+              "services": [
+                "zdravotnická záchranná služba",
+                "urgentní medicína"
+              ]
+            },
+            "no": {
+              "question": "What best describes your current situation?",
+              "options": {
+                "mental health crisis": {
+                  "question": "Are you having thoughts of harming yourself or others?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "krizová pomoc",
+                        "psychiatrie",
+                        "urgentní medicína"
+                      ]
+                    },
+                    "no": {
+                      "question": "Do you prefer in-person or remote support?",
+                      "options": {
+                        "in-person": {
+                          "services": [
+                            "krizová pomoc",
+                            "psychiatrie",
+                            "nízkoprahová denní centra"
+                          ]
+                        },
+                        "remote": {
+                          "services": [
+                            "telefonická krizová pomoc",
+                            "krizová pomoc"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "substance abuse emergency": {
+                  "question": "Are you experiencing severe physical symptoms?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "urgentní medicína",
+                        "protialkoholní a protitoxikomanická záchytná služba"
+                      ]
+                    },
+                    "no": {
+                      "question": "Are you seeking immediate detox or ongoing support?",
+                      "options": {
+                        "immediate detox": {
+                          "services": [
+                            "protialkoholní a protitoxikomanická záchytná služba",
+                            "adiktologická péče"
+                          ]
+                        },
+                        "ongoing support": {
+                          "services": [
+                            "kontaktní centra",
+                            "adiktologická péče",
+                            "terapeutické komunity"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "need immediate shelter": {
+                  "question": "Are you fleeing domestic violence?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "intervenční centra",
+                        "azylové domy"
+                      ]
+                    },
+                    "no": {
+                      "question": "Do you have children with you?",
+                      "options": {
+                        "yes": {
+                          "question": "Are you facing financial difficulties?",
+                          "options": {
+                            "yes": {
+                              "question": "Do you need job search assistance?",
+                              "options": {
+                                "yes": {
+                                  "services": [
+                                    "azylové domy",
+                                    "sociálně aktivizační služby pro rodiny s dětmi",
+                                    "pracovní poradenství"
+                                  ]
+                                },
+                                "no": {
+                                  "services": [
+                                    "azylové domy",
+                                    "sociálně aktivizační služby pro rodiny s dětmi",
+                                    "finanční poradenství"
+                                  ]
+                                }
+                              }
+                            },
+                            "no": {
+                              "services": [
+                                "azylové domy",
+                                "sociálně aktivizační služby pro rodiny s dětmi"
+                              ]
+                            }
+                          }
+                        },
+                        "no": {
+                          "question": "Do you have any health issues that need attention?",
+                          "options": {
+                            "yes": {
+                              "question": "Are these issues related to substance abuse?",
+                              "options": {
+                                "yes": {
+                                  "services": [
+                                    "noclehárny",
+                                    "adiktologická péče",
+                                    "zdravotní péče pro osoby bez přístřeší"
+                                  ]
+                                },
+                                "no": {
+                                  "services": [
+                                    "noclehárny",
+                                    "zdravotní péče pro osoby bez přístřeší",
+                                    "sociální poradenství"
+                                  ]
+                                }
+                              }
+                            },
+                            "no": {
+                              "services": [
+                                "noclehárny",
+                                "azylové domy",
+                                "nízkoprahová denní centra"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ongoing support": {
+          "question": "What area of your life needs the most support right now?",
+          "options": {
+            "physical health": {
+              "question": "Do you need regular medical treatment or assistance with daily activities?",
+              "options": {
+                "medical treatment": {
+                  "question": "Is your condition chronic or acute?",
+                  "options": {
+                    "chronic": {
+                      "question": "Do you need specialized care?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "ambulantní péče",
+                            "lůžková péče",
+                            "domácí péče"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "všeobecné praktické lékařství",
+                            "domácí péče"
+                          ]
+                        }
+                      }
+                    },
+                    "acute": {
+                      "services": [
+                        "ambulantní péče",
+                        "jednodenní péče",
+                        "lůžková péče"
+                      ]
+                    }
+                  }
+                },
+                "daily activities": {
+                  "question": "What level of assistance do you require?",
+                  "options": {
+                    "minimal": {
+                      "services": [
+                        "pečovatelská služba",
+                        "osobní asistence"
+                      ]
+                    },
+                    "moderate": {
+                      "services": [
+                        "osobní asistence",
+                        "denní stacionáře",
+                        "odlehčovací služby"
+                      ]
+                    },
+                    "extensive": {
+                      "question": "Do you prefer to receive care at home or in a facility?",
+                      "options": {
+                        "at home": {
+                          "services": [
+                            "domácí péče",
+                            "osobní asistence",
+                            "pečovatelská služba"
+                          ]
+                        },
+                        "in a facility": {
+                          "services": [
+                            "domovy pro seniory",
+                            "domovy pro osoby se zdravotním postižením",
+                            "domovy se zvláštním režimem"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "mental health": {
+              "question": "Are you dealing with a diagnosed condition or seeking general support?",
+              "options": {
+                "diagnosed condition": {
+                  "question": "What type of mental health condition are you dealing with?",
+                  "options": {
+                    "depression or anxiety": {
+                      "services": [
+                        "psychiatrie",
+                        "psychologická poradna",
+                        "krizová pomoc"
+                      ]
+                    },
+                    "severe mental illness": {
+                      "question": "Do you need inpatient or outpatient care?",
+                      "options": {
+                        "inpatient": {
+                          "services": [
+                            "psychiatrie",
+                            "lůžková péče"
+                          ]
+                        },
+                        "outpatient": {
+                          "services": [
+                            "psychiatrie",
+                            "denní stacionáře",
+                            "sociální rehabilitace"
+                          ]
+                        }
+                      }
+                    },
+                    "addiction": {
+                      "services": [
+                        "adiktologická péče",
+                        "terapeutické komunity",
+                        "kontaktní centra"
+                      ]
+                    }
+                  }
+                },
+                "general support": {
+                  "question": "What is your primary concern?",
+                  "options": {
+                    "stress management": {
+                      "question": "What is the main source of your stress?",
+                      "options": {
+                        "work-related": {
+                          "question": "Is it affecting your job performance?",
+                          "options": {
+                            "yes": {
+                              "services": [
+                                "pracovní poradenství",
+                                "psychologická poradna",
+                                "antistresové programy"
+                              ]
+                            },
+                            "no": {
+                              "services": [
+                                "psychologická poradna",
+                                "relaxační techniky",
+                                "sociálně aktivizační služby"
+                              ]
+                            }
+                          }
+                        },
+                        "personal relationships": {
+                          "question": "Is it primarily affecting your family or social life?",
+                          "options": {
+                            "family": {
+                              "services": [
+                                "rodinná terapie",
+                                "mediace",
+                                "psychologická poradna"
+                              ]
+                            },
+                            "social life": {
+                              "services": [
+                                "sociálně aktivizační služby",
+                                "psychologická poradna",
+                                "podpůrné skupiny"
+                              ]
+                            }
+                          }
+                        },
+                        "financial": {
+                          "services": [
+                            "finanční poradenství",
+                            "dluhové poradenství",
+                            "sociální poradenství"
+                          ]
+                        }
+                      }
+                    },
+                    "relationship issues": {
+                      "question": "What type of relationship is causing concern?",
+                      "options": {
+                        "romantic": {
+                          "question": "Are you considering couples therapy?",
+                          "options": {
+                            "yes": {
+                              "services": [
+                                "párová terapie",
+                                "manželská poradna",
+                                "mediace"
+                              ]
+                            },
+                            "no": {
+                              "services": [
+                                "individuální psychologická poradna",
+                                "koučink",
+                                "podpůrné skupiny"
+                              ]
+                            }
+                          }
+                        },
+                        "family": {
+                          "services": [
+                            "rodinná terapie",
+                            "psychologická poradna",
+                            "mediace"
+                          ]
+                        },
+                        "friendships": {
+                          "services": [
+                            "psychologická poradna",
+                            "sociálně aktivizační služby",
+                            "podpůrné skupiny"
+                          ]
+                        }
+                      }
+                    },
+                    "life transitions": {
+                      "question": "What kind of transition are you experiencing?",
+                      "options": {
+                        "career change": {
+                          "services": [
+                            "kariérové poradenství",
+                            "pracovní poradenství",
+                            "rekvalifikační kurzy"
+                          ]
+                        },
+                        "relocation": {
+                          "services": [
+                            "sociální poradenství",
+                            "komunitní centra",
+                            "integrační programy"
+                          ]
+                        },
+                        "loss or grief": {
+                          "services": [
+                            "poradenství pro pozůstalé",
+                            "terapie pro vyrovnání se se ztrátou",
+                            "podpůrné skupiny"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "housing and independent living": {
+              "question": "Do you need a place to live or support to live independently?",
+              "options": {
+                "need a place to live": {
+                  "question": "Do you have any specific care needs?",
+                  "options": {
+                    "yes": {
+                      "question": "What type of care do you require?",
+                      "options": {
+                        "elderly care": {
+                          "services": [
+                            "domovy pro seniory",
+                            "domovy se zvláštním režimem"
+                          ]
+                        },
+                        "disability support": {
+                          "services": [
+                            "domovy pro osoby se zdravotním postižením",
+                            "chráněné bydlení"
+                          ]
+                        },
+                        "mental health support": {
+                          "services": [
+                            "chráněné bydlení",
+                            "domovy se zvláštním režimem"
+                          ]
+                        }
+                      }
+                    },
+                    "no": {
+                      "services": [
+                        "azylové domy",
+                        "sociální bydlení",
+                        "domy na půl cesty"
+                      ]
+                    }
+                  }
+                },
+                "support for independent living": {
+                  "question": "What type of support do you need?",
+                  "options": {
+                    "daily tasks": {
+                      "services": [
+                        "pečovatelská služba",
+                        "osobní asistence"
+                      ]
+                    },
+                    "health monitoring": {
+                      "services": [
+                        "domácí péče",
+                        "tísňová péče"
+                      ]
+                    },
+                    "social support": {
+                      "services": [
+                        "podpora samostatného bydlení",
+                        "sociálně aktivizační služby"
+                      ]
+                    },
+                    "all of the above": {
+                      "services": [
+                        "osobní asistence",
+                        "pečovatelská služba",
+                        "podpora samostatného bydlení"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "for someone else": {
+      "question": "What is your relationship to the person needing support?",
+      "options": {
+        "parent/guardian": {
+          "question": "What is the age of the child you're caring for?",
+          "options": {
+            "0-5 years": {
+              "question": "Does the child have any developmental concerns or disabilities?",
+              "options": {
+                "yes": {
+                  "question": "What type of support are you looking for?",
+                  "options": {
+                    "early intervention": {
+                      "services": [
+                        "raná péče",
+                        "sociálně aktivizační služby pro rodiny s dětmi"
+                      ]
+                    },
+                    "medical support": {
+                      "services": [
+                        "dětské lékařství",
+                        "dětská neurologie",
+                        "dětská rehabilitace"
+                      ]
+                    },
+                    "educational support": {
+                      "services": [
+                        "speciálně pedagogické centrum",
+                        "pedagogicko-psychologická poradna"
+                      ]
+                    },
+                    "respite care": {
+                      "services": [
+                        "odlehčovací služby",
+                        "denní stacionáře"
+                      ]
+                    }
+                  }
+                },
+                "no": {
+                  "question": "What type of support are you seeking?",
+                  "options": {
+                    "childcare": {
+                      "question": "What type of childcare are you looking for?",
+                      "options": {
+                        "full-time": {
+                          "services": [
+                            "mateřské školy",
+                            "dětské skupiny",
+                            "soukromé jesle"
+                          ]
+                        },
+                        "part-time": {
+                          "services": [
+                            "dětské kluby",
+                            "mateřská centra",
+                            "příležitostné hlídání dětí"
+                          ]
+                        },
+                        "special needs": {
+                          "services": [
+                            "speciální mateřské školy",
+                            "asistenční služby pro děti",
+                            "raná péče"
+                          ]
+                        }
+                      }
+                    },
+                    "health services": {
+                      "question": "What kind of health services do you need?",
+                      "options": {
+                        "routine check-ups": {
+                          "services": [
+                            "dětské lékařství",
+                            "pediatrické ambulance",
+                            "preventivní programy pro děti"
+                          ]
+                        },
+                        "specialized care": {
+                          "services": [
+                            "dětští specialisté",
+                            "dětská nemocnice",
+                            "vývojová diagnostika"
+                          ]
+                        },
+                        "mental health": {
+                          "services": [
+                            "dětská psychologie",
+                            "dětská psychiatrie",
+                            "rodinná terapie"
+                          ]
+                        }
+                      }
+                    },
+                    "family support": {
+                      "question": "What area of family life needs support?",
+                      "options": {
+                        "parenting skills": {
+                          "services": [
+                            "rodičovské skupiny",
+                            "vzdělávací programy pro rodiče",
+                            "rodinné poradenství"
+                          ]
+                        },
+                        "work-life balance": {
+                          "services": [
+                            "flexibilní formy péče o děti",
+                            "poradenství pro slaďování práce a rodiny",
+                            "podpůrné skupiny pro rodiče"
+                          ]
+                        },
+                        "financial assistance": {
+                          "services": [
+                            "sociální dávky pro rodiny s dětmi",
+                            "finanční poradenství",
+                            "materiální pomoc pro rodiny v nouzi"
+                          ]
+                        }
+                      }
+                    },
+                    "early education": {
+                      "question": "What type of early education are you interested in?",
+                      "options": {
+                        "cognitive development": {
+                          "services": [
+                            "programy pro rozvoj myšlení",
+                            "edukativní hračky a pomůcky",
+                            "kurzy pro rodiče o kognitivním rozvoji dětí"
+                          ]
+                        },
+                        "social skills": {
+                          "services": [
+                            "dětské skupiny pro socializaci",
+                            "programy pro rozvoj emoční inteligence",
+                            "komunitní aktivity pro rodiny s dětmi"
+                          ]
+                        },
+                        "creative arts": {
+                          "services": [
+                            "výtvarné kroužky pro nejmenší",
+                            "hudební programy pro batolata",
+                            "pohybové aktivity pro předškoláky"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "6-18 years": {
+              "question": "What is your primary concern for the child?",
+              "options": {
+                "educational challenges": {
+                  "question": "Does the child have a diagnosed learning disability?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "speciálně pedagogické centrum",
+                        "pedagogicko-psychologická poradna",
+                        "speciální vzdělávání"
+                      ]
+                    },
+                    "no": {
+                      "services": [
+                        "pedagogicko-psychologická poradna",
+                        "doučování",
+                        "školní poradenské pracoviště"
+                      ]
+                    }
+                  }
+                },
+                "behavioral issues": {
+                  "question": "How severe are the behavioral issues?",
+                  "options": {
+                    "mild to moderate": {
+                      "services": [
+                        "pedagogicko-psychologická poradna",
+                        "dětská psychologie"
+                      ]
+                    },
+                    "severe": {
+                      "services": [
+                        "dětská psychiatrie",
+                        "středisko výchovné péče",
+                        "nízkoprahová zařízení pro děti a mládež"
+                      ]
+                    }
+                  }
+                },
+                "health concerns": {
+                  "question": "Is it a chronic condition or an acute issue?",
+                  "options": {
+                    "chronic": {
+                      "services": [
+                        "dětské lékařství",
+                        "specializovaná pediatrická péče",
+                        "domácí péče"
+                      ]
+                    },
+                    "acute": {
+                      "services": [
+                        "dětské lékařství",
+                        "dětská pohotovost"
+                      ]
+                    }
+                  }
+                },
+                "social integration": {
+                  "question": "What specific area of social integration is most concerning?",
+                  "options": {
+                    "peer relationships": {
+                      "question": "Is bullying a concern?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "nízkoprahová zařízení pro děti a mládež",
+                            "školní psycholog",
+                            "preventivní programy proti šikaně"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "nízkoprahová zařízení pro děti a mládež",
+                            "sociálně aktivizační služby pro rodiny s dětmi",
+                            "volnočasové aktivity"
+                          ]
+                        }
+                      }
+                    },
+                    "cultural adaptation": {
+                      "question": "Is language a barrier?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "jazykové kurzy pro děti a mládež",
+                            "interkulturní pracovníci",
+                            "sociálně aktivizační služby pro rodiny s dětmi"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "nízkoprahová zařízení pro děti a mládež",
+                            "interkulturní programy",
+                            "volnočasové aktivity"
+                          ]
+                        }
+                      }
+                    },
+                    "social skills": {
+                      "question": "Are there any diagnosed developmental disorders?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "speciálně pedagogické centrum",
+                            "sociálně aktivizační služby pro rodiny s dětmi",
+                            "terapie sociálních dovedností"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "nízkoprahová zařízení pro děti a mládež",
+                            "volnočasové aktivity",
+                            "skupinové programy pro rozvoj sociálních dovedností"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "adult child caring for parent": {
+          "question": "What is the primary need of your parent?",
+          "options": {
+            "medical care": {
+              "question": "Is it for a chronic condition or post-hospital care?",
+              "options": {
+                "chronic condition": {
+                  "question": "Can they manage at home with support?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "domácí péče",
+                        "pečovatelská služba",
+                        "osobní asistence"
+                      ]
+                    },
+                    "no": {
+                      "services": [
+                        "domovy pro seniory",
+                        "domovy se zvláštním režimem",
+                        "léčebny dlouhodobě nemocných"
+                      ]
+                    }
+                  }
+                },
+                "post-hospital care": {
+                  "services": [
+                    "domácí péče",
+                    "rehabilitace",
+                    "odlehčovací služby"
+                  ]
+                }
+              }
+            },
+            "daily living assistance": {
+              "question": "What level of assistance is needed?",
+              "options": {
+                "light assistance": {
+                  "services": [
+                    "pečovatelská služba",
+                    "tísňová péče"
+                  ]
+                },
+                "moderate assistance": {
+                  "services": [
+                    "osobní asistence",
+                    "denní stacionáře"
+                  ]
+                },
+                "full-time care": {
+                  "question": "Do you prefer home care or residential care?",
+                  "options": {
+                    "home care": {
+                      "services": [
+                        "domácí péče",
+                        "osobní asistence",
+                        "pečovatelská služba"
+                      ]
+                    },
+                    "residential care": {
+                      "services": [
+                        "domovy pro seniory",
+                        "domovy se zvláštním režimem"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "cognitive decline": {
+              "question": "What stage of cognitive decline?",
+              "options": {
+                "early stage": {
+                  "services": [
+                    "geriatrie",
+                    "neurologie",
+                    "denní stacionáře"
+                  ]
+                },
+                "middle stage": {
+                  "services": [
+                    "domácí péče",
+                    "osobní asistence",
+                    "odlehčovací služby"
+                  ]
+                },
+                "late stage": {
+                  "services": [
+                    "domovy se zvláštním režimem",
+                    "paliativní péče"
+                  ]
+                }
+              }
+            },
+            "social engagement": {
+              "services": [
+                "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením",
+                "denní stacionáře",
+                "kluby seniorů"
+              ]
+            }
+          }
+        },
+        "spouse/partner": {
+          "question": "What is the primary need of your spouse/partner?",
+          "options": {
+            "medical support": {
+              "question": "Is it for a chronic condition or acute care?",
+              "options": {
+                "chronic condition": {
+                  "question": "Does it require specialized care?",
+                  "options": {
+                    "yes": {
+                      "services": [
+                        "specializovaná ambulantní péče",
+                        "domácí péče",
+                        "lůžková péče"
+                      ]
+                    },
+                    "no": {
+                      "services": [
+                        "všeobecné praktické lékařství",
+                        "domácí péče"
+                      ]
+                    }
+                  }
+                },
+                "acute care": {
+                  "services": [
+                    "urgentní medicína",
+                    "lůžková péče",
+                    "rehabilitace"
+                  ]
+                }
+              }
+            },
+            "mental health support": {
+              "question": "Is it for a diagnosed condition or general support?",
+              "options": {
+                "diagnosed condition": {
+                  "services": [
+                    "psychiatrie",
+                    "psychoterapie",
+                    "denní stacionáře"
+                  ]
+                },
+                "general support": {
+                  "question": "What is the primary source of stress or concern?",
+                  "options": {
+                    "work-related stress": {
+                      "question": "Is it affecting their job performance?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "psychologická poradna",
+                            "pracovní poradenství",
+                            "antistresové programy"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "psychologická poradna",
+                            "relaxační techniky",
+                            "manželská poradna"
+                          ]
+                        }
+                      }
+                    },
+                    "relationship issues": {
+                      "question": "Are you considering couples therapy?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "manželská poradna",
+                            "párová psychoterapie",
+                            "mediace"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "individuální psychologická poradna",
+                            "sociálně aktivizační služby",
+                            "podpůrné skupiny"
+                          ]
+                        }
+                      }
+                    },
+                    "life changes or transitions": {
+                      "question": "Is it related to a recent loss or grief?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "psychologická poradna",
+                            "terapie pro vyrovnání se se ztrátou",
+                            "podpůrné skupiny pro pozůstalé"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "psychologická poradna",
+                            "koučink",
+                            "sociálně aktivizační služby"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "physical disability": {
+              "question": "Is it a new disability or a long-term condition?",
+              "options": {
+                "new disability": {
+                  "question": "What type of support is needed most urgently?",
+                  "options": {
+                    "medical care": {
+                      "services": [
+                        "rehabilitace",
+                        "fyzioterapie",
+                        "ergoterapie"
+                      ]
+                    },
+                    "home adaptations": {
+                      "services": [
+                        "sociální poradenství",
+                        "půjčovny kompenzačních pomůcek"
+                      ]
+                    },
+                    "personal care": {
+                      "services": [
+                        "osobní asistence",
+                        "pečovatelská služba"
+                      ]
+                    }
+                  }
+                },
+                "long-term condition": {
+                  "question": "What aspect of life needs the most support?",
+                  "options": {
+                    "mobility": {
+                      "services": [
+                        "osobní asistence",
+                        "přeprava osob se zdravotním postižením"
+                      ]
+                    },
+                    "self-care": {
+                      "services": [
+                        "pečovatelská služba",
+                        "osobní asistence"
+                      ]
+                    },
+                    "social integration": {
+                      "services": [
+                        "sociálně aktivizační služby pro osoby se zdravotním postižením",
+                        "centra denních služeb"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "end-of-life care": {
+              "question": "Where would your spouse/partner prefer to receive care?",
+              "options": {
+                "at home": {
+                  "services": [
+                    "domácí hospic",
+                    "paliativní péče",
+                    "odlehčovací služby"
+                  ]
+                },
+                "in a facility": {
+                  "services": [
+                    "lůžkový hospic",
+                    "paliativní oddělení nemocnice"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "other family member or friend": {
+          "question": "What is the age group of the person you're caring for?",
+          "options": {
+            "child (under 18)": {
+              "question": "What is your primary concern for the child?",
+              "options": {
+                "health issues": {
+                  "services": [
+                    "dětské lékařství",
+                    "specializovaná pediatrická péče"
+                  ]
+                },
+                "behavioral or emotional issues": {
+                  "services": [
+                    "dětská psychologie",
+                    "pedagogicko-psychologická poradna"
+                  ]
+                },
+                "educational support": {
+                  "services": [
+                    "speciálně pedagogické centrum",
+                    "doučování"
+                  ]
+                },
+                "social integration": {
+                  "services": [
+                    "nízkoprahová zařízení pro děti a mládež",
+                    "sociálně aktivizační služby pro rodiny s dětmi"
+                  ]
+                }
+              }
+            },
+            "adult (18-64)": {
+              "question": "What type of support does this person need most?",
+              "options": {
+                "medical care": {
+                  "question": "Is it for a chronic condition or acute care?",
+                  "options": {
+                    "chronic condition": {
+                      "question": "Does it require specialized care?",
+                      "options": {
+                        "yes": {
+                          "services": [
+                            "specializovaná ambulantní péče",
+                            "domácí péče",
+                            "odborné sociální poradenství"
+                          ]
+                        },
+                        "no": {
+                          "services": [
+                            "všeobecné praktické lékařství",
+                            "domácí péče",
+                            "sociální poradenství"
+                          ]
+                        }
+                      }
+                    },
+                    "acute care": {
+                      "services": [
+                        "urgentní medicína",
+                        "lůžková péče",
+                        "následná rehabilitace"
+                      ]
+                    }
+                  }
+                },
+                "mental health support": {
+                  "question": "Is it for a diagnosed condition or general support?",
+                  "options": {
+                    "diagnosed condition": {
+                      "question": "What type of mental health condition?",
+                      "options": {
+                        "depression or anxiety": {
+                          "services": [
+                            "psychiatrie",
+                            "psychoterapie",
+                            "podpůrné skupiny"
+                          ]
+                        },
+                        "severe mental illness": {
+                          "services": [
+                            "psychiatrie",
+                            "komunitní péče v oblasti duševního zdraví",
+                            "chráněné bydlení"
+                          ]
+                        },
+                        "addiction": {
+                          "services": [
+                            "adiktologická péče",
+                            "terapeutické komunity",
+                            "kontaktní centra"
+                          ]
+                        }
+                      }
+                    },
+                    "general support": {
+                      "services": [
+                        "psychologická poradna",
+                        "sociálně aktivizační služby",
+                        "krizová pomoc"
+                      ]
+                    }
+                  }
+                },
+                "disability support": {
+                  "question": "What aspect of life needs the most support?",
+                  "options": {
+                    "mobility": {
+                      "services": [
+                        "osobní asistence",
+                        "přeprava osob se zdravotním postižením",
+                        "půjčovny kompenzačních pomůcek"
+                      ]
+                    },
+                    "self-care": {
+                      "services": [
+                        "pečovatelská služba",
+                        "osobní asistence",
+                        "domácí péče"
+                      ]
+                    },
+                    "employment": {
+                      "services": [
+                        "sociální rehabilitace",
+                        "podporované zaměstnávání",
+                        "pracovní rehabilitace"
+                      ]
+                    },
+                    "social integration": {
+                      "services": [
+                        "sociálně aktivizační služby pro osoby se zdravotním postižením",
+                        "centra denních služeb",
+                        "volnočasové aktivity pro osoby se zdravotním postižením"
+                      ]
+                    }
+                  }
+                },
+                "addiction treatment": {
+                  "question": "What stage of addiction treatment?",
+                  "options": {
+                    "early intervention": {
+                      "services": [
+                        "adiktologická ambulance",
+                        "poradenství pro závislosti",
+                        "svépomocné skupiny"
+                      ]
+                    },
+                    "detoxification": {
+                      "services": [
+                        "detoxifikační jednotka",
+                        "adiktologická péče",
+                        "psychiatrická péče"
+                      ]
+                    },
+                    "rehabilitation": {
+                      "services": [
+                        "terapeutické komunity",
+                        "střednědobá ústavní léčba",
+                        "doléčovací programy"
+                      ]
+                    },
+                    "long-term support": {
+                      "services": [
+                        "ambulantní doléčovací programy",
+                        "chráněné bydlení pro osoby se závislostí",
+                        "podpůrné skupiny"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "senior (65+)": {
+              "question": "What is the primary need of the senior you're caring for?",
+              "options": {
+                "daily living assistance": {
+                  "services": [
+                    "pečovatelská služba",
+                    "osobní asistence",
+                    "tísňová péče"
+                  ]
+                },
+                "medical care": {
+                  "services": [
+                    "geriatrie",
+                    "domácí péče",
+                    "léčebny dlouhodobě nemocných"
+                  ]
+                },
+                "dementia care": {
+                  "services": [
+                    "domovy se zvláštním režimem",
+                    "denní stacionáře",
+                    "odlehčovací služby"
+                  ]
+                },
+                "social engagement": {
+                  "services": [
+                    "sociálně aktivizační služby pro seniory",
+                    "kluby seniorů",
+                    "centra denních služeb"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
