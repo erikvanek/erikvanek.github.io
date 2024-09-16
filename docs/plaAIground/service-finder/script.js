@@ -1236,58 +1236,11 @@ const decisionTree =
     }
 }
 
-
-const serviceRepresentatives = {
-    "zdravotnická záchranná služba": [
-        {
-            name: "Zdravotnická záchranná služba hl. m. Prahy",
-            description: "Poskytuje přednemocniční neodkladnou péči na území Prahy.",
-            address: "Korunní 98, 101 00 Praha 10",
-            phone: "155",
-            email: "info@zzshmp.cz",
-            website: "https://www.zzshmp.cz"
-        }
-    ],
-    "urgentní medicína": [
-        {
-            name: "Fakultní nemocnice v Motole - Urgentní příjem",
-            description: "Urgentní příjem pro dospělé pacienty.",
-            address: "V Úvalu 84, 150 06 Praha 5",
-            phone: "+420 224 431 111",
-            email: "info@fnmotol.cz",
-            website: "https://www.fnmotol.cz"
-        }
-    ],
-    "krizová pomoc": [
-        {
-            name: "Krizové centrum RIAPS",
-            description: "Poskytuje krizovou intervenci a psychologickou pomoc.",
-            address: "Chelčického 39, 130 00 Praha 3",
-            phone: "+420 222 586 768",
-            email: "riaps@csspraha.cz",
-            website: "https://www.csspraha.cz/24830-krizove-centrum-riaps"
-        }
-    ],
-    "psychiatrie": [
-        {
-            name: "Psychiatrická nemocnice Bohnice",
-            description: "Komplexní psychiatrická péče pro dospělé pacienty.",
-            address: "Ústavní 91, 181 02 Praha 8",
-            phone: "+420 284 016 111",
-            email: "podatelna@bohnice.cz",
-            website: "https://www.bohnice.cz"
-        }
-    ],
-    // ... (add more dummy data for other services) ...
-};
-
 let currentNode = decisionTree;
-let history = [];
 
 function displayQuestion() {
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
-    const stepBackButton = document.getElementById('step-back');
 
     questionElement.textContent = currentNode.question;
     optionsElement.innerHTML = '';
@@ -1298,12 +1251,9 @@ function displayQuestion() {
         button.addEventListener('click', () => selectOption(option));
         optionsElement.appendChild(button);
     }
-
-    stepBackButton.style.display = history.length > 0 ? 'block' : 'none';
 }
 
 function selectOption(option) {
-    history.push(currentNode);
     currentNode = currentNode.options[option];
     if (currentNode.services) {
         displayResults(currentNode.services);
@@ -1311,14 +1261,6 @@ function selectOption(option) {
         displayQuestion();
     }
 }
-
-function stepBack() {
-    if (history.length > 0) {
-        currentNode = history.pop();
-        displayQuestion();
-    }
-}
-
 
 function displayResults(services) {
     const questionContainer = document.getElementById('question-container');
@@ -1329,111 +1271,24 @@ function displayResults(services) {
     resultsContainer.style.display = 'block';
     servicesList.innerHTML = '';
 
-    // Display recommended service types
-    const serviceTypesHeader = document.createElement('h3');
-    serviceTypesHeader.textContent = 'Doporučené typy služeb:';
-    servicesList.appendChild(serviceTypesHeader);
-
-    const serviceTypesList = document.createElement('ul');
-    services.forEach(serviceType => {
-        const listItem = document.createElement('li');
-        listItem.textContent = serviceType;
-        serviceTypesList.appendChild(listItem);
+    services.forEach(service => {
+        const li = document.createElement('li');
+        li.textContent = service;
+        servicesList.appendChild(li);
     });
-    servicesList.appendChild(serviceTypesList);
-
-    // Display specific service representatives
-    const serviceExamplesHeader = document.createElement('h3');
-    serviceExamplesHeader.textContent = 'Příklady konkrétních služeb:';
-    servicesList.appendChild(serviceExamplesHeader);
-
-    let hasExamples = false;
-
-    services.forEach(serviceType => {
-        const representatives = serviceRepresentatives[serviceType] || [];
-        representatives.forEach(service => {
-            hasExamples = true;
-            const serviceCard = document.createElement('div');
-            serviceCard.className = 'service-card';
-            serviceCard.innerHTML = `
-                <h4>${service.name}</h4>
-                <p><strong>Typ služby:</strong> ${serviceType}</p>
-                <p>${service.description}</p>
-                <div class="contact-info">
-                    <p>Adresa: ${service.address}</p>
-                    <p>Telefon: ${service.phone}</p>
-                    <p>Email: ${service.email}</p>
-                    <p>Web: <a href="${service.website}" target="_blank">${service.website}</a></p>
-                </div>
-            `;
-            servicesList.appendChild(serviceCard);
-        });
-    });
-
-    if (!hasExamples) {
-        const noExamplesMessage = document.createElement('p');
-        noExamplesMessage.textContent = 'Pro vybrané typy služeb nemáme k dispozici žádné konkrétní příklady. Kontaktujte prosím svého praktického lékaře nebo místní sociální služby pro další informace a doporučení.';
-        servicesList.appendChild(noExamplesMessage);
-    }
-
-    // Add general advice
-    const adviceSection = document.createElement('div');
-    adviceSection.className = 'advice-section';
-    adviceSection.innerHTML = `
-        <h3>Obecné doporučení:</h3>
-        <p>Pro získání nejlepší možné péče a podpory doporučujeme:</p>
-        <ul>
-            <li>Kontaktovat svého praktického lékaře pro počáteční konzultaci a doporučení.</li>
-            <li>Obrátit se na místní sociální služby pro další podporu a informace o dostupných službách ve vašem regionu.</li>
-            <li>V případě potřeby využít linky důvěry nebo krizové linky pro okamžitou podporu.</li>
-        </ul>
-    `;
-    servicesList.appendChild(adviceSection);
 }
 
 function startOver() {
     currentNode = decisionTree;
-    history = [];
-    const instructionsContainer = document.getElementById('instructions');
     const questionContainer = document.getElementById('question-container');
     const resultsContainer = document.getElementById('results');
-    const feedbackForm = document.getElementById('feedback-form');
 
-    instructionsContainer.style.display = 'block';
-    questionContainer.style.display = 'none';
+    questionContainer.style.display = 'block';
     resultsContainer.style.display = 'none';
-    feedbackForm.style.display = 'none';
+    displayQuestion();
 }
-
-function showFeedbackForm() {
-    document.getElementById('results').style.display = 'none';
-    document.getElementById('feedback-form').style.display = 'block';
-}
-
-function handleFeedbackSubmit(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Here you would typically send this data to your server
-    console.log('Feedback submitted:', { email, message });
-
-    alert('Děkujeme za vaši zpětnou vazbu. Budeme vás kontaktovat co nejdříve.');
-    document.getElementById('feedback-form').style.display = 'none';
-    document.getElementById('results').style.display = 'block';
-}
-
 
 document.getElementById('start-over').addEventListener('click', startOver);
-document.getElementById('start-questionnaire').addEventListener('click', function () {
-    document.getElementById('instructions').style.display = 'none';
-    document.getElementById('question-container').style.display = 'block';
-    displayQuestion();
-});
-document.getElementById('step-back').addEventListener('click', stepBack);
-document.getElementById('feedback-button').addEventListener('click', showFeedbackForm);
-document.getElementById('email-form').addEventListener('submit', handleFeedbackSubmit);
-
 
 // Start the questionnaire
 displayQuestion();
