@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
         'md',
         'njk',
         'xml',
+        'webp'
     ]);
 
     return {
