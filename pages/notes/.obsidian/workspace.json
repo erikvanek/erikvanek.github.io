@@ -11,8 +11,12 @@
             "id": "e627b8ac2bdda371",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "design/working with clients.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "itera",
+                "query": "http",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "design/working with clients.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "design/working with clients.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "design/working with clients.md"
+              }
             }
           }
         ]
@@ -149,6 +157,9 @@
   },
   "active": "e627b8ac2bdda371",
   "lastOpenFiles": [
+    "design/Resources.md",
+    "design/Education.md",
+    "design/Design.md",
     "books/mismatch.md",
     "Recruiting for a research.md",
     "Calendly.md",
@@ -165,7 +176,6 @@
     "research.md",
     "design/Activities/Research planning.md",
     "random/cestování/cestovní-checklist.md",
-    "design/Resources.md",
     "random/Inspiration.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
@@ -175,8 +185,6 @@
     "Selective coding.md",
     "Qualitative research.md",
     "Open coding.md",
-    "Coding.md",
-    "Codebook.md",
     "design/misc",
     "design/resources/Informing_Our_Intuition.pdf",
     "tools",
