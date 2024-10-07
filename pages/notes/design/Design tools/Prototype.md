@@ -8,6 +8,7 @@
 - replace actual implementation to learn faster & the aim is to __maximize learning__ (because they are cheap to change / throw away)
 - [[Prototype]] is for [[Service design]] what learning is for humans
 - Act of creating and using [[Prototype]] is called [[Prototyping]]
+- We're also using tools and techniques from [[Interaction design]]
 ## Types
 [[Actions, processes & experiences prototype]]
 [[Physical prototypes]]

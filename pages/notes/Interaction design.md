@@ -1,0 +1,9 @@
+- a central concern of interaction design is to _develop interactive products that are usable_
+- using appropriate formats for specific target groups is essential
+	- e. g. short videos for young, podcasts for middle aged and print for older people with the same content
+- should take into consideration users' [[Ability]]
+- **usability**
+	- ensuring that products are easy to learn, effective to use and enjoyable from user's perspective
+	- focuses on achieving key [[6 usability goals]]
+- micro interactions can have a big impact on overall perceived satisfaction with a product
+- we should focus more on user experience than on usability. Super usable product with dark patterns will rank low in user experience

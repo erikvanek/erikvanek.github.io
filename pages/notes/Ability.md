@@ -1,0 +1,13 @@
+- can change in time
+- can change temporarily
+- just as ability changes over the course of live, it can change during the day due to change of contextual variables and surrounding conditions
+- technologies that are now mainstream were once helping with accessibility
+	- SMS were back then helping people with hearing disabilities
+- DIX-disability interactions
+## Impairment types:
+- permanent
+	- wheelchair
+- situational
+	- noisy environment
+- temporary
+	- injury recovery

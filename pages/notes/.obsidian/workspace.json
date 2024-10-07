@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/working with clients.md",
+                "file": "design/Design tools/Prototype.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/working with clients.md",
+                "file": "design/Design tools/Prototype.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/working with clients.md",
+                "file": "design/Design tools/Prototype.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/working with clients.md"
+                "file": "design/Design tools/Prototype.md"
               }
             }
           }
@@ -157,9 +156,18 @@
   },
   "active": "e627b8ac2bdda371",
   "lastOpenFiles": [
+    "design/Service design.md",
+    "design/Design.md",
+    "design/Design tools/Design tools.md",
+    "Interaction design.md",
+    "tools/tools in 2024.md",
+    "Buzzwords.md",
+    "6 usability goals.md",
+    "Ability.md",
+    "agile.md",
+    "design/working with clients.md",
     "design/Resources.md",
     "design/Education.md",
-    "design/Design.md",
     "books/mismatch.md",
     "Recruiting for a research.md",
     "Calendly.md",
@@ -174,17 +182,8 @@
     "Problem framing.md",
     "design/Design tools/Persona.md",
     "research.md",
-    "design/Activities/Research planning.md",
-    "random/cestování/cestovní-checklist.md",
-    "random/Inspiration.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
-    "Workshopy.md",
-    "design/working with clients.md",
-    "Untitled.md",
-    "Selective coding.md",
-    "Qualitative research.md",
-    "Open coding.md",
     "design/misc",
     "design/resources/Informing_Our_Intuition.pdf",
     "tools",
