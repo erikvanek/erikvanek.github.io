@@ -1,1 +1,6 @@
 - blog of authors of Lean canvas https://leanstack.com/
+- [WoW in Linear](https://www.lennysnewsletter.com/p/how-linear-builds-product)
+	- [Linear method](https://linear.app/method)
+- [Shape up](https://basecamp.com/shapeup)
+- [Imagining Arc](https://open.spotify.com/show/512srmQyB2LQTLVQzIsFV3) podcast
+- [Continuous discovery habits](https://www.producttalk.org/)
