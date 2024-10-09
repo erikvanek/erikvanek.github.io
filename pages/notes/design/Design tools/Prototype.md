@@ -9,6 +9,9 @@
 - [[Prototype]] is for [[Service design]] what learning is for humans
 - Act of creating and using [[Prototype]] is called [[Prototyping]]
 - We're also using tools and techniques from [[Interaction design]]
+- usually framed as a conceptual model
+	- that is the actual interface people interact with
+	- should be aligned with mental models of what [[Humans]] have in mind
 ## Types
 [[Actions, processes & experiences prototype]]
 [[Physical prototypes]]

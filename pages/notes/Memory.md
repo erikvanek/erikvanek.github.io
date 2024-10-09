@@ -1,0 +1,7 @@
+- Let people rest (and even sleep) if you want them to remember information
+- Information in the middle of a presentation is the least likely to be remembered
+- You can remember things that you see (visual memory) better than you can remember words
+- _recency effect_
+	- remembering the end of what was talked about during a presentation
+- _suffix effect_
+	- remembering the beginning of what was talked about before being interrupted by a phone distraction

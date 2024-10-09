@@ -7,3 +7,8 @@
 	- focuses on achieving key [[6 usability goals]]
 - micro interactions can have a big impact on overall perceived satisfaction with a product
 - we should focus more on user experience than on usability. Super usable product with dark patterns will rank low in user experience
+- builds on top of *interaction science*
+	- focuses on understanding principles and mechanisms between people, groups of people and technological systems
+	- main aim is to develop theories, models and insights describing how people interact with technologies and systems
+- The secret to designing an **intuitive user experience is making sure that the conceptual model of your product matches, as much as possible, the mental model** of your audience
+	- If you have a brand new product that you know will not match anyone’s mental model, you’ll need to provide training to prepare people to create a new mental model.
