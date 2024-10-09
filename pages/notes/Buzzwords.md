@@ -2,3 +2,15 @@
 	- disability interactions
 - Microinteraction
 	- are trigger-feedback pairs in which (1) the trigger can be a user action or an alteration in the system’s state; (2) the feedback is a narrowly targeted response to the trigger and is communicated through small, highly contextual (usually visual) changes in the user interface.
+- Affordances
+	- visual or logical cues tools and products show us how to use them
+	- action possibilities in the environment
+	- when an object is giving cues that go against how it really works, that is known as providing an _incorrect affordance_
+- Progressive disclosure
+	- means providing only the information people need at the moment and letting them click to learn more about specific topics as they want or need to
+	- it's worth sacrificing the minimisation of clicks to get things done metric
+- Cognitive dissonance denial
+	- not allowing any incoming information that would conflict internal belief (e.g. hardcore conspiracy theory believers)
+	- two main ways how to beat cognitive dissonance
+		- change your belief
+		- deny one of the options
