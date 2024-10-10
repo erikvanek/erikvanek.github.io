@@ -1,0 +1,286 @@
+:root {
+    --color-bg-primary: #13022C;
+    --color-bg-secondary: #2D0B5A;
+    --color-text-primary: #F8F8FF;
+    --color-text-secondary: #E6E6FA;
+    --color-text-tertiary: #B19CD9;
+    --color-border-primary: #4B0082;
+    --grid-size: 32px;
+    --cross-size: 1px;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-bg-primary), var(--color-bg-secondary));
+    color: var(--color-text-primary);
+    font-family: "Linear", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.backgrounds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-grid {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background-image:
+        linear-gradient(to right, var(--color-border-primary) var(--cross-size), transparent var(--cross-size)),
+        linear-gradient(to bottom, var(--color-border-primary) var(--cross-size), transparent var(--cross-size));
+    background-size: var(--grid-size) var(--grid-size);
+    opacity: 0.3;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+
+.reveal .slides section {
+    text-align: left;
+    padding: 20px;
+}
+
+.reveal h1 {
+    font-size: 2.5em;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+    font-size: 1.8em;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5em;
+}
+
+.reveal p {
+    font-size: 1.2em;
+    color: var(--color-text-tertiary);
+    margin-bottom: 1em;
+}
+
+.reveal ul,
+.reveal ol {
+    margin-left: 1em;
+}
+
+.reveal li {
+    margin-bottom: 0.5em;
+}
+
+.reveal pre {
+    background-color: rgba(19, 2, 44, 0.6);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.reveal code {
+    font-family: "SF Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+
+html {
+    /* --s: 150px;
+    --c1: var(--color-1);
+    --c2: var(--color-2);
+    --c3: var(--color-3);
+    --c4: var(--color-4);
+
+    --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%,
+        var(--c2) 26% 35%, var(--c1) 36% 45%, var(--c2) 46% 55%,
+        var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%,
+        var(--c2) 86% 95%, var(--color-primary) 96%; */
+}
+
+body {
+    transition: all 7s ease-in-out;
+    /* background-size: 100vw 100vh; */
+    background-blend-mode: difference;
+    overflow: hidden;
+    color: var(--color-primary);
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pattern,
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pattern {
+    opacity: 0;
+    /* todo change to 5 */
+    transition: opacity 7s ease-in-out;
+    /* background-color: var(--color-1); */
+    /* background-blend-mode: difference; */
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
+
+
+#sections {
+    /* margin-top: 2rem; */
+}
+
+#sections a,
+#sections span {
+    color: var(--color-primary) !important;
+    margin-top: 1rem;
+    padding: 0.25rem;
+}
+
+
+#sections #or,
+#sections #findme {
+    color: var(--color-semi-transparent) !important;
+    margin: 0;
+    font-size: 2rem;
+}
+
+#sections a {
+    text-decoration: none;
+    border: 0.5rem dotted var(--color-gray);
+    border-radius: 1rem;
+    transition: all .25s;
+
+    &:hover {
+        background: var(--color-2);
+        transition: all .25s;
+    }
+}
+
+@media (min-width: 600px) {
+    #content {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #content {
+        margin-top: 4rem;
+    }
+
+    #sections a,
+    #sections span {
+        margin-top: .25rem;
+        padding: .25rem;
+        border-width: .25rem;
+    }
+}
+
+#wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrapper #controls {
+    flex-direction: row;
+    gap: 1rem;
+    max-height: 4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+
+#intro {
+    animation-iteration-count: 1;
+    animation: fade-in-stay 7s;
+}
+
+#n {
+    color: var(--color-semi-transparent);
+}
+
+@keyframes fade-in-fade-out {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in-stay {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0.5;
+    }
+}
+
+button {
+    min-width: 6rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #eee;
+}
+
+button:hover {
+    border: 0.125rem solid var(--color-gray);
+}
+
+#wrapper #debug {
+    display: none;
+}
+
+.active {
+    opacity: 1;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    mix-blend-mode: plus-lighter;
+    text-shadow: var(--color-1) 4px 4px 4px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
