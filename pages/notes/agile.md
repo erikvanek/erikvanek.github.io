@@ -4,3 +4,4 @@
 - [Shape up](https://basecamp.com/shapeup)
 - [Imagining Arc](https://open.spotify.com/show/512srmQyB2LQTLVQzIsFV3) podcast
 - [Continuous discovery habits](https://www.producttalk.org/)
+- [Hugs](https://wunder.io/insights/positive-feedback-system-hugs) in Wunder

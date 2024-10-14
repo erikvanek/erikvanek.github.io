@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "dac68a7f9094b726",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "design/Design tools/Prototypes/Ecosystem & business value prototypes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60f505c86ae585a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stakeholder mapping.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "76de8e62f58ae22f",
             "type": "leaf",
             "state": {
@@ -43,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -72,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "conceptua",
+                "query": "linear",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Humans.md",
+                "file": "Stakeholder mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Humans.md",
+                "file": "Stakeholder mapping.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Humans.md"
+                "file": "Stakeholder mapping.md"
               }
             }
           }
@@ -179,12 +204,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e627b8ac2bdda371",
+  "active": "60f505c86ae585a4",
   "lastOpenFiles": [
-    "Interaction design.md",
-    "design/Design tools/Prototype.md",
-    "Humans.md",
     "design/Design.md",
+    "Interaction design.md",
+    "Stakeholder mapping.md",
+    "design/Design tools/Prototypes/Ecosystem & business value prototypes.md",
+    "design/Agencies.md",
+    "agile.md",
+    "Design portfolios.md",
+    "Humans.md",
+    "design/Design tools/Prototype.md",
     "Buzzwords.md",
     "design/Three horizons.md",
     "design/People.md",
@@ -195,7 +225,6 @@
     "tools/tools in 2024.md",
     "6 usability goals.md",
     "Ability.md",
-    "agile.md",
     "design/working with clients.md",
     "design/Resources.md",
     "design/Education.md",
@@ -204,10 +233,6 @@
     "Calendly.md",
     "design/Concepts/Research question.md",
     "Interview intro.md",
-    "design/Design methods/Interviews.md",
-    "design/Activities/Design research/Ethnographic methods.md",
-    "design/Concepts/Iteration.md",
-    "Trauma informed research.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
     "design/misc",
