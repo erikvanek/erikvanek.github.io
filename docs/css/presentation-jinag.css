@@ -1,6 +1,7 @@
 :root {
     --color-primary: #eee;
     --color-background: #222;
+    --color-light-blue: #adf;
 }
 
 .slides {
@@ -57,12 +58,13 @@ footer a {
     /* color: purple !important; */
     /* background-color: transparent !important; */
     background-color: transparent !important;
+    color: var(--color-light-blue) !important;
     border: none;
 }
 
 a {
-    border-bottom: 2px dotted lightskyblue;
-    color: lightskyblue;
+    border-bottom: 2px dotted var(--color-light-blue);
+    color: var(--color-light-blue) !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
     border-radius: 0.5rem;
     padding: 0.125rem;
@@ -217,3 +219,92 @@ figcaption {
     max-width: 20rem !important;
     max-height: 20rem !important;
 }
+
+.post-it {
+    width: 240px;
+    height: 240px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    /* font-size: .9rem; */
+    /* font-size: 1.125rem; */
+    font-family: 'Handlee', cursive;
+    /* line-height: 1.25; */
+    line-height: 1.275rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #222 !important;
+}
+
+.post-it strong {
+    color: #222;
+    font-weight: 800;
+}
+
+text {
+    color: #222;
+}
+
+.post-it h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Post-it colors with improved contrast and corner fold effect */
+.post-it.pink {
+    background-color: #dd7e95;
+    transform: rotate(-2deg);
+}
+
+.post-it.pink::before {
+    border-color: transparent #ff8ca6 transparent transparent;
+}
+
+.post-it.yellow {
+    background-color: #fff740;
+    transform: rotate(1deg);
+}
+
+.post-it.yellow::before {
+    border-color: transparent #fff620 transparent transparent;
+}
+
+.post-it.green {
+    background-color: #a8ff80;
+    transform: rotate(-1deg);
+}
+
+.post-it.green::before {
+    border-color: transparent #9aff6b transparent transparent;
+}
+
+.post-it.blue {
+    background-color: #80c7ff;
+    transform: rotate(2deg);
+}
+
+.post-it.blue::before {
+    border-color: transparent #66bdff transparent transparent;
+}
+
+/* Hover effect */
+.post-it:hover {
+    transform: scale(1.05) rotate(0);
+    z-index: 1;
+}
+
+/* Text color for better readability */
+.post-it.pink,
+.post-it.yellow,
+.post-it.green,
+.post-it.blue {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.post-it::before
