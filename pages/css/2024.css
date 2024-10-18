@@ -3,7 +3,7 @@
     --line-width: 1px;
     --border-radius: 0.25rem;
 
-    --dark-color: #348;
+    --dark-color: #b088b8;
     --darker-color: #125;
     --accent-color: #bcf;
 
@@ -13,6 +13,24 @@
     --light-gray-color: #ddd;
     --dark-text-color: #222;
     --darkest-gray-color: #444;
+    --base-size: 16px;
+    --line-width: 1px;
+    --border-radius: 0.25rem;
+    --dark-color: #4a0e4e; /* Deep purple */
+    --darker-color: #2c0d2e; /* Darker purple */
+    --accent-color: #ece; /* Bright fuchsia */
+    --white-color: #fff;
+    --text-color: #feeefe; /* Light purple */
+    --gray-color: #b088b8; /* Muted purple */
+    --light-gray-color: #d8b8e0; /* Light purple-gray */
+    --dark-text-color: #1a061c; /* Very dark purple */
+    --darkest-gray-color: #3d1f40; /* Dark purple-gray */
+    --accent-color-light: #ff80ff; /* Light fuchsia */
+    --accent-color-dark: #8f448f; /* Dark fuchsia */
+    --transition-speed: 0.3s;
+    --accent-color-light: #edf;
+    /* --accent-color-dark: #cbe; */
+    --transition-speed: 0.3s;
 }
 
 @media (min-width: 600px) {
@@ -259,14 +277,25 @@ strong {
 /* sections */
 
 section {
-    padding: calc(var(--base-size) * 1.5);
+    padding-bottom: calc(var(--base-size) * 1.5);
+    padding-left: calc(var(--base-size) * 1.5);
+    padding-right: calc(var(--base-size) * 1.5);
 }
 
 #pitch,
+#letsbuild,
 #cases,
 #partners {
     background-color: var(--text-color);
     color: var(--dark-text-color);
+}
+
+#letsbuild,
+#strengths {
+    padding-top: calc(var(--base-size) * 1.5);
+}
+#letsbuild strong {
+    color: var(--accent-color-dark);
 }
 
 /* case studies */
@@ -677,12 +706,6 @@ article {
 /* Enhanced Landing Page Styles */
 /* To be used in conjunction with the existing 2024.css stylesheet */
 
-:root {
-    --accent-color-light: #def;
-    --accent-color-dark: #9ab;
-    --transition-speed: 0.3s;
-}
-
 /* Typography enhancements */
 body {
     font-family: 'Open Sans', var(--system-ui);
@@ -698,6 +721,7 @@ h5,
 h6 {
     font-family: 'Poppins', var(--system-ui);
     line-height: 1.2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -721,7 +745,7 @@ h3 {
 /* Hero section enhancements */
 #pitch {
     text-align: center;
-    padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
+    padding: calc(var(--base-size) * 2) calc(var(--base-size) * 1);
     background: linear-gradient(135deg, var(--dark-color), var(--darker-color));
 }
 
@@ -732,11 +756,26 @@ h3 {
     margin-right: auto;
 }
 
+/* Update the gradient colors for the hero section */
+#pitch {
+    background: linear-gradient(135deg, var(--dark-color), var(--darker-color));
+}
+
+#pitch h1 {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 128, 255, 0.6),
+        /* Softer start color (light fuchsia) */ rgba(255, 255, 255, 0.8)
+            /* Softer end color */
+    );
+}
+
 #pitch h2 {
     color: var(--accent-color-light);
     max-width: 30ch;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Core strengths section enhancements */
@@ -805,6 +844,7 @@ h3 {
     color: var(--darker-color);
     padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 #cta h3 {
@@ -833,6 +873,7 @@ h3 {
         line-height: 5rem;
         background-size: 100% 9px !important;
         padding-bottom: 0.4em;
+        margin-top: 6rem;
     }
 
     h2 {
@@ -880,15 +921,15 @@ button:focus {
     display: inline;
     background-image: linear-gradient(
         to right,
-        rgba(188, 255, 255, 0.6),
-        /* Softer start color */ rgba(255, 255, 255, 0.8) /* Softer end color */
+        var(--accent-color-light),
+        /* Softer start color */ var(--accent-color) /* Softer end color */
     );
     background-repeat: no-repeat;
     background-position: 0 calc(100% - 0.1em);
     background-size: 0 2em;
     animation: gradientUnderline 1.25s ease-out forwards;
     padding-bottom: 0.2em; /* Space between text and underline */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Ensure the effect works on multiple lines */
