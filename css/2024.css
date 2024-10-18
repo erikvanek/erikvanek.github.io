@@ -1,7 +1,7 @@
 :root {
     --base-size: 16px;
     --line-width: 1px;
-    --border-radius: .25rem;
+    --border-radius: 0.25rem;
 
     --dark-color: #348;
     --darker-color: #125;
@@ -20,10 +20,9 @@
         /* Change base variable used for element variable */
         --base-size: 24px;
         --line-width: 2px;
-        --border-radius: .5rem;
+        --border-radius: 0.5rem;
     }
 }
-
 
 @media (min-width: 1000px) {
     :root {
@@ -43,7 +42,11 @@
 
 body {
     background-color: var(--dark-color);
-    background-image: linear-gradient(62deg, var(--dark-color) 0%, var(--darker-color) 100%);
+    background-image: linear-gradient(
+        62deg,
+        var(--dark-color) 0%,
+        var(--darker-color) 100%
+    );
     color: var(--text-color);
 }
 
@@ -54,7 +57,6 @@ svg {
 }
 
 /* partners */
-
 
 #partners img {
     max-width: calc(var(--base-size) * 4);
@@ -150,14 +152,14 @@ nav svg {
 
 nav span {
     position: fixed;
-    top: .75rem;
+    top: 0.75rem;
     right: 4rem;
-    color: var(--gray-color);
+    color: var(--dark-color);
     font-size: 2rem;
 }
 
 nav #home {
-    color: #bbb;
+    color: var(--dark-color);
     margin-right: 4rem;
     border: none;
 }
@@ -210,7 +212,7 @@ nav {
 
 p,
 span {
-    margin-bottom: calc(var(--base-size) * .75);
+    margin-bottom: calc(var(--base-size) * 0.75);
     line-height: calc(var(--base-size) * 1.5);
     font-size: var(--base-size);
     max-width: 60ch;
@@ -260,34 +262,6 @@ section {
     padding: calc(var(--base-size) * 1.5);
 }
 
-/* @keyframes t {
-    to {
-        background-size: 150% 100%
-    }
-}
-
-@keyframes b {
-    to {
-        background-position: -200% 0, 100% 0
-    }
-}
-
-#pitch {
-    padding-top: calc(var(--base-size) * 4);
-    color: #0000;
-}
-
-h1 {
-    --g: linear-gradient(var(--accent-color) 0 0) no-repeat;
-    background: var(--g), var(--g);
-    background-size: 0% 10%;
-    -webkit-background-clip: padding-box, text;
-    background-clip: padding-box, text;
-    animation:
-        t 1.2s .5s both,
-        b 1.2s 4.3s both;
-} */
-
 #pitch,
 #cases,
 #partners {
@@ -295,9 +269,7 @@ h1 {
     color: var(--dark-text-color);
 }
 
-
 /* case studies */
-
 
 #cases {
     display: flex;
@@ -347,7 +319,7 @@ h1 {
 
 .case-study h4 {
     font-size: 2rem;
-    margin: .5rem;
+    margin: 0.5rem;
 }
 
 .case-study img {
@@ -357,7 +329,6 @@ h1 {
 .case-study span {
     display: none;
 }
-
 
 /* features  */
 
@@ -386,7 +357,6 @@ h1 {
 }
 
 @media (min-width: 1000px) {
-
     .feats {
         flex-direction: row;
         flex-wrap: wrap;
@@ -409,7 +379,7 @@ h1 {
     max-height: 4rem;
     max-width: 4rem;
     padding: 1rem;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     background-color: var(--accent-color);
     stroke: var(--dark-color);
     border-radius: calc(var(--border-radius) * 2);
@@ -434,9 +404,10 @@ h1 {
 .mail-line {
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+    gap: 0.5rem;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    justify-content: center;
 }
 
 .mail-line svg {
@@ -446,7 +417,6 @@ h1 {
     width: var(--base-size);
     height: var(--base-size);
 }
-
 
 a {
     font-size: var(--base-size);
@@ -478,15 +448,15 @@ figure {
 }
 
 .smaller {
-    flex: 1
+    flex: 1;
 }
 
 .bigger {
-    flex: 2
+    flex: 2;
 }
 
 .half {
-    flex: 1
+    flex: 1;
 }
 
 @media (min-width: 800px) {
@@ -537,7 +507,6 @@ figure {
 .case h1 {
     margin-top: calc(var(--base-size) * 4);
     margin-bottom: calc(var(--base-size) * 1);
-
 }
 
 .case section {
@@ -565,11 +534,9 @@ figure {
     font-size: calc(var(--base-size) * 2);
 }
 
-
 .case h3 {
     font-size: calc(var(--base-size) * 1.5);
 }
-
 
 .case h4 {
     font-size: calc(var(--base-size) * 1.25);
@@ -583,9 +550,8 @@ figure {
     list-style: none;
 }
 
-
 .case li {
-    margin-bottom: calc(var(--base-size) * .5);
+    margin-bottom: calc(var(--base-size) * 0.5);
 }
 
 .no-icons li {
@@ -613,7 +579,6 @@ figure {
     }
 }
 
-
 /* case studies */
 
 .case-title {
@@ -628,7 +593,6 @@ figure {
 }
 
 @media (min-width: 800px) {
-
     .case {
         flex-direction: row;
         gap: var(--base-size);
@@ -665,7 +629,7 @@ footer {
     }
 }
 
-footer>* {
+footer > * {
     margin: 0;
 }
 
@@ -681,9 +645,8 @@ article li {
 }
 
 article li:nth-child(2n) {
-    background-color: var(--dark-color)
+    background-color: var(--dark-color);
 }
-
 
 article {
     max-width: 120ch;
@@ -692,16 +655,13 @@ article {
 /* Fun stuff */
 
 .shadow {
-    box-shadow:
-        1px 2px 2px hsl(0deg 0% 0% / 0.175),
-        2px 4px 4px hsl(0deg 0% 0% / 0.275),
-        4px 8px 8px hsl(0deg 0% 0% / 0.375);
+    box-shadow: 1px 2px 2px hsl(0deg 0% 0% / 0.175),
+        2px 4px 4px hsl(0deg 0% 0% / 0.275), 4px 8px 8px hsl(0deg 0% 0% / 0.375);
 }
 
 @media (min-width: 800px) {
     .shadow {
-        box-shadow:
-            1px 2px 2px hsl(0deg 0% 0% / 0.175),
+        box-shadow: 1px 2px 2px hsl(0deg 0% 0% / 0.175),
             2px 4px 4px hsl(0deg 0% 0% / 0.275),
             4px 8px 8px hsl(0deg 0% 0% / 0.375),
             8px 16px 16px hsl(0deg 0% 0% / 0.375);
@@ -709,9 +669,281 @@ article {
 }
 
 .mild-shadow {
-    box-shadow:
-        1px 2px 4px hsl(0deg 0% 0% / 0.01625),
-        2px 4px 8px hsl(0deg 0% 0% / 0.125),
-        4px 8px 16px hsl(0deg 0% 0% / 0.25);
+    box-shadow: 1px 2px 4px hsl(0deg 0% 0% / 0.01625),
+        2px 4px 8px hsl(0deg 0% 0% / 0.125), 4px 8px 16px hsl(0deg 0% 0% / 0.25);
     /* 8px 16px 16px hsl(0deg 0% 0% / 0.375); */
+}
+
+/* Enhanced Landing Page Styles */
+/* To be used in conjunction with the existing 2024.css stylesheet */
+
+:root {
+    --accent-color-light: #def;
+    --accent-color-dark: #9ab;
+    --transition-speed: 0.3s;
+}
+
+/* Typography enhancements */
+body {
+    font-family: 'Open Sans', var(--system-ui);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', var(--system-ui);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: calc(var(--base-size) * 3.5);
+    margin: calc(var(--base-size) * 2) 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 12rem;
+}
+
+h2 {
+    font-size: calc(var(--base-size) * 2.8);
+    margin: calc(var(--base-size) * 2) 0;
+    color: var(--accent-color);
+}
+
+h3 {
+    font-size: calc(var(--base-size) * 2.2);
+    margin-bottom: calc(var(--base-size) * 1.5);
+}
+
+/* Hero section enhancements */
+#pitch {
+    text-align: center;
+    padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
+    background: linear-gradient(135deg, var(--dark-color), var(--darker-color));
+}
+
+#pitch h1 {
+    color: var(--white-color);
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pitch h2 {
+    color: var(--accent-color-light);
+    max-width: 30ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Core strengths section enhancements */
+.feats {
+    margin-top: calc(var(--base-size) * 3);
+}
+
+.feat {
+    transition: transform var(--transition-speed) ease,
+        box-shadow var(--transition-speed) ease;
+}
+
+.feat h4 {
+    color: var(--accent-color);
+    font-size: calc(var(--base-size) * 1.3);
+}
+
+/* Case studies section enhancements */
+#cases {
+    background-color: var(--white-color);
+    padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
+}
+
+.case-study {
+    transition: transform var(--transition-speed) ease,
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.case-study h4 {
+    transition: color var(--transition-speed) ease;
+}
+
+.case-study:hover h4 {
+    color: var(--darker-color);
+}
+
+/* Partners section enhancements */
+#partners {
+    background-color: var(--text-color);
+    padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
+}
+
+#partners-list {
+    margin-top: calc(var(--base-size) * 2);
+}
+
+#partners a {
+    transition: transform var(--transition-speed) ease,
+        background-color var(--transition-speed) ease;
+}
+
+#partners a:hover {
+    transform: scale(1.05);
+}
+
+/* Call-to-action section enhancements */
+#cta {
+    background-color: var(--accent-color);
+    color: var(--darker-color);
+    padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
+    text-align: center;
+}
+
+#cta h3 {
+    color: var(--darker-color);
+    font-size: calc(var(--base-size) * 2.5);
+    margin-bottom: calc(var(--base-size) * 2);
+}
+
+#cta .contact {
+    font-size: calc(var(--base-size) * 1.5);
+    color: var(--darker-color);
+    border-bottom: 2px solid var(--darker-color);
+    transition: color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease;
+}
+
+#cta .contact:hover {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: calc(var(--base-size) * 2.5);
+        line-height: 5rem;
+        background-size: 100% 9px !important;
+        padding-bottom: 0.4em;
+    }
+
+    h2 {
+        font-size: calc(var(--base-size) * 2);
+    }
+
+    h3 {
+        font-size: calc(var(--base-size) * 1.8);
+    }
+
+    #pitch,
+    #cases,
+    #partners,
+    #cta {
+        padding: calc(var(--base-size) * 2) calc(var(--base-size));
+    }
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Performance optimizations */
+.case-study img {
+    will-change: transform;
+}
+
+/* ANIMATION */
+/* Corrected Multi-line Gradient Underline Animation */
+
+@keyframes gradientUnderline {
+    0% {
+        background-size: 20% 20px;
+    }
+    100% {
+        /* background-size: 100% 100%; */
+        background-size: 100% 20px;
+    }
+}
+
+#pitch h1 {
+    display: inline;
+    background-image: linear-gradient(
+        to right,
+        rgba(188, 255, 255, 0.6),
+        /* Softer start color */ rgba(255, 255, 255, 0.8) /* Softer end color */
+    );
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% - 0.1em);
+    background-size: 0 2em;
+    animation: gradientUnderline 1.25s ease-out forwards;
+    padding-bottom: 0.2em; /* Space between text and underline */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the effect works on multiple lines */
+#pitch h1 {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+nav {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav #home {
+    /* color: var(--accent-color); */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav #home:hover {
+    color: var(--darker-color);
+}
+
+.hamburger {
+    color: var(--accent-color);
+}
+
+#cta {
+    background-color: var(--darker-color);
+    color: var(--white-color);
+}
+
+#cta h3 {
+    color: var(--accent-color);
+}
+
+#cta .contact {
+    color: var(--white-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#cta .contact:hover {
+    color: var(--accent-color);
+    border-color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    #pitch {
+        padding-top: calc(var(--base-size) * 6);
+    }
+}
+
+nav a {
+    color: var(--dark-color);
 }
