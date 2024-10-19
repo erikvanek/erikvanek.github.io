@@ -4,71 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c922c0e3545eda48",
+        "id": "4ded076a251e3d88",
         "type": "tabs",
         "children": [
           {
-            "id": "e627b8ac2bdda371",
+            "id": "0f2bc047d49c03bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Humans.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dac68a7f9094b726",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Design tools/Prototypes/Ecosystem & business value prototypes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60f505c86ae585a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stakeholder mapping.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "76de8e62f58ae22f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Interaction design.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ebfaaa4fd1cfe96c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Design.md",
+                "file": "random/Inspiration.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stakeholder mapping.md",
+                "file": "random/Inspiration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stakeholder mapping.md",
+                "file": "random/Inspiration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stakeholder mapping.md"
+                "file": "random/Inspiration.md"
               }
             }
           }
@@ -204,7 +155,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "60f505c86ae585a4",
+  "active": "0f2bc047d49c03bd",
   "lastOpenFiles": [
     "design/Design.md",
     "Interaction design.md",
