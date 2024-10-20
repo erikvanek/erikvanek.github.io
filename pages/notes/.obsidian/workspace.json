@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4ded076a251e3d88",
+        "id": "af1009d637cd936d",
         "type": "tabs",
         "children": [
           {
-            "id": "0f2bc047d49c03bd",
+            "id": "40cda0e3be999dc5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "random/Inspiration.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "random/Inspiration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "random/Inspiration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "random/Inspiration.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,8 +147,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f2bc047d49c03bd",
+  "active": "40cda0e3be999dc5",
   "lastOpenFiles": [
+    "random/Inspiration.md",
     "design/Design.md",
     "Interaction design.md",
     "Stakeholder mapping.md",
@@ -183,7 +176,6 @@
     "Recruiting for a research.md",
     "Calendly.md",
     "design/Concepts/Research question.md",
-    "Interview intro.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
     "design/misc",
