@@ -1,4 +1,4 @@
-I offer my services as a service designer. Clients I'm interested in are small to mid-sized startups, public services, companies with purpose or NGOs.
+I offer my services as a service designer. Clients I'm interested in are small to mid-sized startups, public services, companies with purpose or NGOs. Most often they would come to me now knowing what service design can do for them and also they might not be able to articulate what their problem is. They just have an itch but they don't necesarily know where to start or pinpoint what the exact problem is. My site should give them some hints of what they might want to achieve and what properly done service design activities can bring them. Show don't tell principle should be helpful. Consider the fact that they might not know the design language so keep the language simple and avoid any design-related words.
 
 Main aim of my website is to showcase my unique skillset, experience and what I managed to achieve with my clients so far.
 

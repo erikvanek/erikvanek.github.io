@@ -1,0 +1,1 @@
+- copied free versions from font awesome
