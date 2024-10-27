@@ -233,7 +233,11 @@ span {
     margin-bottom: calc(var(--base-size) * 0.75);
     line-height: calc(var(--base-size) * 1.5);
     font-size: var(--base-size);
-    max-width: 60ch;
+}
+
+.case p,
+#letsbuild p {
+    max-width: 55ch;
 }
 
 h1 {
@@ -368,6 +372,36 @@ section {
     border-radius: var(--border-radius);
     padding: var(--base-size);
     border: var(--line-width) solid var(--dark-color);
+    flex-direction: column;
+}
+
+.feat > svg {
+    display: none;
+}
+
+.feat div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+    .feat > svg {
+        display: none;
+    }
+
+    .feat > div > svg {
+        display: none;
+    }
+
+    .feat {
+        flex-direction: row;
+    }
+
+    .feat div {
+        gap: 1rem;
+    }
 }
 
 .feat span {
@@ -388,13 +422,13 @@ section {
 @media (min-width: 1000px) {
     .feats {
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-evenly;
     }
 
     .feat {
         flex-direction: column;
-        max-width: 25%;
+        /* max-width: 25%; */
         border: var(--line-width) solid var(--accent-color);
     }
 
@@ -405,8 +439,8 @@ section {
 
 .feat svg {
     flex: 1;
-    max-height: 4rem;
-    max-width: 4rem;
+    height: 4rem;
+    width: 4rem;
     padding: 1rem;
     margin: 0 0.5rem;
     background-color: var(--accent-color);
@@ -414,9 +448,9 @@ section {
     border-radius: calc(var(--border-radius) * 2);
 }
 
-.feat * {
+/* .feat * {
     flex: 2;
-}
+} */
 
 /* call to action  */
 
@@ -533,18 +567,17 @@ figure {
     flex-direction: column;
 }
 
-.case h1 {
+.case h2 {
     margin-top: calc(var(--base-size) * 4);
-    margin-bottom: calc(var(--base-size) * 1);
+    margin-bottom: calc(var(--base-size) * 2);
+    color: var(--white-color);
 }
 
 .case section {
     padding-top: 0;
 }
 
-.case h2,
 .case h3,
-.case h2,
 .case h4 {
     color: var(--white-color);
     margin-top: calc(var(--base-size) / 2);
@@ -987,4 +1020,32 @@ nav #home:hover {
 
 nav a {
     color: var(--dark-color);
+}
+
+.calendly {
+    padding: 0.5rem 2rem;
+    flex: 1;
+    margin: 2rem;
+    display: inline-block;
+    border: 4px solid var(--accent-color-dark);
+    background-color: var(--accent-color-light);
+    color: var(--darker-color);
+    border-radius: 0.5rem;
+    transition: all 0.125s ease-in-out;
+    font-size: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+    .calendly {
+        align-self: center;
+        /* width: 16rem; */
+        padding: 1rem 6rem;
+        font-size: 2rem !important;
+    }
+}
+
+.calendly:hover {
+    color: var(--accent-color-dark);
+    transition: all 0.125s ease-in-out;
+    /* border-color: var(--accent-color);   */
 }
