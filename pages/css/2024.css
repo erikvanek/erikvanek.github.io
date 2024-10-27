@@ -1049,3 +1049,7 @@ nav a {
     transition: all 0.125s ease-in-out;
     /* border-color: var(--accent-color);   */
 }
+
+html {
+    scroll-behavior: smooth;
+  }
