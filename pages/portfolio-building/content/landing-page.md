@@ -28,10 +28,11 @@ One-size-fits-all solutions rarely work. That's why I begin each project by gett
 
 Check out my project portfolio for real-world examples of how this approach has helped organizations reach their goals.
 
-## Get in touch
+## Let’s create something great ✨
 
-Need a new perspective on your project? Whether it's new or existing, let's collaborate to increase value for your organization.
+Want to bring your idea to life? Schedule a chat to explore how we can create something valuable together.
 
-Schedule a quick chat via Calendly.
+Book a quick chat
 
-Prefer email? Drop me a line at [email address]. Let's create something great together.
+Prefer email?
+me@erikvanek.com

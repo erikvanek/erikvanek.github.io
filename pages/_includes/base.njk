@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Erik Vaněk">
+        <meta name="keywords" content="{{ keywords }}">
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Erik Vaněk | {{title}}</title>
+        <meta name="description" content="{{ description }}">
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta
+            name="og:image"
+            itemprop="image primaryImageOfPage"
+            content="/zen-circle.ico"
+/>
+        <link rel="icon" type="image/x-icon" sizes="64x64" href="/zen-circle.ico">
+        <meta name="theme-color" content="#6B0F6B">
+
+        {# Open Graph / Facebook #}
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{ site.url }}{% if featured_image %}{{ featured_image }}{% else %}/images/default-og.jpg{% endif %}">
+
+        {# Twitter #}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ description }}">
+        <meta name="twitter:image" content="{{ site.url }}{% if featured_image %}{{ featured_image }}{% else %}/images/default-og.jpg{% endif %}">
+
+        {# Canonical URL #}
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+        {# Performance & PWA #}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    </head>
+    <body>
+        {# Navigation #}
+        {% include "navbar.njk" %}
+
+        {# Main content area #}
+        <main id="main-content">
+            {# Allow flexible content injection #}
+            {{ content | safe }}
+        </main>
+
+        {# Footer #}
+        {% include "footer.njk" %}
+
+        {# Common scripts that should appear on every page #}
+        {% include "scripts.njk" %}
+
+        {# Page-specific scripts block that can be overridden in templates #}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
