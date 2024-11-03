@@ -1,4 +1,4 @@
-- storytelling sessions or walk-through sessions or complex service simulation involving multiple actors
+- [[Storytelling]] sessions or walk-through sessions or complex service simulation involving multiple actors
 ## Include
 - actors
 	- people involved with a service - customers, employers, ...

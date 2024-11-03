@@ -1,0 +1,16 @@
+---
+resources:
+  - https://www.youtube.com/watch?v=gsqMLmaLUCY
+---
+- beginning
+	- set expectations
+- Telling a compelling story is formed of three resources
+	- Situation
+		- starting point
+	- Complication
+		- drama
+	- Solution
+		- resolution (hopefully involving those for whom I tell the story)
+- at the end
+	- give something to take away
+	- sum up expectations, what was delivered and how it matches those expectations

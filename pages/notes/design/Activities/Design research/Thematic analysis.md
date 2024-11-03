@@ -12,7 +12,7 @@ sources:
 - _There's no one way to do TA_
 - if possible, include others to the process - during coding, finding themes or drawing insights from them
 - gives an answer to the research question by a set of themes
-- _use storytelling to present a theme_
+- _use [[Storytelling]] to present a theme_
 ## Theme
 - a description of a belief, practice, need or other phenomenon that is discovered from research data
 - when identifying themes make sure they are well backed by the data
