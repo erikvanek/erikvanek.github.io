@@ -23,7 +23,7 @@ resources:
 	- epic title should not be vague but way more specific
 	- __the problem describes the shift in customer behavior__
 - _The goal of problem framing is not what to do, but what not to do and to remove the distraction from the most efficient thing to do_
-- storytelling gives problem a life and sustains it
+- [[Storytelling]] gives problem a life and sustains it
 - 5 Ws:
 	- What
 		- What is the focus of the problem?
