@@ -11,8 +11,14 @@
             "id": "40cda0e3be999dc5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Humans.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Humans"
             }
           }
         ]
@@ -35,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -66,11 +78,12 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Humans.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,7 +111,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Humans"
             }
           },
           {
@@ -106,9 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Humans.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Humans"
             }
           },
           {
@@ -119,7 +138,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -127,7 +148,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Humans.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Humans"
             }
           }
         ]
@@ -149,17 +174,22 @@
   },
   "active": "40cda0e3be999dc5",
   "lastOpenFiles": [
+    "feature.md",
+    "Humans.md",
+    "agile.md",
+    "Buzzwords.md",
+    "Axial coding.md",
+    "Ability.md",
+    "6 usability goals.md",
+    "img/work.jpg",
     "random/Inspiration.md",
     "design/Design.md",
     "Interaction design.md",
     "Stakeholder mapping.md",
     "design/Design tools/Prototypes/Ecosystem & business value prototypes.md",
     "design/Agencies.md",
-    "agile.md",
     "Design portfolios.md",
-    "Humans.md",
     "design/Design tools/Prototype.md",
-    "Buzzwords.md",
     "design/Three horizons.md",
     "design/People.md",
     "Memory.md",
@@ -167,21 +197,16 @@
     "design/Service design.md",
     "design/Design tools/Design tools.md",
     "tools/tools in 2024.md",
-    "6 usability goals.md",
-    "Ability.md",
     "design/working with clients.md",
     "design/Resources.md",
     "design/Education.md",
     "books/mismatch.md",
     "Recruiting for a research.md",
-    "Calendly.md",
-    "design/Concepts/Research question.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
     "design/misc",
     "design/resources/Informing_Our_Intuition.pdf",
     "tools",
-    "img/work.jpg",
     "fomo",
     "ranomcanvas.canvas",
     "img/20230622_171524.jpg",
