@@ -19,3 +19,10 @@
 - Linear
  ## articles
  - [https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2](feature factory)
+
+## articles
+	- [https://browsercompany.substack.com/p/the-age-of-the-app-is-over](the age of the app is over)
+	- [https://thebrowser.company/values/#assume](Arc company values)
+
+## videos
+- https://www.youtube.com/watch?v=qixx7ESrJQg&t=929s

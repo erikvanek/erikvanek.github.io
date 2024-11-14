@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Priority Matrix</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        #taskInput {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex-grow: 1;
+            max-width: 300px;
+        }
+
+        #addTask {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #addTask:hover {
+            background-color: #45a049;
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            height: 70vh;
+        }
+
+        .quadrant {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .quadrant h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .task {
+            background-color: #e9ecef;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .task.dragging {
+            opacity: 0.5;
+        }
+
+        /* Drag and drop visual feedback */
+        .quadrant.drag-over {
+            background-color: #f8f9fa;
+            border: 2px dashed #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button id="addTask">Add Task</button>
+        </div>
+        
+        <div class="matrix">
+            <div class="quadrant" data-quadrant="urgent-important">
+                <h2>Urgent & Important</h2>
+            </div>
+            <div class="quadrant" data-quadrant="not-urgent-important">
+                <h2>Not Urgent & Important</h2>
+            </div>
+            <div class="quadrant" data-quadrant="urgent-not-important">
+                <h2>Urgent & Not Important</h2>
+            </div>
+            <div class="quadrant" data-quadrant="not-urgent-not-important">
+                <h2>Not Urgent & Not Important</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Task counter for unique IDs
+        let taskCounter = 0;
+
+        // DOM Elements
+        const taskInput = document.getElementById('taskInput');
+        const addTaskButton = document.getElementById('addTask');
+        const quadrants = document.querySelectorAll('.quadrant');
+
+        // Add new task
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText === '') return;
+
+            const task = createTaskElement(taskText);
+            quadrants[0].appendChild(task); // Add to first quadrant by default
+            taskInput.value = '';
+            setupDragAndDrop(task);
+        }
+
+        // Create task element
+        function createTaskElement(text) {
+            const task = document.createElement('div');
+            task.className = 'task';
+            task.draggable = true;
+            task.id = `task-${taskCounter++}`;
+            task.textContent = text;
+            return task;
+        }
+
+        // Setup drag and drop for a task
+        function setupDragAndDrop(task) {
+            task.addEventListener('dragstart', (e) => {
+                task.classList.add('dragging');
+                e.dataTransfer.setData('text/plain', task.id);
+            });
+
+            task.addEventListener('dragend', () => {
+                task.classList.remove('dragging');
+            });
+        }
+
+        // Setup quadrant drop zones
+        quadrants.forEach(quadrant => {
+            quadrant.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                quadrant.classList.add('drag-over');
+            });
+
+            quadrant.addEventListener('dragleave', () => {
+                quadrant.classList.remove('drag-over');
+            });
+
+            quadrant.addEventListener('drop', (e) => {
+                e.preventDefault();
+                quadrant.classList.remove('drag-over');
+                
+                const taskId = e.dataTransfer.getData('text/plain');
+                const task = document.getElementById(taskId);
+                if (task) {
+                    quadrant.appendChild(task);
+                }
+            });
+        });
+
+        // Event listeners
+        addTaskButton.addEventListener('click', addTask);
+        taskInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') addTask();
+        });
+    </script>
+</body>
+</html>

@@ -1,38 +1,513 @@
 ---
 title: Disri 2024 přednáška
 date: 2023-11-15
-layout: presentation.njk
+<!-- layout: presentation.njk -->
+layout: presentation-jinag.njk
+
 permalink: /{{page.fileSlug}}/
 eleventyExcludeFromCollections: true
 description: Prezentace do předmětu DISRI na KISK FF MU 2024
 ---
 
-Nastavení očekávání
+<section>
+    <h1 class="r-fit-text">Vývoj (digitálních) produktů</h1>
+    <!-- <h2>aneb jak design potkává</h2>
+    <h2>vývoj a byznys</h2> -->
+    <br>
+    <br>
+    <h4>Erik Vaněk | <a href="erikvanek.com">erikvanek.com</a></h4>
+    <h4>15. 11. 2024, KISK FF MUNI</h4>
+</section>
+
+<section>
+    <h2>Co nás dnes čeká?</h2>
+    <ul>
+        <li>Představení</li>
+        <li>Výlet do historie</li>
+        <li>Rozmach agilních přístupů</li>
+        <li>Role a struktura</li>
+        <li>Nové odnože</li>
+        <li>Co s tím dál?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Cíl: představit moderní<br> způsoby vývoje (nejen) <br>digitálních produktů</h1>
+</section>
+
+<section>
+    <h1>Disclaimer</h1>
+    <ul>
+        <li>
+            Ptejte se kdykoli pls!
+        </li>
+        <li>Anglicismy
+            <ul>
+                <li>Někdy je těžký překládat pojmy – co nešlo dávám do uvozovek</li>
+            </ul>
+        </li>
+        <li>Subjektivní perspektiva
+            <ul>
+                <li>Vítám kritiku 🙌</li>
+            </ul>
+        </li>
+        <li>Možná nuda pro lidi, který to nezajímá</li>
+        <li>Generické maskulinum</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Zdarec! 👋</h1>
+</section>
+
+<section>
+    <h1>Něco o mně</h1>
+    <ul>
+        <li>Cca 10 let v technologických firmách
+            <ul>
+                <li>engineering a vedení týmů</li>
+                <li>design</li>
+                <li>product management</li>
+            </ul>
+        </li>
+        <li>Odvětví
+            <ul>
+                <li>Finančnictví</li>
+                <li>Pohostinost</li>
+                <li><strong>Hydroponie</strong></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section data-background="../img/box-in-system.jpg" data-background-size="contain">
+    <h1 class="r-fit-text" style="margin-left: 2px; text-shadow: 4px 4px 4px black;">DIY 🌿</h1>
+</section>
+
+<section data-background="../img/leaf.jpg" data-background-size="contain">
+</section>
+
+
+<section data-background="../presentations/img/infarm/store-2.jpg">
+    <h1 class="r-fit-text" style="margin-left: 2px; text-shadow: 4px 4px 4px black;">Infarm 🌿</h1>
+</section>
+
+
+<section data-background="../presentations/img/infarm/dc-hub.webp">
+    <h1 class="r-fit-text" style="margin-left: 2px; text-shadow: 4px 4px 4px black;">🔥 🔥 🔥</h1>
+</section>
+
+<section data-background="../presentations/img/infarm/hub-render.webp">
+    <h1 class="r-fit-text" style="margin-left: 2px; text-shadow: 4px 4px 4px black;">🚀 🚀 🚀</h1>
+</section>
+
+
+<section data-background="../presentations/img/infarm/bust.png" data-background-size="contain">
+</section>
+
+<section>
+    <h1>Co teď?</h1>
+    <ul>
+        <li>Service design na volné noze
+            <ul>
+                <li>vězeňství</li>
+                <li>předškolní péče o děti</li>
+                <li>sociální a zdravotní služby</li>
+                <li>nezisk</li>
+                <li>startupy</li>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Koho tu dnes máme?</h1>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Návrat do devadesátek 🌈</h1>
+</section>
+
+<section>
+    <img src="../presentations/img/waterfall.png" alt="" />
+    <p>Kde je problém?</p>
+    <p>Source: <a
+            href="https://martinfowler.com/bliki/WaterfallProcess.html">https://martinfowler.com/bliki/WaterfallProcess.html</a>
+    </p>
+</section>
+
+<section>
+    <h1>Klíčové charakteristiky </h1>
+    <ul>
+        <li>Detailní plánování</li>
+        <li>Lineární proces</li>
+        <li>"Kaskáda"</li>
+        <li>Validace probíhá úplně na konci</li>
+        <li>Chybí důraz na člověka</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Vodopád 👎</h1>
+    <ul>
+        <li>Závisí na "uprfont" návrhu</li>
+        <li>Pomalé dodání a dlouhé zpětnovazebné smyčky</li>
+        <li>"Siloed" komunikace</li>
+        <li>Blokuje kolektivní inteligenci a "co-creation"</li>
+        <li>Neumí reagovat na konstantní změnu</li>
+        <li>Zabraňuje průběžnému učení</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Vodopád 👍</h1>
+    <p>Vodopád není <strong>zcela</strong> špatný. Může fungovat pro <strong>izolované</strong> a hodně konkrétní
+        pracovní položky. Čím širší a vágnější je zadání, tím míň bude fungovat.</p>
+    <br>
+    <ul>
+        <li>Dnes běžný v "tradičním" inženýrství</li>
+        <li>Bezpečný nástroj pro rigidní manažerstvo 🙃</li>
+    </ul>
+</section>
+
+
+<section>
+    <h1 class="r-fit-text">Nultá léta</h1>
+</section>
+
+<section data-background="../presentations/img/agile-manifesto.png" data-background-size="contain">
+    <p>Source: </p><a href="https://agilemanifesto.org/" target="_blank">https://agilemanifesto.org/</a>
+</section>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1iccpf2eN1Q?si=19HahyrnLnh-h3iO&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+<section data-autoplay
+    data-background-iframe="https://www.youtube.com/embed/1iccpf2eN1Q?si=19HahyrnLnh-h3iO&amp;controls=0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+</section>
+
+<section data-background="../presentations/img/agile-wiki.png" data-background-size="contain">
+</section>
+
+
+<section>
+    <h1>Agile všechno!</h1>
+    <ul>
+        <li>Buzzword?</li>
+        <li>Spíš mindset
+            <ul>
+                <li>Rozsekání monolitického procesu do dílčích produktových přírůstků – <strong>iterací</strong></li>
+            </ul>
+        </li>
+        <li>Zkracuje zpětnovazebné smyčky</li>
+        <li>Stále víc o <strong>inženýrství</strong> než o lidech 💁‍♀️</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Scrum</h1>
+</section>
+
+<section data-background="../presentations/img/scrum.png" data-background-size="contain">
+</section>
+
+<section>
+    <h1>Role ve scrumu</h1>
+    <ul>
+        <li>Product owner</li>
+        <li><em>Scrum master</em>
+            <ul>
+                <li>Subjektivní perspektiva – snaha o vyplnění chybějících "soft" kompetencí</li>
+            </ul>
+        </li>
+        <li>Vývojáři</li>
+        <li>Design</li>
+        <li>Kontrola kvality</li>
+    </ul>
+</section>
+
+<section>
+    <h1>"Scrum by the book"</h1>
+    <ul>
+        <li><strong>Sprint</strong> – týdenní, ob-týdenní, měsíční iterace</li>
+        <li>Typické rituály:
+            <ul>
+                <li>Sprint planning</li>
+                <li>Retrospektiva</li>
+                <li>Stand-up</li>
+                <li>Grooming</li>
+                <li><em>Planning poker</em></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section data-background="../presentations/img/scrum-diagram.webp" data-background-size="contain">
+</section>
+
+<section>
+    <h1>Scrum obecně</h1>
+    <ul>
+        <li>Dobrej předpis</li>
+        <li>Nesedí všem</li>
+        <li>Dá se ohnout blbě i dobře
+            <ul>
+                <li>Anebo taky překroutit</li>
+            </ul>
+        </li>
+        <li>Pořád hodně engineering-centrický</li>
+        <li>Dobrý standard</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Co se vám honí hlavou?</h1>
+</section>
+
+<section>
+    <h1>Proč?</h1>
+    <ul>
+        <li>Dělají si to po svým</li>
+        <li>Jsou úspěšný finančně (alespoň 2 z nich)</li>
+        <li>Důraz na interní kulturu
+            <ul>
+                <li>nábor, well-being, spolupráce</li>
+            </ul>
+        </li>
+        <li><em>"Design-first"</em> organizace</li>
+    </ul>
+</section>
+
+<style>
+    #logos img {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 2rem;
+    }
+
+    #logos {
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+</style>
+
+<section>
+    <h1>3 konkrétní příklady</h1>
+    <div style="width: 100%; height: 100%; display: flex;" id="logos" class="wtf">
+        <img src="../presentations/img/basecamp-logo.svg" alt="" style="fill: white; background-color: #eee;" />
+        <img src="../presentations/img/linear-logo.avif" alt="" />
+        <img src="../presentations/img/arc-logo.svg" alt="" />
+    </div>
+</section>
+
+<section>
+    <h1><a href="https://basecamp.com/" target="_blank">Basecamp</a></h1>
+</section>
+
+<section>
+    <h1><a href="https://linear.app/" target="_blank">Linear.app</a></h1>
+</section>
+
+<section>
+    <h1><a href="https://thebrowser.company/">The Browser Company</a></h1>
+</section>
+
+<section>
+    <h1>
+        AI aka na vlně hype-u 🌊
+    </h1>
+    <ul>
+        <li>Gamechanger</li>
+        <li>Rychlý prototyping – když chci předat myšlenku, tak nemusím čekat na vývoj</li>
+        <li>Stačí mi znát strašně málo, např. u webu
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Interaktivní demo</h1>
+</section>
+
+<section>
+    <h1>Doporučení</h1>
+    <ul>
+        <li>Naučte se jazyk ostatních</li>
+        <li>Porozumějte své platformě
+            <ul>
+                <li>Mobilní platformy</li>
+                <li>Web</li>
+                <li>Desktop</li>
+            </ul>
+        </li>
+        <li>Investujte do "soft skills"</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Chcete víc do hloubky?</h1>
+    <ul>
+        <li><a href="https://is.muni.cz/predmet/phil/jaro2025/ISKM48" target="_blank">Service design workshop '25</a>
+        </li>
+        <li>Budeme
+            <ul>
+                <li>koukat na dnešní témata víc do hloubky</li>
+                <li>hledat cesty pro efektivní spolupráci v týmu</li>
+                <li>hrát si s AI jako nástrojem prototypování</li>
+                <li>simulovat prostředí běžného projektového týmu</li>
+            </ul>
+    </ul>
+</section>
+
+
+<section data-background-video-loop data-background-video="../../videos/kombucha-compressed.mp4">
+    <h2 style="text-align: center;">Dík za pozornost!</h2>
+    <h1>Máte otázky? 🌈</h1>
+</section>
+
+
+<!-- 
+<section>
+    <h1>Teď to bude <em>zajímavý</em></h1>
+</section> -->
+
+
+<!-- <section>
+    <h1 class="r-fit-text">Let's get a bit hands on</h1>
+
+    <p><em>Build a GPT-like tool that helps judge assistents work through their paperwork faster. Their work is often
+            quite
+            repetitive, boring and it's error-prone.</em></p>
+
+    <ul>
+        <li>Your task:
+            <ul>
+                <li>Divide into groups of 5-7</li>
+                <li>Build a team of 6 people to build this product</li>
+                <li>Who must be in to succeed?</li>
+                <li>5 minutes</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2 class="r-fit-text">How does your team look like and why?</h2>
+</section>
+
+<section>
+    <h1>
+        Groupwork continued
+    </h1>
+    <br>
+    <p>What are first 3 steps the team has to do once they start working together?</p>
+    <br>
+    <p>5 mins again</p>
+</section>
+
+<section>
+    <h2 class="r-fit-text">What does your team start with?</h2>
+</section>
+
+<section>
+    <h1>My answers</h1>
+    <ul>
+        <li>Team structure:
+            <ul>
+                <li>Product manager</li>
+                <li>Experience designer</li>
+                <li>AI engineer</li>
+                <li>Frontend engineer</li>
+                <li>Backend engineer</li>
+                <li>Automation/devops engineer</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <h1>3 initial activities</h1>
+    <ul>
+        <li>Define <strong>ways of working</strong> together, communication modes, ...
+            <ul>
+                <li>Everyone brings different perspectives</li>
+                <li>The sooner they are aligned, the smoother it is</li>
+            </ul>
+        </li>
+        <li>
+            Decide <strong>team rituals and sprint cadence</strong>
+            <ul>
+                <li>Agile teams work in iterations whose duration may vary</li>
+                <li>Teams usually have rituals they like to follow to keep structure</li>
+            </ul>
+        </li>
+        <li>
+            Decide the <strong>MVP</strong> shape
+            <ul>
+                <li>What are the must have features?</li>
+                <li>What is the highest priority?</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>Variace na diamanty</h1>
+    <ul>
+        <li>Triple diamond</li>
+        <li>Dual track agile</li>
+    </ul>
+</section>
+
+
+<section>
+    - double diamond
+    - dual double diamond
+</section>
+
+<section>
+    Modern teams toolbox
+    - continuous discovery
+    - continuous delivery
+    - feature flags
+    - A/B / multi-variant testing
+</section>
+
+<section>
+    Nastavení očekávání
     - rád bych to měl víc dynamický a ne statický frontál
-    
-Kdo su
+
+    Kdo su
     - videjko od infarmu
 
 
-Rough
+    Rough
     - začnu trošku od boku
-        - Terka na after party konference
-        - vidíme se podruhé v životě, poprvé jsme řešili justici
-        - najednou dělá na soudě a bavíme se o tom jaký to je
-        - slovo dalo slovo a byli jsme u AI
-        - "Co kdyby existoval nástroj, který ... ?"
+    - Terka na after party konference
+    - vidíme se podruhé v životě, poprvé jsme řešili justici
+    - najednou dělá na soudě a bavíme se o tom jaký to je
+    - slovo dalo slovo a byli jsme u AI
+    - "Co kdyby existoval nástroj, který ... ?"
 
-        Trošku bych si chtěl nacítit jak to máte 
+    Trošku bych si chtěl nacítit jak to máte
 
-        Teď bych je rozdělil do skupinek a dal jim 2x5 minut na to si vydefinovat
-            - jaké role a kompetence bych pro tvorbu takového nástroje potřeboval v týmu? (dejme tomu, že tým má 6 lidí)
-                - vůbec nevadí jestli nemáte zkušenosti, nebojte se být divocí
-            - teď máme tým - jaké jsou první kroky, které ten tým potřebuje učinit?
+    Teď bych je rozdělil do skupinek a dal jim 2x5 minut na to si vydefinovat
+    - jaké role a kompetence bych pro tvorbu takového nástroje potřeboval v týmu? (dejme tomu, že tým má 6 lidí)
+    - vůbec nevadí jestli nemáte zkušenosti, nebojte se být divocí
+    - teď máme tým - jaké jsou první kroky, které ten tým potřebuje učinit?
 
-        Ať už sou to digitální, fyzické produkty nebo služby, tak vždycky plníme lidem potřeby
-        - 
+    Ať už sou to digitální, fyzické produkty nebo služby, tak vždycky plníme lidem potřeby
+    -
 
 
 
-        Teaser na předmět
-            - produktový trio a moderní týmová spolupráce na (digitálních produktech)
+    Teaser na předmět
+    - produktový trio a moderní týmová spolupráce na (digitálních produktech)
+</section> -->

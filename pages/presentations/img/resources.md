@@ -1,0 +1,10 @@
+- facepalm.jpg
+    - https://cs.wikipedia.org/wiki/Facepalm
+- waterfall.png
+    - https://martinfowler.com/bliki/WaterfallProcess.html
+- agile-manifesto.png
+    - https://agilemanifesto.org/
+- agile-vs-waterfall.png
+    - https://www.researchgate.net/figure/Agile-Project-Management-vs-Waterfall_fig7_320775359
+- scrum-diagram.webp
+    - https://blog.stackademic.com/excelling-in-software-development-with-scrum-methodology-part-2-e2d0b29437ce
