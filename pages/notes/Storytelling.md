@@ -14,3 +14,6 @@ resources:
 - at the end
 	- give something to take away
 	- sum up expectations, what was delivered and how it matches those expectations
+- different arcs
+	- https://prezlab.com/what-narrative-arc-best-suits-your-presentation/
+	- https://www.ideou.com/blogs/inspiration/how-to-choose-a-story-arc-for-your-presentation

@@ -41,7 +41,8 @@ module.exports = function (eleventyConfig) {
         'njk',
         'xml',
         'webp',
-        'txt'
+        'txt',
+        'avif'
     ]);
 
     return {
