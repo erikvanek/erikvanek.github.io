@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Priority Matrix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .input-area {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 12px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        #taskInput {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            flex-grow: 1;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
+        }
+
+        #taskInput:focus {
+            outline: none;
+            border-color: #94a3b8;
+        }
+
+        #addTask {
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        #addTask:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        #addTask:active {
+            transform: translateY(0px);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .quadrant {
+            border-radius: 12px;
+            padding: 24px;
+            min-height: 350px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .quadrant:hover {
+            transform: translateY(-2px);
+        }
+
+        #urgent-important {
+            background-color: #fef2f2;
+            border: 2px solid #fee2e2;
+        }
+
+        #not-urgent-important {
+            background-color: #f0f9ff;
+            border: 2px solid #e0f2fe;
+        }
+
+        #urgent-not-important {
+            background-color: #fffbeb;
+            border: 2px solid #fef3c7;
+        }
+
+        #not-urgent-not-important {
+            background-color: #f0fdf4;
+            border: 2px solid #dcfce7;
+        }
+
+        .quadrant-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .quadrant h2 {
+            color: #1e293b;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .task-counter {
+            background-color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+        }
+
+        .task {
+            background-color: white;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            cursor: grab;
+            font-size: 15px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: task-appear 0.3s ease-out;
+        }
+
+        @keyframes task-appear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .task:hover {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transform: translateY(-2px);
+        }
+
+        .task:active {
+            cursor: grabbing;
+            transform: translateY(0px);
+        }
+
+        .task.dragging {
+            opacity: 0.5;
+            background-color: #f8fafc;
+            box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+            cursor: grabbing;
+        }
+
+        .delete-task {
+            background-color: #fee2e2;
+            color: #ef4444;
+            border: none;
+            border-radius: 6px;
+            width: 28px;
+            height: 28px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            opacity: 0;
+        }
+
+        .task:hover .delete-task {
+            opacity: 1;
+        }
+
+        .delete-task:hover {
+            background-color: #fecaca;
+            transform: scale(1.1);
+        }
+
+        .quadrant.drag-over {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .input-area {
+                flex-direction: column;
+            }
+
+            #addTask {
+                width: 100%;
+            }
+
+            .quadrant {
+                min-height: 250px;
+            }
+
+            .delete-task {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button id="addTask">Add Task</button>
+        </div>
+
+        <div class="grid-container">
+            <div class="quadrant" id="urgent-important" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="quadrant-header">
+                    <h2>Urgent & Important</h2>
+                    <span class="task-counter">0 tasks</span>
+                </div>
+            </div>
+            <div class="quadrant" id="not-urgent-important" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="quadrant-header">
+                    <h2>Not Urgent & Important</h2>
+                    <span class="task-counter">0 tasks</span>
+                </div>
+            </div>
+            <div class="quadrant" id="urgent-not-important" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="quadrant-header">
+                    <h2>Urgent & Not Important</h2>
+                    <span class="task-counter">0 tasks</span>
+                </div>
+            </div>
+            <div class="quadrant" id="not-urgent-not-important" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="quadrant-header">
+                    <h2>Not Urgent & Not Important</h2>
+                    <span class="task-counter">0 tasks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get DOM elements
+        const taskInput = document.getElementById('taskInput');
+        const addTaskButton = document.getElementById('addTask');
+        let taskCounter = 0;
+
+        // Load tasks from localStorage
+        function loadTasks() {
+            const savedTasks = JSON.parse(localStorage.getItem('tasks') || '{}');
+            Object.entries(savedTasks).forEach(([quadrantId, tasks]) => {
+                tasks.forEach(taskData => {
+                    createTask(taskData.text, quadrantId, taskData.id);
+                });
+            });
+            updateAllCounters();
+        }
+
+        // Save tasks to localStorage
+        function saveTasks() {
+            const tasks = {};
+            document.querySelectorAll('.quadrant').forEach(quadrant => {
+                tasks[quadrant.id] = Array.from(quadrant.querySelectorAll('.task')).map(task => ({
+                    id: task.id,
+                    text: task.querySelector('.task-text').textContent
+                }));
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            updateAllCounters();
+        }
+
+        // Create task element
+        function createTask(text, quadrantId, taskId = `task-${taskCounter++}`) {
+            const task = document.createElement('div');
+            task.className = 'task';
+            task.draggable = true;
+            task.id = taskId;
+
+            const taskText = document.createElement('span');
+            taskText.className = 'task-text';
+            taskText.textContent = text;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'delete-task';
+            deleteButton.innerHTML = '×';
+            deleteButton.onclick = (e) => {
+                e.stopPropagation();
+                task.remove();
+                saveTasks();
+            };
+
+            task.appendChild(taskText);
+            task.appendChild(deleteButton);
+
+            // Add drag event listeners
+            task.addEventListener('dragstart', drag);
+            task.addEventListener('dragend', dragEnd);
+
+            const targetQuadrant = document.getElementById(quadrantId || 'urgent-important');
+            targetQuadrant.appendChild(task);
+            updateAllCounters();
+        }
+
+        // Update task counters
+        function updateCounter(quadrant) {
+            const counter = quadrant.querySelector('.task-counter');
+            const taskCount = quadrant.querySelectorAll('.task').length;
+            counter.textContent = `${taskCount} task${taskCount !== 1 ? 's' : ''}`;
+        }
+
+        function updateAllCounters() {
+            document.querySelectorAll('.quadrant').forEach(updateCounter);
+        }
+
+        // Add task function
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText === '') return;
+
+            createTask(taskText);
+            saveTasks();
+            taskInput.value = '';
+        }
+
+        // Drag and drop functions
+        function allowDrop(ev) {
+            ev.preventDefault();
+            const quadrant = ev.target.closest('.quadrant');
+            if (quadrant) {
+                quadrant.classList.add('drag-over');
+            }
+        }
+
+        function drag(ev) {
+            ev.target.classList.add('dragging');
+            ev.dataTransfer.setData('text', ev.target.id);
+        }
+
+        function dragEnd(ev) {
+            ev.target.classList.remove('dragging');
+            document.querySelectorAll('.quadrant').forEach(quadrant => {
+                quadrant.classList.remove('drag-over');
+            });
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            const taskId = ev.dataTransfer.getData('text');
+            const task = document.getElementById(taskId);
+            const quadrant = ev.target.closest('.quadrant');
+            
+            if (quadrant && task) {
+                quadrant.appendChild(task);
+                quadrant.classList.remove('drag-over');
+                saveTasks();
+            }
+        }
+
+        // Event listeners
+        addTaskButton.addEventListener('click', addTask);
+        taskInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+
+        document.querySelectorAll('.quadrant').forEach(quadrant => {
+            quadrant.addEventListener('dragleave', function(e) {
+                if (e.target.closest('.quadrant') === this) {
+                    this.classList.remove('drag-over');
+                }
+            });
+        });
+
+        // Load saved tasks on page load
+        document.addEventListener('DOMContentLoaded', loadTasks);
+    </script>
+</body>
+</html>
