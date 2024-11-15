@@ -15,3 +15,8 @@ Personal site built using [eleventy](https://www.11ty.dev/).
 ## Converting videos to usable format
 
 - use `ffmpeg` bu running `ffmpeg -i input.mp4 -c:v libx264 -crf 15 -preset fast -c:a aac -b:a 1080k  output.mp4`
+
+## Exporting slides to PDF
+
+- install [decktape](https://github.com/astefanutti/decktape)
+- run `decktape [slides URL] [path/final-filename.pdf]`
