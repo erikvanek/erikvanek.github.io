@@ -8,3 +8,5 @@
     - https://www.researchgate.net/figure/Agile-Project-Management-vs-Waterfall_fig7_320775359
 - scrum-diagram.webp
     - https://blog.stackademic.com/excelling-in-software-development-with-scrum-methodology-part-2-e2d0b29437ce
+- user-story.png
+    - https://www.productcompass.pm/p/how-to-write-user-stories
