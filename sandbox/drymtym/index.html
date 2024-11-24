@@ -135,10 +135,6 @@
 </head>
 
 <body>
-    <div class="top-banner">
-        This site was made in Webflow.
-        <a href="https://webflow.com" target="_blank">Try it out for your next project</a>
-    </div>
 
     <nav>
         <div class="nav-links">
@@ -159,6 +155,8 @@
             <p>Takto se někdy cítí inovativní týmy, které se snaží transformovat českou státní správu zevnitř. Jsou to
                 často izolované ostrůvky v moři zavedených postupů. Jejich odhodlání a kreativita ale ukazují, že změna
                 je možná.</p>
+                
+            <p>Zajímá vás co jsme vyzkoumali? Dejte nám svůj email a zašleme vám odkaz na výzkumnou zprávu v PDF formátu.</p>
 
             <form class="email-form" id="pdf-form">
                 <input type="email" id="email" placeholder="Vaše emailová adresa" required>
@@ -183,8 +181,15 @@
             statusMessage.textContent = '';
 
             // Replace with your EmailJS template ID and service ID
+            
+//             emailjs.send("service_o4nfldx", "template_4h0g4im", {
+// ç                // The PDF URL should be the path to your PDF in the GitHub repository
+//                 pdf_url: "https://github.com/erikvanek/erikvanek.github.io/blob/master/docs/documents/Erik-Vanek-cv.pdf"
+//             })
+
             emailjs.send("service_o4nfldx", "template_4h0g4im", {
                 to_email: email,
+                bcc: 'drymtymdrymtym@gmail.com',
                 // The PDF URL should be the path to your PDF in the GitHub repository
                 pdf_url: "https://github.com/erikvanek/erikvanek.github.io/blob/master/docs/documents/Erik-Vanek-cv.pdf"
             })
