@@ -10,6 +10,7 @@
 - Plasters
 - Scissors
 - Pliers
+- Hard deck
 - Masking tape
 - Rubber bands
 - Work gloves
