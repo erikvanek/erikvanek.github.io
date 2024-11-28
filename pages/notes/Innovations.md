@@ -1,0 +1,1 @@
+- "Good innovations solve problems that formerly had only inadequate solutions—or no solution."

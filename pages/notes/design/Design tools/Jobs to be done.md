@@ -3,4 +3,5 @@ resources: [HBR](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done)
 	- “Job” is shorthand for what an individual really seeks to accomplish in a given circumstance.
 	- "Good innovations solve problems that formerly had only inadequate solutions—or no solution "
 - they focus more on the context and the "Why" we build something
+- “Job” is shorthand for what an individual really seeks to accomplish in a given circumstance.
 - Compare JTBD versus user stories [here](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27)

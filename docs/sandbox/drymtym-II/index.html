@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovace ve veřejných službách - Výzkumná zpráva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/sandbox/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            // Initialize EmailJS with your public key
+            emailjs.init("qijjXQ-ksm9ubbeXZ");
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="container">
+            <header>
+                <h1>Jak přistupují české instituce k inovacím ve veřejných službách?</h1>
+                <p class="subtitle">Poznatky z výzkumu státní správy a jejich zkušeností</p>
+            </header>
+
+            <main>
+                <div class="main-content">
+                    <div class="report-preview">
+                        <a href="#cta"> <img src="/sandbox/report-cover.png" alt="Náhled výzkumné zprávy"
+                                class="report-cover">
+                        </a>
+                        <p style="color: #bbb;">PDF, 1,9MB</p>
+                    </div>
+                    <div class="text-content">
+                        <section class="intro">
+                            <p>V posledních letech vznikla v české státní správě řada iniciativ zaměřených na inovace
+                                služeb pro občany. Náš výzkumný tým se zaměřil na zmapování těchto snah na
+                                ministerstvech a centrálních úřadech, pochopení různých přístupů a dokumentaci
+                                zkušeností týmů, které se do změn pustily.</p>
+
+                            <p>V průběhu roku 2024 jsme hovořili s pracovníky ministerstev a centrálních úřadů.
+                                Zdokumentovali jsme jejich příběhy, výzvy kterým čelili a způsoby, jakými k inovacím
+                                přistupovali. Z těchto rozhovorů a následné analýzy vzešlo 12 klíčových postřehů o
+                                současném stavu inovací ve veřejném sektoru.</p>
+
+                            <p>Tato zpráva nabízí unikátní vhled do reality zavádění změn v české státní správě - přímo
+                                od lidí, kteří tímto procesem prošli.</p>
+                        </section>
+                    </div>
+                </div>
+
+                <h2 class="teasers-title">Na co se můžete těšit ve zprávě</h2>
+
+                <section class="teasers">
+                    <article class="teaser">
+                        <h3>Nečekané zdroje podpory</h3>
+                        <p>Které týmy se staly neočekávanými spojenci inovačních projektů? Odhalujeme netradiční aliance
+                            mezi odděleními a institucemi, které dokázaly překvapit svou efektivitou.</p>
+                    </article>
+
+                    <article class="teaser">
+                        <h3>Osvědčené strategie pro překonání odporu ke změnám</h3>
+                        <p>Jak přesvědčit kolegy, kteří mají ze změn obavy? Přinášíme konkrétní příklady, jak týmy na
+                            ministerstvech úspěšně zapojily i ty největší skeptiky.</p>
+                    </article>
+
+                    <article class="teaser">
+                        <h3>Realita vs. mýty o inovacích ve státní správě</h3>
+                        <p>Je pravda, že inovace jsou možné jen s velkým rozpočtem? Že vyžadují kompletní reorganizaci?
+                            Zjistili jsme, že realita je často překvapivě jiná, než se traduje.</p>
+                    </article>
+                </section>
+
+                <section class="form-section" id="cta">
+                    <h2>Získejte kompletní zprávu zdarma</h2>
+                    <p>Obsahuje všech 12 klíčových postřehů z praxe, které vám pomohou lépe pochopit současný stav
+                        inovací v české státní správě.</p>
+
+                    <form class="email-form" id="email-form">
+                        <div style="display: flex; gap: 1rem;">
+                            <input type="email" id="email" name="email" required placeholder="vas@email.cz">
+                            <button type="submit" id="submit-button">Chci celou zprávu</button>
+                        </div>
+                        <div id="status-message"></div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const button = document.getElementById('submit-button');
+            const statusMessage = document.getElementById('status-message');
+            const email = document.getElementById('email').value;
+
+            // Disable button and show loading state
+            button.disabled = true;
+            button.classList.add('loading');
+            button.textContent = 'Odesílám...';
+            statusMessage.textContent = '';
+
+            emailjs.send("service_o4nfldx", "template_4h0g4im", {
+                to_email: email,
+                bcc: 'drymtymdrymtym@gmail.com',
+                // The PDF URL should be the path to your PDF in the GitHub repository
+                pdf_url: "https://github.com/erikvanek/erikvanek.github.io/blob/master/docs/documents/Erik-Vanek-cv.pdf"
+            })
+                .then(function () {
+                    statusMessage.textContent = 'Report byl úspěšně odeslán na váš email!';
+                    statusMessage.classList.add('success');
+                })
+                .catch(function (error) {
+                    console.error('EmailJS error:', error);
+                    statusMessage.textContent = 'Došlo k chybě při odesílání. Prosím zkuste to znovu později.';
+                    statusMessage.classList.add('error');
+                })
+                .finally(function () {
+                    button.disabled = false;
+                    button.classList.remove('loading');
+                    button.textContent = 'Stáhnout';
+                });
+        });
+    </script>
+
+</body>
+
+</html>
