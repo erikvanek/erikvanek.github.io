@@ -13,16 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/random.md",
+                "file": "design/Design tools/Jobs to be done.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "random"
+              "title": "Jobs to be done"
             }
           },
           {
-            "id": "7a62bea3a66204df",
+            "id": "42b9ca2ed8ed5ba3",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -33,8 +33,7 @@
               "title": "Problem Framing Handbook"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,8 +184,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7a62bea3a66204df",
+  "active": "04a431d75ff35699",
   "lastOpenFiles": [
+    "design/resources/Problem Framing Handbook.pdf",
+    "Innovations.md",
+    "design/Design tools/Jobs to be done.md",
+    "design/random.md",
     "random/stage-management-kit.md",
     "Problem framing.md",
     "Design portfolios.md",
@@ -210,12 +213,7 @@
     "Stakeholder mapping.md",
     "design/Design tools/Prototypes/Ecosystem & business value prototypes.md",
     "design/Agencies.md",
-    "design/Design tools/Prototype.md",
-    "design/Three horizons.md",
-    "design/People.md",
-    "Memory.md",
     "Untitled",
-    "design/resources/Problem Framing Handbook.pdf",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
     "design/misc",
     "design/resources/Informing_Our_Intuition.pdf",
