@@ -18,3 +18,6 @@
 - Future by design
 	- https://expandingthefuture.com/
 	- A new book by Bason
+- [When kale and coffee compete](https://drive.google.com/file/d/1t-JZTuzaOw6Ge2p-W3A7BxcpXq0AhD-U/view)
+	- on building products people want to buy
+	- Free PDF

@@ -1,0 +1,10 @@
+- two key customer motivations
+	- the desire one has to improve themselves
+	- imagining their better life situations in future
+- **we can't build products of tomorrow when we fix ourselves to the needs and expectations associated with products of today**
+- key customer motivation – **self-betterment**
+	- it has principles and methods
+	- methods come and go, principles are building blocks
+- our **desire for self-betterment** is a core human desire
+- digging deep into [[Customer]] motivations reveal [[Innovation]] opportunities
+- a [[Customer]]'s ultimate motivation is to reduce the discrepancy in their [[Goal#Be goals]]

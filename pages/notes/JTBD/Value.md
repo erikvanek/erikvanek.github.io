@@ -1,0 +1,2 @@
+- instead of attaching value to what products are, we should attach value to what they allow to achieve to their users
+- getting something done is more important than features

@@ -7,6 +7,39 @@
       "key": "."
     }
   ],
-  "app:go-back": [],
-  "app:go-forward": []
+  "workspace:previous-tab": [],
+  "workspace:next-tab": [],
+  "cycle-through-panes:focus-on-last-active-pane-reverse": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "cycle-through-panes:focus-on-last-active-pane": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ]
 }

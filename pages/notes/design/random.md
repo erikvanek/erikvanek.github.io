@@ -24,3 +24,5 @@
 - super podcast o leadershipu https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucmVzcGVrdC5jei9wb2RjYXN0LnJzcw/episode/aHR0cHM6Ly9kYXRhLmV1LmNudG1ici5jb20vcmVzcGVrdC1wcm9kL3Jlc3Bla3QtcHJvZC8zYTQ4YzM5MS0xZTFlLTRiOTEtYTcyYS0zOTk5YzIxZWRkYjIubXAz
 - pěkná inovační agoška https://www.themoment.is/
 - Heart for measuring UX https://dovetail.com/ux/heart-framework/
+- [The myth of the genius designer](https://www.nngroup.com/articles/the-myth-of-the-genius-designer/)
+- [Product market fit](https://www.lennysnewsletter.com/p/finding-product-market-fit) by Lenny

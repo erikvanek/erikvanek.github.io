@@ -1,3 +1,4 @@
 - technological determinism ^1c5de7
 	- a theory that assumes that a society's technology progresses by following its own internal logic of efficiency
 - [planting mangos](https://www.naplesgarden.org/kitchen-scrap-gardening-series-planting-a-mango-seed/) & [here](https://www.youtube.com/watch?v=ksI49SofLRk&ab_channel=LearnToGrow)
+- speaking is entirely dictated by the quality of the listening that is reflected back on us
