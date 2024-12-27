@@ -1,0 +1,18 @@
+- can be seen as a cycle of **creative destruction**
+	- two aspects that make systems prone to creative destruction
+		- fragile interdependencies
+			- e.g. reliance on some vendor-lock like Flash
+		- cascade effects
+			- often start small, but eventually gain momentum e. g. evolution of mobile data, smartphones,...
+- innovation opportunities exist when [[Customer]]s exhibit compensatory behavior
+- anticipation of **what is the next struggle [[Customer]]s face** after they have sorted out the current one is a key to a successful and continuous innovation
+- is about **helping customers make progress** – get them to the better version of live they aspire for
+	- progress recognizes that tasks and activities are only means to an end
+- Innovate the [[JTBD#System of progress]], not its parts
+- **it isn't customer's job to know what they want**, often they don't know what they want until you slow then
+- Good innovations solve problems that formerly had only inadequate solutions— or no solution
+## Quotes
+- "Good innovations solve problems that formerly had only inadequate solutions — or no solution."
+- "don't build better cameras, make better photographers"
+- "yesterday people wanted fridges and dishwashers, today they want organic Kale smoothies an accumulating likes"
+	- thus [[Customer#Needs]] are only bound to their imagination and existing experience

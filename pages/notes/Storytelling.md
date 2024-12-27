@@ -7,8 +7,7 @@ resources:
 - Telling a compelling story is formed of three resources
 	- Situation
 		- starting point
-	- Complication
-		- drama
+	- [[Inciting accident]]
 	- Solution
 		- resolution (hopefully involving those for whom I tell the story)
 - at the end
@@ -17,3 +16,5 @@ resources:
 - different arcs
 	- https://prezlab.com/what-narrative-arc-best-suits-your-presentation/
 	- https://www.ideou.com/blogs/inspiration/how-to-choose-a-story-arc-for-your-presentation
+- get inspired by movies, literature etc – they are great at storytelling
+- one of the most important skills of a designer

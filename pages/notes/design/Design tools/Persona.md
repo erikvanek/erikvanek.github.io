@@ -9,3 +9,5 @@
 - mood images - personas in their natural contexts
 - description - characteristics, attitudes, skills, needs, expectations, tech-savviness, ...
 - statistics - summarize relevant quantitative info
+Templates
+- good one from https://www.designabetterbusiness.tools/tools/persona-canvas
