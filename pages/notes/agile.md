@@ -24,7 +24,16 @@
 ## articles
 	- [https://browsercompany.substack.com/p/the-age-of-the-app-is-over](the age of the app is over)
 	- [https://thebrowser.company/values/#assume](Arc company values)
-podcasts
+
+## fake agile
+- https://eekim.com/2017/04/jeff-bezos-on-process-as-proxy/
+	- včetně jeho dopisu
+	- "There are many ways to center a business. You can be competitor focused, you can be product focused, you can be technology focused, you can be business model focused, and there are more. **But in my view, obsessive customer focus is by far the most protective of Day 1 vitality.**"
+	- "Staying in Day 1 requires you to experiment patiently, accept failures, plant seeds, protect saplings, and double down when you see customer delight. A customer-obsessed culture best creates the conditions where all of that can happen."
+	- "Good inventors and designers _deeply_ understand their customer. They spend tremendous energy developing that intuition. They study and understand many anecdotes rather than only the averages you’ll find on surveys. They _live_ with the design."
+- fake agile
+	- https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/
+## podcasts
 - [https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s](pursuing ambitious design ideas)
 ## videos
 - https://www.youtube.com/watch?v=qixx7ESrJQg&t=929s

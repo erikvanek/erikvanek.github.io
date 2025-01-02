@@ -6,7 +6,9 @@ resources:
   - https://hbr.org/2017/01/are-you-solving-the-right-problems
   - https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it
 ---
-
+## Finding the right problem
+- solving the root cause of the right problem than makes the symptom (usually what people perceive to be the problem) disappear
+## Rest
 - YOUR NEW USER IS THE DECISION MAKERs
 - YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS
 - [assumptions mapping](https://www.mural.co/blog/intro-assumptions-mapping) is a tool how to mitigate different stakeholder perspectives or views
