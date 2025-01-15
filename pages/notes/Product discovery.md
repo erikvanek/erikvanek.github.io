@@ -1,0 +1,1 @@
+- is all about discovering solutions to the business problems we are assigned in our objectives 

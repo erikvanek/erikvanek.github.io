@@ -22,3 +22,10 @@ people
 - Julius Tarng
 	- https://tarng.com/
 - [​Maggie Appleton](https://x.com/Mappletons)
+## Tools
+- [Shape of AI](https://www.shapeof.ai/)
+## Design for AI
+- [Adrian Chan](https://medium.com/@gravity7)
+	- https://uxdesign.cc/the-ux-of-ai-reaching-common-ground-with-conversational-ai-ddb0b9c506ff
+- [Outcome-oriented-design](https://www.nngroup.com/articles/generative-ui/)
+	- _"Eventually, designers will need to change the way they work. We’ll need to shift from designing interfaces to designing outcomes._

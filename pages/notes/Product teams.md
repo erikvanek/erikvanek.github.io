@@ -1,0 +1,3 @@
+- define and solve problems [collaboratively](https://www.svpg.com/beyond-lean-and-agile/) rather than sequentially
+	- moved beyond 'product manager defines features' model
+- focus on solving problems, **not implementing features**

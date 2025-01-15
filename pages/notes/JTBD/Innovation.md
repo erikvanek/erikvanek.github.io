@@ -16,3 +16,5 @@
 - "don't build better cameras, make better photographers"
 - "yesterday people wanted fridges and dishwashers, today they want organic Kale smoothies an accumulating likes"
 	- thus [[Customer#Needs]] are only bound to their imagination and existing experience
+## Articles
+- [How to make something great](https://ryolu.notion.site/how-to-make-something-great)

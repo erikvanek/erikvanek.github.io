@@ -3,3 +3,6 @@
 ## UX
 [WebExpo](https://webexpo.net/) the classic UX meets software in Prague
 [Hatch](https://www.hatchconference.com/) in Berlin, invite-only. Industry leaders of UX. Combination of talks and workshops.
+- Disco conf by Maze
+- Figma Config
+- Canvas by Miro
