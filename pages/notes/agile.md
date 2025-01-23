@@ -55,6 +55,7 @@ Motivace
 	- What connects those sexy new products is that that make one feel something
 - Closing the gap between engineering and design
 	- https://www.dive.club/ideas/the-missing-tool
+	- https://vercel.com/blog/design-engineering-at-vercel
 ## Design engineering
 - https://www.davidhoang.com/writing/building-your-designs
 - https://www.davidhoang.com/writing/design-engineering

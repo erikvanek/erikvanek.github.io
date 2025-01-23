@@ -85,12 +85,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JTBD/Opposing forces of customer demand.md",
+                "file": "Product discovery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Opposing forces of customer demand"
+              "title": "Product discovery"
             }
           }
         ],
@@ -125,7 +125,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "formative",
+                "query": "anxiet",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -239,40 +239,38 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "bf67a5516623fcad",
   "lastOpenFiles": [
+    "Problem framing.md",
+    "agile.md",
+    "JTBD/Opposing forces of customer demand.md",
+    "design/Design methods/Interviews.md",
+    "design/Usability testing.md",
     "JTBD/JTBD.md",
     "Product risk taxonomy.md",
     "random/Inspiration.md",
     "Design portfolios.md",
     "tools/tools in 2024.md",
-    "design/Usability testing.md",
     "Prompt engineering.md",
     "Pasted image 20250105121803.png",
     "design/AI.md",
     "Product discovery.md",
-    "agile.md",
     "Product teams.md",
     "-.md",
     "design/Design conferences.md",
     "random/Workweek.md",
     "JTBD/Innovation.md",
     "design/Design tools/Jobs to be done.md",
-    "Problem framing.md",
     "food/Danmuji.md",
     "food/Kyselice.md",
     "JTBD/Goal.md",
     "JTBD/Customer.md",
-    "design/Design methods/Interviews.md",
     "JTBD/Activity-centered design.md",
     "6 usability goals.md",
     "Ability.md",
-    "Axial coding.md",
     "JTBD",
     "JTBD/Pasted image 20241225134243.png",
     "JTBD/Pasted image 20241225134219.png",
