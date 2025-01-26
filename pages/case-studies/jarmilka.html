@@ -35,7 +35,13 @@ tags: ["cases"]
                     target="_blank">here</a>.</p>
         </div>
         <div class="smaller">
-            <img src="/case-studies/Jarmilka/screens/jarmilka-laptop.png" alt="">
+
+            {% assign nalevyPath = '/case-studies/Jarmilka/screens/jarmilka-laptop.png' %}
+            {% assign nalevyTitle = 'Try it out on your own!' %}
+            {% render 'figure.njk',
+            path: nalevyPath,
+            title: nalevyTitle,
+            class: 'smaller' %}
         </div>
     </div>
 
@@ -56,7 +62,12 @@ tags: ["cases"]
             </p>
         </div>
         <div class="smaller">
-            <img src="/case-studies/Jarmilka/screens/jarmilka-case-thumb.png" alt="">
+            {% assign nalevyPath = '/case-studies/Jarmilka/screens/jarmilka-case-thumb.png' %}
+            {% assign nalevyTitle = 'Usability study deep dive' %}
+            {% render 'figure.njk',
+            path: nalevyPath,
+            title: nalevyTitle,
+            class: 'smaller' %}
         </div>
     </div>
 </div>
