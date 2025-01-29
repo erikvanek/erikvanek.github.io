@@ -48,8 +48,9 @@ body {
 .reveal h1 {
     font-size: 3em;
     color: var(--color-text-primary);
-    margin-bottom: 0.5em;
     text-shadow: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .reveal h2 {
