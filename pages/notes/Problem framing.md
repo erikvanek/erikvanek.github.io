@@ -7,7 +7,8 @@ resources:
   - https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it
 ---
 ## Finding the right problem
-- solving the root cause of the right problem than makes the symptom (usually what people perceive to be the problem) disappear
+- solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear
+- Focus on [[Jobs to be done]]
 ## Rest
 - YOUR NEW USER IS THE DECISION MAKERs
 - YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS
@@ -42,3 +43,6 @@ resources:
 	- Why
 		- Why is this problem worth addressing?
 		- What impact will addressing it have?
+## "Pre-framing" a problem
+- what if we want to frame a problem we don't have enough information about?
+	- then we can talk about framing a research plan and objectives

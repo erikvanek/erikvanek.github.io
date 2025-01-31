@@ -213,6 +213,11 @@ figcaption {
     padding: 0.5rem;
 }
 
+ul {
+    width: 100%;
+    margin-left: 8rem;
+}
+
 
 /* .s2 {
     --angle: 60deg;
