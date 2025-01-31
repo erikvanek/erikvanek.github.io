@@ -12,6 +12,7 @@ V rámci Praxe III jsem se tento semestr zaměřil zejména na organizaci ideač
 Vypíchl bych zejména dva konkrétní workshopy v rámci projektu [Access 4 all](https://jinag.eu/cs/access4all-cast-design-sluzby){target="_blank"}:
 - interní ideační workshop pro kolegy v agentuře
 - workshop v rámci akce [Dny AI](https://www.dny.ai/){target="_blank"} na téma využívání LLM v sociálně-zdravotním pomezí s názvem [AI jako váš průvodce sociálně-zdravotním labyrintem](https://www.dny.ai/event-2024/ai-jako-vas-pruvodce-socialne-zdravotnim-labyrintem){target="_blank"}.
+- ideační workshop reflektující dosavadní studium v rámci DIS KISK (tomu se dál nevěnuju, ale byl skvělej a **moc díky Baru a Veru za spoluorganizaci protože to bylo neskutečně super s nima tohle dělat**)
 
 ## Výzva, které jsem při organizaci čelil
 Nakolik pro mě téma ideačních workshopů nebylo úplně nové – formáty, které jsem teď z různých důvodů volil pro mě nové byly. Jednou z největších výzev, kterým jsem během jejich organizace čelil bylo:
