@@ -30,6 +30,8 @@ module.exports = function (eleventyConfig) {
         'css',
         'pdf',
         'mp4',
+        'mov',
+        'gif',
         'js',
         'jpg',
         'jpeg',
