@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "random/Inspiration.md",
+                "file": "agile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inspiration"
+              "title": "agile"
             }
           },
           {
@@ -229,6 +229,13 @@
   },
   "active": "e0c8fefdba7b88f3",
   "lastOpenFiles": [
+    "Attention.md",
+    "design/Design tools/Journey maps.md",
+    "random/Inspiration.md",
+    "JTBD/Innovation.md",
+    "JTBD/Customer.md",
+    "food/Pumpkin-latkes.md",
+    "food/Potato-gratin.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/AFA Workshop Templates.pdf",
     "design/resources/The Future of User Research Report 2024.pdf",
@@ -244,7 +251,6 @@
     "design/Design methods/Interviews.md",
     "JTBD/JTBD.md",
     "Product risk taxonomy.md",
-    "random/Inspiration.md",
     "Design portfolios.md",
     "Prompt engineering.md",
     "Pasted image 20250105121803.png",
@@ -252,13 +258,8 @@
     "-.md",
     "design/Design conferences.md",
     "random/Workweek.md",
-    "JTBD/Innovation.md",
     "design/Design tools/Jobs to be done.md",
     "food/Danmuji.md",
-    "food/Kyselice.md",
-    "JTBD/Goal.md",
-    "JTBD/Customer.md",
-    "JTBD/Activity-centered design.md",
     "JTBD",
     "JTBD/Pasted image 20241225134243.png",
     "JTBD/Pasted image 20241225134219.png",
@@ -271,7 +272,6 @@
     "design/misc",
     "design/resources/Informing_Our_Intuition.pdf",
     "tools",
-    "fomo",
     "ranomcanvas.canvas",
     "img/20230622_171524.jpg",
     "Untitled.canvas"
