@@ -59,6 +59,7 @@ Motivace
 ## Design engineering
 - https://www.davidhoang.com/writing/building-your-designs
 - https://www.davidhoang.com/writing/design-engineering
+- https://www.dive.club/ideas/death-of-a-design-engineer?_bhlid=188b65d29c765c7feb573cd127a23b8ed677d89a
 
 People
 - https://tarng.com/
@@ -66,3 +67,5 @@ Resources
  - https://tarng.com/notes.html
 ## Iterations
 - https://www.lyssna.com/blog/product-iteration/
+## Random
+-  https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/ 
