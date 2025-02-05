@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agile.md",
+                "file": "design/Design tools/Journey maps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "agile"
+              "title": "Journey maps"
             }
           },
           {
@@ -80,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -227,10 +227,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0c8fefdba7b88f3",
+  "active": "0f1d5effd89a1773",
   "lastOpenFiles": [
-    "Attention.md",
     "design/Design tools/Journey maps.md",
+    "agile.md",
+    "Attention.md",
     "random/Inspiration.md",
     "JTBD/Innovation.md",
     "JTBD/Customer.md",
@@ -246,7 +247,6 @@
     "tools/tools in 2024.md",
     "design/resources/persona-and-framing-template.pdf",
     "Product discovery.md",
-    "agile.md",
     "JTBD/Opposing forces of customer demand.md",
     "design/Design methods/Interviews.md",
     "JTBD/JTBD.md",
