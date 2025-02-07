@@ -239,7 +239,6 @@ figcaption {
     justify-content: center;
     flex-direction: column;
     color: #222 !important;
-    border: 8px solid transparent;
 }
 
 .post-it strong {
@@ -296,10 +295,8 @@ text {
 
 /* Hover effect */
 .post-it:hover {
-    transform: scale(1.1) rotate(0);
+    transform: scale(1.05) rotate(0);
     z-index: 1;
-    transition: .3s all ease;
-    border: 8px solid rgba(.8, .6, .6, .2);
 }
 
 /* Text color for better readability */
@@ -309,3 +306,5 @@ text {
 .post-it.blue {
     color: rgba(0, 0, 0, 0.8);
 }
+
+.post-it::before
