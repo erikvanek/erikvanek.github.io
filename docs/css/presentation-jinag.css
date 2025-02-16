@@ -85,10 +85,6 @@ a {
     font: bold 80px Sans-Serif;
     padding: 40px 0;
 
-    /* background-color: #3a50d9;ra */
-    /* color: #e0eff2 !important; */
-    /* font: italic bold Georgia, Serif !important; */
-    /* text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27 !important; */
     padding-bottom: 1rem;
     margin-bottom: 0;
 }
@@ -146,7 +142,6 @@ h2 {
 
     h2 {
         margin-bottom: 3rem !important;
-        font-size: 5rem !important;
     }
 
     .slides {
@@ -208,7 +203,7 @@ figcaption {
     display: flex !important;
     flex-direction: row;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .equal-columns>* {

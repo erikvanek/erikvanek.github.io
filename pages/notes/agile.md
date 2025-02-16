@@ -68,4 +68,16 @@ Resources
 ## Iterations
 - https://www.lyssna.com/blog/product-iteration/
 ## Random
--  https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/ 
+-  https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/
+- BPMN or something, learn it, use it
+- learn to use your computer without a mouse (use shortcuts)
+- experiment culture
+- outcome over outputs
+- prioritized board a shared understanding
+- effective stand-ups
+- WoW
+	- decision process
+	- DoD
+	- when things go sour
+	- ADR
+	- role rotation

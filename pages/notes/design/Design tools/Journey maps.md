@@ -2,6 +2,10 @@
 resources:
   - https://www.experiencemap.com/
   - https://www.nngroup.com/articles/ux-mapping-cheat-sheet/
+  - https://www.productplan.com/glossary/customer-journey-map/
+  - https://www.nngroup.com/articles/channels-devices-touchpoints/
+  - https://www.zendesk.com/blog/customer-journey-map/
+  - https://uxpressia.com/blog/customer-journey-map-guide-examples
 ---
 
 - visualize the experience of a person over time
@@ -58,6 +62,25 @@ resources:
 - [[Jobs to be done]]
 	- describe what a service helps the actor to achieve on each step
 	- helps to move away from current solution & create a new frame to look for new opportunities
+- - objective
+    
+- actions – what clients do?
+    
+- required resources (human, tech, financial, …) on their side
+    
+- required resources/departments/roles on Datamole side
+    
+- artifacts used / produced during that phase
+    
+- touchpoints – a specific interaction between a customer and an organization
+    
+    - [https://www.productplan.com/glossary/customer-journey-map/](https://www.productplan.com/glossary/customer-journey-map/)
+        
+- opportunities – how could we help them succeed in that step?
+    
+- possible pain points – what is blocking them in that stage?
+    
+- [anxieties](https://www.amran.cz/how-habits-and-anxieties-keep-people-from-using-your-product/) that might decrease the demand
 ## Concepts
 - **Channels:** The methods by which your business communicates information or messages to the customer. E.g. an app, a website, print media, etc
 - **Touchpoint:** Any point where a customer observes or interacts with your brand, from the on-boarding process to customer service chat.
