@@ -56,6 +56,8 @@ Motivace
 - Closing the gap between engineering and design
 	- https://www.dive.club/ideas/the-missing-tool
 	- https://vercel.com/blog/design-engineering-at-vercel
+- Other side of AI
+	- https://www.polaine.com/2025/01/ai-is-a-double-polluter/ (opinion)
 ## Design engineering
 - https://www.davidhoang.com/writing/building-your-designs
 - https://www.davidhoang.com/writing/design-engineering
