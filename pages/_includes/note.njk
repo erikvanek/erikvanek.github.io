@@ -182,37 +182,30 @@
 </head>
 
 <body>
-    
-        
-        
+    {% if not page.filePathStem | isTopLevelNote %}
+        {% set pathWithoutNotes = page.filePathStem | replace('/notes/', '') %}
+        {% set parentDir = pathWithoutNotes.split('/')[0] %}
         <div class="parent-nav">
-            <a href="/notes/design">
-                ⬅️ Back to Design
+            <a href="/notes/{{ parentDir }}">
+                ⬅️ Back to {{ parentDir | formatDirName }}
             </a>
         </div>
-    
+    {% endif %}
 
-    <h1 id="environment-spaces-amp-architecture-prototypes">Environment, spaces &amp; architecture prototypes</h1>
+    <h1>{{ title | default(page.fileSlug) }}</h1>
 
-    <ul>
-<li>special case of <a href="/notes/design/Design tools/Prototypes/Physical prototypes/">Physical prototypes</a></li>
-<li>often minimized compared to the result</li>
-</ul>
-<h2 id="include">Include</h2>
-<ul>
-<li>everything that physical objects have plus
-<ul>
-<li>layout &amp; space
-<ul>
-<li>reflect how future building &amp; structures are embedded in surrounding spaces, light conditions, ...</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    {{ content | wikilinks(collections.allNotes) | safe }}
 
-
-    
+    {% if resources %}
+    <section class="resources-section">
+        <h2>Resources</h2>
+        <ul>
+            {% for resource in resources %}
+            <li><a href="{{ resource }}" target="_blank" rel="noopener noreferrer">{{ resource }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
 </body>
 
 </html>
