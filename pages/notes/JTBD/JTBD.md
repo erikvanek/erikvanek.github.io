@@ -10,7 +10,7 @@ resources:
 - **JTBD is a theory**, that should be able to describe what happened in the past but also what might happen in future
 - provides **a framework for finding out what the user really wants** and what causes them to a given purchase or usage of a product or a service
 ## Job
-- **a job is the progress an individual is trying to make** in a particular *circumstance**
+- **a job is the progress an individual is trying to make** in a particular *circumstance*
 - everytime we're on **a path to transform our life to something else** - we have a Job to be done
 - _Job_ is shorthand for what an individual really seeks to accomplish in a given circumstance
 	- When we buy a product, **we essentially “hire” it** to help us do a job

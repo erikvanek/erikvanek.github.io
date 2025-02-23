@@ -1,11 +1,207 @@
-<ul>
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/design">
+                ⬅️ Back to Design
+            </a>
+        </div>
+    
+
+    <h1 id="business-model-canvas">Business model canvas</h1>
+
+    <ul>
 <li>aims to design a business model that outperforms competitors</li>
 <li>a simple template to sketch out business model with a blocks of questions</li>
-<li><em>any change to underlying organization changes the [[Business model canvas]] &amp; vice versa</em></li>
-<li>can be used to map out competitors &amp; compare their business models with yours which might give you [[Insight]]s where you need to differentiate</li>
-<li>upper 7 blocks connected to [[Design tools]]</li>
+<li><em>any change to underlying organization changes the <a href="/notes/design/Design tools/Business model canvas/">Business model canvas</a> &amp; vice versa</em></li>
+<li>can be used to map out competitors &amp; compare their business models with yours which might give you <a href="/notes/design/Concepts/Insight/">Insight</a>s where you need to differentiate</li>
+<li>upper 7 blocks connected to <a href="/notes/design/Design tools/">Design tools</a></li>
 </ul>
-<h2>Include</h2>
+<h2 id="include">Include</h2>
 <ul>
 <li>value propositions
 <ul>
@@ -13,12 +209,12 @@
 <li>describes the frontstage part of the journey</li>
 <li>connected with
 <ul>
-<li>[[Journey maps]]
+<li><a href="/notes/design/Design tools/Journey maps/">Journey maps</a>
 <ul>
 <li>their summary describes the value proposition</li>
 </ul>
 </li>
-<li>[[Prototype]]s
+<li><a href="/notes/design/Design tools/Prototype/">Prototype</a>s
 <ul>
 <li>can make the proposition tangible &amp; testable</li>
 </ul>
@@ -32,7 +228,7 @@
 <li>~ core target groups</li>
 <li>connected with
 <ul>
-<li>[[Persona]]s &amp; [[System maps]] to visualize the flow</li>
+<li><a href="/notes/design/Design tools/Persona/">Persona</a>s &amp; <a href="/notes/design/Design tools/System maps/">System maps</a> to visualize the flow</li>
 </ul>
 </li>
 </ul>
@@ -41,7 +237,7 @@
 <ul>
 <li>show how customers interact during the customer life-cycle</li>
 <li>include online &amp; offline channels</li>
-<li>connected with [[Journey maps]] as they usually include information about which channels users use to buy a service</li>
+<li>connected with <a href="/notes/design/Design tools/Journey maps/">Journey maps</a> as they usually include information about which channels users use to buy a service</li>
 </ul>
 </li>
 <li>customer relationships
@@ -49,9 +245,9 @@
 <li>describe what kind of relationship a company establishes &amp; maintains with each customer segment</li>
 <li>connected with
 <ul>
-<li>[[System maps]] as they have information on relationships between stakeholders</li>
-<li>[[Journey maps]] - E2E journey maps include information on the quality of relationships</li>
-<li>[[Prototype]]s - used to tangibilize relationships &amp; test the tone of a service</li>
+<li><a href="/notes/design/Design tools/System maps/">System maps</a> as they have information on relationships between stakeholders</li>
+<li><a href="/notes/design/Design tools/Journey maps/">Journey maps</a> - E2E journey maps include information on the quality of relationships</li>
+<li><a href="/notes/design/Design tools/Prototype/">Prototype</a>s - used to tangibilize relationships &amp; test the tone of a service</li>
 </ul>
 </li>
 </ul>
@@ -61,9 +257,9 @@
 <li>summarizes backstage processes needed to be executed to produce or offer its value proposition</li>
 <li>connected to
 <ul>
-<li>[[Service blueprint]] - connect back &amp; front stage processes thus give a comprehensive overview of activities</li>
-<li>[[Journey maps]]</li>
-<li>[[Prototype]]s - can test &amp; identify key activities on human-human but also machine-machine, also internally X externally</li>
+<li><a href="/notes/design/Design tools/Service blueprint/">Service blueprint</a> - connect back &amp; front stage processes thus give a comprehensive overview of activities</li>
+<li><a href="/notes/design/Design tools/Journey maps/">Journey maps</a></li>
+<li><a href="/notes/design/Design tools/Prototype/">Prototype</a>s - can test &amp; identify key activities on human-human but also machine-machine, also internally X externally</li>
 </ul>
 </li>
 </ul>
@@ -73,9 +269,9 @@
 <li>summarizes what company needs to sustain &amp; support the business physically, intellectually or financially</li>
 <li>connected to
 <ul>
-<li>[[System maps]] as they have info about stakeholders</li>
-<li>[[Service blueprint]] which has info on involved internal stakeholders</li>
-<li>[[Journey maps]] know which stakeholder is involved when, who are key stakeholders &amp; when journey includes employees</li>
+<li><a href="/notes/design/Design tools/System maps/">System maps</a> as they have info about stakeholders</li>
+<li><a href="/notes/design/Design tools/Service blueprint/">Service blueprint</a> which has info on involved internal stakeholders</li>
+<li><a href="/notes/design/Design tools/Journey maps/">Journey maps</a> know which stakeholder is involved when, who are key stakeholders &amp; when journey includes employees</li>
 </ul>
 </li>
 </ul>
@@ -85,7 +281,7 @@
 <li>describes the ecosystem in which a company operates including stakeholders needed to supply key resources and key activities</li>
 <li>connected to:
 <ul>
-<li>[[System maps]] info on internal &amp; external stakeholders; gives info on stakeholder relationships &amp; relationships between the company and stakeholders</li>
+<li><a href="/notes/design/Design tools/System maps/">System maps</a> info on internal &amp; external stakeholders; gives info on stakeholder relationships &amp; relationships between the company and stakeholders</li>
 </ul>
 </li>
 </ul>
@@ -102,3 +298,9 @@
 </ul>
 </li>
 </ul>
+
+
+    
+</body>
+
+</html>

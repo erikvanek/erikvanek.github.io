@@ -1,142 +1,201 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta name="generator" content="Hugo 0.37.1"/>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="MobileOptimized" content="320"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="referrer" content="no-referrer"/>
+<html lang="cs">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/books">
+                ⬅️ Back to Books
+            </a>
+        </div>
     
 
-    <meta name="description" content="Recenze knížky Přepisovat pravidla, která se kouká na (zejména) romantické a partnerské vztahy z různých perspektiv."/>
+    <h1 id="pepisovat-pravidla">Přepisovat pravidla</h1>
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:domain" content="www.erikvanek.com"/>
-
-    <meta name="twitter:image" content="/zen-circle.ico"/>
-    <meta
-      name="twitter:title"
-      property="og:title"
-      itemprop="title name"
-      content="Přepisovat pravidla | Erik Vaněk"
-/>
-    <meta
-      name="twitter:description"
-      property="og:description"
-      itemprop="description"
-      content="Recenze knížky Přepisovat pravidla, která se kouká na (zejména) romantické a partnerské vztahy z různých perspektiv."
-/>
-    <meta name="og:type" content="website"/>
-    <meta name="og:url" content="www.erikvanek.com/"/>
-    <meta
-      name="og:image"
-      itemprop="image primaryImageOfPage"
-      content="/zen-circle.ico"
-/>
-
-    <title>Přepisovat pravidla | Erik Vaněk</title>
-    <link rel="shortcut icon" href="/zen-circle.ico" id="favicon"/>
-    <link rel="stylesheet" href="/css/2024.css"/>
-    <link rel="stylesheet" href="/css/blog-2024.css"/>
-    <link rel="stylesheet" href="/css/lightbox.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
-      rel="stylesheet"
-/>
-  </head>
-
-  <!-- Google tag (gtag.js) -->
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
-></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-6MSV4WTZ4N');
-</script>
-
-
-</html>
-<body>
-
-  <nav>
-    <ul class="menu" id="menu">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/profile">Profile</a>
-        </li>
-        <!-- <li>
-                <a href="/work">Work</a>
-            </li> -->
-        <li>
-            <a href="/blog">Blog</a>
-        </li>
-        <a class="close" href="#">
-            <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M18 6L6 18M6 6L18 18"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-            </svg>
-        </a>
-    </ul>
-    <a href="/" id="home">erikvanek.com</a>
-    <a class="hamburger" href="#menu">
-        <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M3 12H21M3 6H21M9 18H21"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
-        </svg>
-    </a>
-</nav>
-
-  <div class="section" id="splash">
-    <div class="article">
-      
-      <h2>Přepisovat pravidla</h2>
-      
-        <h3>
-          <em>"Antiprůvodce láskou, sexem a vztahy"</em>
-        </h3>
-      
-      
-      
-        
-          <time>Sun Jan 29 2023</time>
-        
-      
-
-      <article><div id="notes">
-<h2>Notes</h2>
+    <div id="notes">
+<h2 id="notes">Notes</h2>
 <ul>
 <li>@56 strach ze samoty jako strach s času sám se sebou</li>
 <li>@63 jak děsivé je veřejně ukázat svou zranitelnost?</li>
@@ -221,12 +280,9 @@
 <p>Odnáším si spoustu zajímavých podnětů i přestože ne všechny budu chtít nebo moct aplikovat ve svém běžném fungování. Přijde mi super perspektiva se na vztahy dívat jako na nekonečně se proměňující organismy, které nelze &quot;zamknout&quot; v čase. Běžně používaná výčitka &quot;změnila ses&quot; pro mě po přečetení knížky už není výčitkou, ale jen pouhým poukázáním na něco, co je úplně normální a hodné podpory a porozumění.</p>
 <p>Občas mi během čtení zavazelo sokratovské &quot;Question everything&quot; a za mě možná až zbytečná míra rozporování a dekonstrukce norem, které bych považoval za běžné. I přestože vnímám, že knížka nepředepisuje jediný správný návod, chvíiemi jsem pociťoval jakoby &quot;mainstreamové&quot; normy byly absolutně přežité a nefunkční.</p>
 <p>Praktický kompliment na závěr - je super, že byla v knížce přiložená záložka stylizovaná do motivu z přebalu. Je to sice drobnost, ale vlastně dost praktická.</p>
-</article>
-    </div>
-  </div>
-
-  <script src="/js/navbar.js"></script>
-<script src="/js/figure.js"></script>
 
 
+    
 </body>
+
+</html>
