@@ -58,6 +58,7 @@ Motivace
 	- https://vercel.com/blog/design-engineering-at-vercel
 - Other side of AI
 	- https://www.polaine.com/2025/01/ai-is-a-double-polluter/ (opinion)
+	- https://www.youtube.com/watch?v=foYWzdvajvo chips as a bottleneck
 ## Design engineering
 - https://www.davidhoang.com/writing/building-your-designs
 - https://www.davidhoang.com/writing/design-engineering

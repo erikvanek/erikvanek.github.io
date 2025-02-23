@@ -1,4 +1,8 @@
-- tips here https://dovetail.com/blog/qualitative-research-skills/
+---
+resources:
+  - https://dovetail.com/blog/qualitative-research-skills/
+---
+
 ## Customer interviews
 - the problem with customer interviews is **that they want to please you** therefore can't be trusted fully
 - What helps is to **ask more widely for their [[JTBD]]** and their context rather than just on a specific product
