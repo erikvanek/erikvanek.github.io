@@ -1,4 +1,192 @@
-<ul>
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1 id="agile">agile</h1>
+
+    <ul>
 <li>blog of authors of Lean canvas <a href="https://leanstack.com/">https://leanstack.com/</a></li>
 <li><a href="https://www.lennysnewsletter.com/p/how-linear-builds-product">WoW in Linear</a>
 <ul>
@@ -12,7 +200,7 @@
 <li><a href="https://wunder.io/insights/positive-feedback-system-hugs">Hugs</a> in Wunder</li>
 <li>SVPG</li>
 </ul>
-<h2>people</h2>
+<h2 id="people">people</h2>
 <ul>
 <li>design
 <ul>
@@ -27,7 +215,7 @@
 </ul>
 </li>
 </ul>
-<h2>orgs</h2>
+<h2 id="orgs">orgs</h2>
 <ul>
 <li>Basecamp</li>
 <li>Doist</li>
@@ -35,10 +223,10 @@
  ## articles<br>
  - [<a href="https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2">https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2</a>](feature factory)</li>
 </ul>
-<h2>articles</h2>
+<h2 id="articles">articles</h2>
 <p>- [<a href="https://browsercompany.substack.com/p/the-age-of-the-app-is-over">https://browsercompany.substack.com/p/the-age-of-the-app-is-over</a>](the age of the app is over)<br>
 - [<a href="https://thebrowser.company/values/#assume">https://thebrowser.company/values/#assume</a>](Arc company values)</p>
-<h2>fake agile or agile crit</h2>
+<h2 id="fake-agile-or-agile-crit">fake agile or agile crit</h2>
 <ul>
 <li><a href="https://eekim.com/2017/04/jeff-bezos-on-process-as-proxy/">https://eekim.com/2017/04/jeff-bezos-on-process-as-proxy/</a>
 <ul>
@@ -56,11 +244,11 @@
 <li>beyond agile<br>
 - <a href="https://www.svpg.com/beyond-lean-and-agile/">https://www.svpg.com/beyond-lean-and-agile/</a></li>
 </ul>
-<h2>podcasts</h2>
+<h2 id="podcasts">podcasts</h2>
 <ul>
 <li>[<a href="https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s">https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s</a>](pursuing ambitious design ideas)</li>
 </ul>
-<h2>videos</h2>
+<h2 id="videos">videos</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=qixx7ESrJQg&amp;t=929s">https://www.youtube.com/watch?v=qixx7ESrJQg&amp;t=929s</a></li>
 <li>computing concepts for designers <a href="https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos">https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos</a></li>
@@ -70,7 +258,7 @@
 </ul>
 </li>
 </ul>
-<h2>Presentations</h2>
+<h2 id="presentations">Presentations</h2>
 <p><a href="https://designintech.report/designintechreport-2024.html#/title-slide">Design in tech report 2024</a> by John Maeda<br>
 Motivace</p>
 <ul>
@@ -104,7 +292,7 @@ Motivace</p>
 </ul>
 </li>
 </ul>
-<h2>Design engineering</h2>
+<h2 id="design-engineering">Design engineering</h2>
 <ul>
 <li><a href="https://www.davidhoang.com/writing/building-your-designs">https://www.davidhoang.com/writing/building-your-designs</a></li>
 <li><a href="https://www.davidhoang.com/writing/design-engineering">https://www.davidhoang.com/writing/design-engineering</a></li>
@@ -116,11 +304,11 @@ Motivace</p>
 Resources</li>
 <li><a href="https://tarng.com/notes.html">https://tarng.com/notes.html</a></li>
 </ul>
-<h2>Iterations</h2>
+<h2 id="iterations">Iterations</h2>
 <ul>
 <li><a href="https://www.lyssna.com/blog/product-iteration/">https://www.lyssna.com/blog/product-iteration/</a></li>
 </ul>
-<h2>Random</h2>
+<h2 id="random">Random</h2>
 <ul>
 <li><a href="https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/">https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/</a></li>
 <li>BPMN or something, learn it, use it</li>
@@ -139,3 +327,9 @@ Resources</li>
 </ul>
 </li>
 </ul>
+
+
+    
+</body>
+
+</html>

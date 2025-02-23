@@ -73,7 +73,7 @@
     </head>
     <body>
         <div class="container">
-            <h1>Pomocník pro životní situace</h1>
+            <h1 id="pomocnk-pro-ivotn-situace">Pomocník pro životní situace</h1>
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Čelíte citlivé životní situaci?">
                 <button id="search-button">Hledat pomoc</button>
@@ -185,7 +185,7 @@
 
                 function showResults() {
                     const container = document.querySelector('.container');
-                    container.innerHTML = '<h2>Doporučené služby</h2>';
+                    container.innerHTML = '<h2 id="doporuen-sluby">Doporučené služby</h2>';
 
                     const resultsDiv = document.createElement('div');
                     resultsDiv
@@ -216,7 +216,7 @@
                             .classList
                             .add('service');
                         serviceDiv.innerHTML = `
-                        <h3>${service.name}</h3>
+                        <h3 id="servicename">${service.name}</h3>
                         <p>${service.description}</p>
                         <p><strong>${service.contact}</strong></p>
                     `;
