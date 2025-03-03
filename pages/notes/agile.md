@@ -20,6 +20,7 @@
 - Linear
  ## articles
  - [https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2](feature factory)
+ - why this class is not remote https://www.newyorker.com/culture/annals-of-inquiry/can-remote-work-be-fixed
 
 ## articles
 	- [https://browsercompany.substack.com/p/the-age-of-the-app-is-over](the age of the app is over)
@@ -42,6 +43,11 @@
 - computing concepts for designers https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos
 - Building timeline in Linear
 	- https://www.youtube.com/watch?v=kCQ29IGMnB4
+## AI-assisted prototyping
+- https://bolt.new/
+- https://lovable.dev/?via=amit
+- v0
+- https://replit.com/
 ## Presentations
 [Design in tech report 2024](https://designintech.report/designintechreport-2024.html#/title-slide) by John Maeda
 Motivace

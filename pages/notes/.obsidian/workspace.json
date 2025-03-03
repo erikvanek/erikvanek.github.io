@@ -52,21 +52,35 @@
             }
           },
           {
-            "id": "bf67a5516623fcad",
+            "id": "83b9b88d304428dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design methods/Interviews.md",
+                "file": "Product vision.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interviews"
+              "title": "Product vision"
+            }
+          },
+          {
+            "id": "15f3ba8caab52a38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Planning/Planning.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Planning"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -214,39 +228,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf67a5516623fcad",
+  "active": "15f3ba8caab52a38",
   "lastOpenFiles": [
+    "Planning/Reflection.md",
+    "random/random.md",
+    "design/Resources.md",
+    "review.md",
+    "Personal effectiveness.md",
+    "JTBD/JTBD.md",
+    "Planning/Planning.md",
+    "food/to cook.md",
+    "agile.md",
+    "Attention.md",
+    "Planning",
+    "Calendly.md",
+    "design/Quotes.md",
+    "design/Design tools/Persona.md",
+    "Product vision.md",
+    "Workshopy.md",
+    "design/Design tools/Journey maps.md",
+    "design/Concepts/Prototyping.md",
+    "design/Design tools/Prototype.md",
+    "design/Concepts/Double diamond.md",
+    "design/Service design.md",
+    "design/Design methods/Interviews.md",
     "tools/tools in 2024.md",
     "SDW/Podmínky ukončení.md",
     "Problem statements.md",
     "Open coding.md",
     "Interview intro.md",
-    "design/Design methods/Interviews.md",
-    "agile.md",
-    "JTBD/JTBD.md",
-    "feature.md",
-    "Problem framing.md",
-    "SDW/Průběh semestru.md",
-    "design/Design tools/Journey maps.md",
-    "SDW/Intro.md",
-    "SDW/Zdroje.md",
     "SDW",
-    "random/Inspiration.md",
-    "design/Service design.md",
-    "Attention.md",
-    "JTBD/Innovation.md",
-    "JTBD/Customer.md",
-    "food/Pumpkin-latkes.md",
-    "food/Potato-gratin.md",
     "design/resources/Problem Framing Handbook.pdf",
     "design/AFA Workshop Templates.pdf",
     "design/resources/The Future of User Research Report 2024.pdf",
-    "design/AI.md",
-    "design/Usability testing.md",
     "design/resources/persona-and-framing-template.pdf",
-    "Product discovery.md",
-    "JTBD/Opposing forces of customer demand.md",
-    "Product risk taxonomy.md",
     "Pasted image 20250105121803.png",
     "JTBD",
     "JTBD/Pasted image 20241225134243.png",
@@ -258,7 +273,6 @@
     "img/work.jpg",
     "design/resources/Problem-Framing-Canvas-Handbook.pdf",
     "design/misc",
-    "design/resources/Informing_Our_Intuition.pdf",
     "ranomcanvas.canvas",
     "img/20230622_171524.jpg",
     "Untitled.canvas"

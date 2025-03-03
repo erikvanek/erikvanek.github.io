@@ -1,3 +1,8 @@
+---
+resources:
+  - https://www.ideo.com/journal/the-secret-power-of-prototyping
+---
+
 - __"The best way to have an idea is to have a lot of ideas"__
 - a tool of self-expression & to help understand each other better
 - _never have only one prototype_

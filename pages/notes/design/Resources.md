@@ -35,3 +35,5 @@
 	- Dovetail blog
 - Griffith Centre for systems innovation
 	- https://medium.com/@gucentreforsystemsinnovation
+## Leadership
+- https://www.leadingsapiens.com/

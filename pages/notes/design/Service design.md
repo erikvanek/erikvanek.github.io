@@ -1,3 +1,8 @@
+---
+resources:
+  - https://medium.com/@Howard_C/a-beginners-guide-to-what-service-design-is-not-40884a856fd
+---
+
 - it is the patchwork background that makes [[Service design]] such powerful
 - focuses on finding _the right problem_ to solve
 	- starts by identifying user needs first
