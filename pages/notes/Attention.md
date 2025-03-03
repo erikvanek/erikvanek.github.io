@@ -15,3 +15,4 @@ resources:
 		- broad and open, not sure what we're looking for and we're ready to deploy our attention in any direction
 	- The juggler – pland and manage the behavior
 		- directing and overseeing what we're doing and ensuring our actions are aligned with what are goals are
+- Cal Newport: "best knowledge workers view their time like the best investors view their capital, as a resource to wield for maximum returns"

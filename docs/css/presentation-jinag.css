@@ -28,7 +28,11 @@ body {
 }
 
 * {
-    color: white;
+    color: var(--color-primary);
+}
+
+strong {
+    color: #fff;
 }
 
 footer {
