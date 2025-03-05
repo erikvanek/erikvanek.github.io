@@ -1,7 +1,6 @@
 ---
 permalink: /{{page.fileSlug}}/
 ---
-
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -93,6 +92,223 @@ permalink: /{{page.fileSlug}}/
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
+        .progress-container {
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1rem 0;
+        }
+
+        .progress-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .progress-bar {
+            height: 30px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9800, #f44336);
+            border-radius: 15px;
+            transition: width 1s ease;
+            position: relative;
+        }
+
+        .timeline-container {
+            width: 100%;
+            margin-top: 3rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-progress-container {
+            position: relative;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin: 0 5px 15px 5px;
+        }
+
+        .timeline-progress-bar {
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(90deg, #8bc34a, #ffeb3b);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .timeline-current-marker {
+            position: absolute;
+            top: -7px;
+            width: 20px;
+            height: 20px;
+            background-color: #f44336;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(244, 67, 54, 0.8);
+            z-index: 5;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+            gap: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-cell {
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-cell.past {
+            background-color: #8bc34a;
+        }
+
+        .timeline-cell.today {
+            background-color: #ffeb3b;
+            transform: scale(1.2);
+            box-shadow: 0 0 10px #ffeb3b;
+            z-index: 2;
+        }
+
+        .timeline-cell.future {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-cell.milestone {
+            background-color: #e91e63;
+            transform: scale(1.2);
+            box-shadow: 0 0 10px #e91e63;
+            z-index: 2;
+        }
+
+        .timeline-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .timeline-label {
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .timeline-label::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .timeline-label.start {
+            margin-right: auto;
+        }
+
+        .timeline-label.middle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-label.end {
+            margin-left: auto;
+        }
+
+        .timeline-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .timeline-stat {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            min-width: 100px;
+        }
+
+        .timeline-stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-grid {
+                grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+                gap: 3px;
+            }
+
+            .timeline-cell {
+                width: 20px;
+                height: 20px;
+            }
+
+            .timeline-label {
+                font-size: 0.8rem;
+                padding: 3px 6px;
+            }
+
+            .timeline-stat-value {
+                font-size: 1.5rem;
+            }
+        }
+
         .confetti {
             position: absolute;
             width: 10px;
@@ -160,7 +376,39 @@ permalink: /{{page.fileSlug}}/
         <div id="urgency-message" class="urgency-message">
             Připravujeme se na velký den!
         </div>
+
+        <div class="timeline-container">
+            <div class="timeline-title">Časová osa projektu</div>
+            <div class="timeline-progress-container">
+                <div id="timeline-progress-bar" class="timeline-progress-bar"></div>
+                <div id="timeline-current-marker" class="timeline-current-marker"></div>
+            </div>
+            <div id="timeline-grid" class="timeline-grid">
+                <!-- Timeline cells will be generated by JavaScript -->
+            </div>
+            <div class="timeline-labels">
+                <div class="timeline-label start">Schůzka s tajemníkem</div>
+                <div class="timeline-label middle">Teď</div>
+                <div class="timeline-label end">Akce 🔥</div>
+            </div>
+            <div class="timeline-stats">
+                <div class="timeline-stat">
+                    <div id="days-elapsed" class="timeline-stat-value">0</div>
+                    <div class="timeline-stat-label">Dní uplynulo</div>
+                </div>
+                <div class="timeline-stat">
+                    <div id="completion-percent" class="timeline-stat-value">0%</div>
+                    <div class="timeline-stat-label">Hotovo</div>
+                </div>
+                <div class="timeline-stat">
+                    <div id="days-remaining" class="timeline-stat-value">0</div>
+                    <div class="timeline-stat-label">Dní zbývá</div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="tooltip" class="tooltip"></div>
 
     <script>
         // Create confetti
@@ -248,8 +496,193 @@ permalink: /{{page.fileSlug}}/
         // Initial call
         updateCountdown();
 
-        // Update every day
-        setInterval(updateCountdown, 86400000);
+        // Define important dates
+        const startDate = new Date('2025-01-22T00:00:00'); // Initial meeting date
+        const endDate = new Date('2025-05-05T00:00:00');   // Workshop date
+        const currentDate = new Date();
+
+        // Calculate exact dates for countdown display
+        function updateCountdown() {
+            const targetDay = endDate.getDate();
+            const targetMonth = endDate.getMonth();
+            const targetYear = endDate.getFullYear();
+
+            const currentDay = currentDate.getDate();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+
+            // Calculate exact differences
+            let months = (targetYear - currentYear) * 12 + (targetMonth - currentMonth);
+
+            // Calculate days between the dates
+            let days;
+            if (targetDay >= currentDay) {
+                days = targetDay - currentDay;
+            } else {
+                // If target day is earlier in the month, we go back one month
+                // and add the days from the end of the previous month
+                months -= 1;
+                // Get last day of previous month for target date
+                const lastDayPrevMonth = new Date(targetYear, targetMonth, 0).getDate();
+                days = lastDayPrevMonth - currentDay + targetDay;
+            }
+
+            // Calculate weeks and remaining days
+            const weeks = Math.floor(days / 7);
+            days = days % 7;
+
+            // Update the DOM
+            document.getElementById('months').textContent = months;
+            document.getElementById('weeks').textContent = weeks;
+            document.getElementById('days').textContent = days;
+
+            // Update urgency message based on time remaining
+            const totalDaysRemaining = Math.ceil((endDate - currentDate) / (1000 * 60 * 60 * 24));
+            const urgencyMessage = document.getElementById('urgency-message');
+
+            if (totalDaysRemaining <= 0) {
+                urgencyMessage.textContent = '🎉 DEN WORKSHOPU JE TADY! 🎉';
+                urgencyMessage.style.backgroundColor = '#4caf50';
+            } else if (totalDaysRemaining <= 7) {
+                urgencyMessage.textContent = '⚠️ ZBÝVÁ MÉNĚ NEŽ TÝDEN! DOKONČETE PŘÍPRAVU! ⚠️';
+                urgencyMessage.style.backgroundColor = '#f44336';
+                urgencyMessage.style.fontSize = '2.2rem';
+            } else if (totalDaysRemaining <= 30) {
+                urgencyMessage.textContent = '🔥 ZBÝVÁ MÉNĚ NEŽ MĚSÍC! ZRYCHLEME! 🔥';
+                urgencyMessage.style.backgroundColor = '#ff9800';
+                urgencyMessage.style.fontSize = '2rem';
+            } else if (totalDaysRemaining <= 60) {
+                urgencyMessage.textContent = '⏳ DVA MĚSÍCE DO WORKSHOPU! NEZAHÁLÍME! ⏳';
+                urgencyMessage.style.backgroundColor = '#2196f3';
+            } else {
+                urgencyMessage.textContent = '🌟 PŘIPRAVUJEME SE NA VELKÝ DEN! 🌟';
+            }
+        }
+
+        // Generate GitHub-style contribution graph
+        function generateTimelineGrid() {
+            const timelineGrid = document.getElementById('timeline-grid');
+            timelineGrid.innerHTML = '';
+
+            // Calculate total days in project (from initial meeting to workshop)
+            const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+
+            // Days elapsed since start
+            const daysElapsed = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24));
+
+            // Days remaining until end
+            const daysRemaining = Math.max(0, Math.ceil((endDate - currentDate) / (1000 * 60 * 60 * 24)));
+
+            // Calculate completion percentage
+            const completionPercent = Math.min(100, Math.max(0, Math.round((daysElapsed / totalDays) * 100)));
+
+            // Update stats
+            document.getElementById('days-elapsed').textContent = daysElapsed;
+            document.getElementById('days-remaining').textContent = daysRemaining;
+            document.getElementById('completion-percent').textContent = `${completionPercent}%`;
+
+            // Update progress bar and marker
+            const progressBar = document.getElementById('timeline-progress-bar');
+            const currentMarker = document.getElementById('timeline-current-marker');
+
+            progressBar.style.width = `${completionPercent}%`;
+            currentMarker.style.left = `${completionPercent}%`;
+
+            // Create cells for each day
+            for (let i = 0; i < totalDays; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'timeline-cell';
+
+                // Calculate the date for this cell
+                const cellDate = new Date(startDate);
+                cellDate.setDate(startDate.getDate() + i);
+
+                // Format date for tooltip
+                const dateStr = cellDate.toLocaleDateString('cs-CZ', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+
+                // Set cell data attributes
+                cell.dataset.date = dateStr;
+
+                // Check if this cell represents today
+                const isToday = cellDate.toDateString() === currentDate.toDateString();
+
+                // Check if this cell is a milestone
+                const isStart = i === 0; // First day (initial meeting)
+                const isEnd = i === totalDays - 1; // Last day (workshop)
+
+                // Color the cell based on its status
+                if (isStart) {
+                    cell.classList.add('milestone');
+                    cell.dataset.milestone = 'Schůzka s tajemníkem';
+                } else if (isEnd) {
+                    cell.classList.add('milestone');
+                    cell.dataset.milestone = 'Akce 🔥';
+                } else if (isToday) {
+                    cell.classList.add('today');
+                    cell.dataset.milestone = 'Teď jste tady';
+                } else if (cellDate < currentDate) {
+                    cell.classList.add('past');
+                } else {
+                    cell.classList.add('future');
+                }
+
+                // Add mouseover event for tooltip
+                cell.addEventListener('mouseover', function (e) {
+                    const tooltip = document.getElementById('tooltip');
+                    let tooltipText = this.dataset.date;
+
+                    if (this.dataset.milestone) {
+                        tooltipText += ` - ${this.dataset.milestone}`;
+                    }
+
+                    tooltip.textContent = tooltipText;
+                    tooltip.style.left = `${e.pageX + 10}px`;
+                    tooltip.style.top = `${e.pageY + 10}px`;
+                    tooltip.style.opacity = 1;
+                });
+
+                cell.addEventListener('mouseout', function () {
+                    const tooltip = document.getElementById('tooltip');
+                    tooltip.style.opacity = 0;
+                });
+
+                timelineGrid.appendChild(cell);
+            }
+        }
+
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#f2f2f2', '#f44336', '#2196f3', '#ffeb3b', '#4caf50', '#ff9800'];
+            const confettiCount = 50;
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+
+                document.body.appendChild(confetti);
+            }
+        }
+
+        // Initialize everything
+        createConfetti();
+        updateCountdown();
+        generateTimelineGrid();
+
+        // Update every day (or can be changed to more frequent updates)
+        setInterval(() => {
+            updateCountdown();
+            generateTimelineGrid();
+        }, 86400000); // 24 hours
     </script>
 </body>
 

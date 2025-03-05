@@ -8,7 +8,7 @@ resources:
 ---
 ## Finding the right problem
 - solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear
-- Focus on [[Jobs to be done]]
+- Focus on [[JTBD]]
 ## Rest
 - YOUR NEW USER IS THE DECISION MAKERs
 - YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS

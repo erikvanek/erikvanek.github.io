@@ -18,11 +18,10 @@ resources:
 - review successes and failures
 # Daily
 - shutdown 15 minutes
-	- go through remarkable as a single source of truth
+	- go through remarkable as a single source of truth (this does not work – where to track new todos? weekly review?)
 		- unresolved tasks and add them where they belong
 		- daily successes
 		- daily failures
-	- review calendar for next 2 weeks
-	- 
 	- review my weekly plan and maybe edit it a bit
+	- review calendar for next 2 weeks
 	- **"Pro dnes mám hotovo!"**

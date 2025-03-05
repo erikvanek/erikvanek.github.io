@@ -10,6 +10,7 @@
 	- written in clear, simple, and precise language
 - findings are not enough as they don't provide context
 - user insights typically focus on the user's **unmet needs**, **underlying motivations**, and **surprising behaviors**.
+- _A definition is helpful but knowing what value your insight should deliver in the customer journey is far more essential and makes them directly actionable, building momentum for change._
 ## Insight anatomy
 __“I saw this” + “I know this” = insight__
 - **“I saw this”** - user research data gathered through research, ideally from various sources

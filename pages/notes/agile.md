@@ -36,6 +36,11 @@
 	- https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/
 - beyond agile
 		- https://www.svpg.com/beyond-lean-and-agile/
+- Allan Kelly on agile
+	- https://www.allankelly.net/writing/agile_insights/
+	- https://www.allankelly.net/static/wrip/WhyAgile.pdf
+	- https://www.allankelly.net/static/wrip/WhatIsAgile.pdf
+	- https://www.agileconnection.com/article/dear-customer-truth-about-it-projects
 ## podcasts
 - [https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s](pursuing ambitious design ideas)
 ## videos
