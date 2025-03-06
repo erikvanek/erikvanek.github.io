@@ -53,6 +53,9 @@
 - https://lovable.dev/?via=amit
 - v0
 - https://replit.com/
+## Prototyping
+- https://uxdesign.cc/why-you-should-bring-prototyping-into-your-design-process-fb25b679accb
+- https://uxdesign.cc/prototyping-youre-halfway-there-cde5a80be214
 ## Presentations
 [Design in tech report 2024](https://designintech.report/designintechreport-2024.html#/title-slide) by John Maeda
 Motivace
