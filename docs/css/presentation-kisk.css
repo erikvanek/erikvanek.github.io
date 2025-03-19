@@ -107,6 +107,7 @@ footer a {
 
 footer {
     margin-left: -5rem;
+    display: none !important;
 }
 
 .r-fit-text {
