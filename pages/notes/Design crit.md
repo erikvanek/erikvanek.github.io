@@ -1,0 +1,14 @@
+---
+resources:
+  - https://open.spotify.com/episode/6NhMKH6ZqVewNF2lApvjHr
+  - https://www.figma.com/blog/design-critiques-at-figma/
+---
+- a technique for reviewing design proposals
+- Good design crit sessions are around 7 people to balance out breadth and depth of [[Feedback]]
+- Variation
+	- **no-context crit** – happens without setting the initial context properly
+	- the rationale is that people should be able to understand even without telling what's going on
+- Should happen soon in the process – share early and often **not to get in love with your solution**
+- Key design critique questions
+	- *Why you think a particular solution solves a problem betterh than the other ones?*
+- Design crit session **is not a liking game and a voting game** – key is to debate what is the best decision and why, we're not dropping likes and comments

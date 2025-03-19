@@ -19,7 +19,7 @@
 - Doist
 - Linear
  ## articles
- - [https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2](feature factory)
+ - https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2
  - why this class is not remote https://www.newyorker.com/culture/annals-of-inquiry/can-remote-work-be-fixed
 
 ## articles
@@ -42,7 +42,7 @@
 	- https://www.allankelly.net/static/wrip/WhatIsAgile.pdf
 	- https://www.agileconnection.com/article/dear-customer-truth-about-it-projects
 ## podcasts
-- [https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s](pursuing ambitious design ideas)
+- https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s
 ## videos
 - https://www.youtube.com/watch?v=qixx7ESrJQg&t=929s
 - computing concepts for designers https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos
@@ -53,6 +53,10 @@
 - https://lovable.dev/?via=amit
 - v0
 - https://replit.com/
+- https://codeium.com/windsurf
+## Vibe coding/design
+- https://www.uxtigers.com/post/vibe-coding-vibe-design
+- https://www.youtube.com/watch?v=MQw_zncxk-E&list=WL&index=21&t=146s
 ## Prototyping
 - https://uxdesign.cc/why-you-should-bring-prototyping-into-your-design-process-fb25b679accb
 - https://uxdesign.cc/prototyping-youre-halfway-there-cde5a80be214

@@ -124,3 +124,8 @@ footer {
 .text-shadow-black {
     text-shadow: 4px 4px 4px red, 0 0 2em rgba(.2,.2,1,1), 0 0 1.2em blue !important;
 }
+
+
+p {
+    font-size: 2rem !important; color: beige !important;
+}

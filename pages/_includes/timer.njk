@@ -1,0 +1,381 @@
+<div id="presentation-timer" class="timer-container">
+  <div class="timer-drag-handle"></div>
+  <div class="timer-controls">
+    <input type="number" id="timer-minutes" min="1" max="60" value="5" aria-label="Minutes">
+    <span class="timer-separator">:</span>
+    <input type="number" id="timer-seconds" min="0" max="59" value="0" aria-label="Seconds">
+  </div>
+  <div class="timer-display">
+    <span id="timer-value">05:00</span>
+  </div>
+  <div class="timer-buttons">
+    <button id="timer-start" class="timer-btn">Start</button>
+    <button id="timer-pause" class="timer-btn" disabled>Pause</button>
+    <button id="timer-reset" class="timer-btn">Reset</button>
+  </div>
+</div>
+
+<style>
+  .timer-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 180px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 12px;
+    z-index: 9999;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .timer-drag-handle {
+    cursor: move;
+    height: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .timer-controls input {
+    width: 45px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  .timer-separator {
+    color: white;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .timer-display {
+    background-color: rgba(120, 20, 20, 0.9);
+    border-radius: 6px;
+    padding: 10px 5px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  #timer-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    font-family: monospace;
+  }
+
+  .timer-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .timer-btn {
+    flex: 1;
+    background-color: rgba(60, 60, 60, 0.8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+
+  .timer-btn:hover {
+    background-color: rgba(80, 80, 80, 0.8);
+  }
+
+  .timer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  #timer-start {
+    background-color: rgba(40, 100, 40, 0.8);
+  }
+
+  #timer-start:hover {
+    background-color: rgba(50, 120, 50, 0.8);
+  }
+
+  #timer-pause {
+    background-color: rgba(100, 100, 40, 0.8);
+  }
+
+  #timer-pause:hover {
+    background-color: rgba(120, 120, 50, 0.8);
+  }
+
+  /* When time is running low (under 1 minute), add pulsing effect */
+  .timer-warning {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: rgba(120, 20, 20, 0.9);
+    }
+    50% {
+      background-color: rgba(180, 30, 30, 0.9);
+    }
+    100% {
+      background-color: rgba(120, 20, 20, 0.9);
+    }
+  }
+
+  /* Make the timer responsive */
+  @media (max-width: 768px) {
+    .timer-container {
+      width: 150px;
+      padding: 8px;
+    }
+    
+    #timer-value {
+      font-size: 24px;
+    }
+    
+    .timer-btn {
+      font-size: 12px;
+      padding: 4px 0;
+    }
+  }
+</style>
+
+<script>
+  // Initialize the timer when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    initTimer();
+  });
+  
+  // Main timer initialization function
+  function initTimer() {
+    // Get DOM elements
+    const timerValue = document.getElementById('timer-value');
+    const minutesInput = document.getElementById('timer-minutes');
+    const secondsInput = document.getElementById('timer-seconds');
+    const startBtn = document.getElementById('timer-start');
+    const pauseBtn = document.getElementById('timer-pause');
+    const resetBtn = document.getElementById('timer-reset');
+    const timerDisplay = document.querySelector('.timer-display');
+    const timerContainer = document.getElementById('presentation-timer');
+    
+    // Timer state variables
+    let countdown;
+    let totalSeconds = 300; // Default 5 minutes
+    let isRunning = false;
+    
+    // Initialize timer with values from inputs
+    function initializeTimer() {
+      const mins = parseInt(minutesInput.value) || 5;
+      const secs = parseInt(secondsInput.value) || 0;
+      
+      totalSeconds = (mins * 60) + secs;
+      updateTimerDisplay();
+    }
+    
+    // Format time values (add leading zeros)
+    function formatTime(value) {
+      return value < 10 ? `0${value}` : value;
+    }
+    
+    // Update the timer display based on totalSeconds
+    function updateTimerDisplay() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      timerValue.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
+    }
+    
+    // Update total seconds when inputs change
+    function updateFromInputs() {
+      const minutes = parseInt(minutesInput.value) || 0;
+      const seconds = parseInt(secondsInput.value) || 0;
+      
+      // Validate input values
+      minutesInput.value = Math.min(Math.max(minutes, 0), 60);
+      secondsInput.value = Math.min(Math.max(seconds, 0), 59);
+      
+      totalSeconds = (minutes * 60) + seconds;
+      updateTimerDisplay();
+    }
+    
+    // Start the timer countdown
+    function startTimer() {
+      if (isRunning) return;
+      
+      // Update from inputs in case they were changed
+      updateFromInputs();
+      
+      if (totalSeconds <= 0) return; // Don't start if no time is set
+      
+      isRunning = true;
+      startBtn.disabled = true;
+      pauseBtn.disabled = false;
+      minutesInput.disabled = true;
+      secondsInput.disabled = true;
+      
+      // Clear any existing interval
+      clearInterval(countdown);
+      
+      // Start countdown interval
+      countdown = setInterval(function() {
+        totalSeconds--;
+        
+        if (totalSeconds <= 0) {
+          clearInterval(countdown);
+          timerFinished();
+          return;
+        }
+        
+        updateTimerDisplay();
+        
+        // Add warning effect when under 60 seconds
+        if (totalSeconds < 60) {
+          timerDisplay.classList.add('timer-warning');
+        }
+      }, 1000);
+    }
+    
+    // Pause the timer
+    function pauseTimer() {
+      if (!isRunning) return;
+      
+      clearInterval(countdown);
+      isRunning = false;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+    }
+    
+    // Reset the timer
+    function resetTimer() {
+      clearInterval(countdown);
+      isRunning = false;
+      
+      // Reset UI state
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      minutesInput.disabled = false;
+      secondsInput.disabled = false;
+      timerDisplay.classList.remove('timer-warning');
+      
+      // Reset time values and update display
+      updateFromInputs();
+    }
+    
+    // Handle timer finished state
+    function timerFinished() {
+      isRunning = false;
+      totalSeconds = 0;
+      updateTimerDisplay();
+      
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      minutesInput.disabled = false;
+      secondsInput.disabled = false;
+      
+      // Visual indication timer has finished
+      timerDisplay.classList.add('timer-warning');
+    }
+    
+    // Make the timer draggable
+    function makeDraggable(element) {
+      const handle = element.querySelector('.timer-drag-handle');
+      let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      
+      if (handle) {
+        handle.onmousedown = dragMouseDown;
+      }
+      
+      function dragMouseDown(e) {
+        e.preventDefault();
+        
+        // Get initial mouse position
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        
+        // Add document-wide event handlers
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+      
+      function elementDrag(e) {
+        e.preventDefault();
+        
+        // Calculate new position
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        
+        // Update element position
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.right = 'auto';
+        element.style.left = (element.offsetLeft - pos1) + "px";
+      }
+      
+      function closeDragElement() {
+        // Remove document-wide event handlers
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    
+    // Toggle timer visibility
+    function toggleVisibility() {
+      if (timerContainer.style.display === 'none') {
+        timerContainer.style.display = 'flex';
+      } else {
+        timerContainer.style.display = 'none';
+      }
+    }
+    
+    // Set up event listeners
+    startBtn.addEventListener('click', startTimer);
+    pauseBtn.addEventListener('click', pauseTimer);
+    resetBtn.addEventListener('click', resetTimer);
+    minutesInput.addEventListener('change', updateFromInputs);
+    secondsInput.addEventListener('change', updateFromInputs);
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      // Don't trigger if typing in inputs
+      if (e.target.tagName === 'INPUT') return;
+      
+      if (e.code === 'Space') {
+        e.preventDefault();
+        isRunning ? pauseTimer() : startTimer();
+      }
+      
+      if (e.code === 'KeyR') {
+        e.preventDefault();
+        resetTimer();
+      }
+      
+      if (e.code === 'KeyT' && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        toggleVisibility();
+      }
+    });
+    
+    // Initialize the timer and make it draggable
+    initializeTimer();
+    makeDraggable(timerContainer);
+  }
+</script>

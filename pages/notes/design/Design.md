@@ -8,3 +8,4 @@
 	- when designing for radical innovation we need to [inform our intuition](obsidian://open?vault=notes&file=design%2Fresources%2FInforming_Our_Intuition.pdf)
 	- is about making trade-offs
 		- e.g. adding a few clicks (increasing motor load) to reduce cognitive or visual load
+- The best design does not come from individual designerers, but from design teams
