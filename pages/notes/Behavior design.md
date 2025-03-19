@@ -1,0 +1,2 @@
+- Nice patterns in [Coglode cookbook](https://www.coglode.com/)
+- Intro to [behavior science](https://insights.aimforbehavior.com/p/a-short-introduction-to-behavioral)

@@ -4,55 +4,95 @@
     "type": "split",
     "children": [
       {
-        "id": "a281e771e8c68982",
+        "id": "7e16a806fc565b1f",
         "type": "tabs",
         "children": [
           {
-            "id": "815cbacb26da1064",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JTBD/JTBD.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "JTBD"
-            }
-          },
-          {
-            "id": "84d83e1440eaf5a3",
+            "id": "95330530b5d12bf1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/tools in 2024.md",
+                "file": "Problem framing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tools in 2024"
+              "title": "Problem framing"
             }
           },
           {
-            "id": "e0c8fefdba7b88f3",
+            "id": "f55d1ce793537be7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design/Design tools/Journey maps.md",
+                "file": "design/Quotes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journey maps"
+              "title": "Quotes"
             }
           },
           {
-            "id": "83b9b88d304428dd",
+            "id": "128416d474b3971b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Productivity.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Productivity"
+            }
+          },
+          {
+            "id": "c486060b2522ec2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Learning"
+            }
+          },
+          {
+            "id": "da5229051f16aab0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Remote.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Remote"
+            }
+          },
+          {
+            "id": "1ec57e93d74ade9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Behavior design.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Behavior design"
+            }
+          },
+          {
+            "id": "981acedb9c34cea5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -66,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -98,7 +138,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "anxiet",
+                "query": "groan",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,7 +169,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -214,35 +255,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "83b9b88d304428dd",
+  "active": "981acedb9c34cea5",
   "lastOpenFiles": [
     "Planning/Planning.md",
-    "agile.md",
-    "Product vision.md",
-    "pla¨.md",
-    "Problem framing.md",
-    "JTBD/JTBD.md",
-    "JTBD/System of progress.md",
-    "design/Design tools/Journey maps.md",
-    "design/Design tools/Jobs to be done.md",
-    "design/Concepts/Insight.md",
-    "Planning/Reflection.md",
-    "random/random.md",
-    "design/Resources.md",
-    "review.md",
-    "Personal effectiveness.md",
-    "food/to cook.md",
-    "Attention.md",
-    "Planning",
-    "Calendly.md",
+    "Company culture.md",
+    "Behavior design.md",
+    "Remote.md",
+    "Learning.md",
+    "Productivity.md",
     "design/Quotes.md",
-    "design/Design tools/Persona.md",
-    "Workshopy.md",
-    "design/Concepts/Prototyping.md",
-    "design/Design tools/Prototype.md",
-    "design/Concepts/Double diamond.md",
-    "design/Service design.md",
-    "design/Design methods/Interviews.md",
+    "Problem framing.md",
+    "random/random.md",
+    "Eisenhower matrix.md",
+    "design/random.md",
+    "design/Design tools/Design tools.md",
+    "agile.md",
+    "pursuing.md",
+    "feature.md",
+    "Product risk taxonomy.md",
+    "Product vision.md",
+    "Feedback.md",
+    "JTBD/JTBD.md",
+    "tools/tools in 2024.md",
+    "design/Design tools/Journey maps.md",
+    "design/Design competence.md",
+    "Design crit.md",
+    "design/Design.md",
+    "Rules of qualitative rigor.md",
+    "pla¨.md",
+    "Planning",
     "SDW",
     "design/resources/Problem Framing Handbook.pdf",
     "design/AFA Workshop Templates.pdf",

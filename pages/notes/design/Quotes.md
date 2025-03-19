@@ -1,3 +1,4 @@
 - Peter Senge: "Many of the problems we face today are yesterday’s solutions"
 - Erika Hall: "Relevance to the real world is what separates innovation from invention"
 - Clayton Christensen: “Questions are places in your mind where answers fit. If you haven’t asked the question, the answer has nowhere to go.”
+- James Clear: "We often assume that productivity means getting more things done each day. Wrong. **Productivity is getting important things done consistently**."

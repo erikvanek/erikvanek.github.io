@@ -3,7 +3,7 @@
 	- https://www.nceas.ucsb.edu/news/how-spark-joy-groan-zone-collaboration
 	- https://futuropolis.cz/knihovna/groan-zone-zona-kvileni/
 	- what it is and how to work with it
-	- 
+	- or Killing puppies https://greengoosewriting.com/blog/make-all-your-writing-mean-something
 - https://www.liberatingstructures.com/1-1-2-4-all/
 - using behavioral design during design
 	- https://wearesnook.com/applying-behavioural-design-to-help-people-make-more-sustainable-choices/
@@ -26,3 +26,4 @@
 - Heart for measuring UX https://dovetail.com/ux/heart-framework/
 - [The myth of the genius designer](https://www.nngroup.com/articles/the-myth-of-the-genius-designer/)
 - [Product market fit](https://www.lennysnewsletter.com/p/finding-product-market-fit) by Lenny
+- well-reframed design https://en.wikipedia.org/wiki/Hitachi_Magic_Wand

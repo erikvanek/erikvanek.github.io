@@ -5,10 +5,15 @@ resources:
   - https://www.griffith.edu.au/__data/assets/pdf_file/0025/1750570/Problem-Framing-Canvas-Handbook.pdf
   - https://hbr.org/2017/01/are-you-solving-the-right-problems
   - https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it
+  - http://jtbd.info/
+  - https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/
 ---
 ## Finding the right problem
 - solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear
 - Focus on [[JTBD]]
+- *"Framing is the process of breaking down a problem into a set of choices, trade offs, and options that enable a team to make a call and move forward."* - [Shishir Mehrotra](https://coda.io/@shishir)
+- Good framing helps produce "decisions that stick."
+- [https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/eigenquestions-3](Eigenquestions) help with this
 ## Rest
 - YOUR NEW USER IS THE DECISION MAKERs
 - YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS
