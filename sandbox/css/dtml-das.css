@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.intro, .claim, .feats, .benefits, .how-it-works, .cta {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.claim {
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.claim h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.feats, .benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feat, .benefit {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feat img, .benefit img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.how-it-works ol {
+    list-style-position: inside;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.cta input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-logo {
+    max-width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feat, .benefit {
+        width: 100%;
+    }
+}
