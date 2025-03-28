@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4lzLUckaWn8onmSxB6y18ZD6ljLzNqdBzMtvGXXQL6s" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content='Prototypování, design critique a vibe coding workshop'>
+    <title>Service design workshop IV | Erik Vaněk</title>
+    <meta name="description" content='Prototypování, design critique a vibe coding workshop'>
+    <link rel="stylesheet" href="/css/nu.css">
+    <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+    </link>
+    <link rel="stylesheet" href="../../css/revealjs/black.css">
+    </link>
+    <link rel="stylesheet" href="../css/presentation-jinag.css">
+    </link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+    <div class="backgrounds">
+        <div class="background-grid"></div>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+            
+<link rel="stylesheet" href="../css/presentation-kisk.css">
+</link>
+
+<section>
+    <div class="equal-columns">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+            <br>
+            <br>
+            <h1 id="service-design-workshop-iv">Service design workshop IV</h1>
+            <h2 id="prototypovn-design-critique-a-vibe-coding-workshop">Prototypování, design critique a vibe coding workshop</h2>
+            <br>
+            <br>
+            <h4 id="erik-vank-03042025">Erik Vaněk, 03.04.2025</h4>
+            <h4 id="a-hrefmailto359416mailmunicz359416mailmunicza"><a href="mailto:359416@mail.muni.cz">359416@mail.muni.cz</a></h4>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1 id="co-dnes-ekat">Co dnes čekat?</h1>
+    <ul>
+        <li>Pokračování prototypování do větší hloubky</li>
+        <li>Design critique – strukturovaná zpětná vazba</li>
+        <li>Pauza na ☕ (kolem 11:40)</li>
+        <li>Vibe coding workshop – AI asistované prototypování</li>
+        <li>Sdílení výstupů a postřehů</li>
+        <li>Zadání pro další práci</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="projekty">Projekty</h1>
+    <ul>
+        <li>Jak jste spokojení s vašimi koncepty?</li>
+        <li>Víte, který směr chcete dál rozvíjet?</li>
+        <li>Jak pokračuje nábor respondentů na testování?</li>
+        <li>Potřebujete ode mě aktuálně něco?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Otázky než začneme?</h1>
+</section>
+
+<!-- ČÁST 1: PROTOTYPOVÁNÍ (40 minut) -->
+
+<section>
+    <h1 class="r-fit-text">Prototypování – pokračování</h1>
+</section>
+
+<section>
+    <h1 id="kde-jsme-skonili-minule">Kde jsme skončili minule</h1>
+    <ul>
+        <li>Prototypování jako nástroj pro snižování rizik</li>
+        <li>High/mid/low fidelity prototypy</li>
+        <li>Analog X Digital</li>
+        <li>Throw-away přístup – rychle otestovat a pokračovat dál</li>
+        <li>Dnes se zaměříme konkrétněji na digitální prototypování</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="pro-vytvet-prototypy">Proč vytvářet prototypy?</h1>
+    <ul>
+        <li><strong>Rychlejší než vývoj</strong> – prototypy jsou rychlejší a levnější než budování finálního produktu
+        </li>
+        <li><strong>Ověřování nápadů</strong> – testování konceptů ve velmi rané fázi</li>
+        <li><strong>Komunikační nástroj</strong> – snadnější představení nápadu stakeholderům</li>
+        <li><strong>Lepší zpětná vazba</strong> – konkrétní vs. abstraktní diskuse</li>
+        <li><strong>Iterace</strong> – rychlé cykly zlepšování</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="fidelity-prototyp">Fidelity prototypů</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="low-fidelity">Low Fidelity</h3>
+            <ul>
+                <li>Papír, tužka, post-ity</li>
+                <li>Wireframy</li>
+                <li>Rychlá vizualizace</li>
+                <li>Pro testování konceptů</li>
+                <li>Levné a rychlé</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="high-fidelity">High Fidelity</h3>
+            <ul>
+                <li>Detailní UI</li>
+                <li>Interaktivní</li>
+                <li>Blízko finálnímu produktu</li>
+                <li>Pro testování detailů</li>
+                <li>Náročnější na zdroje</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1 id="kdy-pouvat-jakou-fidelitu">Kdy používat jakou fidelitu?</h1>
+    <ul>
+        <li><strong>Low fidelity</strong>
+            <ul>
+                <li>Na začátku procesu</li>
+                <li>Když testujeme koncept</li>
+                <li>Když je hodně nejistoty</li>
+            </ul>
+        </li>
+        <li><strong>High fidelity</strong>
+            <ul>
+                <li>Později v procesu</li>
+                <li>Když testujeme detaily a interakce</li>
+                <li>Když potřebujeme přesvědčit stakeholdery</li>
+                <li>Když testujeme s uživateli, kteří potřebují realistický kontext</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="digitln-prototypovac-nstroje">Digitální prototypovací nástroje</h1>
+    <ul>
+        <li><strong>Figma</strong> – aktuálně nejpopulárnější nástroj</li>
+        <li><strong>Adobe XD</strong> – alternativa od Adobe</li>
+        <li><strong>Sketch</strong> – populární mezi Mac uživateli</li>
+        <li><strong>Framer</strong> – specializovaný na interaktivitu</li>
+        <li><strong>Webflow</strong> – prototypování bez kódu</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="co-prototypovat">Co prototypovat?</h1>
+    <ul>
+        <li><strong>Uživatelský tok</strong> – sekvence obrazovek a interakcí</li>
+        <li><strong>Informační architekturu</strong> – struktura a hierarchie</li>
+        <li><strong>Interakce</strong> – jak se systém chová při různých akcích</li>
+        <li><strong>Vizuální design</strong> – look and feel</li>
+        <li><strong>Funkčnost</strong> – jak služba funguje</li>
+        <li><strong>Zážitek</strong> – emocionální aspekt služby</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="prototypovn-slueb">Prototypování služeb</h1>
+    <ul>
+        <li>Služby jsou komplexnější než produkty nebo aplikace</li>
+        <li>Mají fyzickou i digitální složku</li>
+        <li>Zahrnují více touchpointů a kanálů</li>
+        <li>Důležitý je i kontext a prostředí</li>
+        <li>Možné metody:
+            <ul>
+                <li><strong>Service blueprint</strong> – mapa služby</li>
+                <li><strong>Role playing</strong> – hraní rolí</li>
+                <li><strong>Service walkthrough</strong> – procházení služby</li>
+                <li><strong>Desktop walkthrough</strong> – miniaturní simulace</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jak-postupovat">Jak postupovat?</h1>
+    <ol>
+        <li><strong>Definujte cíl</strong> – co chcete otestovat a zjistit?</li>
+        <li><strong>Zvolte fidelitu</strong> – jak realistický prototyp potřebujete?</li>
+        <li><strong>Vyberte nástroj</strong> – papír, digitální nástroj, ...?</li>
+        <li><strong>Zaměřte se na klíčové interakce</strong> – ne vše musí být funkční</li>
+        <li><strong>Plánujte testování</strong> – s kým, jak a kdy budete testovat?</li>
+        <li><strong>Iterujte</strong> – upravujte na základě zjištění</li>
+    </ol>
+</section>
+
+<section>
+    <h1 id="ai-v-prototypovn">AI v prototypování</h1>
+    <ul>
+        <li>Dramaticky mění způsob, jak vytváříme prototypy</li>
+        <li>Nástroje jako V0, Figma with AI, Framer, Midjourney</li>
+        <li>Výhody:
+            <ul>
+                <li>Rychlejší tvorba vizuálů</li>
+                <li>Generování variant</li>
+                <li>Překonání bariér nedostatku designových zkušeností</li>
+                <li>Demokratizace designu</li>
+            </ul>
+        </li>
+        <li>Později si to vyzkoušíme prakticky</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="kognitivn-zkreslen-pi-prototypovn">Kognitivní zkreslení při prototypování</h1>
+    <ul>
+        <li><strong>Confirmation bias</strong> – hledáme potvrzení našich předpokladů</li>
+        <li><strong>Curse of knowledge</strong> – nedokážeme se vžít do neznalosti uživatele</li>
+        <li><strong>False-consensus effect</strong> – předpokládáme, že ostatní smýšlí jako my</li>
+        <li><strong>IKEA effect</strong> – přeceňujeme to, co jsme sami vytvořili</li>
+        <li><strong>Sunk cost fallacy</strong> – držíme se špatných nápadů kvůli investovanému času</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jak-to-me-vypadat">Jak to může vypadat?</h1>
+    <div class="equal-columns">
+        <div>
+
+            <img src="../img/2024/case-studies/jarmilka/proces/design-crit-II.jpg" alt="Paper prototype"
+                style="max-height: 400px;">
+            <p style="font-size: 1rem;">Papírový prototyp. Zdroj: <a
+                    href="https://ucnmuni.sharepoint.com/:v:/r/teams/Section_97463_ISKM48/Sdilene%20dokumenty/General/prulet-jarmilkou.mov?csf=1&web=1&e=vOt3WH"
+                    target="_blank">MUNI Sharepoint 🙃</a></p>
+        </div>
+        <div>
+            <img src="../img/2024/case-studies/jarmilka/jarmilka-laptop.png" alt="Figma prototype"
+                style="max-height: 400px;">
+            <p style="font-size: 1rem;">Prototyp v nástroji <a
+                    href="https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka?node-id=9-3&p=f&viewport=237,1264,0.25&t=yPvV5ZNldI2a81JY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=9:3"
+                    target="_blank">Figma</a></p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h1 id="ukzka-praktickho-pouit">Ukázka praktického použití</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JMjozqJS44M?si=Kps9-Qn5oqHROjvt"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p style="font-size: 1rem;">Ukázka procesu prototypování v reálném čase</p>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Otázky k prototypování? 🤔</h1>
+</section>
+
+<!-- ČÁST 2: DESIGN CRITIQUE (60 minut) -->
+
+<section>
+    <h1 class="r-fit-text">Design critique</h1>
+</section>
+
+<section>
+    <h1 id="co-je-design-critique">Co je design critique?</h1>
+    <ul>
+        <li>Strukturovaný proces zpětné vazby na design</li>
+        <li>Zaměřený na zlepšení, ne kritiku</li>
+        <li>Cílem je:
+            <ul>
+                <li>Identifikovat silné stránky řešení</li>
+                <li>Odhalit problematické oblasti</li>
+                <li>Navrhnout možná vylepšení</li>
+                <li>Získat nové perspektivy</li>
+            </ul>
+        </li>
+        <li>Není to jen "to se mi líbí/nelíbí"</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="pro-design-critique">Proč design critique?</h1>
+    <ul>
+        <li>Zlepšuje kvalitu řešení</li>
+        <li>Odhaluje slepá místa tvůrců</li>
+        <li>Podporuje kritické myšlení</li>
+        <li>Učí poskytovat a přijímat zpětnou vazbu</li>
+        <li>Buduje společné porozumění</li>
+        <li>Zkracuje iterační cykly</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="principy-efektivn-critique">Principy efektivní critique</h1>
+    <ul>
+        <li><strong>Být konkrétní</strong> – "tlačítko je malé" vs. "tlačítko v pravém horním rohu je příliš malé pro
+            mobilní uživatele"</li>
+        <li><strong>Zaměřit se na problém, ne na osobu</strong> – "tento design má problém" vs. "tvůj design je špatný"
+        </li>
+        <li><strong>Uvádět zdůvodnění</strong> – "myslím, že uživatelé budou zmatení, protože..."</li>
+        <li><strong>Navrhovat řešení</strong> – nekončit jen u problémů</li>
+        <li><strong>Vyvážit pozitivní a konstruktivní feedback</strong></li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="struktura-design-critique">Struktura design critique</h1>
+    <ol>
+        <li><strong>Prezentace</strong> – autor představí svůj koncept (kontext, cíle, omezení)</li>
+        <li><strong>Vyjasnění</strong> – účastníci se ptají na upřesnění (ne kritika)</li>
+        <li><strong>Zpětná vazba</strong> – účastníci poskytují strukturovanou zpětnou vazbu</li>
+        <li><strong>Diskuze</strong> – společné hledání možných řešení</li>
+        <li><strong>Shrnutí</strong> – co si autor odnáší a další kroky</li>
+    </ol>
+</section>
+
+<section>
+    <h1 id="i-like-i-wish-what-if-metoda">I Like, I Wish, What If metoda</h1>
+    <ul>
+        <li>Jednoduchá a efektivní metoda pro poskytování zpětné vazby</li>
+        <li><strong>I Like...</strong> – co se mi líbí, co funguje dobře</li>
+        <li><strong>I Wish...</strong> – co bych si přál/a změnit nebo zlepšit</li>
+        <li><strong>What If...</strong> – nápady a možnosti pro další rozvoj</li>
+        <li>Podporuje konstruktivní a vyváženou zpětnou vazbu</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jak-na-to">Jak na to?</h1>
+    <ul>
+        <li>Rozdělíme se do skupin po třech (ideálně mezizkupinově)</li>
+        <li>Každý bude mít 20 minut na svůj koncept:
+            <ul>
+                <li>5 minut na prezentaci konceptu</li>
+                <li>5 minuty na doplňující otázky</li>
+                <li>8 minut na zpětnou vazbu (I Like, I Wish, What If)</li>
+                <li>2 minuty na shrnutí a další kroky</li>
+            </ul>
+        </li>
+        <li>Účastníci si dělají poznámky pro autora</li>
+        <li>Autor aktivně poslouchá, nezlehčuje feedback</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="tipy-pro-prezentaci-konceptu">Tipy pro prezentaci konceptu</h1>
+    <ul>
+        <li>Jasně vysvětlete <strong>problém</strong>, který řešíte</li>
+        <li>Představte <strong>cílovou skupinu</strong></li>
+        <li>Popište <strong>hlavní funkce/aspekty</strong> vašeho řešení</li>
+        <li>Vysvětlete, jak váš koncept <strong>řeší problém</strong></li>
+        <li>Zmíňte <strong>omezení a předpoklady</strong></li>
+        <li>Sdílejte své <strong>nejistoty a otázky</strong> – na co se má feedback zaměřit</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="poskytovn-zptn-vazby">Poskytování zpětné vazby</h1>
+    <ul>
+        <li>Používejte formát <strong>"I Like, I Wish, What If"</strong></li>
+        <li>Buďte <strong>konkrétní</strong> – "tlačítko je příliš malé" vs. "tlačítko by mohlo být větší"</li>
+        <li>Zaměřte se na <strong>uživatelskou perspektivu</strong></li>
+        <li>Poskytujte <strong>zdůvodnění</strong> svých komentářů</li>
+        <li>Navrhujte <strong>konstruktivní řešení</strong></li>
+        <li>Vyhýbejte se <strong>osobním preferencím</strong> bez zdůvodnění</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="tipy-pro-pijmn-zptn-vazby">Tipy pro přijímání zpětné vazby</h1>
+    <ul>
+        <li><strong>Naslouchejte aktivně</strong> – neskákejte do řeči, neobhajujte se</li>
+        <li><strong>Děkujte za feedback</strong> – i když s ním nesouhlasíte</li>
+        <li><strong>Ptejte se na upřesnění</strong> – když něčemu nerozumíte</li>
+        <li><strong>Dělejte si poznámky</strong></li>
+        <li><strong>Nehledejte viníky</strong> – jde o zlepšení řešení, ne o ego</li>
+        <li><strong>Neberte to osobně</strong> – nejde o vás, ale o vaše řešení</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jdeme-na-to">Jdeme na to 🔥</h1>
+    <ul>
+        <li>Rozdělte se do skupin po 3</li>
+        <li>Každý má 20 minut na svůj koncept
+            <ul>
+                <li>Stopnu čas a ohlásím výměnu</li>
+            </ul>
+        </li>
+        <li>Pokud zbyde čas, sdílíme klíčové postřehy a učení společně</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Pauza na ☕</h1>
+</section>
+
+<!-- ČÁST 3: VIBE CODING WORKSHOP (40 minut) -->
+
+<section>
+    <h1 class="r-fit-text">Vibe coding workshop</h1>
+</section>
+
+<section>
+    <h1 id="co-je-vibe-coding">Co je vibe coding?</h1>
+    <ul>
+        <li>Přístup k vývoji s využitím AI asistentů</li>
+        <li>Snižuje technické bariéry při prototypování</li>
+        <li>Zaměřuje se na rychlost a experimentování</li>
+        <li>Demokratizuje vývoj prototypů</li>
+        <li>Umožňuje designérům vytvářet funkční prototypy bez hlubokých znalostí kódu</li>
+        <li>Nenahrazuje tradiční vývoj, ale doplňuje ho</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="nstroje-pro-vibe-coding">Nástroje pro vibe coding</h1>
+    <ul>
+        <li><strong>V0</strong> – AI nástroj pro rychlé prototypování webových aplikací</li>
+        <li><strong>GitHub Copilot</strong> – AI asistent pro programování</li>
+        <li><strong>ChatGPT/Claude</strong> – textový AI model pro generování kódu</li>
+        <li><strong>Framer AI</strong> – nástroj pro vytváření webů s AI</li>
+        <li><strong>Replit</strong> – online IDE s AI funkcemi</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="v0-ai-first-prototyping">V0 – AI first prototyping</h1>
+    <ul>
+        <li>Webová aplikace přístupná na <a href="https://v0.dev/" target="_blank">v0.dev</a></li>
+        <li>Vytvořeno týmem z Vercel</li>
+        <li>Umožňuje generovat UI komponenty a celé aplikace pomocí textových popisů</li>
+        <li>Generuje webové aplikace s plně funkčním kódem</li>
+        <li>Lze exportovat a dále upravovat</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="praktick-vyuit-v0">Praktické využití V0</h1>
+    <ul>
+        <li><strong>Rychlé prototypování</strong> – vytvoření UI za minuty místo hodin</li>
+        <li><strong>Vizualizace nápadů</strong> – převedení konceptů do vizuální podoby</li>
+        <li><strong>Testování konceptů</strong> – ověření nápadů s uživateli</li>
+        <li><strong>Inspirace a průzkum</strong> – generování různých variant</li>
+        <li><strong>Komunikace s vývojáři</strong> – konkrétní představa namísto abstraktního popisu</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="prompty-pro-v0">Prompty pro V0</h1>
+    <ul>
+        <li><strong>Buďte konkrétní</strong> – "Vytvoř přihlašovací formulář s emailem a heslem, tlačítkem pro
+            přihlášení a odkazem na registraci"</li>
+        <li><strong>Popisujte účel</strong> – "Vytvoř dashboard pro komunitní zahradu, kde mohou vidět rezervace
+            zahrádek a přidělovat úkoly"</li>
+        <li><strong>Specifikujte vizuální styl</strong> – "Použij světlé barvy, zaoblené rohy a minimalistický design"
+        </li>
+        <li><strong>Zmiňte funkčnost</strong> – "Formulář by měl kontrolovat validní email a heslo alespoň 8 znaků"</li>
+        <li><strong>Iterujte</strong> – začněte jednodušším promptem a postupně ho zpřesňujte</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="workshop-s-v0">Workshop s V0</h1>
+    <ul>
+        <li>Vyberte aspekt vašeho konceptu k prototypování</li>
+        <li>Napište prompt pro V0 (lze i v češtině)</li>
+        <li>Vygenerujte UI, iterujte a upravujte</li>
+        <li>Exportujte kód nebo uložte obrázek</li>
+        <li>Připravte krátké představení svého prototypu</li>
+    </ul>
+    <p>Pokud nemáte přístup k V0, můžete použít ChatGPT/Claude a generovat HTML/CSS kód nebo vizuální popis.</p>
+</section>
+
+<section>
+    <h1 id="pklady-prompt-pro-v0">Příklady promptů pro V0</h1>
+    <ul style="font-size: 1.5rem !important;">
+        <li style="font-size: 1.5rem !important;">"Vytvoř landing page pro aplikaci, která pomáhá lidem najít sociální
+            služby v jejich okolí. Měla by mít
+            hlavní banner s vyhledáváním podle lokality a typu služby, sekci s populárními kategoriemi služeb a sekci s
+            testimonials od uživatelů."</li>
+        <li style="font-size: 1.5rem !important;">"Navrhni profil sociálního pracovníka v platformě pro propojování
+            klientů a poskytovatelů služeb. Profil by
+            měl obsahovat fotku, kontaktní údaje, specializaci, hodnocení, dostupnost a krátké představení."</li>
+        <li style="font-size: 1.5rem !important;">"Vytvoř rozhraní pro rezervaci termínu v poradně pro rozvodové
+            záležitosti. Uživatel by měl mít možnost
+            vybrat typ konzultace, datum a čas, a vyplnit základní informace o své situaci."</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="pojte-si-zkusit">Pojďte si zkusit 🚀</h1>
+    <ul>
+        <li>Máte 20-25 minut na práci s V0 nebo alternativním nástrojem</li>
+        <li>Vytvořte prototyp části vašeho konceptu</li>
+        <li>Následně každý tým krátce představí (2-3 minuty):
+            <ul>
+                <li>Co jste prototypovali</li>
+                <li>Jaký prompt jste použili</li>
+                <li>Výsledek a vaše zkušenost s nástrojem</li>
+                <li>Jak byste prototyp dále rozvíjeli</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="sdlen-a-reflexe">Sdílení a reflexe 💬</h1>
+    <ul>
+        <li>Co vás překvapilo při práci s AI nástrojem?</li>
+        <li>Jak se liší tento přístup od tradičního prototypování?</li>
+        <li>Jaké vidíte výhody a nevýhody?</li>
+        <li>Jak byste tento nástroj využili ve vašem projektu dále?</li>
+        <li>Jaké další nástroje by vám mohly pomoci?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="co-si-odnst-z-dnen-hodiny">Co si odnést z dnešní hodiny</h1>
+    <ul>
+        <li>Prototypování je iterativní proces – začněte jednoduše a vylepšujte</li>
+        <li>Design critique jako nástroj pro získání zpětné vazby</li>
+        <li>AI nástroje mohou urychlit proces prototypování</li>
+        <li>Kombinujte různé přístupy podle toho, co potřebujete otestovat</li>
+        <li>Nezapomeňte, že prototyp není cíl, ale prostředek k učení a ověření</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="co-dl-s-vaimi-projekty">Co dál s vašimi projekty</h1>
+    <ul>
+        <li>Zapracujte zpětnou vazbu z design critique</li>
+        <li>Dokončete prototypy do 17.4.</li>
+        <li>Naplánujte a realizujte testování do 1.5.</li>
+        <li>Dokumentujte proces a zjištění</li>
+        <li>Zamyslete se nad tím, co chcete zjišťovat během testování
+            <ul>
+                <li>Příště budeme simulovat testování a precizovat otázky, na které si chcete odpovědět</li>
+            </ul>
+        </li>
+        <li>Nezapomeňte na nábor respondentů!</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="domc-prce">Domácí práce</h1>
+    <ul>
+        <li><strong>Dopracujte prototypy</strong> na základě dnešní zpětné vazby</li>
+        <li>Zaměřte se na <strong>klíčové funkce a interakce</strong>, které potřebujete otestovat</li>
+        <li>Ujistěte se, že prototyp jasně <strong>demonstruje váš koncept</strong> a řeší vaši výzvu</li>
+        <li>Nezapomeňte – důležitá je funkčnost a srozumitelnost, ne dokonalost</li>
+        <li>Do příště mějte prototyp připravený k testování!</li>
+    </ul>
+</section>
+
+<section data-background="../img/presentation-backgrounds/purple-sky.jpg" data-background-size="fit">
+    <h1 class="text-shadow-black">Dík! Otázky?</h1>
+</section>
+
+        </div>
+
+        <footer>Prezentace na <a href="/sdw-25-IV" target="_blank">erikvanek.com/sdw-25-IV</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="../../js/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true });
+    </script>
+</body>

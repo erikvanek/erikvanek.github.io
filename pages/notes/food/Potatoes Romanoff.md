@@ -1,0 +1,23 @@
+---
+resources:
+  - https://www.youtube.com/watch?v=3FpcOohn4bI
+  - https://www.youtube.com/watch?v=ZAnEyiDMxeU
+---
+- x kg velkých russet-like brambor
+- cibule
+- X g zakysané smetany
+- X g strouhaného sýra (scamorza, cheddar, blaťácké zlato)
+- dostatek soli (lžíce na kilo brambor?)
+- dochucení typu koriandr, rozmarýn, ... dle chuti
+## Postup
+- Zabalit brambory po jedné do alobalu a propíchat
+- Upéct je den dopředu na 200 stupňů na 60-75 minut tak, aby šel nůž hezky skrz
+- Pak je nechat přijít do pokojovky
+- A nechat úplně zchladit, ideálně přes noc
+- Následně nastrouhat na hrubém struhadle i se slupkou
+- Přidat cibuli najemno
+- Velice jemně promíchat pomocí dvou vidliček tak, abychom ve směsi udrželi co nejvíce vzduchu
+- Přidat nastrouhaný sýr a opět promíchat aby zůstalo co nejvíce vzduchu
+- Jako poslední krok velice jemně vmíchat zakysanou smetanu
+- Následně velice jemně předělat do vymaštěného plechu a péct na 220 cca 30 minut a voilá
+	- volitelně se dá plech péct i ve vodní lázni!

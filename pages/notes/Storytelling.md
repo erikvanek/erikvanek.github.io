@@ -1,6 +1,7 @@
 ---
 resources:
   - https://www.youtube.com/watch?v=gsqMLmaLUCY
+  - https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog
 ---
 - beginning
 	- set expectations
@@ -18,3 +19,21 @@ resources:
 	- https://www.ideou.com/blogs/inspiration/how-to-choose-a-story-arc-for-your-presentation
 - get inspired by movies, literature etc – they are great at storytelling
 - one of the most important skills of a designer
+- every headline is a positioning
+- **evocation over information**
+	- the message has to **make you feel something**
+- When coming up with copywriting or storytelling
+	- put yourself into the shoes of your audience and ask yourself - does it sound useful or bullshit? what the heck this thing do?
+	- how would you refer your friend about the product you just found out? would it "unleash your full potential" or you'd just say "dopest to-do-list because of X..."
+- **A headline is a hook** and should work as a hook
+	- ideally expressed with brevity and clarity – 3 or 4 words
+## Headline structure
+	- show me the problem and then solve it
+		- look at how it looks on tiktok
+	- Solution pitch structure
+	- 1] first communicate that I understand you and your problem
+	- 2] to get your attention remind you of the problem
+	- 3] present you with a solution
+	- that's what helps to structure headlines
+		- main headline asks the question
+		- subhead is as clear as possible in what it does

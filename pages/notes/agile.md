@@ -102,3 +102,5 @@ Resources
 	- when things go sour
 	- ADR
 	- role rotation
+Blok 6
+- Storytelling – https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog

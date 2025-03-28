@@ -4,109 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7e16a806fc565b1f",
+        "id": "80adf53a8e4032e7",
         "type": "tabs",
         "children": [
           {
-            "id": "95330530b5d12bf1",
+            "id": "0217ecc595784f51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Problem framing.md",
+                "file": "Design crit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Problem framing"
-            }
-          },
-          {
-            "id": "f55d1ce793537be7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "design/Quotes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Quotes"
-            }
-          },
-          {
-            "id": "128416d474b3971b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Productivity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Productivity"
-            }
-          },
-          {
-            "id": "c486060b2522ec2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Learning"
-            }
-          },
-          {
-            "id": "da5229051f16aab0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Remote.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Remote"
-            }
-          },
-          {
-            "id": "1ec57e93d74ade9c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Behavior design.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Behavior design"
-            }
-          },
-          {
-            "id": "981acedb9c34cea5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "agile.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "agile"
+              "title": "Design crit"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -255,34 +169,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "981acedb9c34cea5",
+  "active": "0217ecc595784f51",
   "lastOpenFiles": [
-    "Planning/Planning.md",
-    "Company culture.md",
-    "Behavior design.md",
-    "Remote.md",
-    "Learning.md",
-    "Productivity.md",
-    "design/Quotes.md",
-    "Problem framing.md",
-    "random/random.md",
-    "Eisenhower matrix.md",
-    "design/random.md",
-    "design/Design tools/Design tools.md",
     "agile.md",
-    "pursuing.md",
-    "feature.md",
-    "Product risk taxonomy.md",
-    "Product vision.md",
-    "Feedback.md",
-    "JTBD/JTBD.md",
-    "tools/tools in 2024.md",
-    "design/Design tools/Journey maps.md",
-    "design/Design competence.md",
+    "Planning/Planning.md",
+    "design/Design checklist.md",
+    "Second brain.md",
+    "Interview intro.md",
+    "design/Design methods/Interviews.md",
+    "Planning/Reflection.md",
+    "Planning/Project reflection framework.md",
+    "Problem framing.md",
+    "design/Quotes.md",
+    "Productivity.md",
+    "Learning.md",
+    "Remote.md",
+    "Behavior design.md",
+    "SDW/Intro.md",
+    "SDW/Podmínky ukončení.md",
+    "SDW/Průběh semestru.md",
+    "SDW/Zdroje.md",
+    "Attention.md",
+    "Axial coding.md",
+    "Buzzwords.md",
+    "Calendly.md",
     "Design crit.md",
-    "design/Design.md",
-    "Rules of qualitative rigor.md",
-    "pla¨.md",
+    "Freelancing.md",
+    "Humans.md",
+    "Inciting accident.md",
     "Planning",
     "SDW",
     "design/resources/Problem Framing Handbook.pdf",
