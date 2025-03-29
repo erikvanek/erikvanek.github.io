@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/Processes">
+                ⬅️ Back to Processes
+            </a>
+        </div>
+    
+
+    <h1 id="book_notes_processing">Book_Notes_Processing</h1>
+
+    <h1 id="book-notes-processing">Book Notes Processing</h1>
+<p>tags: #process #knowledge-management #reading</p>
+<h2 id="overview">Overview</h2>
+<p>This document outlines the process for processing book notes and integrating them into the knowledge base.</p>
+<h2 id="process-steps">Process Steps</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Upload PDF or image files of book notes to a conversation with Claude</li>
+<li>Specify that these are book notes that need processing</li>
+<li>Indicate whether there is handwritten text to be ignored</li>
+</ul>
+<h3 id="2-note-cleanup-and-structuring">2. Note Cleanup and Structuring</h3>
+<ul>
+<li>Correct any OCR-related typos or imperfections</li>
+<li>Ignore handwritten text</li>
+<li>Organize content into logical sections with headers</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-book-note-creation">3. Book Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each book in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Books/</code></li>
+<li>Use a clear naming convention: <code>Book_Title.md</code></li>
+<li>Structure each book note with:
+<ul>
+<li>Title (H1)</li>
+<li>Tags (3 relevant tags)</li>
+<li>Core concept sections (H2)</li>
+<li>Key points as bullet points</li>
+<li>Any diagrams or frameworks explained</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Identify the most important insights and concepts from the book</li>
+<li>Search existing notes in the knowledge base for related topics</li>
+<li>Carefully enrich these existing notes with new insights from the book</li>
+<li>Clearly attribute the source by adding &quot;(from [Book Title])&quot; where appropriate</li>
+<li>Organize the new information under appropriate headers or create new sections if needed</li>
+<li>Focus on enhancing existing notes rather than creating new thematic notes when possible</li>
+<li>Only create new thematic notes for significant concepts that don't fit into any existing notes</li>
+</ul>
+<h3 id="5-tagging-strategy">5. Tagging Strategy</h3>
+<ul>
+<li>Use 3 tags per book for high-level categorization</li>
+<li>Consider using tags for:
+<ul>
+<li>Subject area (e.g., #ProductStrategy, #CustomerResearch)</li>
+<li>Methodology type (e.g., #OutcomesDriven, #UserInterviews)</li>
+<li>Application context (e.g., #BusinessResults, #ProductDevelopment)</li>
+</ul>
+</li>
+</ul>
+<h2 id="example">Example</h2>
+<ul>
+<li>Book: &quot;The Mom Test&quot; → Tags: #CustomerResearch #UserInterviews #ProductDevelopment</li>
+<li>Book: &quot;Outcomes over Output&quot; → Tags: #OutcomesDriven #ProductStrategy #BusinessResults</li>
+</ul>
+<h2 id="templates">Templates</h2>
+<h3 id="book-note-template">Book Note Template</h3>
+<pre><code class="language-markdown"># [Book Title]
+
+tags: #tag1 #tag2 #tag3
+
+## Core Principles
+- [Key principle 1]
+- [Key principle 2]
+
+## [Topic Section]
+- [Point 1]
+- [Point 2]
+
+## [Another Topic Section]
+- [Point 1]
+- [Point 2]
+</code></pre>
+<h3 id="thematic-note-template">Thematic Note Template</h3>
+<pre><code class="language-markdown"># [Theme]
+
+## Key Principles (from [Book])
+- [Principle 1]
+- [Principle 2]
+
+## [Aspect of Theme]
+- [Point from Book A]
+- [Related point from Book B]
+
+## [Another Aspect]
+- [Point from Book C]
+- [Synthesis of ideas from multiple sources]
+</code></pre>
+<hr>
+<p>Next time you can simply say &quot;process last two books&quot; and this process will be followed automatically.</p>
+<h2 id="recent-implementation-examples-march-2025">Recent Implementation Examples (March 2025)</h2>
+<h3 id="books-processed">Books Processed</h3>
+<ul>
+<li>&quot;The Mom Test&quot; - Notes focused on effective customer interviewing techniques</li>
+<li>&quot;Outcomes over Output&quot; - Notes focused on outcome-driven product strategy</li>
+</ul>
+<h3 id="notes-enhanced">Notes Enhanced</h3>
+<ul>
+<li><strong>Product <a href="http://discovery.md">discovery.md</a></strong>: Added sections on outcome-driven discovery and discovery interviewing techniques from both books</li>
+<li><strong>Qualitative <a href="http://research.md">research.md</a></strong>: Added section on interview best practices from The Mom Test</li>
+<li><strong>Interview <a href="http://intro.md">intro.md</a></strong>: Added effective interviewing techniques to use when starting conversations</li>
+<li><strong><a href="http://research.md">research.md</a></strong>: Added detailed sections on customer interviews and outcome-based research</li>
+</ul>
+<p>The focus was on enriching existing notes rather than creating many new thematic entries, ensuring that the knowledge from these books enhances and complements the existing knowledge structure.</p>
+
+
+    
+</body>
+
+</html>
