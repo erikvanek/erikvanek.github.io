@@ -9,7 +9,7 @@
 	- identify and prioritize unknowns
 - create a research plan to tackle these unknowns
 
-## Outcome-Driven Discovery (from Outcomes over Output)
+## Outcome-Driven Discovery (from [[Books/Outcomes_over_Output|Outcomes over Output]])
 - Focus on outcomes (behavior changes) rather than outputs (features)
 - Ask "what are the customer behaviors that drive business results?"
 - Plan in terms of outcomes, not features with deadlines
@@ -24,7 +24,7 @@
 - A basic problem of output-based planning is not knowing what value each feature brings, making prioritization difficult
 - Metaphor: Planning with outputs is like promising to cross a desert of unknown size by a specific date
 
-## Discovery Interviewing (from The Mom Test)
+## Discovery Interviewing (from [[Books/The_Mom_Test|The Mom Test]])
 - Be genuinely interested in the customer to open their hearts
 - Don't mention your idea/solution too soon - focus on their problems first
 - Ask "Talk me through the last time [problem] happened" to get concrete examples

@@ -1,6 +1,10 @@
+---
+tags:
+  - CustomerResearch
+  - UserInterviews
+  - ProductDevelopment
+---
 # The Mom Test
-
-tags: #CustomerResearch #UserInterviews #ProductDevelopment
 
 ## Core Principles
 - Be genuinely interested about the people to open their hearts
