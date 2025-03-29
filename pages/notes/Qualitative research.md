@@ -23,3 +23,14 @@
 - __attempts to triangulate__ when facing something extraordinary or unusual to ensure that our conclusions are supported by data
 - says what the problem is, quantitative says how bad it is
 - helps to build an empathetic understanding of our users
+
+## Interview Best Practices (from The Mom Test)
+- Be genuinely interested about people to open their hearts
+- "Talk me through the last time [it] happened" is a great question for promoting show-don't-tell
+- The big mistake is to mention your idea too soon rather than too late
+- Watch out for bad data: compliments and fluff
+  - Banned words: would/could/might - these indicate hypothetical situations
+  - Fight fluff by asking about concrete past behavior
+- Don't prematurely zoom in unless you're sure you're zooming into the right thing
+- Plan the three most important things you want to learn from each person
+- Look for people expressing deep emotion about problems - they're often your best prospects
