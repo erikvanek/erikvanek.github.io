@@ -194,10 +194,9 @@
 
     <h1 id="book_notes_processing">Book_Notes_Processing</h1>
 
-    <h1 id="book-notes-processing">Book Notes Processing</h1>
-<p>tags: #process #knowledge-management #reading</p>
+    <h1 id="content-processing-guide">Content Processing Guide</h1>
 <h2 id="overview">Overview</h2>
-<p>This document outlines the process for processing book notes and integrating them into the knowledge base.</p>
+<p>This document outlines the process for processing various types of content (books, articles, podcasts, videos) and integrating them into the knowledge base.</p>
 <h2 id="process-steps">Process Steps</h2>
 <h3 id="1-initial-capture">1. Initial Capture</h3>
 <ul>
@@ -218,8 +217,17 @@
 <li>Use a clear naming convention: <code>Book_Title.md</code></li>
 <li>Structure each book note with:
 <ul>
-<li>Title (H1)</li>
-<li>Tags (3 relevant tags)</li>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Book Title&quot;
+author: &quot;Author Name&quot;
+published: YYYY
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
 <li>Core concept sections (H2)</li>
 <li>Key points as bullet points</li>
 <li>Any diagrams or frameworks explained</li>
@@ -231,7 +239,13 @@
 <li>Identify the most important insights and concepts from the book</li>
 <li>Search existing notes in the knowledge base for related topics</li>
 <li>Carefully enrich these existing notes with new insights from the book</li>
-<li>Clearly attribute the source by adding &quot;(from [Book Title])&quot; where appropriate</li>
+<li>Use Obsidian's <code><a href="#" class="pending-link">reference</a></code> links to properly connect resources:
+<ul>
+<li>Format as <code><a href="#" class="pending-link">Book Title</a></code> for clean display</li>
+<li>This creates a proper graph view that shows relationships between notes</li>
+</ul>
+</li>
+<li>Clearly attribute the source by adding &quot;(from <a href="#" class="pending-link">Book Title</a>)&quot; where appropriate</li>
 <li>Organize the new information under appropriate headers or create new sections if needed</li>
 <li>Focus on enhancing existing notes rather than creating new thematic notes when possible</li>
 <li>Only create new thematic notes for significant concepts that don't fit into any existing notes</li>
@@ -254,9 +268,13 @@
 </ul>
 <h2 id="templates">Templates</h2>
 <h3 id="book-note-template">Book Note Template</h3>
-<pre><code class="language-markdown"># [Book Title]
-
-tags: #tag1 #tag2 #tag3
+<pre><code class="language-markdown">---
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+# [Book Title]
 
 ## Core Principles
 - [Key principle 1]
@@ -271,9 +289,15 @@ tags: #tag1 #tag2 #tag3
 - [Point 2]
 </code></pre>
 <h3 id="thematic-note-template">Thematic Note Template</h3>
-<pre><code class="language-markdown"># [Theme]
+<pre><code class="language-markdown">---
+tags:
+  - theme
+  - relevantTag1
+  - relevantTag2
+---
+# [Theme]
 
-## Key Principles (from [Book])
+## Key Principles (from <a href="#" class="pending-link">Book Title</a>)
 - [Principle 1]
 - [Principle 2]
 
@@ -287,13 +311,141 @@ tags: #tag1 #tag2 #tag3
 </code></pre>
 <hr>
 <p>Next time you can simply say &quot;process last two books&quot; and this process will be followed automatically.</p>
-<h2 id="recent-implementation-examples-march-2025">Recent Implementation Examples (March 2025)</h2>
-<h3 id="books-processed">Books Processed</h3>
+<h1 id="additional-content-types">Additional Content Types</h1>
+<p>The process described above can be adapted for other content types as follows:</p>
+<h2 id="article-processing">Article Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share article links or upload article PDFs to a conversation with Claude</li>
+<li>Specify that these are articles that need processing</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Extract key points, insights, and quotes from the articles</li>
+<li>Organize content into logical sections with headers</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-article-note-creation">3. Article Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each article in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Articles/</code></li>
+<li>Use a clear naming convention: <code>Author_Year_Title.md</code></li>
+<li>Structure each article note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Article Title&quot;
+author: &quot;Author Name&quot;
+publication: &quot;Publication Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/article&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key points and insights</li>
+<li>Notable quotes</li>
+<li>Personal reflections (if any)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Article Title</a></code> for clean display</li>
+</ul>
+<h2 id="podcast-processing">Podcast Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share podcast episodes via links or notes from listening sessions</li>
+<li>Note important timestamps if available</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key insights, concepts, and quotes from the podcast</li>
+<li>Include timestamps when possible for easy reference</li>
+</ul>
+<h3 id="3-podcast-note-creation">3. Podcast Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each podcast episode in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Podcasts/</code></li>
+<li>Use a clear naming convention: <code>Podcast_Ep#_Title.md</code></li>
+<li>Structure each podcast note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Episode Title&quot;
+podcast: &quot;Podcast Name&quot;
+episode: 123
+host: &quot;Host Name&quot;
+guest: &quot;Guest Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/podcast-episode&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key discussion points with timestamps</li>
+<li>Notable quotes</li>
+<li>Resources mentioned during the episode</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Episode Title</a></code> for clean display</li>
+</ul>
+<h2 id="videocourse-processing">Video/Course Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share notes from videos or courses via summary points or screenshots</li>
+<li>Include timestamps for important concepts</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key lessons, frameworks, and techniques from the video/course</li>
+<li>Group related concepts into modules or sections</li>
+</ul>
+<h3 id="3-videocourse-note-creation">3. Video/Course Note Creation</h3>
+<ul>
+<li>Create a dedicated note for videos/courses in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Courses/</code></li>
+<li>Use a clear naming convention: <code>Creator_Title.md</code> or <code>Platform_CourseName.md</code></li>
+<li>Structure each note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Course/Video Title&quot;
+creator: &quot;Creator Name&quot;
+platform: &quot;Platform Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/course&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key lessons organized by modules or topics</li>
+<li>Practical exercises or techniques to try</li>
+<li>Resources mentioned in the video/course</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Course Title</a></code> for clean display</li>
+</ul>
+<h1 id="recent-implementation-examples-march-2025">Recent Implementation Examples (March 2025)</h1>
+<h2 id="books-processed">Books Processed</h2>
 <ul>
 <li>&quot;The Mom Test&quot; - Notes focused on effective customer interviewing techniques</li>
 <li>&quot;Outcomes over Output&quot; - Notes focused on outcome-driven product strategy</li>
 </ul>
-<h3 id="notes-enhanced">Notes Enhanced</h3>
+<h2 id="notes-enhanced">Notes Enhanced</h2>
 <ul>
 <li><strong>Product <a href="http://discovery.md">discovery.md</a></strong>: Added sections on outcome-driven discovery and discovery interviewing techniques from both books</li>
 <li><strong>Qualitative <a href="http://research.md">research.md</a></strong>: Added section on interview best practices from The Mom Test</li>

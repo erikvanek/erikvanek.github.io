@@ -1,6 +1,10 @@
+---
+tags:
+  - OutcomesDriven
+  - ProductStrategy
+  - BusinessResults
+---
 # Outcomes over Output
-
-tags: #OutcomesDriven #ProductStrategy #BusinessResults
 
 ## Core Principles
 - An outcome is a change in human behavior that drives business results

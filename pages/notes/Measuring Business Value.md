@@ -1,8 +1,12 @@
+---
+tags:
+  - metrics
+  - outcomes
+  - business
+---
 # Measuring Business Value
 
-tags: #metrics #outcomes #business
-
-## Outcomes vs. Impact (from Outcomes over Output)
+## Outcomes vs. Impact (from [[Books/Outcomes_over_Output|Outcomes over Output]])
 - Outcomes (behavior change) → impact (increase in revenue, loyalty...)
 - Impact is a side effect of well-designed outcomes
 - Leaders think about impact, executors are responsible for outputs and outcome
@@ -21,7 +25,7 @@ tags: #metrics #outcomes #business
 - When we state goals with outcomes, we propose some relationship between our work and its results which we can capture in a hypothesis
 - Test with an experiment
 
-## Customer Signals (from The Mom Test)
+## Customer Signals (from [[Books/The_Mom_Test|The Mom Test]])
 - Major currencies our partners are investing are time, reputation risk and money
 - Sometimes strong commitment combines multiple currencies
 - Not having a chance to be introduced to other stakeholders is a bad sign
