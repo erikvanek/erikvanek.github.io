@@ -196,7 +196,7 @@
 
     <h1 id="content-processing-guide">Content Processing Guide</h1>
 <h2 id="overview">Overview</h2>
-<p>This document outlines the process for processing various types of content (books, articles, podcasts, videos) and integrating them into the knowledge base.</p>
+<p>This document outlines the process for processing various types of content (books, articles, podcasts, videos, course notes) and integrating them into the knowledge base.</p>
 <h2 id="process-steps">Process Steps</h2>
 <h3 id="1-initial-capture">1. Initial Capture</h3>
 <ul>
@@ -217,7 +217,7 @@
 <li>Use a clear naming convention: <code>Book_Title.md</code></li>
 <li>Structure each book note with:
 <ul>
-<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+<li>YAML frontmatter for metadata and resources:<pre><code class="language-yaml">---
 title: &quot;Book Title&quot;
 author: &quot;Author Name&quot;
 published: YYYY
@@ -225,6 +225,10 @@ tags:
   - tag1
   - tag2
   - tag3
+resources:
+  # Pouze zdroje zmíněné v textu poznámky
+  - odkaz_z_obsahu_1
+  - odkaz_z_obsahu_2
 ---
 </code></pre>
 </li>
@@ -234,15 +238,24 @@ tags:
 </ul>
 </li>
 </ul>
-<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<h3 id="4-thematic-integration-and-note-reorganization">4. Thematic Integration and Note Reorganization</h3>
 <ul>
 <li>Identify the most important insights and concepts from the book</li>
 <li>Search existing notes in the knowledge base for related topics</li>
 <li>Carefully enrich these existing notes with new insights from the book</li>
+<li>When adding to existing notes, consider overall reorganization for improved readability:
+<ul>
+<li>Evaluate whether the existing structure still makes sense after additions</li>
+<li>Group related concepts together under logical headings</li>
+<li>Consider creating a summary section at the beginning for long notes</li>
+<li>Ensure the note flows well from general concepts to specific details</li>
+</ul>
+</li>
 <li>Use Obsidian's <code><a href="#" class="pending-link">reference</a></code> links to properly connect resources:
 <ul>
 <li>Format as <code><a href="#" class="pending-link">Book Title</a></code> for clean display</li>
 <li>This creates a proper graph view that shows relationships between notes</li>
+<li>Look for opportunities to add links to other relevant notes in your knowledge base</li>
 </ul>
 </li>
 <li>Clearly attribute the source by adding &quot;(from <a href="#" class="pending-link">Book Title</a>)&quot; where appropriate</li>
@@ -250,7 +263,21 @@ tags:
 <li>Focus on enhancing existing notes rather than creating new thematic notes when possible</li>
 <li>Only create new thematic notes for significant concepts that don't fit into any existing notes</li>
 </ul>
-<h3 id="5-tagging-strategy">5. Tagging Strategy</h3>
+<h3 id="5-note-reconciliation">5. Note Reconciliation</h3>
+<ul>
+<li>After adding new content to existing notes, perform a reconciliation step:
+<ul>
+<li>Review the entire note for consistency and flow</li>
+<li>Check for redundancies or contradictions between old and new information</li>
+<li>Consolidate similar points and concepts</li>
+<li>Ensure headings and subheadings reflect the updated content</li>
+<li>Rewrite transitions between sections if necessary</li>
+<li>Consider whether the note might benefit from being split if it has become too large</li>
+</ul>
+</li>
+<li>This reconciliation step is essential for maintaining a useful second brain that remains accessible and coherent over time</li>
+</ul>
+<h3 id="6-tagging-strategy">6. Tagging Strategy</h3>
 <ul>
 <li>Use 3 tags per book for high-level categorization</li>
 <li>Consider using tags for:
@@ -313,6 +340,50 @@ tags:
 <p>Next time you can simply say &quot;process last two books&quot; and this process will be followed automatically.</p>
 <h1 id="additional-content-types">Additional Content Types</h1>
 <p>The process described above can be adapted for other content types as follows:</p>
+<h2 id="course-notes-processing">Course Notes Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Upload course materials, syllabus, or your lecture notes to a conversation with Claude</li>
+<li>Specify that these are course notes that need processing</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key concepts, frameworks, and techniques from the course</li>
+<li>Group related concepts into modules or topics based on course structure</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-course-note-creation">3. Course Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each course in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Knowledge/Courses/</code></li>
+<li>Use a clear naming convention: <code>CourseCode_MainTopic.md</code> (e.g., <code>DESB42_Designove_experimenty.md</code>)</li>
+<li>Structure each course note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+tags:
+  - course
+  - tag1
+  - tag2
+  - tag3
+resources:
+  # Pouze zdroje zmíněné v textu poznámky
+  - odkaz_z_obsahu_1
+  - odkaz_z_obsahu_2
+---
+</code></pre>
+</li>
+<li>Course title (H1) including course code</li>
+<li>Overview section summarizing main topics</li>
+<li>Key concepts organized by modules or topics</li>
+<li>Practical methods and techniques covered</li>
+<li>Resources mentioned in the course materials</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Course Title</a></code> for clean display</li>
+</ul>
 <h2 id="article-processing">Article Processing</h2>
 <h3 id="1-initial-capture">1. Initial Capture</h3>
 <ul>

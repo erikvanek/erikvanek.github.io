@@ -7,7 +7,7 @@ tags:
 # Content Processing Guide
 
 ## Overview
-This document outlines the process for processing various types of content (books, articles, podcasts, videos) and integrating them into the knowledge base.
+This document outlines the process for processing various types of content (books, articles, podcasts, videos, course notes) and integrating them into the knowledge base.
 
 ## Process Steps
 
@@ -26,7 +26,7 @@ This document outlines the process for processing various types of content (book
 - Create a dedicated note for each book in `/Users/erik/dev/erikvanek.github.io/pages/notes/Books/`
 - Use a clear naming convention: `Book_Title.md`
 - Structure each book note with:
-  - YAML frontmatter for metadata:
+  - YAML frontmatter for metadata and resources:
     ```yaml
     ---
     title: "Book Title"
@@ -36,25 +36,45 @@ This document outlines the process for processing various types of content (book
       - tag1
       - tag2
       - tag3
+    resources:
+      # Pouze zdroje zmíněné v textu poznámky
+      - odkaz_z_obsahu_1
+      - odkaz_z_obsahu_2
     ---
     ```
   - Core concept sections (H2)
   - Key points as bullet points
   - Any diagrams or frameworks explained
 
-### 4. Thematic Integration
+### 4. Thematic Integration and Note Reorganization
 - Identify the most important insights and concepts from the book
 - Search existing notes in the knowledge base for related topics
 - Carefully enrich these existing notes with new insights from the book
+- When adding to existing notes, consider overall reorganization for improved readability:
+  - Evaluate whether the existing structure still makes sense after additions
+  - Group related concepts together under logical headings
+  - Consider creating a summary section at the beginning for long notes
+  - Ensure the note flows well from general concepts to specific details
 - Use Obsidian's `[[reference]]` links to properly connect resources:
   - Format as `[[Books/Book_Title|Book Title]]` for clean display
   - This creates a proper graph view that shows relationships between notes
+  - Look for opportunities to add links to other relevant notes in your knowledge base
 - Clearly attribute the source by adding "(from [[Books/Book_Title|Book Title]])" where appropriate
 - Organize the new information under appropriate headers or create new sections if needed
 - Focus on enhancing existing notes rather than creating new thematic notes when possible
 - Only create new thematic notes for significant concepts that don't fit into any existing notes
 
-### 5. Tagging Strategy
+### 5. Note Reconciliation
+- After adding new content to existing notes, perform a reconciliation step:
+  - Review the entire note for consistency and flow
+  - Check for redundancies or contradictions between old and new information
+  - Consolidate similar points and concepts
+  - Ensure headings and subheadings reflect the updated content
+  - Rewrite transitions between sections if necessary
+  - Consider whether the note might benefit from being split if it has become too large
+- This reconciliation step is essential for maintaining a useful second brain that remains accessible and coherent over time
+
+### 6. Tagging Strategy
 - Use 3 tags per book for high-level categorization
 - Consider using tags for:
   - Subject area (e.g., #ProductStrategy, #CustomerResearch)
@@ -120,6 +140,45 @@ Next time you can simply say "process last two books" and this process will be f
 # Additional Content Types
 
 The process described above can be adapted for other content types as follows:
+
+## Course Notes Processing
+
+### 1. Initial Capture
+- Upload course materials, syllabus, or your lecture notes to a conversation with Claude
+- Specify that these are course notes that need processing
+
+### 2. Content Extraction and Structuring
+- Organize key concepts, frameworks, and techniques from the course
+- Group related concepts into modules or topics based on course structure
+- Format bulleted lists for easy scanning
+
+### 3. Course Note Creation
+- Create a dedicated note for each course in `/Users/erik/dev/erikvanek.github.io/pages/notes/Knowledge/Courses/`
+- Use a clear naming convention: `CourseCode_MainTopic.md` (e.g., `DESB42_Designove_experimenty.md`)
+- Structure each course note with:
+  - YAML frontmatter for metadata:
+    ```yaml
+    ---
+    tags:
+      - course
+      - tag1
+      - tag2
+      - tag3
+    resources:
+      # Pouze zdroje zmíněné v textu poznámky
+      - odkaz_z_obsahu_1
+      - odkaz_z_obsahu_2
+    ---
+    ```
+  - Course title (H1) including course code
+  - Overview section summarizing main topics
+  - Key concepts organized by modules or topics
+  - Practical methods and techniques covered
+  - Resources mentioned in the course materials
+
+### 4. Thematic Integration
+- Use same approach as books: enhance existing notes with Obsidian reference links
+- Format as `[[Knowledge/Courses/CourseCode_MainTopic|Course Title]]` for clean display
 
 ## Article Processing
 

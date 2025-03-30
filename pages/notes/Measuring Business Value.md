@@ -19,6 +19,21 @@ tags:
 - Leading indicators show hit or miss the target, lagging indicators reveal the target
 - Key results in OKRs are by outcomes - having an outcome (measurable human behavior) almost automatically gives key result definition
 
+## Product Metrics (from [[Knowledge/Design/CX_Metriky|CX Metriky]])
+- **North Star Metric**: One key indicator reflecting the main value of your product, expressing the main long-term goal and measuring how well the product meets customer needs (e.g., number of viewing hours for a streaming service)
+- **OKR (Objectives - Key Results)**: Framework for setting ambitious goals and measurable results, focusing on qualitative, inspiring goals supported by specific metrics, typically used in quarterly cycles
+- **KPI (Key Performance Indicators)**: Specific metrics for operational performance monitoring, all KPIs are metrics, but not all metrics are KPIs
+- **Pirate/AARRR Framework**: Startup framework for measuring customer journey:
+  - **A**cquisition: How users find your product
+  - **A**ctivation: First experience and "wow" moment
+  - **R**etention: How well you keep users engaged
+  - **R**evenue: How the product generates income
+  - **R**eferral: How users recommend your product
+- **Common Product Metrics**:
+  - Conversion Rate: Percentage of visitors who perform a desired action
+  - Retention Rate: Percentage of customers who return after a certain period
+  - Churn Rate: Percentage of customers who stop using your product
+
 ## Hypothesis-Driven Approach
 - Hypothesis has two parts: the thing we believe in and the evidence we look for to be able to (dis)prove it
 - Next step with hypothesis is to define what needs to happen to find out if the hypothesis is right or wrong
@@ -36,3 +51,11 @@ tags:
 - Build experiments
 - Measure outcomes
 - Learn and iterate
+
+## Související poznámky
+- [[Knowledge/Design/UX_Metriky|UX Metriky]]
+- [[Knowledge/Design/CX_Metriky|CX Metriky]]
+- [[Knowledge/Design/Designove_experimenty_metodika|Metodika designových experimentů]]
+- [[Knowledge/Design/Designove_experimenty|Designové experimenty]]
+- [[UX_Customer_Experience|UX a zákaznická zkušenost]]
+- [[Product discovery|Product Discovery]]
