@@ -338,8 +338,60 @@ tags:
 </code></pre>
 <hr>
 <p>Next time you can simply say &quot;process last two books&quot; and this process will be followed automatically.</p>
-<h1 id="additional-content-types">Additional Content Types</h1>
-<p>The process described above can be adapted for other content types as follows:</p>
+<h2 id="lecturepresentation-notes-processing">Lecture/Presentation Notes Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share lecture or presentation notes via text or images</li>
+<li>Specify that these are lecture notes that need processing</li>
+<li>Include the title, presenter, and context if available</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Correct the language so it's structured better for future reference</li>
+<li>Organize content into logical sections with clear headings</li>
+<li>Format bulleted lists for easy scanning</li>
+<li>Add a created date field to the frontmatter (for all entries)</li>
+</ul>
+<h3 id="3-lecture-note-creation">3. Lecture Note Creation</h3>
+<ul>
+<li>Create a dedicated note in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Lectures/</code></li>
+<li>Use a clear naming convention: <code>Topic_Presenter.md</code> or <code>EventName_Topic.md</code></li>
+<li>Structure each lecture note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Lecture Title&quot;
+type: lecture-notes
+presenter: &quot;Presenter Name&quot;
+event: &quot;Event Name&quot;
+created: YYYY-MM-DD
+tags:
+  - tag1
+  - tag2
+  - tag3
+resources:
+  # ONLY include actual URLs mentioned in the lecture, NOT keywords or note references
+  - https://example.com/resource-1
+  - https://example.com/resource-2
+---
+</code></pre>
+</li>
+<li>Key themes (H2)</li>
+<li>Main points organized under topical sections (H3)</li>
+<li>Insights and takeaways</li>
+<li>Follow-up questions if applicable</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use the same approach as books: enrich existing notes with new insights</li>
+<li>Make sure to link using standard markdown style, not <code><a href="#" class="pending-link">wiki-style</a></code> links in frontmatter</li>
+<li>Only use actual external URLs in the resources field, never internal note references</li>
+</ul>
+<h3 id="5-note-reconciliation">5. Note Reconciliation</h3>
+<ul>
+<li>Use the same approach as books to maintain consistency throughout the knowledge base</li>
+</ul>
 <h2 id="course-notes-processing">Course Notes Processing</h2>
 <h3 id="1-initial-capture">1. Initial Capture</h3>
 <ul>

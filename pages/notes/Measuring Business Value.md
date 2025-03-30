@@ -3,6 +3,8 @@ tags:
   - metrics
   - outcomes
   - business
+  - product-management
+created: 2025-03-30
 ---
 # Measuring Business Value
 
@@ -20,6 +22,13 @@ tags:
 - Key results in OKRs are by outcomes - having an outcome (measurable human behavior) almost automatically gives key result definition
 
 ## Product Metrics (from [[Knowledge/Design/CX_Metriky|CX Metriky]])
+
+### Cross-Team Metric Strategies
+- Connect specific product metrics to broader organizational goals when communicating with stakeholders
+- Use metric translation as a persuasion tool in cross-team discussions
+- When direct measurement isn't possible, develop thoughtful proxy metrics
+- Supplement A/B testing with deeper data science analysis to uncover correlations
+- Proactively address potential metric conflicts between teams
 - **North Star Metric**: One key indicator reflecting the main value of your product, expressing the main long-term goal and measuring how well the product meets customer needs (e.g., number of viewing hours for a streaming service)
 - **OKR (Objectives - Key Results)**: Framework for setting ambitious goals and measurable results, focusing on qualitative, inspiring goals supported by specific metrics, typically used in quarterly cycles
 - **KPI (Key Performance Indicators)**: Specific metrics for operational performance monitoring, all KPIs are metrics, but not all metrics are KPIs
@@ -58,4 +67,5 @@ tags:
 - [[Knowledge/Design/Designove_experimenty_metodika|Metodika designových experimentů]]
 - [[Knowledge/Design/Designove_experimenty|Designové experimenty]]
 - [[UX_Customer_Experience|UX a zákaznická zkušenost]]
-- [[Product discovery|Product Discovery]]
+- Product Discovery
+- Navigating the Corporate Maze

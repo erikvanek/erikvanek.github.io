@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge/Design/Designove_experimenty_metodika.md",
+                "file": "agile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Designove_experimenty_metodika"
+              "title": "agile"
+            }
+          },
+          {
+            "id": "8b76a8f95225d1cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vibe coding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vibe coding"
+            }
+          },
+          {
+            "id": "3196ba8817eec828",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Product Management/PM_Challenges_and_Strategies.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PM_Challenges_and_Strategies"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -170,17 +199,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5c220736ea90aad",
+  "active": "3196ba8817eec828",
   "lastOpenFiles": [
+    "Product Management/Navigating_Corporate_Maze.md",
+    "Lectures/Corporate_Maze_PM.md",
+    "Lectures",
+    "Templates/Knowledge_Capture_Process.md",
+    "Templates/Lecture_Notes_Template.md",
+    "Templates",
+    "Product Management/PM_Challenges_and_Strategies.md",
+    "Processes/Book_Notes_Processing.md",
+    "Mindset.md",
+    "Vibe coding.md",
+    "agile.md",
+    "Product Management",
+    "Knowledge/Design/Designove_experimenty_metodika.md",
     "Knowledge/Courses/DESB42_Designove_experimenty.md",
     "Knowledge/Courses",
     "Behavior design.md",
     "Product discovery.md",
-    "Processes/Book_Notes_Processing.md",
     "JTBD/JTBD.md",
     "DESB42_Teorie_a_experimenty_souhrn.md",
     "UX_Customer_Experience.md",
-    "Knowledge/Design/Designove_experimenty_metodika.md",
     "Knowledge/Design/CX_Metriky.md",
     "Knowledge/Design/UX_Metriky.md",
     "Knowledge/Design/Designove_experimenty.md",
@@ -191,16 +231,8 @@
     "books/Outcomes_over_Output.md",
     "Second brain.md",
     "Themes/Outcome_Driven_Product_Strategy.md",
-    "Themes/Customer_Research.md",
-    "books/The_Mom_Test.md",
-    "books/Effective_Customer_Interviews.md",
     "Processes",
     "Themes",
-    "resume/organization-shortlist.md",
-    "resume/experiences/poker-pro.md",
-    "resume/experiences/Volunteering.md",
-    "resume/experiences/Trychtýř.md",
-    "resume/experiences/Sonda.md",
     "JTBD/Pasted image 20241225134243.png",
     "JTBD/Pasted image 20241225134219.png",
     "JTBD/Pasted image 20241225134148.png",
@@ -210,9 +242,6 @@
     "Knowledge/Design/misc",
     "Knowledge/Design/Tools",
     "Knowledge/Design/Methods",
-    "Knowledge/Design/Concepts",
-    "Knowledge/Design/Activities",
-    "Planning",
     "Pasted image 20250105121803.png",
     "img/work.jpg",
     "ranomcanvas.canvas",

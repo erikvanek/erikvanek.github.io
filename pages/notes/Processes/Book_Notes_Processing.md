@@ -3,6 +3,8 @@ tags:
   - process
   - knowledge-management
   - reading
+  - second-brain
+created: 2025-03-30
 ---
 # Content Processing Guide
 
@@ -137,9 +139,53 @@ tags:
 
 Next time you can simply say "process last two books" and this process will be followed automatically.
 
-# Additional Content Types
+## Lecture/Presentation Notes Processing
 
-The process described above can be adapted for other content types as follows:
+### 1. Initial Capture
+- Share lecture or presentation notes via text or images
+- Specify that these are lecture notes that need processing
+- Include the title, presenter, and context if available
+
+### 2. Content Extraction and Structuring
+- Correct the language so it's structured better for future reference
+- Organize content into logical sections with clear headings
+- Format bulleted lists for easy scanning
+- Add a created date field to the frontmatter (for all entries)
+
+### 3. Lecture Note Creation
+- Create a dedicated note in `/Users/erik/dev/erikvanek.github.io/pages/notes/Lectures/`
+- Use a clear naming convention: `Topic_Presenter.md` or `EventName_Topic.md`
+- Structure each lecture note with:
+  - YAML frontmatter for metadata:
+    ```yaml
+    ---
+    title: "Lecture Title"
+    type: lecture-notes
+    presenter: "Presenter Name"
+    event: "Event Name"
+    created: YYYY-MM-DD
+    tags:
+      - tag1
+      - tag2
+      - tag3
+    resources:
+      # ONLY include actual URLs mentioned in the lecture, NOT keywords or note references
+      - https://example.com/resource-1
+      - https://example.com/resource-2
+    ---
+    ```
+  - Key themes (H2)
+  - Main points organized under topical sections (H3)
+  - Insights and takeaways
+  - Follow-up questions if applicable
+
+### 4. Thematic Integration
+- Use the same approach as books: enrich existing notes with new insights
+- Make sure to link using standard markdown style, not `[[wiki-style]]` links in frontmatter
+- Only use actual external URLs in the resources field, never internal note references
+
+### 5. Note Reconciliation
+- Use the same approach as books to maintain consistency throughout the knowledge base
 
 ## Course Notes Processing
 
