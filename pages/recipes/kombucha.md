@@ -102,3 +102,6 @@ Můj ozkoušený recept na základní výrobu kombuchy. K tomuto postupu jsem se
 {% assign mixedPath = '/img/kombucha/kombucha-trikolora.jpeg' %}
 {% assign mixedTitle = 'Smíchaná ibišková a zázvorová kombucha ochucená rozinkami' %}
 {% render 'verticalFigure.njk', path: mixedPath, title: mixedTitle %}
+
+## Inspirace
+- super návod a další zdroj inspirace třeba od [Goodlok](https://goodlok.cz/svatestrevo.cz/F01-kombucha)

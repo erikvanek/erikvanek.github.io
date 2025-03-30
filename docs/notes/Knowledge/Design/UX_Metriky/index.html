@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/Knowledge">
+                ⬅️ Back to Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="ux_metriky">UX_Metriky</h1>
+
+    <h1 id="metriky-ux">Metriky UX</h1>
+<h2 id="vkonnostn-metriky-pro-uivatelskou-zkuenost">Výkonnostní metriky pro uživatelskou zkušenost</h2>
+<p>Kvantitativní vyhodnocení efektivity interakce uživatelů s rozhraním.</p>
+<h3 id="spnost-kolu">Úspěšnost úkolu</h3>
+<ul>
+<li><strong>Binární měření (ano/ne)</strong>: Uživatelé buď úkol dokončí, nebo ne</li>
+<li><strong>Jemnější škála</strong>: Hodnocení, jak dobře byl úkol splněn
+<ul>
+<li>Plně úspěšný</li>
+<li>Úspěšný s drobnými problémy</li>
+<li>Částečně úspěšný</li>
+<li>Neúspěšný</li>
+</ul>
+</li>
+</ul>
+<h3 id="as-strven-na-kolu">Čas strávený na úkolu</h3>
+<ul>
+<li><strong>Měření doby</strong>: Sleduje, jak dlouho uživatel potřebuje k dokončení konkrétního úkolu</li>
+<li><strong>Analýza času</strong>: Porovnání různých verzí návrhu nebo sledování zlepšení po optimalizacích</li>
+</ul>
+<h3 id="chybovost-a-efektivita">Chybovost a efektivita</h3>
+<ul>
+<li><strong>Počet chyb</strong>: Sleduje se, kolik chyb uživatel udělá během plnění úkolu</li>
+<li><strong>Počet kroků</strong>: Měří se počet akcí, které uživatel vykoná, aby dosáhl cíle</li>
+</ul>
+<h3 id="mra-osvojen">Míra osvojení</h3>
+<ul>
+<li><strong>Zlepšení výkonu</strong>: Měření změn v době dokončení úkolu, počtu chyb a počtu kroků při opakovaném používání</li>
+<li><strong>Učící křivka</strong>: Jak rychle se uživatelé učí systém používat</li>
+<li><strong>Dlouhodobá analýza</strong>: Sledování trvalého zlepšení po opakovaném používání</li>
+</ul>
+<h2 id="self-reporting-metriky">Self-reporting metriky</h2>
+<p>Poskytují subjektivní informace o tom, jak uživatelé vnímají a hodnotí své zkušenosti.</p>
+<h3 id="hodnotc-kly">Hodnotící škály</h3>
+<ul>
+<li><strong>Likertova škála</strong>: Uživatelé hodnotí svůj souhlas/nesouhlas s tvrzeními (1-5 nebo 1-7)</li>
+<li><strong>Sémantický diferenciál</strong>: Hodnocení produktu na škále mezi dvěma bipolárními adjektivy (jednoduchý–složitý, příjemný–nepříjemný)</li>
+</ul>
+<h3 id="standardizovan-dotaznky">Standardizované dotazníky</h3>
+<ul>
+<li><strong>TAM (Technology Acceptance Model)</strong>: Zkoumá přijetí nové technologie
+<ul>
+<li>Vnímaná užitečnost: Do jaké míry uživatelé věří, že technologie zlepší jejich výkon</li>
+<li>Vnímaná snadnost použití: Jak snadno se mohou s technologií orientovat</li>
+</ul>
+</li>
+<li><strong>SUS (System Usability Scale)</strong>: 10 otázek měřících celkovou použitelnost systému</li>
+<li><strong>UMUX (Usability Metric for User Experience)</strong>: Kratší alternativa k SUS</li>
+</ul>
+<h2 id="behaviorln-a-fyziologick-metriky">Behaviorální a fyziologické metriky</h2>
+<p>Objektivní data doplňující subjektivní self-reporting metriky.</p>
+<h3 id="eye-tracking">Eye-tracking</h3>
+<ul>
+<li><strong>Fixace a sakády</strong>: Kde uživatel soustředí pozornost a jak přeskakuje mezi informacemi</li>
+<li><strong>Heatmapy</strong>: Vizualizace intenzity pozornosti napříč obrazovkou</li>
+<li><strong>Sledování čtecích sekvencí</strong>: Analýza pořadí, v jakém uživatel čte obsah</li>
+</ul>
+<h3 id="men-emoc-a-stresu">Měření emocí a stresu</h3>
+<ul>
+<li><strong>Biometrické senzory</strong>:
+<ul>
+<li>Srdeční tep a variabilita srdeční frekvence (HRV)</li>
+<li>Galvanická kožní reakce (GSR)</li>
+</ul>
+</li>
+<li><strong>Analýza výrazů obličeje</strong>: Zaznamenávání změn ve výrazu signalizujících emoce</li>
+<li><strong>Hlasová analýza</strong>: Monitoring tónu a rytmu hlasu</li>
+</ul>
+<h2 id="kombinovn-rznch-typ-ux-metrik">Kombinování různých typů UX metrik</h2>
+<p>V praxi je vhodné kombinovat různé typy objektivních a subjektivních metrik.</p>
+<h3 id="heart-framework-google">HEART Framework (Google)</h3>
+<ul>
+<li><strong>Happiness (Spokojenost)</strong>: Subjektivní dojmy uživatelů</li>
+<li><strong>Engagement (Zapojení)</strong>: Jak aktivně uživatelé interagují s produktem</li>
+<li><strong>Adoption (Přijetí)</strong>: Kolik uživatelů začíná systém používat</li>
+<li><strong>Retention (Udržení)</strong>: Jak dlouho a jak často se uživatelé vracejí</li>
+<li><strong>Task success (Úspěšnost úkolu)</strong>: Jak efektivně uživatelé dokáží dokončit konkrétní úkoly</li>
+</ul>
+<h2 id="souvisejc-poznmky">Související poznámky</h2>
+<ul>
+<li><a href="#" class="pending-link">DESB42: Designové experimenty</a></li>
+<li><a href="#" class="pending-link">CX Metriky</a></li>
+<li><a href="/notes/UX_Customer_Experience/">UX a zákaznická zkušenost</a></li>
+<li><a href="#" class="pending-link">Metodika designových experimentů</a></li>
+<li><a href="/notes/Measuring Business Value/">Měření obchodní hodnoty</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.heartframework.com/" target="_blank" rel="noopener noreferrer">https://www.heartframework.com/</a></li>
+            
+            <li><a href="https://measuringu.com/heart-framework/" target="_blank" rel="noopener noreferrer">https://measuringu.com/heart-framework/</a></li>
+            
+            <li><a href="https://www.interaction-design.org/literature/article/google-s-heart-framework-for-measuring-ux" target="_blank" rel="noopener noreferrer">https://www.interaction-design.org/literature/article/google-s-heart-framework-for-measuring-ux</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>
