@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/Product Management">
+                ⬅️ Back to Product Management
+            </a>
+        </div>
+    
+
+    <h1 id="navigating_corporate_maze">Navigating_Corporate_Maze</h1>
+
+    <h1 id="navigating-the-corporate-maze">Navigating the Corporate Maze</h1>
+<h2 id="pm-challenges">PM Challenges</h2>
+<h3 id="navigating-regulatory-environments">Navigating Regulatory Environments</h3>
+<ul>
+<li>Different countries have unique regulatory requirements
+<ul>
+<li>EU-specific regulations</li>
+<li>Content restrictions (e.g., restrictions on criticism of Thai royal family in Thailand)</li>
+</ul>
+</li>
+<li>Requires understanding of local laws and adaptation of product strategies</li>
+</ul>
+<h3 id="resource-competition">Resource Competition</h3>
+<ul>
+<li>Internal competition for finite resources
+<ul>
+<li>Financial resources</li>
+<li>Human resources and talent allocation</li>
+<li>Screen space competing with other product initiatives</li>
+<li>Balancing against other team priorities</li>
+</ul>
+</li>
+<li>Challenge increases with organization size: &quot;The bigger the org, the more eyes on you&quot;</li>
+</ul>
+<h3 id="handling-unpredictability">Handling Unpredictability</h3>
+<ul>
+<li>Product managers must tackle numerous unforeseen challenges</li>
+<li>Requires adaptability and contingency planning</li>
+<li>Need to develop solutions for problems not initially anticipated</li>
+</ul>
+<h2 id="effective-pm-strategies">Effective PM Strategies</h2>
+<h3 id="strategic-focus-selection">Strategic Focus Selection</h3>
+<ul>
+<li>Concentrate efforts on high-impact initiatives - <strong>doing the right things</strong></li>
+<li>Evaluate options based on:
+<ul>
+<li>Available resources</li>
+<li>Approval processes</li>
+<li>Political landscape</li>
+<li>External competitive factors</li>
+</ul>
+</li>
+<li>Prioritize work where it makes the most sense to put your efforts</li>
+</ul>
+<h3 id="metrics-driven-persuasion">Metrics-Driven Persuasion</h3>
+<ul>
+<li>Use metrics to quantify and demonstrate impact</li>
+<li>Translation techniques:
+<ul>
+<li>Connect specific product metrics to broader organizational goals</li>
+<li>Use this connection as a persuasion tool in cross-team discussions</li>
+</ul>
+</li>
+<li>When direct measurement is impossible:
+<ul>
+<li>Develop and utilize proxy metrics</li>
+<li>Example: Where A/B testing can't establish correlations, employ data science for deeper analysis</li>
+</ul>
+</li>
+</ul>
+<h3 id="early-cross-team-alignment">Early Cross-Team Alignment</h3>
+<ul>
+<li>Proactively discuss upcoming initiatives with stakeholder teams</li>
+<li>Set expectations about potential future work</li>
+<li>Reach agreement on relevant success metrics</li>
+<li>Address potential metric conflicts: &quot;What if an increase in our metric causes a decrease in their metric?&quot;</li>
+</ul>
+<h3 id="multi-perspective-analysis">Multi-Perspective Analysis</h3>
+<ul>
+<li>Analyze situations through the lens of other teams</li>
+<li>Consider how initiatives impact their:
+<ul>
+<li>Team objectives</li>
+<li>Metrics and KPIs</li>
+<li>Operational workflows</li>
+</ul>
+</li>
+</ul>
+<h3 id="diligent-internal-review-processes">Diligent Internal Review Processes</h3>
+<ul>
+<li>Engage with internal compliance teams early and thoroughly:
+<ul>
+<li>Safety reviews</li>
+<li>Privacy assessments</li>
+<li>Financial impact analysis</li>
+<li>Legal compliance checks</li>
+</ul>
+</li>
+<li>Understand that their role is preventative: &quot;Their role is to ensure nothing goes wrong and no problems appear in the future that I can't envision&quot;</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+---
+resources:
+  - https://www.linkedin.com/pulse/era-ai-aided-design-why-great-matter-more-j-b-chaykowsky-gmdxe/
+---
+- AI tools like Cursor, Lovable, and Bolt are changing how we create digital experiences
+- we can also view Squarespace and Wix as similar tools but with different implementation as vibe-coding tools
+	- These services also allow designers and non-designers to create professional-looking websites with drag-and-drop ease
+- Tools might make it easier to make “something good enough” but “great design” remains elusive. Great design is hard
+	- gap between good design and great design will always provide opportunities for design professionals
+- the **current AI revolution differs fundamentally from these previous shifts**. It's not just about making existing tasks easier—it's about transforming the very nature of how design work will get done.
+- for creative tasks and explorations this imprecision isn't a bug. It's THE feature.
+	- **The space between what I ask for and what the AI produces creates room for serendipity and discovery**
+- **Beware**
+	- greatest risk lies in pursuing speed to such an extent that "good enough" displaces "great," leading to a gradual erosion of quality and impact
+- It's not AI that will take your job—it's a designer with AI
