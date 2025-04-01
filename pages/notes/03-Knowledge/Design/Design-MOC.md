@@ -33,8 +33,14 @@ Design encompasses methodologies, principles, and practices for creating effecti
 
 ## Design Process
 - [[Design portfolios]] - Showcasing design work and process
-- Prototyping Methods - Creating testable design artifacts
+- [[Lo-Fi_Prototyping_Methods|Lo-Fi Prototyping Methods]] - Rapid exploration through sketching and Wizard of Oz
+- [[Prototyping]] - Creating testable design artifacts
 - [[Workshopy]] - Collaborative design workshops
 
+## Books & Resources
+- [[Hooked|Hooked: How to Build Habit-Forming Products]] - Nir Eyal's guide to behavioral design
+
 ## Recent Additions
+- [[Lo-Fi_Prototyping_Methods]] - Added April 1, 2025
+- [[Hooked]] - Added April 1, 2025
 - [[Design Crit]] - Added April 1, 2025
