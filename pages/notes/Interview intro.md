@@ -21,3 +21,7 @@ Můžeme si dnešní setkání nahrát? Jde nám o to, abychom se mohli k inform
 - Hledejte hluboké emoce - když někdo řekne "Tohle je nejhorší část mé práce a vy mi s tím můžete pomoci" jste na správné stopě
 - Struktura rozhovoru: Vize → Zarámování → Slabé stránky → Uznání → Pomoc
 - Cílem je dozvědět se, co lidé skutečně dělají, ne co říkají, že by mohli dělat
+## Connection point
+- connective tissue between research and interview content
+- e.g. a CEO with a proven track of results and my goal is to talk about product vision
+	- *"So I know you have a proven track of building inspiring and successful products. What helped you in those cases achieve such astounding results?*
