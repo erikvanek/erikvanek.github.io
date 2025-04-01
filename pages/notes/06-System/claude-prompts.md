@@ -139,6 +139,50 @@ Areas where I struggle to find the right tags:
 Could you suggest refinements to my tagging approach to improve discoverability while keeping the system intuitive and organic?
 ```
 
+## Handle Empty Referenced Files
+
+```
+The following file is referenced in my second brain but is empty or missing:
+[FILE NAME]
+
+Context:
+[NOTES THAT REFERENCE THIS FILE]
+
+Please create appropriate content for this file following my second-brain system. The note should:
+1. Have proper frontmatter
+2. Include relevant content based on how it's referenced
+3. Link to related notes
+4. Be structured appropriately based on its type
+```
+
+## Empty Files Cleanup Prompt
+
+```
+After processing notes into my second brain, please identify any empty files that were referenced but not properly filled.
+
+Directory to check: /Users/erik/dev/erikvanek.github.io/pages/notes
+
+Please generate:
+1. A list of all empty markdown files in my notes directory
+2. A shell command I can run to safely remove these empty files
+3. Information about which files reference the empty files so I can ensure proper linking
+```
+
+## Update MOC Prompt
+
+```
+Update this Map of Content (MOC) to include the following new notes:
+[LIST OF NEW NOTES]
+
+Current MOC content:
+[PASTE CURRENT MOC]
+
+Make sure to:
+1. Add each note in the appropriate section
+2. Create new sections if needed
+3. Update the "Recent Additions" section
+```
+
 ## Remember
 
 When using these prompts with Claude:
@@ -151,4 +195,4 @@ When using these prompts with Claude:
 These prompts are designed to help you maintain a consistent approach to using Claude with your second-brain system.
 
 ## Reference
-These prompts are based on the original system requirements documented in [[Second-brain-master-prompt]].
+These prompts are based on the original system requirements documented in [[Second-brain-master-prompt]] and have been enhanced based on system refinements tracked in the [[changelog]].

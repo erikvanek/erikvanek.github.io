@@ -1,12 +1,8 @@
 ---
-title: "Product Discovery"
-date_created: 2025-04-01
-date_modified: 2025-04-01
 tags:
   - Discovery
   - ProductDevelopment
   - Research
-  - Process
 resources:
   - https://www.nngroup.com/videos/discovery-kick-off-workshops/?lm=problem-statements&pt=article
 ---
@@ -45,7 +41,7 @@ resources:
 - A basic problem of output-based planning is not knowing what value each feature brings, making prioritization difficult
 - Metaphor: Planning with outputs is like promising to cross a desert of unknown size by a specific date
 
-### Continuous Discovery (from [[Courses/DESB42_Designove_experimenty|DESB42 Designové experimenty]])
+### Continuous Discovery (from [[Knowledge/Courses/DESB42_Designove_experimenty|DESB42: Designové experimenty]])
 - Regular customer feedback gathering and use in product development 
 - Reduces the risk of bad decisions
 - Helps create products that solve real problems
@@ -66,7 +62,7 @@ resources:
 ### Framework
 - Frame discovery as experiments to test hypotheses
 
-### Designing Experiments (from [[Designove_experimenty_metodika|Designové experimenty - metodika]])
+### Designing Experiments (from [[Knowledge/Design/Designove_experimenty_metodika|Designové experimenty - metodika]])
 - **Operationalization**: Converting general questions into specific measurable metrics
 - **Hypothesis formulation**: Consists of a belief statement and evidence we'll look for to confirm/disprove it
 - **Selecting appropriate metrics**: Should be relevant, measurable, interpretable, and able to provide actionable insights
@@ -82,25 +78,10 @@ resources:
 - **Documentation**: Document and share findings with the team
 
 ## Related Notes
-- [[Outcomes_over_Output]]
-- [[The Mom Test]]
-- [[DESB42 Designové experimenty]]
-- [[UX Metriky]]
-- [[CX Metriky]]
-- [[Designové experimenty - metodika]]
-- [[UX a zákaznická zkušenost]]
-- [[Měření obchodní hodnoty]]
-- [[Behavior Design]]
-
-## Application Examples
-- Creating a user research plan for feature development
-- Setting up an A/B test to validate a hypothesis
-- Designing a workshop to align stakeholders on product goals
-
-## Action Items
-- Create a standard discovery kick-off workshop template
-- Develop a repository of hypothesis templates for common product challenges
-- Set up a system for tracking discovery insights across projects
-
-## Raw Notes
-This note has been processed from a top-level note into the knowledge base structure.
+- [[Knowledge/Courses/DESB42_Designove_experimenty|DESB42: Designové experimenty]]
+- [[Knowledge/Design/UX_Metriky|UX Metriky]]
+- [[Knowledge/Design/CX_Metriky|CX Metriky]]
+- [[Knowledge/Design/Designove_experimenty_metodika|Metodika designových experimentů]]
+- [[UX_Customer_Experience|UX a zákaznická zkušenost]]
+- [[Measuring Business Value|Měření obchodní hodnoty]]
+- [[Behavior design|Behavior Design]]
