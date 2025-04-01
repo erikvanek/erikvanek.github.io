@@ -102,4 +102,5 @@ For specific implementation details, see:
 - [[second-brain-guide]]
 - [[second-brain-workflow]]
 - [[claude-prompts]]
+- [[changelog]]
 

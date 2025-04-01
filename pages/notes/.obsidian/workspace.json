@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9f0f7920eaf6d151",
+        "id": "81774de3feab3fd3",
         "type": "tabs",
         "children": [
           {
-            "id": "f5c220736ea90aad",
+            "id": "2aa0a77f5394e8ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-Knowledge/Productivity/Eisenhower Matrix.md",
+                "file": "03-Knowledge/Research/Books/The_Mom_Test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Eisenhower Matrix"
-            }
-          },
-          {
-            "id": "8b76a8f95225d1cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Planning/Planning.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Planning"
+              "title": "The_Mom_Test"
             }
           }
         ]
@@ -98,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,44 +169,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5c220736ea90aad",
+  "active": "2aa0a77f5394e8ec",
   "lastOpenFiles": [
-    "06-System/Second-brain-master-prompt.md",
-    "06-System/second-brain-workflow.md",
-    "06-System/claude-prompts.md",
-    "agile.md",
-    "System-Integration-README.md",
-    "02-RAW/Second brain.md",
-    "03-Knowledge/Productivity/Second Brain.md",
-    "03-Knowledge/Learning/Learning-MOC.md",
-    "03-Knowledge/Design/Design-MOC.md",
-    "02-RAW/Learning.md",
-    "03-Knowledge/Learning/Learning.md",
-    "03-Knowledge/Learning",
-    "02-RAW/Design crit.md",
-    "03-Knowledge/Design/Design Crit.md",
-    "02-RAW/Eisenhower matrix.md",
-    "03-Knowledge/Productivity/Eisenhower Matrix.md",
-    "06-System/second-brain-guide.md",
-    "03-Knowledge/Productivity/Productivity-MOC.md",
     "03-Knowledge/Research/Research-MOC.md",
-    "03-Knowledge/ProductManagement/ProductManagement-MOC.md",
-    "02-RAW/Productivity.md",
-    "03-Knowledge/Productivity/Productivity.md",
-    "02-RAW/Qualitative research.md",
-    "03-Knowledge/Research/Qualitative Research.md",
-    "02-RAW/Product discovery.md",
+    "03-Knowledge/Research/Books/The_Mom_Test.md",
+    "Qualitative research.md",
+    "Interview intro.md",
+    "Product discovery.md",
+    "Trauma informed research.md",
+    "03-Knowledge/Design/Books",
+    "03-Knowledge/Research/Books",
+    "03-Knowledge/ProductManagement/Books/Outcomes_over_Output.md",
+    "03-Knowledge/ProductManagement/Books",
+    "06-System/changelog.md",
+    "03-Knowledge/ProductManagement/Product vision.md",
+    "02-RAW/ProductManagement/Product vision.md",
+    "03-Knowledge/ProductManagement/Measuring Business Value.md",
+    "02-RAW/ProductManagement/Measuring Business Value.md",
+    "02-RAW/Research/Qualitative research.md",
+    "02-RAW/Research",
+    "02-RAW/ProductManagement/Product discovery.md",
+    "02-RAW/ProductManagement",
+    "03-Knowledge/Design/UX_Customer_Experience.md",
+    "02-RAW/Design/UX_Customer_Experience.md",
+    "02-RAW/Design",
+    "Storytelling.md",
+    "Selective coding.md",
+    "Productivity.md",
     "03-Knowledge/ProductManagement/Product Discovery.md",
+    "Behavior design.md",
+    "books/Outcomes_over_Output.md",
+    "Planning/Planning.md",
+    "Outcomes over Output.md",
+    "DESB42 Designové experimenty.md",
+    "Měření obchodní hodnoty.md",
+    "03-Knowledge/Learning",
     "06-System",
     "03-Knowledge/Productivity",
     "03-Knowledge/Research",
-    "03-Knowledge/ProductManagement",
-    "03-Knowledge/Design",
-    "03-Knowledge",
-    "02-RAW",
-    "01-Processing",
-    "00-Inbox",
-    "Planning/Planning.md",
     "JTBD/Pasted image 20241225134243.png",
     "JTBD/Pasted image 20241225134219.png",
     "JTBD/Pasted image 20241225134148.png",

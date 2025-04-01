@@ -76,7 +76,7 @@ The knowledge base covers several key domains:
 
 ## Processing Workflow
 
-The second-brain process follows two main phases, as you originally outlined:
+The second-brain process follows two main phases, as you originally outlined. Each phase has been refined through experience and feedback (see [[changelog]] for details):
 
 ### 1. Processing (for new information)
 
@@ -117,6 +117,8 @@ The second-brain process follows two main phases, as you originally outlined:
    - Apply consistent frontmatter
    - Add appropriate tags in frontmatter
    - Ensure proper linking
+   - Check for and handle references to empty files
+   - Identify any empty files created during processing for cleanup
 
 ### 2. Reshuffling (periodic maintenance)
 
@@ -197,6 +199,23 @@ Context: [ANY ADDITIONAL CONTEXT]
 - Periodic review of knowledge structure (monthly/quarterly)
 - Template and system updates as needed
 - Ongoing refinement of tagging approach
+- Cleanup of empty referenced files (command provided below)
+
+## Cleanup Commands
+
+### Finding and Removing Empty Files
+
+After processing notes, you may end up with empty files that were referenced but not properly filled. Use this command in your terminal to find and remove all empty files in your notes directory:
+
+```bash
+# Find all empty markdown files in the notes directory
+find /Users/erik/dev/erikvanek.github.io/pages/notes -name "*.md" -size 0 -type f -exec echo {} \;
+
+# To remove them (uncomment when ready):
+# find /Users/erik/dev/erikvanek.github.io/pages/notes -name "*.md" -size 0 -type f -delete
+```
+
+Always review the list of files before removing them by running the echo command first.
 
 ## Desired Outcomes
 
@@ -211,3 +230,5 @@ Remember: This is a living system that will evolve as your knowledge and needs c
 
 ## Reference
 For the complete original vision and requirements of this system, see the [[Second-brain-master-prompt]].
+
+For a record of all modifications and improvements to the system, see the [[changelog]].
