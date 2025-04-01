@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/03-Knowledge">
+                ⬅️ Back to 03 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="product-vision">Product Vision</h1>
+
+    <h1 id="product-vision">Product Vision</h1>
+<h2 id="introduction">Introduction</h2>
+<p>A product vision articulates the desired future state that a product aims to create. It serves as a north star for product teams, aligning efforts and inspiring action. This note explores what makes an effective product vision and how to craft one.</p>
+<h2 id="core-characteristics-of-effective-product-visions">Core Characteristics of Effective Product Visions</h2>
+<h3 id="persuasive-power">Persuasive Power</h3>
+<ul>
+<li>A good product vision is fundamentally a <em>persuasion tool</em></li>
+<li>It must convince stakeholders, team members, and users of the value and possibility of a future state</li>
+<li>Effective visions create emotional buy-in, not just intellectual agreement</li>
+</ul>
+<h3 id="emotional-impact">Emotional Impact</h3>
+<ul>
+<li>&quot;When done well, the product vision is <em>compelling</em>, <em>inspiring</em>, and <em>empowering</em>&quot;</li>
+<li>It should leave product teams feeling excited to begin the hard work of making the vision a reality</li>
+<li>Creates a shared sense of purpose and meaning</li>
+</ul>
+<h3 id="memorable-and-concrete">Memorable and Concrete</h3>
+<ul>
+<li>A good vision is thought-provoking, inspiring, memorable and concrete</li>
+<li>Simple enough to be remembered and repeated</li>
+<li>Specific enough to guide decision-making</li>
+</ul>
+<h2 id="notable-examples">Notable Examples</h2>
+<h3 id="googles-early-vision">Google's Early Vision</h3>
+<ul>
+<li>&quot;Organize the world's information and make it universally accessible and useful&quot;</li>
+<li>Concise yet comprehensive</li>
+<li>Provides clear direction while remaining flexible for implementation</li>
+</ul>
+<h3 id="restructuring-priorities-example">Restructuring Priorities Example</h3>
+<ul>
+<li><a href="https://x.com/joshm/status/1850717644779110643">Josh Miller's announcement</a> about putting Arc on ice demonstrates vision-driven prioritization</li>
+<li>The <a href="https://www.diabrowser.com/">new vision of Dia</a> shows how product direction can evolve</li>
+</ul>
+<h3 id="manifestos-as-visions">Manifestos as Visions</h3>
+<ul>
+<li>Manifestos often serve as powerful product visions</li>
+<li>They articulate core principles and desired outcomes</li>
+<li>Examples include the Agile Manifesto, which transformed software development</li>
+</ul>
+<h2 id="creating-an-effective-product-vision">Creating an Effective Product Vision</h2>
+<h3 id="key-components">Key Components</h3>
+<ol>
+<li><strong>Problem Statement</strong>: What challenge are you addressing?</li>
+<li><strong>User Focus</strong>: Who benefits from your solution?</li>
+<li><strong>Value Proposition</strong>: What unique value do you provide?</li>
+<li><strong>Future State</strong>: What does the world look like when you succeed?</li>
+<li><strong>Differentiation</strong>: How is this different from what exists today?</li>
+</ol>
+<h3 id="vision-development-process">Vision Development Process</h3>
+<ol>
+<li>Research the problem space and user needs</li>
+<li>Articulate multiple potential futures</li>
+<li>Test vision statements with stakeholders</li>
+<li>Refine based on feedback</li>
+<li>Communicate consistently and with conviction</li>
+</ol>
+<h3 id="vision-vs-mission">Vision vs. Mission</h3>
+<ul>
+<li>Vision describes the future you want to create</li>
+<li>Mission describes how you'll get there</li>
+<li>Both are needed but serve different purposes</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<h3 id="using-vision-to-guide-product-strategy">Using Vision to Guide Product Strategy</h3>
+<ul>
+<li>Evaluate feature ideas against the vision</li>
+<li>Prioritize initiatives that directly advance the vision</li>
+<li>Make tradeoffs based on vision alignment</li>
+</ul>
+<h3 id="communicating-vision-to-different-audiences">Communicating Vision to Different Audiences</h3>
+<ul>
+<li>For executives: Focus on business impact and differentiation</li>
+<li>For developers: Emphasize technical challenges and innovation</li>
+<li>For users: Highlight benefits and experience improvements</li>
+</ul>
+<h3 id="vision-validation">Vision Validation</h3>
+<ul>
+<li>Test vision with users and stakeholders</li>
+<li>Look for emotional resonance and understanding</li>
+<li>Refine the articulation if it's not landing as intended</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/03-Knowledge/ProductManagement/ProductManagement-MOC/">Product Management</a></li>
+<li><a href="/notes/02-RAW/Product discovery/">Product Discovery</a></li>
+<li><a href="/notes/Product teams/">Product teams</a></li>
+<li><a href="/notes/Storytelling/">Storytelling</a></li>
+</ul>
+<h2 id="application-examples">Application Examples</h2>
+<ul>
+<li>Crafting a vision for a new product initiative</li>
+<li>Revising a product vision after market changes</li>
+<li>Using vision to align conflicting stakeholder priorities</li>
+</ul>
+<h2 id="action-items">Action Items</h2>
+<ul>
+<li>Create a vision statement template</li>
+<li>Develop a workshop format for collaborative vision creation</li>
+<li>Establish criteria for evaluating vision effectiveness</li>
+</ul>
+<h2 id="raw-notes">Raw Notes</h2>
+<p>This note has been processed from a top-level note into the knowledge base structure.</p>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://jmspool.medium.com/drive-innovative-designs-using-experience-visions-5bf706a45636" target="_blank" rel="noopener noreferrer">https://jmspool.medium.com/drive-innovative-designs-using-experience-visions-5bf706a45636</a></li>
+            
+            <li><a href="https://www.svpg.com/examples/" target="_blank" rel="noopener noreferrer">https://www.svpg.com/examples/</a></li>
+            
+            <li><a href="https://www.svpg.com/product-vision-vs-mission/" target="_blank" rel="noopener noreferrer">https://www.svpg.com/product-vision-vs-mission/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

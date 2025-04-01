@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/06-System">
+                ⬅️ Back to 06 System
+            </a>
+        </div>
+    
+
+    <h1 id="claude-prompts-for-second-brain">Claude Prompts for Second Brain</h1>
+
+    <h1 id="claude-prompts-for-second-brain-system">Claude Prompts for Second Brain System</h1>
+<p>This document contains standardized prompts to use with Claude for different aspects of your second-brain workflow.</p>
+<h2 id="core-processing-prompt">Core Processing Prompt</h2>
+<p>Use this prompt to process raw notes into your second-brain structure:</p>
+<pre><code># Claude Second-Brain Processing Prompt
+
+## INSTRUCTIONS
+Process the attached [NOTE TYPE] according to my second-brain methodology, integrating it properly into my knowledge base.
+
+## SOURCE INFORMATION
+- **Type**: [BOOK/PODCAST/WORKSHOP/VIDEO/BRAINDUMP/OTHER]
+- **Title**: [TITLE]
+- **Author/Creator**: [CREATOR]
+- **Date Consumed**: [DATE]
+- **Context**: [ANY ADDITIONAL CONTEXT]
+
+## RAW CONTENT
+[PASTE RAW CONTENT HERE]
+
+## PROCESSING REQUESTED
+[Select processing steps needed]
+- [ ] Transcription (for handwritten/audio)
+- [ ] Linearization
+- [ ] Restructuring
+- [ ] Chunking
+- [ ] Integration with existing knowledge
+- [ ] Tag suggestion
+- [ ] All processing steps
+
+## EXISTING KNOWLEDGE CONTEXT
+[Optional: mention related notes or areas in your second brain]
+
+## SPECIAL INSTRUCTIONS
+[Any specific requirements or focus areas]
+</code></pre>
+<h2 id="quick-processing-prompt">Quick Processing Prompt</h2>
+<p>For more straightforward processing needs:</p>
+<pre><code>Process this note for my second brain:
+[PASTE RAW CONTENT]
+
+Type: [BOOK/PODCAST/WORKSHOP/VIDEO/BRAINDUMP/OTHER]
+Context: [ANY ADDITIONAL CONTEXT]
+</code></pre>
+<h2 id="knowledge-retrieval-prompt">Knowledge Retrieval Prompt</h2>
+<p>Use this prompt to leverage your second brain for new projects:</p>
+<pre><code>I'm about to [DESCRIBE PROJECT/TASK] on the topic of [TOPIC].
+
+The context is: [PROVIDE CONTEXT].
+My goals are: [LIST GOALS].
+
+Help me compile relevant information from my second brain to kickstart this project. Consider previous knowledge in areas like [RELEVANT DOMAINS].
+</code></pre>
+<h2 id="reshuffling-assessment-prompt">Reshuffling Assessment Prompt</h2>
+<p>Use this to evaluate areas of your knowledge base that might need restructuring:</p>
+<pre><code>I need to assess whether the following area of my second brain needs reshuffling:
+[DOMAIN OR AREA]
+
+The current structure is:
+[DESCRIBE CURRENT ORGANIZATION]
+
+Some issues I've noticed:
+[LIST ANY CONCERNS]
+
+Please analyze whether this needs restructuring, and if so, recommend a specific approach to rebalance this knowledge area.
+</code></pre>
+<h2 id="template-evaluation-prompt">Template Evaluation Prompt</h2>
+<p>Use this to review and improve your note templates:</p>
+<pre><code>I'd like to evaluate and potentially improve this template in my second-brain system:
+[PASTE TEMPLATE]
+
+This template is used for: [TEMPLATE PURPOSE]
+Issues or limitations I've noticed: [ANY CONCERNS]
+
+Please suggest improvements that would make this template more effective while maintaining simplicity and usability.
+</code></pre>
+<h2 id="integration-strategy-prompt">Integration Strategy Prompt</h2>
+<p>When you need help figuring out how to integrate new information:</p>
+<pre><code>I have new information about [TOPIC] that I need to integrate into my second brain.
+
+Current relevant notes in my system:
+[LIST RELATED NOTES]
+
+New information to integrate:
+[SUMMARIZE NEW INFORMATION]
+
+How should I integrate this - should I extend existing notes, create new ones, or both? Please suggest a specific integration strategy.
+</code></pre>
+<h2 id="tag-analysis-prompt">Tag Analysis Prompt</h2>
+<p>For periodically assessing and optimizing your tagging system:</p>
+<pre><code>I'd like to analyze my current tagging system in my second brain.
+
+Some of my most used tags include:
+[LIST KEY TAGS]
+
+Areas where I struggle to find the right tags:
+[DESCRIBE CHALLENGES]
+
+Could you suggest refinements to my tagging approach to improve discoverability while keeping the system intuitive and organic?
+</code></pre>
+<h2 id="handle-empty-referenced-files">Handle Empty Referenced Files</h2>
+<pre><code>The following file is referenced in my second brain but is empty or missing:
+[FILE NAME]
+
+Context:
+[NOTES THAT REFERENCE THIS FILE]
+
+Please create appropriate content for this file following my second-brain system. The note should:
+1. Have proper frontmatter
+2. Include relevant content based on how it's referenced
+3. Link to related notes
+4. Be structured appropriately based on its type
+</code></pre>
+<h2 id="empty-files-cleanup-prompt">Empty Files Cleanup Prompt</h2>
+<pre><code>After processing notes into my second brain, please identify any empty files that were referenced but not properly filled.
+
+Directory to check: /Users/erik/dev/erikvanek.github.io/pages/notes
+
+Please generate:
+1. A list of all empty markdown files in my notes directory
+2. A shell command I can run to safely remove these empty files
+3. Information about which files reference the empty files so I can ensure proper linking
+</code></pre>
+<h2 id="update-moc-prompt">Update MOC Prompt</h2>
+<pre><code>Update this Map of Content (MOC) to include the following new notes:
+[LIST OF NEW NOTES]
+
+Current MOC content:
+[PASTE CURRENT MOC]
+
+Make sure to:
+1. Add each note in the appropriate section
+2. Create new sections if needed
+3. Update the &quot;Recent Additions&quot; section
+</code></pre>
+<h2 id="remember">Remember</h2>
+<p>When using these prompts with Claude:</p>
+<ol>
+<li>Be specific about what you need</li>
+<li>Provide sufficient context</li>
+<li>Mention any relevant existing knowledge</li>
+<li>Include special considerations or constraints</li>
+<li>Adapt the prompts as your system evolves</li>
+</ol>
+<p>These prompts are designed to help you maintain a consistent approach to using Claude with your second-brain system.</p>
+<h2 id="reference">Reference</h2>
+<p>These prompts are based on the original system requirements documented in <a href="/notes/06-System/Second-brain-master-prompt/">Second-brain-master-prompt</a> and have been enhanced based on system refinements tracked in the <a href="/notes/06-System/changelog/">changelog</a>.</p>
+
+
+    
+</body>
+
+</html>
