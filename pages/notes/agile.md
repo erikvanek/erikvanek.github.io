@@ -65,7 +65,7 @@
 Motivace
 - AI-assisted building products
 	- [Dreamcut](https://dreamcut.ai/)
-	- https://x.com/MengTo/status/1848669694800367901
+	- https://x.com/MengTo/status/184866969 4800367901
 	- or this one https://www.everydream.com/perspectives/ai-driven-product-design-creation
 - Transition from designer to builder
 	- https://www.dive.club/ideas/how-to-build-your-ideas-with-claude-cursor

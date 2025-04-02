@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/_System">
+                ⬅️ Back to _System
+            </a>
+        </div>
+    
+
+    <h1 id="knowledge-base-processing-protocol">Knowledge Base Processing Protocol</h1>
+
+    <h1 id="knowledge-base-processing-protocol">Knowledge Base Processing Protocol</h1>
+<p>This document serves as the complete standardized protocol for processing new information into the second-brain knowledge management system. It includes both the processing workflow and the standardized Claude prompts for consistent knowledge processing.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>When asking Claude to process new information, use this standardized command:</p>
+<pre><code>KB Protocol: Process this [TYPE] note for my second brain:
+[PASTE RAW CONTENT]
+</code></pre>
+<p>Claude will automatically search for and follow this protocol document when processing your information.</p>
+<h2 id="processing-workflow">Processing Workflow</h2>
+<p>The KB processing workflow follows these key steps:</p>
+<h3 id="1-raw-capture">1. RAW Capture</h3>
+<ul>
+<li>Identify source type (book, podcast, workshop, video, braindump, etc.)</li>
+<li>Ensure metadata is captured (title, author, date, context)</li>
+<li>Preserve original format in 02-RAW folder by category</li>
+</ul>
+<h3 id="2-linearization">2. Linearization</h3>
+<ul>
+<li>Convert non-linear notes to logical sequence</li>
+<li>Transcribe any audio/images if necessary</li>
+<li>Order scattered thoughts into narrative flow</li>
+<li>Compile into cohesive document</li>
+</ul>
+<h3 id="3-restructuring">3. Restructuring</h3>
+<ul>
+<li>Apply logical structure with proper headings</li>
+<li>Ensure content flows naturally</li>
+<li>Add contextual elements where needed</li>
+<li>Create standalone document that reads well</li>
+</ul>
+<h3 id="4-chunking">4. Chunking</h3>
+<ul>
+<li>Break into meaningful thematic sections</li>
+<li>Consider existing knowledge for proper integration</li>
+<li>Label chunks for easy reference</li>
+<li>Prepare for proper knowledge base integration</li>
+</ul>
+<h3 id="5-integration">5. Integration</h3>
+<ul>
+<li>Preserve raw data in 02-RAW folder</li>
+<li>Place processed content in 03-Knowledge structure</li>
+<li>Create bidirectional links with <code><a href="#" class="pending-link">notation</a></code></li>
+<li>Update relevant MOCs (Maps of Content)</li>
+<li>Enrich existing knowledge sections thematically</li>
+</ul>
+<h3 id="6-storage-amp-cleanup">6. Storage &amp; Cleanup</h3>
+<ul>
+<li>Apply consistent frontmatter with appropriate tags</li>
+<li>Ensure proper linking structure</li>
+<li>Check for and handle references to empty files</li>
+<li>Add to maintenance log if needed</li>
+<li>Flag any empty referenced files for cleanup</li>
+</ul>
+<h2 id="output-format">Output Format</h2>
+<p>Processed notes will follow this structure:</p>
+<pre><code class="language-md">---
+title: &quot;Note Title&quot;
+date_created: YYYY-MM-DD
+date_modified: YYYY-MM-DD
+source: &quot;Original Source&quot;
+author: &quot;Author Name&quot;
+tags:
+  - PrimaryTopic
+  - SecondaryTopic
+  - ContentType
+---
+
+# Note Title
+
+## Key Points
+- Main insight 1
+- Main insight 2
+- Main insight 3
+
+## Topic Section 1
+Detailed content with proper formatting...
+
+## Topic Section 2
+More detailed content...
+
+## Reflections
+Personal insights and reflections on the content...
+
+## Related Notes
+- <a href="#" class="pending-link">Related Note 1</a>
+- <a href="#" class="pending-link">Related Note 2</a>
+- <a href="#" class="pending-link">Topic MOC</a>
+</code></pre>
+<h2 id="integration-guidelines">Integration Guidelines</h2>
+<p>When integrating new content with existing knowledge:</p>
+<ol>
+<li>
+<p><strong>Consult Existing Structure</strong></p>
+<ul>
+<li>Review related notes in 03-Knowledge</li>
+<li>Check relevant Maps of Content (MOCs)</li>
+<li>Note any existing tags that apply</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Meaningful Connections</strong></p>
+<ul>
+<li>Use <code><a href="#" class="pending-link">notation</a></code> for bidirectional links</li>
+<li>Place in appropriate domain folders</li>
+<li>Update MOCs to include new content</li>
+</ul>
+</li>
+<li>
+<p><strong>Apply Organic Tagging</strong></p>
+<ul>
+<li>Use existing tags where appropriate</li>
+<li>Create new tags only when necessary</li>
+<li>Maintain flat (non-hierarchical) tag structure</li>
+</ul>
+</li>
+<li>
+<p><strong>Balance Note Size</strong></p>
+<ul>
+<li>Notes should not exceed ~A4 length</li>
+<li>Split larger content into connected smaller notes</li>
+<li>Ensure each note has clear thematic focus</li>
+</ul>
+</li>
+</ol>
+<h2 id="special-considerations">Special Considerations</h2>
+<h3 id="for-different-content-types">For Different Content Types:</h3>
+<ul>
+<li><strong>Book Notes</strong>: Emphasize key concepts, personal reflections, and actionable insights</li>
+<li><strong>Podcast/Video</strong>: Capture core message, notable quotes, and contextual information</li>
+<li><strong>Workshop Notes</strong>: Focus on frameworks, exercises, and practical applications</li>
+<li><strong>Braindump</strong>: Organize stream-of-consciousness into coherent themes</li>
+</ul>
+<h3 id="for-knowledge-domains">For Knowledge Domains:</h3>
+<ul>
+<li><strong>Design</strong>: Connect to existing design principles and methodologies</li>
+<li><strong>Product Management</strong>: Link to relevant frameworks and case studies</li>
+<li><strong>Software</strong>: Organize by concept, technology, or problem domain</li>
+<li><strong>Productivity</strong>: Focus on actionable techniques and systems</li>
+<li><strong>Other Domains</strong>: Maintain domain-specific organization while enabling cross-domain connections</li>
+</ul>
+<h2 id="maintenance-tasks">Maintenance Tasks</h2>
+<p>After processing, check for:</p>
+<ol>
+<li>
+<p><strong>Empty Referenced Files</strong></p>
+<ul>
+<li>Use command: <code>find /Users/erik/dev/erikvanek.github.io/pages/notes -name &quot;*.md&quot; -size 0 -type f -exec echo {} \;</code></li>
+<li>Either populate or remove empty files</li>
+</ul>
+</li>
+<li>
+<p><strong>Integration Quality</strong></p>
+<ul>
+<li>Verify bidirectional links work properly</li>
+<li>Ensure MOC updates are complete</li>
+<li>Check tag consistency</li>
+</ul>
+</li>
+<li>
+<p><strong>Backlog Updates</strong></p>
+<ul>
+<li>Add to the system backlog for items needing further attention</li>
+<li>Flag any incomplete processing for future review</li>
+</ul>
+</li>
+</ol>
+<h1 id="standardized-claude-prompts">Standardized Claude Prompts</h1>
+<p>This section contains all standardized prompts to use with Claude for different aspects of your second-brain workflow.</p>
+<h2 id="core-processing-prompt">Core Processing Prompt</h2>
+<p>Use this prompt for comprehensive processing of raw notes:</p>
+<pre><code># Claude Second-Brain Processing Prompt
+
+## INSTRUCTIONS
+Process the attached [NOTE TYPE] according to my KB Protocol, integrating it properly into my knowledge base.
+
+## SOURCE INFORMATION
+- **Type**: [BOOK/PODCAST/WORKSHOP/VIDEO/BRAINDUMP/OTHER]
+- **Title**: [TITLE]
+- **Author/Creator**: [CREATOR]
+- **Date Consumed**: [DATE]
+- **Context**: [ANY ADDITIONAL CONTEXT]
+
+## RAW CONTENT
+[PASTE RAW CONTENT HERE]
+
+## PROCESSING REQUESTED
+[Select processing steps needed]
+- [ ] Transcription (for handwritten/audio)
+- [ ] Linearization
+- [ ] Restructuring
+- [ ] Chunking
+- [ ] Integration with existing knowledge
+- [ ] Tag suggestion
+- [ ] All processing steps
+
+## EXISTING KNOWLEDGE CONTEXT
+[Optional: mention related notes or areas in your second brain]
+
+## SPECIAL INSTRUCTIONS
+[Any specific requirements or focus areas]
+</code></pre>
+<h2 id="quick-processing-prompt">Quick Processing Prompt</h2>
+<p>For more straightforward processing needs:</p>
+<pre><code>KB Protocol: Process this [TYPE] note for my second brain:
+[PASTE RAW CONTENT]
+</code></pre>
+<h2 id="knowledge-retrieval-prompt">Knowledge Retrieval Prompt</h2>
+<p>Use this prompt to leverage your second brain for new projects:</p>
+<pre><code>KB Protocol: Help me retrieve knowledge for a new project:
+
+Project: [DESCRIBE PROJECT/TASK]
+Topic: [TOPIC]
+Context: [PROVIDE CONTEXT]
+Goals: [LIST GOALS]
+Relevant domains: [RELEVANT DOMAINS]
+</code></pre>
+<h2 id="reshuffling-assessment-prompt">Reshuffling Assessment Prompt</h2>
+<p>Use this to evaluate areas of your knowledge base that might need restructuring:</p>
+<pre><code>KB Protocol: I need to assess whether this area needs reshuffling:
+
+Domain: [DOMAIN OR AREA]
+Current structure: [DESCRIBE CURRENT ORGANIZATION]
+Issues: [LIST ANY CONCERNS]
+</code></pre>
+<h2 id="template-evaluation-prompt">Template Evaluation Prompt</h2>
+<p>Use this to review and improve your note templates:</p>
+<pre><code>KB Protocol: Evaluate this template:
+
+Template:
+[PASTE TEMPLATE]
+
+Purpose: [TEMPLATE PURPOSE]
+Issues: [ANY CONCERNS]
+</code></pre>
+<h2 id="integration-strategy-prompt">Integration Strategy Prompt</h2>
+<p>When you need help figuring out how to integrate new information:</p>
+<pre><code>KB Protocol: Help me integrate new information:
+
+Topic: [TOPIC]
+Existing notes: [LIST RELATED NOTES]
+New information: [SUMMARIZE NEW INFORMATION]
+</code></pre>
+<h2 id="tag-analysis-prompt">Tag Analysis Prompt</h2>
+<p>For periodically assessing and optimizing your tagging system:</p>
+<pre><code>KB Protocol: Analyze my tagging system:
+
+Current tags: [LIST KEY TAGS]
+Tag challenges: [DESCRIBE CHALLENGES]
+</code></pre>
+<h2 id="handle-empty-referenced-files">Handle Empty Referenced Files</h2>
+<pre><code>KB Protocol: Create content for this empty referenced file:
+
+File: [FILE NAME]
+References: [NOTES THAT REFERENCE THIS FILE]
+</code></pre>
+<h2 id="empty-files-cleanup-prompt">Empty Files Cleanup Prompt</h2>
+<pre><code>KB Protocol: Find empty files in my second brain.
+Directory: /Users/erik/dev/erikvanek.github.io/pages/notes
+</code></pre>
+<h2 id="update-moc-prompt">Update MOC Prompt</h2>
+<pre><code>KB Protocol: Update this Map of Content:
+
+New notes: [LIST OF NEW NOTES]
+Current MOC: [PASTE CURRENT MOC]
+</code></pre>
+<h2 id="best-practices-for-claude-interaction">Best Practices for Claude Interaction</h2>
+<p>When using these prompts with Claude:</p>
+<ol>
+<li>Always start with &quot;KB Protocol:&quot; for consistent recognition</li>
+<li>Be specific about what you need</li>
+<li>Provide sufficient context</li>
+<li>Mention any relevant existing knowledge</li>
+<li>Include special considerations or constraints</li>
+<li>Adapt the prompts as your system evolves</li>
+</ol>
+<h2 id="reference">Reference</h2>
+<p>This protocol implements the system described in:</p>
+<ul>
+<li><a href="/notes/_System/Master_Prompt/">Master_Prompt</a></li>
+<li><a href="/notes/_System/Guide/">Guide</a></li>
+<li><a href="/notes/_System/Workflow/">Workflow</a></li>
+</ul>
+<p>For a history of system improvements, see:</p>
+<ul>
+<li><a href="/notes/_System/Changelog/">Changelog</a></li>
+<li><a href="/notes/_System/Backlog/">Backlog</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
