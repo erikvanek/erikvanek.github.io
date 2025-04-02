@@ -1,16 +1,16 @@
 <div id="presentation-timer" class="timer-container">
   <div class="timer-drag-handle"></div>
   <div class="timer-controls">
-    <input type="number" id="timer-minutes" min="1" max="60" value="5" aria-label="Minutes">
+    <input type="number" id="timer-minutes" min="1" max="60" value="20" aria-label="Minutes">
     <span class="timer-separator">:</span>
     <input type="number" id="timer-seconds" min="0" max="59" value="0" aria-label="Seconds">
   </div>
   <div class="timer-display">
-    <span id="timer-value">05:00</span>
+    <span id="timer-value">20:00</span>
   </div>
   <div class="timer-buttons">
     <button id="timer-start" class="timer-btn">Start</button>
-    <button id="timer-pause" class="timer-btn" disabled>Pause</button>
+    <button id="timer-pause" class="timer-btn" disabled style="display:none">Pause</button>
     <button id="timer-reset" class="timer-btn">Reset</button>
   </div>
 </div>

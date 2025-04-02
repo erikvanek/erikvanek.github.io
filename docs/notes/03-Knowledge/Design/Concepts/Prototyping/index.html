@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/03-Knowledge">
+                ⬅️ Back to 03 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="prototyping">Prototyping</h1>
+
+    <h1 id="prototyping">Prototyping</h1>
+<h2 id="overview">Overview</h2>
+<p>Prototyping is the iterative process of creating representations of design solutions before final implementation. It allows designers to explore, evaluate, and communicate ideas rapidly while maximizing learning and minimizing risk.</p>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="purpose-of-prototyping">Purpose of Prototyping</h3>
+<ul>
+<li><strong>&quot;The best way to have an idea is to have a lot of ideas&quot;</strong></li>
+<li>Tool for self-expression and enhanced understanding between stakeholders</li>
+<li>Maximize learning through rapid iteration</li>
+<li>Replace actual implementation to accelerate the learning cycle</li>
+<li>Set up and built so we can extract meaningful insights</li>
+</ul>
+<h3 id="key-characteristics">Key Characteristics</h3>
+<ul>
+<li>Never rely on a single prototype - they are meant to fail and provide learning</li>
+<li>Should be cheap to change or discard</li>
+<li>Can focus holistically or on individual aspects of a solution</li>
+<li>Functions as the design equivalent of learning in human development</li>
+</ul>
+<h2 id="prototyping-process">Prototyping Process</h2>
+<h3 id="stages-of-prototyping">Stages of Prototyping</h3>
+<ol>
+<li><strong>Exploration</strong> - Generate multiple possibilities</li>
+<li><strong>Refinement</strong> - Focus on promising directions</li>
+<li><strong>Evaluation</strong> - Test with users and stakeholders</li>
+<li><strong>Implementation</strong> - Move toward final solution</li>
+</ol>
+<h3 id="fidelity-spectrum">Fidelity Spectrum</h3>
+<ul>
+<li><strong>Low-fidelity</strong> (<a href="/notes/03-Knowledge/Design/Methods/Lo-Fi_Prototyping_Methods/">Lo-Fi_Prototyping_Methods</a>)
+<ul>
+<li>Sketches, paper prototypes</li>
+<li>Wizard of Oz simulations</li>
+<li>Role-playing activities</li>
+</ul>
+</li>
+<li><strong>Medium-fidelity</strong>
+<ul>
+<li>Clickable wireframes</li>
+<li>Simplified working models</li>
+<li>Storyboards and scenarios</li>
+</ul>
+</li>
+<li><strong>High-fidelity</strong>
+<ul>
+<li>Functional prototypes</li>
+<li>Polished visual designs</li>
+<li>Technical implementations</li>
+</ul>
+</li>
+</ul>
+<h2 id="prototype-types">Prototype Types</h2>
+<p>Prototypes can be categorized by what they aim to represent or test:</p>
+<ul>
+<li><a href="#" class="pending-link">Actions, processes &amp; experiences prototype</a> - Testing flows and interactions</li>
+<li><a href="/notes/design/Design tools/Prototypes/Physical prototypes/">Physical prototypes</a> - Tangible objects and hardware</li>
+<li><a href="#" class="pending-link">Environment, spaces &amp; architecture prototypes</a> - Spatial experiences</li>
+<li><a href="#" class="pending-link">Digital &amp; SW prototypes</a> - Software and digital experiences</li>
+<li><a href="#" class="pending-link">Ecosystem &amp; business value prototypes</a> - Service ecosystems and business models</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="effective-prototyping-approaches">Effective Prototyping Approaches</h3>
+<ul>
+<li><strong>Start rough</strong> - Begin with low-fidelity to explore broadly</li>
+<li><strong>Focus on questions</strong> - Design prototypes to answer specific questions</li>
+<li><strong>Minimum viable</strong> - Include only what's needed to test the concept</li>
+<li><strong>Parallel prototyping</strong> - Develop multiple alternatives simultaneously</li>
+<li><strong>Rapid iteration</strong> - Move quickly between cycles of building and testing</li>
+<li><strong>User involvement</strong> - Engage users early and often</li>
+<li><strong>Document learning</strong> - Capture insights from each prototype iteration</li>
+</ul>
+<h3 id="common-pitfalls">Common Pitfalls</h3>
+<ul>
+<li>Premature commitment to a single direction</li>
+<li>Over-polishing before validating core concepts</li>
+<li>Testing too many variables simultaneously</li>
+<li>Failing to define clear learning objectives</li>
+<li>Not involving real users</li>
+</ul>
+<h2 id="relation-to-design-process">Relation to Design Process</h2>
+<p>Prototyping serves as a bridge between conceptual models (the interface people interact with) and mental models (what humans have in mind). Effective prototyping aligns these models through iterative exploration and validation.</p>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/03-Knowledge/Design/Methods/Lo-Fi_Prototyping_Methods/">Lo-Fi_Prototyping_Methods</a></li>
+<li><a href="/notes/design/Design methods/">Design methods</a></li>
+<li><a href="/notes/design/Concepts/Iteration/">Iteration</a></li>
+<li><a href="#" class="pending-link">User testing</a></li>
+<li><a href="/notes/design/Concepts/Design Thinking/">Design Thinking</a></li>
+<li><a href="/notes/design/Service design/">Service design</a></li>
+<li><a href="/notes/Interaction design/">Interaction design</a></li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.ideo.com/journal/the-secret-power-of-prototyping">IDEO: The Secret Power of Prototyping</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

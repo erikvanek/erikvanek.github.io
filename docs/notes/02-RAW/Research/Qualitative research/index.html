@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02-RAW">
+                ⬅️ Back to 02 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="qualitative-research">Qualitative research</h1>
+
+    <ul>
+<li><em>small-n</em> research</li>
+<li>it is <em>not</em> statistically significant</li>
+<li>we can't generalize from small sample sizes, it is <em>just different</em> than quantitative research
+<ul>
+<li>it is a complement to qualitative research</li>
+<li>the goal isn't to disprove hypothesis, we're looking to understand the problem in detail</li>
+</ul>
+</li>
+<li><em>helps to understand 'the why' behind the problem and its possible root causes</em>, qualitative research would only allow us to speculate</li>
+<li>the goal is to gather insights to make informed decisions later</li>
+<li>by quantification in our analysis we're opening ourselves up to a quantitative judgement
+<ul>
+<li>&quot;three of six&quot; kind of statements can be easily disregarded</li>
+</ul>
+</li>
+</ul>
+<h2 id="a-href-classpending-linkrules-for-qualitative-rigora"><a href="#" class="pending-link">Rules for qualitative rigor</a></h2>
+<ol>
+<li>Credibility - confidence in the 'truth' of the findings</li>
+<li>Transferability - showing that the findings have applicablity in other contexts</li>
+<li>Dependability - showing that the findings are consistent and could be repeated</li>
+<li>Confirmability - a degree of neutraility or the extent to which the findings of a study are shaped by the respondents and not researcher bias, motivation, or interest.</li>
+</ol>
+<ul>
+<li>done by Yvonna Lincoln and Egon Guba</li>
+<li>we can satisfy those by being <em>systematic</em></li>
+</ul>
+<h2 id="systematic-qualitative-research">Systematic qualitative research</h2>
+<ul>
+<li>formulates a specific <em>research question before research</em> is conducted</li>
+<li>samples carefully by recruiting participants to help to deeply understand the subject matter</li>
+<li>facilitates research sessions with <em>open-ended prompts</em></li>
+<li>does not take only opinions but <em>tries to understand 'the why'</em> behind them</li>
+<li><em>analyzes the data continuously</em> by coding and concluding from the data</li>
+<li><strong>attempts to triangulate</strong> when facing something extraordinary or unusual to ensure that our conclusions are supported by data</li>
+<li>says what the problem is, quantitative says how bad it is</li>
+<li>helps to build an empathetic understanding of our users</li>
+</ul>
+<h2 id="interview-best-practices-from-the-mom-test">Interview Best Practices (from The Mom Test)</h2>
+<ul>
+<li>Be genuinely interested about people to open their hearts</li>
+<li>&quot;Talk me through the last time [it] happened&quot; is a great question for promoting show-don't-tell</li>
+<li>The big mistake is to mention your idea too soon rather than too late</li>
+<li>Watch out for bad data: compliments and fluff
+<ul>
+<li>Banned words: would/could/might - these indicate hypothetical situations</li>
+<li>Fight fluff by asking about concrete past behavior</li>
+</ul>
+</li>
+<li>Don't prematurely zoom in unless you're sure you're zooming into the right thing</li>
+<li>Plan the three most important things you want to learn from each person</li>
+<li>Look for people expressing deep emotion about problems - they're often your best prospects</li>
+</ul>
+
+
+    
+</body>
+
+</html>

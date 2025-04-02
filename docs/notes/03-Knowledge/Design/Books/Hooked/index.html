@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/03-Knowledge">
+                ⬅️ Back to 03 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="hooked-how-to-build-habit-forming-products">Hooked: How to Build Habit-Forming Products</h1>
+
+    <h1 id="hooked-how-to-build-habit-forming-products">Hooked: How to Build Habit-Forming Products</h1>
+<h2 id="book-overview">Book Overview</h2>
+<p>&quot;Hooked&quot; by Nir Eyal explores how companies design habit-forming products that capture user attention and loyalty. The book presents the Hook Model—a four-step process companies use to build products that subtly encourage user behaviors until they become automatic habits. While marketed as a guide for product designers, the book also provides valuable insights for consumers seeking to understand how technology influences their behavior.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="the-hook-model">The Hook Model</h3>
+<p>The four-phase process that builds habits:</p>
+<ol>
+<li><strong>Trigger</strong> (internal or external cues that prompt action)</li>
+<li><strong>Action</strong> (the behavior done in anticipation of a reward)</li>
+<li><strong>Variable Reward</strong> (the satisfaction of a need while maintaining an element of unpredictability)</li>
+<li><strong>Investment</strong> (where users put something in that improves the service for next time)</li>
+</ol>
+<h3 id="habit-formation-principles">Habit Formation Principles</h3>
+<ul>
+<li>Habits are behaviors performed with little or no conscious thought</li>
+<li>Habits follow a &quot;last-in, first-out&quot; pattern—newer habits are easier to change than older ones</li>
+<li>A habit is formed when not doing an action causes a bit of discomfort</li>
+<li>Habit-forming products aim to create a bond between feeling pain and soothing it</li>
+<li>Habits form one layer at a time, like pearls</li>
+</ul>
+<h2 id="core-human-motivations">Core Human Motivations</h2>
+<p>The book identifies three fundamental human drives that effective habit-forming products target:</p>
+<ol>
+<li><strong>Seeking pleasure and avoiding pain</strong></li>
+<li><strong>Seeking hope and avoiding fear</strong></li>
+<li><strong>Seeking social acceptance and avoiding rejection</strong></li>
+</ol>
+<h3 id="variable-rewards">Variable Rewards</h3>
+<p>Three types of variable rewards that hook users:</p>
+<ol>
+<li><strong>The Tribe</strong> - Social rewards (likes, comments, social validation)</li>
+<li><strong>The Hunt</strong> - Search for material resources and information</li>
+<li><strong>The Self</strong> - Intrinsic rewards of mastery, completion, and competence</li>
+</ol>
+<h2 id="product-design-applications">Product Design Applications</h2>
+<h3 id="simplifying-actions">Simplifying Actions</h3>
+<ul>
+<li>Technologies that reduce steps to complete a task enjoy higher adoption rates</li>
+<li>Successful products make desired actions easier to perform</li>
+<li>The simpler an action, the more likely it becomes habitual</li>
+</ul>
+<h3 id="the-power-of-investment">The Power of Investment</h3>
+<ul>
+<li><strong>The IKEA Effect</strong>: People value what they help create</li>
+<li><strong>Escalation of Commitment</strong>: The more time and effort users invest, the more they value the product</li>
+<li>Investments increase the likelihood of users returning by:
+<ol>
+<li>Loading the next trigger</li>
+<li>Storing value for future use</li>
+<li>Creating preference through effort</li>
+</ol>
+</li>
+</ul>
+<h2 id="ethical-considerations">Ethical Considerations</h2>
+<p>The book raises important ethical questions about designing habit-forming technology:</p>
+<ul>
+<li>The comparison to &quot;cigarettes of this century&quot; (Ian Bogost)</li>
+<li>The impact on attention, mental health, and social well-being</li>
+<li>The responsibility of designers to consider unintended consequences</li>
+<li>The need for users to recognize manipulation and reclaim agency</li>
+</ul>
+<h2 id="self-defense-strategies">Self-Defense Strategies</h2>
+<p>For consumers wanting to protect their attention:</p>
+<ul>
+<li>Identify triggers: &quot;What prompted me to use this product?&quot;</li>
+<li>Recognize if the trigger was internal or external</li>
+<li>Question if the habit aligns with core values and needs</li>
+<li>Create friction for unwanted habits</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/Behavior design/">Behavior design</a></li>
+<li><a href="/notes/Attention/">Attention</a></li>
+<li><a href="/notes/03-Knowledge/Design/Design-MOC/">Design-MOC</a></li>
+<li><a href="/notes/Product discovery/">Product discovery</a></li>
+<li><a href="/notes/UX_Customer_Experience/">UX_Customer_Experience</a></li>
+</ul>
+<h2 id="reading-notes-amp-observations">Reading Notes &amp; Observations</h2>
+<p>Notable insights from the reading:</p>
+<ul>
+<li>The framing effect (cognitive bias) influences how we perceive value</li>
+<li>&quot;But you are free to accept or refuse&quot; phrase dramatically increases compliance</li>
+<li>Reactance is our instinctive resistance to perceived threats to autonomy</li>
+<li>Experiences with finite variability become predictable and less engaging over time</li>
+<li>Modern infrastructure often enables unforeseen simplifications and rewards</li>
+<li>Technologies that become habit-forming often take advantage of existing infrastructure</li>
+</ul>
+<h2 id="personal-reflections">Personal Reflections</h2>
+<p>The book provides valuable insights not just for designing addictive products, but also for understanding and defending against manipulation. The Hook Model is surprisingly simple but effective because it leverages fundamental human psychology. This raises important questions about ethical design, especially as technology becomes more integrated into daily life.</p>
+<p>The most valuable takeaway may be increased awareness of how products are designed to form habits, which can help users make more conscious choices about technology use and attention allocation.</p>
+
+
+    
+</body>
+
+</html>

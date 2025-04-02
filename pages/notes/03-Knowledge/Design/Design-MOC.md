@@ -39,8 +39,10 @@ Design encompasses methodologies, principles, and practices for creating effecti
 
 ## Books & Resources
 - [[Hooked|Hooked: How to Build Habit-Forming Products]] - Nir Eyal's guide to behavioral design
+- [[TISDD|This is Service Design Doing]] - Comprehensive guide to service design methods and prototyping
 
 ## Recent Additions
+- [[TISDD]] - Added April 1, 2025
 - [[Lo-Fi_Prototyping_Methods]] - Added April 1, 2025
 - [[Hooked]] - Added April 1, 2025
 - [[Design Crit]] - Added April 1, 2025
