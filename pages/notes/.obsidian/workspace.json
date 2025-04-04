@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d9eee8298c941fdb",
+        "id": "1101f411f2f7d537",
         "type": "tabs",
         "children": [
           {
-            "id": "0f4e990ce7cb2d72",
+            "id": "b6a9daf5d307bb96",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Planning/Planning.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Planning"
             }
           }
         ]
@@ -166,8 +170,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f4e990ce7cb2d72",
+  "active": "b6a9daf5d307bb96",
   "lastOpenFiles": [
+    "Maintenance Supervisor Interview Reflection - 2025-04-02.md",
+    "R&D Maintenance Technician Interview Reflection - 2025-04-01.md",
     "Maintenance Supervisor Interview Reflection - April 2025.md",
     "Interview Reflection Template.md",
     "Planning/Planning.md",
@@ -198,8 +204,6 @@
     "_System/Backlog.md",
     "_System/Changelog.md",
     "_System/Prompts.md",
-    "_System/Master_Prompt.md",
-    "_System/Workflow.md",
     "_System",
     "03-Knowledge/Design/Books",
     "03-Knowledge/Research/Books",
