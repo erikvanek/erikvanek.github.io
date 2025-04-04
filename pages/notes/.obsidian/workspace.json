@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1101f411f2f7d537",
+        "id": "542ff36b94f1fada",
         "type": "tabs",
         "children": [
           {
-            "id": "b6a9daf5d307bb96",
+            "id": "29f0c8b91de8d433",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,13 +170,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6a9daf5d307bb96",
+  "active": "29f0c8b91de8d433",
   "lastOpenFiles": [
+    "design/Design methods/Interviews.md",
+    "03-Knowledge/Research/Quantitative Research Methods.md",
+    "03-Knowledge/Research/Research Planning and Stakeholder Management.md",
+    "03-Knowledge/Research/Usability Testing - Comprehensive Guide.md",
+    "Usability Testing - Comprehensive Guide.md",
+    "Planning/Planning.md",
+    "03-Knowledge/Research/Research Interviewing Techniques.md",
+    "03-Knowledge/Research/Research Methods Overview.md",
     "Maintenance Supervisor Interview Reflection - 2025-04-02.md",
     "R&D Maintenance Technician Interview Reflection - 2025-04-01.md",
     "Maintenance Supervisor Interview Reflection - April 2025.md",
     "Interview Reflection Template.md",
-    "Planning/Planning.md",
     "SDW/Zdroje.md",
     "Kuře.md",
     "00-Inbox/Life design.md",
@@ -194,16 +201,9 @@
     "03-Knowledge/Design/Concepts",
     "02-RAW/Design/Methods/Lo-Fi_Prototyping_Raw_Notes.md",
     "02-RAW/Design/Methods",
-    "03-Knowledge/Design/Methods/Lo-Fi_Prototyping_Methods.md",
     "03-Knowledge/Design/Methods",
-    "03-Knowledge/Design/Books/Hooked.md",
-    "03-Knowledge/Research/Books/The_Mom_Test.md",
-    "_System/DEPRECATED-Prompts.md",
     "_System/Changelog.md.new",
     "_System/KB_Protocol.md.new",
-    "_System/Backlog.md",
-    "_System/Changelog.md",
-    "_System/Prompts.md",
     "_System",
     "03-Knowledge/Design/Books",
     "03-Knowledge/Research/Books",
