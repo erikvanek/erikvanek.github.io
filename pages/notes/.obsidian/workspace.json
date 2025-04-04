@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9e31a654cc223dff",
+        "id": "d9eee8298c941fdb",
         "type": "tabs",
         "children": [
           {
-            "id": "b00d329a04a1ae63",
+            "id": "0f4e990ce7cb2d72",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "agile.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "agile"
+              "title": "New tab"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "resource",
+                "query": "just enough",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +80,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,12 +166,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b00d329a04a1ae63",
+  "active": "0f4e990ce7cb2d72",
   "lastOpenFiles": [
+    "Maintenance Supervisor Interview Reflection - April 2025.md",
+    "Interview Reflection Template.md",
     "Planning/Planning.md",
+    "SDW/Zdroje.md",
+    "Kuře.md",
+    "00-Inbox/Life design.md",
+    "00-Inbox/B2B hiring.md",
+    "design/Activities/Research planning.md",
+    "agile.md",
     "_System/KB_Protocol.md",
     "books/book-notes-template.md",
-    "agile.md",
     "03-Knowledge/Design/Design-MOC.md",
     "03-Knowledge/Design/Concepts/Prototyping.md",
     "Interaction design.md",
@@ -196,14 +200,7 @@
     "_System/Prompts.md",
     "_System/Master_Prompt.md",
     "_System/Workflow.md",
-    "_System/Guide.md",
     "_System",
-    "06-System/system-backlog.md",
-    "06-System/KB_Processing_Protocol.md",
-    "books/This_is_Service_Design_Doing.md",
-    "03-Knowledge/Research/Research-MOC.md",
-    "Qualitative research.md",
-    "Interview intro.md",
     "03-Knowledge/Design/Books",
     "03-Knowledge/Research/Books",
     "03-Knowledge/ProductManagement/Books",
