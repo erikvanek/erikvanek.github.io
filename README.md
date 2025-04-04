@@ -20,6 +20,6 @@ Personal site built using [eleventy](https://www.11ty.dev/).
 
 - install [decktape](https://github.com/astefanutti/decktape)
 - run `decktape [slides URL] [path/final-filename.pdf]`
-- e.g. `decktape --slides 1-26 http://localhost:8080/sxd-25/ pages/presentations/kisk/export/sxd-25.pdf`
+- e.g. `decktape --slides 1-26 http://localhost:8080/sxd-25/ pages/presentations/kisk/export/sxd-25.pdf` or `decktape http://localhost:8080/sdw-25-IV/ ./pages/presentations/kisk/export/sdw-25-IV.pdf`
     - sadly it has some issues with https so what helps is to turn it off in `.eleventy.js` file for export purposes
     - `text-shadow` CSS property can be also problematic 
