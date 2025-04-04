@@ -30,6 +30,9 @@ resources:
 - assign 1h blocks for weekly plans and review next week
 	- go through weekly plan and mark what worked and what happened and what did not
 - review successes and failures
+- are there some reflections that need to be made?
+	- if they are short, do them now
+	- if not, plan for next week
 - create [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0) and compile new action items
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
 - add things to plan for next week
