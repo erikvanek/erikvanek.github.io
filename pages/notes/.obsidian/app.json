@@ -1,5 +1,7 @@
 {
   "alwaysUpdateLinks": true,
   "spellcheck": true,
-  "promptDelete": false
+  "promptDelete": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-Inbox"
 }

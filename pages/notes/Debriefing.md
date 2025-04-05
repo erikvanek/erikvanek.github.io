@@ -1,0 +1,28 @@
+---
+resources:
+  - https://hbr.org/2015/07/debriefing-a-simple-tool-to-help-your-team-tackle-tough-problems
+  - https://krisp.ai/blog/debrief-meeting/
+---
+- ideally happens within 24 to 72 hours after the completion of an event
+# 4 steps for effective debriefing by HBR
+- 1. Schedule a regular time and place
+	- make the debrief expected so that everyone can anticipate it
+	- the more you debrief, the more effective and efficient the process becomes
+- 2. Create a learning environment
+	- allow participants to be vulnerable and express weakness
+	- results, both good and bad, should be considered team results
+- 3. Review 4 key questions
+	- What we were trying to accomplish?
+		- session should start by restating the objectives we wanted to hit
+	- Where did we hit or miss our objectives?
+		- Review results and ensure the group is aligned on results
+	- What caused our results?
+		- root cause analysis should go deeper and try to find why something did (not) happen
+		- 5 whys can be a good activity for this
+	- What should we start, stop or continue doing?
+		- given the root causes uncovered, what does that mean for our plan?
+		- what should we do next now we know?
+- 4. Codify lessons learnt
+	- make sure to capture lessons learnt in a usable format for later reference/use
+- Usually the biggest hurdle to debriefing is merely starting it
+	- Try to pick small projects and intimate team to pilot the process
