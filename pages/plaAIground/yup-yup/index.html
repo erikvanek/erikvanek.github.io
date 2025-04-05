@@ -208,8 +208,45 @@
       }
       
       button {
-        padding: 12px 20px;
-        font-size: 0.9rem;
+        padding: 15px 20px;
+        font-size: 1rem;
+        margin: 0 5px;
+      }
+      
+      .control-panel {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+      .transcript-area {
+        min-height: 200px; /* Taller on mobile for visibility */
+        font-size: 1.3rem; /* Larger font on mobile for better visibility */
+        padding: 20px;
+      }
+      
+      /* Show the "boom" command more prominently */
+      #voice-commands strong {
+        font-size: 1.2em;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+      
+      /* Make the status more visible */
+      .status {
+        font-size: 1.1rem;
+        min-height: 1.5em;
+        padding: 5px 0;
+      }
+      
+      /* Make buttons easier to tap */
+      .note-controls button {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+      
+      /* Give room for the on-screen keyboard on mobile */
+      .app-container {
+        margin-bottom: 50px;
       }
     }
   </style>
@@ -231,6 +268,7 @@
       <div id="voice-commands">
         <p>Say <strong style="color: #1DB954;">"boom"</strong> once → Start recording</p>
         <p>Say <strong style="color: #1DB954;">"boom"</strong> again → Stop and save</p>
+        <p>Say <strong style="color: #1DB954;">"rewind"</strong> → Jump back 30 seconds</p>
       </div>
       <p id="state-description" style="margin-top: 10px;">
         Press "Start Listening" to begin.
@@ -319,7 +357,32 @@
       recognition = new SpeechRecognition();
       recognition.continuous = true;
       recognition.interimResults = true;
+      
+      // Detect if we're on a mobile device and set appropriate language
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+      // Set the language and optimize for mobile if needed
       recognition.lang = 'en-US';
+      
+      // Optimize for mobile devices
+      if (isMobile) {
+        // Increase max alternatives to improve detection chances on mobile
+        recognition.maxAlternatives = 3;
+        
+        // On mobile, we want to be more sensitive to audio
+        // These are not standard properties but work on some browsers
+        if ('webkitAudioContext' in window) {
+          try {
+            // Try to adjust audio settings if possible
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const analyser = audioContext.createAnalyser();
+            analyser.fftSize = 256;
+            analyser.smoothingTimeConstant = 0.8; // Increase smoothing
+          } catch (e) {
+            console.log('Could not optimize audio settings', e);
+          }
+        }
+      }
       
       // Set up event handlers
       recognition.onresult = handleSpeechResult;
@@ -330,11 +393,29 @@
           // Just restart if no speech detected
           if (isListening) {
             try {
-              recognition.start();
+              // Add a short delay before restarting
+              setTimeout(() => {
+                if (isListening) {
+                  recognition.start();
+                }
+              }, 100);
             } catch (e) {
               console.error('Could not restart recognition after no-speech', e);
             }
           }
+        } else if (event.error === 'network') {
+          // Attempt to recover from network errors
+          statusDisplay.textContent = 'Network error detected, trying to reconnect...';
+          setTimeout(() => {
+            if (isListening) {
+              try {
+                recognition.start();
+                statusDisplay.textContent = 'Reconnected! Listening for "boom"...';
+              } catch (e) {
+                statusDisplay.textContent = 'Could not reconnect. Please try again.';
+              }
+            }
+          }, 1000);
         } else {
           statusDisplay.textContent = `Error: ${event.error}. Try refreshing.`;
         }
@@ -343,12 +424,45 @@
       recognition.onend = () => {
         if (isListening) {
           try {
-            recognition.start();
+            // Add a slight delay to avoid immediate restart issues on mobile
+            setTimeout(() => {
+              if (isListening) {
+                recognition.start();
+              }
+            }, 50);
           } catch (e) {
             console.error('Error restarting recognition', e);
           }
         }
       };
+      
+      // Add a separate flag to track if we need an extra restart
+      // This is especially helpful for mobile where recognition can behave differently
+      let needsRestart = false;
+      
+      recognition.onnomatch = () => {
+        // If we get no match but we're listening, try again
+        if (isListening) {
+          needsRestart = true;
+        }
+      };
+      
+      // Periodically check if we need to restart recognition - helps on mobile
+      setInterval(() => {
+        if (needsRestart && isListening) {
+          try {
+            recognition.stop();
+            setTimeout(() => {
+              if (isListening) {
+                recognition.start();
+                needsRestart = false;
+              }
+            }, 300);
+          } catch (e) {
+            console.error('Error in periodic restart check', e);
+          }
+        }
+      }, 10000); // Check every 10 seconds
       
       statusDisplay.textContent = 'Ready to start listening';
     }
@@ -357,24 +471,30 @@
       // We'll use these variables to track what's happening in this event
       let interimResult = '';
       let finalResult = '';
+      let triggerDetected = false;
       
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
         const transcript = result[0].transcript.toLowerCase().trim();
         
-        // Check for trigger phrase first
-        if (transcript.includes(TRIGGER_PHRASE)) {
+        // Look for trigger phrase with more flexible matching for mobile devices
+        // This will match even partial words like "boo" or close matches
+        if (transcript.includes(TRIGGER_PHRASE) || 
+            soundsLikeTrigger(transcript, TRIGGER_PHRASE)) {
+          triggerDetected = true;
           handleTriggerPhrase();
-          return; // Skip this result since it contains the trigger phrase
+          break; // Skip this result since it contains the trigger phrase
         }
         
-        // Check for rewind phrase
-        if (transcript.includes(REWIND_PHRASE)) {
+        // Check for rewind phrase with flexible matching
+        if (transcript.includes(REWIND_PHRASE) || 
+            soundsLikeTrigger(transcript, REWIND_PHRASE)) {
+          triggerDetected = true;
           handleRewindPhrase();
-          return; // Skip this result since it contains the rewind phrase
+          break; // Skip this result since it contains the rewind phrase
         }
         
-        // Only process content if we're recording
+        // Only process content if we're recording and no trigger was detected
         if (isRecording) {
           if (result.isFinal) {
             // This is a final result - add it to our finalized text
@@ -412,6 +532,88 @@
           }
         }
       }
+      
+      // If trigger was detected, clear any interim results to prevent them from being processed
+      // This helps fix the mobile repeated transcript bug
+      if (triggerDetected) {
+        // Give time for the trigger to be fully processed before new recognition starts
+        setTimeout(() => {
+          if (recognition) {
+            try {
+              // Cycle recognition to clear any buffered speech
+              if (isListening) {
+                recognition.stop();
+                setTimeout(() => {
+                  if (isListening) {
+                    recognition.start();
+                  }
+                }, 300);
+              }
+            } catch (e) {
+              console.error('Error cycling recognition after trigger detection', e);
+            }
+          }
+        }, 200);
+      }
+    }
+    
+    // Helper function to do fuzzy matching for trigger words
+    // This improves detection on mobile devices where recognition might be less precise
+    function soundsLikeTrigger(text, trigger) {
+      // Check for close matches to the trigger word
+      const words = text.split(/\s+/);
+      
+      for (const word of words) {
+        // Check for similarity with trigger phrase
+        if (levenshteinDistance(word, trigger) <= 2) {  // Allow up to 2 character differences
+          return true;
+        }
+        
+        // For "boom", also match words starting with "bo" or "bu" and ending with "m"
+        if (trigger === TRIGGER_PHRASE) {
+          if ((word.startsWith('bo') || word.startsWith('bu')) && word.endsWith('m')) {
+            return true;
+          }
+        }
+        
+        // For "rewind", accept words starting with "re" and containing "wi"
+        if (trigger === REWIND_PHRASE) {
+          if (word.startsWith('re') && word.includes('wi')) {
+            return true;
+          }
+        }
+      }
+      
+      return false;
+    }
+    
+    // Levenshtein distance calculation for fuzzy matching
+    function levenshteinDistance(a, b) {
+      if (a.length === 0) return b.length;
+      if (b.length === 0) return a.length;
+      
+      const matrix = Array(a.length + 1).fill().map(() => Array(b.length + 1).fill(0));
+      
+      for (let i = 0; i <= a.length; i++) {
+        matrix[i][0] = i;
+      }
+      
+      for (let j = 0; j <= b.length; j++) {
+        matrix[0][j] = j;
+      }
+      
+      for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j] + 1,        // deletion
+            matrix[i][j - 1] + 1,        // insertion
+            matrix[i - 1][j - 1] + cost  // substitution
+          );
+        }
+      }
+      
+      return matrix[a.length][b.length];
     }
     
     // Helper function to remove filler words and trigger phrases
@@ -478,15 +680,69 @@
       statusDisplay.textContent = "Rewinding by 30 seconds...";
       showRewindConfirmation();
       
+      // Play a distinctive sound for rewind
+      playRewindSound();
+      
       // Rewind Spotify if connected
       if (spotifyConnected && currentSpotifyTrack) {
         rewindSpotify(REWIND_AMOUNT_SECONDS);
       } else {
         statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+        
+        // On mobile, provide haptic feedback if available
+        if (navigator.vibrate) {
+          navigator.vibrate([100, 50, 100]); // Vibrate to indicate error
+        }
       }
       
       // Update last trigger time
       lastTriggerTime = currentTime;
+      
+      // Reset speech recognition to help eliminate the "double trigger" issue on mobile
+      if (isListening && !isRecording) {
+        try {
+          // Force a recognition reset
+          recognition.stop();
+          setTimeout(() => {
+            if (isListening) {
+              recognition.start();
+              // Brief timeout to ensure UI stays in sync
+              setTimeout(() => {
+                if (!isRecording) {
+                  statusDisplay.textContent = 'Listening for "boom"...';
+                }
+              }, 500);
+            }
+          }, 300);
+        } catch (e) {
+          console.error('Error resetting recognition after rewind', e);
+        }
+      }
+    }
+    
+    // Add a distinctive sound for rewind action
+    function playRewindSound() {
+      try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        // Create a downward sweep sound effect
+        oscillator.frequency.value = 700; 
+        gainNode.gain.value = 0.2;
+        
+        oscillator.start();
+        // Sweep down to simulate rewind sound
+        oscillator.frequency.linearRampToValueAtTime(300, audioContext.currentTime + 0.3);
+        
+        // Stop after the effect
+        setTimeout(() => oscillator.stop(), 300);
+      } catch (e) {
+        console.error('Could not play rewind sound', e);
+      }
     }
     
     function showRewindConfirmation() {
