@@ -119,13 +119,15 @@
     
     .transcript-area {
       width: 100%;
-      min-height: 100px;
+      min-height: 180px;
       margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #ddd;
+      padding: 20px;
+      border: 2px solid #1DB954;
       border-radius: 8px;
       box-sizing: border-box;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(29, 185, 84, 0.15);
+      background-color: #f9fff9;
     }
     
     .note-list {
@@ -237,6 +239,7 @@
     
     <div class="control-panel">
       <button id="start-btn">Start Listening</button>
+      <button id="rewind-btn" disabled>Rewind 30s</button>
       <button id="record-btn" class="record" disabled>Record Note</button>
     </div>
     
@@ -261,6 +264,7 @@
     // DOM Elements
     const startBtn = document.getElementById('start-btn');
     const recordBtn = document.getElementById('record-btn');
+    const rewindBtn = document.getElementById('rewind-btn');
     const clearBtn = document.getElementById('clear-btn');
     const spotifyLoginBtn = document.getElementById('spotify-login-btn');
     const statusDisplay = document.getElementById('status');
@@ -282,8 +286,10 @@
     
     // Voice trigger settings
     const TRIGGER_PHRASE = "boom";
+    const REWIND_PHRASE = "rewind";
     let lastTriggerTime = 0;
     const TRIGGER_COOLDOWN_MS = 2000;
+    const REWIND_AMOUNT_SECONDS = 30;
     
     // Speech recognition variables
     let recognition = null;
@@ -362,6 +368,12 @@
           return; // Skip this result since it contains the trigger phrase
         }
         
+        // Check for rewind phrase
+        if (transcript.includes(REWIND_PHRASE)) {
+          handleRewindPhrase();
+          return; // Skip this result since it contains the rewind phrase
+        }
+        
         // Only process content if we're recording
         if (isRecording) {
           if (result.isFinal) {
@@ -433,6 +445,68 @@
       
       // Update last trigger time
       lastTriggerTime = currentTime;
+      
+      // This prevents immediate re-triggering after the first recording session
+      // by forcing a pause in recognition which gets restarted properly
+      if (isRecording === false) {
+        setTimeout(() => {
+          try {
+            if (isListening) {
+              recognition.stop();
+              setTimeout(() => {
+                if (isListening) {
+                  recognition.start();
+                }
+              }, 300);
+            }
+          } catch (e) {
+            console.error('Error cycling speech recognition after trigger', e);
+          }
+        }, 100);
+      }
+    }
+    
+    function handleRewindPhrase() {
+      const currentTime = Date.now();
+      
+      // Check for cooldown to avoid duplicate triggers
+      if (currentTime - lastTriggerTime < TRIGGER_COOLDOWN_MS) {
+        return;
+      }
+      
+      // Show visual confirmation
+      statusDisplay.textContent = "Rewinding by 30 seconds...";
+      showRewindConfirmation();
+      
+      // Rewind Spotify if connected
+      if (spotifyConnected && currentSpotifyTrack) {
+        rewindSpotify(REWIND_AMOUNT_SECONDS);
+      } else {
+        statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+      }
+      
+      // Update last trigger time
+      lastTriggerTime = currentTime;
+    }
+    
+    function showRewindConfirmation() {
+      const confirmationEl = document.createElement('div');
+      confirmationEl.textContent = '⏪ REWIND ⏪';
+      confirmationEl.style.position = 'fixed';
+      confirmationEl.style.top = '50%';
+      confirmationEl.style.left = '50%';
+      confirmationEl.style.transform = 'translate(-50%, -50%)';
+      confirmationEl.style.backgroundColor = '#1DB954';
+      confirmationEl.style.color = 'white';
+      confirmationEl.style.fontSize = '28px';
+      confirmationEl.style.padding = '20px 40px';
+      confirmationEl.style.borderRadius = '10px';
+      confirmationEl.style.zIndex = '1000';
+      confirmationEl.style.fontWeight = 'bold';
+      confirmationEl.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+      document.body.appendChild(confirmationEl);
+      
+      setTimeout(() => document.body.removeChild(confirmationEl), 1000);
     }
     
     function toggleListening() {
@@ -445,11 +519,12 @@
           startBtn.textContent = 'Stop Listening';
           statusDisplay.textContent = 'Listening for "boom"...';
           recordBtn.disabled = false;
+          rewindBtn.disabled = false;
           
           // Update UI indicators
           appState.className = 'app-state listening';
           stateHeading.textContent = 'Listening';
-          stateDescription.textContent = 'Waiting for you to say "boom" to start recording.';
+          stateDescription.textContent = 'Waiting for you to say "boom" to start recording or "rewind" to jump back 30s.';
           
           // Activate listening indicator
           listeningDot.classList.add('active');
@@ -470,6 +545,7 @@
         startBtn.textContent = 'Start Listening';
         statusDisplay.textContent = 'Not listening';
         recordBtn.disabled = true;
+        rewindBtn.disabled = true;
         
         // If recording, stop it
         if (isRecording) {
@@ -626,8 +702,16 @@
       noteElement.querySelector('.delete-btn').addEventListener('click', () => deleteNote(note.id));
       noteElement.querySelector('.edit-btn').addEventListener('click', () => editNote(note.id));
       
-      // Add to container (after the header)
-      notesContainer.appendChild(noteElement);
+      // Get the header element (first child of the notes container)
+      const headerElement = notesContainer.querySelector('div');
+      
+      // Insert after the header (at the top of the notes list)
+      if (headerElement && headerElement.nextSibling) {
+        notesContainer.insertBefore(noteElement, headerElement.nextSibling);
+      } else {
+        // Fallback to appending if structure is different
+        notesContainer.appendChild(noteElement);
+      }
     }
     
     function deleteNote(id) {
@@ -833,9 +917,9 @@
     }
     
     function getCurrentTrack() {
-      if (!spotifyConnected || !spotifyToken) return;
+      if (!spotifyConnected || !spotifyToken) return Promise.resolve();
       
-      fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+      return fetch('https://api.spotify.com/v1/me/player/currently-playing', {
         headers: {
           'Authorization': `Bearer ${spotifyToken}`
         }
@@ -864,6 +948,7 @@
             `;
           }
         }
+        return data;
       })
       .catch(error => {
         console.error('Error getting current track', error);
@@ -872,6 +957,7 @@
           spotifyConnected = false;
           updateSpotifyUI();
         }
+        return null;
       });
     }
     
@@ -920,9 +1006,55 @@
       .catch(error => console.error('Error with Spotify resume/rewind:', error));
     }
     
+    function rewindSpotify(secondsToRewind) {
+      if (!spotifyConnected || !spotifyToken) {
+        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
+        return;
+      }
+      
+      // First, get the current track and position
+      getCurrentTrack()
+        .then(() => {
+          if (!currentSpotifyTrack) {
+            statusDisplay.textContent = 'Cannot rewind: No track currently playing';
+            return;
+          }
+          
+          // Calculate rewind position
+          let rewindPositionMs = Math.max(0, currentPlaybackPosition - (secondsToRewind * 1000));
+          
+          // Seek to rewound position
+          return fetch(`https://api.spotify.com/v1/me/player/seek?position_ms=${rewindPositionMs}`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${spotifyToken}`
+            }
+          });
+        })
+        .then(() => {
+          console.log(`Spotify rewound ${secondsToRewind} seconds`);
+          statusDisplay.textContent = `Rewound ${secondsToRewind} seconds`;
+          
+          // Update track display
+          setTimeout(getCurrentTrack, 1000);
+        })
+        .catch(error => {
+          console.error('Error rewinding Spotify:', error);
+          statusDisplay.textContent = 'Error rewinding Spotify';
+        });
+    }
+    
     // Event listeners
     startBtn.addEventListener('click', toggleListening);
     recordBtn.addEventListener('click', toggleRecording);
+    rewindBtn.addEventListener('click', () => {
+      if (spotifyConnected && isListening) {
+        rewindSpotify(REWIND_AMOUNT_SECONDS);
+        showRewindConfirmation();
+      } else if (!spotifyConnected) {
+        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
+      }
+    });
     clearBtn.addEventListener('click', clearTranscript);
     spotifyLoginBtn.addEventListener('click', connectToSpotify);
     document.getElementById('export-notes-btn').addEventListener('click', exportNotes);
