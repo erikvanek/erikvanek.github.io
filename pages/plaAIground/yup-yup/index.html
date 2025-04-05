@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice Notes - Second Brain</title>
+  <title>boom - voice notes</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,6 +16,53 @@
     h1 {
       text-align: center;
       color: #333;
+      margin-bottom: 25px;
+    }
+    
+    .highlight {
+      color: #1DB954;
+      font-size: 1.4em;
+      letter-spacing: -0.5px;
+      display: block;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    
+    .highlight::before,
+    .highlight::after {
+      content: '"';
+      font-size: 1.2em;
+      color: #1DB954;
+      opacity: 0.6;
+    }
+    
+    .subtitle {
+      font-size: 0.6em;
+      color: #777;
+      font-weight: normal;
+      display: block;
+    }
+    
+    /* Listening animation */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    .listening-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #1DB954;
+      margin-right: 8px;
+      display: none;
+    }
+    
+    .listening-indicator.active {
+      display: inline-block;
+      animation: pulse 1.5s infinite ease-in-out;
     }
     
     .app-container {
@@ -127,6 +174,33 @@
       font-weight: bold;
     }
     
+    .model-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background-color: #eee;
+      border-radius: 4px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #1DB954;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
     /* Mobile optimizations */
     @media (max-width: 480px) {
       body {
@@ -142,18 +216,32 @@
 </head>
 <body>
   <div class="app-container">
-    <h1>Voice Notes</h1>
+    <h1><span class="highlight">boom</span> <span class="subtitle">voice notes</span></h1>
     
     <div id="spotify-connect" class="spotify-container">
       <p>Spotify integration is <span class="spotify-status">not connected</span></p>
       <button id="spotify-login-btn">Connect Spotify</button>
     </div>
     
+    <div id="model-loading" class="model-loading">
+      <p>Loading voice recognition model... <span id="model-status">0%</span></p>
+      <div class="progress-bar">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+    </div>
+    
     <div class="voice-trigger-info" style="text-align: center; margin: 10px 0; padding: 15px; background-color: #f0f7ff; border-radius: 8px;">
-      <p>Say <strong>"yup yup"</strong> while listening to start recording automatically!</p>
+      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+        <div class="listening-indicator" id="listening-dot"></div>
+        <p><strong>Voice Commands:</strong></p>
+      </div>
+      <div style="background-color: #e3f2fd; padding: 12px; border-radius: 6px; margin-bottom: 10px;">
+        <p style="margin: 0; font-weight: bold;">Say <span style="color: #1DB954;">"boom"</span> once → Start recording</p>
+        <p style="margin: 5px 0 0 0; font-weight: bold;">Say <span style="color: #1DB954;">"boom"</span> again → Stop recording</p>
+      </div>
       <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">
         <strong>Troubleshooting:</strong> Make sure you're online and have granted microphone permissions.
-        If you get a network error, wait for automatic reconnection attempts or try using Chrome (works best).
+        Voice recognition works even offline once the model is loaded.
       </p>
       <p style="color: #2e7d32; font-size: 0.9rem; margin-top: 10px;">
         <strong>Spotify Feature:</strong> When you stop recording, your Spotify track will automatically rewind by 15 seconds.
@@ -163,11 +251,18 @@
     </div>
     
     <div class="control-panel">
-      <button id="start-btn">Start Listening</button>
+      <button id="start-btn" disabled>Start Listening</button>
       <button id="record-btn" class="record" disabled>Record Note</button>
     </div>
     
-    <p id="status" class="status">Ready to start</p>
+    <div style="text-align: center; margin: 10px 0; padding: 8px; background-color: #f8f9fa; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+      <div id="listening-status" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; margin-right: 10px;"></div>
+      <span id="listening-text">Not listening - press Start Listening</span>
+    </div>
+    
+    <p id="status" class="status">Loading voice recognition...</p>
+    
+    <div id="debug-speech" style="font-size: 0.8rem; color: #666; background-color: #f5f5f5; padding: 8px; margin-bottom: 10px; border-radius: 4px; display: none;">No speech detected yet</div>
     
     <textarea id="transcript" class="transcript-area" placeholder="Your transcribed notes will appear here..." readonly></textarea>
     
@@ -177,10 +272,39 @@
     </div>
     
     <div class="note-list" id="notes-container">
-      <h2>Saved Notes</h2>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Saved Notes</h2>
+        <button id="export-notes-btn" style="margin-left: 10px;">Export Notes</button>
+      </div>
       <!-- Notes will be added here dynamically -->
     </div>
   </div>
+
+  <!-- Speech Recognition Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vosk-browser@0.0.8/dist/vosk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vosk@0.3.47/vosk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vosk/browser@0.0.8/dist/vosk.js"></script>
+  
+  <!-- Fallback to Web Speech API if Vosk doesn't work -->
+  <script>
+    console.log("Checking if Vosk loaded correctly");
+    
+    // Simple check if Vosk is available - will set a flag to use Web Speech API if not
+    window.voskAvailable = false;
+    
+    try {
+      if (typeof Vosk === 'function' || typeof vosk !== 'undefined' || typeof window.vosk !== 'undefined') {
+        console.log("Vosk appears to be available");
+        window.voskAvailable = true;
+      } else {
+        console.warn("Vosk doesn't appear to be available");
+        window.voskAvailable = false;
+      }
+    } catch(e) {
+      console.error("Error checking Vosk:", e);
+      window.voskAvailable = false;
+    }
+  </script>
 
   <script>
     // DOM Elements
@@ -192,26 +316,15 @@
     const statusDisplay = document.getElementById('status');
     const transcriptArea = document.getElementById('transcript');
     const notesContainer = document.getElementById('notes-container');
+    const modelStatus = document.getElementById('model-status');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const modelLoadingContainer = document.getElementById('model-loading');
     
-    // Speech recognition setup
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    let recognition;
-    let recognitionAttempts = 0;
-    const MAX_RECOGNITION_ATTEMPTS = 3;
-    
-    if (SpeechRecognition) {
-      setupSpeechRecognition();
-    } else {
-      statusDisplay.textContent = 'Speech recognition not supported in this browser.';
-      startBtn.disabled = true;
-    }
-    
-    function setupSpeechRecognition() {
-      recognition = new SpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.lang = 'en-US'; // Set language
-      recognition.maxAlternatives = 3; // Get multiple alternatives to improve trigger detection
+    // Debug mode - set to true to see more detailed logs
+    const DEBUG_MODE = true;
+    const debugArea = document.getElementById('debug-speech');
+    if (debugArea && DEBUG_MODE) {
+      debugArea.style.display = 'block';
     }
     
     // App state
@@ -224,14 +337,167 @@
     const REWIND_SECONDS = 15; // How many seconds to rewind when stopping recording
     
     // Voice trigger settings
-    const TRIGGER_PHRASE = "yup yup";
-    const TRIGGER_CONFIDENCE = 0.7; // Minimum confidence level
+    const TRIGGER_PHRASE = "boom";
+    let lastTriggerTime = 0;
+    const TRIGGER_COOLDOWN_MS = 2000; // Cooldown between triggers (2 seconds)
+    
+    // Vosk variables
+    let vosk;
+    let model;
+    let recognizer;
+    let audioContext;
+    let mediaStream;
+    let scriptProcessor;
+    let modelReady = false;
+    
+    // Get listening indicator element
+    const listeningDot = document.getElementById('listening-dot');
     
     // Load saved notes from localStorage
     loadNotes();
     
-    // Check browser compatibility
-    checkBrowserCompatibility();
+    // Initialize Vosk model or fall back to Web Speech API
+    initVosk();
+    
+    // Check if returning from Spotify auth
+    checkSpotifyAuth();
+    
+    // Web Speech API fallback
+    function setupWebSpeechAPI() {
+      console.log('Setting up Web Speech API fallback');
+      modelLoadingContainer.style.display = 'none';
+      statusDisplay.textContent = 'Using browser speech recognition';
+      
+      // Hide Vosk-specific elements
+      const voskElements = document.querySelectorAll('.vosk-only');
+      voskElements.forEach(el => el.style.display = 'none');
+      
+      // Show Web Speech API specific elements
+      const webSpeechElements = document.querySelectorAll('.webspeech-only');
+      webSpeechElements.forEach(el => el.style.display = 'block');
+      
+      // Initialize Web Speech API
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        statusDisplay.textContent = 'Speech recognition not supported in this browser';
+        startBtn.disabled = true;
+        return;
+      }
+      
+      // Create recognition instance
+      recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+      recognition.maxAlternatives = 5;
+      
+      // Set up event handlers
+      setupWebSpeechEvents();
+      
+      // Enable start button
+      startBtn.disabled = false;
+      
+      // Mark as ready using the same flag as Vosk for compatibility
+      modelReady = true;
+    }
+    
+    function setupWebSpeechEvents() {
+      if (!recognition) return;
+      
+      recognition.onresult = handleWebSpeechResult;
+      recognition.onerror = handleWebSpeechError;
+      recognition.onend = handleWebSpeechEnd;
+    }
+    
+    function handleWebSpeechResult(event) {
+      let interimTranscript = '';
+      let finalTranscript = '';
+      
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript.toLowerCase();
+        const confidence = event.results[i][0].confidence;
+        
+        if (DEBUG_MODE) {
+          console.log(`Speech detected: "${transcript}" (confidence: ${confidence.toFixed(2)})`);
+          if (debugArea) {
+            debugArea.textContent = `Last detected: "${transcript}" (confidence: ${confidence.toFixed(2)})`;
+          }
+        }
+        
+        // Process results similarly to how we would with Vosk
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript;
+          
+          // If recording, update transcript
+          if (isRecording) {
+            // Remove trigger phrase from beginning or end of transcript
+            const triggerPattern = new RegExp(`^${TRIGGER_PHRASE}\\s*|\\s*${TRIGGER_PHRASE}$`, 'gi');
+            let cleanTranscript = transcript.replace(triggerPattern, '').trim();
+            
+            // Only add non-empty transcripts
+            if (cleanTranscript) {
+              // Append to existing transcript with a space
+              if (transcriptArea.value) {
+                transcriptArea.value += ' ' + cleanTranscript;
+              } else {
+                transcriptArea.value = cleanTranscript;
+              }
+              
+              // Enable save and clear buttons if we have text
+              if (transcriptArea.value.trim()) {
+                saveBtn.disabled = false;
+                clearBtn.disabled = false;
+              }
+            }
+          }
+          
+          // Check for trigger phrase (using original transcript)
+          checkForTriggerPhrase(transcript);
+        } else {
+          interimTranscript += transcript;
+          
+          // If recording, show interim results but preserve previous final text
+          if (isRecording) {
+            // For interim results, we show current chunk but don't append yet
+            // Remove trigger phrase for display purposes
+            const triggerPattern = new RegExp(`^${TRIGGER_PHRASE}\\s*|\\s*${TRIGGER_PHRASE}$`, 'gi');
+            let cleanInterim = interimTranscript.replace(triggerPattern, '').trim();
+            transcriptArea.value = cleanInterim;
+          }
+          
+          // Check for trigger in interim results for faster response
+          checkForTriggerPhrase(interimTranscript);
+        }
+      }
+    }
+    
+    function handleWebSpeechError(event) {
+      console.error('Speech recognition error:', event.error);
+      
+      if (event.error === 'no-speech') {
+        // Just restart if no speech detected
+        if (isListening) {
+          try {
+            recognition.start();
+          } catch (e) {
+            console.error('Could not restart recognition after no-speech', e);
+          }
+        }
+      } else {
+        statusDisplay.textContent = `Error: ${event.error}. Try refreshing.`;
+      }
+    }
+    
+    function handleWebSpeechEnd() {
+      if (isListening) {
+        // Restart if we're supposed to be listening
+        try {
+          recognition.start();
+        } catch (e) {
+          console.error('Error restarting recognition in onend handler:', e);
+        }
+      }
+    }
     
     // Event listeners
     startBtn.addEventListener('click', toggleListening);
@@ -239,80 +505,409 @@
     saveBtn.addEventListener('click', saveNote);
     clearBtn.addEventListener('click', clearTranscript);
     spotifyLoginBtn.addEventListener('click', connectToSpotify);
+    document.getElementById('export-notes-btn').addEventListener('click', exportNotes);
     
-    // Check if returning from Spotify auth
-    checkSpotifyAuth();
+    // Initialize Vosk speech recognition
+    async function initVosk() {
+      try {
+        // Try different approaches to access Vosk
+        if (typeof Vosk === 'function') {
+          console.log('Using Vosk constructor function');
+          vosk = await Vosk();
+        } else if (typeof window.Vosk === 'function') {
+          console.log('Using window.Vosk constructor function');
+          vosk = await window.Vosk();
+        } else if (typeof vosk !== 'undefined') {
+          console.log('Using predefined vosk object');
+          // vosk is already defined - no need to do anything
+        } else if (typeof window.vosk !== 'undefined') {
+          console.log('Using window.vosk object');
+          vosk = window.vosk;
+        } else {
+          console.error('No Vosk implementation found - using Web Speech API instead');
+          // Fall back to Web Speech API
+          setupWebSpeechAPI();
+          return;
+        }
+        
+        console.log('Vosk object:', vosk);
+        
+        // For testing only - if we can't properly use Vosk, use a fallback
+        if (!vosk || typeof vosk.setProgressCallback !== 'function' || typeof vosk.createModel !== 'function') {
+          console.warn('Invalid Vosk implementation - using Web Speech API instead');
+          setupWebSpeechAPI();
+          return;
+        }
+        
+        // Model download progress event
+        vosk.setProgressCallback((progress) => {
+          const percent = Math.floor(progress * 100);
+          modelStatus.textContent = `${percent}%`;
+          progressBarFill.style.width = `${percent}%`;
+          
+          if (DEBUG_MODE) {
+            console.log(`Model download progress: ${percent}%`);
+          }
+        });
+        
+        // Load the small English model
+        statusDisplay.textContent = 'Downloading speech recognition model...';
+        model = await vosk.createModel('https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip');
+        
+        // Hide the loading display
+        modelLoadingContainer.style.display = 'none';
+        
+        // Create recognizer instance
+        recognizer = new vosk.Recognizer({model: model, sampleRate: 16000});
+        recognizer.setMaxAlternatives(5);
+        recognizer.setWords(true);
+        
+        statusDisplay.textContent = 'Voice recognition ready! Press "Start Listening"';
+        startBtn.disabled = false;
+        modelReady = true;
+        
+        console.log('Vosk model loaded successfully');
+      } catch (error) {
+        console.error('Error initializing Vosk:', error);
+        statusDisplay.textContent = 'Error loading voice recognition model. Please refresh and try again.';
+        modelStatus.textContent = 'Error';
+        progressBarFill.style.backgroundColor = '#e74c3c';
+      }
+    }
     
     // Functions
-    function toggleListening() {
+    async function toggleListening() {
       if (!isListening) {
-        // Reset attempts counter when starting fresh
-        recognitionAttempts = 0;
+        if (!modelReady) {
+          statusDisplay.textContent = 'Speech recognition model not loaded yet. Please wait.';
+          return;
+        }
         
-        // Request microphone permission explicitly first
-        navigator.mediaDevices.getUserMedia({ audio: true })
-          .then(() => {
-            // Microphone permission granted, start recognition
-            startSpeechRecognition();
-          })
-          .catch(error => {
-            console.error('Microphone permission denied:', error);
-            statusDisplay.textContent = 'Error: Microphone access denied. Please allow microphone access.';
-          });
+        try {
+          // Request microphone permission
+          mediaStream = await navigator.mediaDevices.getUserMedia({audio: true});
+          
+          // Start recognition based on which API we're using
+          if (recognition) {
+            // We're using Web Speech API
+            try {
+              recognition.start();
+            } catch (e) {
+              console.error('Error starting Web Speech recognition:', e);
+              statusDisplay.textContent = 'Error starting speech recognition.';
+              return;
+            }
+          } else if (vosk && recognizer) {
+            // We're using Vosk
+            startAudioProcessing();
+          } else {
+            console.error('No speech recognition engine available');
+            statusDisplay.textContent = 'Speech recognition not available.';
+            return;
+          }
+          
+          isListening = true;
+          startBtn.textContent = 'Stop Listening';
+          statusDisplay.textContent = 'Listening for "boom"...';
+          recordBtn.disabled = false;
+          
+          // Update listening status indicators
+          const listeningStatus = document.getElementById('listening-status');
+          const listeningText = document.getElementById('listening-text');
+          
+          if (listeningStatus) {
+            listeningStatus.style.backgroundColor = '#1DB954';
+            listeningStatus.style.animation = 'pulse 1.5s infinite ease-in-out';
+          }
+          
+          if (listeningText) {
+            listeningText.textContent = 'Listening - say "boom" to start recording';
+          }
+          
+          // Activate listening indicator
+          listeningDot.classList.add('active');
+          
+        } catch (error) {
+          console.error('Error accessing microphone:', error);
+          statusDisplay.textContent = 'Error: Could not access microphone. Please allow microphone access.';
+        }
       } else {
-        // Stop listening
-        stopSpeechRecognition();
-      }
-    }
-    
-    function startSpeechRecognition() {
-      try {
-        // Recreate recognition instance to avoid stale state
-        setupSpeechRecognition();
+        // Stop listening based on which API we're using
+        if (recognition) {
+          // We're using Web Speech API
+          try {
+            recognition.stop();
+          } catch (e) {
+            console.error('Error stopping Web Speech recognition:', e);
+          }
+        } else if (vosk && recognizer) {
+          // We're using Vosk
+          stopAudioProcessing();
+        }
         
-        recognition.start();
-        isListening = true;
-        startBtn.textContent = 'Stop Listening';
-        statusDisplay.textContent = 'Listening...';
-        recordBtn.disabled = false;
-        recognitionAttempts = 0; // Reset attempts counter on successful start
-      } catch (error) {
-        console.error('Error starting recognition:', error);
-        handleRecognitionError(error);
-      }
-    }
-    
-    function stopSpeechRecognition() {
-      try {
-        recognition.stop();
-      } catch (error) {
-        console.error('Error stopping recognition:', error);
-      }
-      isListening = false;
-      startBtn.textContent = 'Start Listening';
-      statusDisplay.textContent = 'Not listening';
-      recordBtn.disabled = true;
-      if (isRecording) {
-        toggleRecording();
-      }
-      recognitionAttempts = 0; // Reset attempts counter
-    }
-    
-    function handleRecognitionError(error) {
-      recognitionAttempts++;
-      
-      if (recognitionAttempts < MAX_RECOGNITION_ATTEMPTS) {
-        statusDisplay.textContent = `Recognition error. Retrying (${recognitionAttempts}/${MAX_RECOGNITION_ATTEMPTS})...`;
-        // Wait a moment before retrying
-        setTimeout(() => startSpeechRecognition(), 1000);
-      } else {
-        statusDisplay.textContent = 'Unable to start speech recognition. Try using a different browser (Chrome works best).';
         isListening = false;
         startBtn.textContent = 'Start Listening';
+        statusDisplay.textContent = 'Not listening';
+        recordBtn.disabled = true;
+        
+        if (isRecording) {
+          toggleRecording();
+        }
+        
+        // Update listening status indicators
+        const listeningStatus = document.getElementById('listening-status');
+        const listeningText = document.getElementById('listening-text');
+        
+        if (listeningStatus) {
+          listeningStatus.style.backgroundColor = '#ccc';
+          listeningStatus.style.animation = 'none';
+        }
+        
+        if (listeningText) {
+          listeningText.textContent = 'Not listening - press Start Listening';
+        }
+        
+        // Deactivate listening indicator
+        listeningDot.classList.remove('active');
       }
+    }
+    
+    function startAudioProcessing() {
+      // Create audio context
+      audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      
+      // Create audio processor
+      scriptProcessor = audioContext.createScriptProcessor(4096, 1, 1);
+      
+      // Create source node
+      const source = audioContext.createMediaStreamSource(mediaStream);
+      
+      // Connect nodes
+      source.connect(scriptProcessor);
+      scriptProcessor.connect(audioContext.destination);
+      
+      // Process audio
+      scriptProcessor.addEventListener('audioprocess', processAudio);
+    }
+    
+    function stopAudioProcessing() {
+      if (scriptProcessor) {
+        scriptProcessor.removeEventListener('audioprocess', processAudio);
+        scriptProcessor.disconnect();
+        scriptProcessor = null;
+      }
+      
+      if (audioContext) {
+        audioContext.close();
+        audioContext = null;
+      }
+      
+      if (mediaStream) {
+        mediaStream.getTracks().forEach(track => track.stop());
+        mediaStream = null;
+      }
+      
+      if (recognizer) {
+        recognizer.reset();
+      }
+    }
+    
+    function processAudio(audioProcessingEvent) {
+      if (!recognizer || !isListening) return;
+      
+      // Get audio samples
+      const inputData = audioProcessingEvent.inputBuffer.getChannelData(0);
+      
+      // Process through Vosk
+      const sampleFloat32 = convertFloat32ToInt16(inputData);
+      const result = recognizer.acceptWaveform(sampleFloat32);
+      
+      if (result) {
+        // We have a final result
+        const finalResult = recognizer.result();
+        
+        if (DEBUG_MODE) {
+          console.log('Vosk result:', finalResult);
+          if (debugArea) {
+            debugArea.textContent = `Last detected: "${finalResult.text}"`;
+          }
+        }
+        
+        processSpeechResult(finalResult);
+      } else {
+        // We have a partial result
+        const partialResult = recognizer.partialResult();
+        
+        if (DEBUG_MODE) {
+          console.log('Vosk partial result:', partialResult);
+        }
+        
+        if (isRecording) {
+          // For partial results, preserve the existing text but show what's being processed
+          // Remove trigger phrase
+          const triggerPattern = new RegExp(`^${TRIGGER_PHRASE}\\s*|\\s*${TRIGGER_PHRASE}$`, 'gi');
+          let cleanPartial = partialResult.partial.replace(triggerPattern, '').trim();
+          
+          // Get the current completed text (we'll add our partial after it)
+          const currentText = transcriptArea.value || '';
+          const partialIndicator = ' ●'; // Show a dot to indicate interim text
+          
+          // Only update if we have a meaningful partial result
+          if (cleanPartial) {
+            // Find if there's already a partial indicator and remove it
+            const existingPartialIndex = currentText.lastIndexOf(partialIndicator);
+            const baseText = existingPartialIndex !== -1 
+              ? currentText.substring(0, existingPartialIndex)
+              : currentText;
+              
+            // Set the text with the new partial
+            transcriptArea.value = baseText + (baseText && cleanPartial ? ' ' : '') + cleanPartial + partialIndicator;
+          }
+        }
+        
+        // Check for trigger word in partial results for better responsiveness
+        checkForTriggerPhrase(partialResult.partial);
+      }
+    }
+    
+    function processSpeechResult(result) {
+      if (!result || !result.text) return;
+      
+      let transcript = result.text.toLowerCase();
+      
+      // If we're recording, update the transcript
+      if (isRecording) {
+        // Remove trigger phrase from beginning or end of transcript
+        const triggerPattern = new RegExp(`^${TRIGGER_PHRASE}\s*|\s*${TRIGGER_PHRASE}$`, 'gi');
+        transcript = transcript.replace(triggerPattern, '').trim();
+        
+        // Only add non-empty transcripts
+        if (transcript) {
+          // Append to existing transcript with a space
+          if (transcriptArea.value) {
+            transcriptArea.value += ' ' + transcript;
+          } else {
+            transcriptArea.value = transcript;
+          }
+          
+          // Enable save and clear buttons if we have text
+          if (transcriptArea.value.trim()) {
+            saveBtn.disabled = false;
+            clearBtn.disabled = false;
+          }
+        }
+      }
+      
+      // Check for trigger phrase (using original transcript)
+      checkForTriggerPhrase(result.text.toLowerCase());
+    }
+    
+    function checkForTriggerPhrase(transcript) {
+      if (!transcript) return;
+      
+      // Convert to lowercase for comparison
+      const lowerTranscript = transcript.toLowerCase();
+      
+      // Check if transcript contains our trigger phrase
+      if (lowerTranscript.includes(TRIGGER_PHRASE)) {
+        console.log(`Possible trigger: "${lowerTranscript}" contains "${TRIGGER_PHRASE}"`);
+        
+        // Check if we're outside the cooldown period
+        const currentTime = Date.now();
+        if (currentTime - lastTriggerTime > TRIGGER_COOLDOWN_MS) {
+          console.log('🎯 TRIGGER PHRASE DETECTED!', lowerTranscript);
+          statusDisplay.textContent = 'Boom detected!';
+          
+          // Play audio feedback
+          playTriggerSound();
+          
+          // Toggle recording state
+          toggleRecording();
+          
+          // Update last trigger time
+          lastTriggerTime = currentTime;
+          
+          // Flash the visual indicator
+          listeningDot.style.backgroundColor = '#e74c3c';
+          setTimeout(() => {
+            listeningDot.style.backgroundColor = '#1DB954';
+          }, 500);
+          
+          // Show big visual confirmation of trigger
+          showTriggerConfirmation();
+        } else {
+          console.log('Trigger cooldown active - ignoring trigger');
+        }
+      }
+      
+      // Also check for similar phrases that might be misrecognized
+      const similarPhrases = ["boom boom", "boo", "boon", "boomb", "bum"];
+      for (const phrase of similarPhrases) {
+        if (lowerTranscript.includes(phrase)) {
+          console.log(`SIMILAR PHRASE DETECTED: "${phrase}" in "${lowerTranscript}"`);
+          
+          // Check if we're outside the cooldown period
+          const currentTime = Date.now();
+          if (currentTime - lastTriggerTime > TRIGGER_COOLDOWN_MS) {
+            console.log('🎯 SIMILAR TRIGGER PHRASE DETECTED!', lowerTranscript);
+            statusDisplay.textContent = `"${phrase}" detected (similar to "boom")!`;
+            
+            // Play audio feedback
+            playTriggerSound();
+            
+            // Toggle recording state
+            toggleRecording();
+            
+            // Update last trigger time
+            lastTriggerTime = currentTime;
+            
+            // Flash the visual indicator
+            listeningDot.style.backgroundColor = '#e74c3c';
+            setTimeout(() => {
+              listeningDot.style.backgroundColor = '#1DB954';
+            }, 500);
+            
+            // Show big visual confirmation of trigger
+            showTriggerConfirmation();
+          }
+          break;
+        }
+      }
+    }
+    
+    function playTriggerSound() {
+      const feedback = new Audio();
+      feedback.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADmgD///////////////////////////////////////////8AAAA8TEFNRTMuMTAwAc0AAAAAAAAAABSAJALFQQAAgAAAA5rKPlWnAAAAAAAAAAAAAAAAAAAA//tQwAADB0QLXBGMAKIIFmRDKMAAJAEcOHDhw4HAcEAQDgAoJh9/+CYP/BMP/y4Pggf/BBMMEwTD////5MPggH/5cHz/wTBMEwf////BMEAQDhw4cOHDgQBAEAQDh82s9LW+XFx0yTgEAQBAEA//+AQbDgEAQOCAgcmRH9//LlxHF/y4/+XIAgCDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHD';
+      feedback.play();
+    }
+    
+    function showTriggerConfirmation() {
+      const triggerConfirm = document.createElement('div');
+      triggerConfirm.textContent = 'BOOM!';
+      triggerConfirm.style.position = 'fixed';
+      triggerConfirm.style.top = '50%';
+      triggerConfirm.style.left = '50%';
+      triggerConfirm.style.transform = 'translate(-50%, -50%)';
+      triggerConfirm.style.backgroundColor = '#1DB954';
+      triggerConfirm.style.color = 'white';
+      triggerConfirm.style.fontSize = '32px';
+      triggerConfirm.style.padding = '20px 40px';
+      triggerConfirm.style.borderRadius = '10px';
+      triggerConfirm.style.zIndex = '1000';
+      triggerConfirm.style.fontWeight = 'bold';
+      triggerConfirm.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+      document.body.appendChild(triggerConfirm);
+      
+      setTimeout(() => {
+        document.body.removeChild(triggerConfirm);
+      }, 1000);
     }
     
     function toggleRecording() {
+      // Get status indicators
+      const listeningStatus = document.getElementById('listening-status');
+      const listeningText = document.getElementById('listening-text');
+      
       if (!isRecording) {
         // Start recording
         isRecording = true;
@@ -329,22 +924,62 @@
         if (spotifyConnected) {
           pauseSpotify();
         }
+        
+        // Visual feedback - change button color and add pulsing dot
+        recordBtn.style.backgroundColor = '#e74c3c';
+        document.querySelector('.listening-indicator').style.backgroundColor = '#e74c3c';
+        
+        // Update status indicators
+        if (listeningStatus) {
+          listeningStatus.style.backgroundColor = '#e74c3c';
+          listeningStatus.style.animation = 'pulse 1s infinite ease-in-out';
+        }
+        
+        if (listeningText) {
+          listeningText.textContent = 'RECORDING - say "boom" again to stop';
+          listeningText.style.fontWeight = 'bold';
+          listeningText.style.color = '#e74c3c';
+        }
       } else {
         // Stop recording
         isRecording = false;
         recordBtn.textContent = 'Record Note';
-        statusDisplay.textContent = 'Note recorded';
+        statusDisplay.textContent = 'Note recorded and saved';
         saveBtn.disabled = false;
         clearBtn.disabled = false;
         
         // Play audio feedback
         playAudioFeedback('stop');
         
+        // Automatically save the note if there's content
+        if (transcriptArea.value.trim()) {
+          saveNote();
+        }
+        
         // If Spotify is connected, resume it
         if (spotifyConnected) {
           resumeSpotify();
         }
+        
+        // Visual feedback - restore button color
+        recordBtn.style.backgroundColor = '#1DB954';
+        document.querySelector('.listening-indicator').style.backgroundColor = '#1DB954';
+        
+        // Update status indicators
+        if (listeningStatus) {
+          listeningStatus.style.backgroundColor = '#1DB954';
+          listeningStatus.style.animation = 'pulse 1.5s infinite ease-in-out';
+        }
+        
+        if (listeningText) {
+          listeningText.textContent = 'Listening - say "boom" to start recording';
+          listeningText.style.fontWeight = 'normal';
+          listeningText.style.color = 'initial';
+        }
       }
+      
+      // Console log for debugging
+      console.log('Recording state toggled to:', isRecording ? 'RECORDING' : 'NOT RECORDING');
     }
     
     // Audio feedback function
@@ -486,121 +1121,21 @@
       }
     }
     
-    // Speech recognition event handlers
-    if (recognition) {
-      recognition.onresult = (event) => {
-        let interimTranscript = '';
-        let finalTranscript = '';
-        
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-          const transcript = event.results[i][0].transcript.toLowerCase();
-          const confidence = event.results[i][0].confidence;
-          
-          if (event.results[i].isFinal) {
-            finalTranscript += transcript;
-            
-            // Check for trigger phrase when not recording
-            if (!isRecording && transcript.includes(TRIGGER_PHRASE) && confidence >= TRIGGER_CONFIDENCE) {
-              console.log('Trigger phrase detected!', transcript);
-              statusDisplay.textContent = 'Trigger phrase detected! Starting recording...';
-              
-              // Small delay to avoid capturing the trigger phrase itself
-              setTimeout(() => {
-                toggleRecording();
-              }, 500);
-            }
-          } else {
-            interimTranscript += transcript;
-          }
-        }
-        
-        // Only update transcript if recording
-        if (isRecording) {
-          transcriptArea.value = finalTranscript || interimTranscript;
-          
-          if (finalTranscript) {
-            saveBtn.disabled = false;
-            clearBtn.disabled = false;
-          }
-        }
-      };
+    // Helper function to convert audio data for Vosk
+    function convertFloat32ToInt16(buffer) {
+      const l = buffer.length;
+      const buf = new Int16Array(l);
       
-      recognition.onerror = (event) => {
-        console.error('Speech recognition error', event.error);
-        
-        if (event.error === 'network') {
-          statusDisplay.textContent = 'Network error: Attempting to reconnect...';
-          
-          // Only increment the attempts counter for network errors
-          recognitionAttempts++;
-          
-          if (recognitionAttempts < MAX_RECOGNITION_ATTEMPTS) {
-            // Attempt to restart after a short delay, with progressive backoff
-            const delayMs = 1000 * recognitionAttempts; // 1s, 2s, 3s
-            
-            statusDisplay.textContent = `Network error: Retrying in ${delayMs/1000} seconds (${recognitionAttempts}/${MAX_RECOGNITION_ATTEMPTS})`;
-            
-            setTimeout(() => {
-              if (isListening) {
-                try {
-                  // Create a fresh recognition instance to avoid stale network connections
-                  setupSpeechRecognition();
-                  recognition.start();
-                  statusDisplay.textContent = 'Reconnected. Listening...';
-                } catch (e) {
-                  console.error('Could not restart recognition', e);
-                  handleRecognitionError(e);
-                }
-              }
-            }, delayMs);
-          } else {
-            statusDisplay.textContent = 'Network error: Could not establish connection. Try refreshing the page or using a different browser.';
-            isListening = false;
-            startBtn.textContent = 'Start Listening';
-          }
-        } else if (event.error === 'not-allowed') {
-          statusDisplay.textContent = 'Error: Microphone access denied. Please allow microphone access.';
-          isListening = false;
-          startBtn.textContent = 'Start Listening';
-        } else if (event.error === 'no-speech') {
-          // Just a quiet period, no need to increment attempt counter
-          if (isListening) {
-            try {
-              recognition.start();
-            } catch (e) {
-              console.error('Could not restart recognition after no-speech', e);
-              // Don't increment attempts for no-speech errors
-              handleRecognitionError(e);
-            }
-          }
-        } else {
-          statusDisplay.textContent = `Error: ${event.error}. Try refreshing the page.`;
-          isListening = false;
-          startBtn.textContent = 'Start Listening';
-        }
-      };
+      for (let i = 0; i < l; i++) {
+        buf[i] = Math.min(1, Math.max(-1, buffer[i])) * 0x7FFF;
+      }
       
-      recognition.onend = () => {
-        if (isListening) {
-          // Restart if we're supposed to be listening
-          try {
-            recognition.start();
-          } catch (e) {
-            console.error('Error restarting recognition in onend handler:', e);
-            // Use a short timeout to prevent rapid retries if there's a persistent error
-            setTimeout(() => {
-              if (isListening) {
-                handleRecognitionError(e);
-              }
-            }, 1000);
-          }
-        }
-      };
+      return buf.buffer;
     }
     
     // Spotify Integration
     function connectToSpotify() {
-      // Spotify API credentials with your client ID hardcoded
+      // Spotify API credentials with your client ID
       const client_id = '39a9e6d4d9f24dcd8dcbecd89118649b';
       const redirect_uri = window.location.origin + window.location.pathname;
       const scope = 'user-read-playback-state user-modify-playback-state user-read-currently-playing';
@@ -782,41 +1317,52 @@
       return `${minutes}:${seconds.toString().padStart(2, '0')}`;
     }
     
-    // Function to check browser compatibility and provide helpful messages
-    function checkBrowserCompatibility() {
-      const browserCompatibilityEl = document.getElementById('browser-compatibility');
-      const browser = detectBrowser();
-      
-      if (browser === 'chrome') {
-        browserCompatibilityEl.innerHTML = '✅ You\'re using Chrome - speech recognition should work well.';
-        browserCompatibilityEl.style.color = '#2e7d32';
-      } else if (browser === 'firefox') {
-        browserCompatibilityEl.innerHTML = '⚠️ Firefox support for speech recognition can be inconsistent. If you experience issues, try Chrome.';
-        browserCompatibilityEl.style.color = '#ff9800';
-      } else if (browser === 'safari') {
-        browserCompatibilityEl.innerHTML = '⚠️ Safari\'s speech recognition support may be limited. If you experience issues, try Chrome.';
-        browserCompatibilityEl.style.color = '#ff9800';
-      } else {
-        browserCompatibilityEl.innerHTML = '⚠️ Speech recognition works best in Chrome.';
-        browserCompatibilityEl.style.color = '#ff9800';
+    // Export notes function
+    function exportNotes() {
+      const notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      if (notes.length === 0) {
+        statusDisplay.textContent = 'No notes to export';
+        return;
       }
-    }
-    
-    // Helper function to detect browser
-    function detectBrowser() {
-      const userAgent = navigator.userAgent.toLowerCase();
       
-      if (userAgent.indexOf('chrome') > -1 && userAgent.indexOf('edg') === -1) {
-        return 'chrome';
-      } else if (userAgent.indexOf('firefox') > -1) {
-        return 'firefox';
-      } else if (userAgent.indexOf('safari') > -1 && userAgent.indexOf('chrome') === -1) {
-        return 'safari';
-      } else if (userAgent.indexOf('edg') > -1) {
-        return 'edge';
-      } else {
-        return 'unknown';
-      }
+      // Format notes for export
+      let exportData = "# Exported Voice Notes\n\n";
+      
+      notes.forEach((note, index) => {
+        const date = new Date(note.timestamp);
+        const formattedDate = date.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        
+        exportData += `## Note ${index + 1} - ${formattedDate}\n\n`;
+        exportData += `${note.text}\n\n`;
+        exportData += `Source: ${note.source}\n`;
+        exportData += `Timestamp: ${note.timestamp}\n\n`;
+        exportData += "---\n\n";
+      });
+      
+      // Create a downloadable file
+      const blob = new Blob([exportData], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      
+      // Create a temporary link to download the file
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `voice-notes-export-${new Date().toISOString().slice(0, 10)}.md`;
+      document.body.appendChild(a);
+      a.click();
+      
+      // Clean up
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 100);
+      
+      statusDisplay.textContent = `${notes.length} notes exported`;
     }
     
     // Poll for current track every 5 seconds if connected
