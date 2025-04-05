@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boom - voice notes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #f7f9fc;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+    
+    .highlight {
+      color: #1DB954;
+      font-size: 1.4em;
+      letter-spacing: -0.5px;
+      display: block;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    
+    .highlight::before,
+    .highlight::after {
+      content: '"';
+      font-size: 1.2em;
+      color: #1DB954;
+      opacity: 0.6;
+    }
+    
+    .subtitle {
+      font-size: 0.6em;
+      color: #777;
+      font-weight: normal;
+      display: block;
+    }
+    
+    /* Listening animation */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    .listening-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #1DB954;
+      margin-right: 8px;
+      display: none;
+    }
+    
+    .listening-indicator.active {
+      display: inline-block;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    
+    .app-container {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .control-panel {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    button {
+      background-color: #1DB954; /* Spotify green */
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    
+    button:hover {
+      background-color: #1aa34a;
+      transform: scale(1.05);
+    }
+    
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    button.record {
+      background-color: #e74c3c;
+    }
+    
+    button.record:hover {
+      background-color: #c0392b;
+    }
+    
+    .status {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: bold;
+      height: 1.5em;
+    }
+    
+    .transcript-area {
+      width: 100%;
+      min-height: 180px;
+      margin: 20px 0;
+      padding: 20px;
+      border: 2px solid #1DB954;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(29, 185, 84, 0.15);
+      background-color: #f9fff9;
+    }
+    
+    .note-list {
+      margin-top: 30px;
+    }
+    
+    .note-item {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .note-metadata {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    .note-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .note-controls button {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+    
+    .delete-btn {
+      background-color: #e74c3c;
+    }
+    
+    .spotify-container {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .spotify-status {
+      font-weight: bold;
+    }
+    
+    /* App state indicators */
+    .app-state {
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid #ddd;
+    }
+    
+    .app-state.listening {
+      background-color: #e0f7fa;
+      border-color: #00bcd4;
+    }
+    
+    .app-state.recording {
+      background-color: #ffebee;
+      border-color: #e74c3c;
+    }
+    
+    .app-state.idle {
+      background-color: #f5f5f5;
+      border-color: #9e9e9e;
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      
+      button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <h1 id="span-classhighlightboomspan-span-classsubtitlevoice-notesspan"><span class="highlight">boom</span> <span class="subtitle">voice notes</span></h1>
+    
+    <div id="spotify-connect" class="spotify-container">
+      <p>Spotify integration is <span class="spotify-status">not connected</span></p>
+      <button id="spotify-login-btn">Connect Spotify</button>
+    </div>
+    
+    <div id="app-state" class="app-state idle">
+      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+        <div class="listening-indicator" id="listening-dot"></div>
+        <h3 id="state-heading">Not Listening</h3>
+      </div>
+      <div id="voice-commands">
+        <p>Say <strong style="color: #1DB954;">"boom"</strong> once → Start recording</p>
+        <p>Say <strong style="color: #1DB954;">"boom"</strong> again → Stop and save</p>
+      </div>
+      <p id="state-description" style="margin-top: 10px;">
+        Press "Start Listening" to begin.
+      </p>
+    </div>
+    
+    <div class="control-panel">
+      <button id="start-btn">Start Listening</button>
+      <button id="rewind-btn" disabled>Rewind 30s</button>
+      <button id="record-btn" class="record" disabled>Record Note</button>
+    </div>
+    
+    <p id="status" class="status">Ready to start</p>
+    
+    <textarea id="transcript" class="transcript-area" placeholder="Your transcribed notes will appear here..." readonly></textarea>
+    
+    <div class="control-panel">
+      <button id="clear-btn" disabled>Clear</button>
+    </div>
+    
+    <div class="note-list" id="notes-container">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2 id="saved-notes">Saved Notes</h2>
+        <button id="export-notes-btn">Export Notes</button>
+      </div>
+      <!-- Notes will be added here dynamically -->
+    </div>
+  </div>
+
+  <script>
+    // DOM Elements
+    const startBtn = document.getElementById('start-btn');
+    const recordBtn = document.getElementById('record-btn');
+    const rewindBtn = document.getElementById('rewind-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const spotifyLoginBtn = document.getElementById('spotify-login-btn');
+    const statusDisplay = document.getElementById('status');
+    const transcriptArea = document.getElementById('transcript');
+    const notesContainer = document.getElementById('notes-container');
+    const listeningDot = document.getElementById('listening-dot');
+    const appState = document.getElementById('app-state');
+    const stateHeading = document.getElementById('state-heading');
+    const stateDescription = document.getElementById('state-description');
+    
+    // Core app state
+    let isListening = false;
+    let isRecording = false;
+    let spotifyConnected = false;
+    let spotifyToken = null;
+    let currentSpotifyTrack = null;
+    let currentPlaybackPosition = 0;
+    const REWIND_SECONDS = 15;
+    
+    // Voice trigger settings
+    const TRIGGER_PHRASE = "boom";
+    const REWIND_PHRASE = "rewind";
+    let lastTriggerTime = 0;
+    const TRIGGER_COOLDOWN_MS = 2000;
+    const REWIND_AMOUNT_SECONDS = 30;
+    
+    // Speech recognition variables
+    let recognition = null;
+    
+    // Track the text that has been finalized
+    let finalizedText = '';
+    
+    // Load saved notes from localStorage
+    loadNotes();
+    
+    // Check if returning from Spotify auth
+    checkSpotifyAuth();
+    
+    // Initialize the Web Speech API
+    initSpeechRecognition();
+    
+    // Core functions
+    function initSpeechRecognition() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      
+      if (!SpeechRecognition) {
+        statusDisplay.textContent = 'Speech recognition not supported in this browser';
+        startBtn.disabled = true;
+        return;
+      }
+      
+      recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+      
+      // Set up event handlers
+      recognition.onresult = handleSpeechResult;
+      recognition.onerror = (event) => {
+        console.error('Speech recognition error:', event.error);
+        
+        if (event.error === 'no-speech') {
+          // Just restart if no speech detected
+          if (isListening) {
+            try {
+              recognition.start();
+            } catch (e) {
+              console.error('Could not restart recognition after no-speech', e);
+            }
+          }
+        } else {
+          statusDisplay.textContent = `Error: ${event.error}. Try refreshing.`;
+        }
+      };
+      
+      recognition.onend = () => {
+        if (isListening) {
+          try {
+            recognition.start();
+          } catch (e) {
+            console.error('Error restarting recognition', e);
+          }
+        }
+      };
+      
+      statusDisplay.textContent = 'Ready to start listening';
+    }
+    
+    function handleSpeechResult(event) {
+      // We'll use these variables to track what's happening in this event
+      let interimResult = '';
+      let finalResult = '';
+      
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const result = event.results[i];
+        const transcript = result[0].transcript.toLowerCase().trim();
+        
+        // Check for trigger phrase first
+        if (transcript.includes(TRIGGER_PHRASE)) {
+          handleTriggerPhrase();
+          return; // Skip this result since it contains the trigger phrase
+        }
+        
+        // Check for rewind phrase
+        if (transcript.includes(REWIND_PHRASE)) {
+          handleRewindPhrase();
+          return; // Skip this result since it contains the rewind phrase
+        }
+        
+        // Only process content if we're recording
+        if (isRecording) {
+          if (result.isFinal) {
+            // This is a final result - add it to our finalized text
+            const cleanText = removeHemmingAndTriggerWords(transcript);
+            
+            if (cleanText) {
+              // Add to our finalized text
+              if (finalizedText) {
+                finalizedText += ' ' + cleanText;
+              } else {
+                finalizedText = cleanText;
+              }
+              
+              // Update the display with the finalized text
+              transcriptArea.value = finalizedText;
+              clearBtn.disabled = false;
+            }
+          } else {
+            // This is an interim result - show what's being processed
+            interimResult = transcript;
+            
+            if (interimResult) {
+              // Clean up the interim result
+              const cleanInterim = removeHemmingAndTriggerWords(interimResult);
+              
+              // Show the finalized text plus the interim result
+              if (cleanInterim) {
+                transcriptArea.value = finalizedText + 
+                  (finalizedText ? ' ' : '') + 
+                  cleanInterim;
+              } else {
+                transcriptArea.value = finalizedText;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Helper function to remove filler words and trigger phrases
+    function removeHemmingAndTriggerWords(text) {
+      // Remove trigger phrase
+      const triggerPattern = new RegExp(TRIGGER_PHRASE, 'gi');
+      let cleanText = text.replace(triggerPattern, '').trim();
+      
+      // Fix repetitive speech patterns (like "so ... so ... so")
+      // Find repetitive word sequences
+      cleanText = cleanText.replace(/(\b\w+\b)(\s+\1\b)+/g, '$1');
+      
+      return cleanText;
+    }
+    
+    function handleTriggerPhrase() {
+      const currentTime = Date.now();
+      
+      // Check for cooldown to avoid duplicate triggers
+      if (currentTime - lastTriggerTime < TRIGGER_COOLDOWN_MS) {
+        return;
+      }
+      
+      // Show visual confirmation
+      statusDisplay.textContent = "Boom detected!";
+      showTriggerConfirmation();
+      playTriggerSound();
+      
+      // Toggle recording state
+      toggleRecording();
+      
+      // Update last trigger time
+      lastTriggerTime = currentTime;
+      
+      // This prevents immediate re-triggering after the first recording session
+      // by forcing a pause in recognition which gets restarted properly
+      if (isRecording === false) {
+        setTimeout(() => {
+          try {
+            if (isListening) {
+              recognition.stop();
+              setTimeout(() => {
+                if (isListening) {
+                  recognition.start();
+                }
+              }, 300);
+            }
+          } catch (e) {
+            console.error('Error cycling speech recognition after trigger', e);
+          }
+        }, 100);
+      }
+    }
+    
+    function handleRewindPhrase() {
+      const currentTime = Date.now();
+      
+      // Check for cooldown to avoid duplicate triggers
+      if (currentTime - lastTriggerTime < TRIGGER_COOLDOWN_MS) {
+        return;
+      }
+      
+      // Show visual confirmation
+      statusDisplay.textContent = "Rewinding by 30 seconds...";
+      showRewindConfirmation();
+      
+      // Rewind Spotify if connected
+      if (spotifyConnected && currentSpotifyTrack) {
+        rewindSpotify(REWIND_AMOUNT_SECONDS);
+      } else {
+        statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+      }
+      
+      // Update last trigger time
+      lastTriggerTime = currentTime;
+    }
+    
+    function showRewindConfirmation() {
+      const confirmationEl = document.createElement('div');
+      confirmationEl.textContent = '⏪ REWIND ⏪';
+      confirmationEl.style.position = 'fixed';
+      confirmationEl.style.top = '50%';
+      confirmationEl.style.left = '50%';
+      confirmationEl.style.transform = 'translate(-50%, -50%)';
+      confirmationEl.style.backgroundColor = '#1DB954';
+      confirmationEl.style.color = 'white';
+      confirmationEl.style.fontSize = '28px';
+      confirmationEl.style.padding = '20px 40px';
+      confirmationEl.style.borderRadius = '10px';
+      confirmationEl.style.zIndex = '1000';
+      confirmationEl.style.fontWeight = 'bold';
+      confirmationEl.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+      document.body.appendChild(confirmationEl);
+      
+      setTimeout(() => document.body.removeChild(confirmationEl), 1000);
+    }
+    
+    function toggleListening() {
+      if (!isListening) {
+        try {
+          // Start speech recognition
+          recognition.start();
+          
+          isListening = true;
+          startBtn.textContent = 'Stop Listening';
+          statusDisplay.textContent = 'Listening for "boom"...';
+          recordBtn.disabled = false;
+          rewindBtn.disabled = false;
+          
+          // Update UI indicators
+          appState.className = 'app-state listening';
+          stateHeading.textContent = 'Listening';
+          stateDescription.textContent = 'Waiting for you to say "boom" to start recording or "rewind" to jump back 30s.';
+          
+          // Activate listening indicator
+          listeningDot.classList.add('active');
+          
+        } catch (error) {
+          console.error('Error starting speech recognition:', error);
+          statusDisplay.textContent = 'Error: Could not access microphone. Please allow microphone access.';
+        }
+      } else {
+        // Stop speech recognition
+        try {
+          recognition.stop();
+        } catch (e) {
+          console.error('Error stopping speech recognition:', e);
+        }
+        
+        isListening = false;
+        startBtn.textContent = 'Start Listening';
+        statusDisplay.textContent = 'Not listening';
+        recordBtn.disabled = true;
+        rewindBtn.disabled = true;
+        
+        // If recording, stop it
+        if (isRecording) {
+          toggleRecording();
+        }
+        
+        // Update UI indicators
+        appState.className = 'app-state idle';
+        stateHeading.textContent = 'Not Listening';
+        stateDescription.textContent = 'Press "Start Listening" to begin.';
+        
+        // Deactivate listening indicator
+        listeningDot.classList.remove('active');
+      }
+    }
+    
+    function toggleRecording() {
+      if (!isRecording) {
+        // Start recording
+        isRecording = true;
+        recordBtn.textContent = 'Stop Recording';
+        statusDisplay.textContent = 'Recording note...';
+        transcriptArea.value = '';
+        clearBtn.disabled = true;
+        
+        // Reset the finalized text
+        finalizedText = '';
+        
+        // Play audio feedback
+        playAudioFeedback('start');
+        
+        // If Spotify is connected, pause it
+        if (spotifyConnected) {
+          pauseSpotify();
+        }
+        
+        // Visual feedback
+        recordBtn.style.backgroundColor = '#e74c3c';
+        listeningDot.style.backgroundColor = '#e74c3c';
+        
+        // Update app state display
+        appState.className = 'app-state recording';
+        stateHeading.textContent = 'Recording';
+        stateDescription.textContent = 'Say "boom" again when you\'re done to stop recording.';
+        
+      } else {
+        // Stop recording
+        isRecording = false;
+        recordBtn.textContent = 'Record Note';
+        
+        // Play audio feedback
+        playAudioFeedback('stop');
+        
+        // Save the note automatically if there's content
+        if (finalizedText.trim()) {
+          saveNote();
+          statusDisplay.textContent = 'Note saved!';
+        } else {
+          statusDisplay.textContent = 'Recording stopped (empty note)';
+        }
+        
+        // If Spotify is connected, resume it and rewind
+        if (spotifyConnected) {
+          resumeSpotify();
+        }
+        
+        // Visual feedback
+        recordBtn.style.backgroundColor = '#1DB954';
+        listeningDot.style.backgroundColor = '#1DB954';
+        
+        // Update app state display
+        appState.className = 'app-state listening';
+        stateHeading.textContent = 'Listening';
+        stateDescription.textContent = 'Waiting for you to say "boom" to start recording.';
+        
+        clearBtn.disabled = true;
+      }
+    }
+    
+    function saveNote() {
+      if (finalizedText.trim() === '') {
+        return;
+      }
+      
+      const note = {
+        id: Date.now(),
+        text: finalizedText.trim(),
+        timestamp: new Date().toISOString(),
+        source: spotifyConnected && currentSpotifyTrack ? 
+          `Spotify - ${currentSpotifyTrack.name} by ${currentSpotifyTrack.artists.map(a => a.name).join(', ')}` :
+          'Voice note'
+      };
+      
+      // Save to localStorage
+      const notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      notes.push(note);
+      localStorage.setItem('secondBrainNotes', JSON.stringify(notes));
+      
+      // Add to UI
+      addNoteToUI(note);
+      
+      // Clear transcript
+      transcriptArea.value = '';
+      finalizedText = '';
+      clearBtn.disabled = true;
+    }
+    
+    function clearTranscript() {
+      transcriptArea.value = '';
+      finalizedText = '';
+      statusDisplay.textContent = 'Transcript cleared';
+      clearBtn.disabled = true;
+    }
+    
+    function loadNotes() {
+      const notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      
+      // Clear container first (except the header)
+      notesContainer.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2 id="saved-notes">Saved Notes</h2>
+          <button id="export-notes-btn">Export Notes</button>
+        </div>
+      `;
+      
+      // Re-add the event listener for the export button
+      document.getElementById('export-notes-btn').addEventListener('click', exportNotes);
+      
+      // Add notes to UI in reverse order (newest first)
+      notes.slice().reverse().forEach(note => addNoteToUI(note));
+    }
+    
+    function addNoteToUI(note) {
+      const noteElement = document.createElement('div');
+      noteElement.className = 'note-item';
+      noteElement.dataset.id = note.id;
+      
+      const dateOptions = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      const formattedDate = new Date(note.timestamp).toLocaleDateString('en-US', dateOptions);
+      
+      noteElement.innerHTML = `
+        <div class="note-text">${note.text}</div>
+        <div class="note-metadata">
+          <div>Source: ${note.source}</div>
+          <div>Created: ${formattedDate}</div>
+        </div>
+        <div class="note-controls">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      `;
+      
+      // Add event listeners
+      noteElement.querySelector('.delete-btn').addEventListener('click', () => deleteNote(note.id));
+      noteElement.querySelector('.edit-btn').addEventListener('click', () => editNote(note.id));
+      
+      // Get the header element (first child of the notes container)
+      const headerElement = notesContainer.querySelector('div');
+      
+      // Insert after the header (at the top of the notes list)
+      if (headerElement && headerElement.nextSibling) {
+        notesContainer.insertBefore(noteElement, headerElement.nextSibling);
+      } else {
+        // Fallback to appending if structure is different
+        notesContainer.appendChild(noteElement);
+      }
+    }
+    
+    function deleteNote(id) {
+      // Remove from localStorage
+      let notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      notes = notes.filter(note => note.id !== id);
+      localStorage.setItem('secondBrainNotes', JSON.stringify(notes));
+      
+      // Remove from UI
+      const noteElement = document.querySelector(`.note-item[data-id="${id}"]`);
+      if (noteElement) {
+        noteElement.remove();
+      }
+      
+      statusDisplay.textContent = 'Note deleted';
+    }
+    
+    function editNote(id) {
+      // Get note data
+      const notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      const note = notes.find(note => note.id === id);
+      
+      if (note) {
+        // Load into textarea
+        transcriptArea.value = note.text;
+        finalizedText = note.text;
+        clearBtn.disabled = false;
+        
+        // Remove old note
+        deleteNote(id);
+        
+        statusDisplay.textContent = 'Editing note - say "boom" to save when done';
+      }
+    }
+    
+    function exportNotes() {
+      const notes = JSON.parse(localStorage.getItem('secondBrainNotes') || '[]');
+      if (notes.length === 0) {
+        statusDisplay.textContent = 'No notes to export';
+        return;
+      }
+      
+      // Format for export
+      let exportData = "# Voice Notes Export\n\n";
+      
+      notes.forEach((note, index) => {
+        const date = new Date(note.timestamp);
+        const formattedDate = date.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        
+        exportData += `## Note ${index + 1} - ${formattedDate}\n\n`;
+        exportData += `${note.text}\n\n`;
+        exportData += `Source: ${note.source}\n`;
+        exportData += `Timestamp: ${note.timestamp}\n\n`;
+        exportData += "---\n\n";
+      });
+      
+      // Create file
+      const blob = new Blob([exportData], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      
+      // Download
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `voice-notes-${new Date().toISOString().slice(0, 10)}.md`;
+      document.body.appendChild(a);
+      a.click();
+      
+      // Clean up
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 100);
+      
+      statusDisplay.textContent = `${notes.length} notes exported to Markdown`;
+    }
+    
+    // Audio feedback
+    function playTriggerSound() {
+      const feedback = new Audio();
+      feedback.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADmgD///////////////////////////////////////////8AAAA8TEFNRTMuMTAwAc0AAAAAAAAAABSAJALFQQAAgAAAA5rKPlWnAAAAAAAAAAAAAAAAAAAA//tQwAADB0QLXBGMAKIIFmRDKMAAJAEcOHDhw4HAcEAQDgAoJh9/+CYP/BMP/y4Pggf/BBMMEwTD////5MPggH/5cHz/wTBMEwf////BMEAQDhw4cOHDgQBAEAQDh82s9LW+XFx0yTgEAQBAEA//+AQbDgEAQOCAgcmRH9//LlxHF/y4/+XIAgCDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHD';
+      feedback.play();
+    }
+    
+    function playAudioFeedback(type) {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      if (type === 'start') {
+        // Higher pitch for start
+        oscillator.frequency.value = 880; // A5
+        gainNode.gain.value = 0.2;
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), 200);
+      } else if (type === 'stop') {
+        // Lower pitch for stop
+        oscillator.frequency.value = 440; // A4
+        gainNode.gain.value = 0.2;
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), 200);
+      }
+    }
+    
+    function showTriggerConfirmation() {
+      const triggerConfirm = document.createElement('div');
+      triggerConfirm.textContent = 'BOOM!';
+      triggerConfirm.style.position = 'fixed';
+      triggerConfirm.style.top = '50%';
+      triggerConfirm.style.left = '50%';
+      triggerConfirm.style.transform = 'translate(-50%, -50%)';
+      triggerConfirm.style.backgroundColor = '#1DB954';
+      triggerConfirm.style.color = 'white';
+      triggerConfirm.style.fontSize = '32px';
+      triggerConfirm.style.padding = '20px 40px';
+      triggerConfirm.style.borderRadius = '10px';
+      triggerConfirm.style.zIndex = '1000';
+      triggerConfirm.style.fontWeight = 'bold';
+      triggerConfirm.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+      document.body.appendChild(triggerConfirm);
+      
+      setTimeout(() => document.body.removeChild(triggerConfirm), 1000);
+    }
+    
+    // Spotify Integration
+    function checkSpotifyAuth() {
+      // Check if we're returning from Spotify auth
+      const hashParams = getHashParams();
+      if (hashParams.access_token) {
+        spotifyToken = hashParams.access_token;
+        spotifyConnected = true;
+        localStorage.setItem('spotifyToken', spotifyToken);
+        localStorage.setItem('spotifyTokenExpiry', Date.now() + (hashParams.expires_in * 1000));
+        
+        // Clear hash from URL
+        window.history.replaceState(null, null, ' ');
+        
+        updateSpotifyUI();
+        getCurrentTrack();
+      } else {
+        // Check if we have a valid token in localStorage
+        const savedToken = localStorage.getItem('spotifyToken');
+        const tokenExpiry = localStorage.getItem('spotifyTokenExpiry');
+        
+        if (savedToken && tokenExpiry && Date.now() < parseInt(tokenExpiry)) {
+          spotifyToken = savedToken;
+          spotifyConnected = true;
+          updateSpotifyUI();
+          getCurrentTrack();
+        }
+      }
+    }
+    
+    function connectToSpotify() {
+      // Spotify API credentials
+      const client_id = '39a9e6d4d9f24dcd8dcbecd89118649b';
+      const redirect_uri = window.location.origin + window.location.pathname;
+      const scope = 'user-read-playback-state user-modify-playback-state user-read-currently-playing';
+      
+      // Save redirect state
+      localStorage.setItem('spotifyAuthPending', 'true');
+      
+      // Redirect to Spotify auth
+      window.location.href = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${encodeURIComponent(redirect_uri)}&scope=${encodeURIComponent(scope)}`;
+    }
+    
+    function getHashParams() {
+      const hashParams = {};
+      let e, r = /([^&;=]+)=?([^&;]*)/g,
+          q = window.location.hash.substring(1);
+          
+      while (e = r.exec(q)) {
+        hashParams[e[1]] = decodeURIComponent(e[2]);
+      }
+      
+      return hashParams;
+    }
+    
+    function updateSpotifyUI() {
+      document.querySelector('.spotify-status').textContent = spotifyConnected ? 'connected' : 'not connected';
+      spotifyLoginBtn.textContent = spotifyConnected ? 'Refresh Connection' : 'Connect Spotify';
+      
+      if (spotifyConnected) {
+        const spotifyContainer = document.getElementById('spotify-connect');
+        
+        // Check if track info element exists
+        let trackInfoElement = document.getElementById('current-track-info');
+        if (!trackInfoElement) {
+          trackInfoElement = document.createElement('div');
+          trackInfoElement.id = 'current-track-info';
+          trackInfoElement.style.marginTop = '10px';
+          spotifyContainer.appendChild(trackInfoElement);
+        }
+      }
+    }
+    
+    function getCurrentTrack() {
+      if (!spotifyConnected || !spotifyToken) return Promise.resolve();
+      
+      return fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+        headers: {
+          'Authorization': `Bearer ${spotifyToken}`
+        }
+      })
+      .then(response => {
+        if (response.status === 204) {
+          return null; // No track playing
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data && data.item) {
+          currentSpotifyTrack = data.item;
+          // Store current playback position (in milliseconds)
+          currentPlaybackPosition = data.progress_ms;
+          
+          const trackInfoElement = document.getElementById('current-track-info');
+          if (trackInfoElement) {
+            const minutes = Math.floor(data.progress_ms / 60000);
+            const seconds = Math.floor((data.progress_ms % 60000) / 1000);
+            const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            trackInfoElement.innerHTML = `
+              <p>Now playing: <strong>${data.item.name}</strong> by ${data.item.artists.map(a => a.name).join(', ')}</p>
+              <p>Current position: ${formattedTime}</p>
+            `;
+          }
+        }
+        return data;
+      })
+      .catch(error => {
+        console.error('Error getting current track', error);
+        if (error.status === 401) {
+          // Token expired
+          spotifyConnected = false;
+          updateSpotifyUI();
+        }
+        return null;
+      });
+    }
+    
+    function pauseSpotify() {
+      if (!spotifyConnected || !spotifyToken) return;
+      
+      fetch('https://api.spotify.com/v1/me/player/pause', {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${spotifyToken}`
+        }
+      })
+      .then(() => console.log('Spotify paused'))
+      .catch(error => console.error('Error pausing Spotify', error));
+    }
+    
+    function resumeSpotify() {
+      if (!spotifyConnected || !spotifyToken) return;
+      
+      // Calculate rewind position
+      let rewindPositionMs = Math.max(0, currentPlaybackPosition - (REWIND_SECONDS * 1000));
+      
+      // Resume playback
+      fetch('https://api.spotify.com/v1/me/player/play', {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${spotifyToken}`
+        }
+      })
+      .then(() => {
+        // Then seek to rewound position
+        return fetch(`https://api.spotify.com/v1/me/player/seek?position_ms=${rewindPositionMs}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `Bearer ${spotifyToken}`
+          }
+        });
+      })
+      .then(() => {
+        console.log(`Spotify rewound ${REWIND_SECONDS} seconds`);
+        statusDisplay.textContent = `Note saved, Spotify rewound ${REWIND_SECONDS} seconds`;
+        
+        // Update track display
+        setTimeout(getCurrentTrack, 1000);
+      })
+      .catch(error => console.error('Error with Spotify resume/rewind:', error));
+    }
+    
+    function rewindSpotify(secondsToRewind) {
+      if (!spotifyConnected || !spotifyToken) {
+        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
+        return;
+      }
+      
+      // First, get the current track and position
+      getCurrentTrack()
+        .then(() => {
+          if (!currentSpotifyTrack) {
+            statusDisplay.textContent = 'Cannot rewind: No track currently playing';
+            return;
+          }
+          
+          // Calculate rewind position
+          let rewindPositionMs = Math.max(0, currentPlaybackPosition - (secondsToRewind * 1000));
+          
+          // Seek to rewound position
+          return fetch(`https://api.spotify.com/v1/me/player/seek?position_ms=${rewindPositionMs}`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${spotifyToken}`
+            }
+          });
+        })
+        .then(() => {
+          console.log(`Spotify rewound ${secondsToRewind} seconds`);
+          statusDisplay.textContent = `Rewound ${secondsToRewind} seconds`;
+          
+          // Update track display
+          setTimeout(getCurrentTrack, 1000);
+        })
+        .catch(error => {
+          console.error('Error rewinding Spotify:', error);
+          statusDisplay.textContent = 'Error rewinding Spotify';
+        });
+    }
+    
+    // Event listeners
+    startBtn.addEventListener('click', toggleListening);
+    recordBtn.addEventListener('click', toggleRecording);
+    rewindBtn.addEventListener('click', () => {
+      if (spotifyConnected && isListening) {
+        rewindSpotify(REWIND_AMOUNT_SECONDS);
+        showRewindConfirmation();
+      } else if (!spotifyConnected) {
+        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
+      }
+    });
+    clearBtn.addEventListener('click', clearTranscript);
+    spotifyLoginBtn.addEventListener('click', connectToSpotify);
+    document.getElementById('export-notes-btn').addEventListener('click', exportNotes);
+    
+    // Poll for Spotify track updates
+    setInterval(() => {
+      if (spotifyConnected) {
+        getCurrentTrack();
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
