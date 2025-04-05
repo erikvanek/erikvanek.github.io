@@ -268,7 +268,7 @@
       <div id="voice-commands">
         <p>Say <strong style="color: #1DB954;">"snap"</strong> once → Start recording</p>
         <p>Say <strong style="color: #1DB954;">"snap"</strong> again → Stop and save</p>
-        <p>Say <strong style="color: #1DB954;">"rewind"</strong> → Jump back 30 seconds</p>
+        <p>Say <strong style="color: #1DB954;">"rewind"</strong> → Jump back 15 seconds</p>
       </div>
       <p id="state-description" style="margin-top: 10px;">
         Press "Start Listening" to begin.
@@ -277,7 +277,7 @@
     
     <div class="control-panel">
       <button id="start-btn">Start Listening</button>
-      <button id="rewind-btn" disabled>Rewind 30s</button>
+      <button id="rewind-btn" disabled>Rewind 15s</button>
       <button id="record-btn" class="record" disabled>Record Note</button>
     </div>
     
@@ -327,7 +327,7 @@
     const REWIND_PHRASE = "rewind";
     let lastTriggerTime = 0;
     const TRIGGER_COOLDOWN_MS = 2000;
-    const REWIND_AMOUNT_SECONDS = 30;
+    const REWIND_AMOUNT_SECONDS = 15;
     
     // Speech recognition variables
     let recognition = null;
@@ -396,7 +396,11 @@
               // Add a short delay before restarting
               setTimeout(() => {
                 if (isListening) {
-                  recognition.start();
+                  try {
+                    recognition.start();
+                  } catch (err) {
+                    console.log('Recognition was already started, continuing');
+                  }
                 }
               }, 100);
             } catch (e) {
@@ -410,7 +414,7 @@
             if (isListening) {
               try {
                 recognition.start();
-                statusDisplay.textContent = 'Reconnected! Listening for "note"...';
+                statusDisplay.textContent = 'Reconnected! Listening for "snap"...';
               } catch (e) {
                 statusDisplay.textContent = 'Could not reconnect. Please try again.';
               }
@@ -454,7 +458,11 @@
             recognition.stop();
             setTimeout(() => {
               if (isListening) {
-                recognition.start();
+                try {
+                  recognition.start();
+                } catch (err) {
+                  console.log('Recognition was already started, continuing');
+                }
                 needsRestart = false;
               }
             }, 300);
@@ -545,7 +553,11 @@
                 recognition.stop();
                 setTimeout(() => {
                   if (isListening) {
-                    recognition.start();
+                    try {
+                      recognition.start();
+                    } catch (err) {
+                      console.log('Recognition was already started, continuing');
+                    }
                   }
                 }, 300);
               }
@@ -659,7 +671,11 @@
               recognition.stop();
               setTimeout(() => {
                 if (isListening) {
-                  recognition.start();
+                  try {
+                    recognition.start();
+                  } catch (err) {
+                    console.log('Recognition was already started, continuing');
+                  }
                 }
               }, 300);
             }
@@ -679,17 +695,41 @@
       }
       
       // Show visual confirmation
-      statusDisplay.textContent = "Rewinding by 30 seconds...";
+      statusDisplay.textContent = "Rewinding by 15 seconds...";
       showRewindConfirmation();
       
       // Play a distinctive sound for rewind
       playRewindSound();
       
       // Rewind Spotify if connected
-      if (spotifyConnected && currentSpotifyTrack) {
-        rewindSpotify(REWIND_AMOUNT_SECONDS);
+      if (spotifyConnected) {
+        console.log('Attempting to rewind Spotify, current track:', currentSpotifyTrack);
+        
+        // First make sure we have current track info
+        if (!currentSpotifyTrack) {
+          console.log('No current track info, fetching first...');
+          getCurrentTrack()
+            .then(data => {
+              if (data && data.item) {
+                console.log('Successfully retrieved current track:', data.item.name);
+                rewindSpotify(REWIND_AMOUNT_SECONDS);
+              } else {
+                console.log('No track data returned from getCurrentTrack');
+                statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+                if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+              }
+            })
+            .catch(err => {
+              console.error('Error getting current track before rewind:', err);
+              statusDisplay.textContent = "Error connecting to Spotify";
+              if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+            });
+        } else {
+          rewindSpotify(REWIND_AMOUNT_SECONDS);
+        }
       } else {
-        statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+        console.log('Spotify not connected, cannot rewind');
+        statusDisplay.textContent = "Cannot rewind - Spotify not connected";
         
         // On mobile, provide haptic feedback if available
         if (navigator.vibrate) {
@@ -707,7 +747,11 @@
           recognition.stop();
           setTimeout(() => {
             if (isListening) {
-              recognition.start();
+              try {
+                recognition.start();
+              } catch (err) {
+                console.log('Recognition was already started, continuing');
+              }
               // Brief timeout to ensure UI stays in sync
               setTimeout(() => {
                 if (!isRecording) {
@@ -771,7 +815,11 @@
       if (!isListening) {
         try {
           // Start speech recognition
-          recognition.start();
+          try {
+            recognition.start();
+          } catch (err) {
+            console.log('Recognition was already started, continuing');
+          }
           
           isListening = true;
           startBtn.textContent = 'Stop Listening';
@@ -782,7 +830,7 @@
           // Update UI indicators
           appState.className = 'app-state listening';
           stateHeading.textContent = 'Listening';
-          stateDescription.textContent = 'Waiting for you to say "snap" to start recording or "rewind" to jump back 30s.';
+          stateDescription.textContent = 'Waiting for you to say "snap" to start recording or "rewind" to jump back 15s.';
           
           // Activate listening indicator
           listeningDot.classList.add('active');
@@ -888,13 +936,24 @@
         return;
       }
       
+      // Prepare source info based on content type (music, podcast, or just voice note)
+      let sourceInfo = 'Voice note';
+      
+      if (spotifyConnected && currentSpotifyTrack) {
+        // Check if it's a podcast episode
+        if (currentSpotifyTrack.type === 'episode' || currentSpotifyTrack.show) {
+          sourceInfo = `Podcast - ${currentSpotifyTrack.name} (${currentSpotifyTrack.show?.name || 'Unknown show'})`;
+        } else {
+          // It's music
+          sourceInfo = `Spotify - ${currentSpotifyTrack.name} by ${currentSpotifyTrack.artists?.map(a => a.name).join(', ') || 'Unknown artist'}`;
+        }
+      }
+      
       const note = {
         id: Date.now(),
         text: finalizedText.trim(),
         timestamp: new Date().toISOString(),
-        source: spotifyConnected && currentSpotifyTrack ? 
-          `Spotify - ${currentSpotifyTrack.name} by ${currentSpotifyTrack.artists.map(a => a.name).join(', ')}` :
-          'Voice note'
+        source: sourceInfo
       };
       
       // Save to localStorage
@@ -1175,7 +1234,7 @@
     }
     
     function getCurrentTrack() {
-      if (!spotifyConnected || !spotifyToken) return Promise.resolve();
+      if (!spotifyConnected || !spotifyToken) return Promise.resolve(null);
       
       return fetch('https://api.spotify.com/v1/me/player/currently-playing', {
         headers: {
@@ -1184,26 +1243,47 @@
       })
       .then(response => {
         if (response.status === 204) {
+          currentSpotifyTrack = null;
+          currentPlaybackPosition = 0;
           return null; // No track playing
         }
         return response.json();
       })
       .then(data => {
         if (data && data.item) {
+          // Store the track item and current position
           currentSpotifyTrack = data.item;
-          // Store current playback position (in milliseconds)
           currentPlaybackPosition = data.progress_ms;
           
           const trackInfoElement = document.getElementById('current-track-info');
           if (trackInfoElement) {
+            // Format time display
             const minutes = Math.floor(data.progress_ms / 60000);
             const seconds = Math.floor((data.progress_ms % 60000) / 1000);
             const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
             
-            trackInfoElement.innerHTML = `
-              <p>Now playing: <strong>${data.item.name}</strong> by ${data.item.artists.map(a => a.name).join(', ')}</p>
-              <p>Current position: ${formattedTime}</p>
-            `;
+            // Create appropriate display based on content type (podcast or music)
+            let contentTitle = data.item.name || 'Unknown Title';
+            let creatorInfo = '';
+            
+            // Check if it's a podcast episode (show)
+            if (data.currently_playing_type === 'episode' || data.item.type === 'episode') {
+              // It's a podcast episode
+              creatorInfo = data.item.show?.name || 'Unknown Podcast';
+              trackInfoElement.innerHTML = `
+                <p>Now playing: <strong>${contentTitle}</strong></p>
+                <p>Podcast: ${creatorInfo}</p>
+                <p>Current position: ${formattedTime}</p>
+              `;
+            } else {
+              // It's a music track
+              creatorInfo = data.item.artists ? data.item.artists.map(a => a.name).join(', ') : 'Unknown Artist';
+              trackInfoElement.innerHTML = `
+                <p>Now playing: <strong>${contentTitle}</strong></p>
+                <p>Artist: ${creatorInfo}</p>
+                <p>Current position: ${formattedTime}</p>
+              `;
+            }
           }
         }
         return data;
@@ -1235,10 +1315,7 @@
     function resumeSpotify() {
       if (!spotifyConnected || !spotifyToken) return;
       
-      // Calculate rewind position
-      let rewindPositionMs = Math.max(0, currentPlaybackPosition - (REWIND_SECONDS * 1000));
-      
-      // Resume playback
+      // Simply resume playback without rewinding
       fetch('https://api.spotify.com/v1/me/player/play', {
         method: 'PUT',
         headers: {
@@ -1246,7 +1323,91 @@
         }
       })
       .then(() => {
-        // Then seek to rewound position
+        console.log('Spotify resumed');
+        statusDisplay.textContent = 'Note saved';
+        
+        // Update track display
+        setTimeout(getCurrentTrack, 1000);
+      })
+      .catch(error => console.error('Error resuming Spotify:', error));
+    }
+    
+    function rewindSpotify(secondsToRewind) {
+      console.log('rewindSpotify called with', secondsToRewind, 'seconds');
+      
+      if (!spotifyConnected) {
+        console.error('Cannot rewind: Spotify not connected (spotifyConnected is false)');
+        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
+        return Promise.reject('Not connected');
+      }
+      
+      if (!spotifyToken) {
+        console.error('Cannot rewind: No Spotify token available');
+        statusDisplay.textContent = 'Cannot rewind: Spotify not authenticated';
+        return Promise.reject('No token');
+      }
+      
+      console.log('Fetching current playback state...');
+      
+      // Get the current playback state - works for both podcasts and music
+      return fetch('https://api.spotify.com/v1/me/player', {
+        headers: {
+          'Authorization': `Bearer ${spotifyToken}`
+        }
+      })
+      .then(response => {
+        console.log('Playback state response status:', response.status);
+        
+        if (response.status === 204) {
+          console.error('No content currently playing (204 response)');
+          statusDisplay.textContent = 'Cannot rewind: No content currently playing';
+          return Promise.reject('No content playing');
+        }
+        
+        if (response.status === 401) {
+          console.error('Spotify authentication expired');
+          statusDisplay.textContent = 'Spotify authentication expired. Please reconnect.';
+          spotifyConnected = false;
+          updateSpotifyUI();
+          return Promise.reject('Authentication expired');
+        }
+        
+        return response.json();
+      })
+      .then(data => {
+        console.log('Playback data received:', data ? 'Yes' : 'No');
+        
+        if (!data) {
+          console.error('No playback data received');
+          statusDisplay.textContent = 'Cannot rewind: No playback data';
+          return Promise.reject('No playback data');
+        }
+        
+        if (!data.is_playing) {
+          console.error('Nothing is currently playing');
+          statusDisplay.textContent = 'Cannot rewind: Nothing is playing';
+          return Promise.reject('Nothing playing');
+        }
+        
+        if (!data.item) {
+          console.error('No track data in playback response');
+          statusDisplay.textContent = 'Cannot rewind: No track data';
+          return Promise.reject('No track data');
+        }
+        
+        // Get current position and calculate rewind position
+        const currentPosition = data.progress_ms;
+        console.log('Current position:', currentPosition, 'ms');
+        const rewindPositionMs = Math.max(0, currentPosition - (secondsToRewind * 1000));
+        console.log('Rewinding to position:', rewindPositionMs, 'ms');
+        
+        // Store this for later use
+        currentPlaybackPosition = currentPosition;
+        currentSpotifyTrack = data.item;
+        console.log('Track info stored:', currentSpotifyTrack.name);
+        
+        // Seek to the new position - works for both music and podcasts
+        console.log('Sending seek request...');
         return fetch(`https://api.spotify.com/v1/me/player/seek?position_ms=${rewindPositionMs}`, {
           method: 'PUT',
           headers: {
@@ -1254,62 +1415,66 @@
           }
         });
       })
-      .then(() => {
-        console.log(`Spotify rewound ${REWIND_SECONDS} seconds`);
-        statusDisplay.textContent = `Note saved, Spotify rewound ${REWIND_SECONDS} seconds`;
+      .then(response => {
+        console.log('Seek response status:', response.status);
         
-        // Update track display
-        setTimeout(getCurrentTrack, 1000);
-      })
-      .catch(error => console.error('Error with Spotify resume/rewind:', error));
-    }
-    
-    function rewindSpotify(secondsToRewind) {
-      if (!spotifyConnected || !spotifyToken) {
-        statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
-        return;
-      }
-      
-      // First, get the current track and position
-      getCurrentTrack()
-        .then(() => {
-          if (!currentSpotifyTrack) {
-            statusDisplay.textContent = 'Cannot rewind: No track currently playing';
-            return;
-          }
-          
-          // Calculate rewind position
-          let rewindPositionMs = Math.max(0, currentPlaybackPosition - (secondsToRewind * 1000));
-          
-          // Seek to rewound position
-          return fetch(`https://api.spotify.com/v1/me/player/seek?position_ms=${rewindPositionMs}`, {
-            method: 'PUT',
-            headers: {
-              'Authorization': `Bearer ${spotifyToken}`
-            }
-          });
-        })
-        .then(() => {
-          console.log(`Spotify rewound ${secondsToRewind} seconds`);
+        if (response.status === 204) {
+          console.log(`Rewound ${secondsToRewind} seconds successfully`);
           statusDisplay.textContent = `Rewound ${secondsToRewind} seconds`;
           
           // Update track display
           setTimeout(getCurrentTrack, 1000);
-        })
-        .catch(error => {
-          console.error('Error rewinding Spotify:', error);
-          statusDisplay.textContent = 'Error rewinding Spotify';
-        });
+          return true;
+        } else {
+          console.error('Unexpected status code from seek operation:', response.status);
+          statusDisplay.textContent = `Error rewinding: unexpected status ${response.status}`;
+          return Promise.reject('Unexpected status: ' + response.status);
+        }
+      })
+      .catch(error => {
+        console.error('Error during rewind operation:', error);
+        if (typeof error === 'string') {
+          // Already handled with status display
+        } else {
+          statusDisplay.textContent = 'Error rewinding: ' + (error.message || 'unknown error');
+        }
+        return false;
+      });
     }
     
     // Event listeners
     startBtn.addEventListener('click', toggleListening);
     recordBtn.addEventListener('click', toggleRecording);
     rewindBtn.addEventListener('click', () => {
-      if (spotifyConnected && isListening) {
-        rewindSpotify(REWIND_AMOUNT_SECONDS);
-        showRewindConfirmation();
-      } else if (!spotifyConnected) {
+      console.log('Rewind button clicked');
+      showRewindConfirmation();
+      playRewindSound();
+      
+      if (spotifyConnected) {
+        console.log('Rewind button - Spotify connected, attempting rewind');
+        
+        // First make sure we have current track info
+        if (!currentSpotifyTrack) {
+          console.log('No current track info, fetching first...');
+          getCurrentTrack()
+            .then(data => {
+              if (data && data.item) {
+                console.log('Successfully retrieved current track:', data.item.name);
+                rewindSpotify(REWIND_AMOUNT_SECONDS);
+              } else {
+                console.log('No track data returned from getCurrentTrack');
+                statusDisplay.textContent = "Cannot rewind - no active Spotify playback";
+              }
+            })
+            .catch(err => {
+              console.error('Error getting current track before rewind:', err);
+              statusDisplay.textContent = "Error connecting to Spotify";
+            });
+        } else {
+          rewindSpotify(REWIND_AMOUNT_SECONDS);
+        }
+      } else {
+        console.log('Spotify not connected, cannot rewind');
         statusDisplay.textContent = 'Cannot rewind: Spotify not connected';
       }
     });
