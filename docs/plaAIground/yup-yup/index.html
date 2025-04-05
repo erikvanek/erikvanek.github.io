@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>boom - voice notes</title>
+  <title>snap - voice assistant</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -224,7 +224,7 @@
         padding: 20px;
       }
       
-      /* Show the "boom" command more prominently */
+      /* Show the "snap" command more prominently */
       #voice-commands strong {
         font-size: 1.2em;
         font-weight: 800;
@@ -253,7 +253,7 @@
 </head>
 <body>
   <div class="app-container">
-    <h1 id="span-classhighlightboomspan-span-classsubtitlevoice-notesspan"><span class="highlight">boom</span> <span class="subtitle">voice notes</span></h1>
+    <h1 id="span-classhighlightsnapspan-span-classsubtitlevoice-assistantspan"><span class="highlight">snap</span> <span class="subtitle">voice assistant</span></h1>
     
     <div id="spotify-connect" class="spotify-container">
       <p>Spotify integration is <span class="spotify-status">not connected</span></p>
@@ -266,8 +266,8 @@
         <h3 id="state-heading">Not Listening</h3>
       </div>
       <div id="voice-commands">
-        <p>Say <strong style="color: #1DB954;">"boom"</strong> once → Start recording</p>
-        <p>Say <strong style="color: #1DB954;">"boom"</strong> again → Stop and save</p>
+        <p>Say <strong style="color: #1DB954;">"snap"</strong> once → Start recording</p>
+        <p>Say <strong style="color: #1DB954;">"snap"</strong> again → Stop and save</p>
         <p>Say <strong style="color: #1DB954;">"rewind"</strong> → Jump back 30 seconds</p>
       </div>
       <p id="state-description" style="margin-top: 10px;">
@@ -323,7 +323,7 @@
     const REWIND_SECONDS = 15;
     
     // Voice trigger settings
-    const TRIGGER_PHRASE = "boom";
+    const TRIGGER_PHRASE = "snap";
     const REWIND_PHRASE = "rewind";
     let lastTriggerTime = 0;
     const TRIGGER_COOLDOWN_MS = 2000;
@@ -410,7 +410,7 @@
             if (isListening) {
               try {
                 recognition.start();
-                statusDisplay.textContent = 'Reconnected! Listening for "boom"...';
+                statusDisplay.textContent = 'Reconnected! Listening for "note"...';
               } catch (e) {
                 statusDisplay.textContent = 'Could not reconnect. Please try again.';
               }
@@ -569,9 +569,11 @@
           return true;
         }
         
-        // For "boom", also match words starting with "bo" or "bu" and ending with "m"
+        // For "snap", also match similar words starting with 's' and containing 'ap' or 'nap'
         if (trigger === TRIGGER_PHRASE) {
-          if ((word.startsWith('bo') || word.startsWith('bu')) && word.endsWith('m')) {
+          // Match variations like "snaps", "slap", "nap", "sap"
+          if ((word.startsWith('s') && (word.includes('ap') || word.includes('nap'))) ||
+              (word === 'nap') || (word === 'clap')) {
             return true;
           }
         }
@@ -638,7 +640,7 @@
       }
       
       // Show visual confirmation
-      statusDisplay.textContent = "Boom detected!";
+      statusDisplay.textContent = "Snap command detected!";
       showTriggerConfirmation();
       playTriggerSound();
       
@@ -709,7 +711,7 @@
               // Brief timeout to ensure UI stays in sync
               setTimeout(() => {
                 if (!isRecording) {
-                  statusDisplay.textContent = 'Listening for "boom"...';
+                  statusDisplay.textContent = 'Listening for "snap"...';
                 }
               }, 500);
             }
@@ -773,14 +775,14 @@
           
           isListening = true;
           startBtn.textContent = 'Stop Listening';
-          statusDisplay.textContent = 'Listening for "boom"...';
+          statusDisplay.textContent = 'Listening for "snap"...';
           recordBtn.disabled = false;
           rewindBtn.disabled = false;
           
           // Update UI indicators
           appState.className = 'app-state listening';
           stateHeading.textContent = 'Listening';
-          stateDescription.textContent = 'Waiting for you to say "boom" to start recording or "rewind" to jump back 30s.';
+          stateDescription.textContent = 'Waiting for you to say "snap" to start recording or "rewind" to jump back 30s.';
           
           // Activate listening indicator
           listeningDot.classList.add('active');
@@ -845,7 +847,7 @@
         // Update app state display
         appState.className = 'app-state recording';
         stateHeading.textContent = 'Recording';
-        stateDescription.textContent = 'Say "boom" again when you\'re done to stop recording.';
+        stateDescription.textContent = 'Say "snap" again when you\'re done to stop recording.';
         
       } else {
         // Stop recording
@@ -875,7 +877,7 @@
         // Update app state display
         appState.className = 'app-state listening';
         stateHeading.textContent = 'Listening';
-        stateDescription.textContent = 'Waiting for you to say "boom" to start recording.';
+        stateDescription.textContent = 'Waiting for you to say "snap" to start recording.';
         
         clearBtn.disabled = true;
       }
@@ -999,7 +1001,7 @@
         // Remove old note
         deleteNote(id);
         
-        statusDisplay.textContent = 'Editing note - say "boom" to save when done';
+        statusDisplay.textContent = 'Editing note - say "snap" to save when done';
       }
     }
     
@@ -1082,7 +1084,7 @@
     
     function showTriggerConfirmation() {
       const triggerConfirm = document.createElement('div');
-      triggerConfirm.textContent = 'BOOM!';
+      triggerConfirm.textContent = 'SNAP!';
       triggerConfirm.style.position = 'fixed';
       triggerConfirm.style.top = '50%';
       triggerConfirm.style.left = '50%';
