@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="customer-understanding">Customer Understanding</h1>
+
+    <h1 id="customer-understanding">Customer Understanding</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>Understanding customer behavior requires recognizing that customers primarily seek progress in their lives rather than specific features or products themselves. The key insight is that people don't purchase items merely to possess them but to improve their circumstances, which explains why dissatisfied customers typically switch providers silently rather than complaining and why people's stated preferences often contradict their actual behaviors.</p>
+<p>Customer needs should be understood as dynamic interactions between the individual, their desired progress, and the product they &quot;hire&quot; to achieve it—known as Jobs To Be Done (JTBD). This perspective shifts focus from what activities customers perform to what outcomes they're trying to accomplish, recognizing that needs evolve over time and aren't inherent to the customer. To successfully market products, companies must either outperform existing solutions or influence customers to redefine their jobs to be done, creating demand for new solutions.</p>
+<hr>
+<ul>
+<li>Great advertising speaks to the customer's struggling moment</li>
+</ul>
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li>A dissatisfied customer does not complain, he just switches</li>
+<li>Customers <strong>don't care about features of a product but if it helps</strong> then get closer to getting their job done</li>
+<li><strong>When you design for a specific outcome, customers leave once the outcome is achieved</strong>; when designing for improving customer's live, then it never ends</li>
+<li><strong>People don't buy things just to have them</strong>, but they want to make their lives better i.e. make progress</li>
+<li>There must be a true desire for change in order to hire a product or a service</li>
+<li><strong>People say ≠ people do</strong> e.g. Ryanair is one of the worst brands but the company grows rapidly</li>
+<li>What people are doing is not the same as what they are trying to accomplish
+<ul>
+<li>Focusing on the <strong>outcome</strong> rather than on a given activity that needs to happen</li>
+</ul>
+</li>
+<li>Using a product/service starts with hiring -&gt; using -&gt; firing</li>
+</ul>
+<h2 id="needs">Needs</h2>
+<ul>
+<li>Needs and wants change in time and do not belong to the customer</li>
+<li>A need represents <strong>an interaction between the customer, their desire for Progress, and the product they hired for <a href="#" class="pending-link">JTBD 1</a></strong></li>
+<li>&quot;Customer wants&quot; come from the system, not from customers
+<ul>
+<li>If you want to persuade customers to use your product you either have to outcompete a current solution, or make the customer change their <a href="#" class="pending-link">JTBD 1</a> thus want a new solution</li>
+</ul>
+</li>
+<li>Unmet <a href="/notes/99 - 📄 To process/JTBD/Goal/">Goal</a> is a future experience a <a href="/notes/04 - 💽 RAW/2025/04/06/Customer/">Customer</a> wants, but can't get at the moment</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">02 - 📩 Inbox/JTBD</a></li>
+<li><a href="#" class="pending-link">02 - 📩 Inbox/System of progress</a></li>
+<li><a href="#" class="pending-link">02 - 📩 Inbox/Opposing forces of customer demand</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/research</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

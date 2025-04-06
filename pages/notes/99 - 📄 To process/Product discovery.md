@@ -49,7 +49,7 @@ resources:
 
 ## Research Methods
 
-### Discovery Interviewing (from [[99 - 📄 To process/books/The_Mom_Test|The Mom Test]])
+### Discovery Interviewing (from [[02 - 📩 Inbox/The_Mom_Test|The Mom Test]])
 - Be genuinely interested in the customer to open their hearts
 - Don't mention your idea/solution too soon - focus on their problems first
 - Ask "Talk me through the last time [problem] happened" to get concrete examples

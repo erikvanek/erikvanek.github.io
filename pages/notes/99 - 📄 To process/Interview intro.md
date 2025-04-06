@@ -13,7 +13,7 @@ Máte nějaké otázky před tím než oficiálně začneme?
 
 Můžeme si dnešní setkání nahrát? Jde nám o to, abychom se mohli k informacím ještě vrátit při následné analýze. Žádné osobní nebo tajné informace o vaší organizaci nebudeme sdílet externě. Zároveň bychom ale data anonymně rádi využili pro tvorbu závěrečné analýzy, kterou s vámi pak rádi nasdílíme. Může to sloužit jako zajímavá sonda do problematiky [ zaměření výzkumu ] a třeba v ní následně můžete najít inspiraci pro vaše pracovní prostředí.
 
-## Efektivní techniky z knihy [[99 - 📄 To process/books/The_Mom_Test|The Mom Test]]
+## Efektivní techniky z knihy [[02 - 📩 Inbox/The_Mom_Test|The Mom Test]]
 
 - "Popište mi, kdy naposledy jste se setkal s tímto problémem" - tato otázka vede k faktickým odpovědím místo obecných prohlášení
 - Zaměřte se na fakta o životě zákazníka a jeho pohledu na svět, ne na jeho názory na váš nápad

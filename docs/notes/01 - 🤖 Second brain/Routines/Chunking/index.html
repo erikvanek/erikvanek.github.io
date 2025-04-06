@@ -195,7 +195,10 @@
     <h1 id="chunking">Chunking</h1>
 
     <h1 id="chunking-process">Chunking Process</h1>
-<p>Chunking is the process of breaking down larger notes into smaller, interconnected nuggets of knowledge. This helps with:</p>
+<blockquote>
+<p><strong>Important</strong>: Do not chunk RAW items stored in the RAW storage folders. These should be preserved in their original form and only processed by adding metadata and possibly a summary.</p>
+</blockquote>
+<p>Chunking is the process of breaking down larger notes into smaller, interconnected nuggets of knowledge. This AI-assisted process helps with:</p>
 <ul>
 <li>Clearer thinking and organization</li>
 <li>More granular linking between related concepts</li>
@@ -204,15 +207,15 @@
 </ul>
 <h2 id="when-to-use-chunking">When to Use Chunking</h2>
 <ul>
-<li>When processing notes longer than 1000 words</li>
+<li>When processing notes longer than one A4 page (approximately 2500-3000 characters)</li>
 <li>When a note covers multiple distinct concepts or ideas</li>
 <li>When adding information to an already large note</li>
 <li>During knowledge base reviews to optimize note structure</li>
 </ul>
-<h2 id="chunking-process">Chunking Process</h2>
+<h2 id="ai-assisted-chunking-process">AI-Assisted Chunking Process</h2>
 <ol>
 <li>
-<p><strong>Identify Distinct Concepts</strong>: Read through the note and identify natural divisions based on:</p>
+<p><strong>Identify Distinct Concepts</strong>: When asking Claude to chunk your notes, provide the full content and request identification of natural divisions based on:</p>
 <ul>
 <li>Topic shifts</li>
 <li>Conceptual boundaries</li>
@@ -220,39 +223,55 @@
 </ul>
 </li>
 <li>
-<p><strong>Create New Notes</strong>: For each distinct concept:</p>
+<p><strong>Create New Notes</strong>: Ask Claude to:</p>
 <ul>
-<li>Create a new note with a clear, descriptive title</li>
-<li>Move the relevant content to this new note</li>
+<li>Propose clear, descriptive titles for each chunk</li>
+<li>Extract relevant content for each new note</li>
 <li>Format according to the standard note template</li>
-<li>Ensure proper frontmatter and tagging</li>
+<li>Add appropriate frontmatter and tags</li>
 </ul>
 </li>
 <li>
-<p><strong>Create Connections</strong>:</p>
+<p><strong>Create Connections</strong>: Request Claude to:</p>
 <ul>
-<li>Add bidirectional links between related chunks</li>
-<li>Update any existing notes that should link to the new chunks</li>
-<li>Consider creating or updating a relevant MOC</li>
+<li>Suggest bidirectional links between related chunks</li>
+<li>Identify existing notes that should link to these new chunks</li>
+<li>Recommend MOC updates if applicable</li>
 </ul>
 </li>
 <li>
 <p><strong>Create an Overview Note</strong> (if needed):</p>
 <ul>
-<li>For complex topics, create an overview note that links to all chunks</li>
-<li>Provide context for how the chunks relate to each other</li>
+<li>Ask Claude to draft an overview note that links to all chunks</li>
+<li>This should provide context for how the chunks relate to each other</li>
 <li>This can serve as a mini-MOC for that specific topic</li>
 </ul>
 </li>
 </ol>
-<h2 id="chunking-guidelines">Chunking Guidelines</h2>
+<h2 id="chunking-guidelines-for-claude">Chunking Guidelines for Claude</h2>
+<ul>
+<li>When providing instructions to Claude, specify:
 <ul>
 <li>Each chunk should focus on a single concept or idea</li>
 <li>Chunks should be self-contained but interconnected</li>
-<li>Aim for notes that are max 500 characters</li>
-<li>Ensure each chunk has appropriate tags and links to related notes</li>
+<li>Aim for notes about half an A4 page in length (approximately 1000-1500 characters)</li>
+<li>Each chunk must have appropriate tags and links to related notes</li>
 <li>Use descriptive titles that clearly indicate the note's content</li>
 </ul>
+</li>
+</ul>
+<h2 id="sample-prompt-for-claude">Sample Prompt for Claude</h2>
+<pre><code>Help me chunk this note into smaller, interconnected pieces:
+
+[PASTE NOTE CONTENT]
+
+Please:
+1. Identify natural divisions in this content
+2. Create separate notes for each chunk following my note template
+3. Suggest bidirectional links between chunks
+4. Create an overview note if appropriate
+5. Keep each chunk focused on a single concept (half A4 page / 1000-1500 characters)
+</code></pre>
 
 
     

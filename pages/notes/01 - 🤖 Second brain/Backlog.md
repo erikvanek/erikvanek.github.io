@@ -4,3 +4,4 @@
 - How would an ideal bi-weekly process of learning from my already existing knowledge base look like?
 	- also it might include some reshuffling suggestions
 - Would other folders rather than 'Resources' benefit from MOCs?
+- How to identify orphan files? What to do with them?

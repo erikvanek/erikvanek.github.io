@@ -12,6 +12,15 @@ There are two main entry points to my second brain knowledge management
 - Do not actively work (meaning do not process them, but feel free to reference them from new notes) with entries in `99-To process` as those are my old-not-yet-processed notes that I'll start processing gradually and eventually they move from that folder into my main Knowledge folder
 
 # Knowledge Organization
+## RAW Storage Structure
+- RAW notes are stored in a hierarchical structure based on creation date:
+  - Format: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md`
+  - Example: `04 - 💽 RAW/2025/04/06/Interaction_Design.md`
+- This structure helps with:
+  - Finding notes by when they were created
+  - Organizing content chronologically
+  - Maintaining a clean folder structure
+
 ## Maps of Content (MOCs)
 MOCs serve as conceptual maps that provide an overview of a knowledge area. They are separate markdown files that collect related content from across your second brain.
 
