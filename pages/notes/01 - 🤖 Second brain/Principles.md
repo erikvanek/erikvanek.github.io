@@ -9,3 +9,5 @@ I struggle with mixing English and Czech in my knowledge base. From now on it sh
 I want to leverage capabilities available by LLMs to help me with tagging and structuring information, taking care of things like [[Dump processing]] that are not super high priority but I want to have them at hand if needed
 # 5. Store RAW, enrich existing
 Make sure we store all notes as they come in RAW format so that they can be repurposed later if it is needed. Enrich existing knowledge base nuggets with most relevant pieces of information coming from new knowledge.
+# 6. Keep it lean
+Keep it lean while building this second brain. Restrain from over-engineering so that I can make use of it well rather than spending time on maintenance.

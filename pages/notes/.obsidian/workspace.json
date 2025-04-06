@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - 🤖 Second brain/Principles.md",
+                "file": "01 - 🤖 Second brain/Backlog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Principles"
+              "title": "Backlog"
             }
           }
         ]
@@ -169,14 +169,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee613e5f4402eea4",
+  "active": "eb479b03b3245264",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC.md",
+    "02 - 📩 Inbox/Product discovery.md",
+    "02 - 📩 Inbox/Problem statements.md",
+    "02 - 📩 Inbox/Problem framing.md",
+    "01 - 🤖 Second brain/Backlog.md",
+    "01 - 🤖 Second brain/Principles.md",
+    "01 - 🤖 Second brain/Routines/Knowledge Rebalancing.md",
+    "01 - 🤖 Second brain/Routines/Chunking.md",
+    "01 - 🤖 Second brain/Templates/raw-input-template.md",
+    "01 - 🤖 Second brain/Templates/note-template.md",
+    "01 - 🤖 Second brain/Routines/MOC maintenance.md",
+    "01 - 🤖 Second brain/Templates/MOC-template.md",
+    "01 - 🤖 Second brain/Templates",
     "11 - ⏳ interim knowledge/Design/UX_Customer_Experience.md",
     "11 - ⏳ interim knowledge/Design/Design-MOC.md",
     "11 - ⏳ interim knowledge/Design/Design Crit.md",
     "01 - 🤖 Second brain/Obsolete approach/Guide.md",
     "01 - 🤖 Second brain/Obsolete approach/Changelog.md",
-    "02 - 📩 Inbox/Product discovery.md",
     "99 - 📄 To process/Product Management/PM_Challenges_and_Strategies.md",
     "99 - 📄 To process/Product Management/Navigating_Corporate_Maze.md",
     "99 - 📄 To process/Trauma informed research.md",
@@ -186,18 +198,7 @@
     "99 - 📄 To process/resume/Questions.md",
     "99 - 📄 To process/resume/organization-shortlist.md",
     "99 - 📄 To process/resume/Nice-to-have.md",
-    "99 - 📄 To process/resume/experiences/FNZ.md",
-    "01 - 🤖 Second brain/Obsolete approach/Backlog.md",
-    "11 - ⏳ interim knowledge/Design/Books/Hooked.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Interviews.md",
-    "01 - 🤖 Second brain/Index.md",
-    "01 - 🤖 Second brain/Backlog.md",
-    "01 - 🤖 Second brain/YAGNI.md",
-    "01 - 🤖 Second brain/Principles.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Home",
-    "01 - 🤖 Second brain/Routines/Inbox processing.md",
-    "01 - 🤖 Second brain/Processes.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Product discovery",
     "10 - 🧠 Knowledge/3 - Resources/Untitled",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice",
@@ -206,7 +207,6 @@
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery",
-    "10 - 🧠 Knowledge/1 - Projects/Product discovery in",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",
