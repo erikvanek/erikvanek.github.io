@@ -139,7 +139,7 @@ The iterative process for measuring and improving business value:
 
 ## Related Notes
 - [[ProductManagement-MOC|Product Management]]
-- [[02 - 📩 Inbox/Product discovery]]
+- [[99 - 📄 To process/Product discovery]]
 - [[UX_Metriky|UX Metrics]]
 - [[CX_Metriky|CX Metrics]]
 - [[Designove_experimenty_metodika|Experimental Design Methodology]]

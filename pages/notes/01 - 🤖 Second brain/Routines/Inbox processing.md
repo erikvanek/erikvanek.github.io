@@ -1,14 +1,27 @@
-## 02 - 📩 Inbox
+# 02 - 📩 Inbox
 - Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos
-### Process
+## Process
 - Take a look at what is in a given note and assign 5 tags to it based on [[Tagging]] process
 - Use appropriate templates from [[01 - 🤖 Second brain/Templates/note-template|Note Template]] for structured processing
-- make a short summary between 5-7 sentences for notes that are longer than 800 characters, create a section on top of that note called `AI-assisted summary` and add the summary below
-- Find 5 related nodes in my existing knowledge base that this nugget is related to, create a section `Related notes` at the end of the file and link those related notes as bullet points
+## Related nodes
+- Find 5 related nodes in my existing knowledge base (only in folders `10 - 🧠 Knowledge`) that this nugget is related to, create a section `Related notes` at the end of the file and link those related notes as bullet points
+	- If you don't find enough related notes in those two subfolders, it's fine
+## AI-assisted summary
+- For notes longer than 800 characters, create a section on top called `AI-assisted summary` with a concise summary of the main ideas
+  - Structure this summary into at least two paragraphs for better readability
+  - First paragraph should cover the core concept/main idea
+  - Second paragraph should expand on application, implications, or specific details
+  - Aim for 5-7 sentences total across these paragraphs
+  - then add horizontal line
+## Chunking
 - For longer notes (over 500 characters), consider using the [[Chunking]] process to break them into more focused, interconnected notes
-- Include `date-created` for each raw note and store it in `04 - 💽 RAW` folder - so far just in linear structure, don't add any folder structure yet
-- **important** - fow now - keep processed notes in the inbox folder, just move them to 'processed' - this is a safety net in case there's something wrong with the process
-
+## Storage
+- Inbox serves as the entrypoint to new knowledge
+- **important workflow clarification** - After processing, the note should be:
+  1. Enhanced with proper metadata, tags, AI summary, and related notes
+  2. Stored in the `04 - 💽 RAW` folder with all enhancements
+  3. Deleted from the Inbox folder after being properly stored in RAW
+  4. Smaller nuggets of information may be created and connected to most relevant notes in `10 - 🧠 Knowledge` folder if appropriate
 # Typical information coming in
 ## Notes
 - it is "passive" knowledge that I gathered somewhere

@@ -79,9 +79,9 @@ Before each interview, decide the three most important things you want to learn
 
 ## Related Notes
 - [[Research-MOC|Research]]
-- [[02 - 📩 Inbox/Qualitative research]]
+- [[99 - 📄 To process/Qualitative research]]
 - [[Interview intro|Interview Techniques]]
-- [[02 - 📩 Inbox/Product discovery]]
+- [[99 - 📄 To process/Product discovery]]
 
 ## Raw Notes
 This note has been created as part of the second-brain system refinement process to address empty referenced files.

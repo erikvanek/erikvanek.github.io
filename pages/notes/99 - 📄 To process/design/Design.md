@@ -1,4 +1,4 @@
-- __to [[Design]] is a verb__
+- __to [[99 - 📄 To process/design/Design]] is a verb__
 - "Splitters" care about UX/[[Service design]]/[[Human-centered design]] differences vs lumpers don't care as long as you practice properly
 - when you start - be shitty, not pretty - throw away easily & iterate further
 - [[Design Thinking]]

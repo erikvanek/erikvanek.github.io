@@ -82,7 +82,7 @@ For consumers wanting to protect their attention:
 - [[Behavior design]]
 - [[Attention]]
 - [[Design-MOC]]
-- [[02 - 📩 Inbox/Product discovery]]
+- [[99 - 📄 To process/Product discovery]]
 - [[99 - 📄 To process/UX_Customer_Experience]]
 
 ## Reading Notes & Observations

@@ -74,6 +74,6 @@ Převod obecných otázek do konkrétních měřitelných metrik
 - [[UX_Metriky|UX Metriky]]
 - [[CX_Metriky|CX Metriky]]
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
-- [[02 - 📩 Inbox/Measuring Business Value|Měření obchodní hodnoty]]
-- [[02 - 📩 Inbox/Product discovery|Product Discovery]]
+- [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
+- [[99 - 📄 To process/Product discovery|Product Discovery]]
 - [[Behavior design|Behavior Design]]

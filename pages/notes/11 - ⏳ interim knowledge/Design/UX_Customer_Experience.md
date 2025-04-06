@@ -153,6 +153,6 @@ Kritéria pro výběr efektivních metrik:
 - [[CX_Metriky|CX Metriky]]
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
 - [[Designove_experimenty|Designové experimenty]]
-- [[02 - 📩 Inbox/Measuring Business Value|Měření obchodní hodnoty]]
-- [[02 - 📩 Inbox/Product discovery|Product discovery]]
+- [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
+- [[99 - 📄 To process/Product discovery|Product discovery]]
 - [[Behavior design|Behavior design]]

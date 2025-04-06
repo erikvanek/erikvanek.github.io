@@ -78,4 +78,4 @@ V praxi je vhodné kombinovat různé typy objektivních a subjektivních metrik
 - [[CX_Metriky|CX Metriky]]
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
-- [[02 - 📩 Inbox/Measuring Business Value|Měření obchodní hodnoty]]
+- [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
