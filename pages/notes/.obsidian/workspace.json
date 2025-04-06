@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "98dd1a221e38bf42",
+        "id": "be3a99fcf518ee20",
         "type": "tabs",
         "children": [
           {
-            "id": "eb479b03b3245264",
+            "id": "35371deb35a2ff1c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 - 🤖 Second brain/Routines/Chunking.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Chunking"
+              "title": "New tab"
             }
           }
         ]
@@ -169,35 +165,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eb479b03b3245264",
+  "active": "ee613e5f4402eea4",
   "lastOpenFiles": [
-    "01 - 🤖 Second brain/Routines/Knowledge Retrieval.md",
-    "01 - 🤖 Second brain/Backlog.md",
+    "04 - 💽 RAW/Interaction design.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Interviews.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC.md",
-    "02 - 📩 Inbox/Product discovery.md",
-    "02 - 📩 Inbox/Problem statements.md",
-    "02 - 📩 Inbox/Problem framing.md",
+    "02 - 📩 Inbox/Interaction design.md",
+    "99 - 📄 To process/Freelancing.md",
+    "99 - 📄 To process/Design portfolios.md",
+    "01 - 🤖 Second brain/Routines/Inbox processing.md",
+    "01 - 🤖 Second brain/Processes.md",
     "01 - 🤖 Second brain/Principles.md",
-    "01 - 🤖 Second brain/Routines/Knowledge Rebalancing.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Design.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/Index.md",
     "01 - 🤖 Second brain/Routines/Chunking.md",
-    "01 - 🤖 Second brain/Templates/raw-input-template.md",
-    "01 - 🤖 Second brain/Templates/note-template.md",
-    "01 - 🤖 Second brain/Routines/MOC maintenance.md",
-    "01 - 🤖 Second brain/Templates/MOC-template.md",
+    "01 - 🤖 Second brain/Routines/Tagging.md",
+    "01 - 🤖 Second brain/Index.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Stakeholder interviews for autonomous farm robot/Index.md",
+    "04 - 💽 RAW/Product discovery.md",
+    "04 - 💽 RAW/Qualitative research.md",
+    "04 - 💽 RAW/Productivity.md",
+    "99 - 📄 To process/Product discovery.md",
+    "99 - 📄 To process/Design crit.md",
+    "04 - 💽 RAW/Learning.md",
+    "04 - 💽 RAW/Eisenhower matrix.md",
+    "04 - 💽 RAW/Design crit.md",
+    "99 - 📄 To process/Qualitative research.md",
+    "04 - 💽 RAW/Research/Qualitative research.md",
     "01 - 🤖 Second brain/Templates",
-    "11 - ⏳ interim knowledge/Design/UX_Customer_Experience.md",
-    "11 - ⏳ interim knowledge/Design/Design-MOC.md",
-    "11 - ⏳ interim knowledge/Design/Design Crit.md",
-    "01 - 🤖 Second brain/Obsolete approach/Guide.md",
-    "01 - 🤖 Second brain/Obsolete approach/Changelog.md",
-    "99 - 📄 To process/Product Management/PM_Challenges_and_Strategies.md",
-    "99 - 📄 To process/Product Management/Navigating_Corporate_Maze.md",
-    "99 - 📄 To process/Trauma informed research.md",
-    "99 - 📄 To process/resume/What-I-want.md",
-    "99 - 📄 To process/resume/What-I-don't-want.md",
-    "99 - 📄 To process/resume/What-can-I-offer.md",
-    "99 - 📄 To process/resume/Questions.md",
-    "99 - 📄 To process/resume/organization-shortlist.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Home",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Product discovery",
     "10 - 🧠 Knowledge/3 - Resources/Untitled",

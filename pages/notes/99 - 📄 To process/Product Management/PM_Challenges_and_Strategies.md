@@ -37,7 +37,7 @@ tags:
   - Approval processes
   - Political landscape
   - External competitive factors
-- Complements the [[02 - 📩 Inbox/Product discovery|discovery process]] by ensuring resources are allocated to problems worth solving
+- Complements the [[99 - 📄 To process/Product discovery|discovery process]] by ensuring resources are allocated to problems worth solving
 - Extends beyond just [[Product teams|solving problems]] to also considering organizational context
 
 ### Metrics-Driven Decision Making
@@ -65,7 +65,7 @@ tags:
   - Team objectives
   - Metrics and KPIs
   - Operational workflows
-- Similar to the holistic perspective needed when conducting [[02 - 📩 Inbox/Product discovery|product discovery]]
+- Similar to the holistic perspective needed when conducting [[99 - 📄 To process/Product discovery|product discovery]]
 - Recognizes that product decisions have ripple effects across the organization
 
 ### Diligent Internal Review Processes
@@ -75,5 +75,5 @@ tags:
   - Financial impact analysis
   - Legal compliance checks
 - Understand that their role is preventative: "Their role is to ensure nothing goes wrong and no problems appear in the future that I can't envision"
-- Represents an often overlooked aspect of product development not directly addressed in [[02 - 📩 Inbox/Product discovery]] or [[Outcome_Driven_Product_Strategy|outcome frameworks]]
+- Represents an often overlooked aspect of product development not directly addressed in [[99 - 📄 To process/Product discovery]] or [[Outcome_Driven_Product_Strategy|outcome frameworks]]
 - Important complement to experimentation and iterative approaches

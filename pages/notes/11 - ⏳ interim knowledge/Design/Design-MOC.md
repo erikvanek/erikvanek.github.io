@@ -26,7 +26,7 @@ Design encompasses methodologies, principles, and practices for creating effecti
 - [[99 - 📄 To process/UX_Customer_Experience|UX and Customer Experience]] - Understanding and enhancing user journeys
 
 ## Research & Testing
-- [[02 - 📩 Inbox/Qualitative research]] - Methods for understanding user needs and behaviors
+- [[99 - 📄 To process/Qualitative research]] - Methods for understanding user needs and behaviors
 - Usability Testing - Evaluating design effectiveness with real users
 - [[Problem statements]] - Defining design challenges effectively
 - [[Problem framing]] - Approaches to understanding and defining problems

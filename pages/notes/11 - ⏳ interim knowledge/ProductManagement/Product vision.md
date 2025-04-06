@@ -91,7 +91,7 @@ A product vision articulates the desired future state that a product aims to cre
 
 ## Related Notes
 - [[ProductManagement-MOC|Product Management]]
-- [[02 - 📩 Inbox/Product discovery]]
+- [[99 - 📄 To process/Product discovery]]
 - [[Product teams]]
 - [[Storytelling]]
 

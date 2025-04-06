@@ -124,5 +124,5 @@ Rámec používaný v startupovém prostředí k měření a optimalizaci zákaz
 - [[UX_Metriky|UX Metriky]]
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
-- [[02 - 📩 Inbox/Measuring Business Value|Měření obchodní hodnoty]]
-- [[02 - 📩 Inbox/Product discovery|Product Discovery]]
+- [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
+- [[99 - 📄 To process/Product discovery|Product Discovery]]
