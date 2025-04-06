@@ -8,7 +8,7 @@ The typical flow of information is like this:
 1. Capture new knowledge, analzye it and enrich with metadata 
 2. Process and expand existing knowledge base
 3. Retrieve relevant information when during new initiatives
-4. Rebalance knowledge base if it grows out of hand
+4. Rebalance knowledge base if it grows out of hand through [[01 - 🤖 Second brain/Routines/Knowledge Rebalancing|Knowledge Rebalancing]]
 
 # Folder structure
 ## 00 - ⚙️ Processing
