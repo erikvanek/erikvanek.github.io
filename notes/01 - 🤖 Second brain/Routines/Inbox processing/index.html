@@ -194,19 +194,56 @@
 
     <h1 id="inbox-processing">Inbox processing</h1>
 
-    <h2 id="02-inbox">02 - 📩 Inbox</h2>
+    <h1 id="02-inbox">02 - 📩 Inbox</h1>
 <ul>
 <li>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos</li>
 </ul>
-<h3 id="process">Process</h3>
+<h2 id="process">Process</h2>
 <ul>
 <li>Take a look at what is in a given note and assign 5 tags to it based on <a href="/notes/01 - 🤖 Second brain/Routines/Tagging/">Tagging</a> process</li>
 <li>Use appropriate templates from <a href="#" class="pending-link">Note Template</a> for structured processing</li>
-<li>make a short summary between 5-7 sentences for notes that are longer than 800 characters, create a section on top of that note called <code>AI-assisted summary</code> and add the summary below</li>
-<li>Find 5 related nodes in my existing knowledge base that this nugget is related to, create a section <code>Related notes</code> at the end of the file and link those related notes as bullet points</li>
+</ul>
+<h2 id="related-nodes">Related nodes</h2>
+<ul>
+<li>Find 5 related nodes in my existing knowledge base (only in folders <code>10 - 🧠 Knowledge</code>) that this nugget is related to, create a section <code>Related notes</code> at the end of the file and link those related notes as bullet points
+<ul>
+<li>If you don't find enough related notes in those two subfolders, it's fine</li>
+</ul>
+</li>
+</ul>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<ul>
+<li><strong>!important</strong> only for notes longer than 1500 characters, create a section on top called <code>AI-assisted summary</code> with a concise summary of the main ideas
+<ul>
+<li>Structure this summary into at least two paragraphs for better readability</li>
+<li>First paragraph should cover the core concept/main idea</li>
+<li>Second paragraph should expand on application, implications, or specific details</li>
+<li>Aim for 5-7 sentences total across these paragraphs</li>
+<li>then add horizontal line</li>
+</ul>
+</li>
+</ul>
+<h2 id="chunking">Chunking</h2>
+<ul>
 <li>For longer notes (over 500 characters), consider using the <a href="/notes/01 - 🤖 Second brain/Routines/Chunking/">Chunking</a> process to break them into more focused, interconnected notes</li>
-<li>Include <code>date-created</code> for each raw note and store it in <code>04 - 💽 RAW</code> folder - so far just in linear structure, don't add any folder structure yet</li>
-<li><strong>important</strong> - fow now - keep processed notes in the inbox folder, just move them to 'processed' - this is a safety net in case there's something wrong with the process</li>
+</ul>
+<h2 id="storage">Storage</h2>
+<ul>
+<li>Inbox serves as the entrypoint to new knowledge</li>
+<li><strong>important workflow clarification</strong> - After processing, the note should be:
+<ol>
+<li>Enhanced with proper metadata, tags, AI summary, and related notes</li>
+<li>Stored in the <code>04 - 💽 RAW</code> folder following a hierarchical structure:
+<ul>
+<li>Create folders based on the note's creation date from frontmatter metadata</li>
+<li>Structure: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
+<li>Example: For a note created on April 6, 2025: <code>04 - 💽 RAW/2025/04/06/Note_Title.md</code></li>
+</ul>
+</li>
+<li>Deleted from the Inbox folder after being properly stored in RAW</li>
+<li>Smaller nuggets of information may be created and connected to most relevant notes in <code>10 - 🧠 Knowledge</code> folder if appropriate</li>
+</ol>
+</li>
 </ul>
 <h1 id="typical-information-coming-in">Typical information coming in</h1>
 <h2 id="notes">Notes</h2>

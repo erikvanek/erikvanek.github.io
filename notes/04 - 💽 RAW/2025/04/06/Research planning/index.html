@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="research-planning">Research Planning</h1>
+
+    <h1 id="research-planning">Research Planning</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>Effective research planning involves carefully considering multiple dimensions: research loops for iteration, appropriate sample size and selection methods, and suitable research methodologies. The planning process should be flexible enough to embrace emergent sampling—following unexpected leads during fieldwork—while maintaining awareness of potential research biases and contextual factors that might influence results.</p>
+<p>A comprehensive research plan typically combines multiple approaches to ensure triangulation and methodological robustness. This includes desk research to leverage existing knowledge, ethnographic methods to observe participants in natural settings, participant approaches (interviews, focus groups), non-participant approaches (observation, cultural probes), and co-creative workshops. The research should continue until theoretical saturation is reached—when additional data no longer provides new insights—and should always be guided by desired outcomes rather than predetermined methods, which could unnecessarily limit options and discoveries.</p>
+<hr>
+<h2 id="research-planning">Research planning</h2>
+<ul>
+<li>Includes research loops, sample size &amp; selection &amp; <a href="/notes/99 - 📄 To process/design/Design methods/">Design methods</a> selection</li>
+<li><em>Research loops are a tool to iterate</em></li>
+<li>Don't forget about <a href="/notes/99 - 📄 To process/design/Concepts/Triangulation/">Triangulation</a></li>
+<li>When deciding sample selection - beware of research bias</li>
+<li><em>Emergent sampling</em>
+<ul>
+<li>Follow new leads during fieldwork as they unfold, leverage flexibly new knowledge</li>
+<li>I.e. when you find something interesting, don't ignore it</li>
+</ul>
+</li>
+<li>Beware of research context
+<ul>
+<li>E.g. when researching train station service
+<ul>
+<li>What kind of people you need at train station during different day times</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It is useful to engage with participants in their natural surroundings</li>
+<li>When more research only confirms already identified patterns, <a href="https://dovetail.com/research/data-saturation/">theoretical saturation is reached</a>, then it is possible to <a href="https://medium.com/idinsight-blog/the-case-for-iteration-in-qualitative-research-design-e07ed1314756">iterate</a></li>
+<li>Research types
+<ul>
+<li>Overt
+<ul>
+<li>You are open with your intent</li>
+<li>Inherently biased with &quot;the observer effect&quot;</li>
+</ul>
+</li>
+<li>Covert
+<ul>
+<li>Your intent is hidden</li>
+<li>Ethically problematic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A good method mix combines each of:
+<ul>
+<li><a href="/notes/99 - 📄 To process/design/Activities/Design research/Desk research/">Desk research</a>
+<ul>
+<li>Before or in parallel - try to go through some <a href="/notes/99 - 📄 To process/design/Activities/Design research/Secondary research/">Secondary research</a></li>
+<li>Try to maximize the learning from secondary research as it is cheaper than conducting research on your own</li>
+</ul>
+</li>
+<li><a href="/notes/99 - 📄 To process/design/Activities/Design research/Self-ethnographic research/">Self-ethnographic research</a></li>
+<li><a href="/notes/04 - 💽 RAW/2025/04/06/Ethnographic methods/">Ethnographic methods</a></li>
+<li><a href="/notes/99 - 📄 To process/design/Activities/Design research/Participant approach/">Participant approach</a>
+<ul>
+<li>Interviews, observation, focus groups</li>
+</ul>
+</li>
+<li>Non-participant approaches
+<ul>
+<li>Non-participant observation, cultural probes, co-creating</li>
+</ul>
+</li>
+<li>Co-creative workshops
+<ul>
+<li>Journey maps, system maps, co-creating personas</li>
+<li>Great workshop ideas in <a href="https://dovetail.com/blog/researching-right-thing-versus-researching-thing-right/">this</a> article to kick start the research scope</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Check a <a href="https://www.muledesign.com/blog/design-research-framework">Design Research Framework</a> by Erika Hall to see what could work for you</li>
+<li>Don't start with methods but with outcome - if you start with methods, you can limit your options</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">04 - 💽 RAW/research</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Qualitative research</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Ethnographic methods</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Research data</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Interview Reflection Template</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

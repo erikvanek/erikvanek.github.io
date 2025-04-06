@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="research-fundamentals">Research Fundamentals</h1>
+
+    <h1 id="research-fundamentals">Research Fundamentals</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>Research in product development is defined as a systematic investigation designed to develop or contribute to generalizable knowledge, requiring structured approaches that yield reliable, actionable insights. This note outlines two complementary research methodologies: customer interviews and outcome-based research, each providing different but valuable perspectives on user behavior and needs.</p>
+<p>Customer interviews, as informed by principles from &quot;The Mom Test,&quot; emphasize focusing on past behavior rather than future intentions, avoiding idea pitching during research, watching for emotional signals about problems, and targeting specific customer segments. Meanwhile, outcome-based research shifts the focus from outputs to desired behavioral changes, identifying behaviors that drive business results by examining what predicts success or failure at each customer journey step, and establishing metrics that reflect meaningful behavioral changes rather than simply tracking feature usage.</p>
+<hr>
+<p>&quot;Research means a systematic investigation, including research development, testing and evaluation, designed to develop or contribute to generalizable knowledge&quot;</p>
+<h2 id="effective-research-methods">Effective Research Methods</h2>
+<h3 id="customer-interviews-from-a-href-classpending-linkthe-mom-testa">Customer Interviews (from <a href="#" class="pending-link">The Mom Test</a>)</h3>
+<ul>
+<li>The measure of usefulness of early customer interviews is whether they give us facts about customer's lives and world views</li>
+<li>Focus on past behavior, not future intentions - &quot;Talk me through the last time X happened&quot;</li>
+<li>Don't pitch your idea during research - it contaminates the data</li>
+<li>Watch for signals: deep emotions about problems are valuable, compliments and fluff are not</li>
+<li>Banned words that indicate hypothetical situations: would/could/might</li>
+<li>Customer segments are who-where pairs - know exactly who you're targeting and where to find them</li>
+</ul>
+<h3 id="outcome-based-research-from-a-href-classpending-linkoutcomes-over-outputa">Outcome-Based Research (from <a href="#" class="pending-link">Outcomes over Output</a>)</h3>
+<ul>
+<li>Research should focus on identifying behaviors that drive business results</li>
+<li>After visualizing customer journeys, ask &quot;what behaviors at each step predict failure/success&quot;</li>
+<li>This helps define boosters/blockers for desired outcomes</li>
+<li>When thinking about metrics, ask: &quot;if we were successful with this initiative, what would be different about customer's behavior?&quot;</li>
+<li>Research should help develop testable hypotheses about behavior changes</li>
+<li>The learning cycle: Build → Measure outcomes → Learn → Iterate</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Qualitative research</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Interviews</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Interview Reflection Template</a></li>
+<li><a href="#" class="pending-link">04 - 💽 RAW/Stakeholder mapping</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
