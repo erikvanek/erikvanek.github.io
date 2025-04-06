@@ -11,13 +11,6 @@ tags:
 
 # Interview Reflection Template
 
-## AI-assisted summary
-This interview reflection template provides a structured framework for documenting and analyzing insights gained during user research interviews. It emphasizes concise, factual documentation focused on what actually occurred rather than subjective interpretations, ensuring that reflections remain accurate and valuable.
-
-The template is organized into five key sections that guide researchers through documenting valuable insights, effective techniques, challenges encountered, actionable takeaways, and specific next steps. By following this standardized approach, researchers can consistently capture critical information while maintaining focus on how the findings will influence project decisions and direction.
-
----
-
 > **Important**: Keep reflections concise and factual. Stick to what actually happened rather than elaborating or generalizing beyond the specific interview experience. Shorter, accurate reflections are more valuable than longer ones with added interpretations.
 
 ---

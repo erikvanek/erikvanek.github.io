@@ -12,9 +12,9 @@ tags:
 # Qualitative Research
 
 ## AI-assisted summary
-Qualitative research is a small-sample research approach that focuses on understanding the "why" behind problems and their root causes rather than proving or disproving hypotheses. Unlike quantitative research, it doesn't aim for statistical significance or generalization from sample sizes, but instead complements quantitative methods by providing deep insights into user problems, behaviors, and motivations that inform decision-making.
+Qualitative research is a small-sample methodology focused on understanding the "why" behind problems rather than proving hypotheses or achieving statistical significance. This approach complements quantitative methods by providing deep insights into user problems, behaviors, and motivations that inform decision-making when statistical generalization isn't possible or necessary.
 
-For qualitative research to be rigorous and trustworthy, it must satisfy four key criteria: credibility (truth of findings), transferability (applicability in other contexts), dependability (consistency and repeatability), and confirmability (neutrality from researcher bias). Achieving this requires a systematic approach—from formulating specific research questions and careful participant sampling to using open-ended prompts, understanding motivations beyond opinions, continuous data analysis, and triangulating findings to validate unusual observations.
+To maintain rigor and trustworthiness, qualitative research must meet four key criteria established by Lincoln and Guba: credibility (truth of findings), transferability (applicability in other contexts), dependability (consistency), and confirmability (neutrality from researcher bias). These standards are achieved through systematic practices including specific research questions, careful participant selection, open-ended prompts, motivation-focused inquiry, continuous data analysis, and triangulation to validate unusual observations.
 
 ---
 

@@ -14,9 +14,9 @@ tags:
 # Research Interview Introduction Script
 
 ## AI-assisted summary
-This interview introduction script provides a structured framework for beginning research conversations in Czech, focusing on establishing rapport and setting expectations for productive qualitative research sessions. The script emphasizes transparency about research goals, encourages honest responses by removing pressure for "right answers," and creates psychological safety by normalizing reflection time and allowing participants to decline questions.
+This Czech-language interview script provides a structured framework for beginning research conversations, focusing on establishing rapport while setting expectations for productive qualitative research sessions. The template creates psychological safety by emphasizing transparency about research goals, removing pressure for "right answers," normalizing reflection time, and explicitly giving participants permission to decline answering questions they're uncomfortable with.
 
-The template incorporates best practices from "The Mom Test" methodology, particularly emphasizing concrete past behaviors rather than hypothetical scenarios. It includes key components like permission for recording, clear confidentiality guidelines, and a connection-building technique that links the interviewer's research goals with the participant's relevant experiences. This structured approach helps researchers establish credibility while creating a comfortable environment that yields genuine insights rather than socially desirable responses.
+Incorporating best practices from "The Mom Test" methodology, the script encourages concrete examples from participants' past experiences rather than hypothetical scenarios. It includes essential components such as recording permission, confidentiality guarantees, and a connection-building technique linking the researcher's goals with the participant's relevant experiences, helping establish credibility while creating an environment conducive to gathering genuine insights rather than socially desirable responses.
 
 ---
 

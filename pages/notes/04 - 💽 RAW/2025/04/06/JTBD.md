@@ -1,4 +1,11 @@
----
+title: "Jobs To Be Done Framework"
+date_created: 2025-04-06
+tags:
+  - product-development
+  - user-research
+  - customer-needs
+  - product-strategy
+  - design-thinking
 resources:
   - http://jtbd.info/
   - https://hbr.org/2016/09/know-your-customers-jobs-to-be-done
@@ -6,6 +13,15 @@ resources:
   - https://brianrhea.com/jobs-to-be-done-examples/
   - https://medium.com/@rain.lieberman/jobs-to-be-done-vs-user-stories-definition-comparison-and-when-to-use-which-abaed0b3c778
   - https://strategyn.com/jobs-to-be-done-old/jobs-to-be-done-examples/
+---
+
+# Jobs To Be Done Framework
+
+## AI-assisted summary
+Jobs To Be Done (JTBD) is a theoretical framework focused on understanding the underlying progress people seek to make in particular circumstances rather than what products they use. This approach conceptualizes customers as "hiring" products to fulfill specific jobs when they need to transform their current life situation into a preferred one but face constraints that prevent this transformation.
+
+The framework emphasizes several core principles: progress over outcomes, customer-centricity, and context sensitivity in defining value. JTBD helps teams identify customer struggles and unmet needs through structured questioning, and can be implemented in organizations by focusing verification on how solutions make customers' lives better rather than on product features. The approach is particularly valuable in early-stage product design as it provides a stable foundation for innovation by focusing on human desires that change more slowly than technologies or solutions.
+
 ---
 - **JTBD is a theory**, that should be able to describe what happened in the past but also what might happen in future
 - provides **a framework for finding out what the user really wants** and what causes them to a given purchase or usage of a product or a service

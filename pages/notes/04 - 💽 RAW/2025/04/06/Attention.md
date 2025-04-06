@@ -14,9 +14,9 @@ tags:
 # Attention Management
 
 ## AI-assisted summary
-Attention management involves understanding and optimizing the brain's attention systems, which act as valuable resources that can be consciously directed for maximum effectiveness. Research indicates that people typically spend half their waking hours with wandering minds, with mental time travel (thinking about past or future) being a primary cause of degraded attention.
+Attention management involves treating attention as a valuable currency or resource that can be consciously directed rather than merely focusing on tasks. Research shows people spend approximately 50% of their waking hours with wandering minds, with mental time travel between past and future being a primary cause of degraded attention.
 
-Attention operates through three distinct subsystems: the "flashlight" (focused attention on specific tasks), the "floodlight" (open awareness to notice unexpected stimuli), and the "juggler" (executive function that plans and aligns actions with goals). Similar to physical exercise, attention can be strengthened through consistent practice—specifically, dedicating just 12 minutes daily, five days weekly can significantly improve attention management skills, enabling knowledge workers to treat their attention as high-value capital that should be invested strategically for optimal returns.
+The attention system operates through three distinct subsystems: the "flashlight" (focused attention), the "floodlight" (open awareness), and the "juggler" (executive function aligning actions with goals). Like physical fitness, attention can be strengthened through consistent practice—just 12 minutes daily, five days weekly—enabling knowledge workers to strategically invest their attention for maximum productivity returns.
 
 ---
 

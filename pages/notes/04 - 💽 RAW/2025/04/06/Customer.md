@@ -12,9 +12,9 @@ tags:
 # Customer Understanding
 
 ## AI-assisted summary
-Understanding customer behavior requires recognizing that customers primarily seek progress in their lives rather than specific features or products themselves. The key insight is that people don't purchase items merely to possess them but to improve their circumstances, which explains why dissatisfied customers typically switch providers silently rather than complaining and why people's stated preferences often contradict their actual behaviors.
+Customer understanding hinges on the fundamental principle that people don't buy products for their features but to make progress in their lives. Rather than complaining, dissatisfied customers typically switch providers silently, and there's often a significant disconnect between what people say they want and what they actually do in practice (evidenced by companies like Ryanair that have poor brand perception yet strong growth).
 
-Customer needs should be understood as dynamic interactions between the individual, their desired progress, and the product they "hire" to achieve it—known as Jobs To Be Done (JTBD). This perspective shifts focus from what activities customers perform to what outcomes they're trying to accomplish, recognizing that needs evolve over time and aren't inherent to the customer. To successfully market products, companies must either outperform existing solutions or influence customers to redefine their jobs to be done, creating demand for new solutions.
+The Jobs To Be Done (JTBD) framework conceptualizes needs as dynamic interactions between customers, their desire for progress, and the products they "hire" to achieve this progress. This perspective shifts focus from activities to outcomes, recognizing that needs evolve rather than being inherent to customers. For successful product adoption, companies must either outperform existing solutions or influence customers to redefine their jobs, creating new demand.
 
 ---
 
