@@ -25,7 +25,7 @@ Product discovery is the process of validating that we're building the right thi
 
 ## Research Methods
 - [[99 - 📄 To process/Product discovery#Discovery Interviewing|Discovery Interviewing]] - Effective customer interview techniques
-- [[99 - 📄 To process/Qualitative research|Qualitative Research]] - Methods for gathering qualitative data
+- [[02 - 📩 Inbox/Qualitative research|Qualitative Research]] - Methods for gathering qualitative data
 - [[Recruiting for a research|Research Recruiting]] - Finding and recruiting research participants
 
 ## Experimentation

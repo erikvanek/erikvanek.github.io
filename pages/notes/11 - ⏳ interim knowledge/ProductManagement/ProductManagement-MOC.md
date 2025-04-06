@@ -26,7 +26,7 @@ Product Management encompasses the processes, methodologies, and frameworks used
 - [[99 - 📄 To process/Measuring Business Value]] - Approaches to quantify product impact
 
 ## Research & Validation
-- [[99 - 📄 To process/Qualitative research]]
+- [[02 - 📩 Inbox/Qualitative research]]
 - Experimentation approaches
 - User testing methodologies
 
