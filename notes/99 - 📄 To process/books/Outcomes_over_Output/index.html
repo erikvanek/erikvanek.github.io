@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="outcomes_over_output">Outcomes_over_Output</h1>
+
+    <h1 id="outcomes-over-output">Outcomes over Output</h1>
+<h2 id="core-principles">Core Principles</h2>
+<ul>
+<li>An outcome is a change in human behavior that drives business results</li>
+<li>Outcomes are delivered by changing customer behavior</li>
+<li>Don't mistake making features for being done, which is a legacy from industrial age</li>
+<li>Ideally you want to achieve an outcome by delivering as few features as possible</li>
+<li>Program-logic-model: activities → outputs → outcome → impact</li>
+<li>Managing impact is too abstract; managing outputs might not yield outcome</li>
+<li>We want to manage with outcomes - to ensure that we're driving towards changing customer behavior that brings business results</li>
+</ul>
+<h2 id="outcomes-vs-outputs">Outcomes vs. Outputs</h2>
+<ul>
+<li>&quot;What is the customer behavior change we are looking for?&quot;</li>
+<li>When working with outcomes, we need a companion tool - an experiment</li>
+<li>Power combo: outcome-based approach combined with experiments</li>
+<li>E.g. instead of building a well - try out hoses from a river</li>
+<li>MVP is an example of an experiment</li>
+<li>Outcomes (behavior change) → impact (increase in revenue, loyalty...) is a side effect</li>
+<li>Designing for outcomes, when done well, yields impact</li>
+<li>To figure out what desired outcomes (i.e. customer actions that drive business value), we must understand what customers are doing that drives the results we care about</li>
+</ul>
+<h2 id="implementing-outcome-based-thinking">Implementing Outcome-Based Thinking</h2>
+<ul>
+<li>When we state goals with outcomes, we propose some relationship between our work and its results which we can then capture in a hypothesis and test with an experiment</li>
+<li>3 magic questions:
+<ol>
+<li>What are the user and customer actions that drive business results?</li>
+<li>How can we make people do more of these actions?</li>
+<li>How do we know that we're right?</li>
+</ol>
+</li>
+<li>Leaders think about impact, executors are responsible for outputs and outcome</li>
+<li>The key is to communicate in desired outcomes and the impact we wish to bring with them</li>
+<li>E.g. impact (reduce cost) → outcome (fewer people calling tech support) → output (improved usability of confusing features)</li>
+<li>By having well-defined outcomes, it's easier to track progress</li>
+<li>Great starting question: &quot;What customer/user/employee behaviors has this initiative created that drives business results?&quot;</li>
+</ul>
+<h2 id="outcome-based-planning">Outcome-Based Planning</h2>
+<ul>
+<li>Outcome-based planning is centered around outcome-based roadmap</li>
+<li>Be honest about what you know and don't know and fill in what you don't know by gathering appropriate data</li>
+<li>Roadmaps are supposed to help organizations manage uncertainty - the problem is that they are focused mostly on assumptions and fiction</li>
+<li>Metaphor: planning crossing a desert of an unknown size - filled with unknowns, uncertainty and unknowables</li>
+<li>Promising a roadmap with certainty is really hard to do when we center around outputs - we're promising a certain feature by a certain date</li>
+<li>Plan in terms of outcomes and center roadmap around sets of outcomes</li>
+<li>To do that we must identify a set or a system of outcomes that taken together will create the result you want</li>
+<li>One way to visualize this is to use customer journey maps because it helps to visualize behavior (and behavior relates to outcomes)</li>
+<li>After visualizing - ask &quot;what behaviors at each step predict failure/success&quot; → this helps us to define boosters/blockers</li>
+<li>With this approach - the roadmap is more oriented at questions/hypothesis and filling in blanks/eliminating dead ends</li>
+</ul>
+<h2 id="organizational-adoption-challenges">Organizational Adoption Challenges</h2>
+<ul>
+<li>Biggest obstacle for adopting outcomes over outputs is that organizations are often organized around making stuff</li>
+<li>&quot;How could a manager of an iOS team work on an initiative of re-engaging customers?&quot;</li>
+<li>Item detail page - crucial for any e-commerce business: instead of &quot;IDP redesign&quot;, reframe as &quot;boost sales by 10% from IDP&quot;</li>
+<li>Instead of talking about a feature set, shift to a desired outcome (impact) an initiative brings</li>
+<li>In outcome-based work, teams need to be clear about the value they are trying to create - they need to know the outcome they deliver to clients/users and to the organization</li>
+<li>You need to have a theory that if you create a certain impact for the customer, it will yield a certain outcome for the business</li>
+<li>E.g. &quot;if we decrease the bounce rate, the users will complete the checkout at a higher rate&quot;</li>
+<li>Problem with output-driven teams is that they give an illusion of control because often they work with fixed feature sets and deadlines</li>
+<li>Finished feature ≠ value delivery</li>
+<li>Instead of focusing on lists of features, we should aim on managing a list of hypotheses with expected metrics connected to them and continuous evaluation</li>
+<li>Trust is a key ingredient for success in adopting outcome-oriented approach</li>
+<li>A basic problem of output-based planning is not knowing what value each feature brings, thus it is hard to prioritize</li>
+<li>Outcome = problem focused, output = solution focused</li>
+<li>Outcomes are hard to think about as they are abstract, features are more concrete</li>
+<li>It's a big fundamental shift and giving up control - people figuring out what to do are no longer people owning the results</li>
+</ul>
+<h2 id="organizational-implementation">Organizational Implementation</h2>
+<ul>
+<li>Outcome-based thinking on organizational level has three pillars:
+<ol>
+<li>Your colleagues are your customers - this mindset allows to bridge silos and gaps especially in large organizations</li>
+<li>Everything is an outcome</li>
+<li>Everything is an experiment</li>
+</ol>
+</li>
+<li>When thinking about metrics, use framing: &quot;if we were successful with this initiative, what would be different about customer's behavior?&quot;</li>
+<li>When you use outcomes to build your plans, you make progress by running experiments</li>
+</ul>
+<h2 id="the-outcomes-learning-cycle">The Outcomes Learning Cycle</h2>
+<ul>
+<li>Build experiments</li>
+<li>Measure outcomes</li>
+<li>Learn and iterate</li>
+</ul>
+
+
+    
+</body>
+
+</html>

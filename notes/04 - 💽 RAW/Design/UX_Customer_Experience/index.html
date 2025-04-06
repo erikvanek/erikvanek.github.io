@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="ux_customer_experience">UX_Customer_Experience</h1>
+
+    <h1 id="ux-a-zkaznick-zkuenost-cx">UX a zákaznická zkušenost (CX)</h1>
+<h2 id="ux-metriky-z-a-hrefnotes99-to-processknowledgedesignux_metrikyux-metrikya">UX metriky (z <a href="/notes/99 - 📄 To process/Knowledge/Design/UX_Metriky/">UX Metriky</a>)</h2>
+<h3 id="vkonnostn-metriky">Výkonnostní metriky</h3>
+<ul>
+<li><strong>Úspěšnost úkolu</strong>: Binární (ano/ne) nebo na škále (plně úspěšný až neúspěšný)</li>
+<li><strong>Čas strávený na úkolu</strong>: Měření doby, analýza času mezi verzemi</li>
+<li><strong>Chybovost a efektivita</strong>: Počet chyb a kroků k dokončení úkolu</li>
+<li><strong>Míra osvojení</strong>: Zlepšení výkonu při opakovaném používání, učící křivka</li>
+</ul>
+<h3 id="self-reporting-metriky">Self-reporting metriky</h3>
+<ul>
+<li><strong>Hodnotící škály</strong>: Likertova škála, sémantický diferenciál</li>
+<li><strong>Standardizované dotazníky</strong>: TAM, SUS, UMUX</li>
+</ul>
+<h3 id="behaviorln-a-fyziologick-metriky">Behaviorální a fyziologické metriky</h3>
+<ul>
+<li><strong>Eye-tracking</strong>: Fixace a sakády, heatmapy, sledování čtecích sekvencí</li>
+<li><strong>Měření emocí a stresu</strong>: Biometrické senzory, analýza výrazů obličeje, hlasová analýza</li>
+</ul>
+<h2 id="cx-metriky-z-a-hrefnotes99-to-processknowledgedesigncx_metrikycx-metrikya">CX metriky (z <a href="/notes/99 - 📄 To process/Knowledge/Design/CX_Metriky/">CX Metriky</a>)</h2>
+<h3 id="postojov-metriky">Postojové metriky</h3>
+<ul>
+<li><strong>NPS (Net Promoter Score)</strong>: Měření loajality zákazníka a ochoty doporučit (0-10)</li>
+<li><strong>CSAT (Customer Satisfaction Score)</strong>: Přímá spokojenost s konkrétní interakcí</li>
+<li><strong>CES (Customer Effort Score)</strong>: Míra úsilí potřebného k dosažení výsledku</li>
+</ul>
+<h3 id="produktov-metriky">Produktové metriky</h3>
+<ul>
+<li><strong>North Star metrika</strong>: Hlavní hodnota produktu pro zákazníky</li>
+<li><strong>OKR (Objectives - Key Results)</strong>: Ambiciózní cíle a měřitelné výsledky</li>
+<li><strong>KPI (Key Performance Indicators)</strong>: Operativní monitoring výkonnosti</li>
+</ul>
+<h2 id="kombinovn-metrik">Kombinování metrik</h2>
+<h3 id="heart-framework-google">HEART Framework (Google)</h3>
+<p>Framework pro komplexní hodnocení uživatelské zkušenosti:</p>
+<ul>
+<li><strong>H</strong>appiness (Spokojenost): Subjektivní dojmy</li>
+<li><strong>E</strong>ngagement (Zapojení): Aktivní interakce</li>
+<li><strong>A</strong>doption (Přijetí): Kolik uživatelů začíná systém používat</li>
+<li><strong>R</strong>etention (Udržení): Vracející se uživatelé</li>
+<li><strong>T</strong>ask success (Úspěšnost úkolu): Efektivita dokončování úkolů</li>
+</ul>
+<h3 id="pirateaarrr-framework">Pirate/AARRR Framework</h3>
+<p>Framework pro startupové prostředí a hodnocení zákaznické cesty:</p>
+<ul>
+<li><strong>A</strong>cquisition (Získání): Jak se uživatelé dostávají k produktu</li>
+<li><strong>A</strong>ctivation (Aktivace): První zkušenost s produktem</li>
+<li><strong>R</strong>etention (Udržení): Opakované používání</li>
+<li><strong>R</strong>evenue (Příjem): Generování příjmů</li>
+<li><strong>R</strong>eferral (Doporučení): Šíření mezi dalšími uživateli</li>
+</ul>
+<h2 id="navrhovn-experiment-z-a-hrefnotes99-to-processknowledgedesigndesignove_experimenty_metodikadesignov-experimenty-metodikaa">Navrhování experimentů (z <a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Designové experimenty - metodika</a>)</h2>
+<h3 id="operacionalizace">Operacionalizace</h3>
+<p>Převod obecných otázek do konkrétních měřitelných metrik</p>
+<ul>
+<li>Příklad: &quot;Je tato navigace lepší?&quot; → &quot;Kolik uživatelů najde cílovou stránku do 30 sekund?&quot;</li>
+</ul>
+<h3 id="formulace-hypotzy">Formulace hypotézy</h3>
+<ul>
+<li>Tvrzení (belief)</li>
+<li>Důkazy, které budeme hledat (evidence)</li>
+</ul>
+<h3 id="vbr-vhodnch-metrik">Výběr vhodných metrik</h3>
+<ul>
+<li>Relevantní pro experiment</li>
+<li>Měřitelné s dostupnými prostředky</li>
+<li>Interpretovatelné ve vztahu k hypotéze</li>
+<li>Poskytující akční vhledy</li>
+</ul>
+<h2 id="souvisejc-poznmky">Související poznámky</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Courses/DESB42_Designove_experimenty/">DESB42: Designové experimenty</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/UX_Metriky/">UX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/CX_Metriky/">CX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Metodika designových experimentů</a></li>
+<li><a href="#" class="pending-link">Měření obchodní hodnoty</a></li>
+<li><a href="#" class="pending-link">Product Discovery</a></li>
+<li><a href="/notes/02 - 📩 Inbox/Behavior design/">Behavior Design</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

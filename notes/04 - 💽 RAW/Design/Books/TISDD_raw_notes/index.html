@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="this-is-service-design-doing-raw-notes">This is Service Design Doing - Raw Notes</h1>
+
+    <h1 id="raw-transcription-of-tisdd-book-notes">Raw Transcription of TISDD Book Notes</h1>
+<h2 id="page-1">Page 1</h2>
+<ul>
+<li>later on we can build more specialized ptd like UXs, ethnographers...</li>
+<li>always be aware of the bias you bring &amp; associated influence<br>
+e.g. concept owners have tendency to make the prototype survive...</li>
+<li>... fidelity = level of detail</li>
+<li>economic principle of prototyping: &quot;The best prototype<br>
+is the one that in its simplest way makes the pos-<br>
+sibilities and limitations of a design idea visible &amp; measurable&quot;</li>
+<li>different fidelity needs for different parts/stages</li>
+<li>lo-fi tend to inspire more open discussions<br>
+while hi-fi are more about details</li>
+<li>(usually the later the stage, the higher the fidelity))</li>
+<li>usually early &quot;explorative&quot;, later = evaluative &amp; communicative</li>
+</ul>
+<h3 id="ctx">CTX</h3>
+<ul>
+<li>contextual x (lab → obsr. preferred, but more difficult/<br>
+the closer the CTX to the intended impl, more reliable feedbck</li>
+</ul>
+<h3 id="loops">Loops</h3>
+<ul>
+<li>always plan prototyping as an iterative series of loops<br>
+to each w/ different questions</li>
+<li>first loops are often exploratory</li>
+<li>continuously check that selected loops deliver expected results</li>
+<li>consider establishing sprint-like structure</li>
+</ul>
+<h3 id="multitracking">Multitracking</h3>
+<ul>
+<li>can be in parallel or in sequence → [diagram with arrows]</li>
+</ul>
+<h3 id="method-selection">Method selection</h3>
+<ul>
+<li>the key to method selection is to choose those that give<br>
+you the most useful data to support later iterations</li>
+<li>method triangulation</li>
+<li>a rule of thumb - one of each:
+<ul>
+<li>validating core value proposition</li>
+<li>CX exploration e.g. desktop/CTX walkthroughs,<br>
+business origami, AX model canvas/map</li>
+<li>key elements e.g. paper/cardboard prototypes, mockups,...</li>
+</ul>
+</li>
+</ul>
+<h2 id="page-2">Page 2</h2>
+<ul>
+<li>it answers the question &quot;How do we create value?&quot; i.e. what<br>
+can the service do/fulfill/address [Triangle diagram with FEASIBILITY/VALUE/VIABILITY and arrows]</li>
+</ul>
+<h3 id="assessing-what-to-build">Assessing what to build</h3>
+<ul>
+<li>future-state journeys can help to<br>
+break down the project into:
+<ul>
+<li>IXs, KPs</li>
+<li>phys. objects</li>
+<li>spaces/architecture</li>
+<li>dig./software</li>
+<li>ecosystems, (business) values</li>
+</ul>
+</li>
+<li>prototyping portfolio can help decide on what to prototype</li>
+</ul>
+<h3 id="planning-prototyping">Planning prototyping</h3>
+<ul>
+<li>wisely allocate time, money &amp; ppl</li>
+<li>decides audience, authorship, fidelity, loops, multitracking</li>
+</ul>
+<h3 id="audience">Audience</h3>
+<ul>
+<li>similar to when recruiting for research</li>
+<li>goal is to get as close as possible to real users</li>
+<li>but shortcuts like internal testing could work/suffice</li>
+</ul>
+<h3 id="roles">Roles</h3>
+<ul>
+<li>concept owner - who came up w/ the idea</li>
+<li>model maker - the person writing the script and sketching out the scene, preparing props</li>
+<li>facilitator - guides the audience through the session</li>
+<li>actors &amp; operators - assist the facilitator during the session,<br>
+can be acting as staff, or mock customers</li>
+<li>researcher - independent observer recording insights</li>
+<li>experts &amp; key stakeholders - adding special skills<br>
+and deep knowledge</li>
+<li>often one person can hold multiple roles,<br>
+especially at the beginning</li>
+</ul>
+<h2 id="page-3">Page 3</h2>
+<h3 id="recruiting-options">Recruiting options</h3>
+<ul>
+<li>can be A-B (2x2) instead of any pair/size</li>
+</ul>
+<h3 id="physical-formats">Physical formats</h3>
+<ul>
+<li>from existing &amp; FTF to online integration</li>
+</ul>
+<h3 id="prototyping">Prototyping</h3>
+<ul>
+<li>to reduce uncertainty/risk, identify &amp; explore<br>
+alternative solutions &amp; build on what works</li>
+<li>create a shared understanding of ideas &amp; concepts</li>
+<li>the art of balancing part prototyping vs. holistic service-journey</li>
+<li>often uncovers new questions and sends team back to the team</li>
+<li>reducing bias by prototyping &amp; testing in realistic CTXs</li>
+</ul>
+<h3 id="purpose">Purpose</h3>
+<ul>
+<li>deciding why we're prototyping &amp; what we want to achieve<br>
+upfront is important</li>
+<li>usually for 3 main reasons:
+<ul>
+<li>to explore new options &amp; future solutions, &quot;ideation at work&quot;</li>
+<li>mostly done for yourself or the core team</li>
+<li>to evaluate / as evaluative - to explore how people experience<br>
+the future we're suggesting, usually helps to converge and<br>
+reduce options you have and clarify what to focus on
+<ul>
+<li>sessions usually include a set of hypotheses to be tested</li>
+</ul>
+</li>
+<li>to communicate / as communicative - tailored prototypes<br>
+to specific audience to reduce misunderstandings<br>
+and to kickstart meaningful discussions w/ relevant ppl
+<ul>
+<li>should reduce friction</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="questions">Questions</h3>
+<ul>
+<li>each phase states relevant question prototype should answer</li>
+<li>think of them as research questions</li>
+<li>selecting the focus of the prototype is the art of prototyping</li>
+<li>where prototypes are a great starting point</li>
+</ul>
+<h2 id="page-4">Page 4</h2>
+<h3 id="this-is-service-design-doing">THIS IS SERVICE DESIGN DOING</h3>
+<ul>
+<li>create - customer research / front</li>
+<li>makes visible what other companies' similar approach already made</li>
+<li>how they innovate and think of what/how more be there</li>
+<li>finding customer needs</li>
+<li>a dumping &amp; dating process</li>
+<li>I &amp; shadow customer journeys</li>
+<li>contextual interviews</li>
+<li>will also be met needs / insights</li>
+<li>it's not feasibility but desirability (referring to tri model)</li>
+</ul>
+<h3 id="basic-process">BASIC PROCESS</h3>
+<ul>
+<li>research → shapes ideas → prototyping → pilot → implement</li>
+<li>backcasting (vs journey e-knowledge) builds on:
+<ul>
+<li>ideas of future scenarios</li>
+<li>concept development</li>
+<li>iterating to build brief</li>
+</ul>
+</li>
+<li>when doing (customer) testing / research get to know:
+<ul>
+<li>people (customers / employees / and other stakeholders)</li>
+<li>human behavior</li>
+<li>2D/3D physical space</li>
+<li>existing or future interactions</li>
+</ul>
+</li>
+</ul>
+<h3 id="doing">Doing</h3>
+<ul>
+<li>Is doing everything together (concept + business + model + brand focus + technology + management)</li>
+</ul>
+
+
+    
+</body>
+
+</html>

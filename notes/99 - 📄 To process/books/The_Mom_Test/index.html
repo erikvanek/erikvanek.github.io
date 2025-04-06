@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="the_mom_test">The_Mom_Test</h1>
+
+    <h1 id="the-mom-test">The Mom Test</h1>
+<h2 id="core-principles">Core Principles</h2>
+<ul>
+<li>Be genuinely interested about the people to open their hearts</li>
+<li>The measure of usefulness of early customer interviews is whether they give us facts about our customer's lives and world views</li>
+<li>The big mistake is to mention your idea too soon rather than too late</li>
+<li>&quot;Talk me through the last time [it] happened&quot; is a great question promoting show don't tell</li>
+<li>Customers own the problem, builders own the solution</li>
+</ul>
+<h2 id="handling-customer-feedback">Handling Customer Feedback</h2>
+<ul>
+<li>Beware of bad data: compliments and fluff
+<ul>
+<li>Compliments: &quot;We love it...&quot;</li>
+<li>Fluff: generic claims (&quot;I always/never...&quot;), future promises (&quot;I would/will&quot;), hypotheticals (&quot;I might/could&quot;)</li>
+</ul>
+</li>
+<li>Fight fluff by asking about the last time they did something or how they tried to solve it</li>
+<li>Most fluffy thing: &quot;I would buy that&quot;</li>
+<li>Banned verbs: would/could/might</li>
+<li>Cut down fluff by anchoring to the real</li>
+<li>&quot;There might be an easier way of helping you achieve X&quot; as a reframe for feature requests</li>
+<li>We're searching for the truth, not to be right</li>
+<li>Don't prematurely zoom in unless you're pretty sure you're zooming into the right thing</li>
+</ul>
+<h2 id="interview-planning-amp-execution">Interview Planning &amp; Execution</h2>
+<ul>
+<li>Plan what are the most important three things you want to learn from each person</li>
+<li>When snowballing, start with friendly first contacts</li>
+<li>Formal setup might decrease the chance for serendipitous learning</li>
+<li>If it feels like they're doing you a favor by talking to you, it's probably too formal</li>
+<li>The duration of formal B2B interviews is mostly determined by the arbitrary length of a calendar block - what we came for is usually achieved within 20 minutes</li>
+<li>A meeting succeeded if it has clear next steps defined in order to move progress further</li>
+<li>Ending the meeting with a rejection of next steps is not necessarily a failure but a negative data point - the real failure is not even asking for further progress</li>
+</ul>
+<h2 id="customer-qualification">Customer Qualification</h2>
+<ul>
+<li>Major currencies our partners are investing are time, reputation risk and money</li>
+<li>Sometimes strong commitment combines multiple currencies</li>
+<li>Not having a chance to be introduced to other stakeholders is a bad sign</li>
+<li>It's not a real lead until you gave them a concrete chance to reject you</li>
+<li>Look for &quot;This is the worst part of my life and you can help me fix it&quot; as those might be most prospective clients</li>
+<li>When you see a deep emotion - make sure to keep those people close to you</li>
+<li>The goal of early stages is learning, revenue is a side-effect</li>
+<li>The goal of cold conversations is to stop having them</li>
+</ul>
+<h2 id="interview-format">Interview Format</h2>
+<ul>
+<li>The only thing people love talking more about than themselves is to talk about their problems</li>
+<li>Ask for an interview format: Vision → Framing → Weakness → Pedestal → Help</li>
+<li>Helps to set appropriate expectations when arranging to talk to someone that might be hard to get</li>
+<li>What I aim to do → where I'm at right now → What am I missing now → what can you help with → Ask for help</li>
+<li>Make them stars of the show</li>
+</ul>
+<h2 id="customer-segmentation">Customer Segmentation</h2>
+<ul>
+<li>Customer segmentation as a tool not to drown in a myriad of options</li>
+<li>Before we can serve everyone, we must serve someone</li>
+<li>Customer slicing - the act of narrowing down customer profile based on our continuous learning</li>
+<li>Once we know what is our slice, the next question to have an answer to is where to find these people</li>
+<li>Customer segments are who-where pair</li>
+<li>It's good to know what commitment and next steps are expected at the end of the interview</li>
+<li>The point of desk research is to find answers to the obvious</li>
+<li>If you don't know why you're having a conversation, you should not bother having it</li>
+<li>Having some symbols to illustrate common situations like pain, opportunity... can be handy</li>
+</ul>
+
+
+    
+</body>
+
+</html>

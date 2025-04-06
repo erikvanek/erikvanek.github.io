@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="po-operaci">Po operaci</h1>
+
+    <h2 id="vzdln">Vzdělání</h2>
+<ul>
+<li><a href="https://course.elementsofai.com/cs/">https://course.elementsofai.com/cs/</a>
+<ul>
+<li>kurz o AI zdarma</li>
+</ul>
+</li>
+<li><a href="https://docs.kumu.io/getting-started/kumu-101">https://docs.kumu.io/getting-started/kumu-101</a>
+<ul>
+<li>mrknout se na kumu</li>
+<li>dát tomu dvě tři čtyři hoďky a zkusit si v tom udělat nějaký sample projekt</li>
+</ul>
+</li>
+<li><a href="https://learnprompting.org/">https://learnprompting.org/</a>
+<ul>
+<li>art of prompting</li>
+</ul>
+</li>
+<li>mrknout na články na SSIR
+<ul>
+<li><a href="https://ssir.org/articles/entry/design_thinking_for_social_innovation#">https://ssir.org/articles/entry/design_thinking_for_social_innovation#</a></li>
+<li><a href="https://ssir.org/articles/entry/how_to_tell_stories_about_complex_issues">https://ssir.org/articles/entry/how_to_tell_stories_about_complex_issues</a></li>
+<li><a href="https://ssir.org/articles/entry/how_to_tell_real_stories_about_impact">https://ssir.org/articles/entry/how_to_tell_real_stories_about_impact</a></li>
+<li><a href="https://ssir.org/articles/entry/the_innovators_tale_of_the_phoenix_and_dragon">https://ssir.org/articles/entry/the_innovators_tale_of_the_phoenix_and_dragon</a></li>
+<li><a href="https://ssir.org/books/excerpts/entry/thinking_about_thinking">https://ssir.org/books/excerpts/entry/thinking_about_thinking</a></li>
+<li><a href="https://ssir.org/articles/entry/social_innovation_that_leads_to_liberation">https://ssir.org/articles/entry/social_innovation_that_leads_to_liberation</a></li>
+<li><a href="https://ssir.org/articles/entry/rediscovering_social_innovation">https://ssir.org/articles/entry/rediscovering_social_innovation</a></li>
+<li><a href="https://ssir.org/articles/entry/can_cities_be_the_source_of_scalable_innovations">https://ssir.org/articles/entry/can_cities_be_the_source_of_scalable_innovations</a></li>
+<li><a href="https://www.tandfonline.com/doi/full/10.1080/15710882.2021.2021244">https://www.tandfonline.com/doi/full/10.1080/15710882.2021.2021244</a></li>
+</ul>
+</li>
+<li>kick-off meetingy
+<ul>
+<li><a href="https://www.smashingmagazine.com/2015/01/hold-a-kickoff-meeting-before-diving-into-the-design/">https://www.smashingmagazine.com/2015/01/hold-a-kickoff-meeting-before-diving-into-the-design/</a></li>
+<li><a href="https://alistapart.com/article/kick-ass-kickoff-meetings/">https://alistapart.com/article/kick-ass-kickoff-meetings/</a></li>
+</ul>
+</li>
+<li>Mrknout na WBW
+<ul>
+<li>o kariéře <a href="https://waitbutwhy.com/2018/04/picking-career.html">https://waitbutwhy.com/2018/04/picking-career.html</a></li>
+<li>a AI revolution <a href="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html</a></li>
+</ul>
+</li>
+<li>Khan academy
+<ul>
+<li>neco zajimavyho tam :)</li>
+</ul>
+</li>
+<li>Investovani
+<ul>
+<li>investicni brambora</li>
+<li>najmy hypiny uroky</li>
+<li>spočítat si jak je to s nájmama</li>
+<li>neinvestovat do něčeho, čemu člověk nerozumí
+<ul>
+<li>čemu rozumím?</li>
+</ul>
+</li>
+<li>největší riziko investování je sám člověk, který investuje</li>
+<li>je důležitý si transakce promyslet</li>
+<li>daniel gladiš</li>
+<li>ondřej koběrský</li>
+</ul>
+</li>
+</ul>
+<h2 id="todo">Todo</h2>
+<ul>
+<li>sezónní recepty
+<ul>
+<li>sepsat si nějaké recepty podle toho co kdy je jak dostupné a co na kdy chystat</li>
+<li>prostě si udělat &quot;vlastní kuchařku&quot;, která klidně může odkazovat na internetový zdroje</li>
+<li>dát si online kurz na kreslení</li>
+<li>ujasnit si kam jdu</li>
+<li>spočítat si cash flow a peníze obecně
+<ul>
+<li>kolik potřebuju za měsíc, kolik jsem urval letos, kolik chci příští rok, kolik kam cpát atd</li>
+<li>nastavit pravidelné investice</li>
+<li>jednou za měsíc si udělat revizi</li>
+<li>nastavit si nějaký cíl vzhledem k bydlení</li>
+<li>proč pořád ponižuju to co dělám? proč nedokážu být víc hrdej na to kam jsem se dokázal dostat?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    
+</body>
+
+</html>

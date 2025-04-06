@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="agile">agile</h1>
+
+    <ul>
+<li>blog of authors of Lean canvas <a href="https://leanstack.com/">https://leanstack.com/</a></li>
+<li><a href="https://www.lennysnewsletter.com/p/how-linear-builds-product">WoW in Linear</a>
+<ul>
+<li><a href="https://linear.app/method">Linear method</a></li>
+</ul>
+</li>
+<li><a href="https://basecamp.com/shapeup">Shape up</a></li>
+<li><a href="https://open.spotify.com/show/512srmQyB2LQTLVQzIsFV3">Imagining Arc</a> podcast</li>
+<li><a href="https://open.spotify.com/show/6BuKkGfVR7FDaB3VPrN5fo">Dive club</a> podcast</li>
+<li><a href="https://www.producttalk.org/">Continuous discovery habits</a></li>
+<li><a href="https://wunder.io/insights/positive-feedback-system-hugs">Hugs</a> in Wunder</li>
+<li>SVPG</li>
+</ul>
+<h2 id="people">people</h2>
+<ul>
+<li>design
+<ul>
+<li>Mark Monteiro</li>
+<li>Jared Spool</li>
+</ul>
+</li>
+<li>PM
+<ul>
+<li>Lenny's</li>
+<li>Teresa torres</li>
+</ul>
+</li>
+</ul>
+<h2 id="orgs">orgs</h2>
+<ul>
+<li>Basecamp</li>
+<li>Doist</li>
+<li>Linear<br>
+ ## articles<br>
+ - <a href="https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2">https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2</a><br>
+ - why this class is not remote <a href="https://www.newyorker.com/culture/annals-of-inquiry/can-remote-work-be-fixed">https://www.newyorker.com/culture/annals-of-inquiry/can-remote-work-be-fixed</a></li>
+</ul>
+<h2 id="articles">articles</h2>
+<p>- [<a href="https://browsercompany.substack.com/p/the-age-of-the-app-is-over">https://browsercompany.substack.com/p/the-age-of-the-app-is-over</a>](the age of the app is over)<br>
+- [<a href="https://thebrowser.company/values/#assume">https://thebrowser.company/values/#assume</a>](Arc company values)</p>
+<h2 id="fake-agile-or-agile-crit">fake agile or agile crit</h2>
+<ul>
+<li><a href="https://eekim.com/2017/04/jeff-bezos-on-process-as-proxy/">https://eekim.com/2017/04/jeff-bezos-on-process-as-proxy/</a>
+<ul>
+<li>včetně jeho dopisu</li>
+<li>&quot;There are many ways to center a business. You can be competitor focused, you can be product focused, you can be technology focused, you can be business model focused, and there are more. <strong>But in my view, obsessive customer focus is by far the most protective of Day 1 vitality.</strong>&quot;</li>
+<li>&quot;Staying in Day 1 requires you to experiment patiently, accept failures, plant seeds, protect saplings, and double down when you see customer delight. A customer-obsessed culture best creates the conditions where all of that can happen.&quot;</li>
+<li>&quot;Good inventors and designers <em>deeply</em> understand their customer. They spend tremendous energy developing that intuition. They study and understand many anecdotes rather than only the averages you’ll find on surveys. They <em>live</em> with the design.&quot;</li>
+</ul>
+</li>
+<li>fake agile
+<ul>
+<li><a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/">https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/</a></li>
+</ul>
+</li>
+<li>beyond agile<br>
+- <a href="https://www.svpg.com/beyond-lean-and-agile/">https://www.svpg.com/beyond-lean-and-agile/</a></li>
+<li>Allan Kelly on agile
+<ul>
+<li><a href="https://www.allankelly.net/writing/agile_insights/">https://www.allankelly.net/writing/agile_insights/</a></li>
+<li><a href="https://www.allankelly.net/static/wrip/WhyAgile.pdf">https://www.allankelly.net/static/wrip/WhyAgile.pdf</a></li>
+<li><a href="https://www.allankelly.net/static/wrip/WhatIsAgile.pdf">https://www.allankelly.net/static/wrip/WhatIsAgile.pdf</a></li>
+<li><a href="https://www.agileconnection.com/article/dear-customer-truth-about-it-projects">https://www.agileconnection.com/article/dear-customer-truth-about-it-projects</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="podcasts">podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s">https://open.spotify.com/episode/2cReeTqGYRaJScDdIPBf9s</a></li>
+</ul>
+<h2 id="videos">videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qixx7ESrJQg&amp;t=929s">https://www.youtube.com/watch?v=qixx7ESrJQg&amp;t=929s</a></li>
+<li>computing concepts for designers <a href="https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos">https://www.youtube.com/channel/UC7KUkMHVfmnxCibm-oFzLPw/videos</a></li>
+<li>Building timeline in Linear
+<ul>
+<li><a href="https://www.youtube.com/watch?v=kCQ29IGMnB4">https://www.youtube.com/watch?v=kCQ29IGMnB4</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ai-assisted-prototyping">AI-assisted prototyping</h2>
+<ul>
+<li><a href="https://bolt.new/">https://bolt.new/</a></li>
+<li><a href="https://lovable.dev/?via=amit">https://lovable.dev/?via=amit</a></li>
+<li>v0</li>
+<li><a href="https://replit.com/">https://replit.com/</a></li>
+<li><a href="https://codeium.com/windsurf">https://codeium.com/windsurf</a></li>
+</ul>
+<h2 id="vibe-codingdesign">Vibe coding/design</h2>
+<ul>
+<li><a href="https://www.uxtigers.com/post/vibe-coding-vibe-design">https://www.uxtigers.com/post/vibe-coding-vibe-design</a></li>
+<li><a href="https://www.youtube.com/watch?v=MQw_zncxk-E&amp;list=WL&amp;index=21&amp;t=146s">https://www.youtube.com/watch?v=MQw_zncxk-E&amp;list=WL&amp;index=21&amp;t=146s</a></li>
+</ul>
+<h2 id="prototyping">Prototyping</h2>
+<ul>
+<li><a href="https://uxdesign.cc/why-you-should-bring-prototyping-into-your-design-process-fb25b679accb">https://uxdesign.cc/why-you-should-bring-prototyping-into-your-design-process-fb25b679accb</a></li>
+<li><a href="https://uxdesign.cc/prototyping-youre-halfway-there-cde5a80be214">https://uxdesign.cc/prototyping-youre-halfway-there-cde5a80be214</a></li>
+</ul>
+<h2 id="presentations">Presentations</h2>
+<p><a href="https://designintech.report/designintechreport-2024.html#/title-slide">Design in tech report 2024</a> by John Maeda<br>
+Motivace</p>
+<ul>
+<li>AI-assisted building products
+<ul>
+<li><a href="https://dreamcut.ai/">Dreamcut</a></li>
+<li><a href="https://x.com/MengTo/status/184866969">https://x.com/MengTo/status/184866969</a> 4800367901</li>
+<li>or this one <a href="https://www.everydream.com/perspectives/ai-driven-product-design-creation">https://www.everydream.com/perspectives/ai-driven-product-design-creation</a></li>
+</ul>
+</li>
+<li>Transition from designer to builder
+<ul>
+<li><a href="https://www.dive.club/ideas/how-to-build-your-ideas-with-claude-cursor">https://www.dive.club/ideas/how-to-build-your-ideas-with-claude-cursor</a></li>
+</ul>
+</li>
+<li>Optimize for emotions
+<ul>
+<li><a href="https://www.dive.club/ideas/what-makes-design-at-arc-so-unique">https://www.dive.club/ideas/what-makes-design-at-arc-so-unique</a></li>
+<li>What connects those sexy new products is that that make one feel something</li>
+</ul>
+</li>
+<li>Closing the gap between engineering and design
+<ul>
+<li><a href="https://www.dive.club/ideas/the-missing-tool">https://www.dive.club/ideas/the-missing-tool</a></li>
+<li><a href="https://vercel.com/blog/design-engineering-at-vercel">https://vercel.com/blog/design-engineering-at-vercel</a></li>
+</ul>
+</li>
+<li>Other side of AI
+<ul>
+<li><a href="https://www.polaine.com/2025/01/ai-is-a-double-polluter/">https://www.polaine.com/2025/01/ai-is-a-double-polluter/</a> (opinion)</li>
+<li><a href="https://www.youtube.com/watch?v=foYWzdvajvo">https://www.youtube.com/watch?v=foYWzdvajvo</a> chips as a bottleneck</li>
+</ul>
+</li>
+</ul>
+<h2 id="design-engineering">Design engineering</h2>
+<ul>
+<li><a href="https://www.davidhoang.com/writing/building-your-designs">https://www.davidhoang.com/writing/building-your-designs</a></li>
+<li><a href="https://www.davidhoang.com/writing/design-engineering">https://www.davidhoang.com/writing/design-engineering</a></li>
+<li><a href="https://www.dive.club/ideas/death-of-a-design-engineer?_bhlid=188b65d29c765c7feb573cd127a23b8ed677d89a">https://www.dive.club/ideas/death-of-a-design-engineer?_bhlid=188b65d29c765c7feb573cd127a23b8ed677d89a</a></li>
+</ul>
+<p>People</p>
+<ul>
+<li><a href="https://tarng.com/">https://tarng.com/</a><br>
+Resources</li>
+<li><a href="https://tarng.com/notes.html">https://tarng.com/notes.html</a></li>
+</ul>
+<h2 id="iterations">Iterations</h2>
+<ul>
+<li><a href="https://www.lyssna.com/blog/product-iteration/">https://www.lyssna.com/blog/product-iteration/</a></li>
+</ul>
+<h2 id="random">Random</h2>
+<ul>
+<li><a href="https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/">https://zdopravy.cz/pavel-peterka-jsme-ceskymi-ambasadory-na-cizich-kolejich-rika-vrchni-z-jidelniho-vozu-39435/</a></li>
+<li>BPMN or something, learn it, use it</li>
+<li>learn to use your computer without a mouse (use shortcuts)</li>
+<li>experiment culture</li>
+<li>outcome over outputs</li>
+<li>prioritized board a shared understanding</li>
+<li>effective stand-ups</li>
+<li>WoW
+<ul>
+<li>decision process</li>
+<li>DoD</li>
+<li>when things go sour</li>
+<li>ADR</li>
+<li>role rotation<br>
+Blok 6</li>
+</ul>
+</li>
+<li>Storytelling – <a href="https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog">https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
