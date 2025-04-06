@@ -1,0 +1,17 @@
+---
+resources:
+  - https://www.svpg.com/four-big-risks/
+---
+- various risk taxonomies
+- good product teams tackle [big risks first](https://www.svpg.com/beyond-lean-and-agile/), especially the value risk
+- the one used by SVPG
+	- **value** risk (whether customers will buy it or users will choose to use it)
+		- the biggest risk of all
+	- _business viability_ risk (whether this solution also works for the various aspects of our business)
+		- second most important because if not tackled then the org bleeds out
+	- _usability_ risk (whether users can figure out how to use it)
+	- _feasibility_ risk (whether our engineers can build what we need with the time, skills and technology we have)
+- the one developed by IDEO
+	- _desirability_ (combines customer value and usability)
+	- _viability_ 
+	- _feasibility_

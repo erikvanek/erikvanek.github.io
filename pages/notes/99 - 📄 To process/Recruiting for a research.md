@@ -1,0 +1,22 @@
+---
+resources:
+  - https://www.nngroup.com/articles/recruiting-screening-research-candidates/
+  - https://www.torontomu.ca/content/dam/research/documents/ethics/guidelines-for-recruitment-of-research-participants.pdf
+  - https://asana.com/resources/business-process-analysis
+---
+- focus on proper screening before hiring for a research study
+- when cold calling, include a clear CTA when reaching out
+	- screening form
+	- Calendly link to book a time slot directly
+	- it works better to send emails directly to specific people, not to use generic mailboxes like _info@entity.domain_
+- be aware of time friction you can't predict
+	- approval rounds, vacations, internal (de)motivation, hesitancy, ...
+	- writing an email won't yield interviewees for your tomorrow's free time slot
+- iterative / adaptive recruitment
+	- start with a small circle / batch of people, then see how they react, possibly adapt your copy and reach out further
+	- you need to balance out the amount of participants you're interested in to those you need to weed out
+	- it takes time and focus if spread way too much
+- realistically consider 5 – 20 % response rate during cold calling, previous exposure increases chances of people responding back
+- my approach – Kobe Bryant method – You don't score if you don't shoot – if I need to have 10 respondents I need to fire at least 100 mails, maybe more
+- it is worth using [[Calendly]] for scheduling
+- 
