@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="second-brain-system-backlog">Second Brain System Backlog</h1>
+
+    <h1 id="second-brain-system-backlog">Second Brain System Backlog</h1>
+<p>This document tracks pending tasks, improvements, and refinements for the second-brain knowledge management system.</p>
+<h2 id="high-priority">High Priority</h2>
+<ul>
+<li>[x] Remove redundant Prompts file</li>
+<li>[ ] Check if any 06-System folder references remain in other files outside _System</li>
+<li>[ ] Run empty file cleanup to identify and fix any broken references</li>
+<li>[ ] Review and optimize tagging across existing knowledge base</li>
+</ul>
+<h2 id="medium-priority">Medium Priority</h2>
+<ul>
+<li>[ ] Create domain-specific processing templates for specialized content</li>
+<li>[ ] Develop a system for tracking knowledge gaps</li>
+<li>[ ] Improve cross-domain linking between knowledge areas</li>
+<li>[ ] Create visualization of knowledge graph structure</li>
+<li>[ ] Implement quarterly review process for system health</li>
+</ul>
+<h2 id="low-priority">Low Priority</h2>
+<ul>
+<li>[ ] Explore advanced Obsidian plugins for knowledge visualization</li>
+<li>[ ] Design knowledge retrieval exercises to test system effectiveness</li>
+<li>[ ] Create workflow for incorporating external feedback into knowledge base</li>
+<li>[ ] Develop metrics for measuring knowledge base growth and usage</li>
+</ul>
+<h2 id="ideas-for-future-exploration">Ideas for Future Exploration</h2>
+<ul>
+<li>Implement spaced repetition for key insights</li>
+<li>Create project template that pulls from knowledge base</li>
+<li>Develop specialized MOCs for cross-cutting concerns</li>
+<li>Explore integration with other tools in workflow</li>
+</ul>
+<h2 id="completed-tasks">Completed Tasks</h2>
+<ul>
+<li>[x] Merged Prompts into KB_Protocol for unified reference</li>
+<li>[x] Restructured system folder and file naming for easier retrieval</li>
+<li>[x] Added system backlog for tracking improvements</li>
+<li>[x] Standardized Claude interaction protocols</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>This backlog should be reviewed monthly to prioritize next actions and track progress. When implementing changes from this backlog, remember to:</p>
+<ol>
+<li>Update the changelog with what was changed</li>
+<li>Mark items as completed rather than removing them</li>
+<li>Add new items as they are identified</li>
+<li>Reference the specific changes in relevant system documentation</li>
+</ol>
+<h2 id="reference">Reference</h2>
+<p>This backlog supports the system described in:</p>
+<ul>
+<li><a href="/notes/01 - 🤖 Second brain/Obsolete approach/KB_Protocol/">KB_Protocol</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Obsolete approach/Master_Prompt/">Master_Prompt</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Obsolete approach/Guide/">Guide</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Obsolete approach/Workflow/">Workflow</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="research-through-design">Research through design</h1>
+
+    <ul>
+<li>an approach to scientific inquiry using insights to better understand wicked problems
+<ul>
+<li>many problems can never be accurately modeled, thus an engineering approach to addressing them would fail</li>
+<li>E.g. <em>&quot;The design of smart home services for families where parents address the paradox of wanting to care and protect their children while also wanting to make them independent and children face the paradox of desiring the comfort and security their home and family provide while also wanting to step out and discover and invent who they are and might be.&quot;</em></li>
+</ul>
+</li>
+<li>Basically doing design as a research project</li>
+<li>field researchers go after these things in places where the design is supposed to be used</li>
+<li>using methods from ethnography, cultural probes like cameras and diaries, and methods from social science</li>
+<li><strong>In the kind of design research advocated here, researchers build prototypes and are then able to learn what it would be like if the product existed, to act as though it exists, ideally in the place it would be used</strong></li>
+<li>The goal of this new model of design research is to provide stories that tell how people experience the design and what trains of thought came up</li>
+<li>Alain Findeli defined three main design research branches
+<ul>
+<li>research for design - helps to guide and develop design practice ~ traditional research during <a href="/notes/99 - 📄 To process/design/Human-centered design/">Human-centered design</a></li>
+<li>research into design - research studying design</li>
+<li><a href="/notes/99 - 📄 To process/design/Research through design/">Research through design</a> - recasting the design aspect of creation as research; <a href="/notes/99 - 📄 To process/design/Research through design/">Research through design</a> practitioners actually create new products, experiment with materials, processes etc</li>
+</ul>
+</li>
+<li>research in design is not concerned with the &quot;true&quot; but with the &quot;real&quot;</li>
+<li><em>researcher learns about the object of their inquiry through the constant evolution of the artefact, i.e. it “allows for creating a dialog with the material”</em></li>
+<li>Action research has its own validity criterion to make-up for replicability: recoverability. This means that the designer/researcher must make sure that “the process is recoverable by anyone interested in subjecting the research to critical scrutiny”</li>
+<li>Theoretical sensitivity - “the investigator’s ability to use personal and professional experiences and the literature to see the research situation and data in new ways and exploit the potential of the data for developing theory</li>
+<li><em>The designer/researcher is using the project as her or his field for data collection and the validity of the choice of this field comes with the success of the design project.</em></li>
+<li>Flow of the Research through Design
+<ul>
+<li><em>Coupling</em> - The initial step that “unites research and design interests”. During coupling, the basic frame and constraints of the project to serve both level of interests.</li>
+<li><em>Interweaving</em> - At this point research interests and design interests influence each other and the project as processes, methods and validation are established.</li>
+<li><em>Decoupling</em> - Decoupling appears at later points of the project when the designer/researcher must focus on one of the interest set (design or research). For example, decoupling appears during the production phase since it focuses on the design process, but is also appears during the final evaluation and inquiry when the research interests become the focus of the work.</li>
+</ul>
+</li>
+<li>The reality described by RtD is the one that ‘will be’, the preferred state</li>
+<li><a href="/notes/99 - 📄 To process/design/Research through design/">Research through design</a>'s goals, however, are different and the influence of the research inquiry is present at most steps of the project. Documentation of the process is a key concern for designers/researchers using this approach.</li>
+<li>a good Research through Design project first explains how the world is today, and defines a clear direction, a new state of the world. In other words: as a designer, you need to have a vision. You need to know what you’re trying to bring into this world, or what possibilities you’re curious to learn more about.</li>
+<li>the point that Research through Design is more of a way of explaining or labeling what you’ve done, rather than a recipe for doing it</li>
+</ul>
+
+
+    
+</body>
+
+</html>

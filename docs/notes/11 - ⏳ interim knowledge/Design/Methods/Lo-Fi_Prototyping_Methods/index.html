@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/11 - ⏳ interim knowledge">
+                ⬅️ Back to 11   ⏳ interim knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="lo-fi-prototyping-methods">Lo-Fi Prototyping Methods</h1>
+
+    <h1 id="lo-fi-prototyping-methods">Lo-Fi Prototyping Methods</h1>
+<h2 id="overview">Overview</h2>
+<p>This note details two effective low-fidelity prototyping approaches used in design research: Sketching and Wizard of Oz testing. Both methods enable rapid exploration of ideas and testing of concepts before committing to high-fidelity development.</p>
+<h2 id="sketching-as-a-lo-fi-method">Sketching as a Lo-Fi Method</h2>
+<h3 id="description">Description</h3>
+<p>Sketching is a quick visualization technique that supports fast, flexible exploration of ideas during the early stages of design. The low-fidelity nature makes it an excellent first step in the prototyping process.</p>
+<h3 id="process">Process</h3>
+<ol>
+<li>
+<p><strong>Creation</strong>:</p>
+<ul>
+<li>Sketch concepts on paper (preferred for tactile quality) or digitally</li>
+<li>Focus on speed and quantity rather than quality or detail</li>
+<li>Capture multiple variations of ideas</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li>Present sketches to stakeholders and potential users</li>
+<li>Use as discussion starters to gather initial feedback</li>
+<li>Facilitate collaborative ideation sessions</li>
+<li>Iterate on sketches during feedback sessions</li>
+</ul>
+</li>
+<li>
+<p><strong>Research Applications</strong>:</p>
+<ul>
+<li>Studio interviews with stakeholders</li>
+<li>Focus group presentations</li>
+<li>Concept testing sessions</li>
+<li>Early-stage design reviews</li>
+</ul>
+</li>
+</ol>
+<h3 id="outputs">Outputs</h3>
+<ul>
+<li>Raw sketches (paper or digital)</li>
+<li>Initial feedback documentation</li>
+<li>Identified concept directions</li>
+<li>Refined sketches based on feedback</li>
+</ul>
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li>Minimal investment of time and resources</li>
+<li>Encourages broad exploration of the solution space</li>
+<li>Lowers the barrier to feedback (people are more comfortable critiquing rough work)</li>
+<li>Enables rapid iteration</li>
+</ul>
+<h2 id="wizard-of-oz-method">Wizard of Oz Method</h2>
+<h3 id="description">Description</h3>
+<p>A prototyping approach where human operators (&quot;wizards&quot;) manually simulate system functionality behind the scenes while users interact with what appears to be a working system. This creates the illusion of a functioning product without building the actual technology.</p>
+<h3 id="process">Process</h3>
+<ol>
+<li>
+<p><strong>Preparation</strong>:</p>
+<ul>
+<li>Design the user-facing interface or touchpoint</li>
+<li>Create the &quot;backstage&quot; operation environment for the wizard</li>
+<li>Prepare scenography and props to make responses seem realistic</li>
+<li>Establish protocols for how the wizard should respond to different inputs</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li>User interacts with the prototype</li>
+<li>Hidden operator/designer provides simulated responses</li>
+<li>System appears to function autonomously from the user's perspective</li>
+<li>Designer evaluates core user experience and value proposition</li>
+</ul>
+</li>
+<li>
+<p><strong>Research Applications</strong>:</p>
+<ul>
+<li>Contextual observation of user interaction</li>
+<li>Post-interaction interviews</li>
+<li>Testing complex functionality before technical development</li>
+<li>Evaluating service concepts</li>
+</ul>
+</li>
+</ol>
+<h3 id="outputs">Outputs</h3>
+<ul>
+<li>Raw observations of user interactions</li>
+<li>Interview transcripts</li>
+<li>Insights about user expectations</li>
+<li>Validation of concept viability</li>
+</ul>
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li>Tests complex functionality without building it</li>
+<li>Validates core value proposition early</li>
+<li>Reveals user expectations and mental models</li>
+<li>Identifies potential implementation challenges</li>
+<li>Saves development resources on unproven concepts</li>
+</ul>
+<h2 id="integration-with-design-process">Integration with Design Process</h2>
+<p>Both methods fit within the early exploratory and concept validation phases of the design process. They work well in combination:</p>
+<ol>
+<li>Begin with sketching to explore multiple concept directions</li>
+<li>Select promising concepts for more developed testing</li>
+<li>Create Wizard of Oz prototypes to test interaction and system response</li>
+<li>Use findings to inform higher-fidelity prototyping and development</li>
+</ol>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/design/Activities/Design research/">Design research</a></li>
+<li><a href="#" class="pending-link">99 - 📄 To process/design/Concepts/Prototyping</a></li>
+<li><a href="/notes/99 - 📄 To process/design/Design methods/">Design methods</a></li>
+<li><a href="#" class="pending-link">User testing</a></li>
+<li><a href="#" class="pending-link">Digital &amp; SW prototypes</a></li>
+<li><a href="#" class="pending-link">Actions, processes &amp; experiences prototype</a></li>
+</ul>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li>Paper prototyping techniques</li>
+<li>Role-playing in service design</li>
+<li>Simulation methods in UX research</li>
+</ul>
+
+
+    
+</body>
+
+</html>

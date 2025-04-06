@@ -1,1 +1,0 @@
-- don't do what I don't have done from 80% done from previous efforts

@@ -1,0 +1,5 @@
+- Figure out how to handle private information
+	- I guess I can't use LLM with them?
+- - How to activize my knowledge coming mainly from passive information on day-to-day basis?
+- How would an ideal bi-weekly process of learning from my already existing knowledge base look like?
+	- also it might include some reshuffling suggestions

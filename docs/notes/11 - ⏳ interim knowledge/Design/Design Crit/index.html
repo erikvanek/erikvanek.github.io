@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/11 - ⏳ interim knowledge">
+                ⬅️ Back to 11   ⏳ interim knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="design-crit">Design Crit</h1>
+
+    <h1 id="design-crit">Design Crit</h1>
+<h2 id="overview">Overview</h2>
+<p>Design critique (or &quot;design crit&quot;) is a structured technique for reviewing design proposals and providing constructive feedback. It's a collaborative process aimed at improving design outcomes through thoughtful evaluation and discussion.</p>
+<h2 id="key-elements">Key Elements</h2>
+<h3 id="optimal-structure">Optimal Structure</h3>
+<ul>
+<li>Ideal size is around 7 participants to balance breadth and depth of feedback</li>
+<li>Should include diverse perspectives but remain focused</li>
+<li>Schedule early in the design process before designers become too attached to solutions</li>
+<li>Share work early and often to prevent becoming overly invested in particular solutions</li>
+</ul>
+<h3 id="types-of-design-crits">Types of Design Crits</h3>
+<h4 id="standard-critique">Standard Critique</h4>
+<ul>
+<li>Designer presents work with context and specific feedback requests</li>
+<li>Participants provide targeted feedback on design decisions and effectiveness</li>
+</ul>
+<h4 id="no-context-critique">No-Context Critique</h4>
+<ul>
+<li>Work is presented without explanatory context</li>
+<li>Rationale: If users can't understand the design without explanation, it may need refinement</li>
+<li>Tests intuitive understanding of the design</li>
+<li>Can reveal assumptions that designers have made</li>
+</ul>
+<h3 id="effective-critique-questions">Effective Critique Questions</h3>
+<ul>
+<li>&quot;Why do you think this particular solution solves the problem better than alternatives?&quot;</li>
+<li>&quot;What user needs does this address?&quot;</li>
+<li>&quot;How does this align with our design principles?&quot;</li>
+<li>&quot;What tradeoffs were considered?&quot;</li>
+</ul>
+<h3 id="common-pitfalls-to-avoid">Common Pitfalls to Avoid</h3>
+<ul>
+<li>Treating critique as a &quot;liking game&quot; or popularity contest</li>
+<li>Focusing on personal preferences rather than objective effectiveness</li>
+<li>Using voting mechanisms without substantive discussion</li>
+<li>Vague or subjective comments without actionable feedback</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="for-organizers">For Organizers</h3>
+<ul>
+<li>Set clear guidelines and expectations</li>
+<li>Establish a safe, constructive environment</li>
+<li>Keep sessions focused on improving the work</li>
+<li>Encourage specific, actionable feedback</li>
+</ul>
+<h3 id="for-designers">For Designers</h3>
+<ul>
+<li>Come prepared with specific questions</li>
+<li>Be open to feedback without becoming defensive</li>
+<li>Take notes on key insights</li>
+<li>Clarify feedback that seems unclear</li>
+</ul>
+<h3 id="for-participants">For Participants</h3>
+<ul>
+<li>Focus on the design, not the designer</li>
+<li>Frame feedback constructively</li>
+<li>Support observations with reasoning</li>
+<li>Offer alternatives when identifying issues</li>
+</ul>
+<h2 id="application">Application</h2>
+<ul>
+<li>Use in both early conceptual phases and more refined design stages</li>
+<li>Can be formal scheduled sessions or informal desk critiques</li>
+<li>Adapt format based on project needs and timeline</li>
+</ul>
+<h2 id="raw-notes">Raw Notes</h2>
+<p>This note has been processed from a top-level note into the knowledge base structure.</p>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://open.spotify.com/episode/6NhMKH6ZqVewNF2lApvjHr" target="_blank" rel="noopener noreferrer">https://open.spotify.com/episode/6NhMKH6ZqVewNF2lApvjHr</a></li>
+            
+            <li><a href="https://www.figma.com/blog/design-critiques-at-figma/" target="_blank" rel="noopener noreferrer">https://www.figma.com/blog/design-critiques-at-figma/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

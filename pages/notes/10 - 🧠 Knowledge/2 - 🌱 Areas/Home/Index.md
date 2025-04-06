@@ -1,0 +1,3 @@
+- Workstation shelf for books to have them on my mind
+- Workstation board so that I can have my goals present at all times
+- Furniture :)

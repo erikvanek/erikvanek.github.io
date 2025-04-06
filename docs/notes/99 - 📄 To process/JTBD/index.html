@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="jtbd">JTBD</h1>
+
+    <ul>
+<li><strong>JTBD is a theory</strong>, that should be able to describe what happened in the past but also what might happen in future</li>
+<li>provides <strong>a framework for finding out what the user really wants</strong> and what causes them to a given purchase or usage of a product or a service</li>
+</ul>
+<h2 id="job">Job</h2>
+<ul>
+<li>
+<p><strong>a job is the progress an individual is trying to make</strong> in a particular <em>circumstance</em></p>
+</li>
+<li>
+<p>everytime we're on <strong>a path to transform our life to something else</strong> - we have a Job to be done</p>
+</li>
+<li>
+<p><em>Job</em> is shorthand for what an individual really seeks to accomplish in a given circumstance</p>
+<ul>
+<li>When we buy a product, <strong>we essentially “hire” it</strong> to help us do a job</li>
+</ul>
+</li>
+<li>
+<p>a JTBD does not surprisingly appear – <strong>it is properly designed</strong></p>
+</li>
+<li>
+<p>JTBD is the <strong>process one goes through in need to transform an existing life situation into a preferred one</strong> but cant because of existing constraints</p>
+</li>
+<li>
+<p>Compare JTBD versus user stories <a href="https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27">here</a></p>
+</li>
+<li>
+<p>is <strong>best used at the early stages of a product design</strong> process it will help you identify innovate and grow your product. It looks at the bigger picture of possibilities and options.</p>
+</li>
+<li>
+<p>JTBD can be visualised with a storytelling arc - <a href="/notes/99 - 📄 To process/Inciting accident/">Inciting accident</a> can be the first exposition to the means that can get the job done</p>
+</li>
+<li>
+<p>an inspiration can be found in <a href="/notes/99 - 📄 To process/JTBD/Activity-centered design/">Activity-centered design</a></p>
+</li>
+<li>
+<p>a guiding star to JTBD is the customers' <a href="/notes/99 - 📄 To process/JTBD/Motivation/">Motivation</a> to better their lives</p>
+<ul>
+<li>focusing on functionality will distract you</li>
+<li>e. g. going to a theatre with a kid is not only about the act, but also about making <em>their lives better</em> by having a shared experience so that they can talk about concepts and share life lessons</li>
+</ul>
+</li>
+<li>
+<p>customer jobs <strong>don't tell me which innovation to make</strong> but what are my m customers struggling with; it helps me identify how can I make their lives better and what they value and don't value in a solution</p>
+</li>
+<li>
+<p>JTBDs evolve with customer's maturity and business needs/ goals</p>
+</li>
+<li>
+<p><strong>it isn't customer's job to know what they want, often they don't know what they want until you slow then</strong></p>
+</li>
+<li>
+<p>it is a process – it starts, runs and eventually ends</p>
+</li>
+</ul>
+<h2 id="principles">Principles</h2>
+<ul>
+<li>people have jobs, things don't</li>
+<li>the things that people want to accomplish in their lives don’t change quickly and thus <strong>JTBD are pretty stable</strong></li>
+<li>opportunities exist when people show compensatory behavior</li>
+<li><strong>favor progress (now and in future) over outcomes and <a href="/notes/99 - 📄 To process/JTBD/Goal/">Goal</a></strong></li>
+<li><strong>progress defines valve, contrast reveals value</strong> and thus products without context have no value
+<ul>
+<li>e. g. the value of a steak changes based on contex</li>
+<li>at kid's bday party versus a fancy restaurant</li>
+</ul>
+</li>
+<li>solutions for jobs deliver value also between usages of a tool</li>
+<li>the value of the system is how it works together as a whole</li>
+</ul>
+<h2 id="phrasing">Phrasing</h2>
+<ul>
+<li>Well phrased JTBD can suit my product as well as my competitor</li>
+<li><strong>Frame design challenges by JTBD to persuade teammates and management</strong> to change a product-with that you motivate innovators (i. e. problem solvers) to find solutions to the problem</li>
+<li>being able to distill the core JTBD then allows to position value properly</li>
+<li>eliminating customer's need to make a tradeoff to beat the competitor</li>
+<li>final JTBD should be portable so that everyone in the organization can use it</li>
+<li>JTBD has a good balance between concrete and abstract, between high and low levels</li>
+<li>3 rules when forming them from <a href="https://strategyn.com/jobs-to-be-done-old/jobs-to-be-done-examples/">here</a>
+<ul>
+<li>Keep it customer-centric</li>
+<li>Focus on the functional (not the emotional)</li>
+<li>Think bigger than your product function</li>
+</ul>
+</li>
+<li>it should
+<ol>
+<li>help work team together</li>
+<li>describe &quot;a better me&quot; for the customer</li>
+<li>should avoid describing how customers use your product</li>
+</ol>
+</li>
+<li>might use emphasis on struggle brings verbs like give me, make me, help me, ... _which reminds us that the success comes from using a solution</li>
+<li>TBD wording should name a solution it has replaced</li>
+<li><strong>When in doubt if something is a JTBD</strong> – ask &quot;Can I visualize someone doing this?&quot; and&quot; Does this describe an action?&quot; and if you answer&quot; yes&quot;, you are probably describing a solution</li>
+<li>Could be framed as <a href="https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27">Job stories</a></li>
+</ul>
+<h2 id="process">Process</h2>
+<ul>
+<li>identity a struggling point → qualify it → help people imagine how better their life would be with a different solution and help to deliver progress to clients during that proces<br>
+<img src="/notes/Pasted image 20241225134219.png" alt="Pasted image 20241225134219.png" loading="lazy"></li>
+</ul>
+<h2 id="scaling">Scaling</h2>
+<ul>
+<li>consider splitting products and services based on different JTBD to avoid bulky solutions and losing focus</li>
+<li><strong>shift from selling one complicated product into multiple</strong>, that form a cohesive system together e.g. Lean Canvas → Lean Stack</li>
+</ul>
+<h2 id="context">Context</h2>
+<ul>
+<li>knowing the context of the struggle helps to know how to grow the product</li>
+<li>grow your business by delivering progress</li>
+</ul>
+<h2 id="a-hrefnotes99-to-processjtbdopposing-forces-of-customer-demandopposing-forces-of-customer-demanda"><a href="/notes/99 - 📄 To process/JTBD/Opposing forces of customer demand/">Opposing forces of customer demand</a></h2>
+<h2 id="a-hrefnotes99-to-processjtbdsystem-of-progresssystem-of-progressa"><a href="/notes/99 - 📄 To process/JTBD/System of progress/">System of progress</a></h2>
+<h2 id="promoting-tbd-in-an-organization">Promoting TBD in an organization</h2>
+<ul>
+<li>use these questions to kickstart discussion in a team</li>
+</ul>
+<ol>
+<li>How are customers struggling?</li>
+<li>What is pushing their need for a new solution?</li>
+<li>Without describing the feature – how would their life will be better once they started using it?</li>
+<li>what is preventing customers from using that solution?</li>
+</ol>
+<ul>
+<li>agree on these and then verify in-field</li>
+<li>with this we're selling it as a verification of our assumption, not introducing a new framework which should make it easier</li>
+</ul>
+<h2 id="jtbd-flavors">JTBD flavors</h2>
+<ul>
+<li>jobs-as-activities
+<ul>
+<li>similar to Norman's <a href="/notes/99 - 📄 To process/JTBD/Activity-centered design/">Activity-centered design</a></li>
+</ul>
+</li>
+<li>jobs-as-progress
+<ul>
+<li>How things are today (actual self) → I need something to make this change (progress) → How I want things to be (desired self)</li>
+</ul>
+</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="http://jtbd.info/" target="_blank" rel="noopener noreferrer">http://jtbd.info/</a></li>
+            
+            <li><a href="https://hbr.org/2016/09/know-your-customers-jobs-to-be-done" target="_blank" rel="noopener noreferrer">https://hbr.org/2016/09/know-your-customers-jobs-to-be-done</a></li>
+            
+            <li><a href="https://www.productboard.com/glossary/jobs-to-be-done-framework/" target="_blank" rel="noopener noreferrer">https://www.productboard.com/glossary/jobs-to-be-done-framework/</a></li>
+            
+            <li><a href="https://brianrhea.com/jobs-to-be-done-examples/" target="_blank" rel="noopener noreferrer">https://brianrhea.com/jobs-to-be-done-examples/</a></li>
+            
+            <li><a href="https://medium.com/@rain.lieberman/jobs-to-be-done-vs-user-stories-definition-comparison-and-when-to-use-which-abaed0b3c778" target="_blank" rel="noopener noreferrer">https://medium.com/@rain.lieberman/jobs-to-be-done-vs-user-stories-definition-comparison-and-when-to-use-which-abaed0b3c778</a></li>
+            
+            <li><a href="https://strategyn.com/jobs-to-be-done-old/jobs-to-be-done-examples/" target="_blank" rel="noopener noreferrer">https://strategyn.com/jobs-to-be-done-old/jobs-to-be-done-examples/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

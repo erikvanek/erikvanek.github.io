@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="service-design">Service design</h1>
+
+    <ul>
+<li>it is the patchwork background that makes <a href="/notes/99 - 📄 To process/design/Service design/">Service design</a> such powerful</li>
+<li>focuses on finding <em>the right problem</em> to solve
+<ul>
+<li>starts by identifying user needs first</li>
+</ul>
+</li>
+<li>built on research &amp; testing, not on authority</li>
+<li>no strong pressure on making it right the first time
+<ul>
+<li>we can evolve &amp; move on towards better solution</li>
+</ul>
+</li>
+<li>focuses not only on creating value for the customer, but also for surrounding ecosystems</li>
+<li>the process is <em>not linear</em>
+<ul>
+<li>builds on top of deepening, exploratory loops - <a href="/notes/99 - 📄 To process/design/Concepts/Iteration/">Iteration</a>s</li>
+</ul>
+</li>
+<li>Two main <em>spaces</em>, illustrated by <a href="/notes/99 - 📄 To process/design/Concepts/Double diamond/">Double diamond</a>
+<ul>
+<li>Problem
+<ul>
+<li>Identifying &amp; defining the right problem</li>
+</ul>
+</li>
+<li>Solution
+<ul>
+<li>Developing the right solution to the problem</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>not (only) solver customer problems, it designs value propositions, processes &amp; business models</li>
+<li>is:
+<ul>
+<li>human-centered
+<ul>
+<li>(internally &amp; externally)</li>
+</ul>
+</li>
+<li>collaborative
+<ul>
+<li>by using stakeholder co-creation</li>
+</ul>
+</li>
+<li>iterative
+<ul>
+<li>exploratory, adaptive &amp; iterative towards implementation</li>
+</ul>
+</li>
+<li>sequential
+<ul>
+<li>visualized and <em>orchestrated</em> as a sequence of interrelated actions</li>
+</ul>
+</li>
+<li>real
+<ul>
+<li><a href="/notes/99 - 📄 To process/design/Activities/Design research/">researched</a> and <a href="/notes/99 - 📄 To process/design/Design tools/Prototype/">prototyped</a> in reality</li>
+</ul>
+</li>
+<li>holistic
+<ul>
+<li>should address the needs of all stakeholders through the entire service across the business</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://medium.com/@Howard_C/a-beginners-guide-to-what-service-design-is-not-40884a856fd" target="_blank" rel="noopener noreferrer">https://medium.com/@Howard_C/a-beginners-guide-to-what-service-design-is-not-40884a856fd</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>
