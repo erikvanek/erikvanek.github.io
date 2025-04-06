@@ -11,13 +11,6 @@ tags:
 
 # Ethnographic Methods
 
-## AI-assisted summary
-Ethnographic methods in research provide deep insights into user behavior by studying people in their natural environments, allowing researchers to understand context, motivations, and unspoken needs. These approaches include contextual interviews conducted in users' own settings, diary studies that track experiences over time, and various observational techniques that capture authentic behaviors.
-
-The effectiveness of ethnographic research relies heavily on building trust between researchers and participants to minimize the "observer effect" where people alter their behavior when being watched. Researchers can employ either active participation (asking questions and probing during the observation) or passive non-participation (being like a "fly on the wall"), each with different documentation requirements focusing on what participants do, what they say, and how researchers interpret these observations.
-
----
-
 - Nicely described [here](https://medium.com/idinsight-blog/the-case-for-iteration-in-qualitative-research-design-e07ed1314756) 
 	- Contextual interviews
 	- Diary studies

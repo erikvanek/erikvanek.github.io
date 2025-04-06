@@ -12,9 +12,9 @@ tags:
 # System of Progress
 
 ## AI-assisted summary
-The System of Progress framework describes how customers move through a dynamic cycle of transformation when adopting products or services to improve their lives. This system is defined by the interdependence between customers, their Jobs To Be Done (JTBD), and producers, with each component influencing the others in a continuous cycle of development and adaptation.
+The System of Progress framework describes the interdependent cycle through which customers transform their lives by adopting products or services. This system consists of four sequential phases: customers first imagine a better situation ("new me"), then search for and select solutions, use their chosen solution to make progress, and finally realize their transformed state, completing the cycle that connects customers, their Jobs To Be Done, and producers.
 
-The framework outlines four key phases: first, customers imagine a better life situation (the "new me"); second, they search for and select potential solutions; third, they use the chosen solution to make progress; and finally, they realize the "new me" state. For product innovators, understanding the triggers that initiate this cycle and the criteria customers use when evaluating solutions is crucial, particularly during the "looking for solutions" phase when customers have already envisioned their desired outcome. As users move through these stages, their needs and desired outcomes evolve within the interdependent system, creating ongoing opportunities for product refinement and innovation.
+For product innovators, this framework offers strategic insight into customer behavior at each phase, particularly during the "looking for solutions" stage when customers have already formed a vision of their desired outcome. By understanding what triggers customers to seek change, what criteria they use to evaluate options, and what they value over competing solutions, businesses can more effectively meet evolving needs. As customers progress through the cycle from survival to scaling, their needs and desired outcomes continuously evolve within this interdependent system.
 
 ---
 

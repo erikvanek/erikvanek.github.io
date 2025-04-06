@@ -13,13 +13,6 @@ tags:
 
 # Product Vision Development
 
-## AI-assisted summary
-A product vision serves as a persuasive tool that articulates the aspirational future state of a product, providing teams with a compelling direction and purpose. Effective visions are characterized by their ability to inspire and empower teams, making them feel genuinely excited about the challenging work ahead to realize the vision's potential.
-
-The most impactful product visions share key qualities: they are thought-provoking enough to stimulate new ideas, inspirational enough to motivate sustained effort, memorable enough to guide daily decisions, and concrete enough to provide practical direction. Historical examples like Google's early vision to "Organize the world's information and make it universally accessible and useful" demonstrate how a well-crafted vision can guide an organization through years of growth and evolution. Product manifestos represent a related format that can effectively communicate vision through persuasive, principle-based declarations that align teams around shared values and aspirations.
-
----
-
 - Admittedly, a good product vision is a bit of an art form, as fundamentally it is a _persuasion tool_.
 - "When done well, the product vision is _compelling_, _inspiring_, and _empowering_—leaving the product teams feeling excited to begin the hard work of making this vision a reality."
 - Google was using this vision statement when it was kickstarting their activities: "Organize the world's information and make it universally accessible and useful."

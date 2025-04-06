@@ -14,9 +14,9 @@ tags:
 # Qualitative Research Coding Methods
 
 ## AI-assisted summary
-Qualitative research coding is a systematic process of identifying, categorizing, and labeling important concepts within data to reveal underlying patterns and narratives. This methodical approach typically progresses through multiple rounds: initial coding to break data into segments, organization into categories and subcodes, subsequent passes to refine analysis, and finally development of a coherent narrative from the reduced set of codes.
+Qualitative research coding is a systematic method for identifying, categorizing, and labeling important concepts within data to reveal underlying patterns and human narratives. The process follows a structured progression: reviewing research questions, identifying key concepts, conducting preliminary review, defining initial code structures, and applying the framework while modifying it as needed throughout the analysis.
 
-The coding process often employs various approaches—selective, axial, open, or closed coding—with most research utilizing a combination based on specific project needs. Effective coding practices include maintaining a codebook for consistency, capturing both positive and negative aspects of phenomena, and employing both descriptive codes (labeling content) and interpretive codes (adding analytical perspective). This structured approach allows researchers to systematically transform raw qualitative data into meaningful insights while maintaining the human stories behind the information.
+The coding workflow typically includes multiple rounds: initial coding to segment data, organizing codes into categories, subsequent refinement passes, and ultimately developing a coherent narrative from the patterns discovered. Most research employs a mix of approaches (selective, axial, open, or closed coding) alongside best practices like maintaining a codebook and using both descriptive codes (labeling content) and interpretive codes (adding analytical perspective).
 
 ---
 

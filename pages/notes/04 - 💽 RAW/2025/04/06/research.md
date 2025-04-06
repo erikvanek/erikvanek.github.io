@@ -12,9 +12,9 @@ tags:
 # Research Fundamentals
 
 ## AI-assisted summary
-Research in product development is defined as a systematic investigation designed to develop or contribute to generalizable knowledge, requiring structured approaches that yield reliable, actionable insights. This note outlines two complementary research methodologies: customer interviews and outcome-based research, each providing different but valuable perspectives on user behavior and needs.
+Research in product development constitutes a systematic investigation designed to generate reliable, actionable knowledge about users and their behaviors. Two complementary methodologies provide different but valuable perspectives: customer interviews focus on gathering factual information about users' lives and behaviors, while outcome-based research identifies specific behaviors that drive business results.
 
-Customer interviews, as informed by principles from "The Mom Test," emphasize focusing on past behavior rather than future intentions, avoiding idea pitching during research, watching for emotional signals about problems, and targeting specific customer segments. Meanwhile, outcome-based research shifts the focus from outputs to desired behavioral changes, identifying behaviors that drive business results by examining what predicts success or failure at each customer journey step, and establishing metrics that reflect meaningful behavioral changes rather than simply tracking feature usage.
+Customer interviews, guided by principles from "The Mom Test," emphasize examining past behaviors rather than hypothetical futures, avoiding idea pitching during research, watching for emotional signals about problems, and targeting specific customer segments. Outcome-based research shifts focus from outputs to desired behavioral changes by examining what predicts success or failure at each customer journey step and establishing metrics that reflect meaningful behavioral changes rather than feature usage, creating a learning cycle of building, measuring outcomes, learning, and iterating.
 
 ---
 

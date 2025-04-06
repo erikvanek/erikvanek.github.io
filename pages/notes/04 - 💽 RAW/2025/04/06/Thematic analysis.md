@@ -14,13 +14,6 @@ sources:
 
 # Thematic Analysis
 
-## AI-assisted summary
-Thematic analysis is a systematic methodology for breaking down and organizing rich qualitative data to discover significant patterns and insights. The process transforms raw research data into codes, which are then synthesized into broader themes that answer specific research questions, providing a structured approach to making sense of complex, non-numerical information.
-
-The method is notably flexible, with no single prescribed approach, though it typically follows a process of data familiarization, coding, theme identification, review, and refinement. Key considerations for effective thematic analysis include allocating sufficient time (generally matching or exceeding the data collection phase), involving multiple perspectives during coding and theme development to reduce bias, ensuring themes are well-supported by the underlying data, and using storytelling techniques to present findings in an engaging, coherent manner. While time-intensive, this approach yields deep insights that quantitative methods alone might miss.
-
----
-
 - __Thematic analysis is a systematic method of breaking down and organizing rich data to facilitate the discovery of significant themes__
 - A systematic method of breaking down and organizing rich data from qualitative research
 - It is important to _choose a research method that can answer my research question well_
