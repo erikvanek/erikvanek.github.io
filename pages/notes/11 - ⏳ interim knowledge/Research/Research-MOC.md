@@ -16,7 +16,7 @@ aliases: [Research Map, Research Hub]
 Research encompasses methodologies and approaches for gathering and analyzing information to generate insights, whether for product development, user understanding, or other purposes.
 
 ## Core Concepts
-- [[99 - 📄 To process/Qualitative research]] - Methods for in-depth understanding of the "why"
+- [[02 - 📩 Inbox/Qualitative research]] - Methods for in-depth understanding of the "why"
 - Quantitative Research - Approaches to gathering measurable, statistical data
 - Mixed Methods - Combining qualitative and quantitative approaches
 
@@ -45,4 +45,4 @@ Research encompasses methodologies and approaches for gathering and analyzing in
 - [[Rules for qualitative rigor]] - Quality standards for qualitative work
 
 ## Recent Additions
-- [[99 - 📄 To process/Qualitative research]] - Added April 1, 2025
+- [[02 - 📩 Inbox/Qualitative research]] - Added April 1, 2025

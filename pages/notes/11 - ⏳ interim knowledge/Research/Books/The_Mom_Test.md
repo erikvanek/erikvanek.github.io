@@ -79,7 +79,7 @@ Before each interview, decide the three most important things you want to learn
 
 ## Related Notes
 - [[Research-MOC|Research]]
-- [[99 - 📄 To process/Qualitative research]]
+- [[02 - 📩 Inbox/Qualitative research]]
 - [[Interview intro|Interview Techniques]]
 - [[99 - 📄 To process/Product discovery]]
 
