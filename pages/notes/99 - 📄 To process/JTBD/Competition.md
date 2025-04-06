@@ -3,4 +3,4 @@
 - in order to beat competing solutions, one must give customers a reason to switch from an existing one or hire anew one
 - you can claim that something is a competition only after seeing a customer switching between them
 - **if you don't have a clear idea of what your clients are going to give up when they start using your product you haven't done enough research** and you're creating a solution no-one will buy
-- think of your business as a *system of products* that perpetuates the [[JTBD#System of progress]]] forward e. g. an iPhone without Appstore is far less valuable
+- think of your business as a *system of products* that perpetuates the [[JTBD 1#System of progress]]] forward e. g. an iPhone without Appstore is far less valuable

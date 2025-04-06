@@ -49,7 +49,7 @@ created: 2025-03-30
 - When we state goals with outcomes, we propose some relationship between our work and its results which we can capture in a hypothesis
 - Test with an experiment
 
-## Customer Signals (from [[99 - 📄 To process/books/The_Mom_Test|The Mom Test]])
+## Customer Signals (from [[02 - 📩 Inbox/The_Mom_Test|The Mom Test]])
 - Major currencies our partners are investing are time, reputation risk and money
 - Sometimes strong commitment combines multiple currencies
 - Not having a chance to be introduced to other stakeholders is a bad sign

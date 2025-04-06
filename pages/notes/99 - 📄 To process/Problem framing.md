@@ -10,7 +10,7 @@ resources:
 ---
 ## Finding the right problem
 - solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear
-- Focus on [[JTBD]]
+- Focus on [[JTBD 1]]
 - *"Framing is the process of breaking down a problem into a set of choices, trade offs, and options that enable a team to make a call and move forward."* - [Shishir Mehrotra](https://coda.io/@shishir)
 - Good framing helps produce "decisions that stick."
 - [https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/eigenquestions-3](Eigenquestions) help with this

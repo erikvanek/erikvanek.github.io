@@ -8,7 +8,7 @@
 - anticipation of **what is the next struggle [[Customer]]s face** after they have sorted out the current one is a key to a successful and continuous innovation
 - is about **helping customers make progress** – get them to the better version of live they aspire for
 	- progress recognizes that tasks and activities are only means to an end
-- Innovate the [[JTBD#System of progress]], not its parts
+- Innovate the [[JTBD 1#System of progress]], not its parts
 - **it isn't customer's job to know what they want**, often they don't know what they want until you slow then
 - Good innovations solve problems that formerly had only inadequate solutions— or no solution
 ## Quotes

@@ -7,7 +7,7 @@
 - Find 5 related nodes in my existing knowledge base (only in folders `10 - 🧠 Knowledge`) that this nugget is related to, create a section `Related notes` at the end of the file and link those related notes as bullet points
 	- If you don't find enough related notes in those two subfolders, it's fine
 ## AI-assisted summary
-- For notes longer than 800 characters, create a section on top called `AI-assisted summary` with a concise summary of the main ideas
+- **!important** only for notes longer than 1500 characters, create a section on top called `AI-assisted summary` with a concise summary of the main ideas
   - Structure this summary into at least two paragraphs for better readability
   - First paragraph should cover the core concept/main idea
   - Second paragraph should expand on application, implications, or specific details
@@ -19,7 +19,10 @@
 - Inbox serves as the entrypoint to new knowledge
 - **important workflow clarification** - After processing, the note should be:
   1. Enhanced with proper metadata, tags, AI summary, and related notes
-  2. Stored in the `04 - 💽 RAW` folder with all enhancements
+  2. Stored in the `04 - 💽 RAW` folder following a hierarchical structure:
+     - Create folders based on the note's creation date from frontmatter metadata
+     - Structure: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md`
+     - Example: For a note created on April 6, 2025: `04 - 💽 RAW/2025/04/06/Note_Title.md`
   3. Deleted from the Inbox folder after being properly stored in RAW
   4. Smaller nuggets of information may be created and connected to most relevant notes in `10 - 🧠 Knowledge` folder if appropriate
 # Typical information coming in
