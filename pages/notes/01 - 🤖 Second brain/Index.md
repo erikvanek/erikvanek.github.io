@@ -7,7 +7,7 @@ Second brain follows [[Principles]] to ensure the knowledge can be trusted and i
 The typical flow of information is like this:
 1. Capture new knowledge, analzye it and enrich with metadata 
 2. Process and expand existing knowledge base
-3. Retrieve relevant information when during new initiatives
+3. Retrieve relevant information during new initiatives using [[01 - 🤖 Second brain/Routines/Knowledge Retrieval|AI-assisted Knowledge Retrieval]]
 4. Rebalance knowledge base if it grows out of hand through [[01 - 🤖 Second brain/Routines/Knowledge Rebalancing|Knowledge Rebalancing]]
 
 # Folder structure
