@@ -30,7 +30,7 @@ Customer interviews, as informed by principles from "The Mom Test," emphasize fo
 - Banned words that indicate hypothetical situations: would/could/might
 - Customer segments are who-where pairs - know exactly who you're targeting and where to find them
 
-### Outcome-Based Research (from [[99 - 📄 To process/books/Outcomes_over_Output|Outcomes over Output]])
+### Outcome-Based Research (from [[02 - 📩 Inbox/Outcomes_over_Output|Outcomes over Output]])
 - Research should focus on identifying behaviors that drive business results
 - After visualizing customer journeys, ask "what behaviors at each step predict failure/success" 
 - This helps define boosters/blockers for desired outcomes

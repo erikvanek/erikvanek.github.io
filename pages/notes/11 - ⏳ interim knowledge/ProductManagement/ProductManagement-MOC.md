@@ -16,7 +16,7 @@ Product Management encompasses the processes, methodologies, and frameworks used
 
 ## Core Concepts
 - [[99 - 📄 To process/Product discovery]] - Methods to understand user needs and validate solutions
-- [[99 - 📄 To process/Product vision]] - Defining the direction and goals for products
+- [[02 - 📩 Inbox/Product vision]] - Defining the direction and goals for products
 - [[Product teams]] - Structuring and leading effective product teams
 - [[Product risk taxonomy]] - Understanding and managing product risks
 

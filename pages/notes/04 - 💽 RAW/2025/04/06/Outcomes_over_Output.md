@@ -1,10 +1,24 @@
 ---
+title: "Outcomes Over Output"
+date_created: 2025-04-06
+source_type: book
+source: "Outcomes Over Output (Book)"
 tags:
-  - OutcomesDriven
-  - ProductStrategy
-  - BusinessResults
+  - product-development
+  - product-strategy
+  - business-metrics
+  - user-behavior
+  - outcomes-driven
 ---
-# Outcomes over Output
+
+# Outcomes Over Output
+
+## AI-assisted summary
+"Outcomes Over Output" presents a transformative business framework centered on the principle that successful product development should focus on changing user behaviors (outcomes) that drive business results rather than merely delivering features (outputs). This approach reframes success metrics away from completion of features toward achievement of meaningful behavioral changes that actually create value.
+
+The framework introduces key implementation concepts including outcome-based planning using customer journey maps to identify beneficial behaviors, hypothesis-driven experiments to test behavior change theories, and organizational adoption strategies to overcome resistance to this mindset shift. At its core lies a three-question process: identifying which user actions drive business results, determining how to encourage more of these actions, and establishing how to validate effectiveness. This methodology creates a continuous learning cycle of building experiments, measuring outcomes, and iterating based on findings—all aimed at achieving maximum business impact with minimal feature development through deeper understanding of customer behavior drivers.
+
+---
 
 ## Core Principles
 - An outcome is a change in human behavior that drives business results
@@ -78,3 +92,10 @@ tags:
 - Build experiments
 - Measure outcomes
 - Learn and iterate
+
+## Related notes
+- [[04 - 💽 RAW/2025/04/06/Product vision]]
+- [[99 - 📄 To process/Measuring Business Value]]
+- [[99 - 📄 To process/Product discovery]]
+- [[99 - 📄 To process/agile]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]

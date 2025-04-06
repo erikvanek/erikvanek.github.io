@@ -61,7 +61,7 @@ Planning with outputs is like promising to cross a desert of unknown size by a s
 - [[ProductManagement-MOC|Product Management]]
 - [[99 - 📄 To process/Product discovery]]
 - [[99 - 📄 To process/Measuring Business Value]]
-- [[99 - 📄 To process/Product vision]]
+- [[02 - 📩 Inbox/Product vision]]
 
 ## Raw Notes
 This note has been created as part of the second-brain system refinement process to address empty referenced files.

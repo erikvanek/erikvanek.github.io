@@ -31,7 +31,7 @@ resources:
 
 ## Discovery Approaches
 
-### Outcome-Driven Discovery (from [[99 - 📄 To process/books/Outcomes_over_Output|Outcomes over Output]])
+### Outcome-Driven Discovery (from [[02 - 📩 Inbox/Outcomes_over_Output|Outcomes over Output]])
 - Focus on outcomes (behavior changes) rather than outputs (features)
 - Ask "what are the customer behaviors that drive business results?"
 - Plan in terms of outcomes, not features with deadlines
