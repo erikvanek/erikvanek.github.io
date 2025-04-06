@@ -1,3 +1,25 @@
+---
+title: "Research Interview Introduction Script"
+date_created: 2025-04-06
+source_type: template
+source: "Personal research methodology"
+tags:
+  - interviews
+  - research
+  - qualitative-research
+  - user-research
+  - template
+---
+
+# Research Interview Introduction Script
+
+## AI-assisted summary
+This interview introduction script provides a structured framework for beginning research conversations in Czech, focusing on establishing rapport and setting expectations for productive qualitative research sessions. The script emphasizes transparency about research goals, encourages honest responses by removing pressure for "right answers," and creates psychological safety by normalizing reflection time and allowing participants to decline questions.
+
+The template incorporates best practices from "The Mom Test" methodology, particularly emphasizing concrete past behaviors rather than hypothetical scenarios. It includes key components like permission for recording, clear confidentiality guidelines, and a connection-building technique that links the interviewer's research goals with the participant's relevant experiences. This structured approach helps researchers establish credibility while creating a comfortable environment that yields genuine insights rather than socially desirable responses.
+
+---
+
 Dobrý den,
 jmenuji se Erik Vaněk a dnes jsem tu s vámi protože [ placeholder ].
 
@@ -25,3 +47,10 @@ Můžeme si dnešní setkání nahrát? Jde nám o to, abychom se mohli k inform
 - connective tissue between research and interview content
 - e.g. a CEO with a proven track of results and my goal is to talk about product vision
 	- *"So I know you have a proven track of building inspiring and successful products. What helped you in those cases achieve such astounding results?*
+
+## Related notes
+- [[04 - 💽 RAW/2025/04/06/research]]
+- [[04 - 💽 RAW/2025/04/06/Qualitative research]]
+- [[04 - 💽 RAW/2025/04/06/Interview Reflection Template]]
+- [[04 - 💽 RAW/2025/04/06/The_Mom_Test]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews]]

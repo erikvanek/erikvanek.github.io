@@ -8,7 +8,7 @@ created: 2025-03-30
 ---
 # Measuring Business Value
 
-## Outcomes vs. Impact (from [[99 - 📄 To process/books/Outcomes_over_Output|Outcomes over Output]])
+## Outcomes vs. Impact (from [[02 - 📩 Inbox/Outcomes_over_Output|Outcomes over Output]])
 - Outcomes (behavior change) → impact (increase in revenue, loyalty...)
 - Impact is a side effect of well-designed outcomes
 - Leaders think about impact, executors are responsible for outputs and outcome

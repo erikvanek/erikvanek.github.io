@@ -7,12 +7,14 @@
 - Find 5 related nodes in my existing knowledge base (only in folders `10 - 🧠 Knowledge`) that this nugget is related to, create a section `Related notes` at the end of the file and link those related notes as bullet points
 	- If you don't find enough related notes in those two subfolders, it's fine
 ## AI-assisted summary
-- **!important** only for notes longer than 1500 characters, create a section on top called `AI-assisted summary` with a concise summary of the main ideas
-  - Structure this summary into at least two paragraphs for better readability
-  - First paragraph should cover the core concept/main idea
-  - Second paragraph should expand on application, implications, or specific details
-  - Aim for 5-7 sentences total across these paragraphs
-  - then add horizontal line
+- **!important** include summary only for notes longer than 1500 characters
+	- if a note is longer than that create a section on top called `AI-assisted summary` with a concise summary of the main ideas
+	  - Structure this summary into at least two paragraphs for better readability
+	  - First paragraph should cover the core concept/main idea
+	  - Second paragraph should expand on application, implications, or specific details
+	  - Aim for 5-7 sentences length max, it should be like 8 lines of text at most
+	  - then add horizontal line
+  - if a note is shorter, ignore this
 ## Chunking
 - For longer notes (over 500 characters), consider using the [[Chunking]] process to break them into more focused, interconnected notes
 ## Storage
