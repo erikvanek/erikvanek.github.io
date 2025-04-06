@@ -1,0 +1,3 @@
+- also called deductive or top-down coding
+- starts with developing a [[Codebook]] based on research question
+- useful when you have pre-defined how your findings should look like
