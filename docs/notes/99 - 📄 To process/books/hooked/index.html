@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="hooked">Hooked</h1>
+
+    <div id="notes">
+<h2 id="notes">Notes</h2>
+<ul>
+<li>@2 &quot;By mastering habit-forming product design, the companies make thir goods indespensable&quot;
+<ul>
+<li>e.g. the emergence of the verb 'to google something'</li>
+</ul>
+</li>
+<li>@6 The hook model:
+<ul>
+<li>internal/external trigger -&gt; action -&gt; variable reward -&gt; investment</li>
+</ul>
+</li>
+<li>@13 habits are behaviors done with little or no conscious thought</li>
+<li>@25 habits are last-in first-out - the longer you have them, the longer they stick around</li>
+<li>Amazon embedding price comparison with competitors inside their platform makes it look trustworthy even despite the potential of one-off customer loss</li>
+<li>@33 A habit is when not doing an action causes a bit of discomfort</li>
+<li>trigger can be
+<ul>
+<li>external
+<ul>
+<li>accompanied with the information telling what to do next</li>
+</ul>
+</li>
+<li>internal
+<ul>
+<li>manifests automaticall in your mind</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>habits are like pearls - form one layer at a time</li>
+<li>@52 to recognize which habits I want my users to form I first need to know what pains are they trying to relieve</li>
+<li>@52 habit forming products aim at creating the bond between feeling the pain and <strong>soothing</strong> it</li>
+<li>@55 <em>5 whys</em> is a good technique to understand deep motivations / user needs</li>
+<li>@63 human core motivations
+<ul>
+<li>seek pleasure an avoid pain</li>
+<li>seek hope and avoid fear</li>
+<li>seek social accceptance and avoid rejection</li>
+</ul>
+</li>
+<li>@67 actions must be easy to perform - any technology that reduces the steps to complete a task will enjoy high adoption rates
+<ul>
+<li>e.g. early internet or <a href="http://blogger.com">blogger.com</a></li>
+</ul>
+</li>
+<li>@87 <strong>The framing effect</strong> - cognitive bias - top notch performer/star is not gonna get enough props while busking in U-bahn stop</li>
+<li>@95 variable reword - reward users by solving a problem, <strong>reinforcing</strong> their motivation for a previously taken action</li>
+<li>@97 we're drawn to action not by the sensation itself but by the need to alleviate the craving for the reward</li>
+<li>@98 <strong>variability</strong> is what keeps us hooked/awaiting what comes next and is the key concept of the hook model</li>
+<li>@99 variability increases activity in the nucleus accumbens</li>
+<li>@100 reward types
+<ul>
+<li>the tribe
+<ul>
+<li>social proof rewards</li>
+<li>likes</li>
+</ul>
+</li>
+<li>the hunt
+<ul>
+<li>the need to acquire physical objects</li>
+</ul>
+</li>
+<li>the self
+<ul>
+<li>intristic motivation to overcome obstacles</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>@119 &quot;but you are free to accept or refuse&quot; phrase to gain compliance
+<ul>
+<li>e.g. when asking for charity donations</li>
+</ul>
+</li>
+<li>@120 reactance - the hair-trigger response to threats to your autonomy
+<ul>
+<li>e.g. when failing micromanagement</li>
+</ul>
+</li>
+<li>@127 experiences with finite variability become less engaging because they eventually become predictable</li>
+<li>@131 variable reward is a powerful inducement to make users repeat their actions</li>
+<li>@136 the escalation of commitment - the more people invest time &amp; effort into a product/service - the more they value it</li>
+<li>@138 - the IKEA effect - you value more the furniture you assembled rather than store-bought</li>
+<li>@143 - the investment phase requires a bit of work from the user but the reward is the self-assurance
+<ul>
+<li>e.g. following a user on Twitter does not yield an immediate benefit but makes the user more prone to open Twitter again</li>
+</ul>
+</li>
+<li>@144 - humans evolved to reciprocate kindness as it is a win-win strategy</li>
+<li>@165 - Ian Bogost: &quot;Habit-forming technologies are the cigarettes of this century&quot;</li>
+<li>@192 - &quot;overindulgent and underactive modern lifestyles&quot; :)</li>
+<li>@214 - &quot;What triggered me to use this product? Was I prompted internally or externally?&quot; is a good question to ask about a service/product you're using</li>
+<li>@208 - <a href="http://www.nysaflt.org/workshops/colt/2010/The%20Internet.pdf">Newsweek: The Internet? Bah!</a></li>
+<li>@210 - &quot;The creation of a new infrastructure often opens up unforseen ways to make other actions simpler or more rewarding&quot;
+<ul>
+<li>e.g. internet thanks to the infrastructure comissioned by the US government during the cold ward, Google thanks to Yahoo, GUI thanks to terminal interfaces, Instagram thanks to embedded camera, ...</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="review">Review</h2>
+<p>Despite the fact that the book is 9 years old still feels pretty relevant. An interesting look under the hood of how to design affective algorithms of persuasion 'to make users love / get addicted to your product'.</p>
+<p>I am not really interested in knowing how to design such products. Rather I'm interested in underlying mechanisms driving these products. Possibly this knowledge could help me to defend my own attention which seems to be a scarcier resource each day.</p>
+<p>The hook model is pretty easy to understand and builds on top of primitive human instincts. One could expect some sort of rocket science but it is quite the opposite. This book made me to question ethics a lot as designing (especially) cloud never shutting down services could yield a masive amount of unintended consiquences e.g. lowering one's self-esteem due to the excessive consumption of social media.</p>
+
+
+    
+</body>
+
+</html>

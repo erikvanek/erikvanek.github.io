@@ -1,0 +1,7 @@
+- TBD
+- dumps are usually things I have a bit of a FOMO letting go and I want to note them somewhere
+- usually browser tabs, set of links etc
+- I want to have them stored, ideally ranked, but not necessarily analyzed properly
+- so far I imagine the process that I keep a "masterlist" of them, scored based on criteria relevant for my currently opened projects so that I can "reach out" when I work on a project to a new resource that helps me to make it better than the last time
+	- ideally resources in this dump are scored, there's a 5 sentences review of them (used by MCP fetch) and they are ranked per project so that I can easily get to them if needed
+- so I can do some sort of DIY deep research functionality for my second brain

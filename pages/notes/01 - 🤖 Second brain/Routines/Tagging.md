@@ -1,0 +1,4 @@
+- when you need to use multiple words in a tag use `-` instead of `_` e.g. `product-discovery` rather than `product_discovery`
+- use only lowercase letters while tagging
+- tags are stored in frontmatter of each note
+- when tagging - first take at already used tags and try to use them if possible, if there are no relevant tags for incoming material - consult with human-in-the-loop what should be the best category for a note for which you can't find existing tag

@@ -1,0 +1,1 @@
+- Each project is a folder with contents inside
