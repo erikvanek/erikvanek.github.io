@@ -24,6 +24,6 @@ tags:
 ## Related notes
 - [[99 - 📄 To process/Product vision]]
 - [[04 - 💽 RAW/2025/04/06/Outcomes_over_Output]]
-- [[99 - 📄 To process/Problem framing]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Problem framing]]
+- [[Discovery MOC]]
 - [[11 - ⏳ interim knowledge/ProductManagement/ProductManagement-MOC]]

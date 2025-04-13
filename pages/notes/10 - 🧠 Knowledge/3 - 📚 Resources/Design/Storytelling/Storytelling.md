@@ -2,6 +2,9 @@
 resources:
   - https://www.youtube.com/watch?v=gsqMLmaLUCY
   - https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog
+tags:
+  - storytelling
+  - design
 ---
 - beginning
 	- set expectations

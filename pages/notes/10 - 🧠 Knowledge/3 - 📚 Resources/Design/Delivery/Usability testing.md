@@ -1,6 +1,9 @@
 ---
 resources:
   - https://www.lyssna.com/guides/usability-testing-guide/
+tags:
+  - product-delivery
+  - usability-testing
 ---
 - great [guide](https://www.lyssna.com/guides/usability-testing-guide/) by Lyssna
 - can use methods like [design surveys](https://www.lyssna.com/guides/design-surveys/), [5 second tests](https://www.lyssna.com/guides/five-second-testing/) or [concept testing](https://www.lyssna.com/blog/concept-testing/)

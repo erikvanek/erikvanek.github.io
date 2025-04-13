@@ -28,4 +28,4 @@
 		- books
 		- conferences
 ## Sketch
-![Sketch](work.jpg)
+![Sketch](2023-thoughts.jpg)

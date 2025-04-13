@@ -1,4 +1,13 @@
-- writing insight well is not an easy task
+---
+tags:
+  - storytelling
+  - insight
+  - problem-framing
+resources:
+  - https://thrivethinking.com/2023/01/06/what-is-insight-the-5-principles-of-insight-definition/
+---
+- writing insights well is not an easy task
+- insights are usually results of [[Discovery MOC]] or [[Research-MOC]]
 - _is a non-obvious observation grounded in data that explains the "why" behind consumer motivations and human behavior_
 - _the goal of every insight statement is to help stakeholders understand users' emotional experiences and inspire well-defined product ideation_
 - Data refers to unanalyzed user observations, findings capture patterns among data points, and _insights are the actionable opportunities based on research and business goals._

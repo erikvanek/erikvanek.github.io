@@ -36,6 +36,6 @@ Building upon interaction science principles, effective interaction design trans
 ## Related notes
 - [[99 - 📄 To process/6 usability goals]]
 - [[99 - 📄 To process/Ability]]
-- [[99 - 📄 To process/design/Usability testing]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Usability testing]]
+- [[Discovery MOC]]
 - [[99 - 📄 To process/Product discovery]]

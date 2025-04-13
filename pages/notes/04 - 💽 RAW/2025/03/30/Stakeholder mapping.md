@@ -49,7 +49,7 @@ Effective stakeholder management extends beyond direct project participants to i
 - Understand that prevention is their primary function
 
 ## Related notes
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]
 - [[04 - 💽 RAW/Qualitative research]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews]]
 - [[99 - 📄 To process/Product discovery]]
