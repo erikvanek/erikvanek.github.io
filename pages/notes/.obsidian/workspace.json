@@ -4,21 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "be3a99fcf518ee20",
+        "id": "e31c82202468b990",
         "type": "tabs",
         "children": [
           {
-            "id": "35371deb35a2ff1c",
+            "id": "10758f11e1f312f5",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - 🤖 Second brain/Routines/Inbox processing.md",
+                "file": "99 - 📄 To process/Planning/Planning.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Inbox processing"
+              "title": "Planning"
             }
           }
         ]
@@ -169,12 +171,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "35371deb35a2ff1c",
+  "active": "10758f11e1f312f5",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Working-on-wheels.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection.md",
+    "99 - 📄 To process/Planning/Planning.md",
+    "02 - 📩 Inbox/research.md",
+    "04 - 💽 RAW/2025/04/06/Interview Reflection Template.md",
+    "04 - 💽 RAW/Interview Reflection Template.md",
+    "99 - 📄 To process/Planning/Reflection.md",
+    "99 - 📄 To process/Planning/Project reflection framework.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/🔥 Project planning.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Projects.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Stakeholder interviews for autonomous farm robot/Index.md",
+    "01 - 🤖 Second brain/Routines/Inbox processing.md",
     "04 - 💽 RAW/2025/04/06/research.md",
     "04 - 💽 RAW/2025/04/06/Qualitative research.md",
     "04 - 💽 RAW/2025/04/06/Opposing forces of customer demand.md",
-    "01 - 🤖 Second brain/Routines/Inbox processing.md",
     "02 - 📩 Inbox/Attention.md",
     "04 - 💽 RAW/2025/04/06/Product vision.md",
     "04 - 💽 RAW/2025/04/06/Outcomes_over_Output.md",
@@ -185,18 +200,6 @@
     "04 - 💽 RAW/2025/04/06/Closed coding.md",
     "04 - 💽 RAW/2025/04/06/B2B hiring.md",
     "04 - 💽 RAW/2025/04/06/Axial coding.md",
-    "04 - 💽 RAW/2025/04/06/Attention.md",
-    "02 - 📩 Inbox/Axial coding.md",
-    "02 - 📩 Inbox/B2B hiring.md",
-    "99 - 📄 To process/Codebook.md",
-    "02 - 📩 Inbox/Closed coding.md",
-    "02 - 📩 Inbox/Coding.md",
-    "99 - 📄 To process/Company culture.md",
-    "99 - 📄 To process/Humans.md",
-    "99 - 📄 To process/Human in the loop.md",
-    "02 - 📩 Inbox/Interview intro.md",
-    "02 - 📩 Inbox/Life design.md",
-    "99 - 📄 To process/Lo-Fi_Prototyping_Raw_Notes.md",
     "04 - 💽 RAW/2025/03/30",
     "04 - 💽 RAW/2025/03",
     "04 - 💽 RAW/2025/04/06",
@@ -206,7 +209,6 @@
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Home",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Product discovery",
     "10 - 🧠 Knowledge/3 - Resources/Untitled",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",

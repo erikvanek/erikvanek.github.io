@@ -41,5 +41,14 @@
       ],
       "key": "ArrowDown"
     }
+  ],
+  "workspace:toggle-pin": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
   ]
 }

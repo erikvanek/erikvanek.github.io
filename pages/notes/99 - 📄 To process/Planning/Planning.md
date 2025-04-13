@@ -18,17 +18,21 @@ resources:
 - available [here](https://docs.google.com/document/d/1nJE5iGa9NmfpYFH8jHvW_XKj4s9JB923VJPrvS2GeGQ/edit?tab=t.0#heading=h.1uy9rrwn1sin) 
 ### Planning
 - check monthly plan
+- go through the list of previous lessons learnt (last 5 weeks) and inspire and learn from them
+	- aim at one or two things / goals to apply this week
 - check last week plan and what did not work out
 	- do I want to drag it on?
 - inspired by [Cal](https://calnewport.com/plantxt-the-most-effective-productivity-tool-that-youve-never-heard-of/)
-- go through the list of previous lessons learnt and inspire and learn from them
 - go through projects and plan what needs attention this week
 - Go through important and see how to fit them in
 - Try to focus assign deep work blocks for the rest of the week
 - Can I squeeze one **important** item to my schedule?
 ### Review
+- start focus time
+- tell Claude to process inbox notes
 - assign 1h blocks for weekly plans and review next week
 	- go through weekly plan and mark what worked and what happened and what did not
+- 
 - review successes and failures
 - are there some reflections that need to be made?
 	- if they are short, do them now
@@ -37,6 +41,7 @@ resources:
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
 - add things to plan for next week
 - add things for next month plan if needed
+- review Claude's processing, review and adjust
 - can I get more inspired by [Todoist's](https://www.todoist.com/cs/productivity-methods/weekly-review)?
 # Daily
 - inspiration from [todoist](https://www.todoist.com/cs/inspiration/end-work-day)
