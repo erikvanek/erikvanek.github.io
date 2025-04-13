@@ -1,0 +1,4 @@
+# Ignore private submodules for Eleventy processing
+# This does NOT affect git tracking, only what Eleventy processes
+10 - 🧠 Knowledge/1 - 🚀 Projects/**
+10 - 🧠 Knowledge/4 - 🏛️ Archives/**
