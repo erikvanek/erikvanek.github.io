@@ -1,1 +1,0 @@
-A course created in collaboration with KISK FF MUNI aimed at teaching HCD to public workers. The premise is that they can leverage more iteration-based, feedback seeking tools in their day-to-day.

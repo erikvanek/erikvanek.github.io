@@ -1,1 +1,0 @@
-- A one-off lecture focused on (mainly qualitative) research, asking right questions, product validation, usability testing or continuous discovery
