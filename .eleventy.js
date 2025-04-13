@@ -134,6 +134,13 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+
+    eleventyConfig.ignores.add("**/10 - 🧠 Knowledge/1 - 🚀 Projects/**");
+    eleventyConfig.ignores.add("**/10 - 🧠 Knowledge/4 - 🏛️ Archives/**");
+
+    eleventyConfig.watchIgnores.add("**/10 - 🧠 Knowledge/1 - 🚀 Projects/**");
+    eleventyConfig.watchIgnores.add("**/10 - 🧠 Knowledge/4 - 🏛️ Archives/**");
+
     eleventyConfig.setTemplateFormats([
         'css',
         'pdf',
