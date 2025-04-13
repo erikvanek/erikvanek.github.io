@@ -1,3 +1,9 @@
+---
+tags:
+  - storytelling
+  - drama-arc
+---
+
 - **Complication or the inciting incident**
 - the most important part of [[Storytelling]] is the **inciting incident** - this where the drama gets build and what sets the stage ready for proposing a solution
 - something that kickstarts the story, something that profoundly changes the world of the main character

@@ -4,41 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e31c82202468b990",
+        "id": "bde213d6c31f0d0f",
         "type": "tabs",
         "children": [
           {
-            "id": "10758f11e1f312f5",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99 - 📄 To process/Planning/Planning.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Planning"
-            }
-          },
-          {
-            "id": "aefa84ffa25bee01",
+            "id": "7c5ff50c3776984e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Stakeholders.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Stakeholders"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -58,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -105,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 444.5
   },
   "right": {
     "id": "5bde52dce7d98592",
@@ -186,51 +165,51 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aefa84ffa25bee01",
+  "active": "ee613e5f4402eea4",
   "lastOpenFiles": [
-    "01 - 🤖 Second brain/Privacy_Audit.md",
-    "01 - 🤖 Second brain/Privacy_and_Git_Workflow.md",
-    "eleventy-merge-instructions.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Průběh semestru.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Intro.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation.md",
+    "99 - 📄 To process/JTBD/Activity-centered design.md",
+    "99 - 📄 To process/JTBD/Competition.md",
+    "99 - 📄 To process/JTBD/Goal.md",
+    "99 - 📄 To process/JTBD/Growth.md",
+    "99 - 📄 To process/JTBD/Measuring.md",
+    "99 - 📄 To process/JTBD/Motivation.md",
+    "99 - 📄 To process/JTBD/Value.md",
+    "99 - 📄 To process/JTBD/Value proposition.md",
+    "99 - 📄 To process/design/misc/Business analysis.md",
+    "99 - 📄 To process/design/Design methods/Walkthroughs.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews.md",
+    "99 - 📄 To process/design/Design methods/Design methods.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Triangulation.md",
+    "99 - 📄 To process/design/Concepts/VUCA world.md",
+    "99 - 📄 To process/design/Concepts/Sense-making.md",
+    "99 - 📄 To process/design/Concepts/Prototyping.md",
+    "99 - 📄 To process/design/Concepts/Process management.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
+    "99 - 📄 To process/design/Concepts/Iteration.md",
+    "99 - 📄 To process/design/Concepts/Indexing.md",
+    "99 - 📄 To process/design/Concepts/Implementation.md",
+    "99 - 📄 To process/design/Concepts/Ideation.md",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Food",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling",
+    "99 - 📄 To process/Tools 1/Design tools/Service design scoresheet/themoment_ServiceDesignScoresheetGuide_FINAL-1.pdf",
+    "99 - 📄 To process/Tools 1",
     "merged-eleventy-config.js",
-    "01 - 🤖 Second brain/Eleventy-Privacy-Guide.md",
-    "01 - 🤖 Second brain/Templates/eleventy-template.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md",
-    "99 - 📄 To process/Planning/Planning.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Stakeholders.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md.",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Index.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews",
-    "_redirects",
-    "README.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/SecondBrainOrchestration/README.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/SecondBrainOrchestration",
-    "10 - 🧠 Knowledge/4 - 🏛️ Archives/README.md",
-    "10 - 🧠 Knowledge/4 - 🏛️ Archives",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/🔥 Project planning.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Stakeholder interviews for autonomous farm robot/Index.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Stakeholder interviews for autonomous farm robot",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/JIC challenge lab lecture/JIC challenge lab lecture.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/JIC challenge lab lecture",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/Index.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Working-on-wheels.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection.md",
-    "02 - 📩 Inbox/research.md",
-    "04 - 💽 RAW/2025/04/06/Interview Reflection Template.md",
-    "04 - 💽 RAW/Interview Reflection Template.md",
-    "99 - 📄 To process/Planning/Reflection.md",
-    "99 - 📄 To process/Planning/Project reflection framework.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Projects.md",
-    "01 - 🤖 Second brain/Routines/Inbox processing.md",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134219.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134148.png",
     "99 - 📄 To process/Pasted image 20250105121803.png",
-    "99 - 📄 To process/img/work.jpg",
     "ranomcanvas.canvas",
     "img/20230622_171524.jpg",
     "Untitled.canvas"

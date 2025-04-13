@@ -1,0 +1,22 @@
+---
+tags:
+  - design
+  - design-thinking
+  - ux-design
+  - human-centered-design
+  - service-design
+---
+
+- __to _design_ is a verb__
+- "Splitters" care about UX/[[Service design]]/[[Human-centered design]] differences vs lumpers don't care as long as you practice properly
+- when you start - _be shitty, not pretty_ - throw away easily & iterate further
+- leverage [[Design Thinking]]
+- Uses [[Design tools]] to answer the question "What" & [[Design methods]] to answer the question "How"
+- Kat Holmes: __"Design as a practice that contributes to the society in meaningful ways"__
+- [is a rendering of an intent](https://articles.centercentre.com/design_rendering_intent/)
+	- when designing for radical [[Innovation]] we need to [inform our intuition](obsidian://open?vault=notes&file=design%2Fresources%2FInforming_Our_Intuition.pdf)
+	- is about making trade-offs
+		- e.g. adding a few clicks (increasing motor load) to reduce cognitive or visual load
+- The best design does not come from individual designerers, but from design teams
+- [[Storytelling]] combined [[Insight]]s and clear business cases are helpful to present compelling narratives
+- usually split between [[99 - 📄 To process/Product discovery|Product discovery]] and delivery

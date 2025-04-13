@@ -18,7 +18,7 @@ Productivity encompasses methods, mindsets, and systems for effectively accompli
 ## Core Concepts
 - [[99 - 📄 To process/Productivity]] - Foundations of effective work
 - [[Personal effectiveness]] - Individual approaches to productivity
-- [[Mindset]] - Mental approaches that support productive work
+- [[99 - 📄 To process/Mindset]] - Mental approaches that support productive work
 - [[99 - 📄 To process/Eisenhower matrix]] - Framework for prioritization
 
 ## Methodologies & Systems

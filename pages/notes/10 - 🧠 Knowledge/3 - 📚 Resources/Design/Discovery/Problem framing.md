@@ -7,6 +7,10 @@ resources:
   - https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it
   - http://jtbd.info/
   - https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/
+tags:
+  - problem-framing
+  - product-discovery
+  - jtbd
 ---
 ## Finding the right problem
 - solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear

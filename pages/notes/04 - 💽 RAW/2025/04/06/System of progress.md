@@ -44,5 +44,5 @@ For product innovators, this framework offers strategic insight into customer be
 - [[JTBD 1]]
 - [[04 - 💽 RAW/Customer]]
 - [[04 - 💽 RAW/Opposing forces of customer demand]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]
 - [[04 - 💽 RAW/research]]

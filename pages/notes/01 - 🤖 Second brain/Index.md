@@ -22,8 +22,8 @@ The typical flow of information is like this:
 ## 03 - 🗑️ Dump
 - this can be results of research or stacked URLs that I can't process now but might be handy in future and I don't want to forget about them, but also don't want to clutter my devices with it
 ## 04 - 💽 RAW
-- this is where raw notes are stored in a shape in which they got in, mainly through `📩 Inbox` folder
+- this is where raw notes are stored in a shape in which they got in, mainly through `📩 Inbox` folder - usually it passively generated notes by reading resources or attending events.
 ## 10 - 🧠 Knowledge
-- this is the most important part of my knowledge base, it should be structured by the [[99 - 📄 To process/Second brain|Second brain]]'s `Para` methodology:
+- this is the most important part of my knowledge base, it should be structured by the [[10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Second brain|Second brain]]'s `Para` methodology:
 ## 20 – ✨ Ephemeron
 - processed notes related to `03 - 🗑️ Dump` folders, more info on this TBD

@@ -58,5 +58,5 @@ The forces of progress are **emotional forces that shape [[Customer]]'s demand**
 - [[JTBD 1]]
 - [[04 - 💽 RAW/Customer]]
 - [[02 - 📩 Inbox/System of progress]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]
 - [[04 - 💽 RAW/research]]

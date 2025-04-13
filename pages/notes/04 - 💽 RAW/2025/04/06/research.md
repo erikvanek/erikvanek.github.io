@@ -43,4 +43,4 @@ Customer interviews, guided by principles from "The Mom Test," emphasize examini
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews]]
 - [[04 - 💽 RAW/Interview Reflection Template]]
 - [[04 - 💽 RAW/Stakeholder mapping]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]

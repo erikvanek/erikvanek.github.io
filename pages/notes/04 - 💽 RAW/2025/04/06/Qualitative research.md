@@ -58,6 +58,6 @@ To maintain rigor and trustworthiness, qualitative research must meet four key c
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews]]
 - [[04 - 💽 RAW/Interview Reflection Template]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]
 - [[02 - 📩 Inbox/research]]
 - [[02 - 📩 Inbox/Stakeholder mapping]]

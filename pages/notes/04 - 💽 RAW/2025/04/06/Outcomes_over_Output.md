@@ -98,4 +98,4 @@ Implementing this approach requires fundamental organizational shifts, as most c
 - [[99 - 📄 To process/Measuring Business Value]]
 - [[99 - 📄 To process/Product discovery]]
 - [[99 - 📄 To process/agile]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]

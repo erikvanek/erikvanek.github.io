@@ -42,4 +42,4 @@ The Jobs To Be Done (JTBD) framework conceptualizes needs as dynamic interaction
 - [[02 - 📩 Inbox/System of progress]]
 - [[02 - 📩 Inbox/Opposing forces of customer demand]]
 - [[04 - 💽 RAW/research]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Discovery MOC]]

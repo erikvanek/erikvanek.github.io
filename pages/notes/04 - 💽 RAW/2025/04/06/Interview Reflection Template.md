@@ -38,7 +38,7 @@ tags: [tag1, tag2, tag3]
 
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews]]
-- [[99 - 📄 To process/design/Usability testing]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC]]
+- [[Usability testing]]
+- [[Discovery MOC]]
 - [[02 - 📩 Inbox/research]]
 - [[02 - 📩 Inbox/Qualitative research]]

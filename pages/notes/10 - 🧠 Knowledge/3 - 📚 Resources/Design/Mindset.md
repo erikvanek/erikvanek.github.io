@@ -1,0 +1,1 @@
+- be shitty, not pretty
