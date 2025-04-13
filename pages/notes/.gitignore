@@ -1,0 +1,9 @@
+# Private environment file
+.env.private
+
+# macOS system files
+.DS_Store
+
+# Obsidian workspace cache files
+.obsidian/workspace*
+.obsidian/cache
