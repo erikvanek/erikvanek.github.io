@@ -2,6 +2,8 @@
 
 This document provides instructions for managing your Second Brain repository with private submodules.
 
+> **Important:** For detailed privacy guidelines and content separation rules, see [[Privacy_and_Git_Workflow]]
+
 ## Repository Structure
 
 This Second Brain uses Git submodules to keep certain content private while maintaining a unified folder structure locally. The configuration is stored in `.env.private` (not tracked in the public repository).
@@ -10,8 +12,8 @@ This Second Brain uses Git submodules to keep certain content private while main
 Second Brain Repository
 ├── public content
 └── private content (managed as submodules)
-    ├── PROJECTS_SUBMODULE (private)
-    └── ARCHIVES_SUBMODULE (private)
+    ├── PROJECTS_SUBMODULE (private - 10 - 🧠 Knowledge/1 - 🚀 Projects)
+    └── ARCHIVES_SUBMODULE (private - 10 - 🧠 Knowledge/4 - 🏛️ Archives)
 ```
 
 > **Note:** Make sure to add `.env.private` to your `.gitignore` file to prevent exposing private repository information.

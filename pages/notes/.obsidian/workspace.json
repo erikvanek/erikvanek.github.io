@@ -22,8 +22,23 @@
               "icon": "lucide-file",
               "title": "Planning"
             }
+          },
+          {
+            "id": "aefa84ffa25bee01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Stakeholders.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stakeholders"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,8 +186,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee613e5f4402eea4",
+  "active": "aefa84ffa25bee01",
   "lastOpenFiles": [
+    "01 - 🤖 Second brain/Privacy_Audit.md",
+    "01 - 🤖 Second brain/Privacy_and_Git_Workflow.md",
+    "eleventy-merge-instructions.md",
+    "merged-eleventy-config.js",
+    "01 - 🤖 Second brain/Eleventy-Privacy-Guide.md",
+    "01 - 🤖 Second brain/Templates/eleventy-template.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md",
+    "99 - 📄 To process/Planning/Planning.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Stakeholders.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md.",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Index.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews",
     "_redirects",
     "README.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/SecondBrainOrchestration/README.md",
@@ -185,13 +213,9 @@
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/JIC challenge lab lecture/JIC challenge lab lecture.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/JIC challenge lab lecture",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/Index.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Working-on-wheels.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection.md",
-    "99 - 📄 To process/Planning/Planning.md",
     "02 - 📩 Inbox/research.md",
     "04 - 💽 RAW/2025/04/06/Interview Reflection Template.md",
     "04 - 💽 RAW/Interview Reflection Template.md",
@@ -199,16 +223,7 @@
     "99 - 📄 To process/Planning/Project reflection framework.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Product discovery/Product Discovery MOC.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Projects.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement",
     "01 - 🤖 Second brain/Routines/Inbox processing.md",
-    "04 - 💽 RAW/2025/04/06/research.md",
-    "04 - 💽 RAW/2025/04/06/Qualitative research.md",
-    "04 - 💽 RAW/2025/04/06/Opposing forces of customer demand.md",
-    "02 - 📩 Inbox/Attention.md",
-    "04 - 💽 RAW/2025/04/06/Product vision.md",
-    "04 - 💽 RAW/2025/04/06/Outcomes_over_Output.md",
-    "04 - 💽 RAW/2025/04/06/Open coding.md",
-    "04 - 💽 RAW/2025/03/30",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",
