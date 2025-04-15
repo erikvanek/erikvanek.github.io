@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="second-brain">Second brain</h1>
+
+    <ul>
+<li>don't do what I don't have done from 80% done from previous efforts</li>
+<li>Cathedral effect applies also to organizing our thoughts in digital space</li>
+<li>Think of organizing information not like a library, but more like a kitchen - sorted by use for a given process</li>
+<li>Key mindset <strong>Taking what you need and forgetting the rest</strong></li>
+<li>Verum ipsum factum - we only know what we make - <strong>key motivation for rigorous tagging</strong></li>
+<li>It is important to organize notes by actionability, not by arbitrary categories like topic, date or source</li>
+<li><strong>Second brain is not meant to hoard information, it is there to put ideas into practice</strong></li>
+<li><em>&quot;Your brain is for having ideas, not for holding them&quot;</em> – David Allen</li>
+<li>Second brain helps with slow burns as I'm simmering them slowly and eventually can just take what's in there and make it actionable</li>
+</ul>
+<h1 id="systems">Systems</h1>
+<h2 id="c-o-d-e">C-O-D-E</h2>
+<ul>
+<li>typical second-brain process
+<ul>
+<li>Capture</li>
+<li>Organize
+<ul>
+<li>wrong way is to organize them is where you find your notes</li>
+<li>organize things by actionability</li>
+</ul>
+</li>
+<li>Distill
+<ul>
+<li>read, highlight, bold and summarize - ideally parts that are tied to my key objectives defined in <a href="#" class="pending-link">Priorities</a></li>
+</ul>
+</li>
+<li>Express
+<ul>
+<li>unless we're expressing contents of our second brain to the world, they are somehow useless</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="para">PARA</h2>
+<ul>
+<li>Metaphor
+<ul>
+<li>project is like a meal you're cooking on a stove for a dinner</li>
+<li>an area for improvement - is a big meal you're cooking in a slow cooker you plan to consume during the week but not sure when you finish</li>
+<li>resource is like a spice or pasta type you can use to make your next meal</li>
+</ul>
+</li>
+</ul>
+<h3 id="projects">Projects</h3>
+<ul>
+<li><em>think of if it like a meal on a stove</em>
+<ul>
+<li>&quot;What have I committed to finishing this year?&quot;</li>
+<li>&quot;What work assignments do I need to complete?&quot;</li>
+</ul>
+</li>
+<li>short term objectives with deadlines like work assignments or planning a trip</li>
+<li>includes everything you are working on in work or life that has a clear endpoint</li>
+<li>if an idea you have help you complete a project, it should go into this section</li>
+<li>short term and finite</li>
+</ul>
+<h3 id="areas-of-improvement">Areas of improvement</h3>
+<ul>
+<li><em>think of it like a slow fermenting miso paste that makes me happy long-term</em>
+<ul>
+<li>&quot;What must I do exceptionally well to have a successful career?&quot;</li>
+<li>&quot;What parts of my business need constant attention?&quot;</li>
+<li>&quot;What areas of my life need constant attention for me to be happy?&quot;</li>
+</ul>
+</li>
+<li>ongoing commitments with no specific end-date like personal finances or health</li>
+<li>they are long-term and open-ended</li>
+<li>contains digital notebooks on all the things you're trying to improve or maintain
+<ul>
+<li>personal
+<ul>
+<li>e.g. cooking, fitness, personal finance, digital well-being</li>
+</ul>
+</li>
+<li>work
+<ul>
+<li>design, leadership, product management, productivity</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>things can move here from projects if, once finished, they are sustained longer - e.g. Drýmtým project</li>
+<li>also things from here can move into projects once an area of improvement yields a specific idea for a project</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><em>resource pantry</em>
+<ul>
+<li>&quot;What do I want to research and understand better?&quot;</li>
+<li>&quot;What examples can I collect to kickstart a project soon?&quot;</li>
+<li>&quot;What general lists do I frequently use and update?&quot;</li>
+</ul>
+</li>
+<li>interests or topics I haven't explored but haven't turned to specific projects or areas yet</li>
+<li>personal library of references, facts and inspiration to use for future projects or improvements
+<ul>
+<li>3 types of information:
+<ul>
+<li>examples you've collected and you can use for inspiration</li>
+<li>actionable insights
+<ul>
+<li>e.g. &quot;Going keto&quot; notebook here might serve if, once, I decide to give a keto diet a try at some moment in life</li>
+</ul>
+</li>
+<li>checklists and useful data from past projects that might be helpful for future projects</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="archives">Archives</h3>
+<ul>
+<li>storage of completed projects, outdated areas or interests that are no longer a priority</li>
+<li>any information I don't want to forget but does not advance a project or area of improvement and will not be used to kickstart a future project</li>
+<li>contains
+<ul>
+<li>completed projects</li>
+<li>inactive projects</li>
+<li>areas you no longer care to improve or maintain</li>
+<li>resources you don't plan to use anytime soon</li>
+</ul>
+</li>
+<li><strong>moving completing or inactive notebooks breathes life into your second brain</strong></li>
+<li>It's not expected to come to archive often</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.youtube.com/watch?v=g6GbJpVppqo" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=g6GbJpVppqo</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

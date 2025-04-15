@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="problem-framing">Problem framing</h1>
+
+    <h2 id="finding-the-right-problem">Finding the right problem</h2>
+<ul>
+<li>solving the <strong>root cause of the right problem</strong> than makes the symptom (usually what people perceive to be the problem) disappear</li>
+<li>Focus on <a href="#" class="pending-link">JTBD 1</a></li>
+<li><em>&quot;Framing is the process of breaking down a problem into a set of choices, trade offs, and options that enable a team to make a call and move forward.&quot;</em> - <a href="https://coda.io/@shishir">Shishir Mehrotra</a></li>
+<li>Good framing helps produce &quot;decisions that stick.&quot;</li>
+<li><a href="Eigenquestions">https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/eigenquestions-3</a> help with this</li>
+</ul>
+<h2 id="rest">Rest</h2>
+<ul>
+<li>YOUR NEW USER IS THE DECISION MAKERs</li>
+<li>YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS</li>
+<li><a href="https://www.mural.co/blog/intro-assumptions-mapping">assumptions mapping</a> is a tool how to mitigate different stakeholder perspectives or views
+<ul>
+<li>assumptions are fine but mark them as assumptions - I'd rather know that assumptions are assumptions then being tricked by them later</li>
+</ul>
+</li>
+<li><em>&quot;for every 45 mins of a workshop I have a 45 minutes working out who should be there - the key is to identify the right people to have in the room&quot;</em> - Angela Arnold</li>
+<li>**the goal is get everyone on the same page</li>
+<li>two halves
+<ul>
+<li>business half</li>
+<li>user half</li>
+</ul>
+</li>
+<li><em>the business wants to get to the outcome but only can see the output, our role is to help them see beyond outputs</em></li>
+<li>Decisions are made and tracked <em>somewhere else</em>
+<ul>
+<li>don't mix decision making and tracking</li>
+</ul>
+</li>
+<li>Problem statement roughly corresponds to the epic
+<ul>
+<li>epic title should not be vague but way more specific</li>
+<li><strong>the problem describes the shift in customer behavior</strong></li>
+</ul>
+</li>
+<li><em>The goal of problem framing is not what to do, but what not to do and to remove the distraction from the most efficient thing to do</em></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/">Storytelling</a> gives problem a life and sustains it</li>
+<li>5 Ws:
+<ul>
+<li>What
+<ul>
+<li>What is the focus of the problem?</li>
+<li>What supporting evidence is there about this problem?</li>
+</ul>
+</li>
+<li>Who
+<ul>
+<li>Who is affected by the problem?</li>
+<li>How do we know?</li>
+<li>How are their voices present in the problem statement?</li>
+</ul>
+</li>
+<li>Where
+<ul>
+<li>Where does this problem occur?</li>
+<li>How does the context of the problem impact its expression?</li>
+</ul>
+</li>
+<li>When
+<ul>
+<li>When does the problem occur - and what is the timeframe in which it has developed?</li>
+</ul>
+</li>
+<li>Why
+<ul>
+<li>Why is this problem worth addressing?</li>
+<li>What impact will addressing it have?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="quotpre-framingquot-a-problem">&quot;Pre-framing&quot; a problem</h2>
+<ul>
+<li>what if we want to frame a problem we don't have enough information about?
+<ul>
+<li>then we can talk about framing a research plan and objectives</li>
+</ul>
+</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://makeiterate.com/how-to-define-in-design-thinking/" target="_blank" rel="noopener noreferrer">https://makeiterate.com/how-to-define-in-design-thinking/</a></li>
+            
+            <li><a href="https://gamestorming.com/nuf-test/" target="_blank" rel="noopener noreferrer">https://gamestorming.com/nuf-test/</a></li>
+            
+            <li><a href="https://www.griffith.edu.au/__data/assets/pdf_file/0025/1750570/Problem-Framing-Canvas-Handbook.pdf" target="_blank" rel="noopener noreferrer">https://www.griffith.edu.au/__data/assets/pdf_file/0025/1750570/Problem-Framing-Canvas-Handbook.pdf</a></li>
+            
+            <li><a href="https://hbr.org/2017/01/are-you-solving-the-right-problems" target="_blank" rel="noopener noreferrer">https://hbr.org/2017/01/are-you-solving-the-right-problems</a></li>
+            
+            <li><a href="https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it" target="_blank" rel="noopener noreferrer">https://hbr.org/2024/01/to-solve-a-tough-problem-reframe-it</a></li>
+            
+            <li><a href="http://jtbd.info/" target="_blank" rel="noopener noreferrer">http://jtbd.info/</a></li>
+            
+            <li><a href="https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/" target="_blank" rel="noopener noreferrer">https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

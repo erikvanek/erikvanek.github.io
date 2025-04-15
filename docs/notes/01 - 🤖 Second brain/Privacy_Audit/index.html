@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="privacy_audit">Privacy_Audit</h1>
+
+    <h1 id="second-brain-privacy-audit">Second Brain Privacy Audit</h1>
+<p>This document provides tools and procedures for ensuring that private content in your second brain remains truly private.</p>
+<h2 id="what-to-check-for">What to Check For</h2>
+<p>In this second brain setup:</p>
+<ul>
+<li>Content in <code>10 - 🧠 Knowledge/1 - 🚀 Projects</code> is <strong>private</strong></li>
+<li>Content in <code>10 - 🧠 Knowledge/4 - 🏛️ Archives</code> is <strong>private</strong></li>
+<li>All other content is <strong>public</strong></li>
+</ul>
+<h2 id="privacy-violations-to-watch-for">Privacy Violations to Watch For</h2>
+<ol>
+<li><strong>Direct Obsidian Links</strong>: Public notes containing <code><a href="#" class="pending-link">links</a></code> to private content</li>
+<li><strong>Backlinks</strong>: Public notes referenced by private notes, creating a trace</li>
+<li><strong>Related Notes</strong>: Public notes listing related notes that are private</li>
+<li><strong>Content Mentions</strong>: Public notes mentioning filenames or content from private notes</li>
+<li><strong>Graph Connections</strong>: Unexpected connections visible in the Obsidian graph view</li>
+</ol>
+<h2 id="manual-audit-process">Manual Audit Process</h2>
+<h3 id="1-link-audit">1. Link Audit</h3>
+<p>Check your public notes for any direct links to private content:</p>
+<ul>
+<li>In Obsidian, search for: <code>[[10 - 🧠 Knowledge/1 - 🚀 Projects</code></li>
+<li>In Obsidian, search for: <code>[[10 - 🧠 Knowledge/4 - 🏛️ Archives</code></li>
+</ul>
+<h3 id="2-backlink-audit">2. Backlink Audit</h3>
+<p>From within each private module, check if any notes have backlinks from public notes:</p>
+<ol>
+<li>Open a note in a private module</li>
+<li>Check the backlinks panel</li>
+<li>Verify that all backlinks come from other private notes</li>
+</ol>
+<h3 id="3-graph-view-audit">3. Graph View Audit</h3>
+<p>Use Obsidian's graph view to visually inspect connections:</p>
+<ol>
+<li>Open graph view (Ctrl/Cmd + G)</li>
+<li>Use the filters to highlight private module folders</li>
+<li>Look for connections between private (highlighted) and public (non-highlighted) nodes</li>
+</ol>
+<h3 id="4-command-line-audit">4. Command Line Audit</h3>
+<p>You can run these commands from a terminal to search for potential leaks:</p>
+<pre><code class="language-bash"># From the repository root
+# Search for direct links to private content
+grep -r &quot;\[\[10 - 🧠 Knowledge/1 - 🚀 Projects&quot; --include=&quot;*.md&quot; . | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+# Search for direct links to archives
+grep -r &quot;\[\[10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; --include=&quot;*.md&quot; . | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+# Search for mentions of private paths
+grep -r &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot; --include=&quot;*.md&quot; . | grep -v &quot;\[\[\|10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+grep -r &quot;10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; --include=&quot;*.md&quot; . | grep -v &quot;\[\[\|10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+</code></pre>
+<h2 id="automated-privacy-check">Automated Privacy Check</h2>
+<p>You can create a simple privacy check script (place in the root of your repository):</p>
+<pre><code class="language-bash">#!/bin/bash
+# privacy_check.sh
+# Run this script to check for potential privacy leaks
+
+echo &quot;Running Second Brain Privacy Check...&quot;
+echo &quot;======================================&quot;
+
+echo &quot;1. Checking for direct links to private Projects...&quot;
+grep -r &quot;\[\[10 - 🧠 Knowledge/1 - 🚀 Projects&quot; --include=&quot;*.md&quot; . | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+echo &quot;2. Checking for direct links to private Archives...&quot;
+grep -r &quot;\[\[10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; --include=&quot;*.md&quot; . | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+echo &quot;3. Checking for mentions of private Projects path...&quot;
+grep -r &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot; --include=&quot;*.md&quot; . | grep -v &quot;\[\[\|10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+echo &quot;4. Checking for mentions of private Archives path...&quot;
+grep -r &quot;10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; --include=&quot;*.md&quot; . | grep -v &quot;\[\[\|10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;
+
+echo &quot;======================================&quot;
+echo &quot;Privacy check complete!&quot;
+echo &quot;If no results appear above each section header, no privacy issues were found.&quot;
+echo &quot;If any results appear, review those files for potential privacy violations.&quot;
+</code></pre>
+<h2 id="pre-commit-hook">Pre-Commit Hook</h2>
+<p>For advanced users, consider adding a pre-commit hook to prevent accidentally committing references to private content:</p>
+<pre><code class="language-bash">#!/bin/bash
+# .git/hooks/pre-commit
+# Make executable with: chmod +x .git/hooks/pre-commit
+
+echo &quot;Checking for privacy violations before commit...&quot;
+
+# Check for references to private projects
+if git diff --cached --name-only | xargs grep -l &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot; | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;; then
+  echo &quot;Error: Potential privacy leak detected (references to private Projects).&quot;
+  echo &quot;Please fix the issues above before committing.&quot;
+  exit 1
+fi
+
+# Check for references to private archives
+if git diff --cached --name-only | xargs grep -l &quot;10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; | grep -v &quot;10 - 🧠 Knowledge/1 - 🚀 Projects\|10 - 🧠 Knowledge/4 - 🏛️ Archives\|Privacy_Audit\|Privacy_and_Git_Workflow&quot;; then
+  echo &quot;Error: Potential privacy leak detected (references to private Archives).&quot;
+  echo &quot;Please fix the issues above before committing.&quot;
+  exit 1
+fi
+
+echo &quot;No privacy violations detected. Proceeding with commit.&quot;
+exit 0
+</code></pre>
+<h2 id="what-to-do-if-you-find-a-privacy-violation">What to Do If You Find a Privacy Violation</h2>
+<p>If you discover references to private content in your public notes:</p>
+<ol>
+<li><strong>Don't panic</strong> - identifying the issue is the first step to resolving it</li>
+<li><strong>Don't commit</strong> - if you haven't committed the violation yet, don't push it to GitHub</li>
+<li><strong>Remove the reference</strong> - edit the note to remove the link or mention</li>
+<li><strong>Consider obfuscation</strong> - if you need to reference something similar, use a more generic term</li>
+<li><strong>Audit thoroughly</strong> - check all possible ways the connection might be exposed</li>
+<li><strong>Verify fix</strong> - run the checks again to confirm the issue is resolved</li>
+</ol>
+<p>Remember: If you've already pushed a privacy violation to GitHub, removing it in a new commit won't remove it from the Git history. You may need to rewrite history using more advanced Git commands if sensitive information was exposed.</p>
+
+
+    
+</body>
+
+</html>

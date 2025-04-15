@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="privacy_and_git_workflow">Privacy_and_Git_Workflow</h1>
+
+    <h1 id="privacy-and-git-workflow-guide">Privacy and Git Workflow Guide</h1>
+<p>This document outlines the privacy rules and git workflow for maintaining a second brain with both public and private content.</p>
+<h2 id="privacy-structure">Privacy Structure</h2>
+<p>This second brain uses git submodules to manage private content while exposing public content through GitHub:</p>
+<pre><code>Second Brain Repository
+├── Public Content (GitHub public repo)
+└── Private Content (Git submodules)
+    ├── Projects module (10 - 🧠 Knowledge/1 - 🚀 Projects)
+    └── Archives module (10 - 🧠 Knowledge/4 - 🏛️ Archives)
+</code></pre>
+<h2 id="privacy-rules-for-content-creation">Privacy Rules for Content Creation</h2>
+<h3 id="1-never-reference-private-content-from-public-notes">1. Never Reference Private Content from Public Notes</h3>
+<p>The most important rule is to <strong>never reference private content from public notes</strong>:</p>
+<ul>
+<li><strong>No direct links</strong>: Never use Obsidian <code><a href="#" class="pending-link">links</a></code> in public notes that point to content in private modules</li>
+<li><strong>No backlinks</strong>: Don't create content in public notes that would create backlinks from private content</li>
+<li><strong>No mentions</strong>: Don't mention filenames or paths from private modules in public notes</li>
+<li><strong>No related notes</strong>: Don't list private notes as related to public notes</li>
+</ul>
+<h3 id="2-permitted-cross-references">2. Permitted Cross-References</h3>
+<ul>
+<li><strong>Private → Public</strong>: You may freely reference public content from private notes</li>
+<li><strong>Private → Private</strong>: You may reference private content from other private notes</li>
+<li><strong>Public → Public</strong>: You may reference public content from other public notes</li>
+</ul>
+<h3 id="3-cross-module-content-management">3. Cross-Module Content Management</h3>
+<p>When moving or creating content:</p>
+<ul>
+<li><strong>Before linking</strong>: Always verify whether the target note is in a public or private module</li>
+<li><strong>Moving content</strong>: When moving content between public and private modules, update all references</li>
+<li><strong>New content</strong>: Decide whether new content belongs in public or private modules before creating links</li>
+</ul>
+<h3 id="4-how-to-check-privacy-status">4. How to Check Privacy Status</h3>
+<p>Before creating links, check if the target is in a private module:</p>
+<ul>
+<li>Content in <code>10 - 🧠 Knowledge/1 - 🚀 Projects</code> is private</li>
+<li>Content in <code>10 - 🧠 Knowledge/4 - 🏛️ Archives</code> is private</li>
+<li>All other content is public</li>
+</ul>
+<h2 id="git-workflow">Git Workflow</h2>
+<h3 id="initial-setup-on-a-new-machine">Initial Setup on a New Machine</h3>
+<pre><code class="language-bash"># Clone the main repository
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+
+# Initialize and update all submodules
+git submodule update --init --recursive
+
+# Create your .env.private file (do not commit this)
+echo &quot;PROJECTS_PATH=/path/to/projects/submodule&quot; &gt; .env.private
+echo &quot;ARCHIVES_PATH=/path/to/archives/submodule&quot; &gt;&gt; .env.private
+</code></pre>
+<h3 id="daily-workflow">Daily Workflow</h3>
+<h4 id="1-start-of-session-sync-everything">1. Start of Session: Sync Everything</h4>
+<pre><code class="language-bash"># Pull latest changes in the main repo
+git pull
+
+# Update all submodules to their latest state
+git submodule update --init --recursive
+</code></pre>
+<h4 id="2-working-with-public-content">2. Working with Public Content</h4>
+<pre><code class="language-bash"># Make your changes to public files
+
+# Stage, commit, and push changes
+git add path/to/changed/files
+git commit -m &quot;Add notes on XYZ topic&quot;
+git push
+</code></pre>
+<h4 id="3-working-with-private-content-projects">3. Working with Private Content (Projects)</h4>
+<pre><code class="language-bash"># 1. Navigate to the projects submodule
+cd &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot;
+
+# 2. Make your changes to private project files
+
+# 3. Commit and push changes in the submodule
+git add .
+git commit -m &quot;Add private project notes on XYZ&quot;
+git push
+
+# 4. Return to the main repository
+cd ../../../
+
+# 5. Update the reference to the submodule
+git add &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot;
+git commit -m &quot;Update projects submodule reference&quot;
+git push
+</code></pre>
+<h4 id="4-working-with-private-content-archives">4. Working with Private Content (Archives)</h4>
+<pre><code class="language-bash"># 1. Navigate to the archives submodule
+cd &quot;10 - 🧠 Knowledge/4 - 🏛️ Archives&quot;
+
+# 2. Make your changes to private archive files
+
+# 3. Commit and push changes in the submodule
+git add .
+git commit -m &quot;Update archive content for XYZ&quot;
+git push
+
+# 4. Return to the main repository
+cd ../../../
+
+# 5. Update the reference to the submodule
+git add &quot;10 - 🧠 Knowledge/4 - 🏛️ Archives&quot;
+git commit -m &quot;Update archives submodule reference&quot;
+git push
+</code></pre>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="detached-head-in-submodule">Detached HEAD in Submodule</h4>
+<p>If you see a &quot;detached HEAD&quot; state in a submodule:</p>
+<pre><code class="language-bash"># Navigate to the submodule
+cd &quot;10 - 🧠 Knowledge/1 - 🚀 Projects&quot;  # or appropriate path
+
+# Check out the main branch (or your default branch)
+git checkout main
+
+# Pull latest changes
+git pull
+</code></pre>
+<h4 id="submodule-out-of-sync">Submodule Out of Sync</h4>
+<pre><code class="language-bash"># From the main repository root
+git submodule update --remote --merge
+</code></pre>
+<h2 id="quick-reference-commands">Quick Reference Commands</h2>
+<ul>
+<li><strong>Pull everything:</strong> <code>git pull &amp;&amp; git submodule update --init --recursive</code></li>
+<li><strong>Check submodule status:</strong> <code>git submodule status</code></li>
+<li><strong>Update submodules to latest remote versions:</strong> <code>git submodule update --remote</code></li>
+</ul>
+<h2 id="privacy-audit-process">Privacy Audit Process</h2>
+<p>Periodically run this privacy audit to ensure you haven't accidentally created references to private content:</p>
+<ol>
+<li>Manually inspect your public content for any mentions of private module content</li>
+<li>In Obsidian, check graph view and filter to see if there are unexpected connections</li>
+<li>Use search tools to check for any accidental references:<pre><code class="language-bash"># From the repo root, search for any references to private paths
+grep -r &quot;\[\[10 - 🧠 Knowledge/1 - 🚀 Projects&quot; --include=&quot;*.md&quot; .
+grep -r &quot;\[\[10 - 🧠 Knowledge/4 - 🏛️ Archives&quot; --include=&quot;*.md&quot; .
+</code></pre>
+</li>
+</ol>
+<p>Remember to always commit changes to the submodule repositories first, then update the references in the main repository.</p>
+
+
+    
+</body>
+
+</html>

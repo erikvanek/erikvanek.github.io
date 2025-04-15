@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="innovation">Innovation</h1>
+
+    <ul>
+<li>can be seen as a cycle of <strong>creative destruction</strong>
+<ul>
+<li>two aspects that make systems prone to creative destruction
+<ul>
+<li>fragile interdependencies
+<ul>
+<li>e.g. reliance on some vendor-lock like Flash</li>
+</ul>
+</li>
+<li>cascade effects
+<ul>
+<li>often start small, but eventually gain momentum e. g. evolution of mobile data, smartphones,...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>innovation opportunities exist when <a href="/notes/04 - 💽 RAW/2025/04/06/Customer/">Customer</a>s exhibit compensatory behavior</li>
+<li>anticipation of <strong>what is the next struggle <a href="/notes/04 - 💽 RAW/2025/04/06/Customer/">Customer</a>s face</strong> after they have sorted out the current one is a key to a successful and continuous innovation</li>
+<li>is about <strong>helping customers make progress</strong> – get them to the better version of live they aspire for
+<ul>
+<li>progress recognizes that tasks and activities are only means to an end</li>
+</ul>
+</li>
+<li>Innovate the <a href="#" class="pending-link">System of progress</a>, not its parts</li>
+<li><strong>it isn't customer's job to know what they want</strong>, often they don't know what they want until you slow then</li>
+<li>Good innovations solve problems that formerly had only inadequate solutions— or no solution</li>
+</ul>
+<h2 id="quotes">Quotes</h2>
+<ul>
+<li>&quot;Good innovations solve problems that formerly had only inadequate solutions — or no solution.&quot;</li>
+<li>&quot;don't build better cameras, make better photographers&quot;</li>
+<li>&quot;yesterday people wanted fridges and dishwashers, today they want organic Kale smoothies an accumulating likes&quot;
+<ul>
+<li>thus <a href="/notes/04 - 💽 RAW/2025/04/06/Customer/#needs">Needs</a> are only bound to their imagination and existing experience</li>
+</ul>
+</li>
+<li>&quot;Change is driven by how people use technology&quot;
+<ul>
+<li>Josh Zak</li>
+</ul>
+</li>
+</ul>
+<h2 id="articles">Articles</h2>
+<ul>
+<li><a href="https://ryolu.notion.site/how-to-make-something-great">How to make something great</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
