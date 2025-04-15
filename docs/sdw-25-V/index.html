@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4lzLUckaWn8onmSxB6y18ZD6ljLzNqdBzMtvGXXQL6s" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content='Testování použitelnosti, iterace a závěr projektů'>
+    <title>Service design workshop V | Erik Vaněk</title>
+    <meta name="description" content='Testování použitelnosti, iterace a závěr projektů'>
+    <link rel="stylesheet" href="/css/nu.css">
+    <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+    </link>
+    <link rel="stylesheet" href="../../css/revealjs/black.css">
+    </link>
+    <link rel="stylesheet" href="../css/presentation-jinag.css">
+    </link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+    <div class="backgrounds">
+        <div class="background-grid"></div>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+            
+
+<link rel="stylesheet" href="../css/presentation-kisk.css">
+</link>
+<section>
+    <div class="equal-columns">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+            <br>
+            <br>
+            <h1 id="service-design-workshop-v">Service design workshop V</h1>
+            <h2 id="testovn-pouitelnosti-iterace-a-zvr-projekt">Testování použitelnosti, iterace a závěr projektů</h2>
+            <br>
+            <br>
+            <h4 id="erik-vank-17042025">Erik Vaněk, 17.04.2025</h4>
+            <h4 id="a-hrefmailto359416mailmunicz359416mailmunicza"><a href="mailto:359416@mail.muni.cz">359416@mail.muni.cz</a></h4>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 id="co-dnes-ekat">Co dnes čekat?</h1>
+    <ul>
+        <li>Uživatelské testování – proč a jak</li>
+        <li>Metody testování a jejich výběr</li>
+        <li>Konstrukce testovacího scénáře</li>
+        <li>Pilotní P2P testování vašich prototypů</li>
+        <li>Pauza na ☕ (20 minut)</li>
+        <li>Shrnutí dosavadního průběhu a další kroky</li>
+        <li>Co čekat od finálních prezentací?</li>
+    </ul>
+</section>
+<section>
+    <h1 id="projekty">Projekty</h1>
+    <ul>
+        <li>Jak jste spokojení s vašimi prototypy?</li>
+        <li>Podařilo se vám zapracovat zpětnou vazbu z minulého setkání?</li>
+        <li>Jak pokračuje nábor respondentů na testování?</li>
+        <li>Potřebujete ode mě aktuálně něco?</li>
+    </ul>
+</section>
+<section>
+    <h1 class="r-fit-text">Otázky než začneme?</h1>
+</section>
+<!-- ČÁST 1: UŽIVATELSKÉ TESTOVÁNÍ (40 minut) -->
+<section>
+    <h1 class="r-fit-text">Uživatelské testování</h1>
+</section>
+<section>
+    <h1 id="pro-testovat">Proč testovat?</h1>
+    <ul>
+        <li><strong>Potvrzení předpokladů</strong> – ověření vašich hypotéz o uživatelích</li>
+        <li><strong>Odhalení skrytých problémů</strong> – "unknown unknowns"</li>
+        <li><strong>Ekonomická efektivita</strong> – oprava chyby po implementaci je až 100× dražší</li>
+        <li><strong>Snížení rizika selhání</strong> – prevence je levnější než oprava</li>
+        <li><strong>Optimalizace uživatelského zážitku</strong> – od "fungujícího" k "vynikajícímu"</li>
+    </ul>
+</section>
+<section>
+    <h1 id="kdy-testovat">Kdy testovat?</h1>
+    <div class="equal-columns">
+        <ul>
+            <li><strong>Brzké koncepty</strong>
+                <ul>
+                    <li>Skeče, storyboardy</li>
+                    <li>Papírové prototypy</li>
+                    <li>Wireframy</li>
+                </ul>
+            </li>
+            <li><strong>Průběžné testování</strong>
+                <ul>
+                    <li>Po každé významné iteraci</li>
+                    <li>Srovnání "před a po"</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><strong>Před-produkční testování</strong>
+                <ul>
+                    <li>Finální kontrola před spuštěním</li>
+                    <li>Regresní testování</li>
+                </ul>
+            </li>
+            <li><strong>Post-launch testování</strong>
+                <ul>
+                    <li>Kontinuální sběr dat</li>
+                    <li>Průběžná optimalizace</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h1 id="etick-aspekty-testovn">Etické aspekty testování</h1>
+    <ul>
+        <li><strong>Informovaný souhlas</strong> – účastníci musí vědět, do čeho jdou</li>
+        <li><strong>Respekt k soukromí</strong> – ochrana osobních údajů</li>
+        <li><strong>Minimalizace stresu</strong> – "Testujeme produkt, ne vás!"</li>
+        <li><strong>Inkluzivita</strong> – pestré zastoupení různých uživatelů</li>
+        <li><strong>Bezpečné prostředí</strong> – účastníci se musí cítit komfortně</li>
+    </ul>
+</section>
+<section>
+    <h1 id="s-kolika-uivateli-testovat">S kolika uživateli testovat?</h1>
+    <img src="https://media.nngroup.com/media/editor/2023/08/07/why-you-only-need-to-test-5-users-1.jpg"
+        alt="Nielsen Norman Group chart showing diminishing returns with more than 5 users" style="max-height: 350px;">
+    <p style="font-size: 1.5rem; text-align: center;">5 uživatelů odhalí přibližně 80% problémů s použitelností</p>
+    <p style="font-size: 1rem; text-align: center;">Zdroj: <a
+            href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" target="_blank">Nielsen
+            Norman Group</a></p>
+</section>
+<section>
+    <h1 id="metody-testovn">Metody testování</h1>
+    <img src="https://media.nngroup.com/media/editor/2022/07/07/landscape-2022-07-06.png"
+        alt="Research methods map - Quantitative vs Qualitative, Attitudinal vs Behavioral" style="max-height: 400px;">
+    <p style="font-size: 1rem; text-align: center;">Zdroj: <a
+            href="https://www.nngroup.com/articles/which-ux-research-methods/" target="_blank">Nielsen Norman Group</a>
+    </p>
+</section>
+<section>
+    <h1 id="uivatelsk-testovn-101">Uživatelské testování 101</h1>
+    <ul>
+        <li>Nejuniverzálnější metoda ověřování designu</li>
+        <li>Pozorování reprezentativních uživatelů při plnění úkolů</li>
+        <li>Účastníci <strong>"myslí nahlas"</strong> – verbalizují své myšlenky</li>
+        <li>Moderátor vede proces, ale nezasahuje do plnění úkolů</li>
+        <li>Kombinuje kvalitativní postřehy s kvantitativními metrikami</li>
+        <li>Lze přizpůsobit jakékoliv fázi vývoje</li>
+    </ul>
+</section>
+<section>
+    <h1 id="jak-na-to">Jak na to?</h1>
+    <ol>
+        <li><strong>Příprava scénáře</strong> – sada úkolů pro účastníky</li>
+        <li><strong>Nábor vhodných účastníků</strong> – reprezentativní vzorek</li>
+        <li><strong>Zajištění prostředí</strong> – fyzické nebo digitální</li>
+        <li><strong>Provedení testování</strong> – moderování a záznam</li>
+        <li><strong>Analýza dat</strong> – identifikace vzorců problémů</li>
+        <li><strong>Implementace změn</strong> – iterace na základě zjištění</li>
+    </ol>
+</section>
+<section>
+    <h1 id="rite-testovn">RITE testování</h1>
+    <div class="equal-columns">
+        <div>
+            <ul>
+                <li>Rapid Iterative Testing and Evaluation</li>
+                <li>Rychlé iterace po každém testování</li>
+                <li>Test → Oprava → Test s dalším uživatelem</li>
+                <li>Náročné na zdroje a flexibilitu týmu</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="vhody">Výhody</h3>
+            <ul>
+                <li>Urychluje iterační cyklus</li>
+                <li>Zvyšuje efektivitu testování</li>
+            </ul>
+            <h3 id="kdy-pout">Kdy použít</h3>
+            <ul>
+                <li>Při omezeném čase</li>
+                <li>S flexibilním týmem</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 id="five-second-test">Five-Second Test</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="co-to-je">Co to je?</h3>
+            <ul>
+                <li>Ukázka designu na 5 sekund</li>
+                <li>Následné otázky na zapamatované prvky</li>
+                <li>Testuje první dojem a klíčová sdělení</li>
+                <li>Simuluje reálné skenování stránky</li>
+            </ul>
+
+        </div>
+        <div>
+            <h3 id="vhody">Výhody</h3>
+            <ul>
+                <li>Rychlá a jednoduchá metoda</li>
+                <li>Testuje jasnost a hierarchii</li>
+            </ul>
+            <h3 id="kdy-pout">Kdy použít</h3>
+            <ul>
+                <li>Pro testování domovských stránek</li>
+                <li>Pro ověření hierarchie informací</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 id="ab-testovn">A/B Testování</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="co-to-je">Co to je?</h3>
+            <ul>
+                <li>Porovnání dvou variant designu</li>
+                <li>Měření výkonu podle definovaných metrik</li>
+                <li>Statistické vyhodnocení výsledků a kvantitativní data</li>
+                <li>Neříká proč, jen co funguje lépe</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="nevhody">Nevýhody</h3>
+            <ul>
+                <li>Vyžaduje značný provoz</li>
+                <li>Vyžaduje technickou implementaci</li>
+            </ul>
+            <h3 id="kdy-pout">Kdy použít</h3>
+            <ul>
+                <li>Pro optimalizaci klíčových stránek</li>
+                <li>Při dostatečném počtu uživatelů</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 id="jakou-metodu-zvolit">Jakou metodu zvolit?</h1>
+    <ul>
+        <li><strong>Fáze projektu</strong> – raná fáze vs. finalizace</li>
+        <li><strong>Dostupné zdroje</strong> – čas, rozpočet, lidé</li>
+        <li><strong>Potřebná data</strong> – kvalitativní vs. kvantitativní</li>
+        <li><strong>Typ prototypu</strong> – fidelita, interaktivita</li>
+        <li><strong>Přístup k uživatelům</strong> – počet, reprezentativnost</li>
+        <li><strong>Otázky k zodpovězení</strong> – co přesně potřebujete zjistit?</li>
+    </ul>
+    <p>Pro komplexní pohled je nejvhodnější kombinace metod.</p>
+</section>
+<section>
+    <h1 class="r-fit-text">Otázky k testování? 🤔</h1>
+</section>
+<!-- ČÁST 2: KONSTRUKCE TESTOVACÍHO SCÉNÁŘE (20 minut) -->
+<section>
+    <h1 class="r-fit-text">Tvorba scénáře</h1>
+</section>
+<section>
+    <h1 id="co-je-testovac-scn">Co je testovací scénář?</h1>
+    <ul>
+        <li>Strukturovaný plán pro průběh testování</li>
+        <li>Obsahuje:
+            <ul>
+                <li>Úvod a představení záměru testování</li>
+                <li>Kontext a popis testovaného produktu/služby</li>
+                <li>Konkrétní úkoly pro účastníky</li>
+                <li>Doplňující otázky po provedení úkolů</li>
+                <li>Prostor pro obecnou zpětnou vazbu</li>
+                <li>Poděkování a závěr</li>
+            </ul>
+        </li>
+        <li>Zajišťuje konzistentnost a srovnatelnost výsledků</li>
+    </ul>
+</section>
+<section>
+    <!-- <h2 id="jak-vytvoit-dobr-scn">Jak vytvořit dobrý scénář</h2> -->
+    <ol>
+        <li><strong>Definujte cíle testování</strong> – co přesně chcete zjistit?</li>
+        <li><strong>Vytvořte realistické úkoly</strong> – vycházejte z reálných potřeb uživatelů</li>
+        <li><strong>Formulujte neutrálně</strong> – nenavádějte k určitému chování</li>
+        <li><strong>Postupujte od jednoduchého ke složitému</strong> – budujte uživatelovu sebedůvěru</li>
+        <li><strong>Připravte doplňující otázky</strong> – pro hlubší vhled do uživatelského myšlení</li>
+        <li><strong>Vyhraďte čas na zpětnou vazbu</strong> – celkové dojmy, návrhy na zlepšení</li>
+        <li><strong>Otestujte scénář</strong> – pilotním testem (za chvilku 🙃)</li>
+    </ol>
+</section>
+<section>
+    <h2 id="pklad-struktury-scne">Příklad struktury scénáře</h2>
+    <div class="equal-columns">
+        <div>
+            <h3 id="1-vod-2-3-min">1. Úvod (2-3 min)</h3>
+            <ul>
+                <li>Představení moderátora a účelu testování</li>
+                <li>Vysvětlení průběhu a pravidel</li>
+                <li>"Testujeme produkt, ne vás"</li>
+                <li>Souhlas s nahráváním (pokud relevantní)</li>
+            </ul>
+            <h3 id="2-warm-up-2-3-min">2. Warm-up (2-3 min)</h3>
+            <ul>
+                <li>Neformální otázky pro uvolnění atmosféry ("ice-breaker")</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="3-koly-15-30-min">3. Úkoly (15-30 min)</h3>
+            <ul>
+                <li>3-5 konkrétních úkolů</li>
+                <li>Od jednoduchých po komplexní</li>
+                <li>Povzbuzování k myšlení nahlas</li>
+            </ul>
+            <h3 id="4-zvr-5-10-min">4. Závěr (5-10 min)</h3>
+            <ul>
+                <li>Celkové dojmy</li>
+                <li>Doplňující otázky</li>
+                <li>Díky a rozloučení</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 id="tvorba-scne">Tvorba scénáře</h1>
+    <ul>
+        <div id="presentation-timer" class="timer-container">
+  <div class="timer-drag-handle"></div>
+  <div class="timer-controls">
+    <input type="number" id="timer-minutes" min="1" max="60" value="20" aria-label="Minutes">
+    <span class="timer-separator">:</span>
+    <input type="number" id="timer-seconds" min="0" max="59" value="0" aria-label="Seconds">
+  </div>
+  <div class="timer-display">
+    <span id="timer-value">20:00</span>
+  </div>
+  <div class="timer-buttons">
+    <button id="timer-start" class="timer-btn">Start</button>
+    <button id="timer-pause" class="timer-btn" disabled style="display:none">Pause</button>
+    <button id="timer-reset" class="timer-btn">Reset</button>
+  </div>
+</div>
+
+<style>
+  .timer-container {
+    position: fixed;
+    top: -60px;
+    right: -60px;
+    width: 240px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 12px;
+    z-index: 9999;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .timer-drag-handle {
+    cursor: move;
+    height: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .timer-controls input {
+    width: 60px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  .timer-separator {
+    color: white;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .timer-display {
+    background-color: rgba(120, 20, 20, 0.9);
+    border-radius: 6px;
+    padding: 10px 5px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  #timer-value {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: monospace;
+  }
+
+  .timer-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .timer-btn {
+    flex: 1;
+    background-color: rgba(60, 60, 60, 0.8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+
+  .timer-btn:hover {
+    background-color: rgba(80, 80, 80, 0.8);
+  }
+
+  .timer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  #timer-start {
+    background-color: rgba(40, 100, 40, 0.8);
+  }
+
+  #timer-start:hover {
+    background-color: rgba(50, 120, 50, 0.8);
+  }
+
+  #timer-pause {
+    background-color: rgba(100, 100, 40, 0.8);
+  }
+
+  #timer-pause:hover {
+    background-color: rgba(120, 120, 50, 0.8);
+  }
+
+  /* When time is running low (under 1 minute), add pulsing effect */
+  .timer-warning {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: rgba(120, 20, 20, 0.9);
+    }
+    50% {
+      background-color: rgba(180, 30, 30, 0.9);
+    }
+    100% {
+      background-color: rgba(120, 20, 20, 0.9);
+    }
+  }
+
+  /* Make the timer responsive */
+  @media (max-width: 768px) {
+    .timer-container {
+      width: 150px;
+      padding: 8px;
+    }
+    
+    #timer-value {
+      font-size: 24px;
+    }
+    
+    .timer-btn {
+      font-size: 12px;
+      padding: 4px 0;
+    }
+  }
+</style>
+
+<script>
+  // Initialize the timer when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    initTimer();
+  });
+  
+  // Main timer initialization function
+  function initTimer() {
+    // Get DOM elements
+    const timerValue = document.getElementById('timer-value');
+    const minutesInput = document.getElementById('timer-minutes');
+    const secondsInput = document.getElementById('timer-seconds');
+    const startBtn = document.getElementById('timer-start');
+    const pauseBtn = document.getElementById('timer-pause');
+    const resetBtn = document.getElementById('timer-reset');
+    const timerDisplay = document.querySelector('.timer-display');
+    const timerContainer = document.getElementById('presentation-timer');
+    
+    // Timer state variables
+    let countdown;
+    let totalSeconds = 300; // Default 5 minutes
+    let isRunning = false;
+    
+    // Initialize timer with values from inputs
+    function initializeTimer() {
+      const mins = parseInt(minutesInput.value) || 5;
+      const secs = parseInt(secondsInput.value) || 0;
+      
+      totalSeconds = (mins * 60) + secs;
+      updateTimerDisplay();
+    }
+    
+    // Format time values (add leading zeros)
+    function formatTime(value) {
+      return value < 10 ? `0${value}` : value;
+    }
+    
+    // Update the timer display based on totalSeconds
+    function updateTimerDisplay() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      timerValue.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
+    }
+    
+    // Update total seconds when inputs change
+    function updateFromInputs() {
+      const minutes = parseInt(minutesInput.value) || 0;
+      const seconds = parseInt(secondsInput.value) || 0;
+      
+      // Validate input values
+      minutesInput.value = Math.min(Math.max(minutes, 0), 60);
+      secondsInput.value = Math.min(Math.max(seconds, 0), 59);
+      
+      totalSeconds = (minutes * 60) + seconds;
+      updateTimerDisplay();
+    }
+    
+    // Start the timer countdown
+    function startTimer() {
+      if (isRunning) return;
+      
+      // Update from inputs in case they were changed
+      updateFromInputs();
+      
+      if (totalSeconds <= 0) return; // Don't start if no time is set
+      
+      isRunning = true;
+      startBtn.disabled = true;
+      pauseBtn.disabled = false;
+      minutesInput.disabled = true;
+      secondsInput.disabled = true;
+      
+      // Clear any existing interval
+      clearInterval(countdown);
+      
+      // Start countdown interval
+      countdown = setInterval(function() {
+        totalSeconds--;
+        
+        if (totalSeconds <= 0) {
+          clearInterval(countdown);
+          timerFinished();
+          return;
+        }
+        
+        updateTimerDisplay();
+        
+        // Add warning effect when under 60 seconds
+        if (totalSeconds < 60) {
+          timerDisplay.classList.add('timer-warning');
+        }
+      }, 1000);
+    }
+    
+    // Pause the timer
+    function pauseTimer() {
+      if (!isRunning) return;
+      
+      clearInterval(countdown);
+      isRunning = false;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+    }
+    
+    // Reset the timer
+    function resetTimer() {
+      clearInterval(countdown);
+      isRunning = false;
+      
+      // Reset UI state
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      minutesInput.disabled = false;
+      secondsInput.disabled = false;
+      timerDisplay.classList.remove('timer-warning');
+      
+      // Reset time values and update display
+      updateFromInputs();
+    }
+    
+    // Handle timer finished state
+    function timerFinished() {
+      isRunning = false;
+      totalSeconds = 0;
+      updateTimerDisplay();
+      
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      minutesInput.disabled = false;
+      secondsInput.disabled = false;
+      
+      // Visual indication timer has finished
+      timerDisplay.classList.add('timer-warning');
+    }
+    
+    // Make the timer draggable
+    function makeDraggable(element) {
+      const handle = element.querySelector('.timer-drag-handle');
+      let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      
+      if (handle) {
+        handle.onmousedown = dragMouseDown;
+      }
+      
+      function dragMouseDown(e) {
+        e.preventDefault();
+        
+        // Get initial mouse position
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        
+        // Add document-wide event handlers
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+      
+      function elementDrag(e) {
+        e.preventDefault();
+        
+        // Calculate new position
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        
+        // Update element position
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.right = 'auto';
+        element.style.left = (element.offsetLeft - pos1) + "px";
+      }
+      
+      function closeDragElement() {
+        // Remove document-wide event handlers
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    
+    // Toggle timer visibility
+    function toggleVisibility() {
+      if (timerContainer.style.display === 'none') {
+        timerContainer.style.display = 'flex';
+      } else {
+        timerContainer.style.display = 'none';
+      }
+    }
+    
+    // Set up event listeners
+    startBtn.addEventListener('click', startTimer);
+    pauseBtn.addEventListener('click', pauseTimer);
+    resetBtn.addEventListener('click', resetTimer);
+    minutesInput.addEventListener('change', updateFromInputs);
+    secondsInput.addEventListener('change', updateFromInputs);
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      // Don't trigger if typing in inputs
+      if (e.target.tagName === 'INPUT') return;
+      
+      if (e.code === 'Space') {
+        e.preventDefault();
+        isRunning ? pauseTimer() : startTimer();
+      }
+      
+      if (e.code === 'KeyR') {
+        e.preventDefault();
+        resetTimer();
+      }
+      
+      if (e.code === 'KeyT' && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        toggleVisibility();
+      }
+    });
+    
+    // Initialize the timer and make it draggable
+    initializeTimer();
+    makeDraggable(timerContainer);
+  }
+</script>
+        <li>Rozdělte se do projektových týmů</li>
+        <li>Máte 20 minut na přípravu testovacího scénáře</li>
+        <li>Zaměřte se na:
+            <ul>
+                <li>Definování 1-3 cílů testování – co chcete zjistit?</li>
+                <li>Vytvoření 1-3 konkrétních úkolů pro účastníky - záleží na komplexitě vašich prototypů</li>
+                <li>Příprava 3-5 doplňujících otázek po splnění úkolů</li>
+            </ul>
+        </li>
+        <li>Scénář budete následně využívat při pilotním testování</li>
+    </ul>
+</section>
+<!-- ČÁST 3: PILOTNÍ P2P TESTOVÁNÍ (20 minut) -->
+<section>
+    <!-- <h1 id="pilotn-p2p-testovn">Pilotní P2P testování</h1> -->
+    <ul>
+        <li>Rozdělte se do dvojic – tester a účastník z různých týmů</li>
+        <li>Každá dvojice má 30 minut na testování (15 minut na jeden prototyp)</li>
+        <li>Tester vede session podle připraveného scénáře</li>
+        <li>Účastník plní úkoly a myslí nahlas</li>
+        <li>Dělejte si poznámky pro následnou iteraci prototypu</li>
+        <li>Po skončení si role vyměňte</li>
+        <li>Cíl: Získat první zpětnou vazbu a odhalit hlavní problémy</li>
+        <li>Bonus: Otestovat váš scénář a identifikovat jeho nedostatky</li>
+    </ul>
+</section>
+<section>
+    <h1 class="r-fit-text">Pauza na ☕ (20 minut)</h1>
+</section>
+<!-- ČÁST 4: SHRNUTÍ A DALŠÍ KROKY (40 minut) -->
+<section>
+    <h1 id="shrnut-dosavadnho-prbhu">Shrnutí dosavadního průběhu</h1>
+    <ul>
+        <li>Co jsme zatím prošli:
+            <ul>
+                <li>Problem framing a designové výzvy</li>
+                <li>Ideace možných řešení</li>
+                <li>Prioritizace a výběr konceptů</li>
+                <li>Prototypování řešení</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="co-jet-buede-nsledovat">Co ještě buede následovat?</h1>
+    <ul>
+        <li>Testování funkčnosti</li>
+
+        <li>Implementace zjištění z testování</li>
+        <li>Iterace prototypů</li>
+        <li>Finální prezentace řešení</li>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1 id="iterace-po-testovn">Iterace po testování</h1>
+    <ul>
+        <li><strong>Sběr dat</strong> – systematicky shromážděte všechna zjištění</li>
+        <li><strong>Kategorizace problémů</strong> – podle závažnosti (kritické, závažné, mírné, kosmetické)</li>
+        <li><strong>Generování vhledů</strong> – identifikujte hlubší příčiny problémů</li>
+        <li><strong>Brainstorming řešení</strong> – navrhněte možné úpravy</li>
+        <li><strong>Implementace změn</strong> – upravte prototyp</li>
+        <li><strong>Dokumentace procesu</strong> – zaznamenejte před/po pro prezentaci</li>
+    </ul>
+</section>
+<section>
+    <h1 id="co-bude-dl">Co bude dál?</h1>
+    <ul>
+        <li><strong>1.5.</strong> – Volný den (státní svátek)
+            <ul>
+                <li>V ISu bude připravena kapitola ke storytellingu a prezentaci projektů</li>
+                <li>V tomto období provádějte testování a iterace</li>
+            </ul>
+        </li>
+        <li><strong>15.5.</strong> – Finální prezentace projektů</li>
+    </ul>
+    <p>Doporučené termíny pro vaši práci:</p>
+    <ul>
+        <li><strong>Do 1.5.</strong> – Provedené testování a analýza zjištění</li>
+        <li><strong>Do 8.5.</strong> – Iterace návrhu na základě testování</li>
+    </ul>
+</section>
+<section>
+    <h1 id="finln-prezentace">Finální prezentace</h1>
+    <ul>
+        <li><strong>Čas:</strong> 25 minut na tým (10 min prezentace + 15 min Q&A)</li>
+        <li><strong>Struktura prezentace:</strong>
+            <ul>
+                <li>Představení problému a designové výzvy</li>
+                <li>Proces návrhu řešení (ideace, prioritizace, refinování, ...)</li>
+                <li>Klíčová zjištění z testování</li>
+                <li>Provedené iterace</li>
+                <li>Finální řešení a jeho přínosy</li>
+                <li>Poučení a další možný rozvoj</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1 id="domc-prce">Domácí práce</h1>
+    <ul>
+        <li><strong>Dokončit scénář testování</strong> na základě dnes získané zpětné vazby</li>
+        <li><strong>Provést uživatelské testování</strong> s 3-5 reprezentativními uživateli</li>
+        <li><strong>Analyzovat zjištění</strong> a prioritizovat problémy</li>
+        <li><strong>Implementovat změny</strong> v prototypu</li>
+        <li><strong>Dokumentovat proces</strong> pro finální prezentaci</li>
+        <li><strong>Reflektovat práci v týmu</strong> – co funguje, co by šlo zlepšit</li>
+    </ul>
+</section>
+<section data-background="../img/presentation-backgrounds/sfinx.png" data-background-size="fit">
+    <h1 class="text-shadow-black r-fit-text" style="font-size: 15px !important;">🚀   🚀   🚀</h1>
+</section>
+
+        </div>
+
+        <footer>Prezentace na <a href="/sdw-25-V" target="_blank">erikvanek.com/sdw-25-V</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="../../js/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true });
+    </script>
+</body>

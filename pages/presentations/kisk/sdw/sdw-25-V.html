@@ -1,0 +1,422 @@
+---
+title: Service design workshop V
+date: 2025-04-17
+layout: presentation-jinag.njk
+permalink: /{{page.fileSlug}}/
+eleventyExcludeFromCollections: true
+description: Testování použitelnosti, iterace a závěr projektů
+---
+
+
+<link rel="stylesheet" href="../css/presentation-kisk.css">
+</link>
+<section>
+    <div class="equal-columns">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+            <br>
+            <br>
+            <h1>{{title}}</h1>
+            <h2>{{description}}</h2>
+            <br>
+            <br>
+            <h4>Erik Vaněk, {{date | date: "%d.%m.%Y"}}</h4>
+            <h4><a href="mailto:359416@mail.muni.cz">359416@mail.muni.cz</a></h4>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Co dnes čekat?</h1>
+    <ul>
+        <li>Uživatelské testování – proč a jak</li>
+        <li>Metody testování a jejich výběr</li>
+        <li>Konstrukce testovacího scénáře</li>
+        <li>Pilotní P2P testování vašich prototypů</li>
+        <li>Pauza na ☕ (20 minut)</li>
+        <li>Shrnutí dosavadního průběhu a další kroky</li>
+        <li>Co čekat od finálních prezentací?</li>
+    </ul>
+</section>
+<section>
+    <h1>Projekty</h1>
+    <ul>
+        <li>Jak jste spokojení s vašimi prototypy?</li>
+        <li>Podařilo se vám zapracovat zpětnou vazbu z minulého setkání?</li>
+        <li>Jak pokračuje nábor respondentů na testování?</li>
+        <li>Potřebujete ode mě aktuálně něco?</li>
+    </ul>
+</section>
+<section>
+    <h1 class="r-fit-text">Otázky než začneme?</h1>
+</section>
+<!-- ČÁST 1: UŽIVATELSKÉ TESTOVÁNÍ (40 minut) -->
+<section>
+    <h1 class="r-fit-text">Uživatelské testování</h1>
+</section>
+<section>
+    <h1>Proč testovat?</h1>
+    <ul>
+        <li><strong>Potvrzení předpokladů</strong> – ověření vašich hypotéz o uživatelích</li>
+        <li><strong>Odhalení skrytých problémů</strong> – "unknown unknowns"</li>
+        <li><strong>Ekonomická efektivita</strong> – oprava chyby po implementaci je až 100× dražší</li>
+        <li><strong>Snížení rizika selhání</strong> – prevence je levnější než oprava</li>
+        <li><strong>Optimalizace uživatelského zážitku</strong> – od "fungujícího" k "vynikajícímu"</li>
+    </ul>
+</section>
+<section>
+    <h1>Kdy testovat?</h1>
+    <div class="equal-columns">
+        <ul>
+            <li><strong>Brzké koncepty</strong>
+                <ul>
+                    <li>Skeče, storyboardy</li>
+                    <li>Papírové prototypy</li>
+                    <li>Wireframy</li>
+                </ul>
+            </li>
+            <li><strong>Průběžné testování</strong>
+                <ul>
+                    <li>Po každé významné iteraci</li>
+                    <li>Srovnání "před a po"</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><strong>Před-produkční testování</strong>
+                <ul>
+                    <li>Finální kontrola před spuštěním</li>
+                    <li>Regresní testování</li>
+                </ul>
+            </li>
+            <li><strong>Post-launch testování</strong>
+                <ul>
+                    <li>Kontinuální sběr dat</li>
+                    <li>Průběžná optimalizace</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h1>Etické aspekty testování</h1>
+    <ul>
+        <li><strong>Informovaný souhlas</strong> – účastníci musí vědět, do čeho jdou</li>
+        <li><strong>Respekt k soukromí</strong> – ochrana osobních údajů</li>
+        <li><strong>Minimalizace stresu</strong> – "Testujeme produkt, ne vás!"</li>
+        <li><strong>Inkluzivita</strong> – pestré zastoupení různých uživatelů</li>
+        <li><strong>Bezpečné prostředí</strong> – účastníci se musí cítit komfortně</li>
+    </ul>
+</section>
+<section>
+    <h1>S kolika uživateli testovat?</h1>
+    <img src="https://media.nngroup.com/media/editor/2023/08/07/why-you-only-need-to-test-5-users-1.jpg"
+        alt="Nielsen Norman Group chart showing diminishing returns with more than 5 users" style="max-height: 350px;">
+    <p style="font-size: 1.5rem; text-align: center;">5 uživatelů odhalí přibližně 80% problémů s použitelností</p>
+    <p style="font-size: 1rem; text-align: center;">Zdroj: <a
+            href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" target="_blank">Nielsen
+            Norman Group</a></p>
+</section>
+<section>
+    <h1>Metody testování</h1>
+    <img src="https://media.nngroup.com/media/editor/2022/07/07/landscape-2022-07-06.png"
+        alt="Research methods map - Quantitative vs Qualitative, Attitudinal vs Behavioral" style="max-height: 400px;">
+    <p style="font-size: 1rem; text-align: center;">Zdroj: <a
+            href="https://www.nngroup.com/articles/which-ux-research-methods/" target="_blank">Nielsen Norman Group</a>
+    </p>
+</section>
+<section>
+    <h1>Uživatelské testování 101</h1>
+    <ul>
+        <li>Nejuniverzálnější metoda ověřování designu</li>
+        <li>Pozorování reprezentativních uživatelů při plnění úkolů</li>
+        <li>Účastníci <strong>"myslí nahlas"</strong> – verbalizují své myšlenky</li>
+        <li>Moderátor vede proces, ale nezasahuje do plnění úkolů</li>
+        <li>Kombinuje kvalitativní postřehy s kvantitativními metrikami</li>
+        <li>Lze přizpůsobit jakékoliv fázi vývoje</li>
+    </ul>
+</section>
+<section>
+    <h1>Jak na to?</h1>
+    <ol>
+        <li><strong>Příprava scénáře</strong> – sada úkolů pro účastníky</li>
+        <li><strong>Nábor vhodných účastníků</strong> – reprezentativní vzorek</li>
+        <li><strong>Zajištění prostředí</strong> – fyzické nebo digitální</li>
+        <li><strong>Provedení testování</strong> – moderování a záznam</li>
+        <li><strong>Analýza dat</strong> – identifikace vzorců problémů</li>
+        <li><strong>Implementace změn</strong> – iterace na základě zjištění</li>
+    </ol>
+</section>
+<section>
+    <h1>RITE testování</h1>
+    <div class="equal-columns">
+        <div>
+            <ul>
+                <li>Rapid Iterative Testing and Evaluation</li>
+                <li>Rychlé iterace po každém testování</li>
+                <li>Test → Oprava → Test s dalším uživatelem</li>
+                <li>Náročné na zdroje a flexibilitu týmu</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Výhody</h3>
+            <ul>
+                <li>Urychluje iterační cyklus</li>
+                <li>Zvyšuje efektivitu testování</li>
+            </ul>
+            <h3>Kdy použít</h3>
+            <ul>
+                <li>Při omezeném čase</li>
+                <li>S flexibilním týmem</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Five-Second Test</h1>
+    <div class="equal-columns">
+        <div>
+            <h3>Co to je?</h3>
+            <ul>
+                <li>Ukázka designu na 5 sekund</li>
+                <li>Následné otázky na zapamatované prvky</li>
+                <li>Testuje první dojem a klíčová sdělení</li>
+                <li>Simuluje reálné skenování stránky</li>
+            </ul>
+
+        </div>
+        <div>
+            <h3>Výhody</h3>
+            <ul>
+                <li>Rychlá a jednoduchá metoda</li>
+                <li>Testuje jasnost a hierarchii</li>
+            </ul>
+            <h3>Kdy použít</h3>
+            <ul>
+                <li>Pro testování domovských stránek</li>
+                <li>Pro ověření hierarchie informací</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>A/B Testování</h1>
+    <div class="equal-columns">
+        <div>
+            <h3>Co to je?</h3>
+            <ul>
+                <li>Porovnání dvou variant designu</li>
+                <li>Měření výkonu podle definovaných metrik</li>
+                <li>Statistické vyhodnocení výsledků a kvantitativní data</li>
+                <li>Neříká proč, jen co funguje lépe</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Nevýhody</h3>
+            <ul>
+                <li>Vyžaduje značný provoz</li>
+                <li>Vyžaduje technickou implementaci</li>
+            </ul>
+            <h3>Kdy použít</h3>
+            <ul>
+                <li>Pro optimalizaci klíčových stránek</li>
+                <li>Při dostatečném počtu uživatelů</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Jakou metodu zvolit?</h1>
+    <ul>
+        <li><strong>Fáze projektu</strong> – raná fáze vs. finalizace</li>
+        <li><strong>Dostupné zdroje</strong> – čas, rozpočet, lidé</li>
+        <li><strong>Potřebná data</strong> – kvalitativní vs. kvantitativní</li>
+        <li><strong>Typ prototypu</strong> – fidelita, interaktivita</li>
+        <li><strong>Přístup k uživatelům</strong> – počet, reprezentativnost</li>
+        <li><strong>Otázky k zodpovězení</strong> – co přesně potřebujete zjistit?</li>
+    </ul>
+    <p>Pro komplexní pohled je nejvhodnější kombinace metod.</p>
+</section>
+<section>
+    <h1 class="r-fit-text">Otázky k testování? 🤔</h1>
+</section>
+<!-- ČÁST 2: KONSTRUKCE TESTOVACÍHO SCÉNÁŘE (20 minut) -->
+<section>
+    <h1 class="r-fit-text">Tvorba scénáře</h1>
+</section>
+<section>
+    <h1>Co je testovací scénář?</h1>
+    <ul>
+        <li>Strukturovaný plán pro průběh testování</li>
+        <li>Obsahuje:
+            <ul>
+                <li>Úvod a představení záměru testování</li>
+                <li>Kontext a popis testovaného produktu/služby</li>
+                <li>Konkrétní úkoly pro účastníky</li>
+                <li>Doplňující otázky po provedení úkolů</li>
+                <li>Prostor pro obecnou zpětnou vazbu</li>
+                <li>Poděkování a závěr</li>
+            </ul>
+        </li>
+        <li>Zajišťuje konzistentnost a srovnatelnost výsledků</li>
+    </ul>
+</section>
+<section>
+    <!-- <h2>Jak vytvořit dobrý scénář</h2> -->
+    <ol>
+        <li><strong>Definujte cíle testování</strong> – co přesně chcete zjistit?</li>
+        <li><strong>Vytvořte realistické úkoly</strong> – vycházejte z reálných potřeb uživatelů</li>
+        <li><strong>Formulujte neutrálně</strong> – nenavádějte k určitému chování</li>
+        <li><strong>Postupujte od jednoduchého ke složitému</strong> – budujte uživatelovu sebedůvěru</li>
+        <li><strong>Připravte doplňující otázky</strong> – pro hlubší vhled do uživatelského myšlení</li>
+        <li><strong>Vyhraďte čas na zpětnou vazbu</strong> – celkové dojmy, návrhy na zlepšení</li>
+        <li><strong>Otestujte scénář</strong> – pilotním testem (za chvilku 🙃)</li>
+    </ol>
+</section>
+<section>
+    <h2>Příklad struktury scénáře</h2>
+    <div class="equal-columns">
+        <div>
+            <h3>1. Úvod (2-3 min)</h3>
+            <ul>
+                <li>Představení moderátora a účelu testování</li>
+                <li>Vysvětlení průběhu a pravidel</li>
+                <li>"Testujeme produkt, ne vás"</li>
+                <li>Souhlas s nahráváním (pokud relevantní)</li>
+            </ul>
+            <h3>2. Warm-up (2-3 min)</h3>
+            <ul>
+                <li>Neformální otázky pro uvolnění atmosféry ("ice-breaker")</li>
+            </ul>
+        </div>
+        <div>
+            <h3>3. Úkoly (15-30 min)</h3>
+            <ul>
+                <li>3-5 konkrétních úkolů</li>
+                <li>Od jednoduchých po komplexní</li>
+                <li>Povzbuzování k myšlení nahlas</li>
+            </ul>
+            <h3>4. Závěr (5-10 min)</h3>
+            <ul>
+                <li>Celkové dojmy</li>
+                <li>Doplňující otázky</li>
+                <li>Díky a rozloučení</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Tvorba scénáře</h1>
+    <ul>
+        {% include "./_includes/timer.njk" %}
+        <li>Rozdělte se do projektových týmů</li>
+        <li>Máte 20 minut na přípravu testovacího scénáře</li>
+        <li>Zaměřte se na:
+            <ul>
+                <li>Definování 1-3 cílů testování – co chcete zjistit?</li>
+                <li>Vytvoření 1-3 konkrétních úkolů pro účastníky - záleží na komplexitě vašich prototypů</li>
+                <li>Příprava 3-5 doplňujících otázek po splnění úkolů</li>
+            </ul>
+        </li>
+        <li>Scénář budete následně využívat při pilotním testování</li>
+    </ul>
+</section>
+<!-- ČÁST 3: PILOTNÍ P2P TESTOVÁNÍ (20 minut) -->
+<section>
+    <!-- <h1>Pilotní P2P testování</h1> -->
+    <ul>
+        <li>Rozdělte se do dvojic – tester a účastník z různých týmů</li>
+        <li>Každá dvojice má 30 minut na testování (15 minut na jeden prototyp)</li>
+        <li>Tester vede session podle připraveného scénáře</li>
+        <li>Účastník plní úkoly a myslí nahlas</li>
+        <li>Dělejte si poznámky pro následnou iteraci prototypu</li>
+        <li>Po skončení si role vyměňte</li>
+        <li>Cíl: Získat první zpětnou vazbu a odhalit hlavní problémy</li>
+        <li>Bonus: Otestovat váš scénář a identifikovat jeho nedostatky</li>
+    </ul>
+</section>
+<section>
+    <h1 class="r-fit-text">Pauza na ☕ (20 minut)</h1>
+</section>
+<!-- ČÁST 4: SHRNUTÍ A DALŠÍ KROKY (40 minut) -->
+<section>
+    <h1>Shrnutí dosavadního průběhu</h1>
+    <ul>
+        <li>Co jsme zatím prošli:
+            <ul>
+                <li>Problem framing a designové výzvy</li>
+                <li>Ideace možných řešení</li>
+                <li>Prioritizace a výběr konceptů</li>
+                <li>Prototypování řešení</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>Co ještě buede následovat?</h1>
+    <ul>
+        <li>Testování funkčnosti</li>
+
+        <li>Implementace zjištění z testování</li>
+        <li>Iterace prototypů</li>
+        <li>Finální prezentace řešení</li>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Iterace po testování</h1>
+    <ul>
+        <li><strong>Sběr dat</strong> – systematicky shromážděte všechna zjištění</li>
+        <li><strong>Kategorizace problémů</strong> – podle závažnosti (kritické, závažné, mírné, kosmetické)</li>
+        <li><strong>Generování vhledů</strong> – identifikujte hlubší příčiny problémů</li>
+        <li><strong>Brainstorming řešení</strong> – navrhněte možné úpravy</li>
+        <li><strong>Implementace změn</strong> – upravte prototyp</li>
+        <li><strong>Dokumentace procesu</strong> – zaznamenejte před/po pro prezentaci</li>
+    </ul>
+</section>
+<section>
+    <h1>Co bude dál?</h1>
+    <ul>
+        <li><strong>1.5.</strong> – Volný den (státní svátek)
+            <ul>
+                <li>V ISu bude připravena kapitola ke storytellingu a prezentaci projektů</li>
+                <li>V tomto období provádějte testování a iterace</li>
+            </ul>
+        </li>
+        <li><strong>15.5.</strong> – Finální prezentace projektů</li>
+    </ul>
+    <p>Doporučené termíny pro vaši práci:</p>
+    <ul>
+        <li><strong>Do 1.5.</strong> – Provedené testování a analýza zjištění</li>
+        <li><strong>Do 8.5.</strong> – Iterace návrhu na základě testování</li>
+    </ul>
+</section>
+<section>
+    <h1>Finální prezentace</h1>
+    <ul>
+        <li><strong>Čas:</strong> 25 minut na tým (10 min prezentace + 15 min Q&A)</li>
+        <li><strong>Struktura prezentace:</strong>
+            <ul>
+                <li>Představení problému a designové výzvy</li>
+                <li>Proces návrhu řešení (ideace, prioritizace, refinování, ...)</li>
+                <li>Klíčová zjištění z testování</li>
+                <li>Provedené iterace</li>
+                <li>Finální řešení a jeho přínosy</li>
+                <li>Poučení a další možný rozvoj</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Domácí práce</h1>
+    <ul>
+        <li><strong>Dokončit scénář testování</strong> na základě dnes získané zpětné vazby</li>
+        <li><strong>Provést uživatelské testování</strong> s 3-5 reprezentativními uživateli</li>
+        <li><strong>Analyzovat zjištění</strong> a prioritizovat problémy</li>
+        <li><strong>Implementovat změny</strong> v prototypu</li>
+        <li><strong>Dokumentovat proces</strong> pro finální prezentaci</li>
+        <li><strong>Reflektovat práci v týmu</strong> – co funguje, co by šlo zlepšit</li>
+    </ul>
+</section>
+<section data-background="../img/presentation-backgrounds/sfinx.png" data-background-size="fit">
+    <h1 class="text-shadow-black r-fit-text" style="font-size: 15px !important;">🚀   🚀   🚀</h1>
+</section>

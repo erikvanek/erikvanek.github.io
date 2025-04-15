@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="insight">Insight</h1>
+
+    <ul>
+<li>writing insights well is not an easy task</li>
+<li>insights are usually results of <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Discovery MOC/">Discovery MOC</a> or <a href="/notes/11 - ⏳ interim knowledge/Research/Research-MOC/">Research-MOC</a></li>
+<li><em>is a non-obvious observation grounded in data that explains the &quot;why&quot; behind consumer motivations and human behavior</em></li>
+<li><em>the goal of every insight statement is to help stakeholders understand users' emotional experiences and inspire well-defined product ideation</em></li>
+<li>Data refers to unanalyzed user observations, findings capture patterns among data points, and <em>insights are the actionable opportunities based on research and business goals.</em></li>
+<li>one of the most important steps to creating an effective insight statement is knowing the information required</li>
+<li>Well-structured insight consists is:
+<ul>
+<li>based on actual facts and data and not mere opinions</li>
+<li>inspiring ideas</li>
+<li>helping to understand users' mental models</li>
+<li>written in clear, simple, and precise language</li>
+</ul>
+</li>
+<li>findings are not enough as they don't provide context</li>
+<li>user insights typically focus on the user's <strong>unmet needs</strong>, <strong>underlying motivations</strong>, and <strong>surprising behaviors</strong>.</li>
+<li><em>A definition is helpful but knowing what value your insight should deliver in the customer journey is far more essential and makes them directly actionable, building momentum for change.</em></li>
+</ul>
+<h2 id="insight-anatomy">Insight anatomy</h2>
+<p><strong>“I saw this” + “I know this” = insight</strong></p>
+<ul>
+<li><strong>“I saw this”</strong> - user research data gathered through research, ideally from various sources</li>
+<li><strong>“I know this”</strong> - accumulated life experience, worldview, and meaning for the insight creator(s)</li>
+<li><strong>Insight</strong> - deep, meaningful, and contextual perception</li>
+</ul>
+<h2 id="communicating-insights">Communicating insights</h2>
+<ul>
+<li>Be Evidence-Based</li>
+<li>Be Visual</li>
+<li>Quantify findings. For example, instead of saying more users enjoy browsing on their smartphones, say, &quot;6 out of 10 users enjoy browsing on their mobile phones.</li>
+</ul>
+<h2 id="structuring-insights">Structuring insights</h2>
+<ol>
+<li>What are your findings
+<ul>
+<li>This is where the most valuable data from finding is stored</li>
+</ul>
+</li>
+<li>Why are they happening
+<ul>
+<li>Articulating the root cause(s) of the discovery</li>
+<li>You can also draw inferences like educated guesses or hypotheses</li>
+</ul>
+</li>
+<li>What is the evidence</li>
+<li>What can be done about them</li>
+</ol>
+<h2 id="a-hrefhttpsthrivethinkingcom20230106what-is-insight-the-5-principles-of-insight-definition5-principles-of-insight-definitiona"><a href="https://thrivethinking.com/2023/01/06/what-is-insight-the-5-principles-of-insight-definition/">5 principles of insight definition</a></h2>
+<ul>
+<li>
+<ol>
+<li>SET THE CONTEXT</li>
+</ol>
+</li>
+<li>COMMUNICATE THE DILEMMA</li>
+<li>ARTICULATE THE WHY</li>
+<li>CAPTURE THE MOTIVATION</li>
+<li>ENVISION THE IDEAL</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://thrivethinking.com/2023/01/06/what-is-insight-the-5-principles-of-insight-definition/" target="_blank" rel="noopener noreferrer">https://thrivethinking.com/2023/01/06/what-is-insight-the-5-principles-of-insight-definition/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

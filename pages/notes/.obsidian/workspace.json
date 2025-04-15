@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bde213d6c31f0d0f",
+        "id": "eac1d1baa1e941dd",
         "type": "tabs",
         "children": [
           {
-            "id": "7c5ff50c3776984e",
+            "id": "e5ed3f32e745851b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Planning"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "just enough",
+                "query": "coding",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,8 +170,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee613e5f4402eea4",
+  "active": "e5ed3f32e745851b",
   "lastOpenFiles": [
+    "99 - 📄 To process/Codebook.md",
+    "04 - 💽 RAW/2025/04/06/Coding.md",
+    "04 - 💽 RAW/2025/04/06/Thematic analysis.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Project reflection framework.md",
+    "02 - 📩 Inbox/Cost of change.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Zdroje.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Průběh semestru.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Intro.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
@@ -186,13 +198,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Triangulation.md",
     "99 - 📄 To process/design/Concepts/VUCA world.md",
     "99 - 📄 To process/design/Concepts/Sense-making.md",
-    "99 - 📄 To process/design/Concepts/Prototyping.md",
-    "99 - 📄 To process/design/Concepts/Process management.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
-    "99 - 📄 To process/design/Concepts/Iteration.md",
-    "99 - 📄 To process/design/Concepts/Indexing.md",
-    "99 - 📄 To process/design/Concepts/Implementation.md",
-    "99 - 📄 To process/design/Concepts/Ideation.md",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food",

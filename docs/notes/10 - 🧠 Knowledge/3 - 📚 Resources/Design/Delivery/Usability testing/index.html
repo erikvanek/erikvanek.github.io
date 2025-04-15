@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="usability-testing">Usability testing</h1>
+
+    <ul>
+<li>great <a href="https://www.lyssna.com/guides/usability-testing-guide/">guide</a> by Lyssna</li>
+<li>can use methods like <a href="https://www.lyssna.com/guides/design-surveys/">design surveys</a>, <a href="https://www.lyssna.com/guides/five-second-testing/">5 second tests</a> or <a href="https://www.lyssna.com/blog/concept-testing/">concept testing</a></li>
+<li>ideally happens in a setting of one partcipant, one facilitator and one note-taker</li>
+<li>can be moderated on unmoderated</li>
+<li>it can be either <a href="https://www.lyssna.com/blog/formative-usability-testing/">formative</a> or <a href="https://www.lyssna.com/blog/summative-usability-testing/">summative</a>
+<ul>
+<li>formative is done sooner, summative earlier (usually to compare against each other) – comparison <a href="https://www.lyssna.com/blog/formative-vs-summative-usability-testing/">here</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="briefing-participants">Briefing participants</h2>
+<ul>
+<li>
+<ul>
+<li><strong>Start with an overview:</strong> Begin by providing an overview of the testing process, including the goals of the study, the tasks you’re asking participants to perform, and the type of feedback or data you’re looking to gather.</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain the testing process:</strong> Provide a step-by-step explanation of how the testing session will be conducted, including any equipment or tools participants will be using, and the order they’ll complete the tasks.</p>
+</li>
+<li>
+<p><strong>Clarify expectations:</strong> Clearly explain what’s expected from participants, including how they should approach the tasks and anything specific they should keep in mind while testing, like explaining their thought process out loud.</p>
+</li>
+<li>
+<p><strong>Address questions and concerns:</strong> Allow participants to ask questions and address any concerns they may have about the testing process.</p>
+</li>
+</ul>
+<h2 id="note-taking">Note taking</h2>
+<ul>
+<li>ideally use multiple senses (hear, observe, ...)</li>
+<li>ideally record a session and make notes together</li>
+<li>note taking can be pre-structured
+<ul>
+<li>e.g. predefine some categories I then just tick when asking for an answer
+<ul>
+<li>category for feedback, task completion, navigation smoothness, ...</li>
+<li>Likert scales can help here</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>do not forget to record positive feedback</em></li>
+<li>use descriptive language to capture the essence of the experience</li>
+<li>record
+<ul>
+<li>observations</li>
+<li>quotes</li>
+<li>actions they are taking</li>
+<li>identified usability issues</li>
+<li>questions that are arising</li>
+</ul>
+</li>
+</ul>
+<h2 id="facilitation">Facilitation</h2>
+<ul>
+<li>use probing questions like why, how or 'tell me more about ...' to get more in depth</li>
+<li>think-aloud protocol</li>
+<li>we're testing the tool, not you</li>
+</ul>
+<h2 id="test-scenario">Test scenario</h2>
+<ul>
+<li>a set of conditions or situations that a user would encounter while using your product</li>
+<li>tasks are specific actions that you ask a participant to perform during the usability testing session, they are representative of the typical activities that a user would perform while using your product
+<ul>
+<li>can be either exploratory (don't have a right or wrong answer) or specific (usually have a right or wrong answer)</li>
+</ul>
+</li>
+<li>the scenario <strong>should be realistic</strong></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.lyssna.com/guides/usability-testing-guide/" target="_blank" rel="noopener noreferrer">https://www.lyssna.com/guides/usability-testing-guide/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

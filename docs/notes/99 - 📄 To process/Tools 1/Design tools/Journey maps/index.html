@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="journey-maps">Journey maps</h1>
+
+    <ul>
+<li>visualize the experience of a person over time</li>
+<li>help to find gaps in CX &amp; explore potential solutions</li>
+<li>structured as a series of steps
+<ul>
+<li>events, moments, experiences, interactions</li>
+</ul>
+</li>
+<li>usually have various scales to represent different aspects of one experience i.e different zoom levels</li>
+<li>they help make &quot;intangible&quot; XPs visible and facilitate common understanding</li>
+<li>can be assumption or research based</li>
+<li>types
+<ul>
+<li>current state
+<ul>
+<li>looks to find problems or improvements in current service</li>
+</ul>
+</li>
+<li>future state
+<ul>
+<li>helps to imagine yet to be made service</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>focus
+<ul>
+<li>product centered
+<ul>
+<li>map containing only touchpoints
+<ul>
+<li>steps representing an interaction between a customer &amp; the product</li>
+<li>everything out of the company is hidden</li>
+<li>e.g. useful for mapping onboarding</li>
+<li>might miss important contextual info e.g. signing up for new electricity provider might miss the stress of people moving houses</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>XP centered
+<ul>
+<li>reflect situational context and show how are touchpoints embedded in overall XP</li>
+<li>sidenote - often using a service is not the goal of the user, the goal is to achieve the goal e.g. having electricity is the goal, signing up is the chore</li>
+<li>often the design challenge shifts like from &quot;What is the onboarding XP of our electricity provider&quot; into &quot;What is the XP of moving houses &amp; where does electricity provider swap fits it&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>product-centered is often zoomed in deeper than XP centered</li>
+<li>It’s the proverbial canary in the coal mine. Using an Experience Map means you can identify:
+<ul>
+<li>New trends</li>
+<li>Problems in the customer journey</li>
+<li>Opportunities to advance or invest</li>
+<li>Areas to distribute customer insights or training</li>
+</ul>
+</li>
+</ul>
+<h2 id="include">Include</h2>
+<ul>
+<li>
+<p>main actor ^137075</p>
+<ul>
+<li>usually <a href="/notes/99 - 📄 To process/Tools 1/Design tools/Persona/">Persona</a> or multiple</li>
+</ul>
+</li>
+<li>
+<p>stages</p>
+<ul>
+<li>main phases of actor's experience</li>
+</ul>
+</li>
+<li>
+<p>steps</p>
+<ul>
+<li>sequence of steps from actor's perspective</li>
+</ul>
+</li>
+<li>
+<p>storyboards</p>
+<ul>
+<li>illustrations of each step with sketches, photos to contextualize the story</li>
+</ul>
+</li>
+<li>
+<p>emotional journey</p>
+<ul>
+<li>graphs representing actor's satisfaction on each step</li>
+<li>often within [-2, +2] range</li>
+<li>high rating does not mean good/bad bu rather (not) engaged - high value - thrill, low - chill</li>
+</ul>
+</li>
+<li>
+<p>channels</p>
+<ul>
+<li>any means of communication involved in each steps</li>
+</ul>
+</li>
+<li>
+<p>stakeholders</p>
+<ul>
+<li>helps to identify which actors should be included during research, prototyping &amp; implementation</li>
+</ul>
+</li>
+<li>
+<p>dramatic arc</p>
+<ul>
+<li>illustrates actor's engagement in each step</li>
+</ul>
+</li>
+<li>
+<p>'what if?'</p>
+<ul>
+<li>what could possibly go wrong on each step by asking 'what if?' questions</li>
+</ul>
+</li>
+<li>
+<p><a href="#" class="pending-link">Jobs to be done</a></p>
+<ul>
+<li>describe what a service helps the actor to achieve on each step</li>
+<li>helps to move away from current solution &amp; create a new frame to look for new opportunities</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>objective</li>
+</ul>
+</li>
+<li>
+<p>actions – what clients do?</p>
+</li>
+<li>
+<p>required resources (human, tech, financial, …) on their side</p>
+</li>
+<li>
+<p>required resources/departments/roles on Datamole side</p>
+</li>
+<li>
+<p>artifacts used / produced during that phase</p>
+</li>
+<li>
+<p>touchpoints – a specific interaction between a customer and an organization</p>
+<ul>
+<li><a href="https://www.productplan.com/glossary/customer-journey-map/">https://www.productplan.com/glossary/customer-journey-map/</a></li>
+</ul>
+</li>
+<li>
+<p>opportunities – how could we help them succeed in that step?</p>
+</li>
+<li>
+<p>possible pain points – what is blocking them in that stage?</p>
+</li>
+<li>
+<p><a href="https://www.amran.cz/how-habits-and-anxieties-keep-people-from-using-your-product/">anxieties</a> that might decrease the demand</p>
+</li>
+</ul>
+<h2 id="concepts">Concepts</h2>
+<ul>
+<li><strong>Channels:</strong> The methods by which your business communicates information or messages to the customer. E.g. an app, a website, print media, etc</li>
+<li><strong>Touchpoint:</strong> Any point where a customer observes or interacts with your brand, from the on-boarding process to customer service chat.</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.experiencemap.com/" target="_blank" rel="noopener noreferrer">https://www.experiencemap.com/</a></li>
+            
+            <li><a href="https://www.nngroup.com/articles/ux-mapping-cheat-sheet/" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/articles/ux-mapping-cheat-sheet/</a></li>
+            
+            <li><a href="https://www.productplan.com/glossary/customer-journey-map/" target="_blank" rel="noopener noreferrer">https://www.productplan.com/glossary/customer-journey-map/</a></li>
+            
+            <li><a href="https://www.nngroup.com/articles/channels-devices-touchpoints/" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/articles/channels-devices-touchpoints/</a></li>
+            
+            <li><a href="https://www.zendesk.com/blog/customer-journey-map/" target="_blank" rel="noopener noreferrer">https://www.zendesk.com/blog/customer-journey-map/</a></li>
+            
+            <li><a href="https://uxpressia.com/blog/customer-journey-map-guide-examples" target="_blank" rel="noopener noreferrer">https://uxpressia.com/blog/customer-journey-map-guide-examples</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

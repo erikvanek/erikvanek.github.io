@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="research-question">Research question</h1>
+
+    <ul>
+<li>is the bare bone of <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research/">Design research</a></li>
+<li>when developing research questions - think ahead of what will happen to answers - we receive since I know what comes next in the process after I have concluded it
+<ul>
+<li>i.e. don't do research just for the sake of doing research, think of how gathered <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a>s help us to move forward in the next phase</li>
+<li>ask a question <strong>&quot;How will the answer to this question help to generate a range of insights &amp; ideas to create a new value?&quot;</strong></li>
+</ul>
+</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question/">Research question</a> is often vague at the beginning but it <em>gets precised</em> over time</li>
+<li>helpful to come up with more to start with and then conclude with one</li>
+<li>should start with <em>&quot;How&quot;</em></li>
+<li>clear, focused, and concise statement that conveys the objectives of the research and its potential findings</li>
+<li>Shoud meet <a href="https://scientific-publishing.webshop.elsevier.com/research-process/finer-research-framework/">Finer</a> and <a href="https://www.library.sydney.edu.au/support/searching/pico">PICO</a> criteria</li>
+<li>A good research question is specific, actionable, and practical:
+<ul>
+<li>
+<ol>
+<li>It is possible to answer the question using the techniques and methods available to you</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>It’s possible (but not guaranteed) that you can arrive at an answer with a sufficient degree of confidence to base decisions on what you’ve learned</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Dive deep into ]framing research questions</li>
+<li><strong>Only <em>after</em> you have identified your research questions can you select the best way to answer the question.</strong>
+<ul>
+<li>first research question, then research plan and activities</li>
+</ul>
+</li>
+<li>Research X Interview question
+<ul>
+<li>RQ - <strong>How do families with school-age children decide how to spend money on vacations?</strong></li>
+<li>IQ - <strong>Walk me through your last vacation from planning it until when you arrived back home.</strong></li>
+</ul>
+</li>
+<li>4 main categories:
+<ul>
+<li>Generative/Exploratory: How will this activity yield the kind of deep understanding we seek?</li>
+<li>Descriptive: How will this activity provide a detailed, truthful, and accurate picture of the situation or sequence of events?
+<ul>
+<li>Evaluative: How will this activity enable a reliable assessment based on a clear set of criteria?</li>
+</ul>
+</li>
+<li>Causal: How will this activity establish a cause and effect relationship, beyond simple correlation?</li>
+</ul>
+</li>
+<li>5 main characteristics:
+<ul>
+<li><strong>Feasible.</strong> You need to have the resources and abilities to examine the question, collect the data, and give answers.</li>
+<li><strong>Interesting.</strong> Create research questions that offer fascinating insights into your industry.</li>
+<li><strong>Novel.</strong> Research questions have to offer something new within your field of study.</li>
+<li><strong>Ethical.</strong> The research question topic should be approved by the relevant authorities and review boards.</li>
+<li><strong>Relevant.</strong> Your research question should lead to visible changes in society or your industry.<br>
+7 types of quali research questions:</li>
+<li><a href="https://dovetail.com/research/explanatory-research/">Explanatory research</a> questions investigate particular topic areas that aren't well known.</li>
+<li><strong>Contextual</strong> research questions describe the workings of what is already in existence.</li>
+<li><strong>Evaluative</strong> research questions examine the effectiveness of specific paradigms or methods.</li>
+<li><strong>Ideological</strong> research questions aim to advance existing ideologies.</li>
+<li><strong>Descriptive</strong> research questions describe an event.</li>
+<li><a href="https://dovetail.com/ux/generative-research/">Generative research</a> questions help develop actions and theories by providing new ideas.</li>
+<li><strong>Emancipatory</strong> research questions increase social action engagement, usually to benefit disadvantaged people.</li>
+</ul>
+</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.muledesign.com/blog/research-questions-are-not-interview-questions" target="_blank" rel="noopener noreferrer">https://www.muledesign.com/blog/research-questions-are-not-interview-questions</a></li>
+            
+            <li><a href="https://www.muledesign.com/blog/quick-tips-for-picking-design-research-activities" target="_blank" rel="noopener noreferrer">https://www.muledesign.com/blog/quick-tips-for-picking-design-research-activities</a></li>
+            
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6691636/" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6691636/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>
