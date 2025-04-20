@@ -5,3 +5,5 @@
 - [ ] jelení lůj
 - [ ] krém na ruce
 - [ ] termoska
+- [ ] nesmeky
+- [ ] šusťákové kalhoty

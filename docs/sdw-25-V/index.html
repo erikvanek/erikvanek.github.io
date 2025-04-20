@@ -75,7 +75,7 @@
         <li>Metody testování a jejich výběr</li>
         <li>Konstrukce testovacího scénáře</li>
         <li>Pilotní P2P testování vašich prototypů</li>
-        <li>Pauza na ☕ (20 minut)</li>
+        <li>Pauza na ☕ (10 minut)</li>
         <li>Shrnutí dosavadního průběhu a další kroky</li>
         <li>Co čekat od finálních prezentací?</li>
     </ul>
@@ -170,7 +170,12 @@
     <ul>
         <li>Nejuniverzálnější metoda ověřování designu</li>
         <li>Pozorování reprezentativních uživatelů při plnění úkolů</li>
-        <li>Účastníci <strong>"myslí nahlas"</strong> – verbalizují své myšlenky</li>
+        <li>Účastníci <strong>"myslí nahlas"</strong> – verbalizují své myšlenky
+            <ul>
+                <li>Tzv. <a href="https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/"
+                        target="_blank">think aloud protocol</a></li>
+            </ul>
+        </li>
         <li>Moderátor vede proces, ale nezasahuje do plnění úkolů</li>
         <li>Kombinuje kvalitativní postřehy s kvantitativními metrikami</li>
         <li>Lze přizpůsobit jakékoliv fázi vývoje</li>
@@ -193,6 +198,8 @@
             </ul>
         </li>
         <li>Podporuje kulturu experimentování</li>
+        <li>Lze využít i jako doplněk k výzkumu a v průběhu sezení získat odpovědi i na jiné klíčové otázky k projektu
+        </li>
     </ul>
 </section>
 <section>
@@ -206,6 +213,33 @@
         <li><strong>Implementace změn</strong> – iterace na základě zjištění</li>
     </ol>
 </section>
+
+<section>
+    <div class="equal-columns">
+        <div>
+            <h3 id="co-funguje">Co funguje</h3>
+            <ul>
+                <li><strong>Otevřené otázky</strong> – "Jak byste popsali tento proces?"</li>
+                <li><strong>Neutrální formulace</strong> – "Co si myslíte o tomto řešení?"</li>
+                <li><strong>Konkrétní zaměření</strong> – "Proč jste kliknuli tady?"</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="eho-se-vyvarovat">Čeho se vyvarovat</h3>
+            <ul>
+                <li><strong>Návodné otázky</strong> – "To tlačítko je dobře viditelné, že?"</li>
+                <li><strong>Uzavřené ano/ne otázky</strong> – "Je to srozumitelné?"</li>
+                <li><strong>Hodnotící jazyk</strong> – "Líbí se vám tento nový design?"</li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-top: 20px; font-size: 1.2em;">
+        <p>💡 <strong>TIP:</strong> Ptejte se na konkrétní zkušenosti, ne na hypotetické situace.
+            <br>"Jak jste se cítili, když..." je lepší než "Jak byste se cítili, kdyby..."
+        </p>
+    </div>
+</section>
+
 <section>
     <h1 class="r-fit-text">Variace <br> uživatelského testování</h1>
 </section>
@@ -294,7 +328,8 @@
         <li><strong>Dostupné zdroje</strong> – čas, rozpočet, lidé</li>
         <li><strong>Potřebná data</strong> – kvalitativní vs. kvantitativní
             <ul>
-                <li>Zajímá nás spíše "co?" nebo "proč?"</li>
+                <li>Zajímá nás spíše <em>"proč?"</em> a <em>"jak?"</em> nebo <em>"co?"</em> a <em>"jak často?"</em>
+                </li>
             </ul>
         </li>
         <li><strong>Typ prototypu</strong> – fidelita, interaktivita</li>
@@ -381,7 +416,7 @@
         <p style="font-size: 1rem !important;"><strong>Úvod:</strong> "Dobrý den, děkuji za váš čas. Dnes budeme
             testovat prototyp aplikace, která pomáhá lidem najít sociální služby v jejich okolí. Je důležité zdůraznit,
             že <strong>testujeme aplikaci, ne vás</strong>. Neexistují špatné odpovědi a každá zpětná vazba je pro nás
-            cenná. Mohl/a byste prosím během testování myslet nahlas a sdílet své myšlenky?"</p>
+            cenná. Mohl/a byste prosím během testování "myslet nahlas" a sdílet své myšlenky?"</p>
 
         <p style="font-size: 1rem !important;"><strong>Úkol 1:</strong> "Představte si, že hledáte pečovatelskou službu
             pro svého seniora v Brně-Královo Pole. Jak byste postupoval/a při hledání této služby v aplikaci?"</p>
@@ -406,7 +441,7 @@
 <section>
     <h1 id="tvorba-scne">Tvorba scénáře</h1>
     <ul>
-        <li>Rozdělte se do projektových týmů</li>
+        <li>Rozdělte se do týmů podle projektů</li>
         <li>Máte 20 minut na přípravu testovacího scénáře</li>
         <li>Zaměřte se na:
             <ul>
@@ -815,7 +850,7 @@
     </ul>
 </section>
 <section>
-    <h1 class="r-fit-text">Pauza na ☕ (20 minut)</h1>
+    <h1 class="r-fit-text">Pauza na ☕ (10 minut)</h1>
 </section>
 <!-- ČÁST 4: SHRNUTÍ A DALŠÍ KROKY (40 minut) -->
 <section>
@@ -922,8 +957,11 @@
     </div>
 
     <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
 
     <script>
-        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true });
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
     </script>
 </body>
