@@ -1,4 +1,0 @@
-- often called [[Desk research]]
-- uses only secondary data i.e. collected for other projects
-- should be the starting point to avoid reinventing the wheel
-- e.g. comparing previous "solutions" to similar problems etc
