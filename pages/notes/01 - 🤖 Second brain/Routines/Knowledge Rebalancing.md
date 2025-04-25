@@ -1,12 +1,15 @@
 # AI-Assisted Knowledge Rebalancing
 
-Knowledge rebalancing is the periodic review and restructuring of your knowledge base to maintain optimal organization and discoverability. With Claude's assistance, this process becomes more efficient while maintaining human oversight.
+Knowledge rebalancing is the periodic review and restructuring of the `10 - 🧠 Knowledge` folder to maintain optimal organization and discoverability within your PARA system. With Claude's assistance, this process becomes more efficient while maintaining human oversight.
+
+**Important**: Rebalancing focuses exclusively on the Knowledge folder (not other folders like Inbox, Dump, RAW, etc.).
 
 ## When to Rebalance
-- Monthly or quarterly reviews
-- When a specific area of knowledge has grown significantly
-- When you find yourself struggling to locate information
-- When notes have grown too large or unwieldy
+- Monthly or quarterly reviews of the Knowledge folder
+- When a specific PARA category has grown significantly
+- When you find yourself struggling to locate information within Knowledge
+- When Knowledge notes have grown too large or unwieldy
+- When connections between PARA sections (Projects, Areas, Resources, Archives) need strengthening
 
 ## AI-Assisted Rebalancing Process
 1. **Identify Areas for Rebalancing** (ask Claude to help):
@@ -38,9 +41,9 @@ Knowledge rebalancing is the periodic review and restructuring of your knowledge
 
 ## Sample Rebalancing Prompt for Claude
 ```
-Claude, please help me rebalance this area of my knowledge base:
+Claude, please help me rebalance this area of my Knowledge folder:
 
-[Specify area/folder/topic]
+[Specify PARA category or subfolder within Knowledge]
 
 Please:
 1. Analyze the current structure and identify improvement opportunities
@@ -48,6 +51,27 @@ Please:
 3. Recommend new or updated connections between notes
 4. Draft any needed MOC updates
 5. Ensure all notes follow my standard template
+6. Identify connections to other PARA sections that could be strengthened
 
 I'll review your suggestions and make the final decisions on implementation.
 ```
+
+## PARA-Specific Rebalancing Considerations
+
+### Projects (1 - 🚀 Projects)
+- Ensure project notes link to relevant Resources
+- Check if completed project materials should move to Archives
+- Verify project indices are up-to-date
+
+### Areas (2 - 🌱 Areas)
+- Review connections between related ongoing responsibilities
+- Update Area indices with recent developments
+
+### Resources (3 - 📚 Resources)
+- Focus on MOC maintenance for major topics
+- Identify clusters that could benefit from new MOCs
+- Ensure bidirectional linking is complete
+
+### Archives (4 - 🏛️ Archives)
+- Verify archived content is properly categorized
+- Update links from active notes to archives when relevant
