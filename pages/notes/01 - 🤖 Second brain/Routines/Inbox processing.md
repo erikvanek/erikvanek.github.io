@@ -25,6 +25,25 @@
    * Keep original formatting whenever possible
 5. **Connect**: Add bidirectional links to related notes where appropriate
 
+## Note Combination Guidelines
+* **When to Combine Notes**:
+  * Notes that explicitly reference each other
+  * Notes covering the same concept from different angles
+  * Notes that would be more useful as a single cohesive unit
+  * Fragments that naturally complement each other
+* **How to Combine Notes**:
+  * Preserve 100% of the original content from all combined notes
+  * Interweave related content when it makes sense, rather than simply appending
+  * Choose the most fitting title for the content, not necessarily a broader umbrella title
+  * Restructure into logical sections that maintain the spirit of the original notes
+  * Merge related bullet points that address the same concept
+  * Combine all relevant bidirectional links in a single "Related notes" section
+* **Absolute Requirements**:
+  * Never paraphrase or alter the specific wording within bullet points
+  * Never add explanatory text between original content points
+  * Preserve the core concepts and ideas exactly as written
+  * Don't add AI-generated transitions between combined elements
+
 ## Process
 - Take a look at what is in a given note and assign 5 tags to it based on [[Tagging]] process
 - Use appropriate templates from [[01 - 🤖 Second brain/Templates/note-template|Note Template]] for structured processing
