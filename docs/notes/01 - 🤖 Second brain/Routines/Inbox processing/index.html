@@ -235,18 +235,22 @@
 <h2 id="storage">Storage</h2>
 <ul>
 <li>Inbox serves as the entrypoint to new knowledge</li>
-<li><strong>important workflow clarification</strong> - After processing, the note should be:
+<li><strong>important workflow clarification</strong> - Content type determines destination folder:
 <ol>
-<li>Enhanced with proper metadata, tags, AI summary, and related notes</li>
-<li>Stored in the <code>04 - 💽 RAW</code> folder following a hierarchical structure:
+<li><strong>RAW materials</strong> (book notes, interview transcripts, article summaries, attended lectures):
 <ul>
-<li>Create folders based on the note's creation date from frontmatter metadata</li>
-<li>Structure: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
-<li>Example: For a note created on April 6, 2025: <code>04 - 💽 RAW/2025/04/06/Note_Title.md</code></li>
+<li>Store in <code>04 - 💽 RAW</code> following: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
+<li>Example: <code>04 - 💽 RAW/2025/04/06/Book_Notes.md</code></li>
 </ul>
 </li>
-<li>Deleted from the Inbox folder after being properly stored in RAW</li>
-<li>Smaller nuggets of information may be created and connected to most relevant notes in <code>10 - 🧠 Knowledge</code> folder if appropriate</li>
+<li><strong>Knowledge nuggets</strong> (concepts, principles, methods, insights):
+<ul>
+<li>Store directly in relevant subfolder of <code>10 - 🧠 Knowledge</code> (typically under <code>3 - 📚 Resources</code>)</li>
+<li>Example: <code>10 - 🧠 Knowledge/3 - 📚 Resources/Development/Technical_Debt.md</code></li>
+</ul>
+</li>
+<li>Always enhance with proper metadata, tags, AI summary (if needed), and related notes</li>
+<li>Delete from Inbox folder after proper storage</li>
 </ol>
 </li>
 </ul>

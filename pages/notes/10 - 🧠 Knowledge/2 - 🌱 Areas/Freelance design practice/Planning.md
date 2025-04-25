@@ -32,7 +32,6 @@ resources:
 - tell Claude to process inbox notes
 - assign 1h blocks for weekly plans and review next week
 	- go through weekly plan and mark what worked and what happened and what did not
-- 
 - review successes and failures
 - are there some reflections that need to be made?
 	- if they are short, do them now
