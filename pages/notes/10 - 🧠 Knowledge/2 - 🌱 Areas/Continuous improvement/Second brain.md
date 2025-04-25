@@ -1,6 +1,9 @@
 ---
 resources:
   - https://www.youtube.com/watch?v=g6GbJpVppqo
+tags:
+  - KnowledgeManagement
+  - SecondBrain
 ---
 
 - don't do what I don't have done from 80% done from previous efforts

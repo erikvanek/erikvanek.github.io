@@ -1,0 +1,4 @@
+- the place to dump links from devices
+- once every while I just FOMOgather too many links on a device
+- this place allows to dump them, then an AI agent crawles through their content and sorts based on my priorities
+- so that once I'm bored I can easily get to this "next most interesting thing" for my right now to get inspired
