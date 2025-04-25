@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="book-notes-knowledge-extraction">Book Notes Knowledge Extraction</h1>
+
+    <h1 id="book-notes-knowledge-extraction">Book Notes Knowledge Extraction</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Extract valuable knowledge nuggets from processed book notes and integrate them into the knowledge base, creating connections between raw materials and existing knowledge structures.</p>
+<h2 id="process">Process</h2>
+<h3 id="1-nugget-identification">1. Nugget Identification</h3>
+<ul>
+<li>Extract 2-3 high-value insights from each book note</li>
+<li>Prioritize principles and concepts over specific examples</li>
+<li>Look for insights that:
+<ul>
+<li>Challenge conventional thinking</li>
+<li>Provide frameworks for understanding</li>
+<li>Offer actionable mental models</li>
+<li>Complement existing knowledge</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-knowledge-integration">2. Knowledge Integration</h3>
+<ul>
+<li>Identify existing knowledge nodes that could be enhanced by the nuggets</li>
+<li>Never modify RAW notes - treat them as read-only source material</li>
+<li>When adding to existing notes:
+<ul>
+<li>Integrate nuggets naturally into the text flow</li>
+<li>Reference the source directly using wiki links: <code>as noted in <a href="#" class="pending-link">Book Title</a></code></li>
+<li>Avoid creating separate heading sections labeled by source</li>
+<li>Restructure content if needed for better flow and coherence</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-new-knowledge-creation">3. New Knowledge Creation</h3>
+<ul>
+<li>Create new knowledge notes when a concept deserves dedicated exploration</li>
+<li>Place new notes in appropriate locations within Knowledge folder structure (usually <code>10 - 🧠 Knowledge/3 - 📚 Resources/[Category]</code>)</li>
+<li>Structure new knowledge notes with:
+<ul>
+<li>Clear title and appropriate tags</li>
+<li>Concise definition/explanation of the concept</li>
+<li>Key principles drawn from source material</li>
+<li>Application guidelines where relevant</li>
+<li>Related concepts section prioritizing links to Knowledge folder notes</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-connection-building">4. Connection Building</h3>
+<ul>
+<li>Ensure bidirectional linking between:
+<ul>
+<li>Raw book notes and enhanced knowledge notes</li>
+<li>New knowledge notes and related existing concepts</li>
+<li>Between complementary concepts across the knowledge base</li>
+</ul>
+</li>
+<li>Prioritize connections to notes in Knowledge folder over To-process or RAW folders</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code>// Original text in Design.md
+- Design is about making trade-offs
+
+// Enhanced with book nugget
+- Design is about making trade-offs, and as McDonough argues in <a href="#" class="pending-link">Cradle to Cradle</a>, &quot;being less bad =/= being good&quot; - reducing harm is not the same as creating positive impact
+</code></pre>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Inbox processing</a></li>
+<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Chunking</a></li>
+<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Knowledge Rebalancing</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
