@@ -24,6 +24,7 @@ resources:
 	- do I want to drag it on?
 - inspired by [Cal](https://calnewport.com/plantxt-the-most-effective-productivity-tool-that-youve-never-heard-of/)
 - go through projects and plan what needs attention this week
+	- define one top-most priority for the week and bold it out
 - Go through important and see how to fit them in
 - Try to focus assign deep work blocks for the rest of the week
 - Can I squeeze one **important** item to my schedule?
@@ -33,14 +34,13 @@ resources:
 - assign 1h blocks for weekly plans and review next week
 	- go through weekly plan and mark what worked and what happened and what did not
 - review successes and failures
-- are there some reflections that need to be made?
-	- if they are short, do them now
-	- if not, plan for next week
-- create [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0) and compile new action items
+- are there some reflections that are worth mentioning?
+	- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0)
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
 - add things to plan for next week
 - add things for next month plan if needed
 - review Claude's processing, review and adjust
+	- once good, commit and push
 - can I get more inspired by [Todoist's](https://www.todoist.com/cs/productivity-methods/weekly-review)?
 # Daily
 - inspiration from [todoist](https://www.todoist.com/cs/inspiration/end-work-day)
