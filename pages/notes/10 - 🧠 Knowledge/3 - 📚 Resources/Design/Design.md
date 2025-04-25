@@ -12,7 +12,7 @@ tags:
 - when you start - _be shitty, not pretty_ - throw away easily & iterate further
 - leverage [[Design Thinking]]
 - Uses [[Design tools]] to answer the question "What" & [[Design methods]] to answer the question "How"
-- Kat Holmes: __"Design as a practice that contributes to the society in meaningful ways"__
+- Kat Holmes in [[04 - 💽 RAW/2023/07/16/mismatch|Mismatch]]: __"Design as a practice that contributes to the society in meaningful ways"__
 - [is a rendering of an intent](https://articles.centercentre.com/design_rendering_intent/)
 	- when designing for radical [[Innovation]] we need to [inform our intuition](obsidian://open?vault=notes&file=design%2Fresources%2FInforming_Our_Intuition.pdf)
 	- is about making trade-offs
@@ -20,3 +20,13 @@ tags:
 - The best design does not come from individual designerers, but from design teams
 - [[Storytelling]] combined [[Insight]]s and clear business cases are helpful to present compelling narratives
 - usually split between [[99 - 📄 To process/Product discovery|Product discovery]] and delivery
+- As argued in [[04 - 💽 RAW/2023/03/23/cradle-to-cradle|Cradle to Cradle]], "being less bad =/= being good" - reducing harm is not the same as creating positive impact
+- Sustainable design requires understanding material flows as described by McDonough and Braungart:
+  - Biological - materials that can safely return to nature
+  - Technical - materials that remain in industrial cycles
+- A powerful design question posed in Cradle to Cradle: "What kind of soap does the river want?" - shifting perspective to consider environmental impact from the ecosystem's viewpoint
+- Inclusive design, according to Kat Holmes, is fundamentally "about engaging with people that are different than you"
+- Three crucial skills for inclusive designers identified in [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Inclusive Design|Inclusive Design]]:
+  1. Identify ability biases and mismatched interactions between people and world
+  2. Create a diversity of ways to participate in an experience
+  3. Design for interdependence and bring complementary skills together
