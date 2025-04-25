@@ -11,6 +11,12 @@ layout: blog.njk
 description: Mismatch by Kat Holmes reshaped my thinking about inclusive design. Think of an inclusion as not something that goes 'on top' of things but rather it should be embedded in them. A huge paradigm and a mindset shift for me.
 ---
 
+## AI-assisted summary
+In "Mismatch," Kat Holmes presents a compelling framework for understanding inclusive design as a fundamental approach rather than an afterthought. She introduces the concept of "mismatches" - the points where design creates exclusion - and argues that recognizing these exclusionary moments is the first step toward creating more inclusive solutions. Holmes emphasizes that everyone experiences ability changes throughout life, making exclusion a universal concern rather than an issue affecting only specific minorities.
+
+The book outlines key principles for inclusive design practice, including the shift from designing "for" people to designing "with" them, and the persona spectrum approach that extends solutions from one specific use case to benefit many. Holmes challenges designers to recognize their own ability biases and create multiple ways for people to participate in experiences. Through numerous examples and frameworks, she demonstrates how inclusion is not just a moral imperative but a practical approach that leads to better innovation and economic opportunity for all.
+
+
 
 <div id="notes">
 - "There can be no simplicity until you understand the complexity"
@@ -160,3 +166,10 @@ It takes some amount of experience to start thinking in an inclusive fashion, sp
 Last but not least, the book gave two really nice definitions of what design is and how we should think about practicing it. Those are:
 - _"Design as a practice that contributes to the society in meaningful ways"_
 - _"As a problem solver, you can shift the cycle towards inclusion, one choice at a time. With each design, you shape who can contribute their talents to society. Their contributions will shape to future of all of us."_
+
+## Related notes
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design]]
+- [[99 - 📄 To process/design/Human-centered design]]
+- [[99 - 📄 To process/Humans]]
+- [[99 - 📄 To process/design/Design methods/Design methods]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Mindset]]

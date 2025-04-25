@@ -12,6 +12,12 @@ layout: blog.njk
 description: Cradle to cradle - One of the most important books for regenerative design. A bible for cradle-to-cradle way of thinking. A must-read for upcycling souls.
 ---
 
+## AI-assisted summary
+Cradle to Cradle introduces a revolutionary approach to design and manufacturing that moves beyond the linear "cradle to grave" model toward a regenerative "cradle to cradle" framework. The authors challenge the notion that being "less bad" is good enough, arguing instead for a fundamental redesign of human industry based on nature's processes. The book emphasizes distinguishing between biological and technical nutrients, with the former safely returning to soil and the latter continuously circulating in closed industrial loops.
+
+The authors present numerous examples of how eco-effective (rather than merely eco-efficient) design can create products and systems that maintain or enhance quality across multiple lifecycles. Key concepts include designing products as "products of service" that can be disassembled after use, embracing local diversity rather than universal solutions, and shifting from a focus on reducing harm to creating positive impact. The book serves as a manifesto for a new approach to design and production that sees waste as food for new cycles of creation rather than an inevitable byproduct to minimize.
+
+
 <div id="notes">
 
 ## Notes
@@ -112,3 +118,10 @@ One of the most important books I have read so far. I would call it the bible of
 For me it serves a good predecessor of transition design in a way that it does not leave the planetery and ecological aspect of designing behind. It rather puts it at the core of our thinking and as one of the highest priorities when working on new products. Also its concept of "product of service" seems to be one of the predecessors of _whatever_ as a service that is being coined around a lot around lately.
 
 Probably the most important aspect of the book is the focus on upcycling that really opened my eyes regarding how one can think about that. When we consider upcycling only as an afterthought we'll never get the most of the product we want to upcycle. What happens with a product after it has finished its primary journey needs to be embedded in its initial design. Only this way it can be then reused meaningfully and in the best case in a way, that does not decrease its value in contrast to downcycling.
+
+## Related notes
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation]]
+- [[99 - 📄 To process/design/Speculative design]]
+- [[99 - 📄 To process/design/Social design]]
+- [[11 - ⏳ interim knowledge/Design/Design-MOC]]

@@ -11,6 +11,12 @@ layout: blog.njk
 description: Filling the void by Marcus Gilroy-Ware is an inspiring critique of platform capitalism. Not that I learned something radically new but still this book nudged me to basically stop using Facebook. 
 ---
 
+## AI-assisted summary
+In "Filling the Void," Marcus Gilroy-Ware examines the complex relationship between emotion, capitalism, and our increasing dependence on social media platforms. The book explores how these platforms exploit our psychological vulnerabilities through mechanisms like variable reward schedules and dopamine manipulation, creating addictive behaviors similar to those seen with junk food or drugs. Gilroy-Ware argues that rather than social media making us lonely, it's our pre-existing loneliness and emotional needs that drive us toward these platforms.
+
+The author challenges both technological determinism (the idea that technology inevitably changes us) and pure individual responsibility narratives, placing social media consumption within the broader context of capitalism. He describes how timelines function as "emotional hosepipes" that offer hedonic pleasure while extracting value from our attention and emotions. The book ultimately frames social media as part of a larger system where consumption and hedonism serve as failed attempts to resist capitalism's emptiness, suggesting that there is no truly harmless use of these platforms—if we use them, they unavoidably use us too.
+
+
 
 <div id="notes">
 - book mainly about why we use social media
@@ -92,3 +98,10 @@ A bit older but still heavily relevant book on how affective media tend to drain
 It is good to be aware of affective mechanisms that are being used against us in our daily lives. The most dangerous situation is when we're not even aware we're being the product (which happens especially when using free digital tools). Additionaly it is worth noting that the more products become synonymous to things in your life (e.g. "to Google something") the harder is to abandon them (if needed). Extracting surplus value from causing emotional distress seems to be a common pattern especially in social media world and it is more than sad that general public does not know more about that phenomenon.
 
 We're trying so hard to fill in our inner voids by consuming more, either digitally or physically but we fail to recognize that that's a failed attempt to resist capitalism. Also we should be aware that there's no such thing as harmless use of social media - if you want to use them to any degree, they will use you too.
+
+## Related notes
+- [[04 - 💽 RAW/2023/01/06/hooked]]
+- [[99 - 📄 To process/Attention]] 
+- [[99 - 📄 To process/Memory]]
+- [[99 - 📄 To process/Personal effectiveness]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation]]
