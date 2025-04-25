@@ -24,6 +24,9 @@
    * Create simple linking structure to relevant notes
    * Keep original formatting whenever possible
 5. **Connect**: Add bidirectional links to related notes where appropriate
+6. **Cleanup**:
+   * Delete processed inbox notes and any temporary files once processed
+   * Git provides backup in case deletion needs to be reversed
 
 ## Note Combination Guidelines
 * **When to Combine Notes**:
@@ -43,6 +46,9 @@
   * Never add explanatory text between original content points
   * Preserve the core concepts and ideas exactly as written
   * Don't add AI-generated transitions between combined elements
+* **Cleanup After Combining**:
+  * After creating the combined note, delete the original source notes
+  * Any temporary or interim files should also be deleted
 
 ## Process
 - Take a look at what is in a given note and assign 5 tags to it based on [[Tagging]] process
@@ -75,7 +81,7 @@
      - Store directly in relevant subfolder of `10 - 🧠 Knowledge` (typically under `3 - 📚 Resources`)
      - Example: `10 - 🧠 Knowledge/3 - 📚 Resources/Development/Technical_Debt.md`
   3. Always enhance with proper metadata, tags, AI summary (if needed), and related notes
-  4. Delete from Inbox folder after proper storage
+  4. Delete original inbox notes after proper storage
 
 ## Absolute Restrictions
 * Never expand bullet points into paragraphs
