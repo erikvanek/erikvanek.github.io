@@ -19,14 +19,15 @@
 - For longer notes (over 500 characters), consider using the [[Chunking]] process to break them into more focused, interconnected notes
 ## Storage
 - Inbox serves as the entrypoint to new knowledge
-- **important workflow clarification** - After processing, the note should be:
-  1. Enhanced with proper metadata, tags, AI summary, and related notes
-  2. Stored in the `04 - 💽 RAW` folder following a hierarchical structure:
-     - Create folders based on the note's creation date from frontmatter metadata
-     - Structure: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md`
-     - Example: For a note created on April 6, 2025: `04 - 💽 RAW/2025/04/06/Note_Title.md`
-  3. Deleted from the Inbox folder after being properly stored in RAW
-  4. Smaller nuggets of information may be created and connected to most relevant notes in `10 - 🧠 Knowledge` folder if appropriate
+- **important workflow clarification** - Content type determines destination folder:
+  1. **RAW materials** (book notes, interview transcripts, article summaries, attended lectures):
+     - Store in `04 - 💽 RAW` following: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md`
+     - Example: `04 - 💽 RAW/2025/04/06/Book_Notes.md`
+  2. **Knowledge nuggets** (concepts, principles, methods, insights):
+     - Store directly in relevant subfolder of `10 - 🧠 Knowledge` (typically under `3 - 📚 Resources`)
+     - Example: `10 - 🧠 Knowledge/3 - 📚 Resources/Development/Technical_Debt.md`
+  3. Always enhance with proper metadata, tags, AI summary (if needed), and related notes
+  4. Delete from Inbox folder after proper storage
 # Typical information coming in
 ## Notes
 - it is "passive" knowledge that I gathered somewhere
