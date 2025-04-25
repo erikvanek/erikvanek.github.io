@@ -1,4 +1,0 @@
-- preparatory research method
-	- a tool to build right questions to ask a client during a research
-- basically for me to get to know the context better
-- should be replaced by more in-field techniques later on
