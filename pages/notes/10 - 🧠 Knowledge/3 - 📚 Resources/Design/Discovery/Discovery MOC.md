@@ -1,42 +1,53 @@
 ---
-title: "Product Discovery Map of Content"
+title: "Discovery Map of Content"
+date_updated: 2025-04-25
 date_created: 2025-04-06
 tags:
   - moc
+  - discovery
+  - design-research
   - product-discovery
   - research
-  - product-development
 ---
 
-# Product Discovery Map of Content
+# Discovery Map of Content
 
 ## Overview
-Product discovery is the process of validating that we're building the right thing before investing in building it at scale. This MOC collects frameworks, methods, and practices for effective discovery work.
+Discovery is the initial phase of design and product development that seeks to understand problems, needs, and contexts before proposing solutions. This MOC collects methods, frameworks, and practices for effective discovery work.
 
 ## Key Concepts
-- [[99 - 📄 To process/Product discovery|Product Discovery Principles]] - Core principles and approaches to discovery
 - [[Problem framing|Problem Framing]] - How to properly define the problem space
-- [[Problem statements|Problem Statements]] - Techniques for crafting effective problem statements
-
-## Discovery Approaches
-- [[99 - 📄 To process/Product discovery#Outcome-Driven Discovery|Outcome-Driven Discovery]] - Focus on outcomes rather than outputs
-- [[99 - 📄 To process/Product discovery#Continuous Discovery|Continuous Discovery]] - Regular feedback cycles with customers
-- [[11 - ⏳ interim knowledge/ProductManagement/Product Discovery|Product Discovery Methods]] - Various approaches to discovery work
+- [[Insight|Insights]] - Extracting meaningful insights from research
+- [[Research question|Research Questions]] - Crafting effective questions to guide discovery
 
 ## Research Methods
-- [[99 - 📄 To process/Product discovery#Discovery Interviewing|Discovery Interviewing]] - Effective customer interview techniques
-- [[02 - 📩 Inbox/Qualitative research|Qualitative Research]] - Methods for gathering qualitative data
-- [[Recruiting for a research|Research Recruiting]] - Finding and recruiting research participants
+- [[Interviews|Interviewing Techniques]] - Methods for effective stakeholder interviews
+- [[Design research|Design Research Principles]] - Foundations of design research
+- [[Ethnographic observation|Ethnographic Methods]] - Observational research techniques
+- [[Focus groups|Focus Groups]] - When and how to use group discussions
+- [[Desk research|Desk Research]] - Secondary research methods
+- [[Triangulation|Research Triangulation]] - Validating findings through multiple methods
+
+## Product Discovery Approaches
+- [[99 - 📄 To process/Product discovery|Product Discovery Principles]] - Core principles and approaches to product discovery
+- [[Problem statements|Problem Statements]] - Techniques for crafting effective problem statements
+- [[99 - 📄 To process/Product discovery#Outcome-Driven Discovery|Outcome-Driven Discovery]] - Focus on outcomes rather than outputs
+- [[99 - 📄 To process/Product discovery#Continuous Discovery|Continuous Discovery]] - Regular feedback cycles with customers
+
+## Analysis Approaches
+- [[Grounded theory|Grounded Theory]] - Inductive approach to qualitative analysis
+- [[Research Visualization|Visualizing Research]] - Methods to visualize and communicate findings
+- [[04 - 💽 RAW/2025/04/06/Thematic analysis|Thematic Analysis]] - Identifying patterns and themes in qualitative data
 
 ## Experimentation
 - [[99 - 📄 To process/Product discovery#Framework|Experimentation Framework]] - Structure for running effective experiments
 - [[99 - 📄 To process/Product discovery#Designing Experiments|Designing Experiments]] - How to design effective experiments
-- [[Behavior design|Behavior Design]] - Using behavioral insights in product development
 
-## Risk Management
-- [[Product risk taxonomy|Product Risk Taxonomy]] - Types of risks in product development
-- [[Risk management|Risk Management]] - Approaches to managing product risks
+## Templates and Tools
+- [[Stakeholder interview reflection framework|Interview Reflection Framework]] - Template for reflecting on interviews
+- [[Research Methods/Research Visualization|Research Visualization Methods]] - Tools for visualizing research data
 
 ## Related Areas
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Interviews|Interviews]] - Techniques for effective interviewing
+- [[99 - 📄 To process/Risk management|Risk Management]] - Approaches to managing product risks
 - [[99 - 📄 To process/Measuring Business Value|Measuring Business Value]] - How to quantify the impact of product decisions
+- [[99 - 📄 To process/Behavior design|Behavior Design]] - Using behavioral insights in product development

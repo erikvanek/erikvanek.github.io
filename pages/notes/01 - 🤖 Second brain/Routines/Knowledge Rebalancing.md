@@ -4,6 +4,30 @@ Knowledge rebalancing is the periodic review and restructuring of the `10 - 🧠
 
 **Important**: Rebalancing focuses exclusively on the Knowledge folder (not other folders like Inbox, Dump, RAW, etc.).
 
+## Content Handling Rules
+
+### IMPORTANT: No New Content Creation
+- **NEVER create new content notes during rebalancing**
+- The ONLY exception is Maps of Content (MOCs) which can be created to organize existing notes
+- Even for MOCs, use only existing note titles and links - do not invent new concepts
+- Focus exclusively on organizing, structuring, chunking, and connecting EXISTING content
+- Remember that this second brain contains only human-created knowledge, not AI-generated content
+
+### Appropriate Actions During Rebalancing
+- Linking existing notes to each other
+- Creating MOCs to organize existing notes
+- Updating links to point to correct locations
+- Suggesting notes to be chunked or consolidated
+- Identifying orphaned notes that need connections
+- Improving organization and structure
+
+### Prohibited Actions During Rebalancing
+- Creating new content notes on topics not already in the system
+- Adding factual information not present in existing notes
+- Expanding explanations beyond what exists in notes
+- Translating notes without human review and approval
+- Converting raw notes to processed notes without human involvement
+
 ## When to Rebalance
 - Monthly or quarterly reviews of the Knowledge folder
 - When a specific PARA category has grown significantly
