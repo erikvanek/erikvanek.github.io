@@ -12,6 +12,12 @@ description: Nir Eyal looks at affective design patterns and mechanisms in his b
 
 ---
 
+## AI-assisted summary
+Nir Eyal's "Hooked" presents a comprehensive framework for designing habit-forming products through what he calls the Hook Model: trigger, action, variable reward, and investment. The book explains how successful technology companies create products that capture users' attention and become integrated into their daily routines. Eyal demonstrates how external triggers eventually lead to internal triggers, where users automatically turn to products to alleviate discomfort or seek gratification.
+
+The text delves into the psychology behind habit formation, including the power of variable rewards in maintaining user engagement and how investments increase the likelihood of users returning. While acknowledging ethical concerns about potentially manipulative design practices, Eyal provides a thoughtful examination of when habit-forming design is appropriate and when it might cross ethical boundaries. The book serves as both a practical guide for product designers and a lens for users to understand the mechanics influencing their technology habits.
+
+
 <div id="notes">
 
 ## Notes
@@ -78,3 +84,10 @@ Despite the fact that the book is 9 years old still feels pretty relevant. An in
 I am not really interested in knowing how to design such products. Rather I'm interested in underlying mechanisms driving these products. Possibly this knowledge could help me to defend my own attention which seems to be a scarcier resource each day.
 
 The hook model is pretty easy to understand and builds on top of primitive human instincts. One could expect some sort of rocket science but it is quite the opposite. This book made me to question ethics a lot as designing (especially) cloud never shutting down services could yield a masive amount of unintended consiquences e.g. lowering one's self-esteem due to the excessive consumption of social media.
+
+## Related notes
+- [[11 - ⏳ interim knowledge/Design/Books/Hooked]]
+- [[99 - 📄 To process/Behavior design]]
+- [[04 - 💽 RAW/2025/04/06/Product vision]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design]]
+- [[99 - 📄 To process/Human in the loop]]

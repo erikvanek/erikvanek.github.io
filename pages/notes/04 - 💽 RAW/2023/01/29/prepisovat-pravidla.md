@@ -11,6 +11,11 @@ layout: blog.njk
 description: Recenze knížky Přepisovat pravidla, která se kouká na (zejména) romantické a partnerské vztahy z různých perspektiv.
 ---
 
+## AI-assisted summary
+Kniha "Přepisovat pravidla" od Meg-John Barker představuje komplexní pohled na současné partnerské a romantické vztahy, zpochybňující zažité normy a nabízející alternativní přístupy. Autorka rozebírá společensky konstruované představy o lásce, intimitě a sexualitě, které často omezují naše vztahové možnosti. Kniha zdůrazňuje důležitost vnímat vztahy jako neustále se vyvíjející, spíše než jako statické entity, a nabádá čtenáře k přehodnocení binárního myšlení a zjednodušujících přístupů.
+
+Text předkládá různé alternativy k tradičním modelům vztahů, včetně polyamorie a vztahového anarchismu, ale zároveň se nesnaží předepisovat jediný správný přístup. Místo toho vybízí k sebereflexivnímu zkoumání vlastních potřeb a přesvědčení. Kniha také věnuje pozornost tématům jako rozchod, konflikt a společenský tlak (metafora "krabího kýblu"), přičemž navrhuje, jak tyto situace přerámovat laskavějším a otevřenějším způsobem, který podporuje osobní růst a autenticitu všech zúčastněných osob.
+
 <div id="notes">
 
 ## Notes
@@ -89,3 +94,10 @@ Odnáším si spoustu zajímavých podnětů i přestože ne všechny budu chtí
 Občas mi během čtení zavazelo sokratovské "Question everything" a za mě možná až zbytečná míra rozporování a dekonstrukce norem, které bych považoval za běžné. I přestože vnímám, že knížka nepředepisuje jediný správný návod, chvíiemi jsem pociťoval jakoby "mainstreamové" normy byly absolutně přežité a nefunkční.
 
 Praktický kompliment na závěr - je super, že byla v knížce přiložená záložka stylizovaná do motivu z přebalu. Je to sice drobnost, ale vlastně dost praktická.
+
+## Related notes
+- [[99 - 📄 To process/Feedback]]
+- [[99 - 📄 To process/fomo/Books]]
+- [[99 - 📄 To process/design/Concepts/Boundary objects]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Mindset]]
+- [[99 - 📄 To process/Mindset]]
