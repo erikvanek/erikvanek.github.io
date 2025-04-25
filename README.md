@@ -24,5 +24,6 @@ Personal site built using [eleventy](https://www.11ty.dev/).
     - sadly it has some issues with https so what helps is to turn it off in `.eleventy.js` file for export purposes
     - `text-shadow` CSS property can be also problematic 
 
-## To fix
+## To do
 - [ ] the site should be running well even after executing `rm -rf /docs/*`
+- [ ] animated favicon

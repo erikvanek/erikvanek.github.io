@@ -4,21 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "00cebaf65e20574e",
+        "id": "bef0273e82551566",
         "type": "tabs",
         "children": [
           {
-            "id": "ed01c8253a8befa8",
+            "id": "1b9331a725adb352",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Pumkin seed coated tenderloin.md",
+                "file": "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Pumkin seed coated tenderloin"
+              "title": "Planning"
             }
           }
         ]
@@ -169,10 +171,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ed01c8253a8befa8",
+  "active": "1b9331a725adb352",
   "lastOpenFiles": [
-    "99 - 📄 To process/random/cestování/checklisty/s sebou.md",
+    "02 - 📩 Inbox/Cost of change.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+    "04 - 💽 RAW/2025/04/23/Public Admin Innovation Workshop Reflection.md",
+    "World Cafe Facilitation.md",
+    "Public Administration Innovation.md",
+    "1o-ezfH8UO3Oz4ecsVaz7vN2VGx4B-Mj43w4If0hvTlQ - Hiring, Learning Teams, Networking Topics.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Project reflection framework.md",
+    "04 - 💽 RAW/2025/04/23",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Workshop Reflection Template.md",
+    "04 - 💽 RAW/Interview Reflection Template.md",
+    "99 - 📄 To process/design/AFA Workshop Templates.pdf",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Pumkin seed coated tenderloin.md",
+    "99 - 📄 To process/random/cestování/checklisty/s sebou.md",
     "99 - 📄 To process/random/cestování/cestovní-checklist.md",
     "99 - 📄 To process/random/cestování/checklisty/domáci rutiny.md",
     "99 - 📄 To process/random/cestování/checklisty/venku.md",
@@ -181,22 +194,13 @@
     "99 - 📄 To process/random/cestování/checklisty/krátký.md",
     "99 - 📄 To process/random/cestování/checklisty/dlouhý.md",
     "99 - 📄 To process/Product risk taxonomy.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
     "99 - 📄 To process/Codebook.md",
     "04 - 💽 RAW/2025/04/06/Coding.md",
     "04 - 💽 RAW/2025/04/06/Thematic analysis.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Project reflection framework.md",
-    "02 - 📩 Inbox/Cost of change.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Zdroje.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Průběh semestru.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Intro.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation.md",
-    "99 - 📄 To process/JTBD/Activity-centered design.md",
-    "99 - 📄 To process/JTBD/Competition.md",
-    "99 - 📄 To process/JTBD/Goal.md",
-    "99 - 📄 To process/JTBD/Growth.md",
-    "99 - 📄 To process/JTBD/Measuring.md",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food",
@@ -206,8 +210,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling",
     "99 - 📄 To process/Tools 1/Design tools/Service design scoresheet/themoment_ServiceDesignScoresheetGuide_FINAL-1.pdf",
     "99 - 📄 To process/Tools 1",
-    "merged-eleventy-config.js",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md.",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",
