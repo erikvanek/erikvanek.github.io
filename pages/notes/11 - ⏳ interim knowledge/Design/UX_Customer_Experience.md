@@ -104,6 +104,18 @@ Strategické metriky sledující hodnotu produktu a byznysové cíle:
   - Specifické metriky pro operativní monitoring
   - Všechny KPI jsou metriky, ale ne všechny metriky jsou KPI
 
+### Psychologie návykových produktů (Nir Eyal)
+Jak Nir Eyal popisuje v [[04 - 💽 RAW/2023/01/06/hooked|Hooked]], úspěšné produkty vytvářejí návykové cykly prostřednictvím Hook Modelu:
+
+- **Trigger → Action → Variable Reward → Investment** - kompletní cyklus, který posiluje zapojení
+- Návykové produkty vytvářejí vazbu mezi pocítěním určité bolesti a jejím řešením
+- Klíčová je variabilita odměn - nepravidelnost udržuje uživatele v očekávání
+
+Při návrhu UX je důležité zaměřit se na tři základní lidské motivace:
+- Hledání potěšení a vyhýbání se bolesti
+- Hledání naděje a vyhýbání se strachu
+- Hledání sociálního přijetí a vyhýbání se odmítnutí
+
 ## Kombinování metrik pro komplexní pochopení
 
 ### HEART Framework (Google)
