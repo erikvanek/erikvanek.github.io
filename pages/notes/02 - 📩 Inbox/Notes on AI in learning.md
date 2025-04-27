@@ -1,0 +1,1 @@
+- cognitive offloading – in the interest of efficiency - we can do things better and faster, but we as learners need to put the effort - "when we're braised by labors that's where thinking begings" - that should not be short circuited for efficiency
