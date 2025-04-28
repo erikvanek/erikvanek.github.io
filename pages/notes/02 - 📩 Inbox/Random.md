@@ -1,0 +1,8 @@
+- cognitive offloading – in the interest of efficiency - we can do things better and faster, but we as learners need to put the effort - "when we're braised by labors that's where thinking begings" - that should not be short circuited for efficiency
+- psychological safety as the **most important** factor for team efficiency base on Google's Aristotle project - https://rework.withgoogle.com/en/guides/understanding-team-effectiveness#introduction
+	- The researchers found that what really mattered was less about who is on the team, and more about how the team worked together.
+		- **Psychological safety:** A strong team culture was correlated with each member’s perception of the consequences of taking an interpersonal risk.
+		- **Dependability:** On dependable teams, members reliably complete quality work on time (vs the opposite - shirking responsibilities).
+		- **Structure and clarity:** An individual’s understanding of job expectations, the process for fulfilling these expectations, and the consequences of one’s performance are important for team effectiveness.
+		- **Meaning:** Finding a sense of purpose in either the work itself or the output is important for team effectiveness.
+		- **Impact:** The results of one’s work, [the subjective judgment that your work is making a difference, is important for teams](http://www.ncbi.nlm.nih.gov/pubmed/18211139)
