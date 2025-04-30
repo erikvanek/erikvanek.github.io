@@ -4,23 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bef0273e82551566",
+        "id": "8fa0772c698a1286",
         "type": "tabs",
         "children": [
           {
-            "id": "1b9331a725adb352",
+            "id": "cd6b0c403c43f2b4",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Planning"
+              "title": "New tab"
             }
           }
         ]
@@ -55,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rebalanc",
+                "query": "feature cree",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +80,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -171,10 +166,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1b9331a725adb352",
+  "active": "cd6b0c403c43f2b4",
   "lastOpenFiles": [
-    "02 - 📩 Inbox/Value based management.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
     "99 - 📄 To process/agile.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight.md",
+    "02 - 📩 Inbox/Value based management.md",
     "02 - 📩 Inbox/Random.md",
     "Untitled.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing.md",
@@ -185,7 +183,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/External resources/persona-and-framing-template.pdf",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/External resources/Informing_Our_Intuition.pdf",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Inclusive Design.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Inciting accident.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Cold-breg long-infused kombucha.md",
@@ -201,8 +198,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Reflection templates/Stakeholder interview reflection framework.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Product Discovery.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight.md",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles",
