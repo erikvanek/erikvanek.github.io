@@ -1,0 +1,69 @@
+.reveal,
+.reveal h2
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6{
+    font-family: tt-commons-pro-thin, sans-serif !important;
+    font-weight: 100 !important;
+    color: whitesmoke;
+}
+
+h1
+{
+    font-family: tt-commons-pro-bold, sans-serif !important;
+    font-weight: 800;
+    color: #483a6e !important;
+    color: pink;
+    background-color: none;
+}
+
+footer {
+    display: none !important;
+}
+
+body {
+    background: whitesmoke !important; 
+}
+
+/* #splash {
+    background-color: #483a6e !important;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+* {
+    /* background-color: #483a6e; */
+ 
+}
+
+.reveal * {
+    color: #483a6e;
+    text-shadow: none;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.reveal a, .reveal strong {
+    background-color: #D9D3E8 !important;
+    background-color: #D9D3E8 !important;
+    color: navy !important;
+    border-radius: 4px;
+    /* padding: .125rem; */
+}
+
+.reveal a {
+    border-bottom: 2px dotted #483a6e;
+    /* text-decoration-color: #; */
+}
+
+.reveal-viewport {
+    line-height: 1.125;
+}
