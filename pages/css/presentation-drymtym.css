@@ -1,0 +1,29 @@
+.reveal,
+.reveal h2
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6{
+    font-family: tt-commons-pro-thin, sans-serif !important;
+    font-weight: 100 !important;
+}
+
+h1
+{
+    font-family: tt-commons-pro-bold, sans-serif !important;
+    font-weight: 800;
+    color: #483a6e !important;}
+
+footer {
+    display: none !important;
+}
+
+* {
+    background-color: whitesmoke;
+    /* background-color: #483a6e; */
+}
+
+.reveal * {
+    color: #483a6e;
+    text-shadow: none;
+}
