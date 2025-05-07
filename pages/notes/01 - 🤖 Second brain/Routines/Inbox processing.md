@@ -39,8 +39,10 @@
    * Keep original formatting whenever possible
 5. **Connect**: Add bidirectional links to related notes where appropriate
 6. **Cleanup**:
-   * Delete processed inbox notes and any temporary files once processed
-   * Git provides backup in case deletion needs to be reversed
+   * Move processed inbox notes to the Dump folder with today's date: `03 - 🗑️ Dump/YYYY-MM-DD/`
+   * Include both the original notes and any intermediate processing files
+   * Use descriptive filenames (e.g., append "-original" to original files)
+   * Git provides backup in case recovery is needed
 
 ## Note Combination Guidelines
 * **When to Combine Notes**:
@@ -61,8 +63,8 @@
   * Preserve the core concepts and ideas exactly as written
   * Don't add AI-generated transitions between combined elements
 * **Cleanup After Combining**:
-  * After creating the combined note, delete the original source notes
-  * Any temporary or interim files should also be deleted
+  * After creating the combined note, move the original source notes to the Dump folder following the cleanup process
+  * Any temporary or interim files should also be moved to the Dump folder
 
 ## Process
 - Take a look at what is in a given note and assign 5 tags to it based on [[Tagging]] process
