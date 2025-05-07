@@ -1,0 +1,24 @@
+---
+tags:
+  - leadership
+  - management
+  - team
+  - communication
+  - feedback
+---
+
+# Leadership Principles
+
+- to be a great manager – what helps is to have an experience being a great IC before - if one likes the people management part but does not have the respect from ICs by being good in that craft - it's hard to be a good manager without this trust
+	- to be able to lead someone – you need to to know what you're talking about and have a good idea what does excellence look like
+- part of leadership is giving guidance - the ability to give tough feedback is one of the most important competencies
+	- sharing **why** with the feedback helps the team to grow themselves and decrease the need for them to seek approval when problem solving
+- **get the right people to know what's in your head**
+- culture is what do we say yes to, what do we say no to, what is our standard and how do we help each other to meet that standard and **it is set by the leaders** – if the leaders are slacking, it's going to be hard to motivate people underneath
+
+## Related notes
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Company Culture]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Communication]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Feedback]]

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6896a30440d15ff4",
+        "id": "e3fdde8736e1eb57",
         "type": "tabs",
         "children": [
           {
-            "id": "e77094d979e0cb19",
+            "id": "d2bc54b46fa8c791",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99 - 📄 To process/agile.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "agile"
+              "title": "New tab"
             }
           }
         ]
@@ -84,8 +80,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -170,14 +165,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e77094d979e0cb19",
+  "active": "d2bc54b46fa8c791",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety.md.deleted",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
-    "99 - 📄 To process/agile.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight.md",
+    "02 - 📩 Inbox/Value based management.md.processed",
+    "02 - 📩 Inbox/Random.md.processed",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Business/Value Based Management.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Business",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design Industry Trends.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Communication.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Cognitive Processes.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Company Culture.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Leadership Principles.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Team",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership",
+    "01 - 🤖 Second brain/Obsolete approach/Changelog.md",
     "02 - 📩 Inbox/Value based management.md",
+    "99 - 📄 To process/Workshopy.md",
     "02 - 📩 Inbox/Random.md",
+    "02 - 📩 Inbox/Untitled.md",
+    "99 - 📄 To process/agile.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight.md",
     "Untitled.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Grounded theory.md",
@@ -190,25 +203,7 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Inciting accident.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Cold-breg long-infused kombucha.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Potato-gratin.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation/Index.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Stakeholders.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Roboton.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Index.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Discovery MOC.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Food MOC.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Research Visualization.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Reflection templates/Stakeholder interview reflection framework.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Product Discovery.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews.md",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles",
-    "04 - 💽 RAW/2023/01/29",
-    "04 - 💽 RAW/2023/07/13",
-    "04 - 💽 RAW/2023/07/16",
-    "04 - 💽 RAW/2023/07",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",
