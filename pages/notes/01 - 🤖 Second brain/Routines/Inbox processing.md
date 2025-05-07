@@ -1,6 +1,20 @@
 # 02 - 📩 Inbox
 - Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos
 
+## Special Processing for 'Random' Notes
+- 'Random' notes contain weekly collections of bullet points from different sources
+- Process each bullet point separately
+- For each point:
+  - Find an appropriate existing node in the knowledge base to append to
+  - If no appropriate node exists, create a new one
+  - Be aware that multiple bullet points may relate to one common topic
+  - Group related bullet points together when creating or updating nodes
+- **Preventing Duplication**:
+  - Before creating a new node, check if the concept is already captured in an existing node
+  - If a concept appears to deserve its own node but is closely related to an existing one (e.g., "Psychological Safety" vs "Team Effectiveness"), choose the broader concept as the main node and incorporate the more specific concept within it
+  - Add appropriate tags to ensure the incorporated concepts are still discoverable
+  - When in doubt, favor enhancing existing nodes rather than creating highly overlapping new ones
+
 ## Core Principles
 * Preserve original content exactly as written - no expansions or embellishments
 * Maintain the original brevity and structure of notes

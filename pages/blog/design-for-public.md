@@ -24,4 +24,6 @@ I don't mean this to brag. Linkedin feels a bit too cliche. But hey - who cares?
 
 One emotional one - returning to my hometown Zlín (feel free to ask me why I call it Evilville) for a panel discussion during ZDW. Also you can find me workshoppin' at FKB in late June. And meanwhile I'll try to earn some buck as quite a high percentage of those 'interesting' endavours is unpaid or poorly paid labor. Sad but true.
 
+Some of you taught me how to like people, some of you how to be curious. Others showed me how proffessionality and humility can be maxxed without sacrificing your soul and. 
+
 Cheers ❤️
