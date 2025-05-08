@@ -229,6 +229,34 @@
 </ul>
 </li>
 </ol>
+<h3 id="content-priorities">Content Priorities</h3>
+<ul>
+<li>Content from C-level executives of respectable startups/companies</li>
+<li>Content from frequent conference speakers and published authors</li>
+<li>Podcasts with AI company CEOs and leaders</li>
+<li>Product releases and AI industry milestones</li>
+<li>European design events and conferences</li>
+<li>Novel approaches to UX/UI design</li>
+<li>Novel approaches to design leadership</li>
+<li>AI development techniques and applications</li>
+</ul>
+<h3 id="current-interest-areas">Current Interest Areas</h3>
+<ul>
+<li>Design research methodologies and findings</li>
+<li>AI-assisted design tools and approaches</li>
+<li>Design leadership frameworks and practices</li>
+<li>Product management and product trio collaboration models</li>
+<li>Efficient leadership techniques</li>
+<li>Cross-department collaboration strategies</li>
+</ul>
+<h3 id="content-evaluation-criteria">Content Evaluation Criteria</h3>
+<ul>
+<li><strong>Novelty of ideas</strong> (high priority) - Does the content present fresh perspectives or innovative approaches?</li>
+<li><strong>Practical applicability</strong> (high priority) - Can the insights be applied to real-world design and leadership challenges?</li>
+<li><strong>Source reputation</strong> (high priority) - Is the author/speaker a recognized authority in their field?</li>
+<li><strong>Intellectual depth</strong> (medium priority) - Unless exceptionally insightful</li>
+<li><strong>Contrarian perspectives</strong> (variable priority) - Higher if from reputable sources like Jakob Nielsen, lower if from less established voices</li>
+</ul>
 <h2 id="process">Process</h2>
 <h3 id="1-initialization">1. Initialization</h3>
 <pre><code>claude, create a digest from my newsletter subscriptions since [date of last digest]
@@ -243,11 +271,32 @@
 <p>The agent will:</p>
 <ul>
 <li>Read all emails with the specified labels</li>
-<li>Extract key excerpts with minimal interpretation</li>
-<li>Group related articles by topic (if applicable)</li>
-<li>Prioritize content based on relevance to focus areas</li>
+<li>For newsletters that contain multiple items:
+<ul>
+<li>Extract individual pieces of content rather than summarizing the entire newsletter</li>
+<li>Use web_fetch to read the full content of linked articles when possible</li>
+<li>Evaluate each piece separately based on relevance to focus areas</li>
 </ul>
-<h3 id="3-digest-creation">3. Digest Creation</h3>
+</li>
+<li>Group related articles by topic (if applicable)</li>
+<li>Consolidate multiple entries from the same source into one comprehensive entry</li>
+<li>Prioritize content based on relevance to focus areas and content priorities</li>
+</ul>
+<h3 id="3-content-curation-amp-evaluation">3. Content Curation &amp; Evaluation</h3>
+<p>The agent will:</p>
+<ul>
+<li>Perform deep analysis of each potential content item (spending significant time on this step)</li>
+<li>Retrieve and analyze the full text of linked articles using web_fetch when possible</li>
+<li>Apply a rigorous scoring system based on the content evaluation criteria</li>
+<li>Prioritize only the highest-quality content that meets multiple criteria</li>
+<li>Consider the author's credentials and reputation as a strong factor in selection</li>
+<li>Ensure representation from current interest areas</li>
+<li>Select only the most valuable content, even if this means fewer total items</li>
+<li>IMPORTANT: Only include actual content from the emails - never fabricate articles, resources, or links</li>
+<li>Only use the exact links provided in the original newsletters</li>
+<li>Limit creative writing to ONLY the introductory paragraph - all other content should use direct excerpts</li>
+</ul>
+<h3 id="4-digest-creation">4. Digest Creation</h3>
 <p>The agent will create a digest with:</p>
 <p><strong>Frontmatter:</strong></p>
 <pre><code>---
@@ -270,13 +319,14 @@ tags:
 <ul>
 <li>Direct excerpts from relevant newsletters with minimal interpretation</li>
 <li>Bold text for key points to enhance scannability</li>
-<li>Links to original sources</li>
+<li>Each extracted item must have its own &quot;Learn more&quot; link to the original source</li>
 <li>Sections only included when relevant content exists</li>
 <li>Length based on quality and relevance of available content, not timespan</li>
+<li>No general introduction or summary section</li>
 </ul>
-<h3 id="4-email-labeling">4. Email Labeling</h3>
+<h3 id="5-email-labeling">5. Email Labeling</h3>
 <p>After creating the digest, the agent will add the label &quot;claude-digested&quot; to all processed emails to track what has been included.</p>
-<h3 id="5-storage">5. Storage</h3>
+<h3 id="6-storage">6. Storage</h3>
 <p>The agent will:</p>
 <ul>
 <li>Save the digest to <code>/Users/erik/dev/erikvanek.github.io/pages/notes/20 - ✨ Ephemeron/Digest-[N].md</code> where [N] is the sequential number</li>
@@ -298,37 +348,101 @@ tags:
 <p>Where [N] is the sequential number of the digest.</p>
 <h2 id="important-guidelines">Important Guidelines</h2>
 <ol>
-<li><strong>Present direct excerpts</strong> - Minimal interpretation of content</li>
+<li><strong>Extract specific content</strong> - Never summarize entire newsletters; extract and evaluate individual pieces</li>
+<li><strong>Fetch full content</strong> - Use web_fetch to retrieve complete article content when evaluating relevance</li>
+<li><strong>Provide individual links</strong> - Each content item must have its own &quot;Learn more&quot; link</li>
+<li><strong>Consolidate from same source</strong> - Merge multiple entries from the same source into one comprehensive item</li>
 <li><strong>Skip sections without content</strong> - No need to mention when a section is empty</li>
 <li><strong>Quality over quantity</strong> - Length based on relevance, not timespan</li>
-<li><strong>Include only what exists</strong> - Never fabricate content</li>
+<li><strong>Include only what exists</strong> - Never fabricate content or create fictional resources</li>
+<li><strong>Use exact links from source</strong> - Always use the original links from the newsletters</li>
+<li><strong>Only use real content</strong> - Only include articles, events, and updates that actually appear in the Gmail emails</li>
 <li><strong>Prioritize European events</strong> - For conference listings when available</li>
+<li><strong>Omit redundant title</strong> - Do not include the H1 title as it's already in the layout</li>
+<li><strong>Rigorously analyze everything</strong> - Spend significant time analyzing all potential content items</li>
+<li><strong>Check author credentials</strong> - Research author backgrounds to assess credibility and relevance</li>
+<li><strong>Verify content quality</strong> - Read the full content when possible to ensure quality and depth</li>
+</ol>
+<h2 id="content-analysis-process">Content Analysis Process</h2>
+<p>When analyzing potential content for inclusion:</p>
+<ol>
+<li>
+<p><strong>Initial screening</strong>:</p>
+<ul>
+<li>Check the author's credentials and position</li>
+<li>Evaluate the publishing platform's reputation</li>
+<li>Assess if the topic aligns with focus areas and current interests</li>
+</ul>
+</li>
+<li>
+<p><strong>Deep analysis</strong>:</p>
+<ul>
+<li>Fetch and read the complete content where possible</li>
+<li>Score the content on:
+<ul>
+<li>Novelty (1-10)</li>
+<li>Practical value (1-10)</li>
+<li>Authority of source (1-10)</li>
+<li>Relevance to current interests (1-10)</li>
+</ul>
+</li>
+<li>Only include content scoring highly in multiple categories</li>
+</ul>
+</li>
+<li>
+<p><strong>Final selection</strong>:</p>
+<ul>
+<li>Compare across all analyzed content</li>
+<li>Select only the highest-quality items</li>
+<li>Ensure representation across key interest areas</li>
+<li>Prioritize content from recognized authorities and thought leaders</li>
+</ul>
+</li>
 </ol>
 <h2 id="digest-template">Digest Template</h2>
-<pre><code class="language-markdown"># Newsletter Digest #[N]: [Start Date] to [End Date]
+<pre><code class="language-markdown">## Welcome to Ephemeron
+
+This is Ephemeron issue vol. [N] – your weekly distillation of design brilliance, AI innovations, and leadership insights. Today's issue explores [brief overview of main themes in this digest].
+
+[2-3 sentences highlighting key content pieces, mentioning specific articles/insights that stand out].
+
+Ready for a thought-provoking journey through the ideas and innovations shaping our creative landscape? Let's begin.
 
 ## Design Insights
 
 ### [Article Title]
-**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
-[Read the article](link to original)
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
 
-### [Article Title]
-**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
-[Read the article](link to original)
+### [Another Article Title]
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
 
 [Additional articles as available...]
 
 ## AI Development
 
 ### [Article Title]
-**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
-[Read the article](link to original)
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
 
 [Additional articles as available...]
 
 ## Supporting Areas
-[Business/Development/Leadership/etc. insights from newsletters, grouped by topic if applicable]
+
+### Business
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+### Development
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+### Leadership
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+[etc. as needed for other supporting areas...]
 
 ## Product Updates
 - **[Product A]**: [Direct excerpt about update from newsletter] [Learn more](link)
@@ -354,6 +468,7 @@ tags:
 <li>Consider moving to a dedicated &quot;Agents&quot; folder when created</li>
 <li>Implement tagging suggestions based on digest content</li>
 <li>Add analytics to track most frequent newsletter sources and topics</li>
+<li>Develop preference learning to improve curation quality over time</li>
 </ul>
 
 
