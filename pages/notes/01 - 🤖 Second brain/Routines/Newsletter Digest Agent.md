@@ -36,12 +36,6 @@ This agent processes newsletter subscriptions from Gmail labels to create a focu
    - Learning
    - Team
 
-### Digest Format
-- 10-20 minute read
-- 10-20 most interesting topics
-- Scannable format with bold key insights
-- Links to original articles
-
 ## Process
 
 ### 1. Initialization
@@ -57,9 +51,9 @@ The agent will:
 ### 2. Email Analysis
 The agent will:
 - Read all emails with the specified labels
-- Score content based on relevance to my focus areas
-- Group related articles by topic
-- Select top 10-20 most valuable pieces of content
+- Extract key excerpts with minimal interpretation
+- Group related articles by topic (if applicable)
+- Prioritize content based on relevance to focus areas
 
 ### 3. Digest Creation
 The agent will create a digest with:
@@ -83,13 +77,12 @@ tags:
 ---
 ```
 
-**Structure:**
-- AI-assisted summary with bullet points and whitespace for scannability
-- Main content sections grouped by topic
-- 1-3 paragraph summaries with **bold key insights** for each article
-- Product updates in compact release notes format
-- Conference section with upcoming events and deadlines (prioritizing European in-person events)
-- Related notes section linking to relevant knowledge
+**Content Structure:**
+- Direct excerpts from relevant newsletters with minimal interpretation
+- Bold text for key points to enhance scannability
+- Links to original sources
+- Sections only included when relevant content exists
+- Length based on quality and relevance of available content, not timespan
 
 ### 4. Email Labeling
 After creating the digest, the agent will add the label "claude-digested" to all processed emails to track what has been included.
@@ -122,66 +115,48 @@ Where [N] is the sequential number of the digest.
 
 ## Important Guidelines
 
-1. **Never fabricate content** - Only include information that actually exists in the labeled emails
-2. **Do not make up articles, conferences, or updates** - If insufficient content exists, note this in the digest
-3. **Prioritize European in-person events** - But only if they actually appear in the labeled emails
-4. **Verify all information** - Ensure accuracy in summaries and links
-5. **When in doubt, exclude** - Better to have a shorter digest than fabricated information
+1. **Present direct excerpts** - Minimal interpretation of content
+2. **Skip sections without content** - No need to mention when a section is empty
+3. **Quality over quantity** - Length based on relevance, not timespan
+4. **Include only what exists** - Never fabricate content
+5. **Prioritize European events** - For conference listings when available
 
 ## Digest Template
 
 ```markdown
 # Newsletter Digest #[N]: [Start Date] to [End Date]
 
-## AI-assisted summary
-
-This week's digest covers key developments in design, AI, and related professional areas:
-
-* **[Key point 1]**
-  
-* **[Key point 2]**
-
-* **[Key point 3]**
-
-* **[Key point 4]**
-
-* **[Key point 5]**
-
----
-
 ## Design Insights
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
-[Additional articles...]
+[Additional articles as available...]
 
 ## AI Development
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
-[Additional articles...]
+[Additional articles as available...]
 
 ## Supporting Areas
-[Business/Development/Leadership/etc. insights grouped by topic]
+[Business/Development/Leadership/etc. insights from newsletters, grouped by topic if applicable]
 
 ## Product Updates
-- **[Product A]**: [1-2 sentence update] [Learn more](link)
-- **[Product B]**: [1-2 sentence update] [Learn more](link)
-- [etc.]
+- **[Product A]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- **[Product B]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- [etc. as available]
 
 ## Upcoming Conferences
-- **[Conference Name]**: [Dates] - [Location: European city] - [Brief description] - [Registration deadline] [Learn more](link)
-- [etc.]
-
-*Note: Only includes conferences that actually appear in your labeled emails, with priority given to European in-person events.*
+- **[Conference Name]**: [Dates] - [Location: European city] - [Description from newsletter] - [Registration deadline] [Learn more](link)
+- [etc. as available]
 
 ## Related notes
 - [[Related note 1]]
@@ -199,6 +174,5 @@ claude, create a digest from my newsletter subscriptions since April 30, 2025
 
 ## Future Improvements
 - Consider moving to a dedicated "Agents" folder when created
-- Explore adding automatic extraction of knowledge nuggets from digests
 - Implement tagging suggestions based on digest content
 - Add analytics to track most frequent newsletter sources and topics
