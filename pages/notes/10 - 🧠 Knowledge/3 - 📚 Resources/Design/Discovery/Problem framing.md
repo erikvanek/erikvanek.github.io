@@ -18,6 +18,9 @@ tags:
 - *"Framing is the process of breaking down a problem into a set of choices, trade offs, and options that enable a team to make a call and move forward."* - [Shishir Mehrotra](https://coda.io/@shishir)
 - Good framing helps produce "decisions that stick."
 - [https://coda.io/@shishir/eigenquestions-the-art-of-framing-problems/eigenquestions-3](Eigenquestions) help with this
+- Usually followed by a "How might we ... ?" question
+	- would be nice to add also a second one to it "At what cost?" to balance out the ethical aspect
+	- it is a dance between curiosity (how might we) and criticality (at what cost) 
 ## Rest
 - YOUR NEW USER IS THE DECISION MAKERs
 - YOUR NEW USER JOURNEY IS THE DECISION MAKING PROCESS

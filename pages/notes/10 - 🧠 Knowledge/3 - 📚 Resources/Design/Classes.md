@@ -1,0 +1,1 @@
+- [Ethics in design](https://cennydd.com/writing/new-public-course-ethics-in-design)  by Cennydd Bowles

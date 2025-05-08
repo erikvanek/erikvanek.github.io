@@ -1,5 +1,6 @@
 # Outcome-Driven Product Strategy
 
+- A strategy is useless if your stronger competitor has the same strategy
 ## Key Principles (from Outcomes over Output)
 - An outcome is a change in human behavior that drives business results
 - Outcomes are delivered by changing customer behavior
