@@ -229,13 +229,6 @@
 </ul>
 </li>
 </ol>
-<h3 id="digest-format">Digest Format</h3>
-<ul>
-<li>10-20 minute read</li>
-<li>10-20 most interesting topics</li>
-<li>Scannable format with bold key insights</li>
-<li>Links to original articles</li>
-</ul>
 <h2 id="process">Process</h2>
 <h3 id="1-initialization">1. Initialization</h3>
 <pre><code>claude, create a digest from my newsletter subscriptions since [date of last digest]
@@ -250,9 +243,9 @@
 <p>The agent will:</p>
 <ul>
 <li>Read all emails with the specified labels</li>
-<li>Score content based on relevance to my focus areas</li>
-<li>Group related articles by topic</li>
-<li>Select top 10-20 most valuable pieces of content</li>
+<li>Extract key excerpts with minimal interpretation</li>
+<li>Group related articles by topic (if applicable)</li>
+<li>Prioritize content based on relevance to focus areas</li>
 </ul>
 <h3 id="3-digest-creation">3. Digest Creation</h3>
 <p>The agent will create a digest with:</p>
@@ -273,14 +266,13 @@ tags:
   - [other relevant tags based on content]
 ---
 </code></pre>
-<p><strong>Structure:</strong></p>
+<p><strong>Content Structure:</strong></p>
 <ul>
-<li>AI-assisted summary with bullet points and whitespace for scannability</li>
-<li>Main content sections grouped by topic</li>
-<li>1-3 paragraph summaries with <strong>bold key insights</strong> for each article</li>
-<li>Product updates in compact release notes format</li>
-<li>Conference section with upcoming events and deadlines (prioritizing European in-person events)</li>
-<li>Related notes section linking to relevant knowledge</li>
+<li>Direct excerpts from relevant newsletters with minimal interpretation</li>
+<li>Bold text for key points to enhance scannability</li>
+<li>Links to original sources</li>
+<li>Sections only included when relevant content exists</li>
+<li>Length based on quality and relevance of available content, not timespan</li>
 </ul>
 <h3 id="4-email-labeling">4. Email Labeling</h3>
 <p>After creating the digest, the agent will add the label &quot;claude-digested&quot; to all processed emails to track what has been included.</p>
@@ -306,64 +298,46 @@ tags:
 <p>Where [N] is the sequential number of the digest.</p>
 <h2 id="important-guidelines">Important Guidelines</h2>
 <ol>
-<li><strong>Never fabricate content</strong> - Only include information that actually exists in the labeled emails</li>
-<li><strong>Do not make up articles, conferences, or updates</strong> - If insufficient content exists, note this in the digest</li>
-<li><strong>Prioritize European in-person events</strong> - But only if they actually appear in the labeled emails</li>
-<li><strong>Verify all information</strong> - Ensure accuracy in summaries and links</li>
-<li><strong>When in doubt, exclude</strong> - Better to have a shorter digest than fabricated information</li>
+<li><strong>Present direct excerpts</strong> - Minimal interpretation of content</li>
+<li><strong>Skip sections without content</strong> - No need to mention when a section is empty</li>
+<li><strong>Quality over quantity</strong> - Length based on relevance, not timespan</li>
+<li><strong>Include only what exists</strong> - Never fabricate content</li>
+<li><strong>Prioritize European events</strong> - For conference listings when available</li>
 </ol>
 <h2 id="digest-template">Digest Template</h2>
 <pre><code class="language-markdown"># Newsletter Digest #[N]: [Start Date] to [End Date]
 
-## AI-assisted summary
-
-This week's digest covers key developments in design, AI, and related professional areas:
-
-* **[Key point 1]**
-  
-* **[Key point 2]**
-
-* **[Key point 3]**
-
-* **[Key point 4]**
-
-* **[Key point 5]**
-
----
-
 ## Design Insights
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
-[Additional articles...]
+[Additional articles as available...]
 
 ## AI Development
 
 ### [Article Title]
-**[Bold key insight or takeaway]** [1-3 paragraph summary with relevant information]
+**[Key excerpt directly from the newsletter]** Additional relevant information with minimal interpretation.
 [Read the article](link to original)
 
-[Additional articles...]
+[Additional articles as available...]
 
 ## Supporting Areas
-[Business/Development/Leadership/etc. insights grouped by topic]
+[Business/Development/Leadership/etc. insights from newsletters, grouped by topic if applicable]
 
 ## Product Updates
-- **[Product A]**: [1-2 sentence update] [Learn more](link)
-- **[Product B]**: [1-2 sentence update] [Learn more](link)
-- [etc.]
+- **[Product A]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- **[Product B]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- [etc. as available]
 
 ## Upcoming Conferences
-- **[Conference Name]**: [Dates] - [Location: European city] - [Brief description] - [Registration deadline] [Learn more](link)
-- [etc.]
-
-*Note: Only includes conferences that actually appear in your labeled emails, with priority given to European in-person events.*
+- **[Conference Name]**: [Dates] - [Location: European city] - [Description from newsletter] - [Registration deadline] [Learn more](link)
+- [etc. as available]
 
 ## Related notes
 - <a href="#" class="pending-link">Related note 1</a>
@@ -378,7 +352,6 @@ This week's digest covers key developments in design, AI, and related profession
 <h2 id="future-improvements">Future Improvements</h2>
 <ul>
 <li>Consider moving to a dedicated &quot;Agents&quot; folder when created</li>
-<li>Explore adding automatic extraction of knowledge nuggets from digests</li>
 <li>Implement tagging suggestions based on digest content</li>
 <li>Add analytics to track most frequent newsletter sources and topics</li>
 </ul>
