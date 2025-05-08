@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2f1b9445c5847553",
+        "id": "094dab2076a356e5",
         "type": "tabs",
         "children": [
           {
-            "id": "c93f3e30a50f513d",
+            "id": "cf35728948c7fd78",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20 - ✨ Ephemeron/Digest-1.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Digest-1"
+              "title": "New tab"
             }
           }
         ]
@@ -169,10 +165,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c93f3e30a50f513d",
+  "active": "cf35728948c7fd78",
   "lastOpenFiles": [
-    "20 - ✨ Ephemeron/Digest-Tracker.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Learning.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Leadership Principles.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Cognitive Processes.md",
+    "99 - 📄 To process/design/People.md",
+    "20 - ✨ Ephemeron/Things to fix.md",
     "20 - ✨ Ephemeron/Digest-1.md",
+    "20 - ✨ Ephemeron/Digest-Tracker.md",
     "20 - ✨ Ephemeron/✨ Ephemeron.md",
     "01 - 🤖 Second brain/Routines/Newsletter Digest Agent.md",
     "02 - 📩 Inbox/AI in Design.md",
@@ -196,11 +197,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Data.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation/Potatoes.md",
-    "02 - 📩 Inbox/Research data.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation/Index.md",
-    "99 - 📄 To process/Themes/Outcome_Driven_Product_Strategy.md",
-    "03 - 🗑️ Dump/2025-05-07/Value based management.md",
-    "03 - 🗑️ Dump/2025-05-07/Random-original.md",
     "03 - 🗑️ Dump/2025-05-07",
     "02 - 📩 Inbox/Value based management.md.bak2",
     "02 - 📩 Inbox/Random.md.bak2",

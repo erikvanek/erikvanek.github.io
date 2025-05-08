@@ -1,0 +1,7 @@
+- first issue of Ephemeron has a first record which is basically a summary of a smashing magazine newsletter - I don't want this to be there - instead the agent should go through contents of that newsletter and from it pick the most relevant contents - but it should not "wrap" existing newsletter
+- use fetch mcp to check content of each article that is considered - it is ok if it takes more time but what is key here is the curatorial quality of final output
+- also links for "learn" more should be per item, not per group of items - with current approach there's only a link for the last item which is confusing
+- no need to specify the h1 title as it is already in the layout that is used for notes
+- also in the leadership and team dev sections - you have two entries that are from one resource - those should be merged into one - it's fine if there is more content from one resource if it's relevant and interesting - just it should be in one nugget
+- I'd expect Tristan Harris' new TED talk to be present in the digest based on my preferences - so consider how you are filtering the content and try to attune to this requirement
+- also definitely the podcast with Devin's CEO should be there

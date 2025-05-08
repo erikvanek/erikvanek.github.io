@@ -5,6 +5,8 @@ tags:
   - team
   - communication
   - feedback
+resources:
+  - https://www.leadingsapiens.com/naivete-in-leadership/#the-evolution-of-our-na%C3%AFvet%C3%A9
 ---
 
 # Leadership Principles
@@ -15,6 +17,7 @@ tags:
 	- sharing **why** with the feedback helps the team to grow themselves and decrease the need for them to seek approval when problem solving
 - **get the right people to know what's in your head**
 - culture is what do we say yes to, what do we say no to, what is our standard and how do we help each other to meet that standard and **it is set by the leaders** – if the leaders are slacking, it's going to be hard to motivate people underneath
+- Leadership is about stepping into the unknown and helping others navigate complex environments riddled with ambiguity. From this perspective, a certain degree of naiveness is almost a requirement to be effective.
 
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety]]
