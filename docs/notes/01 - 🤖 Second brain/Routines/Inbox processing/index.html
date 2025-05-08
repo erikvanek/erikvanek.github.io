@@ -198,6 +198,27 @@
 <ul>
 <li>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos</li>
 </ul>
+<h2 id="special-processing-for-random-notes">Special Processing for 'Random' Notes</h2>
+<ul>
+<li>'Random' notes contain weekly collections of bullet points from different sources</li>
+<li>Process each bullet point separately</li>
+<li>For each point:
+<ul>
+<li>Find an appropriate existing node in the knowledge base to append to</li>
+<li>If no appropriate node exists, create a new one</li>
+<li>Be aware that multiple bullet points may relate to one common topic</li>
+<li>Group related bullet points together when creating or updating nodes</li>
+</ul>
+</li>
+<li><strong>Preventing Duplication</strong>:
+<ul>
+<li>Before creating a new node, check if the concept is already captured in an existing node</li>
+<li>If a concept appears to deserve its own node but is closely related to an existing one (e.g., &quot;Psychological Safety&quot; vs &quot;Team Effectiveness&quot;), choose the broader concept as the main node and incorporate the more specific concept within it</li>
+<li>Add appropriate tags to ensure the incorporated concepts are still discoverable</li>
+<li>When in doubt, favor enhancing existing nodes rather than creating highly overlapping new ones</li>
+</ul>
+</li>
+</ul>
 <h2 id="core-principles">Core Principles</h2>
 <ul>
 <li>Preserve original content exactly as written - no expansions or embellishments</li>
@@ -234,8 +255,10 @@
 <li><strong>Connect</strong>: Add bidirectional links to related notes where appropriate</li>
 <li><strong>Cleanup</strong>:
 <ul>
-<li>Delete processed inbox notes and any temporary files once processed</li>
-<li>Git provides backup in case deletion needs to be reversed</li>
+<li>Move processed inbox notes to the Dump folder with today's date: <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
+<li>Include both the original notes and any intermediate processing files</li>
+<li>Use descriptive filenames (e.g., append &quot;-original&quot; to original files)</li>
+<li>Git provides backup in case recovery is needed</li>
 </ul>
 </li>
 </ol>
@@ -269,8 +292,8 @@
 </li>
 <li><strong>Cleanup After Combining</strong>:
 <ul>
-<li>After creating the combined note, delete the original source notes</li>
-<li>Any temporary or interim files should also be deleted</li>
+<li>After creating the combined note, move the original source notes to the Dump folder following the cleanup process</li>
+<li>Any temporary or interim files should also be moved to the Dump folder</li>
 </ul>
 </li>
 </ul>
