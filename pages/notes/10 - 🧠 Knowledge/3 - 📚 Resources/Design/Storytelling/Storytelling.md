@@ -3,6 +3,7 @@ resources:
   - https://www.youtube.com/watch?v=gsqMLmaLUCY
   - https://open.spotify.com/episode/0Dt7heauOHgHB2nv5xKoog
   - https://www.nngroup.com/articles/storytelling-study-guide/
+  - https://rosenfeldmedia.com/books/storymapping/
 tags:
   - storytelling
   - design
