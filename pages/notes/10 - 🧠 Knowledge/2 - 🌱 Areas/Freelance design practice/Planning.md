@@ -31,16 +31,18 @@ resources:
 ### Review
 - start focus time
 - tell Claude to process inbox notes
-- assign 1h blocks for weekly plans and review next week
+- assign 30 min blocks for weekly plan and 60 mins for weekly review next week
 	- go through weekly plan and mark what worked and what happened and what did not
-- review successes and failures
 - go through "scheduled" label in Todoist and see what got checked off
-- are there some reflections that are worth mentioning?
-	- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0)
+- review successes and failures
+	- are there some reflections that are worth mentioning?
+		- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0)
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
 - add things to plan for next week
 - add things for next month plan if needed
 - review Claude's processing, review and adjust
-	- once good, commit and push
+	- once good
+		- dump items from **Dump**
+		- commit and push
 - can I get more inspired by [Todoist's](https://www.todoist.com/cs/productivity-methods/weekly-review)?
 # [[Daily shutdown]]
