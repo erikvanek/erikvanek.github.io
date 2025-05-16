@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/ephemeron">
+                ⬅️ Back to Ephemeron
+            </a>
+        </div>
+    
+
+    <h1 id="digest-1">Digest-1</h1>
+
+    <h1 id="welcome-to-ephemeron">Welcome to Ephemeron</h1>
+<p>This is Ephemeron issue vol. 1 – your weekly distillation of design brilliance, AI breakthroughs, and leadership wisdom. Today's issue explores the fascinating intersection of design leadership in the AI age, the rise of autonomous AI engineering tools, and the future of UX and craft in the design industry.</p>
+<p>Dive into Benedict Evans' analysis of AI-powered retail systems, explore the rise of Cursor as it reaches $300M ARR, discover how Tristan Harris from the Center for Humane Technology is reshaping AI governance, and learn why design leaders at Duolingo say the era of &quot;UX&quot; might be over. Plus, we've rounded up the most intriguing European design events coming your way this spring and summarized key product updates from Anthropic, Replit, and Luma.</p>
+<p>Ready for a 10-minute journey through the ideas and innovations shaping our creative landscape? Let's begin.</p>
+<h2 id="design-insights">Design Insights</h2>
+<h3 id="swiss-design-meets-security-in-passport-evolution">Swiss Design Meets Security in Passport Evolution</h3>
+<p>The redesigned Swiss passport masterfully integrates security features as part of its visual identity, creating a balance where function and aesthetics complement each other. Smashing Magazine explores how this thoughtful approach blurs the line between necessity and art.</p>
+<p><a href="https://www.smashingmagazine.com/2025/04/swiss-passport-design/">Learn more</a></p>
+<h3 id="its-far-past-time-to-control-the-algorithm">It's Far Past Time to Control the Algorithm</h3>
+<p>UX Collective argues that algorithmic feeds should fall under user experience responsibility. &quot;To be as blunt as possible: algorithmic feeds should fall under user experience. This is because I, perhaps naively, still believe in the mission of user experience serving users. Their wellbeing should be the true chief concern, which means operating in a transparent and ethical way.&quot;</p>
+<p><a href="https://newsletter.uxdesign.cc/p/its-far-past-time-to-control-the">Learn more</a></p>
+<h3 id="harsh-truths-for-designers-the-end-of-ux">Harsh Truths for Designers: The End of UX?</h3>
+<p>Mig Reyes, VP of Product Experience at Duolingo (formerly at Instagram), shares uncomfortable truths about the design industry. &quot;This is an uncomfortable thing to say in the industry but I do think UX design is an archaic term,&quot; says Reyes, explaining why Duolingo changed from &quot;UX&quot; to &quot;Product Experience&quot; and why visual design excellence matters more than ever.</p>
+<p><a href="https://dive-club.beehiiv.com/p/new-post-29595a5c52ad591f">Learn more</a></p>
+<h3 id="fujiko-nakayas-fog-sculptures-at-neue-nationalgalerie">Fujiko Nakaya's Fog Sculptures at Neue Nationalgalerie</h3>
+<p>A breathtaking exhibition showcasing Fujiko Nakaya's revolutionary fog sculptures has opened at Berlin's Neue Nationalgalerie. Her works transform the museum's space through ephemeral water and air installations that respond to the environment, creating a dialogue between nature, art, and architecture.</p>
+<p><a href="https://ceecee.cc/guide/fujiko-nakaya-fog-sculpture/">Learn more</a></p>
+<h2 id="ai-development">AI Development</h2>
+<h3 id="center-for-humane-technology-on-ai-governance">Center for Humane Technology on AI Governance</h3>
+<p>Tristan Harris and the Center for Humane Technology have published a comprehensive framework for AI governance that emphasizes human agency and ethical deployment. The framework outlines how AI systems should be designed to align with human values while respecting autonomy, proposing practical guardrails for development.</p>
+<p><a href="https://www.humanetech.com/ai-governance">Learn more</a></p>
+<h3 id="the-rise-of-cursor-300m-arr-ai-tool-reshaping-software-engineering">The Rise of Cursor: $300M ARR AI Tool Reshaping Software Engineering</h3>
+<p>Cursor, the AI code editor, has reached $300M in annual recurring revenue just two years after launch. CEO Michael Truell discusses their evolution from a CAD tool to a coding platform, explaining how future programming will shift toward natural language and &quot;taste&quot; as a core engineering skill. Cursor's custom AI models have created a competitive edge in the rapidly growing market.</p>
+<p><a href="https://www.lennysnewsletter.com/p/the-rise-of-cursor-michael-truell">Learn more</a></p>
+<h3 id="inside-devin-autonomous-ai-engineering">Inside Devin: Autonomous AI Engineering</h3>
+<p>Cognition's CEO Scott Wu reveals that a team of &quot;Devins&quot; is already producing 25% of the company's pull requests, with projections to hit 50% by year-end. Each engineer at Cognition works with approximately five Devins, illustrating how AI engineering assistants are evolving from &quot;high school CS student&quot; to &quot;junior engineer&quot; levels in just one year.</p>
+<p><a href="https://www.lennysnewsletter.com/p/inside-devin-scott-wu">Learn more</a></p>
+<h3 id="duolingos-ai-revolution-in-language-learning">Duolingo's AI Revolution in Language Learning</h3>
+<p>Dr. Philippa Hardman's newsletter explores how Duolingo created 148 AI-generated language courses in just one year, demonstrating unprecedented scaling efficiency. The article examines their approach to training specialized language models and maintaining educational quality across vastly expanded offerings.</p>
+<p><a href="https://philippahardman.substack.com/p/duolingo-ai-revolution">Learn more</a></p>
+<h2 id="leadership-amp-team-development">Leadership &amp; Team Development</h2>
+<h3 id="cheating-at-your-job-with-ai">Cheating at Your Job with AI</h3>
+<p>Cassie Kozyrkov argues that using AI tools to increase productivity isn't cheating—it's working smarter. &quot;Unless your job is to manually do a task, your job is to get an outcome. Your company doesn't care how you got there, as long as it's legal, ethical, and delivers quality results,&quot; she writes, providing practical examples of how AI can enhance decision-making.</p>
+<p><a href="https://substack.com/@kozyrkov">Learn more</a></p>
+<h3 id="how-we-create-the-conditions-we-dont-want">How We Create the Conditions We Don't Want</h3>
+<p>Jerry Colonna, CEO of Reboot, explores the question: &quot;How have I been complicit in creating the conditions I say I don't want?&quot; This radical self-inquiry approach helps leaders recognize their role in organizational dysfunction and take responsibility for creating healthier work environments through conscious leadership practices.</p>
+<p><a href="https://www.lennysnewsletter.com/p/jerry-colonna-reboot">Learn more</a></p>
+<h3 id="benedict-evans-on-ai-in-retail-and-advertising">Benedict Evans on AI in Retail and Advertising</h3>
+<p>Benedict Evans examines how major platforms are pivoting toward AI-enhanced retail and advertising. &quot;The global ad industry is about a trillion dollars, and roughly half of that goes to Google, Meta, and Amazon. That's very tempting if you're a model-builder with Nvidia bills to pay and a technology that looks like it could tell people what to buy in an entirely new way,&quot; he writes, analyzing how OpenAI, Meta, and others are approaching this opportunity.</p>
+<p><a href="https://www.ben-evans.com/newsletter/590">Learn more</a></p>
+<h2 id="product-updates">Product Updates</h2>
+<h3 id="web-search-goes-global-in-claude">Web Search Goes Global in Claude</h3>
+<p>Anthropic has expanded Claude's web search capability globally for all paid plans, with enhanced search intelligence that adapts to query complexity. Additionally, Max plan subscribers now have access to Claude Code, enabling direct AI terminal interactions, along with new integrations for JIRA, Zapier, and Intercom.</p>
+<p><a href="https://www.anthropic.com/news/web-search-global">Learn more</a></p>
+<h3 id="dream-machine-weekly-from-luma">Dream Machine Weekly from Luma</h3>
+<p>Luma's latest update features significant improvements to their video generation tool, including enhanced control over scene transitions, more accurate text rendering in videos, and expanded style customization options that preserve artistic intent while improving accessibility.</p>
+<p><a href="https://lu.ma/updates/dream-machine">Learn more</a></p>
+<h3 id="whats-new-in-replit-auth-tutorials-and-more">What's New in Replit: Auth, Tutorials, and More</h3>
+<p>Replit has streamlined their authentication system with new social login options, added interactive tutorials for beginners, and improved their real-time collaboration features with enhanced presence indicators and permission controls for team coding sessions.</p>
+<p><a href="https://blog.replit.com/auth-update-2025">Learn more</a></p>
+<h3 id="building-a-theme-park-in-miro">Building a Theme Park in Miro</h3>
+<p>Coglode showcases how their team used Miro to create an interactive &quot;theme park&quot; for visualizing behavioral science principles, demonstrating innovative approaches to collaborative visualization and knowledge sharing across distributed teams.</p>
+<p><a href="https://coglode.com/blog/theme-park-miro">Learn more</a></p>
+<h2 id="upcoming-conferences-amp-events">Upcoming Conferences &amp; Events</h2>
+<h3 id="webexpo-prague-2025">WebExpo Prague 2025</h3>
+<p>With just 30 days remaining until WebExpo, this premier central European web design and development conference promises an outstanding speaker lineup featuring industry leaders from Figma, Stripe, and Mozilla. Early registration ends May 15th.</p>
+<p><a href="https://webexpo.net/">Learn more</a></p>
+<h3 id="uxcamp-europe-2025">UXcamp Europe 2025</h3>
+<p>One of Europe's largest UX unconferences is returning to Berlin this June, featuring participant-led sessions, hands-on workshops, and networking opportunities with over 500 UX professionals from across the continent.</p>
+<p><a href="https://uxcampeurope.org/">Learn more</a></p>
+<h3 id="weekend-events-in-berlin-may-8-11">Weekend Events in Berlin (May 8-11)</h3>
+<ul>
+<li><strong>Synthesizer Fair Superbooth</strong>: Europe's premier event for electronic music instruments at FEZ-Berlin</li>
+<li><strong>Cashmere Radio 10th Anniversary</strong>: Weekend-long celebration of Berlin's community radio platform</li>
+<li><strong>Mijas 2nd Anniversary</strong>: Art exhibition and performances at this emerging creative space</li>
+<li><strong>KO-Markt and Spring Market</strong>: Outdoor markets featuring local designers and artisans</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li>Emerging patterns in AI-assisted design leadership</li>
+<li>Key considerations for human-AI collaboration frameworks</li>
+<li>Rethinking UX research methodologies for conversational interfaces</li>
+<li>Novel approaches to design leadership in AI-first companies</li>
+</ul>
+<hr>
+<p><em>Created for Erik Vanek by Ephemeron, May 8, 2025</em></p>
+
+
+    
+</body>
+
+</html>

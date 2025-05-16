@@ -34,6 +34,7 @@ resources:
 - assign 1h blocks for weekly plans and review next week
 	- go through weekly plan and mark what worked and what happened and what did not
 - review successes and failures
+- go through "scheduled" label in Todoist and see what got checked off
 - are there some reflections that are worth mentioning?
 	- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0)
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
@@ -42,25 +43,4 @@ resources:
 - review Claude's processing, review and adjust
 	- once good, commit and push
 - can I get more inspired by [Todoist's](https://www.todoist.com/cs/productivity-methods/weekly-review)?
-# Daily
-- inspiration from [todoist](https://www.todoist.com/cs/inspiration/end-work-day)
-- shutdown ritual for 15 minutes
-## Steps
-0. start focus mode
-1. clean table
-2. close all tabs in all spaces
-3. go through #Inbox in Todoist and empty it by categorizing each item there where it belongs
-	- Is there something too big? try to split it
-	- Is it something for tomorrow? Put it to #tomorrow and schedule a block for it tomorrow if that works
-4. review
-	- daily successes
-	- daily failures
-	- note significant ones to the weekly review
-	- review my weekly plan and edit it if needed
-	- calendar for next 2 weeks and adjust if needed
-5. timesheets
-   - fill in all relevant timesheets
-6. prepare for tomorrow
-	- prepare the frog to eat in the morning for tomorrow
-	- and put it almost at the top of #tomorrow - make sure there is a simple task before it to kickstart a momentum
-7. enjoy **"Pro dnes mám hotovo!"**
+# [[Daily shutdown]]
