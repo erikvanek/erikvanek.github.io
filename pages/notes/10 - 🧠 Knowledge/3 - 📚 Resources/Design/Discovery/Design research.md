@@ -1,4 +1,5 @@
 - __to understand people & their behavior related to the product or service__
+- **To design the best UX, pay attention to what users do, not what they say**
 - enables to _empathize_ & get to know the context
 - is *"Becoming friends with reality"* - Erika Hall
 - motivation to find out how customers or other relevant actors experience a given service

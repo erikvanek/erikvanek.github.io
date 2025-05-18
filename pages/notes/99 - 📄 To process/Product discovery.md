@@ -84,4 +84,4 @@ resources:
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
 - [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
-- [[Behavior design|Behavior Design]]
+- [[Behavioral design|Behavior Design]]

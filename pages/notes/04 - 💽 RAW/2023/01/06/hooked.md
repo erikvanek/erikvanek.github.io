@@ -87,7 +87,7 @@ The hook model is pretty easy to understand and builds on top of primitive human
 
 ## Related notes
 - [[11 - ⏳ interim knowledge/Design/Books/Hooked]]
-- [[99 - 📄 To process/Behavior design]]
+- [[Behavioral design]]
 - [[04 - 💽 RAW/2025/04/06/Product vision]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design]]
 - [[99 - 📄 To process/Human in the loop]]

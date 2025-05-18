@@ -39,7 +39,7 @@ Productivity encompasses methods, mindsets, and systems for effectively accompli
 
 ## Related Domains
 - [[99 - 📄 To process/Learning]] - Connections to knowledge acquisition
-- [[Behavior design]] - Creating systems that support productive behavior
+- [[Behavioral design]] - Creating systems that support productive behavior
 
 ## Recent Additions
 - [[99 - 📄 To process/Productivity]] - Added April 1, 2025

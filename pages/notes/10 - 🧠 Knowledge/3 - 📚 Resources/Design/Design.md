@@ -32,3 +32,4 @@ tags:
   3. Design for interdependence and bring complementary skills together
 - The key shift is moving from designing _for_ others to designing _with_ them and one way we can do this is through [[Co-design]]
 - Is a combination of [sense making and form giving](https://uxdesign.cc/what-is-design-33392df7531d)
+- is a continuous process of running experiments, their evaluation and further adjustments

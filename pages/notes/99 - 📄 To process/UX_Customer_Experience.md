@@ -76,4 +76,4 @@ Převod obecných otázek do konkrétních měřitelných metrik
 - [[Designove_experimenty_metodika|Metodika designových experimentů]]
 - [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
 - [[99 - 📄 To process/Product discovery|Product Discovery]]
-- [[Behavior design|Behavior Design]]
+- [[Behavioral design|Behavior Design]]

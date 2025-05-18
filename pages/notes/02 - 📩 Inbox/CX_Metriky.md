@@ -10,6 +10,7 @@ resources:
 # Metriky pro CX a design služeb
 
 ## Postojové metriky pro měření celkového zážitku
+- jsou do jisté míry problematické kvůli přílišnému zjednodušování a možné dezinterpretovatelnosti – např. NPS jako jedno číslo schovává spoustu komplexity, která ovlivňuje zákaznickou zkušenost, navíc třeba nereflektuje kulturní rozdíly mezi prostředími
 
 ### NPS: Net Promoter Score
 - **Co měří**: Loajalitu zákazníka a jeho ochotu doporučit službu
@@ -55,15 +56,16 @@ resources:
 - Příklad: Pro streamingovou službu může být North Star metrikou počet hodin sledování
 
 ### OKR (Objectives - Key Results)
-- Rámec pro stanovování ambiciózních cílů (Objectives) a měřitelných výsledků (Key Results)
-- Klade důraz na kvalitativní, inspirativní cíle podpořené konkrétními metrikami
+- Framework pro stanovování ambiciózních cílů (Objectives) a měřitelných výsledků (Key Results)
+- Klade důraz na **kvalitativní, inspirativní, cíle** podpořené konkrétními kvalitativními výsledky, které lze vyjádřit metrikami
 - Používá se typicky v kvartálních cyklech
 - Slouží k nastavení směru, prioritizaci úsilí a podpoře růstu
 
 ### KPI (Key Performance Indicators)
 - Konkrétní měřítka pro operativní monitoring výkonnosti
 - Zaměření na kontinuální sledování klíčových ukazatelů
-- Všechny KPI jsou metrikami, ale ne všechny metriky jsou KPI
+	- např. míra konverze, průměrný příjem na uživatele, ...
+- **Všechny KPI jsou metrikami, ale ne všechny metriky jsou KPI**
 
 ## Pirate/AARRR framework
 Rámec používaný v startupovém prostředí k měření a optimalizaci zákaznické cesty:
@@ -77,7 +79,8 @@ Rámec používaný v startupovém prostředí k měření a optimalizaci zákaz
 
 ### Konverzní poměr
 - Podíl návštěvníků, kteří vykonají žádoucí akci
-- Výpočet: (počet konverzí / celkový počet návštěvníků) × 100 %
+- Výpočet: (počet konverzí / celkový počet návštěvníků) × 100
+	- dá výsledek v %
 - Příklad: Pokud web navštíví 1000 lidí a 50 provede nákup, konverzní poměr je 5 %
 
 ### Retence
