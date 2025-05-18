@@ -167,4 +167,4 @@ Kritéria pro výběr efektivních metrik:
 - [[Designove_experimenty|Designové experimenty]]
 - [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
 - [[99 - 📄 To process/Product discovery|Product discovery]]
-- [[Behavior design|Behavior design]]
+- [[Behavioral design|Behavioral design]]

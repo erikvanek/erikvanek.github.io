@@ -50,4 +50,4 @@ Discovery is the initial phase of design and product development that seeks to u
 ## Related Areas
 - [[99 - 📄 To process/Risk management|Risk Management]] - Approaches to managing product risks
 - [[99 - 📄 To process/Measuring Business Value|Measuring Business Value]] - How to quantify the impact of product decisions
-- [[99 - 📄 To process/Behavior design|Behavior Design]] - Using behavioral insights in product development
+- [[Behavioral design|Behavior Design]] - Using behavioral insights in product development

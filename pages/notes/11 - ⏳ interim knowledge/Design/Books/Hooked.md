@@ -79,7 +79,7 @@ For consumers wanting to protect their attention:
 - Create friction for unwanted habits
 
 ## Related Notes
-- [[Behavior design]]
+- [[Behavioral design]]
 - [[Attention]]
 - [[Design-MOC]]
 - [[99 - 📄 To process/Product discovery]]

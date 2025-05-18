@@ -110,4 +110,4 @@ Kurz se zaměřuje na ověřování návrhů v různých kontextech:
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
 - [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
 - [[99 - 📄 To process/Product discovery|Product Discovery]]
-- [[Behavior design|Behavior Design]]
+- [[Behavioral design|Behavior Design]]

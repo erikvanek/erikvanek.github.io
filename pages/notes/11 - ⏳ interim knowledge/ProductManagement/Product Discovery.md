@@ -90,7 +90,7 @@ resources:
 - [[Designové experimenty - metodika]]
 - [[UX a zákaznická zkušenost]]
 - [[Měření obchodní hodnoty]]
-- [[Behavior design]]
+- [[Behavioral design]]
 
 ## Application Examples
 - Creating a user research plan for feature development

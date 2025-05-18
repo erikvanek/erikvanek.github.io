@@ -19,6 +19,11 @@ tags:
 - **Clarify expectations:** Clearly explain what’s expected from participants, including how they should approach the tasks and anything specific they should keep in mind while testing, like explaining their thought process out loud.
     
 - **Address questions and concerns:** Allow participants to ask questions and address any concerns they may have about the testing process.
+## 3 basic rules of usability
+- by Jakob Nielsen, taken from [here](https://www.nngroup.com/articles/first-rule-of-usability-dont-listen-to-users/)
+	- Watch what people actually do.
+	- Do not believe what people _say_ they do.
+	- Definitely don't believe what people predict they _may_ do in the future.
 ## Note taking
 - ideally use multiple senses (hear, observe, ...)
 - ideally record a session and make notes together
