@@ -23,11 +23,11 @@ resources:
 	- do I want to drag it on?
 - go through projects and plan what needs attention this week
 	- define one top-most priority for the week and bold it out
-- go through the list of previous lessons learnt (last 5 weeks) and inspire and learn from them – ideally with something that can be applied to this week
+- go through the list of previous [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0#heading=h.yvqbqolelrf4) (last 5 weeks) and inspire and learn from them – ideally with something that can be applied to this week
 	- aim at one or two things / goals to apply this week
 - Go through **important and self-betterment** tasks and see how to fit them in
+	- Can I squeeze one **important** item to my schedule?
 - Try to focus assign deep work blocks for the rest of the week
-- Can I squeeze one **important** item to my schedule?
 ### Review
 - start focus time
 - tell Claude to process inbox notes
