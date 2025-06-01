@@ -1,5 +1,6 @@
 # 02 - 📩 Inbox
-- Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos
+
+Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos, classes.
 
 ## Special Processing for 'Random' Notes
 - 'Random' notes contain weekly collections of bullet points from different sources
@@ -70,26 +71,60 @@
 - Take a look at what is in a given note and assign 5 tags to it based on [[Tagging]] process
 - Use appropriate templates from [[01 - 🤖 Second brain/Templates/note-template|Note Template]] for structured processing
 
-## Related nodes
-- Find 5 related nodes in my existing knowledge base (only in folders `10 - 🧠 Knowledge`) that this nugget is related to, create a section `Related notes` at the end of the file and link those related notes as bullet points
-	- If you don't find enough related notes in those two subfolders, it's fine
+## **🔗 Related Notes Validation (CRITICAL)**
+Find 5 related nodes in my existing knowledge base **ONLY** from these specific folders:
+- `10 - 🧠 Knowledge/1 - 🚀 Projects`
+- `10 - 🧠 Knowledge/2 - 🌱 Areas` 
+- `10 - 🧠 Knowledge/3 - 📚 Resources`
 
-## AI-assisted summary
-- **!important** include summary only for notes longer than 1500 characters
-	- if a note is longer than that create a section on top called `AI-assisted summary` with a concise summary of the main ideas
-	  - Structure this summary into at least two paragraphs for better readability
-	  - First paragraph should cover the core concept/main idea
-	  - Second paragraph should expand on application, implications, or specific details
-	  - Aim for 5-7 sentences length max, it should be like 8 lines of text at most
-	  - then add horizontal line
-  - if a note is shorter, ignore this
+**VALIDATION REQUIREMENTS:**
+1. **Verify existence**: Before adding any link to "Related notes", you MUST confirm the linked note actually exists in one of the above folders
+2. **No RAW links**: NEVER link to files in `04 - 💽 RAW` folder
+3. **No processing links**: NEVER link to files in `99 - 📄 To process` folder  
+4. **No made-up links**: NEVER create links to notes that don't exist
+5. **Search first**: Use the knowledge base search to find actual existing notes before creating links
+6. **Quality over quantity**: It's better to have 2-3 real, relevant links than 5 links with some being fictional
+
+**Link Format**: Create a section `Related notes` at the end of the file and link those related notes as bullet points:
+```markdown
+## Related notes
+- [[Actual Note Title]]
+- [[Another Real Note]]
+- [[Third Existing Note]]
+```
+
+If you cannot find enough related notes in the valid folders, include fewer links rather than creating fake ones.
+
+## **📏 AI-assisted Summary Logic (Updated)**
+
+### For NEW notes:
+- **Include summary only for notes longer than 1500 characters**
+  - If a note is longer than that, create a section on top called `AI-assisted summary` with a concise summary of the main ideas
+  - Structure this summary into at least two paragraphs for better readability
+  - First paragraph should cover the core concept/main idea
+  - Second paragraph should expand on application, implications, or specific details
+  - Aim for 5-7 sentences length max, it should be like 8 lines of text at most
+  - Then add horizontal line
+- If a note is shorter, ignore this
+
+### **For UPDATED/EXPANDED notes (NEW REQUIREMENT):**
+- **After adding content to an existing note**, check the total character count of the final note
+- **If the updated note now exceeds 1500 characters AND doesn't already have an AI-assisted summary:**
+  - Generate a new `AI-assisted summary` section at the top of the note
+  - Follow the same formatting and length guidelines as for new notes
+  - The summary should cover the entire note content (original + newly added)
+- **If the note already has an AI-assisted summary and new content was added:**
+  - Update the existing summary to reflect the expanded content
+  - Maintain the same format and length constraints
+- **If the updated note is still under 1500 characters:**
+  - Do not add an AI-assisted summary
 
 ## Chunking
 - For longer notes (over 500 characters), consider using the [[Chunking]] process to break them into more focused, interconnected notes
 
 ## Storage
 - Inbox serves as the entrypoint to new knowledge
-- **important workflow clarification** - Content type determines destination folder:
+- **Important workflow clarification** - Content type determines destination folder:
   1. **RAW materials** (book notes, interview transcripts, article summaries, attended lectures):
      - Store in `04 - 💽 RAW` following: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md`
      - Example: `04 - 💽 RAW/2025/04/06/Book_Notes.md`
@@ -105,18 +140,20 @@
 * Never reorganize the internal structure of notes
 * Never change writing style or terminology
 * Never "improve" note content with AI-generated material
+* **Never create fictional links in "Related notes" sections**
+* **Never link to RAW or "To process" folders in "Related notes"**
 
-# Typical information coming in
+# Typical Information Coming In
 ## Notes
-- it is "passive" knowledge that I gathered somewhere
-	- notes from books, articles, podcasts, attended lectures, conferences or classes
-## Research artifacts
+- It is "passive" knowledge that I gathered somewhere
+  - Notes from books, articles, podcasts, attended lectures, conferences or classes
+## Research Artifacts
 - Interview and workshop debriefs notes, post-mortems and learning
 - Research plans, scripts and reports
-## Serendipity moments
+## Serendipity Moments
 - "A-ha moments" in shower, toilet, while biking etc
 - These are going to be pretty small
-## Design artefacts
-- prototypes, test results, boundary objects and results when doing some further research with them
+## Design Artifacts
+- Prototypes, test results, boundary objects and results when doing some further research with them
 ## Reflections
-- weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables
+- Weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables
