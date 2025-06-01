@@ -14,4 +14,6 @@
 	- once good
 		- dump items from **Dump**
 		- commit and push
+	- if not good
+		- adjust and re-do
 - can I get more inspired by [Todoist's](https://www.todoist.com/cs/productivity-methods/weekly-review)?

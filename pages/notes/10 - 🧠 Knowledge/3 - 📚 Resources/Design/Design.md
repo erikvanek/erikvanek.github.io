@@ -7,6 +7,16 @@ tags:
   - service-design
 ---
 
+# Design
+
+## AI-assisted summary
+
+Design is fundamentally a verb - an active practice focused on creating meaningful solutions through iterative experimentation and trade-off decisions. The field encompasses various approaches including service design, human-centered design, and design thinking, all emphasizing the importance of engaging with diverse perspectives and designing with rather than for users.
+
+Key design principles include managing complexity while maintaining usability, creating emotionally resonant products especially in the AI age, and considering sustainable impact through inclusive and ethical practices. Design operates as both sense-making and form-giving, requiring teams to balance cognitive load, embrace rapid iteration, and understand that effective design brings form around function to minimize user effort.
+
+---
+
 - __to _design_ is a verb__
 - "Splitters" care about UX/[[Service design]]/[[Human-centered design]] differences vs lumpers don't care as long as you practice properly
 - when you start - _be shitty, not pretty_ - throw away easily & iterate further
@@ -17,9 +27,11 @@ tags:
 	- when designing for radical [[Innovation]] we need to [inform our intuition](obsidian://open?vault=notes&file=design%2Fresources%2FInforming_Our_Intuition.pdf)
 	- is about making trade-offs
 		- e.g. adding a few clicks (increasing motor load) to reduce cognitive or visual load
+- The hardest thing to do as a designer is to bring a lot of complexity but to mask it as much as possible – to make the interface as easy to use while bringing options to advanced users
 - The best design does not come from individual designerers, but from design teams
 - [[Storytelling]] combined [[Insight]]s and clear business cases are helpful to present compelling narratives
 - usually split between [[99 - 📄 To process/Product discovery|Product discovery]] and delivery
+- In the AI age it is more important than ever to create emotionally resonant products that are appealing to people on a deeper level
 - As argued in [[04 - 💽 RAW/2023/03/23/cradle-to-cradle|Cradle to Cradle]], "being less bad =/= being good" - reducing harm is not the same as creating positive impact
 - Sustainable design requires understanding material flows as described by McDonough and Braungart:
   - Biological - materials that can safely return to nature

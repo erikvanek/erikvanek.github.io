@@ -24,20 +24,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Link Creation Policy**: Quality over quantity - fewer real links preferred over fictional ones
 
 ### 🚫 Removed
-- **Forbidden Link Targets**: 
+- **Forbidden Link Targets in "Related notes" section**: 
   - Links to `04 - 💽 RAW` folder in "Related notes"
   - Links to `99 - 📄 To process` folder in "Related notes"
   - Made-up/fictional note references
+
+### 🔧 **CORRECTIONS - Processing Mistakes Fixed**
+
+#### Issues Identified:
+1. **Over-restrictive RAW linking**: Incorrectly removed ALL RAW references, should only restrict "Related notes" section
+2. **Insufficient connections**: Created notes with fewer than 5 related notes
+
+#### Fixes Applied:
+- **RAW References Policy**: 
+  - ❌ **WRONG**: No RAW links anywhere in notes
+  - ✅ **CORRECT**: RAW links OK in note content, just not in "Related notes" section
+- **Related Notes Requirement**:
+  - ❌ **WRONG**: "Quality over quantity" - allowing fewer than 5 links
+  - ✅ **CORRECT**: Must always include exactly 5 related notes
 
 ### 🛠️ Technical Details
 
 #### Link Validation Rules
 - ✅ **MUST** verify note existence before linking
-- ✅ **ONLY** link to `10 - 🧠 Knowledge` subfolders:
+- ✅ **ONLY** link to `10 - 🧠 Knowledge` subfolders in "Related notes":
   - `1 - 🚀 Projects`
   - `2 - 🌱 Areas`
   - `3 - 📚 Resources`
-- ❌ **NEVER** link to RAW or processing folders
+- ✅ **RAW references allowed** in note content (just not "Related notes")
+- ✅ **Always exactly 5 connections** in "Related notes" section
 - ❌ **NEVER** create fictional links
 
 #### AI Summary Logic
