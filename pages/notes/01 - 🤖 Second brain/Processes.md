@@ -10,6 +10,8 @@ There are two main entry points to my second brain knowledge management
 # Rules
 - Skip folder `Obsolete` as it includes previously generated rules and processes that do not suit me anymore
 - Do not actively work (meaning do not process them, but feel free to reference them from new notes) with entries in `99-To process` as those are my old-not-yet-processed notes that I'll start processing gradually and eventually they move from that folder into my main Knowledge folder
+- **CRITICAL**: When creating "Related notes" sections, ONLY link to existing notes in valid knowledge folders (`10 - 🧠 Knowledge`). Never create fake links or link to RAW/processing folders
+- **Auto-generate AI summaries**: When notes are updated and exceed 1500 characters, automatically generate or update the AI-assisted summary
 
 # Knowledge Organization
 ## RAW Storage Structure
