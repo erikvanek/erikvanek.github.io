@@ -79,21 +79,24 @@ Find 5 related nodes in my existing knowledge base **ONLY** from these specific 
 
 **VALIDATION REQUIREMENTS:**
 1. **Verify existence**: Before adding any link to "Related notes", you MUST confirm the linked note actually exists in one of the above folders
-2. **No RAW links**: NEVER link to files in `04 - 💽 RAW` folder
-3. **No processing links**: NEVER link to files in `99 - 📄 To process` folder  
+2. **No RAW links in Related notes**: NEVER link to files in `04 - 💽 RAW` folder in "Related notes" section
+3. **No processing links in Related notes**: NEVER link to files in `99 - 📄 To process` folder in "Related notes" section
 4. **No made-up links**: NEVER create links to notes that don't exist
 5. **Search first**: Use the knowledge base search to find actual existing notes before creating links
 6. **Quality over quantity**: It's better to have 2-3 real, relevant links than 5 links with some being fictional
+7. **RAW references OK in content**: It's perfectly fine to reference RAW or other folders within note content, just not in "Related notes" section
 
-**Link Format**: Create a section `Related notes` at the end of the file and link those related notes as bullet points:
+**Link Format**: Create a section `Related notes` at the end of the file and link exactly 5 related notes as bullet points:
 ```markdown
 ## Related notes
 - [[Actual Note Title]]
 - [[Another Real Note]]
 - [[Third Existing Note]]
+- [[Fourth Real Note]]
+- [[Fifth Existing Note]]
 ```
 
-If you cannot find enough related notes in the valid folders, include fewer links rather than creating fake ones.
+If you cannot find enough related notes in the valid folders, search more broadly or use loosely related concepts rather than creating fake links.
 
 ## **📏 AI-assisted Summary Logic (Updated)**
 

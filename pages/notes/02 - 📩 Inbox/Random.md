@@ -1,4 +1,0 @@
-- there are reversible and irreversible product decisions – reversible are easy to iterate and tweak once in production, irreversible should be thought through during the product development lifecycle
-- the hardest thing to do as a designer is to bring a lot of complexity but to mask it as much as possible – to make the interface as easy to use while bringing options to advanced users
-- during one's personal development – try to map out skills that are relevant for what you want to do and try to excel at one of them – imagine a "one-liner" that you get remembered for and recognized for
-- in the AI age it is more important than ever to create emotionally resonant products that are appealing to people on a deeper level

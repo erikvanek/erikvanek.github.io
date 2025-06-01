@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "663177c154224160",
+        "id": "6eb75aea9f7b4d40",
         "type": "tabs",
         "children": [
           {
-            "id": "a4cba5bb9d75486e",
+            "id": "a052982e4be0bca1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review.md",
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Product Strategy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Weekly review"
+              "title": "Product Strategy"
             }
           }
         ]
@@ -169,8 +169,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a4cba5bb9d75486e",
+  "active": "a052982e4be0bca1",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Business/Value Based Management.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Product Strategy.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation.md",
+    "99 - 📄 To process/Themes/Outcome_Driven_Product_Strategy.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+    "03 - 🗑️ Dump/2025-06-01/Random-original.md",
+    "03 - 🗑️ Dump/2025-06-01/Quality-original.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Business/Quality.md",
+    "02 - 📩 Inbox/Random.md",
+    "02 - 📩 Inbox/Quality.md",
     "01 - 🤖 Second brain/scripts/README.md",
     "03 - 🗑️ Dump/2025-06-01/UPDATE_NOTES-original.md",
     "03 - 🗑️ Dump/2025-06-01",
@@ -181,27 +194,14 @@
     "01 - 🤖 Second brain/validate_notes.py",
     "99 - 📄 To process/design/AI.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
-    "02 - 📩 Inbox/Random.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Daily shutdown.md",
-    "02 - 📩 Inbox/Quality.md",
     "04 - 💽 RAW/2025/04/06/JTBD.md",
     "04 - 💽 RAW/2025/04/06/Opposing forces of customer demand.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
     "01 - 🤖 Second brain/README.md",
     "01 - 🤖 Second brain/Routines/Inbox processing.md",
     "World Cafe Facilitation.md",
     "01 - 🤖 Second brain/Index.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Second brain.md",
-    "06-System/Second-brain-master-prompt.md",
     "06-System",
-    "02 - 📩 Inbox/second-brain-guide.md",
-    "11 - ⏳ interim knowledge/Productivity/Second Brain.md",
-    "03 - 🗑️ Dump/2025-05-22/Opportunity solution tree-original.md",
-    "03 - 🗑️ Dump/2025-05-22/Measuring in design-original.md",
-    "03 - 🗑️ Dump/2025-05-22/Hypothesis-original.md",
-    "03 - 🗑️ Dump/2025-05-22/Experiments-original.md",
     "03 - 🗑️ Dump/2025-05-22",
     "04 - 💽 RAW/2025/05/22",
     "04 - 💽 RAW/2025/05",
