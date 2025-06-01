@@ -29,3 +29,5 @@ people
 	- https://uxdesign.cc/the-ux-of-ai-reaching-common-ground-with-conversational-ai-ddb0b9c506ff
 - [Outcome-oriented-design](https://www.nngroup.com/articles/generative-ui/)
 	- _"Eventually, designers will need to change the way they work. We’ll need to shift from designing interfaces to designing outcomes._
+- [Design for the AI age](https://linear.app/blog/design-for-the-ai-age)
+		- *"We need to move beyond the generic chat format and reconsider what users truly require for their specific workflows. Without a workbench, we risk wielding powerful tools in empty space."* – Karri Saarinen

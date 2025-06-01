@@ -33,3 +33,6 @@ tags:
 - The key shift is moving from designing _for_ others to designing _with_ them and one way we can do this is through [[Co-design]]
 - Is a combination of [sense making and form giving](https://uxdesign.cc/what-is-design-33392df7531d)
 - is a continuous process of running experiments, their evaluation and further adjustments
+- The role of design is to **bring form around the function**
+	- Form acts as a way to set the context – like the way an axe looks and feels in your hand, you get an immediate sense of its purpose
+	- By managing inputs and outputs along structured forms, you minimize the cognitive load required to successfully engage with the *product*
