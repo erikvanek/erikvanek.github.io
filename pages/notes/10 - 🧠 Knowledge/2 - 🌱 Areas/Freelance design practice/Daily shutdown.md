@@ -11,7 +11,7 @@ inspiration from [todoist](https://www.todoist.com/cs/inspiration/end-work-day)
 	- daily successes
 	- daily failures
 	- note significant ones to the weekly review
-	- review my weekly plan and edit it if needed
+	- review my [weekly plan](https://docs.google.com/document/d/1nJE5iGa9NmfpYFH8jHvW_XKj4s9JB923VJPrvS2GeGQ/edit?tab=t.0) and edit it if needed
 	- calendar for next 2 weeks and adjust if needed
 5. timesheets
    - fill in all relevant timesheets

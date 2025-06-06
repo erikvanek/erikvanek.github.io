@@ -105,10 +105,10 @@ footer a {
     color: var(--color-text-tertiary);
 }
 
-footer {
+/* footer {
     margin-left: -5rem;
     display: none !important;
-}
+} */
 
 .r-fit-text {
     width: 100%;

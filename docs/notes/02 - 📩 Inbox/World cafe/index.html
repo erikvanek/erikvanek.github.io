@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h1 id="world-cafe">World cafe</h1>
+
+    <p>**</p>
+<h1 id="co-si-odnst-pro-workshop">Co si odnést pro workshop?</h1>
+<h2 id="a-hrefhttpstheworldcafecomkey-concepts-resourcesdesign-principles7-wc-principa"><a href="https://theworldcafe.com/key-concepts-resources/design-principles/">7 WC principů</a></h2>
+<ul>
+<li>
+<ol>
+<li>Clarify the Context</li>
+</ol>
+</li>
+<li>
+<p>Pay attention to the reason you are bringing people together</p>
+</li>
+<li>
+<ol start="2">
+<li>Create Hospitable Space</li>
+</ol>
+</li>
+<li>
+<p>When people feel comfortable to be themselves, they do their most creative thinking, speaking, and listening</p>
+</li>
+<li>
+<ol start="3">
+<li>Explore Questions that Matter</li>
+</ol>
+</li>
+<li>
+<p>Knowledge emerges in response to compelling questions. Find questions that are relevant to the real-life concerns of the group. Powerful questions that “travel well” help attract collective energy, insight, and action as they move throughout a system.</p>
+</li>
+<li>
+<p><a href="https://wind4change.com/world-cafe-juanita-brown-david-isaacs/">Checklist for building good questions</a></p>
+</li>
+<li>
+<ol start="4">
+<li>Encourage Everyone’s Contribution</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>Connect Diverse Perspectives</li>
+</ol>
+</li>
+<li>
+<p>As participants carry key ideas or themes to new tables, they exchange perspectives, greatly enriching the possibility for surprising new insights</p>
+</li>
+<li>
+<ol start="6">
+<li>Listen together for Patterns and Insights</li>
+</ol>
+</li>
+<li>
+<p>The quality of our listening is perhaps the most important factor determining the success of a Café</p>
+</li>
+<li>
+<p>(interpretace) rád bych se na tohle hodně během toho WC zaměřil</p>
+</li>
+<li>
+<p>Encourage people to listen for what is not being spoken along with what is being shared.</p>
+</li>
+<li>
+<ol start="7">
+<li>Share Collective Discoveries</li>
+</ol>
+</li>
+</ul>
+<h2 id="mindset">Mindset</h2>
+<ul>
+<li>
+<p><a href="https://thesystemsthinker.com/the-world-cafe-living-knowledge-through-conversations-that-matter/">https://thesystemsthinker.com/the-world-cafe-living-knowledge-through-conversations-that-matter/</a></p>
+</li>
+<li>
+<p>“the process of co-creating the future through conversation is so natural we usually overlook it”</p>
+</li>
+<li>
+<p>“The crosspollination of ideas from group to group can lead to the emergence of surprising creativity”</p>
+</li>
+<li>
+<p>“effective approach for fostering greater collaborative learning and coherent thought than is often available in large group settings”</p>
+</li>
+</ul>
+<h3 id="1-st-world-caf">1. Část - world café</h3>
+<ul>
+<li>
+<p>First diamond</p>
+</li>
+<li>
+<p>Explorace problému</p>
+</li>
+<li>
+<p>Sdílení dobré praxe</p>
+</li>
+<li>
+<p>Reflexe toho, co funguje</p>
+</li>
+<li>
+<p>It is an innovative methodology that enhances the capacity for collaborative thinking about critical issues by linking small group and large-group conversations</p>
+</li>
+<li>
+<p>It highlights the naturally occurring networks of conversation and social learning through which we access collective intelligence</p>
+</li>
+<li>
+<p>“Vzájemná inspirace”</p>
+</li>
+<li>
+<p>Když byste přeskočili tak by vás možná nenapadlo</p>
+</li>
+</ul>
+<h3 id="2-st-problem-framing-amp-design-studio">2. Část - problem framing &amp; design studio</h3>
+<ul>
+<li>
+<p>“Hledání konkrétních kroků”</p>
+</li>
+<li>
+<p>Second diamond</p>
+</li>
+<li>
+<p>5 minut shrnutí toho, co se u stolu dělo a co za témata to přineslo</p>
+</li>
+<li>
+<p>5 minut brainwriting na 5W a 1H</p>
+</li>
+<li>
+<p>Shodnutí se na podstatě toho problému formou <a href="https://www.nngroup.com/articles/problem-statements/">problem statementu</a></p>
+</li>
+<li>
+<p>5 minut JBM</p>
+</li>
+</ul>
+<h2 id="zdroje-cca-pl-hodiny-ten">Zdroje (cca půl hodiny čtení)</h2>
+<ul>
+<li>
+<p><a href="https://thesystemsthinker.com/the-world-cafe-living-knowledge-through-conversations-that-matter/">https://thesystemsthinker.com/the-world-cafe-living-knowledge-through-conversations-that-matter/</a> skvělý long read k motivaci a vzniku WC</p>
+</li>
+<li>
+<p><a href="https://www.dpc.sa.gov.au/responsibilities/community-engagement/engagement-tools/world-cafe">https://www.dpc.sa.gov.au/responsibilities/community-engagement/engagement-tools/world-cafe</a> praktický a stručný návod k organizaci, obzvlášť část “The format of a World Café”</p>
+</li>
+<li>
+<p><a href="https://wind4change.com/world-cafe-juanita-brown-david-isaacs/">https://wind4change.com/world-cafe-juanita-brown-david-isaacs/</a> praktický guide ilustrující klíčové koncepty</p>
+</li>
+</ul>
+<h1 id="notiky-z-reere">Notičky z rešerše</h1>
+<ul>
+<li>
+<p>Mindset pro první část - první diamant, druhá část druhý</p>
+</li>
+<li>
+<p>První část je čistý world café, druhá část spíš syntéza, návrhy a formát á la <a href="https://kisk.phil.muni.cz/100metod/design-studio">design studio</a> s využitím možná nějakých dalších metod - 5W framing atd.</p>
+</li>
+<li>
+<p>V první zkoumáme a popisujeme problém</p>
+</li>
+<li>
+<p>V druhé syntetizujeme poznání, pokládáme výzvu, přinášíme nápady a kutáme z nich actionable</p>
+</li>
+<li>
+<p>A na konci v případě zájmu nechat každého na lepík napsat svůj email kde ty lidi spojíme jako možný follow-up pokud to bude dávat smysl?</p>
+</li>
+<li>
+<p>Nezapomenout do časové dotace zahrnout čas na přesouvání mezi stoly</p>
+</li>
+<li>
+<p>Ke zvážení - máme docela málo času a (minimálně) dvě možné strategie</p>
+</li>
+<li>
+<p>Po každé rotaci skupinka “začíná nanovo” přicházet se svýma věcma</p>
+</li>
+<li>
+<p>Chceme spíš vzájemný build-up a vrstvení jednotlivých skupin na sebe podobně jako při <a href="https://en.wikipedia.org/wiki/6-3-5_Brainwriting">635 brainwritingu</a></p>
+</li>
+<li>
+<p>Knowledge base by šlo postupně rozvíjet jako sdílenou mindmapu nebo jinou podobnou technikou</p>
+</li>
+</ul>
+<h3 id="obecn-zdroje-k-wc">Obecné zdroje k WC</h3>
+<ul>
+<li>
+<p>Jednoduchý <a href="https://www.dpc.sa.gov.au/responsibilities/community-engagement/engagement-tools/world-cafe">101 k How to run a WC</a>, který dobře formát a jeho klíčové části popisuje</p>
+</li>
+<li>
+<p>Pěkný <a href="https://thesystemsthinker.com/the-world-cafe-living-knowledge-through-conversations-that-matter/">long-</a>read, který dává WC do kontextu strategického uvažování při vedení organizací</p>
+</li>
+<li>
+<p><a href="https://wind4change.com/world-cafe-juanita-brown-david-isaacs/">Semi-long-read</a> přímo od autorů formátu</p>
+</li>
+<li>
+<p>Pěkný <a href="https://www.youtube.com/watch?v=Tfpyu84pg6k">videjko</a> popisující formát</p>
+</li>
+</ul>
+<h2 id="best-practices">Best practices</h2>
+<h3 id="principy">Principy</h3>
+<ul>
+<li>
+<p><a href="https://theworldcafe.com/key-concepts-resources/design-principles/">7 designových principů WC</a> a vizuálně i <a href="https://wind4change.com/world-cafe-juanita-brown-david-isaacs/">zde</a></p>
+</li>
+<li>
+<ol>
+<li>Clarify the Context</li>
+</ol>
+</li>
+<li>
+<p>Pay attention to the reason you are bringing people together</p>
+</li>
+<li>
+<ol start="2">
+<li>Create Hospitable Space</li>
+</ol>
+</li>
+<li>
+<p>When people feel comfortable to be themselves, they do their most creative thinking, speaking, and listening</p>
+</li>
+<li>
+<ol start="3">
+<li>Explore Questions that Matter</li>
+</ol>
+</li>
+<li>
+<p>Knowledge emerges in response to compelling questions. Find questions that are relevant to the real-life concerns of the group. Powerful questions that “travel well” help attract collective energy, insight, and action as they move throughout a system.<img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf093NtOSaE0lju0nkBm6_k0JxDTBsYJ3QVddfR5tYaE3FURdYyEMIZlvS6oaV2wdc_o4x8H8PhSPoYAXNr3xyQpeLxxcXHSRWDSi0AXxiBzl_gSz16YsluOgrGqZfrJHERK5qpEw?key=syt7w87ElhVSpzN-OWYeFi-D" alt=""></p>
+</li>
+<li>
+<p><a href="https://wind4change.com/world-cafe-juanita-brown-david-isaacs/">Checklist for building good questions</a></p>
+</li>
+<li>
+<ol start="4">
+<li>Encourage Everyone’s Contribution</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>Connect Diverse Perspectives</li>
+</ol>
+</li>
+<li>
+<p>As participants carry key ideas or themes to new tables, they exchange perspectives, greatly enriching the possibility for surprising new insights</p>
+</li>
+<li>
+<ol start="6">
+<li>Listen together for Patterns and Insights</li>
+</ol>
+</li>
+<li>
+<p>The quality of our listening is perhaps the most important factor determining the success of a Café</p>
+</li>
+<li>
+<p>(interpretace) rád bych se na tohle hodně během toho WC zaměřil</p>
+</li>
+<li>
+<p>Encourage people to listen for what is not being spoken along with what is being shared.</p>
+</li>
+<li>
+<ol start="7">
+<li>Share Collective Discoveries</li>
+</ol>
+</li>
+<li>
+<p>The last phase of the Café, often called the “harvest”, involves making this pattern of wholeness visible to everyone in a large group conversation</p>
+</li>
+<li>
+<p>Jak bychom mohli zvýšit viditelnost témat pro ostatní během celého workshopu?</p>
+</li>
+</ul>
+<h3 id="msto">Místo</h3>
+<ul>
+<li>
+<p>The idea behind this is to create a space that supports 'good conversation'</p>
+</li>
+<li>
+<p>Já si z toho interpretuju aby byly na každým stolku koláčky 🙂</p>
+</li>
+<li>
+<p><a href="https://www.involve.org.uk/resource/world-cafe">https://www.involve.org.uk/resource/world-cafe</a></p>
+</li>
+</ul>
+<h3 id="a-hrefhttpstheworldcafecomkey-concepts-resourcesworld-cafe-methodsettinga"><a href="https://theworldcafe.com/key-concepts-resources/world-cafe-method/">Setting</a></h3>
+<ul>
+<li>Chceme token na mluvení?</li>
+</ul>
+<h3 id="formt">Formát</h3>
+<ul>
+<li>
+<p>based on the assumption that people already have within them the wisdom and creativity</p>
+</li>
+<li>
+<p>One participant (the table host) remains and summarises the previous conversation to the newly arrived participants</p>
+</li>
+<li>
+<p><a href="https://www.involve.org.uk/resource/world-cafe">https://www.involve.org.uk/resource/world-cafe</a></p>
+</li>
+<li>
+<p>Nechceme to opravdu radši na 5x6 než 3x10?</p>
+</li>
+<li>
+<p>each round is prefaced with a question specially crafted for the specific context and desired purpose of the World Café</p>
+</li>
+<li>
+<p>Skvělá inspirace pro ptaní se na <a href="https://www.theworldcafe.com/wp-content/uploads/2015/07/askingbig.pdf">velké otázky</a></p>
+</li>
+<li>
+<p><a href="https://www.innovationtraining.org/the-world-cafe-method-hosting-and-facilitating-collaborative-discussion/">https://www.innovationtraining.org/the-world-cafe-method-hosting-and-facilitating-collaborative-discussion/</a> - ale prakticky se to objevuje v každém zdroji</p>
+</li>
+<li>
+<p>Nachystat flipchartstvo <a href="https://theworldcafe.com/wp-content/uploads/2015/07/graphicBenefits.pdf">s programem dne</a> ať je na očích</p>
+</li>
+</ul>
+<h3 id="facilitace">Facilitace</h3>
+<ul>
+<li>
+<p><a href="https://www.theworldcafe.com/wp-content/uploads/2015/07/Cafe-To-Go-Revised.pdf">Dvě stránky dole pro facilitátorstvo</a></p>
+</li>
+<li>
+<p>Vychází z <a href="https://participedia.net/method/1692">dynamické facilitace</a></p>
+</li>
+</ul>
+<p>**</p>
+
+
+    
+</body>
+
+</html>

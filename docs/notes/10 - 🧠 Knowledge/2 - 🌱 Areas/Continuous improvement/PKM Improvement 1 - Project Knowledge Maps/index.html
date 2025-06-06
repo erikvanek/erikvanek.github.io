@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="pkm-improvement-1-project-knowledge-maps">PKM Improvement 1 - Project Knowledge Maps</h1>
+
+    <h1 id="pkm-improvement-1-project-knowledge-maps">PKM Improvement 1: Project Knowledge Maps</h1>
+<h2 id="strongobjectivestrong">🎯 <strong>Objective</strong></h2>
+<p>Create a pre-project routine that generates curated knowledge maps linking relevant past insights to current project challenges, making your knowledge immediately actionable.</p>
+<h2 id="strongthe-problem-this-solvesstrong">💡 <strong>The Problem This Solves</strong></h2>
+<p>Currently, your knowledge and active projects operate in separate workflows. You have excellent insights captured in Resources, but they don't automatically surface when starting new design work. This creates missed opportunities to apply past learning and builds inconsistency across projects.</p>
+<h2 id="strongimplementation-planstrong">🛠️ <strong>Implementation Plan</strong></h2>
+<h3 id="step-1-create-the-knowledge-map-template-15-minutes">Step 1: Create the Knowledge Map Template (15 minutes)</h3>
+<p>Create this template in your Templates folder:</p>
+<pre><code class="language-markdown">---
+title: &quot;[PROJECT NAME] - Knowledge Map&quot;
+date_created: YYYY-MM-DD
+project: &quot;[PROJECT NAME]&quot;
+tags:
+  - project-knowledge-map
+  - [project-specific-tags]
+---
+
+# [PROJECT NAME] - Knowledge Map
+
+## Project Context
+- **Objective**: [Brief project goal]
+- **Key Challenges**: [Primary challenges anticipated]
+- **Stakeholders**: [Main stakeholders involved]
+- **Timeline**: [Project duration]
+
+## Relevant Knowledge from Second Brain
+
+### Design Methodologies
+*[Links to relevant methodology notes from Resources]*
+
+### Past Project Learnings  
+*[Links to relevant insights from previous <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> notes]*
+
+### Anti-patterns to Avoid
+*[Lessons learned about what NOT to do]*
+
+### Stakeholder Management Insights
+*[Relevant notes about working with similar stakeholder types]*
+
+### Tools and Templates
+*[Existing templates, frameworks, tools that apply]*
+
+### Experimental Opportunities
+*[New approaches from Resources you want to test on this project]*
+
+## Knowledge Gaps Identified
+*[Areas where you lack knowledge but need it for this project]*
+
+## Success Metrics for Knowledge Application
+- [ ] Applied [X] past insights to project approach
+- [ ] Avoided [Y] previously identified anti-patterns  
+- [ ] Tested [Z] new methodologies from research
+
+## Related Notes
+- <a href="#" class="pending-link">🔥 Project planning</a>
+- [Link to actual project folder when created]
+</code></pre>
+<h3 id="step-2-integrate-with-project-kickoff-10-minutes-setup">Step 2: Integrate with Project Kickoff (10 minutes setup)</h3>
+<p>Add to your existing <a href="#" class="pending-link">🔥 Project planning</a> note:</p>
+<p><strong>Before starting any new project:</strong></p>
+<ol>
+<li>Create knowledge map using template</li>
+<li>Ask Claude: &quot;Based on my knowledge base, what insights should I review for [project type/context]?&quot;</li>
+<li>Spend 20 minutes linking relevant existing notes</li>
+<li>Identify 1-2 knowledge gaps to address during project</li>
+<li>Set intention to test 1 new approach from your Resources</li>
+</ol>
+<h3 id="step-3-create-knowledge-feedback-loop-5-minutes">Step 3: Create Knowledge Feedback Loop (5 minutes)</h3>
+<p>Enhance your existing <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> template by adding:</p>
+<pre><code class="language-markdown">## Knowledge Application Review
+- **Which past insights proved most valuable?**
+- **What anti-patterns did I successfully avoid?**
+- **Which experimental approaches worked/didn't work?**
+- **What new insights should be added to Resources?**
+- **How can the Knowledge Map process be improved?**
+</code></pre>
+<h2 id="strongquick-start-guidestrong">🎯 <strong>Quick Start Guide</strong></h2>
+<h3 id="for-your-next-project">For Your Next Project:</h3>
+<ol>
+<li>
+<p><strong>Before project kickoff</strong> (20 minutes):</p>
+<ul>
+<li>Create knowledge map using template</li>
+<li>Ask Claude to suggest relevant notes from your Resources</li>
+<li>Link 5-7 most relevant existing notes</li>
+<li>Identify 1-2 knowledge gaps</li>
+</ul>
+</li>
+<li>
+<p><strong>During project execution</strong>:</p>
+<ul>
+<li>Reference knowledge map when facing challenges</li>
+<li>Add notes when applying past insights successfully</li>
+<li>Document when experimental approaches work/fail</li>
+</ul>
+</li>
+<li>
+<p><strong>Project completion</strong>:</p>
+<ul>
+<li>Update <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> with knowledge application results</li>
+<li>Add new insights to relevant Resource notes</li>
+<li>Update anti-patterns based on new learnings</li>
+</ul>
+</li>
+</ol>
+<h2 id="strongsuccess-metricsstrong">📊 <strong>Success Metrics</strong></h2>
+<p><strong>Week 1</strong>: First knowledge map created for new project<br>
+<strong>Week 2</strong>: Successfully applied 2+ past insights during project work<br>
+<strong>Week 4</strong>: Knowledge map process refined and integrated into standard workflow</p>
+<h2 id="strongintegration-pointsstrong">🔧 <strong>Integration Points</strong></h2>
+<h3 id="with-weekly-planning">With Weekly Planning</h3>
+<ul>
+<li>Schedule 20-minute knowledge map creation for new projects</li>
+<li>Block time for knowledge gap research when identified</li>
+</ul>
+<h3 id="with-weekly-review">With Weekly Review</h3>
+<ul>
+<li>Check: &quot;Did I create knowledge maps for new projects this week?&quot;</li>
+<li>Review: &quot;How did past insights help with current work?&quot;</li>
+</ul>
+<h3 id="with-existing-workflows">With Existing Workflows</h3>
+<ul>
+<li>Links to your current <a href="#" class="pending-link">🔥 Project planning</a> process</li>
+<li>Enhances existing <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> routine</li>
+<li>Builds on established <a href="/notes/01 - 🤖 Second brain/Routines/Knowledge Retrieval/">Knowledge Retrieval</a> practices</li>
+</ul>
+<h2 id="strongclaude-prompts-for-implementationstrong">💡 <strong>Claude Prompts for Implementation</strong></h2>
+<h3 id="for-knowledge-map-creation">For Knowledge Map Creation:</h3>
+<pre><code>Claude, I'm starting a new [project type] project with these characteristics: [brief description]. 
+
+Please help me create a knowledge map by:
+1. Scanning my Resources folder for relevant methodologies
+2. Identifying past project reflections that might apply
+3. Suggesting tools/templates from my knowledge base
+4. Highlighting potential anti-patterns to avoid
+
+Focus on actionable insights I can immediately apply.
+</code></pre>
+<h3 id="for-gap-identification">For Gap Identification:</h3>
+<pre><code>Claude, based on this project knowledge map, what knowledge gaps do you see? What should I research or learn before/during this project to increase success probability?
+</code></pre>
+<h2 id="strongnext-stepsstrong">🚀 <strong>Next Steps</strong></h2>
+<ol>
+<li><strong>This week</strong>: Create knowledge map template in Templates folder</li>
+<li><strong>Next project</strong>: Apply process and gather feedback</li>
+<li><strong>After 2 projects</strong>: Refine template based on experience</li>
+<li><strong>Month 1 complete</strong>: Move to <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 2 - Learning Loops/">PKM Improvement 2 - Learning Loops</a></li>
+</ol>
+<h2 id="strongrelated-improvementsstrong">🔗 <strong>Related Improvements</strong></h2>
+<ul>
+<li><strong>Builds toward</strong>: <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 2 - Learning Loops/">PKM Improvement 2 - Learning Loops</a> (enhanced project reflections)</li>
+<li><strong>Synergizes with</strong>: <a href="/notes/01 - 🤖 Second brain/Routines/Knowledge Retrieval/">Knowledge Retrieval</a> (existing Claude prompts)</li>
+<li><strong>Enhances</strong>: <a href="#" class="pending-link">🔥 Project planning</a> (current project workflow)</li>
+</ul>
+<h2 id="strongimplementation-notesstrong">📝 <strong>Implementation Notes</strong></h2>
+<p><em>[Add your experience notes here as you implement]</em></p>
+<ul>
+<li><strong>What worked well</strong>:</li>
+<li><strong>What needs adjustment</strong>:</li>
+<li><strong>Unexpected benefits</strong>:</li>
+<li><strong>Time required in practice</strong>:</li>
+</ul>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="readme">README</h1>
+
+    <h1 id="second-brain-scripts">Second Brain Scripts</h1>
+<p>This folder contains automation scripts for maintaining and validating the second brain system.</p>
+<h2 id="script-reuse-policy">🔄 Script Reuse Policy</h2>
+<ul>
+<li><strong>Always check this folder first</strong> before creating new scripts for similar operations</li>
+<li>Extend existing scripts rather than duplicating functionality</li>
+<li>Document new scripts and their usage in this README</li>
+<li>Update <a href="http://CHANGELOG.md">CHANGELOG.md</a> when adding or modifying scripts</li>
+</ul>
+<h2 id="available-scripts">📜 Available Scripts</h2>
+<h3 id="codevalidate_notespycode"><code>validate_notes.py</code></h3>
+<p><strong>Purpose</strong>: Validates note integrity and identifies issues in the knowledge base</p>
+<p><strong>Usage</strong>:</p>
+<pre><code class="language-bash">cd scripts/
+python validate_notes.py &quot;../../..&quot; [options]
+</code></pre>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--check-summaries</code>: Also check for missing AI-assisted summaries</li>
+</ul>
+<p><strong>What it checks</strong>:</p>
+<ul>
+<li>✅ Broken links in &quot;Related notes&quot; sections</li>
+<li>✅ Links to forbidden directories (RAW, To process)</li>
+<li>✅ Non-existent note references</li>
+<li>✅ Notes missing AI summaries (when &gt;1500 chars)</li>
+</ul>
+<p><strong>Output</strong>:</p>
+<ul>
+<li>Lists invalid links with file locations and error types</li>
+<li>Reports notes needing AI summaries with character counts</li>
+<li>Summary statistics of validation results</li>
+</ul>
+<p><strong>When to use</strong>:</p>
+<ul>
+<li>Before processing inbox notes</li>
+<li>After processing to verify quality</li>
+<li>Weekly maintenance checks</li>
+<li>When troubleshooting link issues</li>
+</ul>
+<hr>
+<h2 id="adding-new-scripts">🆕 Adding New Scripts</h2>
+<p>When creating new scripts:</p>
+<ol>
+<li><strong>Check for existing solutions</strong> in this folder first</li>
+<li><strong>Follow naming convention</strong>: <code>action_target.py</code> (e.g., <code>cleanup_dump.py</code>)</li>
+<li><strong>Include docstring</strong> with purpose and usage</li>
+<li><strong>Update this README</strong> with script documentation</li>
+<li><strong>Log changes</strong> in <a href="http://CHANGELOG.md">CHANGELOG.md</a></li>
+<li><strong>Make scripts reusable</strong> with command-line arguments when applicable</li>
+</ol>
+<h3 id="script-template">Script Template:</h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;
+Script Name - Brief Description
+Longer description of what the script does and when to use it.
+&quot;&quot;&quot;
+
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description='Script description')
+    parser.add_argument('notes_dir', help='Path to notes directory')
+    # Add other arguments as needed
+    
+    args = parser.parse_args()
+    
+    # Script logic here
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<h2 id="maintenance-schedule">🧹 Maintenance Schedule</h2>
+<p><strong>Weekly</strong>:</p>
+<ul>
+<li>Run <code>validate_notes.py --check-summaries</code></li>
+<li>Review <a href="http://CHANGELOG.md">CHANGELOG.md</a> for recent changes</li>
+</ul>
+<p><strong>Monthly</strong>:</p>
+<ul>
+<li>Audit scripts for optimization opportunities</li>
+<li>Clean up old/unused scripts</li>
+<li>Update documentation</li>
+</ul>
+
+
+    
+</body>
+
+</html>

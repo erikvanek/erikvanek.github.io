@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="cx-metrics">CX Metrics</h1>
+
+    <h1 id="metriky-pro-cx-a-design-slueb">Metriky pro CX a design služeb</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>Customer experience and service design metrics are essential for measuring design effectiveness, though some attitudinal metrics like NPS can be problematic due to oversimplification and cultural interpretation differences. The main categories include attitudinal metrics (NPS, CSAT, CES) that measure overall experience, and product metrics that track specific user behaviors and business outcomes.</p>
+<p>The document covers frameworks like North Star metrics, OKR/KPI systems, and the AARRR framework for comprehensive measurement approaches. It also includes specific techniques for measuring price sensitivity through Van Westendorp and Gabor-Granger methods, emphasizing the importance of combining multiple measurement approaches rather than relying on single metrics to understand complex customer experiences.</p>
+<hr>
+<h2 id="postojov-metriky-pro-men-celkovho-zitku">Postojové metriky pro měření celkového zážitku</h2>
+<ul>
+<li>jsou do jisté míry problematické kvůli přílišnému zjednodušování a možné dezinterpretovatelnosti – např. NPS jako jedno číslo schovává spoustu komplexity, která ovlivňuje zákaznickou zkušenost, navíc třeba nereflektuje kulturní rozdíly mezi prostředími</li>
+</ul>
+<h3 id="nps-net-promoter-score">NPS: Net Promoter Score</h3>
+<ul>
+<li><strong>Co měří</strong>: Loajalitu zákazníka a jeho ochotu doporučit službu</li>
+<li><strong>Jak se měří</strong>: Zákazník odpovídá na otázku &quot;Jak pravděpodobné je, že byste doporučil(a) naši službu přátelům či kolegům?&quot; na škále 0-10</li>
+<li><strong>Vyhodnocení</strong>:
+<ul>
+<li>Promotéři (9-10): Velmi spokojení a loajální zákazníci</li>
+<li>Pasivní (7-8): Spokojení, ale s rezervou</li>
+<li>Detraktoři (0-6): Nespokojení zákazníci</li>
+</ul>
+</li>
+<li><strong>Výpočet</strong>: NPS = % Promotérů - % Detraktorů</li>
+<li><strong>Výhody</strong>: Poskytuje strategický pohled na dlouhodobou loajalitu</li>
+<li><strong>Kritika</strong>:
+<ul>
+<li>Přílišné zjednodušení složitosti zákaznické zkušenosti</li>
+<li>Metodologické problémy a kulturní rozdíly v interpretaci</li>
+<li>Nejasná prediktivní hodnota pro obchodní výsledky</li>
+<li>Riziko zaměření na číslo místo na konkrétní akce</li>
+</ul>
+</li>
+</ul>
+<h3 id="csat-customer-satisfaction-score">CSAT: Customer Satisfaction Score</h3>
+<ul>
+<li><strong>Co měří</strong>: Přímou spokojenost zákazníka s konkrétní interakcí nebo službou</li>
+<li><strong>Jak se měří</strong>: Hodnocení spokojenosti na jednoduché škále (1-5 nebo 1-7)</li>
+<li><strong>Výhody</strong>: Rychlý a přímý způsob získání zpětné vazby</li>
+<li><strong>Omezení</strong>: Ovlivněno momentální náladou a aktuální zkušeností</li>
+</ul>
+<h3 id="ces-customer-effort-score">CES: Customer Effort Score</h3>
+<ul>
+<li><strong>Co měří</strong>: Míru úsilí, které zákazník musí vynaložit, aby dosáhl požadovaného výsledku</li>
+<li><strong>Jak se měří</strong>: Otázka typu &quot;Jak snadno jste dokázali vyřešit svůj problém?&quot;</li>
+<li><strong>Výhody</strong>: Pomáhá identifikovat překážky a neintuitivní místa v zákaznické cestě</li>
+<li><strong>Omezení</strong>: Měří jen jeden aspekt zkušenosti - úsilí</li>
+</ul>
+<h2 id="porovnn-postojovch-metrik">Porovnání postojových metrik</h2>
+<table>
+<thead>
+<tr>
+<th>Škála</th>
+<th>Zaměření</th>
+<th>Použití</th>
+<th>Interpretace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPS</td>
+<td>Dlouhodobá loajalita a ochota doporučit</td>
+<td>Strategické rozhodování, sledování růstu značky</td>
+<td>Souhrnný obraz o celkové spokojenosti, méně detailní</td>
+</tr>
+<tr>
+<td>CSAT</td>
+<td>Okamžitá spokojenost s konkrétní interakcí</td>
+<td>Rychlá zpětná vazba, vyhodnocení kampaní</td>
+<td>Přímé hodnocení aktuální zkušenosti</td>
+</tr>
+<tr>
+<td>CES</td>
+<td>Míra úsilí zákazníka pro dosažení cíle</td>
+<td>Identifikace překážek a optimalizace</td>
+<td>Zaměřuje se na procesní nedostatky</td>
+</tr>
+</tbody>
+</table>
+<h2 id="produktov-metriky">Produktové metriky</h2>
+<h3 id="north-star-metrika">North Star metrika</h3>
+<ul>
+<li>Jeden klíčový indikátor reflektující hlavní hodnotu produktu pro zákazníky</li>
+<li>Vyjadřuje hlavní dlouhodobý cíl firmy</li>
+<li>Měří, jak dobře produkt naplňuje potřeby a přináší hodnotu</li>
+<li>Příklad: Pro streamingovou službu může být North Star metrikou počet hodin sledování</li>
+</ul>
+<h3 id="okr-objectives-key-results">OKR (Objectives - Key Results)</h3>
+<ul>
+<li>Framework pro stanovování ambiciózních cílů (Objectives) a měřitelných výsledků (Key Results)</li>
+<li>Klade důraz na <strong>kvalitativní, inspirativní, cíle</strong> podpořené konkrétními kvalitativními výsledky, které lze vyjádřit metrikami</li>
+<li>Používá se typicky v kvartálních cyklech</li>
+<li>Slouží k nastavení směru, prioritizaci úsilí a podpoře růstu</li>
+</ul>
+<h3 id="kpi-key-performance-indicators">KPI (Key Performance Indicators)</h3>
+<ul>
+<li>Konkrétní měřítka pro operativní monitoring výkonnosti</li>
+<li>Zaměření na kontinuální sledování klíčových ukazatelů
+<ul>
+<li>např. míra konverze, průměrný příjem na uživatele, ...</li>
+</ul>
+</li>
+<li><strong>Všechny KPI jsou metrikami, ale ne všechny metriky jsou KPI</strong></li>
+</ul>
+<h2 id="pirateaarrr-framework">Pirate/AARRR framework</h2>
+<p>Rámec používaný v startupovém prostředí k měření a optimalizaci zákaznické cesty:</p>
+<ul>
+<li><strong>Acquisition</strong> (Získání): Jak se uživatelé dostávají k produktu</li>
+<li><strong>Activation</strong> (Aktivace): První zkušenost uživatele s produktem, &quot;wow&quot; moment</li>
+<li><strong>Retention</strong> (Udržení): Jak se daří udržet uživatele aktivní a angažované</li>
+<li><strong>Revenue</strong> (Příjem): Jak produkt generuje příjmy</li>
+<li><strong>Referral</strong> (Doporučení): Jak uživatelé doporučují produkt dalším potenciálním zákazníkům</li>
+</ul>
+<h2 id="konkrtn-produktov-metriky">Konkrétní produktové metriky</h2>
+<h3 id="konverzn-pomr">Konverzní poměr</h3>
+<ul>
+<li>Podíl návštěvníků, kteří vykonají žádoucí akci</li>
+<li>Výpočet: (počet konverzí / celkový počet návštěvníků) × 100
+<ul>
+<li>dá výsledek v %</li>
+</ul>
+</li>
+<li>Příklad: Pokud web navštíví 1000 lidí a 50 provede nákup, konverzní poměr je 5 %</li>
+</ul>
+<h3 id="retence">Retence</h3>
+<ul>
+<li>Procento zákazníků, kteří se po určitém časovém období vracejí</li>
+<li>Výpočet: (počet aktivních uživatelů na konci období / počet na začátku) × 100 %</li>
+<li>Příklad: Pokud získáte 1000 nových uživatelů a po měsíci se vrátí 600, retence je 60 %</li>
+</ul>
+<h3 id="mra-odchodu-churn">Míra odchodu (Churn)</h3>
+<ul>
+<li>Procento zákazníků, kteří během určitého období přestanou používat produkt</li>
+<li>Výpočet: (počet odchozích zákazníků / počáteční počet zákazníků) × 100 %</li>
+<li>Příklad: Pokud máte 100 zákazníků a 10 odejde, míra odchodu je 10 %</li>
+</ul>
+<h2 id="ovovn-cenov-citlivosti">Ověřování cenové citlivosti</h2>
+<h3 id="van-westendorpova-metoda-price-sensitivity-meter">Van Westendorpova metoda (Price Sensitivity Meter)</h3>
+<ul>
+<li>Vychází z předpokladu, že zákazníci mají představy o příliš nízké a příliš vysoké ceně</li>
+<li>Respondenti odpovídají na čtyři otázky:
+<ol>
+<li>&quot;Za jakou cenu je produkt tak drahý, že byste ho nekoupili?&quot;</li>
+<li>&quot;Za jakou cenu je produkt drahý, ale ještě byste o něm uvažovali?&quot;</li>
+<li>&quot;Za jakou cenu je produkt levný a atraktivní?&quot;</li>
+<li>&quot;Za jakou cenu je produkt tak levný, že to vzbuzuje podezření na nízkou kvalitu?&quot;</li>
+</ol>
+</li>
+<li>Pro každou otázku se vytvoří kumulativní frekvenční křivka</li>
+<li>Výhody: Jednoduchost, nízké náklady, přímá zpětná vazba</li>
+<li>Omezení: Rozdíl mezi deklarovaným a skutečným chováním, citlivost na formulaci otázek</li>
+</ul>
+<h3 id="gabor-grangerova-metoda">Gabor-Grangerova metoda</h3>
+<ul>
+<li>Kvantitativní technika pro určení optimální ceny maximalizující tržby</li>
+<li>Postup:
+<ol>
+<li>Stanovení cenového rozsahu s několika body</li>
+<li>Dotazování respondentů na pravděpodobnost nákupu při každé ceně</li>
+<li>Vytvoření křivky poptávky</li>
+<li>Určení cenového bodu s nejvyšším očekávaným příjmem</li>
+</ol>
+</li>
+<li>Výhody: Jednoduchost, přímá interpretace, efektivita, nízké náklady</li>
+<li>Omezení: Závislost na deklarovaných preferencích, citlivost na formulaci otázek</li>
+</ul>
+<h3 id="men-elasticity-poptvky">Měření elasticity poptávky</h3>
+<ul>
+<li>Analýza reálných dat o vlivu změny ceny na poptávku</li>
+<li>Metody:
+<ul>
+<li>Analýza existujících prodejních dat</li>
+<li>A/B testování s různými cenovými úrovněmi</li>
+</ul>
+</li>
+</ul>
+<h2 id="souvisejc-poznmky">Související poznámky</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Courses/DESB42_Designove_experimenty/">DESB42: Designové experimenty</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/UX_Metriky/">UX Metriky</a></li>
+<li><a href="#" class="pending-link">UX a zákaznická zkušenost</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Metodika designových experimentů</a></li>
+<li><a href="#" class="pending-link">Měření obchodní hodnoty</a></li>
+<li><a href="#" class="pending-link">Product Discovery</a></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research/">Design research</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery/Usability testing/">Usability testing</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Business/Value Based Management/">Value Based Management</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation/">Innovation</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.surveymonkey.com/curiosity/net-promoter-scores-nps-across-the-world/" target="_blank" rel="noopener noreferrer">https://www.surveymonkey.com/curiosity/net-promoter-scores-nps-across-the-world/</a></li>
+            
+            <li><a href="https://www.nngroup.com/articles/nps-ux/" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/articles/nps-ux/</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>
