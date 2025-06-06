@@ -195,9 +195,7 @@
     <h1 id="inbox-processing">Inbox processing</h1>
 
     <h1 id="02-inbox">02 - 📩 Inbox</h1>
-<ul>
-<li>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos</li>
-</ul>
+<p>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos, classes.</p>
 <h2 id="special-processing-for-random-notes">Special Processing for 'Random' Notes</h2>
 <ul>
 <li>'Random' notes contain weekly collections of bullet points from different sources</li>
@@ -302,28 +300,66 @@
 <li>Take a look at what is in a given note and assign 5 tags to it based on <a href="/notes/01 - 🤖 Second brain/Routines/Tagging/">Tagging</a> process</li>
 <li>Use appropriate templates from <a href="#" class="pending-link">Note Template</a> for structured processing</li>
 </ul>
-<h2 id="related-nodes">Related nodes</h2>
+<h2 id="strong-related-notes-validation-criticalstrong"><strong>🔗 Related Notes Validation (CRITICAL)</strong></h2>
+<p>Find 5 related nodes in my existing knowledge base <strong>ONLY</strong> from these specific folders:</p>
 <ul>
-<li>Find 5 related nodes in my existing knowledge base (only in folders <code>10 - 🧠 Knowledge</code>) that this nugget is related to, create a section <code>Related notes</code> at the end of the file and link those related notes as bullet points
-<ul>
-<li>If you don't find enough related notes in those two subfolders, it's fine</li>
+<li><code>10 - 🧠 Knowledge/1 - 🚀 Projects</code></li>
+<li><code>10 - 🧠 Knowledge/2 - 🌱 Areas</code></li>
+<li><code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
 </ul>
-</li>
-</ul>
-<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p><strong>VALIDATION REQUIREMENTS:</strong></p>
+<ol>
+<li><strong>Verify existence</strong>: Before adding any link to &quot;Related notes&quot;, you MUST confirm the linked note actually exists in one of the above folders</li>
+<li><strong>No RAW links in Related notes</strong>: NEVER link to files in <code>04 - 💽 RAW</code> folder in &quot;Related notes&quot; section</li>
+<li><strong>No processing links in Related notes</strong>: NEVER link to files in <code>99 - 📄 To process</code> folder in &quot;Related notes&quot; section</li>
+<li><strong>No made-up links</strong>: NEVER create links to notes that don't exist</li>
+<li><strong>Search first</strong>: Use the knowledge base search to find actual existing notes before creating links</li>
+<li><strong>Quality over quantity</strong>: It's better to have 2-3 real, relevant links than 5 links with some being fictional</li>
+<li><strong>RAW references OK in content</strong>: It's perfectly fine to reference RAW or other folders within note content, just not in &quot;Related notes&quot; section</li>
+</ol>
+<p><strong>Link Format</strong>: Create a section <code>Related notes</code> at the end of the file and link exactly 5 related notes as bullet points:</p>
+<pre><code class="language-markdown">## Related notes
+- <a href="#" class="pending-link">Actual Note Title</a>
+- <a href="#" class="pending-link">Another Real Note</a>
+- <a href="#" class="pending-link">Third Existing Note</a>
+- <a href="#" class="pending-link">Fourth Real Note</a>
+- <a href="#" class="pending-link">Fifth Existing Note</a>
+</code></pre>
+<p>If you cannot find enough related notes in the valid folders, search more broadly or use loosely related concepts rather than creating fake links.</p>
+<h2 id="strong-ai-assisted-summary-logic-updatedstrong"><strong>📏 AI-assisted Summary Logic (Updated)</strong></h2>
+<h3 id="for-new-notes">For NEW notes:</h3>
 <ul>
-<li><strong>!important</strong> include summary only for notes longer than 1500 characters
+<li><strong>Include summary only for notes longer than 1500 characters</strong>
 <ul>
-<li>if a note is longer than that create a section on top called <code>AI-assisted summary</code> with a concise summary of the main ideas
-<ul>
+<li>If a note is longer than that, create a section on top called <code>AI-assisted summary</code> with a concise summary of the main ideas</li>
 <li>Structure this summary into at least two paragraphs for better readability</li>
 <li>First paragraph should cover the core concept/main idea</li>
 <li>Second paragraph should expand on application, implications, or specific details</li>
 <li>Aim for 5-7 sentences length max, it should be like 8 lines of text at most</li>
-<li>then add horizontal line</li>
+<li>Then add horizontal line</li>
 </ul>
 </li>
-<li>if a note is shorter, ignore this</li>
+<li>If a note is shorter, ignore this</li>
+</ul>
+<h3 id="strongfor-updatedexpanded-notes-new-requirementstrong"><strong>For UPDATED/EXPANDED notes (NEW REQUIREMENT):</strong></h3>
+<ul>
+<li><strong>After adding content to an existing note</strong>, check the total character count of the final note</li>
+<li><strong>If the updated note now exceeds 1500 characters AND doesn't already have an AI-assisted summary:</strong>
+<ul>
+<li>Generate a new <code>AI-assisted summary</code> section at the top of the note</li>
+<li>Follow the same formatting and length guidelines as for new notes</li>
+<li>The summary should cover the entire note content (original + newly added)</li>
+</ul>
+</li>
+<li><strong>If the note already has an AI-assisted summary and new content was added:</strong>
+<ul>
+<li>Update the existing summary to reflect the expanded content</li>
+<li>Maintain the same format and length constraints</li>
+</ul>
+</li>
+<li><strong>If the updated note is still under 1500 characters:</strong>
+<ul>
+<li>Do not add an AI-assisted summary</li>
 </ul>
 </li>
 </ul>
@@ -334,7 +370,7 @@
 <h2 id="storage">Storage</h2>
 <ul>
 <li>Inbox serves as the entrypoint to new knowledge</li>
-<li><strong>important workflow clarification</strong> - Content type determines destination folder:
+<li><strong>Important workflow clarification</strong> - Content type determines destination folder:
 <ol>
 <li><strong>RAW materials</strong> (book notes, interview transcripts, article summaries, attended lectures):
 <ul>
@@ -360,33 +396,35 @@
 <li>Never reorganize the internal structure of notes</li>
 <li>Never change writing style or terminology</li>
 <li>Never &quot;improve&quot; note content with AI-generated material</li>
+<li><strong>Never create fictional links in &quot;Related notes&quot; sections</strong></li>
+<li><strong>Never link to RAW or &quot;To process&quot; folders in &quot;Related notes&quot;</strong></li>
 </ul>
-<h1 id="typical-information-coming-in">Typical information coming in</h1>
+<h1 id="typical-information-coming-in">Typical Information Coming In</h1>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>it is &quot;passive&quot; knowledge that I gathered somewhere
+<li>It is &quot;passive&quot; knowledge that I gathered somewhere
 <ul>
-<li>notes from books, articles, podcasts, attended lectures, conferences or classes</li>
+<li>Notes from books, articles, podcasts, attended lectures, conferences or classes</li>
 </ul>
 </li>
 </ul>
-<h2 id="research-artifacts">Research artifacts</h2>
+<h2 id="research-artifacts">Research Artifacts</h2>
 <ul>
 <li>Interview and workshop debriefs notes, post-mortems and learning</li>
 <li>Research plans, scripts and reports</li>
 </ul>
-<h2 id="serendipity-moments">Serendipity moments</h2>
+<h2 id="serendipity-moments">Serendipity Moments</h2>
 <ul>
 <li>&quot;A-ha moments&quot; in shower, toilet, while biking etc</li>
 <li>These are going to be pretty small</li>
 </ul>
-<h2 id="design-artefacts">Design artefacts</h2>
+<h2 id="design-artifacts">Design Artifacts</h2>
 <ul>
-<li>prototypes, test results, boundary objects and results when doing some further research with them</li>
+<li>Prototypes, test results, boundary objects and results when doing some further research with them</li>
 </ul>
 <h2 id="reflections">Reflections</h2>
 <ul>
-<li>weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables</li>
+<li>Weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables</li>
 </ul>
 
 

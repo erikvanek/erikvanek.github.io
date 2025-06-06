@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="opportunity-solution-tree">Opportunity solution tree</h1>
+
+    <h1 id="opportunity-solution-tree">Opportunity solution tree</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>The opportunity solution tree is a technique from Teresa Torres' book &quot;Continuous Discovery Habits&quot; that provides a structured framework for product discovery. It consists of four hierarchical layers: desired outcomes (business or product outcomes), opportunities (unmet customer needs, pain points, or desires), solutions (products, services, or features), and experiments (assumption testing methods).</p>
+<p>The framework helps teams systematically explore customer problems and validate solutions through a structured approach. The key principle for validating opportunities is asking whether there are multiple ways to address each opportunity, ensuring they represent genuine customer needs rather than disguised solutions.</p>
+<hr>
+<ul>
+<li>A technique described in a book <strong>Continuous discovery habits</strong></li>
+<li>Consists of <strong>layers</strong>
+<ol>
+<li><strong>Desired outcome</strong>
+<ul>
+<li>What we want to achieve</li>
+<li>Business outcomes measure the health of the business and are typically financial metrics like grow revenue, increase market share, or reduce churn</li>
+<li>Product outcomes typically measure a customer behavior in the product or a customer sentiment about the product.</li>
+</ul>
+</li>
+<li><strong>Opportunity</strong>
+<ul>
+<li>Opportunity is an unmet customer need, pain point, or desire</li>
+<li>Opportunities expose gaps in the market where we can immediately create value for our customers</li>
+<li>Opportunities include needs, pain points, and desires</li>
+</ul>
+</li>
+<li><strong>Solution</strong>
+<ul>
+<li>A solution is a product, a service, or a feature that we offer to address an opportunity. The opportunity represents the underlying need, pain point, or desire.</li>
+<li>E.g. for opportunity <em>- I'm hungry.</em> we have solutions:
+<ul>
+<li>Order takeout</li>
+<li>Go out to eat at a local restaurant</li>
+<li>Subscribe to a meal prep service</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Experiments/">Experiments</a></strong>
+<ul>
+<li>The best way to evaluate solutions is through <a href="https://www.producttalk.org/2023/10/assumption-testing/">assumption testing</a>. When we test the assumptions that our ideas depend upon, we collect the compare and contrast data we need to make a better decision.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="principles">Principles</h1>
+<ul>
+<li>The best way to test if an opportunity is really a solution in disguise is to ask, <em>'Is there more than one way to address this opportunity'</em>?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Experiments/">Experiments</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research/">Design research</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation/">Innovation</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Hypothesis/">Hypothesis</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309?dchild=1&amp;sr=8-2&amp;linkId=34bc439ac78da06e1398f7bf069b219e&amp;language=en_US" target="_blank" rel="noopener noreferrer">https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309?dchild=1&amp;sr=8-2&amp;linkId=34bc439ac78da06e1398f7bf069b219e&amp;language=en_US</a></li>
+            
+            <li><a href="https://www.producttalk.org/2023/10/assumption-testing/" target="_blank" rel="noopener noreferrer">https://www.producttalk.org/2023/10/assumption-testing/</a></li>
+            
+            <li><a href="https://www.producttalk.org/2023/12/opportunity-solution-trees/#what-type-of-outcome-should-be-at-the-top-of-an-opportunity-solution-tree" target="_blank" rel="noopener noreferrer">https://www.producttalk.org/2023/12/opportunity-solution-trees/#what-type-of-outcome-should-be-at-the-top-of-an-opportunity-solution-tree</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

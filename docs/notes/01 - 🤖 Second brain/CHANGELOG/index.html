@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="changelog">CHANGELOG</h1>
+
+    <h1 id="second-brain-changelog">Second Brain Changelog</h1>
+<p>All notable changes to the note processing system will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
+<hr>
+<h2 id="2025-06-01-pkm-enhancement-initiative">[2025-06-01] - PKM Enhancement Initiative</h2>
+<h3 id="added">✨ Added</h3>
+<ul>
+<li><strong>PKM Improvements Backlog</strong>: Systematic improvement plan based on best practices research</li>
+<li><strong>Three Implementation Guides</strong>: Detailed step-by-step improvements for design practice</li>
+<li><strong>Project Knowledge Maps</strong>: Pre-project routine linking past insights to current challenges</li>
+<li><strong>Learning Loops Enhancement</strong>: System to convert project insights into professional growth</li>
+<li><strong>Discovery Triggers System</strong>: Structured serendipity for cross-domain innovation</li>
+</ul>
+<h3 id="changed">📝 Changed</h3>
+<ul>
+<li><strong>Weekly Review Integration</strong>: Added PKM improvement progress tracking</li>
+<li><strong>Weekly Planning Integration</strong>: Added time blocks for improvement implementation</li>
+<li><strong>Project Workflow Enhancement</strong>: Integration points with existing project planning</li>
+</ul>
+<h3 id="technical-details">🛠️ Technical Details</h3>
+<h4 id="implementation-strategy">Implementation Strategy</h4>
+<ul>
+<li><strong>Phase 1 (Weeks 1-4)</strong>: Project Knowledge Maps - immediate impact, low effort</li>
+<li><strong>Phase 2 (Weeks 5-8)</strong>: Learning Loops - medium effort, long-term growth</li>
+<li><strong>Phase 3 (Weeks 9-12)</strong>: Discovery Triggers - experimental, creativity enhancement</li>
+</ul>
+<h4 id="integration-points">Integration Points</h4>
+<ul>
+<li><strong>Builds on</strong>: Existing <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> and project planning workflows</li>
+<li><strong>Enhances</strong>: <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review/">Weekly review</a>, <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning/">Weekly planning</a>, <a href="/notes/01 - 🤖 Second brain/Routines/Newsletter Digest Agent/">Newsletter Digest Agent</a></li>
+<li><strong>Creates</strong>: New knowledge-to-action bridges for design practice</li>
+</ul>
+<h4 id="success-metrics">Success Metrics</h4>
+<ul>
+<li><strong>Short-term</strong>: Faster project startup, systematic insight capture</li>
+<li><strong>Medium-term</strong>: Improved project quality, regular thought leadership content</li>
+<li><strong>Long-term</strong>: Industry recognition, client attraction through expertise</li>
+</ul>
+<h3 id="usage">🚀 Usage</h3>
+<h4 id="quick-start">Quick Start</h4>
+<pre><code>Start with <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 1 - Project Knowledge Maps/">PKM Improvement 1 - Project Knowledge Maps</a>
+→ Create template in Templates folder
+→ Apply to next new project
+→ Refine based on experience
+</code></pre>
+<h4 id="progress-tracking">Progress Tracking</h4>
+<ul>
+<li>Monthly: Review <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvements Backlog/">PKM Improvements Backlog</a> progress</li>
+<li>Quarterly: Evaluate overall impact and plan next improvements</li>
+<li>Semi-annually: Conduct full PKM system assessment</li>
+</ul>
+<h2 id="2025-06-01-note-processing-system-overhaul">[2025-06-01] - Note Processing System Overhaul</h2>
+<h3 id="fixed">🔧 Fixed</h3>
+<ul>
+<li><strong>Invalid &quot;Related Notes&quot; Links</strong>: System was generating links to non-existent notes or forbidden folders</li>
+<li><strong>Missing AI Summaries</strong>: Updated notes exceeding 1500 characters weren't getting AI-assisted reviews</li>
+</ul>
+<h3 id="added">✨ Added</h3>
+<ul>
+<li><strong>Link Validation System</strong>: Strict verification that &quot;Related notes&quot; only link to existing files in valid knowledge folders</li>
+<li><strong>AI Summary Auto-Generation</strong>: Automatic summary creation/updates when notes exceed character threshold</li>
+<li><strong>Validation Script</strong>: <code>scripts/validate_notes.py</code> for checking note integrity</li>
+<li><strong>Scripts Folder</strong>: Centralized location for reusable automation scripts</li>
+</ul>
+<h3 id="changed">📝 Changed</h3>
+<ul>
+<li><strong>Inbox Processing Rules</strong>: Updated <code>Routines/Inbox processing.md</code> with new validation requirements</li>
+<li><strong>Core Processes</strong>: Added critical rules to <code>Processes.md</code> for link validation and AI summaries</li>
+<li><strong>Link Creation Policy</strong>: Quality over quantity - fewer real links preferred over fictional ones</li>
+</ul>
+<h3 id="removed">🚫 Removed</h3>
+<ul>
+<li><strong>Forbidden Link Targets in &quot;Related notes&quot; section</strong>:
+<ul>
+<li>Links to <code>04 - 💽 RAW</code> folder in &quot;Related notes&quot;</li>
+<li>Links to <code>99 - 📄 To process</code> folder in &quot;Related notes&quot;</li>
+<li>Made-up/fictional note references</li>
+</ul>
+</li>
+</ul>
+<h3 id="strongcorrections-processing-mistakes-fixedstrong">🔧 <strong>CORRECTIONS - Processing Mistakes Fixed</strong></h3>
+<h4 id="issues-identified">Issues Identified:</h4>
+<ol>
+<li><strong>Over-restrictive RAW linking</strong>: Incorrectly removed ALL RAW references, should only restrict &quot;Related notes&quot; section</li>
+<li><strong>Insufficient connections</strong>: Created notes with fewer than 5 related notes</li>
+</ol>
+<h4 id="fixes-applied">Fixes Applied:</h4>
+<ul>
+<li><strong>RAW References Policy</strong>:
+<ul>
+<li>❌ <strong>WRONG</strong>: No RAW links anywhere in notes</li>
+<li>✅ <strong>CORRECT</strong>: RAW links OK in note content, just not in &quot;Related notes&quot; section</li>
+</ul>
+</li>
+<li><strong>Related Notes Requirement</strong>:
+<ul>
+<li>❌ <strong>WRONG</strong>: &quot;Quality over quantity&quot; - allowing fewer than 5 links</li>
+<li>✅ <strong>CORRECT</strong>: Must always include exactly 5 related notes</li>
+</ul>
+</li>
+</ul>
+<h3 id="technical-details">🛠️ Technical Details</h3>
+<h4 id="link-validation-rules">Link Validation Rules</h4>
+<ul>
+<li>✅ <strong>MUST</strong> verify note existence before linking</li>
+<li>✅ <strong>ONLY</strong> link to <code>10 - 🧠 Knowledge</code> subfolders in &quot;Related notes&quot;:
+<ul>
+<li><code>1 - 🚀 Projects</code></li>
+<li><code>2 - 🌱 Areas</code></li>
+<li><code>3 - 📚 Resources</code></li>
+</ul>
+</li>
+<li>✅ <strong>RAW references allowed</strong> in note content (just not &quot;Related notes&quot;)</li>
+<li>✅ <strong>Always exactly 5 connections</strong> in &quot;Related notes&quot; section</li>
+<li>❌ <strong>NEVER</strong> create fictional links</li>
+</ul>
+<h4 id="ai-summary-logic">AI Summary Logic</h4>
+<ul>
+<li><strong>New Notes</strong>: Generate summary if &gt;1500 characters</li>
+<li><strong>Updated Notes</strong>:
+<ul>
+<li>Generate summary if updated note &gt;1500 chars AND no existing summary</li>
+<li>Update existing summary if content added to note with summary</li>
+<li>Same formatting: 2 paragraphs, 5-7 sentences max</li>
+</ul>
+</li>
+</ul>
+<h3 id="usage">🚀 Usage</h3>
+<h4 id="run-validation-script">Run Validation Script</h4>
+<pre><code class="language-bash">cd &quot;01 - 🤖 Second brain/scripts&quot;
+python validate_notes.py &quot;../../..&quot; --check-summaries
+</code></pre>
+<h4 id="validation-output">Validation Output</h4>
+<ul>
+<li><strong>Link Issues</strong>: Broken links, forbidden directories, non-existent references</li>
+<li><strong>Missing Summaries</strong>: Notes &gt;1500 chars without AI summaries</li>
+<li><strong>Character Counts</strong>: Detailed reporting for review candidates</li>
+</ul>
+<hr>
+<h2 id="future-changelog-format">Future Changelog Format</h2>
+<h3 id="categories-to-use">Categories to Use:</h3>
+<ul>
+<li><strong>✨ Added</strong> - New features</li>
+<li><strong>📝 Changed</strong> - Changes in existing functionality</li>
+<li><strong>🔧 Fixed</strong> - Bug fixes</li>
+<li><strong>🚫 Removed</strong> - Removed features</li>
+<li><strong>🛠️ Technical</strong> - Behind-the-scenes improvements</li>
+<li><strong>📚 Documentation</strong> - Documentation changes</li>
+</ul>
+<h3 id="script-reuse-policy">Script Reuse Policy:</h3>
+<ul>
+<li>All automation scripts stored in <code>scripts/</code> folder</li>
+<li>Reuse existing scripts for similar operations before creating new ones</li>
+<li>Document script usage in changelog entries</li>
+</ul>
+
+
+    
+</body>
+
+</html>

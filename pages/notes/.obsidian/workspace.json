@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6eb75aea9f7b4d40",
+        "id": "a8d65fcf1ccb4192",
         "type": "tabs",
         "children": [
           {
-            "id": "a052982e4be0bca1",
+            "id": "3f7e677a30d890be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
+                "file": "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Reflection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Weekly planning"
+              "title": "Reflection"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "motivation",
+                "query": "bias lis",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -169,44 +169,47 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a052982e4be0bca1",
+  "active": "3f7e677a30d890be",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Daily shutdown.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Reflection.md",
+    "99 - 📄 To process/Problem statements.md",
+    "99 - 📄 To process/design/Design checklist.md",
+    "99 - 📄 To process/design/random.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/FKB 25/FKB 25.md",
+    "02 - 📩 Inbox/World cafe.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Index.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Concept.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Untitled.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Principy.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Scénář stanovišť.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Minutový scénář.md",
+    "99 - 📄 To process/Design crit.md",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Inovační týmy státní správy/Inovační týmy státní správy.md",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Inovační týmy státní správy/Content.md",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Inovační týmy státní správy",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/Index.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/roman-foto.jpeg",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19.html",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/style.993986389aebcd8ed129.css",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/muniweb.bb1d162bd66f215c8ff7.js",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/matomo.js",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/main.js",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/js(1)",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/js",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/gtm.js",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/erik.png",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/analytics.js",
+    "02 - 📩 Inbox/Sense-making.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Upstrix/Personas.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Product Strategy.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Business/Value Based Management.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation.md",
-    "99 - 📄 To process/Themes/Outcome_Driven_Product_Strategy.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
-    "03 - 🗑️ Dump/2025-06-01/Random-original.md",
-    "03 - 🗑️ Dump/2025-06-01/Quality-original.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Business/Quality.md",
-    "02 - 📩 Inbox/Random.md",
-    "02 - 📩 Inbox/Quality.md",
-    "01 - 🤖 Second brain/scripts/README.md",
-    "03 - 🗑️ Dump/2025-06-01/UPDATE_NOTES-original.md",
-    "03 - 🗑️ Dump/2025-06-01",
-    "01 - 🤖 Second brain/CHANGELOG.md",
-    "01 - 🤖 Second brain/scripts/validate_notes.py",
-    "01 - 🤖 Second brain/scripts",
-    "01 - 🤖 Second brain/UPDATE_NOTES.md",
-    "01 - 🤖 Second brain/validate_notes.py",
-    "99 - 📄 To process/design/AI.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Daily shutdown.md",
-    "04 - 💽 RAW/2025/04/06/JTBD.md",
-    "04 - 💽 RAW/2025/04/06/Opposing forces of customer demand.md",
-    "01 - 🤖 Second brain/README.md",
-    "01 - 🤖 Second brain/Routines/Inbox processing.md",
-    "World Cafe Facilitation.md",
-    "01 - 🤖 Second brain/Index.md",
-    "06-System",
-    "03 - 🗑️ Dump/2025-05-22",
-    "04 - 💽 RAW/2025/05/22",
-    "04 - 💽 RAW/2025/05",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Psychology",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Technology",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
@@ -215,7 +218,6 @@
     "99 - 📄 To process/JTBD/Pasted image 20241225134148.png",
     "99 - 📄 To process/Pasted image 20250105121803.png",
     "ranomcanvas.canvas",
-    "img/20230622_171524.jpg",
     "Untitled.canvas"
   ]
 }

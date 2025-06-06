@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="pkm-improvements-backlog">PKM Improvements Backlog</h1>
+
+    <h1 id="pkm-improvements-backlog">PKM Improvements Backlog</h1>
+<p>Based on deep research and analysis of current second brain practices, this backlog contains concrete improvements to enhance knowledge utilization for design work.</p>
+<h2 id="strongimplementation-strategystrong">🎯 <strong>Implementation Strategy</strong></h2>
+<p><strong>Phase 1</strong> (Weeks 1-4): Project Knowledge Maps<br>
+<strong>Phase 2</strong> (Weeks 5-8): Learning Loops<br>
+<strong>Phase 3</strong> (Weeks 9-12): Discovery Triggers</p>
+<h2 id="strongimprovement-queuestrong">📋 <strong>Improvement Queue</strong></h2>
+<h3 id="strongready-to-implementstrong">🚀 <strong>Ready to Implement</strong></h3>
+<h4 id="1-project-knowledge-maps">1. Project Knowledge Maps</h4>
+<ul>
+<li><strong>Status</strong>: Ready</li>
+<li><strong>Priority</strong>: High (immediate impact)</li>
+<li><strong>Effort</strong>: Low (builds on existing workflow)</li>
+<li><strong>Implementation Guide</strong>: <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 1 - Project Knowledge Maps/">PKM Improvement 1 - Project Knowledge Maps</a></li>
+<li><strong>Next Action</strong>: Schedule 30min setup session in weekly planning</li>
+<li><strong>Success Metric</strong>: Knowledge map created for next new project</li>
+</ul>
+<h3 id="strongplannedstrong">📅 <strong>Planned</strong></h3>
+<h4 id="2-learning-loops-enhancement">2. Learning Loops Enhancement</h4>
+<ul>
+<li><strong>Status</strong>: Planned for Week 5</li>
+<li><strong>Priority</strong>: Medium (long-term growth)</li>
+<li><strong>Effort</strong>: Medium (requires routine changes)</li>
+<li><strong>Implementation Guide</strong>: <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 2 - Learning Loops/">PKM Improvement 2 - Learning Loops</a></li>
+<li><strong>Dependency</strong>: Complete Phase 1 first</li>
+<li><strong>Next Action</strong>: Review after 4 weeks of Project Knowledge Maps</li>
+</ul>
+<h4 id="3-discovery-triggers-system">3. Discovery Triggers System</h4>
+<ul>
+<li><strong>Status</strong>: Planned for Week 9</li>
+<li><strong>Priority</strong>: Medium (experimental)</li>
+<li><strong>Effort</strong>: Medium (new habits required)</li>
+<li><strong>Implementation Guide</strong>: <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 3 - Discovery Triggers/">PKM Improvement 3 - Discovery Triggers</a></li>
+<li><strong>Dependency</strong>: Established routines from Phases 1-2</li>
+<li><strong>Next Action</strong>: Experiment design after Phase 2 completion</li>
+</ul>
+<h2 id="strongintegration-with-existing-routinesstrong">🔄 <strong>Integration with Existing Routines</strong></h2>
+<h3 id="weekly-review-integration">Weekly Review Integration</h3>
+<p>Add to your <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review/">Weekly review</a> routine:</p>
+<ul>
+<li><strong>Week 1-4</strong>: &quot;Did I create a knowledge map for any new projects this week?&quot;</li>
+<li><strong>Week 5-8</strong>: &quot;What insights from this week's work should feed back into my knowledge base?&quot;</li>
+<li><strong>Week 9+</strong>: &quot;What unexpected connections did I discover this week?&quot;</li>
+</ul>
+<h3 id="weekly-planning-integration">Weekly Planning Integration</h3>
+<p>Add to your <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning/">Weekly planning</a> routine:</p>
+<ul>
+<li>Check this backlog for current phase requirements</li>
+<li>Schedule time blocks for implementation activities</li>
+<li>Review progress on success metrics</li>
+</ul>
+<h2 id="strongprogress-trackingstrong">📊 <strong>Progress Tracking</strong></h2>
+<h3 id="phase-1-project-knowledge-maps">Phase 1: Project Knowledge Maps</h3>
+<ul>
+<li>[ ] Setup initial template and process</li>
+<li>[ ] Create knowledge map for first project</li>
+<li>[ ] Refine process based on initial experience</li>
+<li>[ ] Document lessons learned</li>
+<li>[ ] Integrate into standard project workflow</li>
+</ul>
+<h3 id="phase-2-learning-loops">Phase 2: Learning Loops</h3>
+<ul>
+<li>[ ] Enhance <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> template</li>
+<li>[ ] Complete first enhanced project reflection</li>
+<li>[ ] Conduct first &quot;Knowledge-to-Content&quot; session</li>
+<li>[ ] Establish monthly routine</li>
+<li>[ ] Create first piece of thought leadership content</li>
+</ul>
+<h3 id="phase-3-discovery-triggers">Phase 3: Discovery Triggers</h3>
+<ul>
+<li>[ ] Design weekly &quot;Knowledge Archaeology&quot; routine</li>
+<li>[ ] Create first set of &quot;Thinking Triggers&quot; notes</li>
+<li>[ ] Implement &quot;Random Walk Wednesdays&quot;</li>
+<li>[ ] Enhance Newsletter Digest with connection-making</li>
+<li>[ ] Evaluate effectiveness after 30 days</li>
+</ul>
+<h2 id="strongsuccess-indicatorsstrong">🎯 <strong>Success Indicators</strong></h2>
+<p><strong>Short-term</strong> (1 month):</p>
+<ul>
+<li>Faster project startup through knowledge reuse</li>
+<li>More systematic capture of project insights</li>
+</ul>
+<p><strong>Medium-term</strong> (3 months):</p>
+<ul>
+<li>Visible improvement in project quality due to applied past learning</li>
+<li>Regular creation of industry-relevant content from work insights</li>
+</ul>
+<p><strong>Long-term</strong> (6 months):</p>
+<ul>
+<li>Recognized thought leadership in design community</li>
+<li>Client attraction through demonstrated expertise</li>
+<li>Faster problem-solving through pattern recognition</li>
+</ul>
+<h2 id="strongmaintenance-schedulestrong">🔧 <strong>Maintenance Schedule</strong></h2>
+<p><strong>Monthly</strong>: Review progress and adjust implementation approach<br>
+<strong>Quarterly</strong>: Evaluate overall impact and plan next improvements<br>
+<strong>Semi-annually</strong>: Conduct full PKM system assessment</p>
+<h2 id="strongrelated-notesstrong">📚 <strong>Related Notes</strong></h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a> - Current project reflection template</li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly review/">Weekly review</a> - Integration point for progress tracking</li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning/">Weekly planning</a> - Implementation scheduling</li>
+<li><a href="/notes/11 - ⏳ interim knowledge/Productivity/Second Brain/">Second brain</a> - Core system principles</li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Knowledge Rebalancing/">Knowledge Rebalancing</a> - Complementary improvement process</li>
+</ul>
+<h2 id="strongquick-startstrong">🚀 <strong>Quick Start</strong></h2>
+<p><strong>Ready to begin?</strong> Start with <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 1 - Project Knowledge Maps/">PKM Improvement 1 - Project Knowledge Maps</a> - it requires minimal setup and provides immediate benefits to your next project.</p>
+
+
+    
+</body>
+
+</html>
