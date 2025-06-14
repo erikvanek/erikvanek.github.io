@@ -40,7 +40,7 @@ p {
 
 li,
 p {
-    line-height: 1.75rem;
+    line-height: 2rem;
     max-width: 55ch;
 }
 
@@ -165,6 +165,7 @@ li {
 
 h1 {
     margin: 1.5rem;
+    text-align: left;
 }
 
 h2,
@@ -216,6 +217,7 @@ figcaption {
 ul {
     width: 100%;
     margin-left: 8rem;
+    margin-top: 0;
 }
 
 
