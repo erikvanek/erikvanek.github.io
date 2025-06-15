@@ -11,15 +11,33 @@ permalink: /{{page.fileSlug}}/
     #wrapper {
     align-items: baseline;   
     }
+
+    .narrow img{
+        max-width: 600px;
+    }
 </style>
 
 V jarním semestru 2024 jsme s týmem dokončovali **výzkum inovativních týmů ve státní správě** – projekt, který byl páteří mého 2. semestru na KISKu. Koncem 2024 jsme ho finalizovali a začátkem letošního roku [digitálně publikovali](https://www.inovacnitymystatnispravy.cz/){target="_blank"}. Bylo to hotový, uložený v šuplíku, a já jsem se těšil na to, že si konečně trochu oddechnu. Zároveň jsme s Drýmtýmem přemýšleli jak bychom na něj mohli nějak navázat když už jsme tomu věnovali tolik úsilí.
+
+
+{% assign path = '../dis-kisk/img/tajemnicky-workshop/sense-making.jpg' %}
+{% assign title = 'Spoiler alert: Uspořádali jsme naprosto výbornej workshop ❤️' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
 
 A pak se stala jedna z těch věcí, které prostě nenaplánujete. Někdo potkal někoho, náš výzkum se dostal do rukou **nejvyššího tajemníka pro státní službu Jindřicha Fryče**. Tj. člověka, který prakticky řídí celou českou státní správu. A místo aby si to jen přečetl a založil, dostali jsme pozvánku na osobní schůzku.
 
 # Vytvoř si svou příležitost!
 
 Následovala schůzka, během které jsme se bavili o tom, co jsme zjistili. Zároveň nám i panu nejvyššímu dávalo smysl na výzkum navázat a praktickou formou s ním seznámit lidi, se kterými pracuje. **Navrhli jsme tedy možnost uspořádat workshop** na základě obsahu našeho výzkumu.
+
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7287950756219928578" 
+        height="600" width="800" frameborder="0" allowfullscreen="" 
+        title="Embedded post"></iframe>
+<figcaption><em>LinkedIn příspěvek o naší schůzce s panem nejvyšším</em></figcaption>
+
+<br>
+
 
 Pana nejvyššího nápad zaujal a rychle jsme se dohodli, že v květnu uspořádáme workshop pro **tajemnictvo ministerstev a jejich vybrané +1**. Což je vlastně v něčem naprosto ideální scénář protože i z našeho výzkumu vyplývá, že **pro změny ve veřejné sféře je potřeby podpora shora**. A my budeme mít skvělou příležitost mít jeden den pod jednou střechou zástupce vedení většiny českých ministerstev.
 
@@ -48,13 +66,27 @@ Druhá polovina workshopu se zaměřila na **"malé kroky"** – aby si každý 
 
 5.5.2025 (dobře se to datum pamatuje) byl náš den D. Hotel Spiritka, místnost bývalé konírny, sál plný státních tajemníků a tajemnic, **pan nejvyšší aktivně participuje celé tři hodiny**, atmosféra přátelská ale soustředěná. 
 
+{% assign path = '../dis-kisk/img/tajemnicky-workshop/plna-konirna.jpg' %}
+{% assign title = 'Plný sál v prostorách bývalé konírny na hotelu Spiritka' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
+
 Co mě nejvíce překvapilo? **Jak přirozeně spolu lidé z různých ministerstev začali aktivně spolupracovat.** Vyměňovali si kontakty, objevovali společné výzvy, inspirovali se navzájem. Někdo sdílel úspěšný nábor přes netradiční kanály, jiný popisoval fungující mentoring program.
 
 Ve druhé části, když si každý vybíral svůj "malý krok", jsem sledoval, jak se rodí konkrétní nápady: společná databáze kontaktů napříč ministerstvy, pravidelné neformální snídaně inovátorů, pilotní program výměnných stáží mezi rezorty. Nebo třeba "hodina týdně na vzdělávání" pro každého člena týmu, lepší checklisty pro manažery při onboardingu nováčků, či společné meziresortní akce jako "den zdraví" nebo "úředníci úředníkům".
 
+
+{% assign path = '../dis-kisk/img/tajemnicky-workshop/mala-vec.jpg' %}
+{% assign title = 'Práce na návrhu malých krůčků pro inovaci na jednotlivých ministerstvech' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
+
 # Co jsem si odnesl
 
 Největší zjištění pro mě? **Mezirerzortní spolupráce je nejen možná, ale když se jí věnuje dostatečná příprava a kvalitní facilitace, může přinést velice zajímavé nápady a atmosféru, kterou ocení i poměrně významní lidi.** Design skutečně může sloužit jako silný nástroj pro spojování lidí napříč rezorty.
+
+
+{% assign path = '../dis-kisk/img/tajemnicky-workshop/baru-mastery.jpg' %}
+{% assign title = 'Baru a její post-it mastery při průběžném zpracovávání výsledků' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
 
 Z moderátorské perspektivy to pro nás bylo **důležité, aby všechno klapalo podle připraveného plánu**. Moje role byla zajistit, že všechno funguje na čas, že účastnictvo chápe co se bude dít, že jsou spokojení a že všechno šlape jak má. Nejen kvůli váze účastníků, ale hlavně kvůli komplexitě orchestrace celého procesu.
 
@@ -81,3 +113,10 @@ Možná vám to může být inspirací pro vlastní facilitaci v náročnější
 Dlouhodobě tvrdím, že největší inovativnost přichází v interdisciplinárních týmech a prostředích. Tenhle workshop mi to poměrně zásadně potvrdil. A jsem rád, že i naše designerské techniky v prostředí, kde třeba nejsou tolik běžné, velice dobře zafungovaly.
 
 A za to dík!🔥
+
+
+{% assign path = '../dis-kisk/img/tajemnicky-workshop/diky.jpeg' %}
+{% assign title = 'A díky všem, co jsou tady na tý fotce za to, že jsme v tom s námi byli.' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
+
+_Díky Franto, Johanko, Veru, Anežko, Baru a Petře!_
