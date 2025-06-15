@@ -106,6 +106,7 @@ Rád výsledky práce, které dělám ve spolupráci s veřejným sektorem, ší
 🎯 [Koncept workshopu](https://docs.google.com/document/d/1Hvg-xxvK_nFVv2hk2WkwJ8yyLVXgVxQaUdOrqzzEeDE/edit?usp=sharing){target="_blank"} – základní myšlenka a cíle
 ⏱️ [Minutový scénář](https://docs.google.com/document/d/1xrHnw5n2vXEZcZSt-rMNVJxx_7xMhJZC9c6QQfXl8zc/edit?usp=sharing){target="_blank"} – detailní časový plán celého dne
 🗣️ **Scénář pro jednotlivé stoly** – [zde](https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing){target="_blank"}, [zde](https://docs.google.com/document/d/1xKdlXI8tEMG_SQe2VEYm95kyivZKLGG3h-y059-4k80/edit?usp=sharing){target="_blank"} a [zde](https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing){target="_blank"} – co přesně říkat u každého tématu
+🖥️ [Prezentace](/inovacni-tymy/) použitá v průběhu workshopu
 📊 [Výsledky workshopu](https://docs.google.com/document/d/1-TWI5ju9izoN9jLtTHwWItePwHXsvX8_wz6NaZiiYbw/edit?usp=sharing){target="_blank"} – konkrétní nápady a návrhy účastníků
 
 Možná vám to může být inspirací pro vlastní facilitaci v náročnějších prostředích.
