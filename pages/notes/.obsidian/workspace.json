@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "11898b1c5d20b88f",
+        "id": "307ac7735bbda089",
         "type": "tabs",
         "children": [
           {
-            "id": "9ad69f637d3adf37",
+            "id": "b3c2362319cdb214",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Team Effectiveness"
+              "title": "New tab"
             }
           }
         ]
@@ -169,14 +165,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9ad69f637d3adf37",
+  "active": "b3c2362319cdb214",
   "lastOpenFiles": [
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Feedback.md",
+    "01 - 🤖 Second brain/Routines/Clean URL System.md",
+    "01 - 🤖 Second brain/scripts/url_manager.py",
+    "04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Feedback.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Communication.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Team/Company Culture.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Leadership Principles.md",
-    "04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Data.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Danmuji.md",
@@ -198,7 +196,6 @@
     "03 - 🗑️ Dump/2025-06-29/Quotes-original.md",
     "03 - 🗑️ Dump/2025-06-29/Product-vision-original.md",
     "03 - 🗑️ Dump/2025-06-29/Goal-original.md",
-    "03 - 🗑️ Dump/2025-06-29/Design-principles-original.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Personal Development",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Product",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Methods",
@@ -206,7 +203,6 @@
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Tools",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/sovia-I.html",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/FG1-Vysocina-Prezentace.html",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Zpráva z empatické fáze_Mam rozsudek a co dal.pdf",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/roman-foto.jpeg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/erik.png",

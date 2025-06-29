@@ -192,73 +192,151 @@
         </div>
     
 
-    <h1 id="book-notes-knowledge-extraction">Book Notes Knowledge Extraction</h1>
-<h2 id="purpose">Purpose</h2>
-<p>Extract valuable knowledge nuggets from processed book notes and integrate them into the knowledge base, creating connections between raw materials and existing knowledge structures.</p>
-<h2 id="process">Process</h2>
-<h3 id="1-nugget-identification">1. Nugget Identification</h3>
+    <h1 id="book-processing-workflow">📖 Book Processing Workflow</h1>
+<p>Complete end-to-end workflow for processing handwritten book notes from A5 pages to fully integrated knowledge base entries.</p>
+<h2 id="stronginput-formatstrong"><strong>Input Format:</strong></h2>
 <ul>
-<li>Extract 2-3 high-value insights from each book note</li>
-<li>Prioritize principles and concepts over specific examples</li>
-<li>Look for insights that:
+<li>A5 pages with handwritten bullet points</li>
+<li>Pages numbered with Roman numerals (I, II, III...) in top corner</li>
+<li>First page contains book title as first bullet point</li>
+<li>Photos provided page by page</li>
+</ul>
+<h2 id="strongprocessing-stepsstrong"><strong>Processing Steps:</strong></h2>
+<h3 id="strong1-transcription-phasestrong"><strong>1. Transcription Phase</strong></h3>
 <ul>
-<li>Challenge conventional thinking</li>
-<li>Provide frameworks for understanding</li>
-<li>Offer actionable mental models</li>
-<li>Complement existing knowledge</li>
+<li>Transcribe handwritten text from each page photo to digital text</li>
+<li><strong>Preserve hierarchical indentation structure</strong> - if bullet points are indented under other points, maintain that relationship using proper markdown indentation</li>
+<li><strong>Preserve emphasis formatting</strong>:
+<ul>
+<li>If text is underlined in handwriting, use <em>emphasized text</em> in markdown</li>
+<li>If line starts with an exclamation mark (!), <strong>bold the entire line</strong></li>
 </ul>
 </li>
+<li>Compile all pages into single continuous note (no page breaks in final RAW file)</li>
+<li>Keep all content verbatim (following core principle of no expansions/embellishments)</li>
 </ul>
-<h3 id="2-knowledge-integration">2. Knowledge Integration</h3>
+<h3 id="strong2-raw-file-creationstrong"><strong>2. RAW File Creation</strong></h3>
 <ul>
-<li>Identify existing knowledge nodes that could be enhanced by the nuggets</li>
-<li>Never modify RAW notes - treat them as read-only source material</li>
-<li>When adding to existing notes:
+<li><strong>Storage Location</strong>: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md</code>
 <ul>
-<li>Integrate nuggets naturally into the text flow</li>
-<li>Reference the source directly using wiki links: <code>as noted in <a href="#" class="pending-link">Book Title</a></code></li>
-<li>Avoid creating separate heading sections labeled by source</li>
-<li>Restructure content if needed for better flow and coherence</li>
+<li><strong>File naming</strong>: Use clean book title without suffixes like &quot;_Notes&quot; or volume numbers like &quot;_I&quot;</li>
+<li>Example: &quot;How_to_Speak_Machine.md&quot; not &quot;How_to_Speak_Machine_I_Notes.md&quot;</li>
 </ul>
 </li>
-</ul>
-<h3 id="3-new-knowledge-creation">3. New Knowledge Creation</h3>
-<ul>
-<li>Create new knowledge notes when a concept deserves dedicated exploration</li>
-<li>Place new notes in appropriate locations within Knowledge folder structure (usually <code>10 - 🧠 Knowledge/3 - 📚 Resources/[Category]</code>)</li>
-<li>Structure new knowledge notes with:
-<ul>
-<li>Clear title and appropriate tags</li>
-<li>Concise definition/explanation of the concept</li>
-<li>Key principles drawn from source material</li>
-<li>Application guidelines where relevant</li>
-<li>Related concepts section prioritizing links to Knowledge folder notes</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-connection-building">4. Connection Building</h3>
-<ul>
-<li>Ensure bidirectional linking between:
-<ul>
-<li>Raw book notes and enhanced knowledge notes</li>
-<li>New knowledge notes and related existing concepts</li>
-<li>Between complementary concepts across the knowledge base</li>
-</ul>
-</li>
-<li>Prioritize connections to notes in Knowledge folder over To-process or RAW folders</li>
-</ul>
-<h2 id="example">Example</h2>
-<pre><code>// Original text in Design.md
-- Design is about making trade-offs
-
-// Enhanced with book nugget
-- Design is about making trade-offs, and as McDonough argues in <a href="#" class="pending-link">Cradle to Cradle</a>, &quot;being less bad =/= being good&quot; - reducing harm is not the same as creating positive impact
+<li><strong>Generate Clean URL</strong>:<pre><code class="language-bash"># Generate slug and add to registry
+cd &quot;01 - 🤖 Second brain/scripts/&quot;
+python url_manager.py add \
+  --title &quot;[Book Title] - Reading Notes&quot; \
+  --file &quot;04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md&quot; \
+  --category &quot;book&quot;
 </code></pre>
+</li>
+<li><strong>Structure</strong>:<pre><code class="language-markdown">---
+title: &quot;[Book Title] - Reading Notes&quot;
+date: YYYY-MM-DD
+tags: [book-notes, reading, [relevant-tags]]
+source: &quot;[Book Title by Author]&quot;
+type: raw-material
+layout: note.njk
+slug: &quot;generated-slug&quot;
+permalink: &quot;//&quot;
+url_category: &quot;book&quot;
+---
+
+# [Book Title] - Reading Notes
+
+## AI-assisted Summary
+[Brief 2-paragraph summary of main themes and insights]
+
+---
+
+[All transcribed bullet points compiled together]
+
+## Related notes
+[Links to enriched/created knowledge nodes]
+</code></pre>
+</li>
+</ul>
+<h3 id="strong3-summary-creationstrong"><strong>3. Summary Creation</strong></h3>
+<ul>
+<li><strong>Always create AI-assisted summary</strong> for book notes (regardless of character count - exception to normal rule)</li>
+<li>Follow existing format: 2 paragraphs, 5-7 sentences max</li>
+<li>First paragraph: Core themes/main ideas from the book</li>
+<li>Second paragraph: Key applications/implications/specific insights</li>
+</ul>
+<h3 id="strong4-insight-distillation-amp-knowledge-enrichmentstrong"><strong>4. Insight Distillation &amp; Knowledge Enrichment</strong></h3>
+<ul>
+<li><strong>Identify 3-5 most insightful concepts</strong> from the book notes</li>
+<li><strong>Search existing knowledge base</strong> in <code>10 - 🧠 Knowledge/2 - 🌱 Areas</code> and <code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
+<li><strong>Extract inspirational quotes</strong>: If notes contain quotes attributed to specific people, add them to <code>10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Inspirational Quotes.md</code></li>
+<li><strong>For each key insight</strong>:
+<ul>
+<li>Find the most relevant existing knowledge node</li>
+<li>If perfect match exists: Append insight to existing node (preserving exact wording)</li>
+<li>If no match: Create new knowledge nugget in appropriate subfolder</li>
+<li>Add reference back to the RAW book notes</li>
+<li>Update related notes connections bidirectionally</li>
+</ul>
+</li>
+</ul>
+<h3 id="strong5-enhanced-linkingstrong"><strong>5. Enhanced Linking</strong></h3>
+<ul>
+<li><strong>In RAW book notes</strong>: Add &quot;Related notes&quot; section linking to any enriched/created knowledge nodes</li>
+<li><strong>In enriched knowledge nodes</strong>: Add back-reference to the book notes in RAW folder</li>
+<li><strong>Use clean link format</strong>: Use simple note names <code><a href="#" class="pending-link">Note Name</a></code> rather than full paths <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/...</a></code>
+<ul>
+<li>Good: <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP/">MVP</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness/">Team Effectiveness</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation/">Innovation</a></code></li>
+<li>Bad: <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP</a></code></li>
+</ul>
+</li>
+<li><strong>Follow existing validation rules</strong>: Verify all links exist before adding</li>
+</ul>
+<h3 id="strong6-cleanup-amp-validationstrong"><strong>6. Cleanup &amp; Validation</strong></h3>
+<ul>
+<li>Move any intermediate processing files to <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
+<li>Keep final RAW book notes in RAW folder</li>
+<li>Keep enriched knowledge nodes in Knowledge folders</li>
+<li><strong>Run comprehensive validation</strong>:<pre><code class="language-bash">cd &quot;01 - 🤖 Second brain/scripts/&quot;
+
+# Validate note links and summaries
+python validate_notes.py &quot;../../..&quot; --check-summaries
+
+# Validate URL registry and clean URLs
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+</li>
+</ul>
+<h2 id="strongcore-principlesstrong"><strong>Core Principles</strong></h2>
+<ul>
+<li>Preserve original content exactly as written - no expansions or embellishments</li>
+<li>Maintain original hierarchical structure and emphasis formatting</li>
+<li>Always create AI-assisted summary for books (exception to normal character count rule)</li>
+<li>Use clean link format for proper HTML rendering</li>
+<li>Validate all links before completing process</li>
+<li>Focus on organization and connections, not content creation</li>
+</ul>
+<h2 id="strongquality-assurancestrong"><strong>Quality Assurance</strong></h2>
+<ul>
+<li><strong>Link Validation</strong>: All <code><a href="#" class="pending-link">links</a></code> must point to existing files in valid knowledge folders</li>
+<li><strong>Bidirectional Connections</strong>: Enriched knowledge nodes must link back to book notes</li>
+<li><strong>No Forbidden Links</strong>: Never link to RAW, &quot;To process&quot;, or Projects folders in &quot;Related notes&quot; sections</li>
+<li><strong>Formatting Consistency</strong>: Maintain emphasis markers, indentation, and structure from handwritten notes</li>
+</ul>
+<h2 id="strongintegration-with-existing-systemstrong"><strong>Integration with Existing System</strong></h2>
+<p>This workflow integrates with:</p>
+<ul>
+<li><strong>Inbox Processing</strong>: General processing rules and principles</li>
+<li><strong>Tagging</strong>: Uses established tagging system for book notes</li>
+<li><strong>Validation Scripts</strong>: Leverages <code>validate_notes.py</code> for quality control</li>
+<li><strong>Knowledge Rebalancing</strong>: Creates properly structured notes for future rebalancing</li>
+</ul>
 <h2 id="related-notes">Related notes</h2>
 <ul>
-<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Inbox processing</a></li>
-<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Chunking</a></li>
-<li><a href="#" class="pending-link">01 - 🤖 Second brain/Routines/Knowledge Rebalancing</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Inbox processing/">Inbox processing</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Tagging/">Tagging</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Knowledge Rebalancing/">Knowledge Rebalancing</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Chunking/">Chunking</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Clean URL System/">Clean URL System</a></li>
 </ul>
 
 

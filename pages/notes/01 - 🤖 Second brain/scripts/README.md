@@ -10,6 +10,34 @@ This folder contains automation scripts for maintaining and validating the secon
 
 ## 📜 Available Scripts
 
+### `url_manager.py`
+**Purpose**: Manages clean URL system, prevents collisions, validates URL registry
+
+**Usage**:
+```bash
+cd scripts/
+# Generate slug from title
+python url_manager.py generate --title "Your Note Title"
+
+# Add new URL to registry
+python url_manager.py add --title "Title" --file "path/to/file.md" --category "book"
+
+# Validate URL registry
+python url_manager.py validate --notes-dir "../../.."
+```
+
+**What it does**:
+- ✅ Generates clean URL slugs from note titles
+- ✅ Prevents URL collisions with automatic numbering
+- ✅ Maintains central URL registry
+- ✅ Validates file references and duplicates
+
+**When to use**:
+- During book note processing (automatic)
+- When adding clean URLs to existing notes
+- During URL system validation
+- When troubleshooting URL conflicts
+
 ### `validate_notes.py`
 **Purpose**: Validates note integrity and identifies issues in the knowledge base
 
@@ -79,6 +107,7 @@ if __name__ == "__main__":
 
 **Weekly**:
 - Run `validate_notes.py --check-summaries`
+- Run `url_manager.py validate`
 - Review CHANGELOG.md for recent changes
 
 **Monthly**:

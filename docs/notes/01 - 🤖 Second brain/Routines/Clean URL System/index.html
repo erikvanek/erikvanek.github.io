@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="clean-url-system-for-second-brain">Clean URL System for Second Brain</h1>
+<h2 id="overview">Overview</h2>
+<p>System for generating clean, SEO-friendly URLs that transform complex nested paths into simple, readable URLs.</p>
+<p><strong>Goal:</strong> <code>/notes/04%20-%20%F0%9F%92%BD%20RAW/2025/06/29/How_to_Speak_Machine/</code> → <code>/how-to-speak-machine/</code></p>
+<h2 id="url-generation-rules">URL Generation Rules</h2>
+<h3 id="slug-generation-algorithm">Slug Generation Algorithm</h3>
+<pre><code class="language-python">def generate_slug(title):
+    # Remove common suffixes
+    title = remove_suffix(title, ' - Reading Notes')
+    title = remove_parenthetical(title)  # (MVP) → ''
+    
+    # Convert to clean slug
+    slug = title.lower()
+    slug = remove_special_chars(slug)     # Remove emojis &amp; special chars
+    slug = replace_spaces_with_hyphens(slug)
+    slug = collapse_multiple_hyphens(slug)
+    slug = strip_leading_trailing_hyphens(slug)
+    
+    return slug
+</code></pre>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><code>&quot;How to Speak Machine - Reading Notes&quot;</code> → <code>&quot;how-to-speak-machine&quot;</code></li>
+<li><code>&quot;MVP (Minimum Viable Product)&quot;</code> → <code>&quot;mvp-minimum-viable-product&quot;</code></li>
+<li><code>&quot;Team Effectiveness&quot;</code> → <code>&quot;team-effectiveness&quot;</code></li>
+</ul>
+<h2 id="url-categories">URL Categories</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>URL Pattern</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Books</td>
+<td><code>/{slug}/</code></td>
+<td><code>/how-to-speak-machine/</code></td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td><code>/{slug}/</code></td>
+<td><code>/team-effectiveness/</code></td>
+</tr>
+<tr>
+<td>Areas</td>
+<td><code>/areas/{slug}/</code></td>
+<td><code>/areas/continuous-improvement/</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation">Implementation</h2>
+<h3 id="1-frontmatter-structure">1. Frontmatter Structure</h3>
+<pre><code class="language-yaml">---
+title: &quot;How to Speak Machine - Reading Notes&quot;
+slug: &quot;how-to-speak-machine&quot;
+permalink: &quot;//&quot;
+url_category: &quot;book&quot;
+layout: note.njk
+---
+</code></pre>
+<h3 id="2-url-registry-_dataurl-registryjson">2. URL Registry (_data/url-registry.json)</h3>
+<p>Central registry prevents URL collisions and tracks all clean URLs:</p>
+<pre><code class="language-json">{
+  &quot;urls&quot;: {
+    &quot;how-to-speak-machine&quot;: {
+      &quot;title&quot;: &quot;How to Speak Machine - Reading Notes&quot;,
+      &quot;file&quot;: &quot;04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md&quot;,
+      &quot;category&quot;: &quot;book&quot;,
+      &quot;created&quot;: &quot;2025-06-29&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="3-collision-handling">3. Collision Handling</h3>
+<p>When slug exists, automatically append increments:</p>
+<ul>
+<li><code>team-effectiveness</code> → <code>team-effectiveness-2</code> → <code>team-effectiveness-3</code></li>
+</ul>
+<h2 id="usage-in-processing-workflow">Usage in Processing Workflow</h2>
+<h3 id="book-notes-processing">Book Notes Processing</h3>
+<p>Add to Step 2 (RAW File Creation):</p>
+<pre><code class="language-bash"># 1. Generate slug from title
+python url_manager.py generate --title &quot;How to Speak Machine - Reading Notes&quot;
+
+# 2. Add to registry
+python url_manager.py add \
+  --title &quot;How to Speak Machine - Reading Notes&quot; \
+  --file &quot;04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md&quot; \
+  --category &quot;book&quot;
+
+# 3. Add to frontmatter
+slug: how-to-speak-machine
+permalink: &quot;//&quot;
+url_category: book
+</code></pre>
+<h3 id="knowledge-notes-processing">Knowledge Notes Processing</h3>
+<p>For existing knowledge notes:</p>
+<pre><code class="language-bash"># Generate slug for existing note
+python url_manager.py add \
+  --title &quot;Team Effectiveness&quot; \
+  --file &quot;10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness.md&quot; \
+  --category &quot;knowledge&quot;
+</code></pre>
+<h2 id="validation-amp-maintenance">Validation &amp; Maintenance</h2>
+<h3 id="registry-validation">Registry Validation</h3>
+<pre><code class="language-bash"># Check for collisions and broken file references
+cd &quot;01 - 🤖 Second brain/scripts/&quot;
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+<h3 id="integration-with-existing-validation">Integration with Existing Validation</h3>
+<p>Add to <code>validate_notes.py</code> workflow:</p>
+<pre><code class="language-bash"># Run both validations together
+python validate_notes.py &quot;../../..&quot; --check-summaries
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+<h2 id="benefits">Benefits</h2>
+<h3 id="seo-amp-user-experience">SEO &amp; User Experience</h3>
+<ul>
+<li>✅ Clean, readable URLs: <code>/how-to-speak-machine/</code></li>
+<li>✅ Better search engine indexing</li>
+<li>✅ Easy to share and remember</li>
+<li>✅ Professional appearance</li>
+</ul>
+<h3 id="technical-benefits">Technical Benefits</h3>
+<ul>
+<li>✅ No URL encoding issues</li>
+<li>✅ Consistent URL structure across all notes</li>
+<li>✅ Automatic collision prevention</li>
+<li>✅ Central registry for management</li>
+</ul>
+<h3 id="maintenance">Maintenance</h3>
+<ul>
+<li>✅ Automatic slug generation from titles</li>
+<li>✅ Registry tracks all URLs</li>
+<li>✅ Validation tools prevent issues</li>
+<li>✅ Backward compatible with existing system</li>
+</ul>
+<h2 id="migration-strategy">Migration Strategy</h2>
+<h3 id="phase-1-new-content-current">Phase 1: New Content (Current)</h3>
+<ul>
+<li>All new book notes get clean URLs automatically</li>
+<li>Existing notes continue with current URLs</li>
+</ul>
+<h3 id="phase-2-high-traffic-notes">Phase 2: High-Traffic Notes</h3>
+<ul>
+<li>Add clean URLs to frequently accessed knowledge notes</li>
+<li>Implement redirects for SEO preservation</li>
+</ul>
+<h3 id="phase-3-complete-migration">Phase 3: Complete Migration</h3>
+<ul>
+<li>Add clean URLs to all remaining notes</li>
+<li>Archive legacy URL structure</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Book Notes Extraction/">Book Notes Extraction</a> - Integration with book processing</li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Inbox processing/">Inbox processing</a> - General note processing workflows</li>
+<li><a href="#" class="pending-link">validate_notes.py</a> - Quality control and validation</li>
+</ul>
+<h2 id="scripts-reference">Scripts Reference</h2>
+<h3 id="url_managerpy-commands">url_manager.py Commands</h3>
+<pre><code class="language-bash"># Generate slug from title (no registry update)
+python url_manager.py generate --title &quot;Your Note Title&quot;
+
+# Add new URL to registry
+python url_manager.py add --title &quot;Title&quot; --file &quot;path/to/file.md&quot; --category &quot;book&quot;
+
+# Validate registry
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+<h3 id="integration-example">Integration Example</h3>
+<pre><code class="language-yaml"># Book note frontmatter template
+---
+title: &quot;[Book Title] - Reading Notes&quot;
+date: YYYY-MM-DD
+tags: [book-notes, reading, [relevant-tags]]
+source: &quot;[Book Title by Author]&quot;
+type: raw-material
+layout: note.njk
+slug: &quot;generated-slug&quot;
+permalink: &quot;//&quot;
+url_category: &quot;book&quot;
+---
+</code></pre>
+
+
+    
+</body>
+
+</html>
