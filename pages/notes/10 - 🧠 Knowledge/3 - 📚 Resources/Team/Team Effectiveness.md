@@ -32,9 +32,9 @@ These findings emphasize that successful teams focus on how members work togethe
 ---
 
 ## Related notes
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Leadership Principles]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Company Culture]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Communication]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Feedback]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research]]
+- [[Leadership Principles]]
+- [[Company Culture]]
+- [[Communication]]
+- [[Feedback]]
+- [[Design research]]
 - [[How_to_Speak_Machine]]

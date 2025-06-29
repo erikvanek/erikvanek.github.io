@@ -50,6 +50,7 @@ When asked to process second brain inbox, **focus specifically on content in the
   tags: [book-notes, reading, [relevant-tags]]
   source: "[Book Title by Author]"
   type: raw-material
+  layout: note.njk
   ---
   
   # [Book Title] - Reading Notes
@@ -86,12 +87,20 @@ When asked to process second brain inbox, **focus specifically on content in the
 #### **5. Enhanced Linking**
 - **In RAW book notes**: Add "Related notes" section linking to any enriched/created knowledge nodes
 - **In enriched knowledge nodes**: Add back-reference to the book notes in RAW folder
+- **Use clean link format**: Use simple note names `[[Note Name]]` rather than full paths `[[10 - 🧠 Knowledge/3 - 📚 Resources/...]]`
+  - Good: `[[MVP]]`, `[[Team Effectiveness]]`, `[[Innovation]]`
+  - Bad: `[[10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP]]`
 - **Follow existing validation rules**: Verify all links exist before adding
 
 #### **6. Cleanup**
 - Move any intermediate processing files to `03 - 🗑️ Dump/YYYY-MM-DD/`
 - Keep final RAW book notes in RAW folder
 - Keep enriched knowledge nodes in Knowledge folders
+- **Run validation**: Use `validate_notes.py --check-summaries` to verify all links are valid
+  ```bash
+  cd "01 - 🤖 Second brain/scripts/"
+  python validate_notes.py "../../.." --check-summaries
+  ```
 
 ## Core Principles
 * Preserve original content exactly as written - no expansions or embellishments
