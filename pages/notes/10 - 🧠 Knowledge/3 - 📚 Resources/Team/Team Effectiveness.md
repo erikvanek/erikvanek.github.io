@@ -18,6 +18,10 @@ tags:
 		- **Meaning:** Finding a sense of purpose in either the work itself or the output is important for team effectiveness.
 		- **Impact:** The results of one's work, [the subjective judgment that your work is making a difference, is important for teams](http://www.ncbi.nlm.nih.gov/pubmed/18211139)
 - community is close to company culture and it means **being alined on what we're working on, how we're getting there and what we're learning together**
+- shift from culture fit → culture add
+- diverse teams make better products
+- an imbalanced system will produce imbalanced outcomes
+- the boundaries of every Temple will nurture safe cultures of like-minded people
 
 ## AI-assisted summary
 
@@ -33,3 +37,4 @@ These findings emphasize that successful teams focus on how members work togethe
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Communication]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Feedback]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research]]
+- [[How_to_Speak_Machine]]

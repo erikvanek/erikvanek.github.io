@@ -192,10 +192,10 @@
         </div>
     
 
-    <h1 id="inbox-processing">Inbox processing</h1>
-
-    <h1 id="02-inbox">02 - 📩 Inbox</h1>
+    <h1 id="02-inbox-processing">02 - 📩 Inbox Processing</h1>
 <p>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos, classes.</p>
+<h2 id="strong-processing-scopestrong"><strong>📍 Processing Scope</strong></h2>
+<p>When asked to process second brain inbox, <strong>focus specifically on content in the <code>02 - 📩 Inbox</code> folder</strong>.</p>
 <h2 id="special-processing-for-random-notes">Special Processing for 'Random' Notes</h2>
 <ul>
 <li>'Random' notes contain weekly collections of bullet points from different sources</li>
@@ -216,6 +216,96 @@
 <li>When in doubt, favor enhancing existing nodes rather than creating highly overlapping new ones</li>
 </ul>
 </li>
+</ul>
+<h2 id="strong-book-processing-workflowstrong"><strong>📖 Book Processing Workflow</strong></h2>
+<h3 id="stronginput-formatstrong"><strong>Input Format:</strong></h3>
+<ul>
+<li>A5 pages with handwritten bullet points</li>
+<li>Pages numbered with Roman numerals (I, II, III...) in top corner</li>
+<li>First page contains book title as first bullet point</li>
+<li>Photos provided page by page</li>
+</ul>
+<h3 id="strongprocessing-stepsstrong"><strong>Processing Steps:</strong></h3>
+<h4 id="strong1-transcription-phasestrong"><strong>1. Transcription Phase</strong></h4>
+<ul>
+<li>Transcribe handwritten text from each page photo to digital text</li>
+<li><strong>Preserve hierarchical indentation structure</strong> - if bullet points are indented under other points, maintain that relationship using proper markdown indentation</li>
+<li><strong>Preserve emphasis formatting</strong>:
+<ul>
+<li>If text is underlined in handwriting, use <em>emphasized text</em> in markdown</li>
+<li>If line starts an exclamation mark (!), <strong>bold the entire line</strong></li>
+</ul>
+</li>
+<li>Compile all pages into single continuous note (no page breaks in final RAW file)</li>
+<li>Keep all content verbatim (following core principle of no expansions/embellishments)</li>
+</ul>
+<h4 id="strong2-raw-file-creationstrong"><strong>2. RAW File Creation</strong></h4>
+<ul>
+<li><strong>Storage Location</strong>: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md</code>
+<ul>
+<li><strong>File naming</strong>: Use clean book title without suffixes like &quot;_Notes&quot; or volume numbers like &quot;_I&quot;</li>
+<li>Example: &quot;How_to_Speak_Machine.md&quot; not &quot;How_to_Speak_Machine_I_Notes.md&quot;</li>
+</ul>
+</li>
+<li><strong>Structure</strong>:<pre><code class="language-markdown">---
+title: &quot;[Book Title] - Reading Notes&quot;
+date: YYYY-MM-DD
+tags: [book-notes, reading, [relevant-tags]]
+source: &quot;[Book Title by Author]&quot;
+type: raw-material
+---
+
+# [Book Title] - Reading Notes
+
+## AI-assisted Summary
+[Brief 2-paragraph summary of main themes and insights]
+
+## Raw notes
+
+[All transcribed bullet points compiled together]
+
+## Related notes
+[Links to enriched/created knowledge nodes]
+</code></pre>
+</li>
+</ul>
+<h4 id="strong3-summary-creationstrong"><strong>3. Summary Creation</strong></h4>
+<ul>
+<li><strong>Always create AI-assisted summary</strong> for book notes (regardless of character count - exception to normal rule)</li>
+<li>Follow existing format: 2 paragraphs, 5-7 sentences max</li>
+<li>First paragraph: Core themes/main ideas from the book</li>
+<li>Second paragraph: Key applications/implications/specific insights</li>
+</ul>
+<h4 id="strong4-insight-distillation-amp-knowledge-enrichmentstrong"><strong>4. Insight Distillation &amp; Knowledge Enrichment</strong></h4>
+<ul>
+<li><strong>Identify 3-5 most insightful concepts</strong> from the book notes
+<ul>
+<li>there's a high chance that some of those concepets will be those that are marked out with an asterisk in handwritten notes</li>
+</ul>
+</li>
+<li><strong>Search existing knowledge base</strong> in <code>10 - 🧠 Knowledge/2 - 🌱 Areas</code> and <code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
+<li><strong>Extract inspirational quotes</strong>: If notes contain quotes attributed to specific people, add them to <code>10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Inspirational Quotes.md</code></li>
+<li><strong>For each key insight</strong>:
+<ul>
+<li>Find the most relevant existing knowledge node</li>
+<li>If perfect match exists: Append insight to existing node (preserving exact wording)</li>
+<li>If no match: Create new knowledge nugget in appropriate subfolder</li>
+<li>Add reference back to the RAW book notes</li>
+<li>Update related notes connections bidirectionally</li>
+</ul>
+</li>
+</ul>
+<h4 id="strong5-enhanced-linkingstrong"><strong>5. Enhanced Linking</strong></h4>
+<ul>
+<li><strong>In RAW book notes</strong>: Add &quot;Related notes&quot; section linking to any enriched/created knowledge nodes</li>
+<li><strong>In enriched knowledge nodes</strong>: Add back-reference to the book notes in RAW folder</li>
+<li><strong>Follow existing validation rules</strong>: Verify all links exist before adding</li>
+</ul>
+<h4 id="strong6-cleanupstrong"><strong>6. Cleanup</strong></h4>
+<ul>
+<li>Move any intermediate processing files to <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
+<li>Keep final RAW book notes in RAW folder</li>
+<li>Keep enriched knowledge nodes in Knowledge folders</li>
 </ul>
 <h2 id="core-principles">Core Principles</h2>
 <ul>
@@ -245,6 +335,7 @@
 </li>
 <li><strong>Structure Minimally</strong>:
 <ul>
+<li><strong>REQUIRED: Place YAML frontmatter metadata at the very top of each file</strong></li>
 <li>Add only essential metadata (title, creation date, tags)</li>
 <li>Create simple linking structure to relevant notes</li>
 <li>Keep original formatting whenever possible</li>
@@ -303,13 +394,13 @@
 <h2 id="strong-related-notes-validation-criticalstrong"><strong>🔗 Related Notes Validation (CRITICAL)</strong></h2>
 <p>Find 5 related nodes in my existing knowledge base <strong>ONLY</strong> from these specific folders:</p>
 <ul>
-<li><code>10 - 🧠 Knowledge/1 - 🚀 Projects</code></li>
 <li><code>10 - 🧠 Knowledge/2 - 🌱 Areas</code></li>
 <li><code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
 </ul>
 <p><strong>VALIDATION REQUIREMENTS:</strong></p>
 <ol>
 <li><strong>Verify existence</strong>: Before adding any link to &quot;Related notes&quot;, you MUST confirm the linked note actually exists in one of the above folders</li>
+<li><strong>No Projects folder links</strong>: NEVER link to files in <code>10 - 🧠 Knowledge/1 - 🚀 Projects</code> folder in &quot;Related notes&quot; section</li>
 <li><strong>No RAW links in Related notes</strong>: NEVER link to files in <code>04 - 💽 RAW</code> folder in &quot;Related notes&quot; section</li>
 <li><strong>No processing links in Related notes</strong>: NEVER link to files in <code>99 - 📄 To process</code> folder in &quot;Related notes&quot; section</li>
 <li><strong>No made-up links</strong>: NEVER create links to notes that don't exist</li>
@@ -340,6 +431,7 @@
 </ul>
 </li>
 <li>If a note is shorter, ignore this</li>
+<li><strong>Exception for book notes</strong>: Always create AI-assisted summary regardless of character count</li>
 </ul>
 <h3 id="strongfor-updatedexpanded-notes-new-requirementstrong"><strong>For UPDATED/EXPANDED notes (NEW REQUIREMENT):</strong></h3>
 <ul>
@@ -397,7 +489,7 @@
 <li>Never change writing style or terminology</li>
 <li>Never &quot;improve&quot; note content with AI-generated material</li>
 <li><strong>Never create fictional links in &quot;Related notes&quot; sections</strong></li>
-<li><strong>Never link to RAW or &quot;To process&quot; folders in &quot;Related notes&quot;</strong></li>
+<li><strong>Never link to RAW, &quot;To process&quot;, or Projects folders in &quot;Related notes&quot;</strong></li>
 </ul>
 <h1 id="typical-information-coming-in">Typical Information Coming In</h1>
 <h2 id="notes">Notes</h2>

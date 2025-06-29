@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="how-to-speak-machine-reading-notes">How to Speak Machine - Reading Notes</h1>
+<h2 id="ai-assisted-summary">AI-assisted Summary</h2>
+<p>John Maeda explores the intersection of design and computation, arguing that understanding machines and computational thinking is more critical than traditional design skills in today's world. He presents computation as an invisible, alien universe that follows exponential rather than human-paced progress, requiring designers to become fluent in &quot;machine language&quot; to remain relevant.</p>
+<p>The book emphasizes balancing speed with thoughtfulness in product development, advocating for evolutionary approaches over perfectionist mindsets. Maeda introduces concepts like thick data versus big data, the importance of diverse teams, and the shift from timeless to timely design in our cloud-enabled world, while promoting STEAM (adding arts to STEM) as essential for making unlikely connections.</p>
+<h2 id="raw-notes">Raw notes</h2>
+<ul>
+<li>John Maeda - How to speak machine</li>
+<li>engineering is complex and design aims to simplify - sometimes like mixing oil and water</li>
+<li>publishes Design in tech reports</li>
+<li>design is not the most important matter to understand today (2019) - <strong>computation is</strong>
+<ul>
+<li><em>an invisible, alien universe that is infinitely large and infinitesimally detailed, it's not something you can fully grasp easily, it's more like a foreign country with its own culture and problems</em></li>
+</ul>
+</li>
+<li>the pace of progress in computing doesn't move at the speed of humans, but it is rather exponential</li>
+<li>computing machines are not powered only by electricity but also by our own actions</li>
+<li>fear of the invisible is way more powerful than the fear of something that has a form</li>
+<li>being curious is better than being afraid - when we are curious, we get inventive, when we are afraid, we get destructive</li>
+<li>computation runs in perfection and never gets bored</li>
+<li>managing computer bugs after Grace Hopper finding moths trapped inside a relay inside an early computing machine and electricity could not therefore flow</li>
+<li>Moore's law is a great illustration of exponential growth</li>
+<li>fractals illustration → [Koch Curves diagram shows progression from simple line to complex fractal pattern]</li>
+<li>fractals with increasing complexity increase parameter but the volume stays the same → unheard of in physical world</li>
+<li><u>complicated</u> - meaning something that is knowable and although it takes time, it can be understood</li>
+<li><u>complex</u> - something that is not knowable and even broke for a can't easily tackle it</li>
+<li>machines are complicated, people are complex</li>
+<li>complicated computation machines can bring complex implications</li>
+<li>we roughly associate the speed of an object's responsiveness with &quot;aliveness&quot; → that has severe implications in UX</li>
+<li>these days, computers might appear smarter than they are because they can swiftly spit out reasonable outputs</li>
+<li>neural networks don't contain standard lines of code but they are rather blackboxes</li>
+<li>deep learning is a technique used in machine learning; traditional approach to AI was to teach it to reason through if/else statements; DL uses a model of a brain (neural network) to teach a computer how to think by observing a desired behavior</li>
+<li>DL wasn't technically feasible until recently (but it became possible thanks to Moore's law)</li>
+<li>STEM (science/technology/engineering/mathematics) became more useful with arts in it → STEAM
+<ul>
+<li>artists excel at making unlikely connections all the time</li>
+</ul>
+</li>
+<li>maker versus taller mindset - has a better twin - doing work versus connecting work</li>
+<li>making relationships is as important as designing</li>
+<li><strong>we are currently on course to reach singularity in a completely inequitable way for the many human beings who don't speak machine</strong></li>
+<li>the cloud has made the pursuit of timeless design irrelevant - what matters instead is to be timely what matters more is to be evolving over time</li>
+<li>software's planned obsolescence refers to the one of cars in a way that computational hardware's intrinsic property is being &quot;<u>always obsolete</u>&quot; and just one update away</li>
+<li><strong>design as a reasoned intention</strong></li>
+<li>computation as a Bauhaus of this century</li>
+<li>contemporary shift toward being agile (eliminating waste and favoring experimentation over perfection) and agile (flexibly responding to client's needs) → so quality is now about proudly embracing the attitude of working incrementally</li>
+<li><strong>the beauty of sharing an incomplete product with others is the opportunity to share it with folks who see unlike yourself</strong></li>
+<li>the goal of a startup is to become an endgame i.e. end with achieving success&quot;</li>
+<li>refactoring/improvements is like compound interest or debt - it multiplies over time</li>
+<li>&quot;Speed and thoughtfulness need to coexist in order to make good things - not just fast things&quot; - Alexis Lloyd</li>
+<li>emotional value is a need-to-have not a nice-to-have</li>
+<li><strong>MVP = tiny cake but MLP = cupcake, full product is a wedding cake</strong></li>
+<li><strong>omotenashi</strong> - a Japanese version of hospitality enriched by strongly anticipating what customers want</li>
+<li>(A/B) testing variations on a basic core idea works best when you are already comparatively close to success</li>
+<li>technologist - I do because I can</li>
+<li>humanist - I do because I care</li>
+<li>the boundaries of every Temple will nurture safe cultures of like-minded people</li>
+<li>an imbalanced system will produce imbalanced outcomes</li>
+<li>shift from culture fit → culture add</li>
+<li>diverse teams make better products</li>
+<li>response given as numerical data will usually get the majority of affirming nods compared to qualitative data as quantified data appear more like &quot;facts&quot;</li>
+<li><strong>Clifford Geertz: thin (quantitative data) description versus thick (qualitative) description and the goal of thick description is to capture broader and richer content</strong></li>
+<li>Tricia Wang: thick data &gt; big data</li>
+<li>to design computational interfaces, we need to balance out well the already present quantitative data with qualitative</li>
+<li>triangulation works best with most diverse set of sources available → that allows us to get thick data</li>
+<li><strong>cooperation - working together independently, collaboration - working together dependently</strong></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Data</a></li>
+<li><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

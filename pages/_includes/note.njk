@@ -192,8 +192,6 @@
         </div>
     {% endif %}
 
-    <h1>{{ title | default(page.fileSlug) }}</h1>
-
     {{ content | wikilinks(collections.allNotes) | safe }}
 
     {% if resources %}
