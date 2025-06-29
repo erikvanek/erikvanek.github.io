@@ -79,8 +79,8 @@ The book emphasizes balancing speed with thoughtfulness in product development, 
 - **cooperation - working together independently, collaboration - working together dependently**
 
 ## Related notes
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Data]]
-- [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing]]
+- [[MVP]]
+- [[Team Effectiveness]]
+- [[Innovation]]
+- [[Data]]
+- [[Problem framing]]

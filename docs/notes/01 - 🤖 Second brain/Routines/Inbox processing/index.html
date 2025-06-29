@@ -253,6 +253,7 @@ date: YYYY-MM-DD
 tags: [book-notes, reading, [relevant-tags]]
 source: &quot;[Book Title by Author]&quot;
 type: raw-material
+layout: note.njk
 ---
 
 # [Book Title] - Reading Notes
@@ -299,6 +300,12 @@ type: raw-material
 <ul>
 <li><strong>In RAW book notes</strong>: Add &quot;Related notes&quot; section linking to any enriched/created knowledge nodes</li>
 <li><strong>In enriched knowledge nodes</strong>: Add back-reference to the book notes in RAW folder</li>
+<li><strong>Use clean link format</strong>: Use simple note names <code><a href="#" class="pending-link">Note Name</a></code> rather than full paths <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/...</a></code>
+<ul>
+<li>Good: <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP/">MVP</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness/">Team Effectiveness</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation/">Innovation</a></code></li>
+<li>Bad: <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP</a></code></li>
+</ul>
+</li>
 <li><strong>Follow existing validation rules</strong>: Verify all links exist before adding</li>
 </ul>
 <h4 id="strong6-cleanupstrong"><strong>6. Cleanup</strong></h4>
@@ -306,6 +313,10 @@ type: raw-material
 <li>Move any intermediate processing files to <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
 <li>Keep final RAW book notes in RAW folder</li>
 <li>Keep enriched knowledge nodes in Knowledge folders</li>
+<li><strong>Run validation</strong>: Use <code>validate_notes.py --check-summaries</code> to verify all links are valid<pre><code class="language-bash">cd &quot;01 - 🤖 Second brain/scripts/&quot;
+python validate_notes.py &quot;../../..&quot; --check-summaries
+</code></pre>
+</li>
 </ul>
 <h2 id="core-principles">Core Principles</h2>
 <ul>
