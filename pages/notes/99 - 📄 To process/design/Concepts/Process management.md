@@ -1,1 +1,0 @@
-- planning & preparing to continuously adjust your iterative approach to build, test & __deliver__

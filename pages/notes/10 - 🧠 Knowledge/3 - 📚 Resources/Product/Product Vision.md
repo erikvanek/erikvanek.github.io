@@ -1,19 +1,12 @@
----
-title: "Product Vision"
-date_created: 2025-04-01
-date_modified: 2025-04-01
-tags:
-  - Vision
-  - Strategy
-  - Leadership
-  - ProductManagement
-resources:
-  - https://jmspool.medium.com/drive-innovative-designs-using-experience-visions-5bf706a45636
-  - https://www.svpg.com/examples/
-  - https://www.svpg.com/product-vision-vs-mission/
----
-
 # Product Vision
+
+## AI-assisted summary
+
+Product vision serves as a persuasive tool and north star for product teams, articulating the desired future state a product aims to create. An effective vision must be compelling, inspiring, and empowering while being memorable and concrete enough to guide decision-making. Great visions like Google's "organize the world's information" or Disney's "happiest place on Earth" often feel impossible to reach, which drives continuous innovation.
+
+The vision development process involves researching problem spaces, articulating multiple potential futures, and testing with stakeholders, while distinguishing vision (the future you want) from mission (how you'll get there). Modern examples like Josh Miller's Arc browser pivot demonstrate how vision-driven prioritization can lead to strategic course corrections, with vision statements serving as context for teams much like prompts for AI systems.
+
+---
 
 ## Introduction
 A product vision articulates the desired future state that a product aims to create. It serves as a north star for product teams, aligning efforts and inspiring action. This note explores what makes an effective product vision and how to craft one.
@@ -21,12 +14,12 @@ A product vision articulates the desired future state that a product aims to cre
 ## Core Characteristics of Effective Product Visions
 
 ### Persuasive Power
-- A good product vision is fundamentally a _persuasion tool_
+- Admittedly, a good product vision is a bit of an art form, as fundamentally it is a _persuasion tool_.
 - It must convince stakeholders, team members, and users of the value and possibility of a future state
 - Effective visions create emotional buy-in, not just intellectual agreement
 
 ### Emotional Impact
-- "When done well, the product vision is _compelling_, _inspiring_, and _empowering_"
+- "When done well, the product vision is _compelling_, _inspiring_, and _empowering_—leaving the product teams feeling excited to begin the hard work of making this vision a reality."
 - It should leave product teams feeling excited to begin the hard work of making the vision a reality
 - Creates a shared sense of purpose and meaning
 
@@ -38,16 +31,22 @@ A product vision articulates the desired future state that a product aims to cre
 ## Notable Examples
 
 ### Google's Early Vision
-- "Organize the world's information and make it universally accessible and useful"
+- Google was using this vision statement when it was kickstarting their activities: "Organize the world's information and make it universally accessible and useful."
 - Concise yet comprehensive
 - Provides clear direction while remaining flexible for implementation
 
+### Example of great vision statements (especially because they are impossible to reach)
+- Google: Organizing all the world's information
+- Amazon: To be the Earth's most customer centric company
+- Apple (not stated explicitly like this): Personal computing can have transformative effects on lives of individuals
+- Disneyland: **The happiest place on Earth**
+
 ### Restructuring Priorities Example
-- [Josh Miller's announcement](https://x.com/joshm/status/1850717644779110643) about putting Arc on ice demonstrates vision-driven prioritization
+- Good example of company vision and restructuring priorities in [Josh Miller's tweet](https://x.com/joshm/status/1850717644779110643) on why they're putting Arc on ice
 - The [new vision of Dia](https://www.diabrowser.com/) shows how product direction can evolve
 
 ### Manifestos as Visions
-- Manifestos often serve as powerful product visions
+- Manifestos are good examples of persuasive visions
 - They articulate core principles and desired outcomes
 - Examples include the Agile Manifesto, which transformed software development
 
@@ -72,6 +71,10 @@ A product vision articulates the desired future state that a product aims to cre
 - Mission describes how you'll get there
 - Both are needed but serve different purposes
 
+## Modern Context
+- Vision statement is like a context when prompting LLMs
+- Great vision statements gives better clarity to teams
+
 ## Applications
 
 ### Using Vision to Guide Product Strategy
@@ -89,21 +92,15 @@ A product vision articulates the desired future state that a product aims to cre
 - Look for emotional resonance and understanding
 - Refine the articulation if it's not landing as intended
 
-## Related Notes
-- [[ProductManagement-MOC|Product Management]]
-- [[99 - 📄 To process/Product discovery]]
-- [[Product teams]]
-- [[Storytelling]]
+---
 
-## Application Examples
-- Crafting a vision for a new product initiative
-- Revising a product vision after market changes
-- Using vision to align conflicting stakeholder priorities
+**Tags:** #product-strategy #vision #leadership #product-development #product-management
 
-## Action Items
-- Create a vision statement template
-- Develop a workshop format for collaborative vision creation
-- Establish criteria for evaluating vision effectiveness
+**Created:** 2025-06-29
 
-## Raw Notes
-This note has been processed from a top-level note into the knowledge base structure.
+## Related notes
+- [[🔥 Project planning]]
+- [[Behavioral design]]
+- [[Design research]]
+- [[Ethical design]]
+- [[Co-design]]
