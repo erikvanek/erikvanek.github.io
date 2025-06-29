@@ -1,0 +1,2 @@
+- Try to postpone the moment of drawing the first line on the canvas – because the moment you draw one, it locks you in
+- Also try to give yourself space and time to explore more than the first order thinking
