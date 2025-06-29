@@ -20,6 +20,13 @@ tags:
 	- and [new vision of Dia](https://www.diabrowser.com/) soon
 - Manifestos are good examples of persuasive visions
 - A good vision is thought-provoking, inspiring, memorable and concrete
+- Example of great vision statements (especially because they are impossible to reach)
+	- Google: Organizing all the world's information
+	- Amazon: To be the Earth's most customer centric company
+	- Apple (not stated explicitly like this): Personal computing can have transformative effects on lives of individuals
+	- Disneyland: **The happiest place on Earth**
+- Vision statement is like a context when prompting LLMs
+- Great vision statements gives mbetter clarity to teams
 
 ## Related notes
 - [[99 - 📄 To process/Product vision]]

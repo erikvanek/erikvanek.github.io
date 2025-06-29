@@ -94,7 +94,7 @@ Implementing this approach requires fundamental organizational shifts, as most c
 - Learn and iterate
 
 ## Related notes
-- [[04 - 💽 RAW/2025/04/06/Product vision]]
+- [[02 - 📩 Inbox/Product vision]]
 - [[99 - 📄 To process/Measuring Business Value]]
 - [[99 - 📄 To process/Product discovery]]
 - [[99 - 📄 To process/agile]]

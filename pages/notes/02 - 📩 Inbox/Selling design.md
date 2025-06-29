@@ -1,0 +1,1 @@
+- Bob Baxley  on design takes more time myth – "Design exists. There is going to be a design. The question is whether there's going to be a good one or not"

@@ -23,7 +23,7 @@ resources:
 
 ## Related notes
 - [[11 - ⏳ interim knowledge/ProductManagement/ProductManagement-MOC]]
-- [[04 - 💽 RAW/2025/04/06/Product vision]]
+- [[02 - 📩 Inbox/Product vision]]
 - [[11 - ⏳ interim knowledge/ProductManagement/Product Discovery]]
 - [[99 - 📄 To process/Risk management]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation]]

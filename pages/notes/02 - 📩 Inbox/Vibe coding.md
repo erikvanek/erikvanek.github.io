@@ -3,6 +3,8 @@ resources:
   - https://www.linkedin.com/pulse/era-ai-aided-design-why-great-matter-more-j-b-chaykowsky-gmdxe/
   - https://www.youtube.com/watch?v=SS5DYx6mPw8
   - https://docs.google.com/document/d/12ATcyjCEKh8T-MPDZ-VMiQ1XMa9FUvvk2QazrsKoiR8/edit?tab=t.0#heading=h.d9nuxo5lc9ss
+  - http://jtbd.info/
+  - https://www.thewayofcode.com/
 ---
 - AI tools like Cursor, Lovable, and Bolt are changing how we create digital experiences
 - we can also view Squarespace and Wix as similar tools but with different implementation as vibe-coding tools
@@ -16,3 +18,4 @@ resources:
 	- greatest risk lies in pursuing speed to such an extent that "good enough" displaces "great," leading to a gradual erosion of quality and impact
 - It's not AI that will take your job—it's a designer with AI
 - Great Code Medin's [guide](https://docs.google.com/document/d/12ATcyjCEKh8T-MPDZ-VMiQ1XMa9FUvvk2QazrsKoiR8/edit?tab=t.0#heading=h.d9nuxo5lc9ss) for AI-assisted coding
+- Interesting generative arts project by Rick Rubin called [The way of code](https://www.thewayofcode.com/)

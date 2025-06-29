@@ -4,24 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "4c2c5b1c0465b4fd",
+        "id": "8f64e6ee4406c9f2",
         "type": "tabs",
         "children": [
           {
-            "id": "7c5f5943e9a829e6",
+            "id": "3374c543d89f9e1a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - 📩 Inbox/Product vision.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Product vision"
+            }
+          },
+          {
+            "id": "2e61acf336975e18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - 📩 Inbox/Goal.md",
+                "file": "02 - 📩 Inbox/Selling design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Goal"
+              "title": "Selling design"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,10 +186,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c5f5943e9a829e6",
+  "active": "2e61acf336975e18",
   "lastOpenFiles": [
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Scénář stanovišť.md",
+    "02 - 📩 Inbox/Vibe coding.md",
+    "02 - 📩 Inbox/Selling design.md",
+    "02 - 📩 Inbox/Random.md",
+    "02 - 📩 Inbox/Quotes.md",
+    "02 - 📩 Inbox/Product vision.md",
     "02 - 📩 Inbox/Goal.md",
+    "02 - 📩 Inbox/Design principles.md",
+    "02 - 📩 Inbox/Vibe-codi.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing.md",
+    "99 - 📄 To process/Problem statements.md",
+    "99 - 📄 To process/design/Concepts/Prototyping.md",
+    "99 - 📄 To process/design/Design.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
+    "11 - ⏳ interim knowledge/ProductManagement/Product vision.md",
+    "01 - 🤖 Second brain/Principles.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Scénář stanovišť.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Project Blueprint - Designer Role.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/sovia-I.html",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/FG1-Vysocina-Prezentace.html",
@@ -185,9 +216,6 @@
     "01 - 🤖 Second brain/Routines/Inbox processing.md",
     "01 - 🤖 Second brain/Routines/Newsletter Digest Agent.md",
     "01 - 🤖 Second brain/Routines/MOC maintenance.md",
-    "01 - 🤖 Second brain/Backlog.md",
-    "01 - 🤖 Second brain/Index.md",
-    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Inovační týmy státní správy/Content.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Zpráva z empatické fáze_Mam rozsudek a co dal.pdf",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Vize a systém_Mam rozsudek a co dál.pdf",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Teorie změny_Mam_rozsudek_a_co_dal.pdf",
@@ -196,17 +224,6 @@
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Harmonogram.xlsx",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/harmonogram VTOS II_evaluace.xlsx",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Prepenitentiary care/Prep materials/Evaluační design_Mam_rozsudek_a_co_dal.pdf",
-    "02 - 📩 Inbox/Untitled.md",
-    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Inovační týmy státní správy/Inovační týmy státní správy.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/FKB 25/FKB 25.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Podmínky ukončení.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Průběh semestru.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Reflection.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Intro.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Zdroje.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Ideation workshop for ministry secretaries/Results.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Sense-making.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/roman-foto.jpeg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/erik.png",
