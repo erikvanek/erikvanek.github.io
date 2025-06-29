@@ -12,6 +12,9 @@ tags:
 source: How to Speak Machine by John Maeda
 type: raw-material
 layout: note.njk
+slug: how-to-speak-machine
+permalink: "/{{ slug }}/"
+url_category: book
 ---
 
 # How to Speak Machine - Reading Notes

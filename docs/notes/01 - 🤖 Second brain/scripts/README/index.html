@@ -202,6 +202,33 @@
 <li>Update <a href="http://CHANGELOG.md">CHANGELOG.md</a> when adding or modifying scripts</li>
 </ul>
 <h2 id="available-scripts">📜 Available Scripts</h2>
+<h3 id="codeurl_managerpycode"><code>url_manager.py</code></h3>
+<p><strong>Purpose</strong>: Manages clean URL system, prevents collisions, validates URL registry</p>
+<p><strong>Usage</strong>:</p>
+<pre><code class="language-bash">cd scripts/
+# Generate slug from title
+python url_manager.py generate --title &quot;Your Note Title&quot;
+
+# Add new URL to registry
+python url_manager.py add --title &quot;Title&quot; --file &quot;path/to/file.md&quot; --category &quot;book&quot;
+
+# Validate URL registry
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+<p><strong>What it does</strong>:</p>
+<ul>
+<li>✅ Generates clean URL slugs from note titles</li>
+<li>✅ Prevents URL collisions with automatic numbering</li>
+<li>✅ Maintains central URL registry</li>
+<li>✅ Validates file references and duplicates</li>
+</ul>
+<p><strong>When to use</strong>:</p>
+<ul>
+<li>During book note processing (automatic)</li>
+<li>When adding clean URLs to existing notes</li>
+<li>During URL system validation</li>
+<li>When troubleshooting URL conflicts</li>
+</ul>
 <h3 id="codevalidate_notespycode"><code>validate_notes.py</code></h3>
 <p><strong>Purpose</strong>: Validates note integrity and identifies issues in the knowledge base</p>
 <p><strong>Usage</strong>:</p>
@@ -268,6 +295,7 @@ if __name__ == &quot;__main__&quot;:
 <p><strong>Weekly</strong>:</p>
 <ul>
 <li>Run <code>validate_notes.py --check-summaries</code></li>
+<li>Run <code>url_manager.py validate</code></li>
 <li>Review <a href="http://CHANGELOG.md">CHANGELOG.md</a> for recent changes</li>
 </ul>
 <p><strong>Monthly</strong>:</p>
