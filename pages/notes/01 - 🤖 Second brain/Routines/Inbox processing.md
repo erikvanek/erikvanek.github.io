@@ -31,12 +31,17 @@ When asked to process second brain inbox, **focus specifically on content in the
 
 #### **1. Transcription Phase**
 - Transcribe handwritten text from each page photo to digital text
-- Maintain original bullet point structure exactly as written
+- **Preserve hierarchical indentation structure** - if bullet points are indented under other points, maintain that relationship using proper markdown indentation
+- **Preserve emphasis formatting**:
+  - If text is underlined in handwriting, use *emphasized text* in markdown
+  - If line starts an exclamation mark (!), **bold the entire line**
 - Compile all pages into single continuous note (no page breaks in final RAW file)
 - Keep all content verbatim (following core principle of no expansions/embellishments)
 
 #### **2. RAW File Creation**
-- **Storage Location**: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE]_Notes.md`
+- **Storage Location**: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md`
+  - **File naming**: Use clean book title without suffixes like "_Notes" or volume numbers like "_I"
+  - Example: "How_to_Speak_Machine.md" not "How_to_Speak_Machine_I_Notes.md"
 - **Structure**:
   ```markdown
   ---
@@ -52,7 +57,7 @@ When asked to process second brain inbox, **focus specifically on content in the
   ## AI-assisted Summary
   [Brief 2-paragraph summary of main themes and insights]
   
-  ---
+  ## Raw notes
   
   [All transcribed bullet points compiled together]
   
@@ -68,7 +73,9 @@ When asked to process second brain inbox, **focus specifically on content in the
 
 #### **4. Insight Distillation & Knowledge Enrichment**
 - **Identify 3-5 most insightful concepts** from the book notes
+  - there's a high chance that some of those concepets will be those that are marked out with an asterisk in handwritten notes
 - **Search existing knowledge base** in `10 - 🧠 Knowledge/2 - 🌱 Areas` and `10 - 🧠 Knowledge/3 - 📚 Resources`
+- **Extract inspirational quotes**: If notes contain quotes attributed to specific people, add them to `10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Inspirational Quotes.md`
 - **For each key insight**:
   - Find the most relevant existing knowledge node
   - If perfect match exists: Append insight to existing node (preserving exact wording)

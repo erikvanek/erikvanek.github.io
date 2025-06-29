@@ -22,6 +22,8 @@ tags:
 - Innovate the [[04 - 💽 RAW/2025/04/06/System of progress|System of progress]], not its parts
 - **it isn't customer's job to know what they want**, often they don't know what they want until you slow then
 - Good innovations solve problems that formerly had only inadequate solutions— or no solution
+- STEM (science/technology/engineering/mathematics) became more useful with arts in it → STEAM
+- artists excel at making unlikely connections all the time
 
 ## Quotes
 - "Good innovations solve problems that formerly had only inadequate solutions — or no solution."
@@ -39,3 +41,4 @@ tags:
 - [[Design MOC|Design Resources]]
 - [[99 - 📄 To process/Human in the loop|Human in the Loop]]
 - [[04 - 💽 RAW/2025/04/06/Opposing forces of customer demand|Opposing Forces of Customer Demand]]
+- [[How_to_Speak_Machine]]

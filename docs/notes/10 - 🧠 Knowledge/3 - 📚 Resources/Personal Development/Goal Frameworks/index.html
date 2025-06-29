@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="goal-frameworks">Goal Frameworks</h1>
+<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p>Goal frameworks provide structure for understanding the relationship between what we do and why we do it, with Powers' hierarchy distinguishing between stable &quot;Be&quot; goals (who you want to become) and transitory &quot;Do&quot; goals (actions to fulfill Be goals). This framework emphasizes that achieving Do goals isn't the end goal - rather, they're means to achieve the more fundamental Be goals.</p>
+<p>Complementing this forward-looking approach, antigoals offer a backward problem-solving strategy that defines constraints to prevent creating new problems while pursuing goals. As Charles Munger advocated, complex problems often become easier when approached in reverse - identifying what to avoid rather than just what to pursue. Antigoals serve as practical constraints like &quot;don't agree to things your gut says no to&quot; or &quot;never take meetings on Monday,&quot; helping maintain focus and prevent goal pursuit from creating unintended negative consequences.</p>
+<hr>
+<ul>
+<li>Powers' hierarchy of goals is a <strong>relationship between what we do and why we do it</strong><br>
+<img src="/notes/Pasted image 20241225134243.png" alt="Pasted image 20241225134243.png" loading="lazy"></li>
+</ul>
+<h2 id="be-goals">Be goals</h2>
+<ul>
+<li>&quot;Be&quot; goals are more stable</li>
+</ul>
+<h2 id="do-goals">Do goals</h2>
+<ul>
+<li>&quot; Do&quot; and motor state goals are more transitory and technology dependent.</li>
+<li>They are the things you do to fulfill a Be goal.</li>
+<li>achieving &quot;Do&quot; goals is not the goal, the goal is to achieve the &quot;Be&quot; goal</li>
+</ul>
+<h2 id="motor-state-goals">Motor state goals</h2>
+<h1 id="antigoals">Antigoals</h1>
+<ul>
+<li>are the <strong>constraints that ensure</strong> you don't create new problems in pursuing those goals.</li>
+<li>a foundational mental model that says that complex problems are often easier solved backwards vs. forwards.</li>
+<li>example framing
+<ul>
+<li>
+<ul>
+<li>Don't <code>agree to things your gut says no to</code></li>
+</ul>
+</li>
+<li>Never <code>take meetings on Monday</code></li>
+<li>No <code>unpaid speaking gigs</code></li>
+</ul>
+</li>
+<li>Charles Munger:
+<ul>
+<li><em>&quot;All I Want To Know Is Where I'm Going To Die So I'll Never Go There&quot;</em></li>
+<li><em>&quot;Problems frequently get easier if you turn them around in reverse. In other words, if you want to help India, the question you should ask is not 'how can I help India,' it's 'what is doing the worst damage in India and how do I avoid it?&quot;</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Tags:</strong> #goal-setting #frameworks #be-goals #antigoals #personal-development</p>
+<p><strong>Created:</strong> 2025-06-29</p>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">🔥 Project planning</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 1 - Project Knowledge Maps/">PKM Improvement 1 - Project Knowledge Maps</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/PKM Improvement 2 - Learning Loops/">PKM Improvement 2 - Learning Loops</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Process reflection/">Process reflection</a></li>
+<li><a href="/notes/99 - 📄 To process/Learning/">Learning</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

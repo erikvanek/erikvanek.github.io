@@ -6,6 +6,8 @@
 - James Clear: "We often assume that productivity means getting more things done each day. Wrong. **Productivity is getting important things done consistently**."
 - Bob Baxley (Lenny's podcast): "Design is clear thinking made visible" (originally by Edward Tufte) + "Design is trying to imagine the future you want to live in and take the steps to make it real"
 - Anatol Adams: "There's nothing worse than a brilliant image of a fuzzy concept"
+- John Maeda: "Design is a reasoned intention"
+- Alexis Lloyd: "Speed and thoughtfulness need to coexist in order to make good things - not just fast things"
 
 ---
 

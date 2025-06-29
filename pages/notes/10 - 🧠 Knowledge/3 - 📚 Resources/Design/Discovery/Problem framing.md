@@ -14,6 +14,10 @@ tags:
 ---
 ## Finding the right problem
 - solving the **root cause of the right problem** than makes the symptom (usually what people perceive to be the problem) disappear
+- complicated - meaning something that is knowable and although it takes time, it can be understood
+- complex - something that is not knowable and even broke for a can't easily tackle it
+- machines are complicated, people are complex
+- complicated computation machines can bring complex implications
 - Focus on [[JTBD 1]]
 - *"Framing is the process of breaking down a problem into a set of choices, trade offs, and options that enable a team to make a call and move forward."* - [Shishir Mehrotra](https://coda.io/@shishir)
 - Good framing helps produce "decisions that stick."
@@ -58,3 +62,6 @@ tags:
 ## "Pre-framing" a problem
 - what if we want to frame a problem we don't have enough information about?
 	- then we can talk about framing a research plan and objectives
+
+## Related notes
+- [[How_to_Speak_Machine]]
