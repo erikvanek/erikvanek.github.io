@@ -68,8 +68,6 @@ resources:
     
 - required resources (human, tech, financial, …) on their side
     
-- required resources/departments/roles on Datamole side
-    
 - artifacts used / produced during that phase
     
 - touchpoints – a specific interaction between a customer and an organization

@@ -11,10 +11,14 @@
             "id": "b3c2362319cdb214",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "99 - 📄 To process/Tools 1/Design tools/Journey maps.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Journey maps"
             }
           }
         ]
@@ -167,6 +171,7 @@
   },
   "active": "b3c2362319cdb214",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC.md",
     "01 - 🤖 Second brain/Routines/Clean URL System.md",
     "01 - 🤖 Second brain/scripts/url_manager.py",
     "04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md",
@@ -195,7 +200,6 @@
     "03 - 🗑️ Dump/2025-06-29/Random-original.md",
     "03 - 🗑️ Dump/2025-06-29/Quotes-original.md",
     "03 - 🗑️ Dump/2025-06-29/Product-vision-original.md",
-    "03 - 🗑️ Dump/2025-06-29/Goal-original.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Personal Development",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Product",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Methods",
