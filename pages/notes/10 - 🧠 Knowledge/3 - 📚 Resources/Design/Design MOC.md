@@ -41,8 +41,6 @@ This MOC serves as a navigational hub for the various design resources, methodol
 
 ## Related Projects
 - [[10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/Intro|Service Design Workshop]]
-- [[10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/Index|HCD for Officers Course]]
-- [[10 - 🧠 Knowledge/1 - 🚀 Projects/Roboton stakeholder interviews/Index|Roboton Stakeholder Research]]
 
 ## External Design Resources
 - Problem Framing Handbook (PDF in External resources folder)
