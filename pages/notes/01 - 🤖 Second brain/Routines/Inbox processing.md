@@ -1,6 +1,9 @@
-# 02 - 📩 Inbox
+# 02 - 📩 Inbox Processing
 
 Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos, classes.
+
+## **📍 Processing Scope**
+When asked to process second brain inbox, **focus specifically on content in the `02 - 📩 Inbox` folder**.
 
 ## Special Processing for 'Random' Notes
 - 'Random' notes contain weekly collections of bullet points from different sources
@@ -15,6 +18,73 @@ Inbox contains notes that I have compiled by myself by learning from various sou
   - If a concept appears to deserve its own node but is closely related to an existing one (e.g., "Psychological Safety" vs "Team Effectiveness"), choose the broader concept as the main node and incorporate the more specific concept within it
   - Add appropriate tags to ensure the incorporated concepts are still discoverable
   - When in doubt, favor enhancing existing nodes rather than creating highly overlapping new ones
+
+## **📖 Book Processing Workflow**
+
+### **Input Format:**
+- A5 pages with handwritten bullet points
+- Pages numbered with Roman numerals (I, II, III...) in top corner
+- First page contains book title as first bullet point
+- Photos provided page by page
+
+### **Processing Steps:**
+
+#### **1. Transcription Phase**
+- Transcribe handwritten text from each page photo to digital text
+- Maintain original bullet point structure exactly as written
+- Compile all pages into single continuous note (no page breaks in final RAW file)
+- Keep all content verbatim (following core principle of no expansions/embellishments)
+
+#### **2. RAW File Creation**
+- **Storage Location**: `04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE]_Notes.md`
+- **Structure**:
+  ```markdown
+  ---
+  title: "[Book Title] - Reading Notes"
+  date: YYYY-MM-DD
+  tags: [book-notes, reading, [relevant-tags]]
+  source: "[Book Title by Author]"
+  type: raw-material
+  ---
+  
+  # [Book Title] - Reading Notes
+  
+  ## AI-assisted Summary
+  [Brief 2-paragraph summary of main themes and insights]
+  
+  ---
+  
+  [All transcribed bullet points compiled together]
+  
+  ## Related notes
+  [Links to enriched/created knowledge nodes]
+  ```
+
+#### **3. Summary Creation**
+- **Always create AI-assisted summary** for book notes (regardless of character count - exception to normal rule)
+- Follow existing format: 2 paragraphs, 5-7 sentences max
+- First paragraph: Core themes/main ideas from the book
+- Second paragraph: Key applications/implications/specific insights
+
+#### **4. Insight Distillation & Knowledge Enrichment**
+- **Identify 3-5 most insightful concepts** from the book notes
+- **Search existing knowledge base** in `10 - 🧠 Knowledge/2 - 🌱 Areas` and `10 - 🧠 Knowledge/3 - 📚 Resources`
+- **For each key insight**:
+  - Find the most relevant existing knowledge node
+  - If perfect match exists: Append insight to existing node (preserving exact wording)
+  - If no match: Create new knowledge nugget in appropriate subfolder
+  - Add reference back to the RAW book notes
+  - Update related notes connections bidirectionally
+
+#### **5. Enhanced Linking**
+- **In RAW book notes**: Add "Related notes" section linking to any enriched/created knowledge nodes
+- **In enriched knowledge nodes**: Add back-reference to the book notes in RAW folder
+- **Follow existing validation rules**: Verify all links exist before adding
+
+#### **6. Cleanup**
+- Move any intermediate processing files to `03 - 🗑️ Dump/YYYY-MM-DD/`
+- Keep final RAW book notes in RAW folder
+- Keep enriched knowledge nodes in Knowledge folders
 
 ## Core Principles
 * Preserve original content exactly as written - no expansions or embellishments
@@ -35,6 +105,7 @@ Inbox contains notes that I have compiled by myself by learning from various sou
    * If combining notes, maintain all original content from both notes
    * If enhancing existing notes, append content verbatim - don't rewrite or expand it
 4. **Structure Minimally**:
+   * **REQUIRED: Place YAML frontmatter metadata at the very top of each file**
    * Add only essential metadata (title, creation date, tags)
    * Create simple linking structure to relevant notes
    * Keep original formatting whenever possible
@@ -73,18 +144,18 @@ Inbox contains notes that I have compiled by myself by learning from various sou
 
 ## **🔗 Related Notes Validation (CRITICAL)**
 Find 5 related nodes in my existing knowledge base **ONLY** from these specific folders:
-- `10 - 🧠 Knowledge/1 - 🚀 Projects`
 - `10 - 🧠 Knowledge/2 - 🌱 Areas` 
 - `10 - 🧠 Knowledge/3 - 📚 Resources`
 
 **VALIDATION REQUIREMENTS:**
 1. **Verify existence**: Before adding any link to "Related notes", you MUST confirm the linked note actually exists in one of the above folders
-2. **No RAW links in Related notes**: NEVER link to files in `04 - 💽 RAW` folder in "Related notes" section
-3. **No processing links in Related notes**: NEVER link to files in `99 - 📄 To process` folder in "Related notes" section
-4. **No made-up links**: NEVER create links to notes that don't exist
-5. **Search first**: Use the knowledge base search to find actual existing notes before creating links
-6. **Quality over quantity**: It's better to have 2-3 real, relevant links than 5 links with some being fictional
-7. **RAW references OK in content**: It's perfectly fine to reference RAW or other folders within note content, just not in "Related notes" section
+2. **No Projects folder links**: NEVER link to files in `10 - 🧠 Knowledge/1 - 🚀 Projects` folder in "Related notes" section
+3. **No RAW links in Related notes**: NEVER link to files in `04 - 💽 RAW` folder in "Related notes" section
+4. **No processing links in Related notes**: NEVER link to files in `99 - 📄 To process` folder in "Related notes" section
+5. **No made-up links**: NEVER create links to notes that don't exist
+6. **Search first**: Use the knowledge base search to find actual existing notes before creating links
+7. **Quality over quantity**: It's better to have 2-3 real, relevant links than 5 links with some being fictional
+8. **RAW references OK in content**: It's perfectly fine to reference RAW or other folders within note content, just not in "Related notes" section
 
 **Link Format**: Create a section `Related notes` at the end of the file and link exactly 5 related notes as bullet points:
 ```markdown
@@ -109,6 +180,7 @@ If you cannot find enough related notes in the valid folders, search more broadl
   - Aim for 5-7 sentences length max, it should be like 8 lines of text at most
   - Then add horizontal line
 - If a note is shorter, ignore this
+- **Exception for book notes**: Always create AI-assisted summary regardless of character count
 
 ### **For UPDATED/EXPANDED notes (NEW REQUIREMENT):**
 - **After adding content to an existing note**, check the total character count of the final note
@@ -144,7 +216,7 @@ If you cannot find enough related notes in the valid folders, search more broadl
 * Never change writing style or terminology
 * Never "improve" note content with AI-generated material
 * **Never create fictional links in "Related notes" sections**
-* **Never link to RAW or "To process" folders in "Related notes"**
+* **Never link to RAW, "To process", or Projects folders in "Related notes"**
 
 # Typical Information Coming In
 ## Notes
