@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="social-media-preview-system">Social Media Preview System</h1>
+<h2 id="overview">Overview</h2>
+<p>Comprehensive system for generating rich social media previews when your second brain notes are shared on platforms like Twitter, LinkedIn, Facebook, Discord, Slack, etc.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Rich OpenGraph tags</strong> for Facebook, LinkedIn sharing</li>
+<li><strong>Twitter Card support</strong> for enhanced Twitter previews</li>
+<li><strong>Custom thumbnails</strong> for each note category</li>
+<li><strong>Automatic meta descriptions</strong> from AI-assisted summaries</li>
+<li><strong>Proper SEO meta tags</strong> for search engines</li>
+</ul>
+<h2 id="preview-examples">Preview Examples</h2>
+<h3 id="when-someone-shares-your-note">When someone shares your note:</h3>
+<p><strong>Before:</strong> Plain link with no preview<br>
+<strong>After:</strong> Rich preview with:</p>
+<ul>
+<li>✅ Thumbnail image (1200x630px)</li>
+<li>✅ Note title</li>
+<li>✅ Description from AI summary</li>
+<li>✅ Your branding (&quot;Erik Vaněk&quot;)</li>
+<li>✅ Proper link preview</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<h3 id="1-template-integration">1. Template Integration</h3>
+<p>The <code>note.njk</code> template now includes comprehensive meta tags:</p>
+<pre><code class="language-html">
+&lt;!-- OpenGraph Tags --&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;{{ title }}&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;{{ description or (content | extractSummary) }}&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;{{ site.url }}{{ thumbnail }}&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;{{ site.url }}{{ page.url }}&quot;&gt;
+
+&lt;!-- Twitter Cards --&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;{{ title }}&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;{{ description or (content | extractSummary) }}&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;{{ site.url }}{{ thumbnail }}&quot;&gt;
+
+</code></pre>
+<h3 id="2-thumbnail-system">2. Thumbnail System</h3>
+<h4 id="default-thumbnails">Default Thumbnails</h4>
+<ul>
+<li><strong>Books</strong>: <code>/img/social/book-note-preview.png</code> (blue gradient, book emoji)</li>
+<li><strong>Knowledge</strong>: <code>/img/social/note-preview.png</code> (purple gradient, clean design)</li>
+<li><strong>Custom</strong>: Specify <code>thumbnail: &quot;/img/social/custom-image.png&quot;</code> in frontmatter</li>
+</ul>
+<h4 id="thumbnail-requirements">Thumbnail Requirements</h4>
+<ul>
+<li><strong>Size</strong>: 1200px × 630px (optimal for all platforms)</li>
+<li><strong>Format</strong>: PNG or JPG</li>
+<li><strong>File size</strong>: &lt; 1MB recommended</li>
+<li><strong>Safe area</strong>: Keep text within central 1000×500px area</li>
+</ul>
+<h3 id="3-frontmatter-configuration">3. Frontmatter Configuration</h3>
+<h4 id="basic-configuration-automatic">Basic Configuration (Automatic)</h4>
+<pre><code class="language-yaml">---
+title: &quot;How to Speak Machine - Reading Notes&quot;
+url_category: &quot;book&quot;  # Uses book-note-preview.png
+---
+</code></pre>
+<h4 id="custom-thumbnail">Custom Thumbnail</h4>
+<pre><code class="language-yaml">---
+title: &quot;How to Speak Machine - Reading Notes&quot;
+thumbnail: &quot;/img/social/how-to-speak-machine-preview.png&quot;
+description: &quot;Custom description for social sharing&quot;
+---
+</code></pre>
+<h4 id="override-description">Override Description</h4>
+<pre><code class="language-yaml">---
+title: &quot;Team Effectiveness&quot;
+description: &quot;Research-backed insights on building high-performing teams&quot;
+---
+</code></pre>
+<h2 id="thumbnail-generation">Thumbnail Generation</h2>
+<h3 id="method-1-html-generator-recommended">Method 1: HTML Generator (Recommended)</h3>
+<p>Use the built-in thumbnail generator:</p>
+<ol>
+<li><strong>Open</strong>: <code>Social Media Thumbnail Generator</code> (artifact above)</li>
+<li><strong>Fill in</strong>: Note title and optional description</li>
+<li><strong>Select</strong>: Note type (book vs general note)</li>
+<li><strong>Generate</strong>: Get HTML code</li>
+<li><strong>Screenshot</strong>: Save as 1200×630px image</li>
+<li><strong>Upload</strong>: To <code>/img/social/[note-slug]-preview.png</code></li>
+</ol>
+<h3 id="method-2-design-tools">Method 2: Design Tools</h3>
+<ul>
+<li><strong>Canva</strong>: Use 1200×630px template</li>
+<li><strong>Figma</strong>: Create social media frame</li>
+<li><strong>Photoshop</strong>: Use Facebook post template</li>
+</ul>
+<h3 id="method-3-online-generators">Method 3: Online Generators</h3>
+<ul>
+<li><strong>Pablo by Buffer</strong></li>
+<li><strong>Canva Social Media</strong></li>
+<li><strong>RelayThat</strong></li>
+</ul>
+<h2 id="processing-workflow-integration">Processing Workflow Integration</h2>
+<h3 id="book-notes-processing">Book Notes Processing</h3>
+<p>Add to Step 2 (RAW File Creation):</p>
+<pre><code class="language-bash"># 1. Generate thumbnail (optional)
+# Use thumbnail generator or design tool
+
+# 2. Add to frontmatter if custom thumbnail created
+thumbnail: &quot;/img/social/how-to-speak-machine-preview.png&quot;
+
+# 3. Default will use book-note-preview.png automatically
+</code></pre>
+<h3 id="knowledge-notes">Knowledge Notes</h3>
+<p>For important knowledge notes:</p>
+<pre><code class="language-yaml">---
+title: &quot;Team Effectiveness&quot;
+description: &quot;Google's research on psychological safety and team performance&quot;
+thumbnail: &quot;/img/social/team-effectiveness-preview.png&quot;  # optional
+---
+</code></pre>
+<h2 id="11ty-filters-needed">11ty Filters Needed</h2>
+<p>Add these filters to your <code>.eleventy.js</code> configuration:</p>
+<pre><code class="language-javascript">// Extract page title from content
+eleventyConfig.addFilter(&quot;getPageTitle&quot;, function(content) {
+    const match = content.match(/&lt;h1[^&gt;]*&gt;(.*?)&lt;\/h1&gt;/);
+    return match ? match[1].replace(/&lt;[^&gt;]*&gt;/g, '') : 'Note';
+});
+
+// Extract summary from AI-assisted summary section
+eleventyConfig.addFilter(&quot;extractSummary&quot;, function(content) {
+    const summaryMatch = content.match(/## AI-assisted [Ss]ummary\s*\n(.*?)\n---/s);
+    if (summaryMatch) {
+        const summary = summaryMatch[1]
+            .replace(/\n/g, ' ')
+            .replace(/&lt;[^&gt;]*&gt;/g, '')
+            .trim();
+        return summary.length &gt; 160 ? summary.substring(0, 157) + '...' : summary;
+    }
+    return '';
+});
+</code></pre>
+<h2 id="testing-social-previews">Testing Social Previews</h2>
+<h3 id="validation-tools">Validation Tools</h3>
+<ul>
+<li><strong>Facebook Debugger</strong>: <a href="https://developers.facebook.com/tools/debug/">https://developers.facebook.com/tools/debug/</a></li>
+<li><strong>Twitter Card Validator</strong>: <a href="https://cards-dev.twitter.com/validator">https://cards-dev.twitter.com/validator</a></li>
+<li><strong>LinkedIn Inspector</strong>: <a href="https://www.linkedin.com/post-inspector/">https://www.linkedin.com/post-inspector/</a></li>
+<li><strong>OpenGraph.xyz</strong>: <a href="https://www.opengraph.xyz/">https://www.opengraph.xyz/</a></li>
+</ul>
+<h3 id="testing-process">Testing Process</h3>
+<ol>
+<li><strong>Publish note</strong> with social meta tags</li>
+<li><strong>Test URL</strong> in validation tools</li>
+<li><strong>Check preview</strong> appearance</li>
+<li><strong>Clear cache</strong> if needed (use ?v=1 parameter)</li>
+<li><strong>Share</strong> to verify real-world appearance</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>No preview showing</strong></p>
+<ul>
+<li>Check OpenGraph tags are present</li>
+<li>Verify image URLs are absolute</li>
+<li>Test with validation tools</li>
+</ul>
+</li>
+<li>
+<p><strong>Image not loading</strong></p>
+<ul>
+<li>Ensure 1200×630px dimensions</li>
+<li>Check file path is correct</li>
+<li>Verify image is publicly accessible</li>
+</ul>
+</li>
+<li>
+<p><strong>Description truncated</strong></p>
+<ul>
+<li>Keep under 160 characters</li>
+<li>Test with extractSummary filter</li>
+<li>Provide custom description if needed</li>
+</ul>
+</li>
+<li>
+<p><strong>Cache issues</strong></p>
+<ul>
+<li>Use platform debugging tools to refresh</li>
+<li>Add version parameter: <code>?v=2</code></li>
+<li>Wait 24-48 hours for cache expiry</li>
+</ul>
+</li>
+</ol>
+<h3 id="platform-specific-notes">Platform-Specific Notes</h3>
+<ul>
+<li><strong>Twitter</strong>: Prefers summary_large_image card type</li>
+<li><strong>LinkedIn</strong>: Strict about image requirements</li>
+<li><strong>Facebook</strong>: Caches aggressively (use debugger to refresh)</li>
+<li><strong>Discord</strong>: Shows previews immediately</li>
+<li><strong>Slack</strong>: Good preview support with proper meta tags</li>
+</ul>
+<h2 id="benefits">Benefits</h2>
+<h3 id="professional-appearance">Professional Appearance</h3>
+<ul>
+<li>✅ Branded, consistent look across all shares</li>
+<li>✅ Clear visual hierarchy</li>
+<li>✅ Professional thumbnail design</li>
+<li>✅ Proper attribution</li>
+</ul>
+<h3 id="better-engagement">Better Engagement</h3>
+<ul>
+<li>✅ Higher click-through rates with rich previews</li>
+<li>✅ More social shares due to visual appeal</li>
+<li>✅ Better discoverability</li>
+<li>✅ Enhanced credibility</li>
+</ul>
+<h3 id="seo-benefits">SEO Benefits</h3>
+<ul>
+<li>✅ Proper meta descriptions</li>
+<li>✅ Structured data for search engines</li>
+<li>✅ Canonical URLs</li>
+<li>✅ Social signals</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Clean URL System/">Clean URL System</a> - Clean URLs for better sharing</li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Book Notes Extraction/">Book Notes Extraction</a> - Integration with book processing</li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Inbox processing/">Inbox processing</a> - General note processing workflows</li>
+</ul>
+<h2 id="file-structure">File Structure</h2>
+<pre><code>/img/social/
+├── book-note-preview.png          # Default book thumbnail
+├── note-preview.png               # Default knowledge note thumbnail
+├── how-to-speak-machine-preview.png  # Custom book thumbnail
+└── team-effectiveness-preview.png    # Custom knowledge thumbnail
+</code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="book-note-preview">Book Note Preview</h3>
+<pre><code class="language-yaml">---
+title: &quot;How to Speak Machine - Reading Notes&quot;
+url_category: &quot;book&quot;
+# Uses /img/social/book-note-preview.png automatically
+---
+</code></pre>
+<p><strong>Result</strong>: Rich preview with blue gradient, book icon, and note title</p>
+<h3 id="custom-thumbnail">Custom Thumbnail</h3>
+<pre><code class="language-yaml">---
+title: &quot;Team Effectiveness&quot; 
+thumbnail: &quot;/img/social/team-effectiveness-preview.png&quot;
+description: &quot;Research-backed insights on psychological safety and high-performing teams&quot;
+---
+</code></pre>
+<p><strong>Result</strong>: Custom designed thumbnail with specific description</p>
+
+
+    
+</body>
+
+</html>
