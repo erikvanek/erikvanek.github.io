@@ -1,5 +1,5 @@
 ---
-title: "Research Planning"
+title: Research Planning
 date_created: 2025-04-06
 tags:
   - research
@@ -7,6 +7,8 @@ tags:
   - research-planning
   - user-research
   - product-discovery
+resources:
+  - https://www.userinterviews.com/blog/qualitative-research-sample-sizes
 ---
 
 # Research Planning
@@ -53,6 +55,9 @@ A comprehensive research plan combines multiple approaches to ensure triangulati
 		- Great workshop ideas in [this](https://dovetail.com/blog/researching-right-thing-versus-researching-thing-right/) article to kick start the research scope
 - Check a [Design Research Framework](https://www.muledesign.com/blog/design-research-framework) by Erika Hall to see what could work for you
 - Don't start with methods but with outcome - if you start with methods, you can limit your options
+## Sample size
+- There's no default sample size to follow as each project is different and saturation is reached differently in different projects
+- Therefore we should be asking question **“How many participants do I need to reach saturation?”** or even better **“How many participants do I need to feel confident in the insights I present to my stakeholders or clients?”**
 
 ## Related notes
 - [[04 - 💽 RAW/research]]

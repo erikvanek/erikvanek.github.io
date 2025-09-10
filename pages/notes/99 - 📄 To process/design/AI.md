@@ -14,8 +14,12 @@ Desining for AI
 	- designers need to get a new skillset, get to understand what the model capabilities are and think like engineers to be able to deliver people great experience based on AI models
 - go on a journey towards becoming an AI-native designer
 	- https://www.dive.club/ideas/ai-interface-trends
+- [Tim O'Reilly](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/)
+	- "In short, there is a whole world of new software to be invented, and it won’t be invented by AI alone but by human programmers using AI as a superpower"
+	- "This is not the end of programming. It is the beginning of its latest reinvention."
 ## Ethics
 - https://maggieappleton.com/ai-dark-forest
+- https://www.just-ai.net/methodology
 people
 - Austin Z Henley
 	- https://austinhenley.com/index.html
@@ -31,3 +35,7 @@ people
 	- _"Eventually, designers will need to change the way they work. We’ll need to shift from designing interfaces to designing outcomes._
 - [Design for the AI age](https://linear.app/blog/design-for-the-ai-age)
 		- *"We need to move beyond the generic chat format and reconsider what users truly require for their specific workflows. Without a workbench, we risk wielding powerful tools in empty space."* – Karri Saarinen
+
+## Roles
+- [Agent engineer](https://sierra.ai/blog/meet-the-ai-agent-engineer)
+	- *But getting those agents right is going to be a real challenge. It’s not the programming that’s so hard. It’s **deeply understanding the business processes and thinking how the new capability can transform them to take advantage** of the new capabilities*
