@@ -7,3 +7,9 @@
 # Obsidian workspace cache files
 .obsidian/workspace*
 .obsidian/cache
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env

@@ -2,6 +2,8 @@
 sources:
   - https://delvetool.com/groundedtheory
   - https://www.youtube.com/watch?v=0wcv4amjkf0&t=1333s&ab_channel=Delve%7CQualitativeDataAnalysisTips
+  - file:///home/erik/Downloads/Design_Research_Through_Practice_From_the_Lab_Fiel.pdf
+  - https://www.interaction-design.org/literature/topics/grounded-theory
 tags:
   - product-discovery
   - research
