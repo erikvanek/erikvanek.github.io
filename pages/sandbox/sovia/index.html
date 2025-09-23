@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mám rozsudek a co dál? - Informace pro odsouzené</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 970px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(56, 180, 224, 1);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        /* Main content */
+        main {
+            padding: 30px 0;
+        }
+
+        /* Work in progress notice */
+        .wip-notice {
+            background: #f8f9fa;
+            border-left: 4px solid #38b4e0;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .wip-notice h2 {
+            color: #38b4e0;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        /* Intro section */
+        .intro {
+            background: rgba(56, 180, 224, 0.05);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .intro h1 {
+            color: #38b4e0;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Main sections */
+        .section {
+            margin-bottom: 40px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #38b4e0;
+            color: white;
+            padding: 20px 30px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .section-content {
+            padding: 30px;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .checklist li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            color: #38b4e0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .checklist li strong {
+            color: #38b4e0;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(56, 180, 224, 1);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .intro h1 {
+                font-size: 24px;
+            }
+
+            .intro p {
+                font-size: 16px;
+            }
+
+            .section-header {
+                padding: 15px 20px;
+                font-size: 20px;
+            }
+
+            .section-content {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Highlight important info */
+        .important {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .important p {
+            margin: 0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Mám rozsudek a co dál?</div>
+                <div class="contact-info">
+                    <div>Pro dotazy: sovia@sovia.cz</div>
+                    <div>www.odsouzeny.cz</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="wip-notice">
+                <h2>Informace o webu</h2>
+                <p><strong>Tento web je v současné době ve vývoji.</strong> Poskytuje základní informace pro přípravu na výkon trestu odnětí svobody. Kompletní verze s podrobnými informacemi, kontakty na pomoc a dalšími nástroji bude k dispozici počátkem roku 2026.</p>
+            </div>
+
+            <div class="intro">
+                <h1>Obdrželi jste rozsudek a nevíte, jak správně nastoupit do vězení?</h1>
+                <p>Na tomto webu se dozvíte základní informace o tom, co vás čeká, co je potřeba si zařídit a jak se vyhnout dalším problémům.</p>
+            </div>
+
+            <div class="important">
+                <p>Nástup do výkonu trestu je závažným zásahem do života jedince. Správná příprava na výkon trestu je klíčová pro to, aby na vaší budoucnost měl pobyt ve vězení co nejmenší dopad. Věnujte pozornost kvalitní přípravě na nástup do věznice, sami sobě a vztahům ve svém okolí. Vrátit se vám to.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-header">Příprava na nástup</div>
+                <div class="section-content">
+                    <ul class="checklist">
+                        <li><strong>Zjistěte místo nástupu</strong><br>
+                        Výzva k nástupu přijde do 14 dnů. V nastupní věznici budete prvních 14 dnů trestu. Poté vás mohou přemístit.</li>
+                        
+                        <li><strong>Můžu oddálit nástup do trestu?</strong><br>
+                        <b>Nástup do výkonu trestu už nelze oddálit</b>. Pokud nenastoupíte včas, hrozí vám další trestní stíhání.</li>
+                        
+                        <li><strong>Připravte své okolí</strong><br>
+                        Buďte ke svému okolí upřímní. Pobyt ve vězení lze těžko utajit. Připravte rodinu na náročné období.</li>
+                        
+                        <li><strong>Co zařídit před nástupem?</strong><br>
+                        Peči o domácnost, rodinu, měsíční platby, pojištění, hypotéky. Více informací na webu poskytneme v průběhu roku 2026.</li>
+                        
+                        <li><strong>Plná moc</strong><br>
+                        Zařiďte si po dobu výkonu trestu plnou moc. Vaši blízcí vám budou moci pomáhat řešit nějaké problémy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">Den nástupu do vězení</div>
+                <div class="section-content">
+                    <ul class="checklist">
+                        <li><strong>Nastupte včas</strong><br>
+                        Pokud se při nástupu opožďte tak riskujete další problémy a zbytečné komplikace.</li>
+                        
+                        <li><strong>Vezměte si co nejvíce peněz</strong><br>
+                        Mít s sebou peníze vám usnadní pobyt ve věznici a budete si moc pořídit potřebné vybavení.</li>
+                        
+                        <li><strong>Nezapomeňte doklady</strong><br>
+                        Do věznice nastupte s občanským průkazem a kartičkou pojištěnce. Bez nich riskujete možné potíže.</li>
+                        
+                        <li><strong>Oblečení a léky</strong><br>
+                        Vezměte volnočasové oblečení bez potisku a dostatek spodního prádla. Pokud bereté nějaké léky tak ty taky.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">Pobyt ve vězení</div>
+                <div class="section-content">
+                    <ul class="checklist">
+                        <li><strong>Telefonování ven z věznice</strong><br>
+                        Lze volat 20 minut denně. Budete moci telefonovat maximálně na 10 schválených čísel. Je třeba dobíjet kredit.</li>
+                        
+                        <li><strong>Balíky</strong><br>
+                        Máte nárok na 2 balíky ročně každý o váze max 5kg. Balíky nesmí obsahovat závadný obsah.</li>
+                        
+                        <li><strong>Korespondence</strong><br>
+                        Soukromá korespondence podléhá kontrole věznice.</li>
+                        
+                        <li><strong>Závislosti</strong><br>
+                        Pokud máte problémy s návykovými látkami tak vězení může být dobrá příležitost s jejich řešením. Odborníci vám mohou s problémy pomoci.</li>
+                        
+                        <li><strong>Zapojte se do programů</strong><br>
+                        Pro rozptýlení se zapojte do asistenčních programů a přivydělejte si prací.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="important">
+                <p><strong>Kdo dál může pomoci?</strong><br>
+                Rodina, blízcí, charita, neziskové organizace, církev, psychologové.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Projekt "Mám rozsudek a co dál?" - Sovia</div>
+                <div>Kontakt: sovia@sovia.cz</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
