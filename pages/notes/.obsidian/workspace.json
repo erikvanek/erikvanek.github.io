@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Storytelling"
+              "title": "Design MOC"
             }
           }
         ]
@@ -187,6 +187,7 @@
   },
   "active": "a942e0a74d731bd0",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Grounded theory.md",
     "02 - 📩 Inbox/Value proposition canvas.md",
     "99 - 📄 To process/JTBD/Value proposition.md",
@@ -213,7 +214,6 @@
     "99 - 📄 To process/Tools 1/Design tools/Business model canvas.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
     "11 - ⏳ interim knowledge/Design/Methods/Lo-Fi_Prototyping_Methods.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Bike 🚲",
     "01 - 🤖 Second brain/Routines/eleventy-social-filters.js",
     "01 - 🤖 Second brain/scripts/url_manager.py",
