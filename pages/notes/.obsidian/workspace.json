@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC.md",
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Design MOC"
+              "title": "Cost of change"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Jako každý oddělení má svoji kuchařku",
+                "query": "cost",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -84,12 +84,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 444.5,
-    "collapsed": true
+    "width": 444.5
   },
   "right": {
     "id": "5bde52dce7d98592",
@@ -187,6 +187,9 @@
   },
   "active": "a942e0a74d731bd0",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design Industry Trends.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Storytelling.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Grounded theory.md",
     "02 - 📩 Inbox/Value proposition canvas.md",
@@ -204,7 +207,6 @@
     "99 - 📄 To process/Themes/Outcome_Driven_Product_Strategy.md",
     "99 - 📄 To process/Problem statements.md",
     "99 - 📄 To process/agile.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design Industry Trends.md",
     "11 - ⏳ interim knowledge/Design/Books/TISDD.md",
     "99 - 📄 To process/design/random.md",
     "99 - 📄 To process/Design portfolios.md",
@@ -212,8 +214,6 @@
     "99 - 📄 To process/design/AI.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Leadership/Leadership Principles.md",
     "99 - 📄 To process/Tools 1/Design tools/Business model canvas.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Development/Cost of change.md",
-    "11 - ⏳ interim knowledge/Design/Methods/Lo-Fi_Prototyping_Methods.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Bike 🚲",
     "01 - 🤖 Second brain/Routines/eleventy-social-filters.js",
     "01 - 🤖 Second brain/scripts/url_manager.py",
