@@ -12,9 +12,11 @@
     "crawl:siko:full": "MAX_PRODUCTS=null node src/crawler/siko.js",
     "crawl:all": "node src/crawler/index.js",
     "generate:embeddings": "node src/embeddings/generate.js",
+    "enrich:products": "node src/embeddings/enrichProducts.js",
     "test": "jest",
     "test:api": "node tests/test-api.js",
     "test:moodboard": "node src/llm/testMoodboard.js",
+    "test:search": "node src/embeddings/testSearch.js",
     "test:watch": "jest --watch",
     "lint": "eslint src/",
     "format": "prettier --write \"src/**/*.{js,jsx,json,md}\""
@@ -31,6 +33,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.1",
     "cheerio": "^1.0.0-rc.12",
+    "chromadb": "^3.0.17",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
