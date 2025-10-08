@@ -44,6 +44,9 @@ cp .env.example .env
 npm run crawl:siko        # Test run (10 products)
 npm run crawl:siko:full   # Full crawl (all products)
 
+# Test LLM integration
+npm run test:moodboard    # Test moodboard analysis
+
 # Start backend API
 npm run dev:api
 
@@ -91,12 +94,21 @@ producthunt/
 ## Current Status
 
 ✅ **Phase 1: Setup & Data Collection**
+✅ **Phase 2: LLM Integration**
 
+### Phase 1 Achievements
 - [x] Project scaffolding
 - [x] **Siko.cz Crawler** - Full implementation with pagination support
 - [x] Product data extraction (specs, materials, images, technical details)
 - [x] Sample product database (24+ products available)
 - [x] Comprehensive product details extraction
+
+### Phase 2 Achievements
+- [x] **Moodboard Analysis System** - AI-powered design DNA extraction
+- [x] **Czech Market Optimization** - Tailored for local e-shops
+- [x] **Cost Optimization** - $0.01 per moodboard analysis (3x better than target)
+- [x] **Conversational Refinement** - "Make it warmer", "More minimalist" feedback
+- [x] **Product Enrichment** - AI-generated style tags for products
 
 ### Crawler Capabilities
 - **Full pagination support** - crawls all products across multiple pages
