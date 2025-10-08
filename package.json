@@ -27,11 +27,16 @@
     "dependencies": {
         "@11ty/eleventy": "^3.0.0",
         "@11ty/eleventy-plugin-webc": "^0.11.2",
+        "@anthropic-ai/sdk": "^0.65.0",
+        "dotenv": "^17.2.3",
         "markdown-it-attrs": "^4.3.1",
         "markdown-it-link-attributes": "^4.0.1"
     },
     "devDependencies": {
+        "@types/node": "^24.7.0",
         "prettier": "^3.5.3"
     },
-    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+    "main": ".eleventy.js",
+    "type": "commonjs"
 }
