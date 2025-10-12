@@ -1,0 +1,58 @@
+<h1 id="quick-setup-guide">Quick Setup Guide</h1>
+<h2 id="before-you-can-use-the-extension-you-need-to">⚠️ Before you can use the extension, you need to:</h2>
+<h3 id="1-download-required-libraries-mandatory">1. Download Required Libraries (MANDATORY)</h3>
+<p><strong>JSZip - for creating ZIP files:</strong></p>
+<pre><code class="language-bash">curl -o libs/jszip.min.js https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js
+</code></pre>
+<p><strong>html2pdf - for PDF generation:</strong></p>
+<pre><code class="language-bash">curl -o libs/html2pdf.bundle.min.js https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js
+</code></pre>
+<p>Or manually:</p>
+<ol>
+<li>Visit: <a href="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js</a></li>
+<li>Save to: <code>libs/jszip.min.js</code></li>
+<li>Visit: <a href="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js</a></li>
+<li>Save to: <code>libs/html2pdf.bundle.min.js</code></li>
+</ol>
+<h3 id="2-create-icon-files-mandatory">2. Create Icon Files (MANDATORY)</h3>
+<p>The extension won't load without icons. You need 6 files:</p>
+<p><strong>Quick solution - Create solid color PNGs:</strong></p>
+<ul>
+<li>Gray icons (inactive state): <code>icon-16.png</code>, <code>icon-48.png</code>, <code>icon-128.png</code></li>
+<li>Green icons (active state): <code>icon-16-active.png</code>, <code>icon-48-active.png</code>, <code>icon-128-active.png</code></li>
+</ul>
+<p><strong>Using ImageMagick (if installed):</strong></p>
+<pre><code class="language-bash">cd icons/
+convert -size 16x16 xc:gray icon-16.png
+convert -size 16x16 xc:green icon-16-active.png
+convert -size 48x48 xc:gray icon-48.png
+convert -size 48x48 xc:green icon-48-active.png
+convert -size 128x128 xc:gray icon-128.png
+convert -size 128x128 xc:green icon-128-active.png
+</code></pre>
+<p><strong>Or manually:</strong></p>
+<ol>
+<li>Use any image editor (Preview on Mac, Paint on Windows, Photoshop, etc.)</li>
+<li>Create 6 simple PNG files with the sizes above</li>
+<li>Gray for inactive, green for active</li>
+<li>Optionally add &quot;MU&quot; text or 📥 emoji</li>
+<li>Save to the <code>icons/</code> folder</li>
+</ol>
+<h3 id="3-load-in-chrome">3. Load in Chrome</h3>
+<ol>
+<li>Open Chrome</li>
+<li>Go to <code>chrome://extensions/</code></li>
+<li>Enable &quot;Developer mode&quot; (top-right toggle)</li>
+<li>Click &quot;Load unpacked&quot;</li>
+<li>Select this <code>munier</code> folder</li>
+<li>Done! The extension should appear</li>
+</ol>
+<h2 id="testing">Testing</h2>
+<ol>
+<li>Go to: <a href="https://is.muni.cz">https://is.muni.cz</a> (log in)</li>
+<li>Navigate to any curriculum page (with <code>index.qwarp</code> in URL)</li>
+<li>Extension icon should turn green</li>
+<li>Click it and try downloading</li>
+</ol>
+<h2 id="problems">Problems?</h2>
+<p>Check <code>README.md</code> for detailed troubleshooting steps.</p>

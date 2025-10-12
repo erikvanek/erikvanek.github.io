@@ -1,0 +1,60 @@
+<h1 id="data-directory">Data Directory</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Store all scraped data, embeddings, and tracking files.</p>
+<h2 id="structure">Structure</h2>
+<pre><code>data/
+├── products/          # Scraped product catalogs (JSON)
+│   ├── siko_2025-10-08.json
+│   ├── baumax_2025-10-08.json
+│   └── ...
+├── embeddings/        # Pre-computed vector embeddings
+│   └── products.db
+├── costs.json         # API cost tracking
+└── products.db        # SQLite database (optional)
+</code></pre>
+<h2 id="files">Files</h2>
+<h3 id="products">products/</h3>
+<p>JSON files with product data from each e-shop.</p>
+<ul>
+<li>One file per crawl run</li>
+<li>Format: <code>{eshop}_{date}.json</code></li>
+<li>Contains array of product objects</li>
+</ul>
+<h3 id="embeddings">embeddings/</h3>
+<p>Vector embeddings for semantic search.</p>
+<ul>
+<li>Generated from product descriptions</li>
+<li>Used for fast similarity matching</li>
+</ul>
+<h3 id="costsjson">costs.json</h3>
+<p>Tracks all Claude API usage:</p>
+<pre><code class="language-json">[
+  {
+    &quot;model&quot;: &quot;claude-haiku-3-5-20241022&quot;,
+    &quot;inputTokens&quot;: 1234,
+    &quot;outputTokens&quot;: 567,
+    &quot;cost&quot;: 0.0012,
+    &quot;timestamp&quot;: &quot;2025-10-08T10:30:00Z&quot;
+  }
+]
+</code></pre>
+<h2 id="data-not-in-git">Data Not in Git</h2>
+<p>All files in this directory are ignored by git (see <code>.gitignore</code>).<br>
+This keeps the repository clean and protects API cost data.</p>
+<h2 id="backup-strategy">Backup Strategy</h2>
+<ul>
+<li>Products: Re-crawlable (source of truth is the e-shop)</li>
+<li>Embeddings: Re-generatable from products</li>
+<li>Costs: Important! Back up regularly</li>
+</ul>
+<h2 id="sample-data">Sample Data</h2>
+<p>For development, create sample files:</p>
+<pre><code class="language-bash"># Create sample product
+echo '[{
+  &quot;id&quot;: &quot;sample-1&quot;,
+  &quot;source&quot;: &quot;siko&quot;,
+  &quot;name&quot;: &quot;Test Product&quot;,
+  &quot;price&quot;: 1999,
+  &quot;currency&quot;: &quot;CZK&quot;
+}]' &gt; data/products/sample.json
+</code></pre>

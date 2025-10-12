@@ -1,0 +1,68 @@
+<h1 id="todo-before-extension-can-be-used">TODO - Before Extension Can Be Used</h1>
+<h2 id="critical-must-do-before-testing">Critical (Must Do Before Testing)</h2>
+<ul>
+<li>
+<p>[ ] <strong>Download JSZip library</strong></p>
+<ul>
+<li>URL: <a href="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js</a></li>
+<li>Save to: <code>libs/jszip.min.js</code></li>
+<li>Or run: <code>./setup.sh</code></li>
+</ul>
+</li>
+<li>
+<p>[ ] <strong>Download html2pdf library</strong></p>
+<ul>
+<li>URL: <a href="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js</a></li>
+<li>Save to: <code>libs/html2pdf.bundle.min.js</code></li>
+<li>Or run: <code>./setup.sh</code></li>
+</ul>
+</li>
+<li>
+<p>[ ] <strong>Create icon files</strong> (6 files needed)</p>
+<ul>
+<li><code>icons/icon-16.png</code> (16x16px, gray)</li>
+<li><code>icons/icon-16-active.png</code> (16x16px, green)</li>
+<li><code>icons/icon-48.png</code> (48x48px, gray)</li>
+<li><code>icons/icon-48-active.png</code> (48x48px, green)</li>
+<li><code>icons/icon-128.png</code> (128x128px, gray)</li>
+<li><code>icons/icon-128-active.png</code> (128x128px, green)</li>
+<li>See <a href="http://SETUP.md">SETUP.md</a> for instructions</li>
+</ul>
+</li>
+</ul>
+<h2 id="testing-checklist">Testing Checklist</h2>
+<ul>
+<li>[ ] Load extension in Chrome (<code>chrome://extensions/</code>)</li>
+<li>[ ] Navigate to IS MU curriculum page</li>
+<li>[ ] Verify icon turns green</li>
+<li>[ ] Click extension and try downloading</li>
+<li>[ ] Check that ZIP contains PDF + resources folder</li>
+<li>[ ] Verify resources are correctly named</li>
+</ul>
+<h2 id="optional-enhancements-future">Optional Enhancements (Future)</h2>
+<ul>
+<li>[ ] Better icon design (with MU branding)</li>
+<li>[ ] Add option to download only PDF (no resources)</li>
+<li>[ ] Add setting for image quality</li>
+<li>[ ] Support for batch downloads (multiple curricula)</li>
+<li>[ ] Better handling of .m3u8 streams (convert to MP3/MP4)</li>
+<li>[ ] Add option to generate EPUB instead of PDF</li>
+<li>[ ] Dark mode for popup UI</li>
+<li>[ ] Add statistics (resources count, file sizes)</li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>Audio/video streams (.m3u8) are linked in PDF, not embedded</li>
+<li>Very large curricula might cause memory issues</li>
+<li>Some resources might fail to download (CORS, authentication)</li>
+<li>PDF generation is slow for content-heavy curricula</li>
+</ul>
+<h2 id="distribution">Distribution</h2>
+<p>When ready to share with classmates:</p>
+<ul>
+<li>[ ] Test thoroughly on different curricula</li>
+<li>[ ] Create a tutorial video/screenshots</li>
+<li>[ ] Package as ZIP with all dependencies</li>
+<li>[ ] Write simple installation guide for non-technical users</li>
+<li>[ ] Host on your GitHub Pages site</li>
+</ul>

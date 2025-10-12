@@ -1,0 +1,626 @@
+<h1 id="interior-design-product-discovery-api">Interior Design Product Discovery API</h1>
+<blockquote>
+<p>RESTful API for AI-powered product matching and moodboard analysis</p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p>The Interior Design Product Discovery API provides a complete backend service for analyzing moodboards, extracting design DNA, and finding matching products from Czech e-commerce sites. Built with Express.js and integrated with advanced AI capabilities.</p>
+<h2 id="base-url">Base URL</h2>
+<pre><code>http://localhost:3000/api
+</code></pre>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code class="language-bash"># Start the API server
+npm run start:api
+
+# Test all endpoints
+npm run test:api
+
+# Development with auto-reload
+npm run dev:api
+</code></pre>
+<h2 id="authentication">Authentication</h2>
+<p>Currently no authentication required for MVP. All endpoints are publicly accessible.</p>
+<h2 id="sessions">Sessions</h2>
+<p>The API uses session-based state management to track user interactions, design DNA, and search history. Sessions are stored in memory (use Redis for production).</p>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="health-check">Health Check</h3>
+<p><strong>GET</strong> <code>/health</code></p>
+<p>Check server status and service availability.</p>
+<pre><code class="language-bash">curl http://localhost:3000/api/health
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;healthy&quot;,
+  &quot;timestamp&quot;: &quot;2025-10-08T20:47:09.578Z&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;services&quot;: {
+    &quot;llm&quot;: &quot;operational&quot;,
+    &quot;embeddings&quot;: &quot;operational&quot;,
+    &quot;search&quot;: &quot;operational&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="create-session">Create Session</h3>
+<p><strong>POST</strong> <code>/session</code></p>
+<p>Create a new user session for state management.</p>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/api/session
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;sessionId&quot;: &quot;session_1759956429584_nfyrxmquk&quot;,
+  &quot;session&quot;: {
+    &quot;id&quot;: &quot;session_1759956429584_nfyrxmquk&quot;,
+    &quot;createdAt&quot;: &quot;2025-10-08T20:47:09.584Z&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="analyze-moodboard">Analyze Moodboard</h3>
+<p><strong>POST</strong> <code>/analyze-moodboard</code></p>
+<p>Analyze an uploaded moodboard image or URL to extract design DNA.</p>
+<p><strong>Content-Type:</strong> <code>multipart/form-data</code> or <code>application/json</code></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sessionId</code> (required): Session identifier</li>
+<li><code>moodboard</code> (file): Image file upload (max 10MB)</li>
+<li><code>imageUrl</code> (string): Image URL (alternative to file upload)</li>
+<li><code>projectBrief</code> (string): Project description and context</li>
+<li><code>constraints</code> (string): JSON array of constraints</li>
+</ul>
+<p><strong>Example with URL:</strong></p>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/api/analyze-moodboard \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;sessionId&quot;: &quot;session_123&quot;,
+    &quot;imageUrl&quot;: &quot;https://example.com/moodboard.jpg&quot;,
+    &quot;projectBrief&quot;: &quot;Modern minimalist bathroom for Prague apartment&quot;,
+    &quot;constraints&quot;: &quot;[\&quot;budget: 200000 CZK\&quot;, \&quot;style: modern\&quot;]&quot;
+  }'
+</code></pre>
+<p><strong>Example with file upload:</strong></p>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/api/analyze-moodboard \
+  -F &quot;sessionId=session_123&quot; \
+  -F &quot;moodboard=@/path/to/moodboard.jpg&quot; \
+  -F &quot;projectBrief=Modern minimalist bathroom&quot; \
+  -F &quot;constraints=[\&quot;budget: 200000 CZK\&quot;]&quot;
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;sessionId&quot;: &quot;session_123&quot;,
+  &quot;designDNA&quot;: {
+    &quot;styleAnalysis&quot;: {
+      &quot;primary&quot;: &quot;moderní&quot;,
+      &quot;secondary&quot;: &quot;minimalistický&quot;,
+      &quot;confidence&quot;: 0.85
+    },
+    &quot;colorPalette&quot;: [
+      {
+        &quot;name&quot;: &quot;bílá&quot;,
+        &quot;hex&quot;: &quot;#FFFFFF&quot;,
+        &quot;prominence&quot;: 0.5
+      },
+      {
+        &quot;name&quot;: &quot;světle šedá&quot;,
+        &quot;hex&quot;: &quot;#E8E8E8&quot;,
+        &quot;prominence&quot;: 0.3
+      }
+    ],
+    &quot;materials&quot;: [&quot;keramika&quot;, &quot;kov&quot;, &quot;dřevo&quot;],
+    &quot;roomContext&quot;: {
+      &quot;type&quot;: &quot;koupelna&quot;,
+      &quot;size&quot;: &quot;střední&quot;
+    },
+    &quot;mood&quot;: {
+      &quot;temperature&quot;: &quot;neutrální&quot;,
+      &quot;atmosphere&quot;: [&quot;elegantní&quot;, &quot;čistý&quot;],
+      &quot;brightness&quot;: &quot;světlý&quot;
+    },
+    &quot;searchKeywords&quot;: {
+      &quot;czech&quot;: [&quot;moderní&quot;, &quot;bílý&quot;, &quot;keramika&quot;],
+      &quot;english&quot;: [&quot;modern&quot;, &quot;white&quot;, &quot;ceramic&quot;]
+    },
+    &quot;meta&quot;: {
+      &quot;extractedAt&quot;: &quot;2025-10-08T20:47:01.495Z&quot;,
+      &quot;cost&quot;: 0.0107,
+      &quot;model&quot;: &quot;claude-sonnet-4-20250514&quot;
+    }
+  },
+  &quot;cost&quot;: 0.0107,
+  &quot;sessionTotalCost&quot;: 0.0107
+}
+</code></pre>
+<hr>
+<h3 id="search-products">Search Products</h3>
+<p><strong>POST</strong> <code>/search-products</code></p>
+<p>Find products matching the design DNA with optional constraints.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sessionId</code> (required): Session identifier</li>
+<li><code>designDNA</code> (object): Design DNA to search with (uses session DNA if not provided)</li>
+<li><code>constraints</code> (object): Search constraints</li>
+<li><code>topK</code> (number): Maximum results to return (default: 20)</li>
+<li><code>includeReranking</code> (boolean): Enable intelligent re-ranking (default: true)</li>
+</ul>
+<p><strong>Constraint Options:</strong></p>
+<pre><code class="language-json">{
+  &quot;roomType&quot;: &quot;koupelna&quot;,
+  &quot;styles&quot;: [&quot;minimalistický&quot;, &quot;moderní&quot;],
+  &quot;materials&quot;: [&quot;keramika&quot;, &quot;kov&quot;],
+  &quot;minPrice&quot;: 3000,
+  &quot;maxPrice&quot;: 10000
+}
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/api/search-products \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;sessionId&quot;: &quot;session_123&quot;,
+    &quot;constraints&quot;: {
+      &quot;roomType&quot;: &quot;koupelna&quot;,
+      &quot;materials&quot;: [&quot;keramika&quot;],
+      &quot;styles&quot;: [&quot;moderní&quot;]
+    },
+    &quot;topK&quot;: 10,
+    &quot;includeReranking&quot;: true
+  }'
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;sessionId&quot;: &quot;session_123&quot;,
+  &quot;searchResults&quot;: {
+    &quot;query&quot;: {
+      &quot;designDNA&quot;: &quot;...&quot;,
+      &quot;constraints&quot;: {...},
+      &quot;searchQuery&quot;: &quot;Style: moderní...&quot;
+    },
+    &quot;results&quot;: [
+      {
+        &quot;id&quot;: &quot;product_1&quot;,
+        &quot;name&quot;: &quot;WC závěsné SAT Brevis včetně prkénka softclose&quot;,
+        &quot;similarity&quot;: 0.759,
+        &quot;finalScore&quot;: 1.159,
+        &quot;bonusScore&quot;: 0.4,
+        &quot;reasons&quot;: {
+          &quot;styleMatch&quot;: true,
+          &quot;roomMatch&quot;: true,
+          &quot;colorMatches&quot;: 2
+        },
+        &quot;metadata&quot;: {
+          &quot;source&quot;: &quot;siko&quot;,
+          &quot;price&quot;: &quot;5 290 Kč&quot;,
+          &quot;url&quot;: &quot;https://www.siko.cz/...&quot;,
+          &quot;materials&quot;: [&quot;keramika&quot;, &quot;sanitární&quot;, &quot;bílá&quot;],
+          &quot;aiEnrichment&quot;: {
+            &quot;styleTags&quot;: [&quot;minimalistický&quot;, &quot;moderní&quot;],
+            &quot;roomTypes&quot;: [&quot;koupelna&quot;, &quot;toaleta&quot;],
+            &quot;colorTags&quot;: [&quot;bílá&quot;, &quot;neutrální&quot;]
+          }
+        },
+        &quot;explanation&quot;: {
+          &quot;product&quot;: {
+            &quot;name&quot;: &quot;WC závěsné SAT Brevis...&quot;,
+            &quot;price&quot;: &quot;5 290 Kč&quot;,
+            &quot;url&quot;: &quot;https://www.siko.cz/...&quot;
+          },
+          &quot;overallScore&quot;: 115.9,
+          &quot;confidence&quot;: &quot;high&quot;,
+          &quot;reasons&quot;: [
+            {
+              &quot;type&quot;: &quot;similarity&quot;,
+              &quot;description&quot;: &quot;75.9% vector similarity to your design vision&quot;
+            },
+            {
+              &quot;type&quot;: &quot;style&quot;,
+              &quot;description&quot;: &quot;Style matches: moderní&quot;
+            },
+            {
+              &quot;type&quot;: &quot;room&quot;,
+              &quot;description&quot;: &quot;Perfect for: koupelna&quot;
+            }
+          ]
+        }
+      }
+    ],
+    &quot;metadata&quot;: {
+      &quot;totalEmbeddings&quot;: 5,
+      &quot;beforeConstraints&quot;: 5,
+      &quot;afterConstraints&quot;: 5,
+      &quot;topK&quot;: 10,
+      &quot;avgSimilarity&quot;: 0.76,
+      &quot;avgFinalScore&quot;: 1.13,
+      &quot;searchedAt&quot;: &quot;2025-10-08T20:47:09.607Z&quot;
+    },
+    &quot;totalResults&quot;: 5
+  },
+  &quot;sessionSearchCount&quot;: 1
+}
+</code></pre>
+<hr>
+<h3 id="refine-search">Refine Search</h3>
+<p><strong>POST</strong> <code>/refine-search</code></p>
+<p>Refine the search results based on conversational feedback.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sessionId</code> (required): Session identifier</li>
+<li><code>feedback</code> (required): User feedback text</li>
+<li><code>previousResults</code> (optional): Previous search results for context</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/api/refine-search \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;sessionId&quot;: &quot;session_123&quot;,
+    &quot;feedback&quot;: &quot;Make it warmer and more cozy&quot;
+  }'
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;sessionId&quot;: &quot;session_123&quot;,
+  &quot;refinedDNA&quot;: {
+    &quot;styleAnalysis&quot;: {
+      &quot;primary&quot;: &quot;útulný minimalistický&quot;,
+      &quot;secondary&quot;: &quot;skandinávský&quot;,
+      &quot;confidence&quot;: 0.8
+    },
+    &quot;colorPalette&quot;: [
+      {
+        &quot;name&quot;: &quot;teplá bílá&quot;,
+        &quot;hex&quot;: &quot;#FFF8E7&quot;,
+        &quot;prominence&quot;: 0.4
+      },
+      {
+        &quot;name&quot;: &quot;dřevo&quot;,
+        &quot;hex&quot;: &quot;#D2B48C&quot;,
+        &quot;prominence&quot;: 0.3
+      }
+    ],
+    &quot;mood&quot;: {
+      &quot;temperature&quot;: &quot;teplý&quot;,
+      &quot;atmosphere&quot;: [&quot;útulný&quot;, &quot;měkký&quot;],
+      &quot;brightness&quot;: &quot;světlý&quot;
+    },
+    &quot;meta&quot;: {
+      &quot;refinedAt&quot;: &quot;2025-10-08T20:47:18.870Z&quot;,
+      &quot;refinementCost&quot;: 0.0044,
+      &quot;userFeedback&quot;: &quot;Make it warmer and more cozy&quot;
+    }
+  },
+  &quot;searchResults&quot;: {
+    &quot;results&quot;: [...],
+    &quot;metadata&quot;: {...}
+  },
+  &quot;cost&quot;: 0.0044,
+  &quot;sessionTotalCost&quot;: 0.0151
+}
+</code></pre>
+<hr>
+<h3 id="get-product-details">Get Product Details</h3>
+<p><strong>GET</strong> <code>/products/:productId</code></p>
+<p>Get detailed information about a specific product.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>productId</code> (required): Product identifier</li>
+<li><code>sessionId</code> (query): Session ID for personalized explanations</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">curl &quot;http://localhost:3000/api/products/product_1?sessionId=session_123&quot;
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;product&quot;: {
+    &quot;id&quot;: &quot;product_1&quot;,
+    &quot;name&quot;: &quot;WC závěsné SAT Brevis včetně prkénka softclose&quot;,
+    &quot;text&quot;: &quot;Product description with specifications...&quot;,
+    &quot;metadata&quot;: {
+      &quot;source&quot;: &quot;siko&quot;,
+      &quot;price&quot;: &quot;5 290 Kč&quot;,
+      &quot;imageUrl&quot;: &quot;https://api.siko.cz/medias/...&quot;,
+      &quot;url&quot;: &quot;https://www.siko.cz/...&quot;,
+      &quot;materials&quot;: [&quot;keramika&quot;, &quot;sanitární&quot;, &quot;bílá&quot;, &quot;matná&quot;],
+      &quot;specifications&quot;: {
+        &quot;Výška&quot;: &quot;...&quot;,
+        &quot;Barva&quot;: &quot;popisná&quot;,
+        &quot;Značka&quot;: &quot;SATKategorie:Závěsné WC mísy&quot;
+      },
+      &quot;aiEnrichment&quot;: {
+        &quot;styleTags&quot;: [&quot;minimalistický&quot;, &quot;moderní&quot;],
+        &quot;roomTypes&quot;: [&quot;koupelna&quot;, &quot;moderní koupelna&quot;],
+        &quot;colorTags&quot;: [&quot;bílá&quot;, &quot;neutrální&quot;],
+        &quot;enrichedAt&quot;: &quot;2025-10-08T20:39:34.587Z&quot;
+      }
+    },
+    &quot;explanation&quot;: {
+      &quot;overallScore&quot;: 115.9,
+      &quot;confidence&quot;: &quot;high&quot;,
+      &quot;reasons&quot;: [...]
+    }
+  }
+}
+</code></pre>
+<hr>
+<h3 id="get-session-information">Get Session Information</h3>
+<p><strong>GET</strong> <code>/session/:sessionId</code></p>
+<p>Retrieve session information and summary.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">curl http://localhost:3000/api/session/session_123
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;session&quot;: {
+    &quot;id&quot;: &quot;session_123&quot;,
+    &quot;createdAt&quot;: &quot;2025-10-08T20:47:09.584Z&quot;,
+    &quot;updatedAt&quot;: &quot;2025-10-08T20:47:36.256Z&quot;,
+    &quot;hasDesignDNA&quot;: true,
+    &quot;searchCount&quot;: 4,
+    &quot;conversationCount&quot;: 4,
+    &quot;totalCost&quot;: 0.0246,
+    &quot;designDNA&quot;: {
+      &quot;style&quot;: &quot;útulný minimalistický&quot;,
+      &quot;colors&quot;: [&quot;teplá bílá&quot;, &quot;dřevo&quot;, &quot;světle šedá&quot;],
+      &quot;materials&quot;: [&quot;keramika&quot;, &quot;kov&quot;, &quot;dřevo&quot;],
+      &quot;roomType&quot;: &quot;koupelna&quot;
+    }
+  }
+}
+</code></pre>
+<hr>
+<h3 id="system-statistics">System Statistics</h3>
+<p><strong>GET</strong> <code>/stats</code></p>
+<p>Get system-wide statistics and performance metrics.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">curl http://localhost:3000/api/stats
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;stats&quot;: {
+    &quot;sessions&quot;: {
+      &quot;total&quot;: 1,
+      &quot;active&quot;: 1
+    },
+    &quot;costs&quot;: {
+      &quot;total&quot;: 0.0246,
+      &quot;average&quot;: 0.0246
+    },
+    &quot;searches&quot;: {
+      &quot;total&quot;: 1,
+      &quot;average&quot;: 1.0
+    },
+    &quot;products&quot;: {
+      &quot;totalProducts&quot;: 5,
+      &quot;error&quot;: null
+    },
+    &quot;llmStats&quot;: {
+      &quot;total&quot;: 0.0246,
+      &quot;tokens&quot;: {
+        &quot;input&quot;: 3542,
+        &quot;output&quot;: 1847,
+        &quot;cached&quot;: 0
+      },
+      &quot;calls&quot;: 4
+    }
+  }
+}
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<p>All endpoints return consistent error responses:</p>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Error description&quot;
+}
+</code></pre>
+<p><strong>HTTP Status Codes:</strong></p>
+<ul>
+<li><code>200</code> - Success</li>
+<li><code>400</code> - Bad Request (missing parameters, invalid data)</li>
+<li><code>404</code> - Not Found (invalid endpoints, missing resources)</li>
+<li><code>500</code> - Internal Server Error</li>
+</ul>
+<p><strong>Common Errors:</strong></p>
+<ol>
+<li><strong>Missing Session ID</strong></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Session ID is required&quot;
+}
+</code></pre>
+<ol start="2">
+<li><strong>No Design DNA</strong></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Design DNA not found. Please analyze a moodboard first.&quot;
+}
+</code></pre>
+<ol start="3">
+<li><strong>File Upload Error</strong></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;File upload error: Only image files are allowed&quot;
+}
+</code></pre>
+<ol start="4">
+<li><strong>Product Not Found</strong></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Product not found&quot;
+}
+</code></pre>
+<h2 id="rate-limiting">Rate Limiting</h2>
+<p>Currently no rate limiting implemented (suitable for MVP). Consider implementing rate limiting for production:</p>
+<ul>
+<li>100 requests per minute per IP</li>
+<li>1000 requests per hour per session</li>
+<li>File uploads limited to 10MB</li>
+</ul>
+<h2 id="file-upload-specifications">File Upload Specifications</h2>
+<p><strong>Moodboard Image Requirements:</strong></p>
+<ul>
+<li><strong>Max file size:</strong> 10MB</li>
+<li><strong>Supported formats:</strong> JPG, JPEG, PNG, GIF, WebP</li>
+<li><strong>Recommended size:</strong> 1000x1000px minimum</li>
+<li><strong>Quality:</strong> High resolution for better analysis</li>
+</ul>
+<p><strong>Upload Methods:</strong></p>
+<ol>
+<li><strong>Multipart form upload</strong> - for direct file upload</li>
+<li><strong>URL reference</strong> - for images hosted elsewhere</li>
+</ol>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<p>Based on test results with 5 products:</p>
+<p><strong>Response Times:</strong></p>
+<ul>
+<li>Moodboard analysis: ~8-10 seconds</li>
+<li>Product search: &lt;25ms</li>
+<li>Conversational refinement: ~9-10 seconds</li>
+<li>Product details: &lt;5ms</li>
+<li>Session operations: &lt;5ms</li>
+</ul>
+<p><strong>Throughput:</strong></p>
+<ul>
+<li>Product searches: 357 requests/second</li>
+<li>File uploads: Limited by analysis time (~6 per minute)</li>
+</ul>
+<p><strong>Costs:</strong></p>
+<ul>
+<li>Moodboard analysis: $0.01 per image</li>
+<li>Conversational refinement: $0.004 per refinement</li>
+<li>Product search: Free (local processing)</li>
+</ul>
+<h2 id="development">Development</h2>
+<h3 id="local-development">Local Development</h3>
+<pre><code class="language-bash"># Install dependencies
+npm install
+
+# Start development server with auto-reload
+npm run dev:api
+
+# Run comprehensive tests
+npm run test:api
+
+# Generate fresh embeddings if needed
+npm run generate:embeddings
+</code></pre>
+<h3 id="environment-variables">Environment Variables</h3>
+<pre><code class="language-bash"># Required
+ANTHROPIC_API_KEY=your_claude_api_key
+
+# Optional
+PORT=3000
+NODE_ENV=development
+MAX_PRODUCTS=null
+</code></pre>
+<h3 id="testing">Testing</h3>
+<p>The API includes a comprehensive test suite covering:</p>
+<ul>
+<li>Health checks and connectivity</li>
+<li>Session management</li>
+<li>Moodboard analysis (with real images)</li>
+<li>Product search with constraints</li>
+<li>Conversational refinement</li>
+<li>Product details retrieval</li>
+<li>Error handling</li>
+<li>Performance benchmarks</li>
+</ul>
+<p>Run tests:</p>
+<pre><code class="language-bash">npm run test:api
+</code></pre>
+<h3 id="production-considerations">Production Considerations</h3>
+<p>For production deployment:</p>
+<ol>
+<li><strong>Database:</strong> Replace in-memory sessions with Redis/PostgreSQL</li>
+<li><strong>File Storage:</strong> Use cloud storage (AWS S3, Google Cloud Storage)</li>
+<li><strong>Rate Limiting:</strong> Implement API rate limiting</li>
+<li><strong>Authentication:</strong> Add user authentication and authorization</li>
+<li><strong>HTTPS:</strong> Enable SSL/TLS encryption</li>
+<li><strong>Monitoring:</strong> Add logging, metrics, and health monitoring</li>
+<li><strong>Caching:</strong> Cache search results and embeddings</li>
+<li><strong>Load Balancing:</strong> Scale horizontally with multiple instances</li>
+</ol>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="frontend-integration">Frontend Integration</h3>
+<pre><code class="language-javascript">// Create session
+const sessionResponse = await fetch('/api/session', {
+  method: 'POST'
+});
+const { sessionId } = await sessionResponse.json();
+
+// Upload and analyze moodboard
+const formData = new FormData();
+formData.append('sessionId', sessionId);
+formData.append('moodboard', fileInput.files[0]);
+formData.append('projectBrief', 'Modern bathroom renovation');
+
+const analysisResponse = await fetch('/api/analyze-moodboard', {
+  method: 'POST',
+  body: formData
+});
+const { designDNA } = await analysisResponse.json();
+
+// Search for products
+const searchResponse = await fetch('/api/search-products', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    sessionId,
+    constraints: { roomType: 'koupelna' },
+    topK: 20
+  })
+});
+const { searchResults } = await searchResponse.json();
+</code></pre>
+<h3 id="webhook-integration">Webhook Integration</h3>
+<pre><code class="language-javascript">// Process results with webhook
+app.post('/webhook/search-complete', (req, res) =&gt; {
+  const { sessionId, searchResults } = req.body;
+
+  // Process search results
+  const topProducts = searchResults.results.slice(0, 5);
+
+  // Send notification, update UI, etc.
+  console.log(`Found ${topProducts.length} products for session ${sessionId}`);
+
+  res.json({ success: true });
+});
+</code></pre>
+<h2 id="changelog">Changelog</h2>
+<h3 id="v100-2025-10-08">v1.0.0 (2025-10-08)</h3>
+<ul>
+<li>Initial API release</li>
+<li>Complete moodboard analysis pipeline</li>
+<li>Product search with AI-enhanced matching</li>
+<li>Conversational refinement system</li>
+<li>Session management</li>
+<li>Comprehensive error handling</li>
+<li>File upload support</li>
+<li>System statistics endpoint</li>
+</ul>
+<hr>
+<h2 id="support">Support</h2>
+<p>For API support and questions:</p>
+<ul>
+<li>Check the test suite for usage examples</li>
+<li>Review error messages for troubleshooting</li>
+<li>Ensure all dependencies are installed</li>
+<li>Verify embeddings are generated: <code>npm run generate:embeddings</code></li>
+</ul>
+<p><strong>Quick troubleshooting:</strong></p>
+<pre><code class="language-bash"># Check server health
+curl http://localhost:3000/api/health
+
+# Verify embeddings
+ls data/embeddings/
+
+# Test with sample session
+npm run test:api
+</code></pre>
+<p>Last updated: 2025-10-08</p>
