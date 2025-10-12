@@ -1,0 +1,228 @@
+<h1 id="next-steps-start-here">🎯 NEXT STEPS - Start Here!</h1>
+<p><strong>Current Status:</strong> Phase 1 - Foundation (20% complete)<br>
+<strong>Updated:</strong> 2025-10-08<br>
+<strong>Next Milestone:</strong> Working Siko crawler with 100 products</p>
+<hr>
+<h2 id="do-these-3-things-first">⚡ Do These 3 Things First</h2>
+<h3 id="1-install-amp-verify-setup-5-min">1. Install &amp; Verify Setup (5 min)</h3>
+<pre><code class="language-bash">cd /Users/erik/dev/erikvanek.github.io/pages/plaAIground/producthunt
+npm install
+cp .env.example .env
+# Edit .env - add your ANTHROPIC_API_KEY
+</code></pre>
+<h3 id="2-research-a-hrefhttpsikoczsikocza-structure-15-min">2. Research <a href="http://Siko.cz">Siko.cz</a> Structure (15 min)</h3>
+<p>Visit: <a href="https://www.siko.cz/koupelny/sanitarni-keramika">https://www.siko.cz/koupelny/sanitarni-keramika</a></p>
+<p><strong>Document in a new file: <code>docs/siko-structure.md</code></strong></p>
+<pre><code class="language-markdown"># Siko.cz HTML Structure
+
+## Product Listing Page
+- URL pattern: ...
+- Products per page: ...
+- Product card selector: ...
+- Pagination selector: ...
+
+## Product Detail Page
+- Title selector: ...
+- Price selector: ...
+- Image selector: ...
+- Dimensions location: ...
+- Description selector: ...
+</code></pre>
+<h3 id="3-implement-basic-crawler-30-60-min">3. Implement Basic Crawler (30-60 min)</h3>
+<p>Edit: <code>src/crawler/siko.js</code></p>
+<p><strong>Minimum viable extraction:</strong></p>
+<ul>
+<li>✅ Product name</li>
+<li>✅ Price (in CZK)</li>
+<li>✅ Main image URL</li>
+<li>✅ Product page URL</li>
+</ul>
+<p><strong>Save 10-20 products to test</strong> before crawling more!</p>
+<hr>
+<h2 id="development-loop">🔄 Development Loop</h2>
+<h3 id="iteration-1-extract-5-products">Iteration 1: Extract 5 Products</h3>
+<pre><code class="language-bash"># Edit siko.js - extract from first page only
+# Run crawler
+npm run crawl:siko
+
+# Check output
+cat data/products/siko_*.json
+
+# Verify:
+# - All required fields present?
+# - Data looks correct?
+# - Images load?
+</code></pre>
+<h3 id="iteration-2-add-product-details">Iteration 2: Add Product Details</h3>
+<pre><code class="language-bash"># Visit product pages
+# Extract detailed info:
+# - Dimensions
+# - Materials  
+# - Full description
+
+# Test with 5 products again
+npm run crawl:siko
+</code></pre>
+<h3 id="iteration-3-scale-up">Iteration 3: Scale Up</h3>
+<pre><code class="language-bash"># Add pagination
+# Crawl 50-100 products
+# Monitor for issues:
+# - Rate limiting?
+# - Missing data?
+# - Errors?
+</code></pre>
+<hr>
+<h2 id="phase-1-checklist">📋 Phase 1 Checklist</h2>
+<h3 id="week-1-data-collection">Week 1: Data Collection</h3>
+<ul>
+<li>[ ] <a href="http://Siko.cz">Siko.cz</a> HTML structure documented</li>
+<li>[ ] Basic crawler extracts 10 products</li>
+<li>[ ] Full crawler extracts 100+ products</li>
+<li>[ ] Product schema validated</li>
+<li>[ ] Sample dataset created</li>
+</ul>
+<h3 id="data-quality-checks">Data Quality Checks</h3>
+<ul>
+<li>[ ] All products have names</li>
+<li>[ ] Prices are numeric (not strings)</li>
+<li>[ ] At least 1 image per product</li>
+<li>[ ] Product URLs work</li>
+<li>[ ] No duplicate products</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>[ ] <code>docs/siko-structure.md</code> created</li>
+<li>[ ] Extraction logic documented</li>
+<li>[ ] Known issues listed</li>
+<li>[ ] Sample products saved</li>
+</ul>
+<hr>
+<h2 id="decision-points">🚦 Decision Points</h2>
+<h3 id="after-50-products-crawled">After 50 Products Crawled</h3>
+<p><strong>Ask yourself:</strong></p>
+<ul>
+<li>Is the data quality good? (&gt;90% complete records)</li>
+<li>Are extraction selectors reliable?</li>
+<li>Do I need more fields? (3D models, ratings?)</li>
+</ul>
+<p><strong>Decision:</strong></p>
+<ul>
+<li>✅ Good quality → Continue to 100+ products</li>
+<li>❌ Poor quality → Fix selectors, re-crawl</li>
+</ul>
+<h3 id="after-100-products-crawled">After 100 Products Crawled</h3>
+<p><strong>Ask yourself:</strong></p>
+<ul>
+<li>Do I have enough variety? (different price ranges, styles)</li>
+<li>Should I add more categories? (tiles, lighting)</li>
+<li>Ready to test LLM integration?</li>
+</ul>
+<p><strong>Decision:</strong></p>
+<ul>
+<li>✅ Ready → Move to Phase 2 (LLM Integration)</li>
+<li>❌ Not ready → Expand categories or fix data</li>
+</ul>
+<hr>
+<h2 id="phase-2-preview-dont-start-yet">🎨 Phase 2 Preview (Don't Start Yet!)</h2>
+<p><strong>Once you have 100+ products:</strong></p>
+<h3 id="test-llm-analysis">Test LLM Analysis</h3>
+<pre><code class="language-javascript">// Create: tests/test-moodboard.js
+import client from '../src/llm/client.js';
+
+const result = await client.sendMessage({
+  prompt: `Analyze this design style: 
+    - White ceramic
+    - Chrome fixtures  
+    - Minimalist
+    
+    Extract: style tags, colors, materials`,
+  model: 'haiku'
+});
+
+console.log(result.text);
+</code></pre>
+<h3 id="generate-product-embeddings">Generate Product Embeddings</h3>
+<pre><code class="language-bash"># Will implement in Phase 2:
+npm run generate:embeddings
+</code></pre>
+<hr>
+<h2 id="tips-for-success">💡 Tips for Success</h2>
+<h3 id="when-writing-code">When Writing Code</h3>
+<ol>
+<li><strong>Start simple</strong> - Get 5 products working before scaling</li>
+<li><strong>Test frequently</strong> - Run after every change</li>
+<li><strong>Log everything</strong> - Use console.log liberally</li>
+<li><strong>Handle errors</strong> - Wrap in try/catch</li>
+</ol>
+<h3 id="when-crawling">When Crawling</h3>
+<ol>
+<li><strong>Be respectful</strong> - Add delays (1000ms minimum)</li>
+<li><strong>Save progress</strong> - Write to file incrementally</li>
+<li><strong>Handle failures</strong> - Some products will fail, that's ok</li>
+<li><strong>Validate data</strong> - Check output makes sense</li>
+</ol>
+<h3 id="when-stuck">When Stuck</h3>
+<ol>
+<li><strong>Read the docs</strong> - Check <a href="http://QUICKSTART.md">QUICKSTART.md</a></li>
+<li><strong>Check examples</strong> - Look at other crawlers</li>
+<li><strong>Test smaller</strong> - Reduce scope, find the issue</li>
+<li><strong>Ask for help</strong> - Document what you tried</li>
+</ol>
+<hr>
+<h2 id="pivot-options">🔀 Pivot Options</h2>
+<h3 id="if-crawling-is-too-hard">If Crawling is Too Hard</h3>
+<p><strong>Option A:</strong> Start with manual entry</p>
+<ul>
+<li>Create 20 products by hand</li>
+<li>Test LLM matching logic</li>
+<li>Come back to automation later</li>
+</ul>
+<p><strong>Option B:</strong> Use public APIs</p>
+<ul>
+<li>Check if Siko has an API</li>
+<li>Use RSS feeds if available</li>
+<li>Parse sitemaps</li>
+</ul>
+<h3 id="if-a-hrefhttpsikoczsikocza-doesnt-work">If <a href="http://Siko.cz">Siko.cz</a> Doesn't Work</h3>
+<p><strong>Option A:</strong> Try different e-shop</p>
+<ul>
+<li>Baumax might be simpler</li>
+<li>XXXLutz might have better structure</li>
+</ul>
+<p><strong>Option B:</strong> Buy sample data</p>
+<ul>
+<li>Find product catalogs</li>
+<li>Use open datasets</li>
+<li>Scrape easier sites first</li>
+</ul>
+<hr>
+<h2 id="success-metrics">📊 Success Metrics</h2>
+<h3 id="phase-1-complete-when">Phase 1 Complete When:</h3>
+<ul>
+<li>✅ 100+ products in database</li>
+<li>✅ &gt;90% data completeness</li>
+<li>✅ Schema validated</li>
+<li>✅ Sample products tested</li>
+<li>✅ Ready for LLM integration</li>
+</ul>
+<h3 id="target-timeline">Target Timeline:</h3>
+<ul>
+<li><strong>Iteration 1:</strong> Day 1 (5 products)</li>
+<li><strong>Iteration 2:</strong> Day 2-3 (50 products)</li>
+<li><strong>Iteration 3:</strong> Day 4-5 (100+ products)</li>
+<li><strong>Phase 1 Done:</strong> End of Week 1</li>
+</ul>
+<hr>
+<h2 id="your-next-actions-right-now">🎯 Your Next Actions (Right Now!)</h2>
+<ol>
+<li>[ ] Run <code>npm install</code></li>
+<li>[ ] Add API key to <code>.env</code></li>
+<li>[ ] Visit <a href="http://Siko.cz">Siko.cz</a> - take notes</li>
+<li>[ ] Write HTML structure doc</li>
+<li>[ ] Extract your first 5 products</li>
+</ol>
+<p><strong>Time to start:</strong> ~1 hour<br>
+<strong>Reward:</strong> Working prototype foundation!</p>
+<hr>
+<p>Good luck! 🚀</p>
+<p><strong>Remember:</strong> Perfect is the enemy of done. Get something working, then improve it!</p>

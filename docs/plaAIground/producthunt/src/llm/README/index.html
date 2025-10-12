@@ -1,0 +1,176 @@
+<h1 id="llm-integration-module">LLM Integration Module</h1>
+<p>This module handles all interactions with the Claude API, including cost tracking and convenience methods.</p>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Add your API key to <code>.env</code>:</li>
+</ol>
+<pre><code class="language-bash">ANTHROPIC_API_KEY=your_key_here
+</code></pre>
+<ol start="2">
+<li>Import the client:</li>
+</ol>
+<pre><code class="language-javascript">import client from './src/llm/client.js';
+</code></pre>
+<h2 id="usage-examples">Usage Examples</h2>
+<h3 id="simple-message">Simple Message</h3>
+<pre><code class="language-javascript">const result = await client.sendMessage({
+  prompt: 'What is minimalist design?',
+  model: 'haiku',  // or 'sonnet'
+  maxTokens: 500
+});
+
+console.log(result.text);
+console.log('Cost: $' + result.cost);
+</code></pre>
+<h3 id="with-system-prompt">With System Prompt</h3>
+<pre><code class="language-javascript">const result = await client.sendMessage({
+  prompt: 'Analyze this moodboard...',
+  system: 'You are an interior design expert specializing in Czech market products.',
+  model: 'sonnet',
+  maxTokens: 1000
+});
+</code></pre>
+<h3 id="with-prompt-caching-saves-costs-on-repeated-system-prompts">With Prompt Caching (saves costs on repeated system prompts)</h3>
+<pre><code class="language-javascript">const systemPrompt = 'You are an expert...'; // Long system prompt
+
+const result = await client.sendMessage({
+  prompt: 'First query',
+  system: systemPrompt,
+  cache: true,  // Cache the system prompt
+  model: 'sonnet'
+});
+
+// Subsequent calls will use cached system prompt (90% cheaper!)
+const result2 = await client.sendMessage({
+  prompt: 'Second query',
+  system: systemPrompt,
+  cache: true,
+  model: 'sonnet'
+});
+</code></pre>
+<h2 id="cost-tracking">Cost Tracking</h2>
+<pre><code class="language-javascript">// Get session costs
+const costs = client.getTotalCosts();
+console.log('Total spent: $' + costs.total);
+console.log('API calls made:', costs.calls);
+console.log('Tokens used:', costs.tokens);
+
+// Reset tracking
+client.resetCosts();
+</code></pre>
+<h2 id="model-selection">Model Selection</h2>
+<ul>
+<li>
+<p><strong>Haiku (<code>haiku</code>)</strong>: Fast and cheap. Use for:</p>
+<ul>
+<li>Simple extractions</li>
+<li>Basic tagging</li>
+<li>Quick responses</li>
+<li>Development/testing</li>
+</ul>
+</li>
+<li>
+<p><strong>Sonnet (<code>sonnet</code>)</strong>: Smart and balanced. Use for:</p>
+<ul>
+<li>Moodboard analysis</li>
+<li>Conversational refinement</li>
+<li>Complex reasoning</li>
+<li>Production quality</li>
+</ul>
+</li>
+</ul>
+<h2 id="pricing-per-million-tokens">Pricing (per million tokens)</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Input</th>
+<th>Output</th>
+<th>Cached Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sonnet 4</td>
+<td>$3.00</td>
+<td>$15.00</td>
+<td>$0.30</td>
+</tr>
+<tr>
+<td>Haiku 4</td>
+<td>$0.25</td>
+<td>$1.25</td>
+<td>$0.025</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testing">Testing</h2>
+<p>Run the test suite:</p>
+<pre><code class="language-bash">npm run test:api
+</code></pre>
+<p>Should output:</p>
+<ul>
+<li>✅ Connection test</li>
+<li>✅ Haiku response</li>
+<li>✅ Sonnet response</li>
+<li>📊 Cost breakdown</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Use Haiku for development</strong> - Much cheaper while iterating</li>
+<li><strong>Use prompt caching</strong> - Saves 90% on repeated system prompts</li>
+<li><strong>Set maxTokens appropriately</strong> - Don't pay for tokens you don't need</li>
+<li><strong>Track costs</strong> - Monitor spending during development</li>
+<li><strong>Handle errors</strong> - API calls can fail, always use try/catch</li>
+</ol>
+<h2 id="example-moodboard-analysis">Example: Moodboard Analysis</h2>
+<pre><code class="language-javascript">const analyzeMoodboard = async (imageDescription) =&gt; {
+  const systemPrompt = `You are an interior design expert. 
+  Analyze design styles and extract structured information.
+  Always return valid JSON.`;
+
+  const result = await client.sendMessage({
+    prompt: `Analyze this design: &quot;${imageDescription}&quot;
+    
+    Return JSON with:
+    {
+      &quot;style&quot;: [&quot;minimalist&quot;, &quot;scandinavian&quot;],
+      &quot;colors&quot;: [&quot;white&quot;, &quot;natural wood&quot;, &quot;black&quot;],
+      &quot;materials&quot;: [&quot;wood&quot;, &quot;metal&quot;, &quot;ceramic&quot;],
+      &quot;mood&quot;: [&quot;calm&quot;, &quot;clean&quot;, &quot;modern&quot;]
+    }`,
+    system: systemPrompt,
+    model: 'sonnet',
+    maxTokens: 500,
+    cache: true
+  });
+
+  return JSON.parse(result.text);
+};
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="quotanthropic_api_key-not-setquot">&quot;ANTHROPIC_API_KEY not set&quot;</h3>
+<ul>
+<li>Check <code>.env</code> file exists</li>
+<li>Verify key is correct</li>
+<li>Make sure dotenv is installed</li>
+</ul>
+<h3 id="quotrate-limit-exceededquot">&quot;Rate limit exceeded&quot;</h3>
+<ul>
+<li>Add delays between requests</li>
+<li>Upgrade API tier if needed</li>
+<li>Use caching to reduce calls</li>
+</ul>
+<h3 id="quotinvalid-model-namequot">&quot;Invalid model name&quot;</h3>
+<ul>
+<li>Use 'haiku' or 'sonnet'</li>
+<li>Or full model IDs: 'claude-sonnet-4-20250514'</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li>✅ Test API connection</li>
+<li>Create moodboard analysis prompt</li>
+<li>Test with real design images</li>
+<li>Implement product enrichment</li>
+<li>Add embedding generation</li>
+</ol>

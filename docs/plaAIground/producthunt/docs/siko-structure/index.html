@@ -1,0 +1,74 @@
+<h1 id="a-hrefhttpsikoczsikocza-structure"><a href="http://Siko.cz">Siko.cz</a> Structure</h1>
+<h2 id="product-listing">Product Listing</h2>
+<ul>
+<li>URL: <a href="https://www.siko.cz/sanitarni-keramika/c/C99803">https://www.siko.cz/sanitarni-keramika/c/C99803</a></li>
+<li>Products per page: 24 (actual count found)</li>
+<li>Product card selector: <code>siko-b2c-product-card</code></li>
+<li>Name: Dynamic selectors (<code>.carousel-product-title</code>, <code>.product-name</code>, <code>h2</code>, <code>h3</code>)</li>
+<li>Price: Dynamic selectors (<code>.price</code>, cost selectors)</li>
+<li>Image: Dynamic selectors (<code>.carousel-product-image</code>, <code>.image-responsive</code>, <code>img</code>)</li>
+</ul>
+<h3 id="product-cards-structure">Product Cards Structure</h3>
+<ul>
+<li>Main container: <code>siko-b2c-product-card</code></li>
+<li>Each card contains: name, price, image, product URL</li>
+<li>Cards are dynamically loaded with JavaScript</li>
+<li>Wait time needed: 3-5 seconds for full page load</li>
+</ul>
+<h3 id="working-selectors-found">Working Selectors Found</h3>
+<ul>
+<li><code>.carousel-product-title</code> - Product names</li>
+<li><code>.price</code> - Product prices</li>
+<li><code>.carousel-product-image</code>, <code>img</code> - Product images</li>
+<li><code>a</code> tags within cards - Product URLs</li>
+</ul>
+<h2 id="product-detail-pages">Product Detail Pages</h2>
+<ul>
+<li>Specifications: Dynamic extraction from multiple selectors</li>
+<li>Materials: Detected keywords (<code>keramika</code>, <code>sanitární</code>, <code>bílá</code>, <code>matná</code>)</li>
+<li>Description: Breadcrumb navigation text</li>
+<li>Technical Details: Extracted from content (<code>odpad</code>, <code>montáž</code>, <code>typ</code>, etc.)</li>
+<li>Images: Multiple high-resolution product images (6-8 per product)</li>
+</ul>
+<h3 id="specification-extraction">Specification Extraction</h3>
+<ul>
+<li>Czech attributes: <code>Rozměry</code>, <code>Výška</code>, <code>Šířka</code>, <code>Hmotnost</code>, <code>Materiál</code>, <code>Barva</code>, <code>Série</code>, <code>Značka</code></li>
+<li>Table-based specs from various table selectors</li>
+<li>Key-value pairs from text content</li>
+</ul>
+<h3 id="materials-detection">Materials Detection</h3>
+<p>Keywords automatically detected:</p>
+<ul>
+<li><code>keramika</code> (ceramic)</li>
+<li><code>sanitární</code> (sanitary)</li>
+<li><code>bílá</code> (white)</li>
+<li><code>matná</code> (matte)</li>
+</ul>
+<h3 id="technical-details-extraction">Technical Details Extraction</h3>
+<p>Automatically extracts:</p>
+<ul>
+<li><code>odpad</code> (waste/drainage)</li>
+<li><code>montáž</code> (installation)</li>
+<li><code>typ</code> (type)</li>
+<li><code>série</code> (series)</li>
+<li><code>design</code> (design)</li>
+<li><code>technologie</code> (technology)</li>
+<li><code>certifikát</code> (certificate)</li>
+<li><code>norma</code> (standard/norm)</li>
+<li><code>funkce</code> (function)</li>
+</ul>
+<h2 id="pagination">Pagination</h2>
+<ul>
+<li><strong>Current section has no pagination</strong> - all 24 products on single page</li>
+<li>Pagination detection implemented for future sections</li>
+<li>Supports Czech (&quot;Další&quot;) and English (&quot;Next&quot;) navigation</li>
+<li>Auto-detection of current page and total pages</li>
+<li>Safe pagination with MAX_PAGES limit</li>
+</ul>
+<h3 id="pagination-selectors-for-other-sections">Pagination Selectors (for other sections)</h3>
+<ul>
+<li>Container: <code>.pagination</code>, <code>[class*=&quot;pagination&quot;]</code>, <code>.pager</code></li>
+<li>Next button: text contains &quot;next&quot;, &quot;další&quot;, &quot;&gt;&quot;</li>
+<li>Page numbers: extracted from links and spans</li>
+<li>Active page: <code>.active</code>, <code>.current</code>, <code>[aria-current=&quot;page&quot;]</code></li>
+</ul>

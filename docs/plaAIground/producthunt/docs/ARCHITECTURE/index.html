@@ -1,0 +1,215 @@
+<h1 id="project-architecture">Project Architecture</h1>
+<h2 id="system-overview">System Overview</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                     USER (Interior Architect)                │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────┐
+│                      FRONTEND (React)                         │
+│  • Image uploader                                             │
+│  • Constraint form (budget, dimensions)                       │
+│  • Chat interface                                             │
+│  • Product gallery                                            │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ HTTP/REST
+                           ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    BACKEND API (Express)                      │
+│  Routes:                                                      │
+│  • POST /api/analyze-moodboard                                │
+│  • POST /api/search-products                                  │
+│  • POST /api/refine-search                                    │
+│  • GET  /api/products/:id                                     │
+└────────────┬─────────────────────────┬──────────────────────┘
+             │                         │
+             ▼                         ▼
+┌────────────────────────┐  ┌──────────────────────────────┐
+│    LLM Module          │  │   Product Database           │
+│                        │  │                              │
+│  • Moodboard analysis  │  │  • Scraped products (JSON)   │
+│  • Design DNA extract  │  │  • Product embeddings        │
+│  • Conv. refinement    │  │  • Metadata &amp; images         │
+│                        │  │                              │
+│  Claude Sonnet 4.5 ◄───┼──┤  Vector Search:              │
+│  Claude Haiku      ◄───┼──┤  • Similarity matching       │
+│                        │  │  • Constraint filtering      │
+└────────────────────────┘  └──────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    Anthropic API                              │
+│  • Claude Sonnet 4.5 ($3/$15 per M tokens)                   │
+│  • Claude Haiku ($0.25/$1.25 per M tokens)                   │
+└──────────────────────────────────────────────────────────────┘
+
+              ┌─────────────────────────┐
+              │   Crawler Service       │
+              │                         │
+              │  Scrapes:               │
+              │  • Siko.cz              │
+              │  • Baumax.cz            │
+              │  • Hornbach.cz          │
+              │  • XXXLutz.cz           │
+              │  • Sconto.cz            │
+              └─────────┬───────────────┘
+                        │
+                        ▼
+              ┌─────────────────────────┐
+              │  Czech E-Commerce Sites │
+              └─────────────────────────┘
+</code></pre>
+<h2 id="data-flow">Data Flow</h2>
+<h3 id="1-product-discovery-flow">1. Product Discovery Flow</h3>
+<pre><code>User uploads moodboard
+       ↓
+LLM analyzes images → Extract design DNA
+       ↓
+Convert to embeddings
+       ↓
+Search product database → Similarity match
+       ↓
+Apply constraints (price, dimensions)
+       ↓
+Return ranked results
+</code></pre>
+<h3 id="2-refinement-flow">2. Refinement Flow</h3>
+<pre><code>User: &quot;warmer tones&quot;
+       ↓
+LLM interprets feedback
+       ↓
+Adjust search parameters
+       ↓
+Re-rank results
+       ↓
+Show updated products
+</code></pre>
+<h3 id="3-crawling-flow">3. Crawling Flow</h3>
+<pre><code>Crawler runs (scheduled/manual)
+       ↓
+Visit e-shop pages
+       ↓
+Extract product data
+       ↓
+Validate &amp; clean data
+       ↓
+Save to database
+       ↓
+Generate embeddings
+</code></pre>
+<h2 id="key-design-decisions">Key Design Decisions</h2>
+<h3 id="why-embeddings">Why Embeddings?</h3>
+<ul>
+<li><strong>Fast:</strong> Search millions of products in milliseconds</li>
+<li><strong>Cheap:</strong> No LLM call needed for initial filtering</li>
+<li><strong>Semantic:</strong> Understands &quot;minimalist&quot; = &quot;simple&quot; = &quot;clean&quot;</li>
+</ul>
+<h3 id="why-two-claude-models">Why Two Claude Models?</h3>
+<ul>
+<li><strong>Haiku:</strong> Cheap ($0.001/request) for simple tasks</li>
+<li><strong>Sonnet:</strong> Smart for complex moodboard analysis</li>
+</ul>
+<h3 id="why-crawling-vs-api">Why Crawling vs API?</h3>
+<ul>
+<li>Czech e-shops rarely have public APIs</li>
+<li>Crawling gives us full control</li>
+<li>Can enrich data with our own tags</li>
+</ul>
+<h2 id="scaling-strategy">Scaling Strategy</h2>
+<h3 id="phase-1-mvp-100-products">Phase 1 (MVP): 100 products</h3>
+<ul>
+<li>Single e-shop (Siko)</li>
+<li>Manual hosting</li>
+<li>SQLite database</li>
+</ul>
+<h3 id="phase-2-beta-1000-products">Phase 2 (Beta): 1000 products</h3>
+<ul>
+<li>5 e-shops</li>
+<li>Auto-refresh weekly</li>
+<li>Vector DB (Pinecone)</li>
+</ul>
+<h3 id="phase-3-production-10000-products">Phase 3 (Production): 10,000+ products</h3>
+<ul>
+<li>All major Czech e-shops</li>
+<li>Daily updates</li>
+<li>PostgreSQL + Redis</li>
+<li>CDN for images</li>
+</ul>
+<h2 id="cost-breakdown-per-100-users">Cost Breakdown (Per 100 Users)</h2>
+<pre><code>LLM API costs:
+  • Moodboard analysis: $0.05 × 200 sessions = $10
+  • Conversational refinement: $0.10 × 200 = $20
+  • Product enrichment: Batch process, ~$5
+  
+Infrastructure:
+  • Hosting: ~$20/month
+  • Vector DB: ~$10/month
+  • Storage: ~$5/month
+  
+Total: ~$70/month for 100 active users
+Per user: ~$0.70/month
+</code></pre>
+<h2 id="technology-choices">Technology Choices</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Technology</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backend</td>
+<td>Node.js + Express</td>
+<td>Fast prototyping, easy async</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>React + Vite</td>
+<td>Modern, fast, component-based</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>Claude (Anthropic)</td>
+<td>Best for image analysis</td>
+</tr>
+<tr>
+<td>Crawler</td>
+<td>Playwright</td>
+<td>Handles JavaScript-heavy sites</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>SQLite → PostgreSQL</td>
+<td>Start simple, scale later</td>
+</tr>
+<tr>
+<td>Vector DB</td>
+<td>Pinecone / ChromaDB</td>
+<td>Mature, good docs</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>TBD</td>
+<td>Vercel/Railway for MVP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li>API keys in environment variables (never commit)</li>
+<li>Rate limiting on API endpoints</li>
+<li>Input validation on all user data</li>
+<li>CORS restrictions on frontend</li>
+<li>Sanitize scraped HTML content</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li>Real-time price tracking</li>
+<li>3D model auto-download</li>
+<li>Room planning AI</li>
+<li>Style trend analysis</li>
+<li>Multi-language support</li>
+<li>Mobile app</li>
+</ul>

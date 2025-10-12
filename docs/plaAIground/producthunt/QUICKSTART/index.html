@@ -1,0 +1,203 @@
+<h1 id="quick-start-guide">Quick Start Guide</h1>
+<h2 id="get-started-in-5-minutes">🚀 Get Started in 5 Minutes</h2>
+<h3 id="1-install-dependencies">1. Install Dependencies</h3>
+<pre><code class="language-bash">cd /Users/erik/dev/erikvanek.github.io/pages/plaAIground/producthunt
+npm install
+</code></pre>
+<h3 id="2-set-up-environment">2. Set Up Environment</h3>
+<pre><code class="language-bash"># Copy example env file
+cp .env.example .env
+
+# Edit .env and add your Anthropic API key
+# Get one at: https://console.anthropic.com/
+nano .env
+</code></pre>
+<h3 id="3-test-basic-setup">3. Test Basic Setup</h3>
+<pre><code class="language-bash"># Test crawler (currently just a skeleton)
+npm run crawl:siko
+
+# Should output:
+# 🚀 Starting Siko.cz crawler...
+# ⚠️  Crawler logic not yet implemented!
+</code></pre>
+<h3 id="4-check-project-status">4. Check Project Status</h3>
+<pre><code class="language-bash"># View current phase
+cat PROJECT_PLAN.md | grep &quot;Current Status&quot; -A 5
+</code></pre>
+<hr>
+<h2 id="what-to-read-first">📖 What to Read First</h2>
+<p><strong>If you're Claude (an AI agent):</strong></p>
+<ol>
+<li>Read <code>CLAUDE_CONTEXT.md</code> - Full project context</li>
+<li>Check <code>PROJECT_PLAN.md</code> - Current phase &amp; next tasks</li>
+<li>Look at relevant <code>/src/**/README.md</code> files</li>
+</ol>
+<p><strong>If you're a human:</strong></p>
+<ol>
+<li>Read <code>README.md</code> - Project overview</li>
+<li>Check <code>PROJECT_PLAN.md</code> - Implementation roadmap</li>
+<li>Dive into code in <code>/src</code></li>
+</ol>
+<hr>
+<h2 id="current-phase-phase-1-data-collection">🎯 Current Phase: Phase 1 - Data Collection</h2>
+<p><strong>Next immediate steps:</strong></p>
+<h3 id="a-complete-a-hrefhttpsikoczsikocza-crawler-priority-1">A. Complete <a href="http://Siko.cz">Siko.cz</a> Crawler (Priority #1)</h3>
+<pre><code class="language-bash"># Edit this file:
+src/crawler/siko.js
+
+# What to implement:
+# 1. Navigate to bathroom fixtures category
+# 2. Extract product listing (name, price, image, URL)
+# 3. Visit each product page
+# 4. Extract detailed info (dimensions, materials, description)
+# 5. Save to JSON file
+</code></pre>
+<p><strong>Helpful commands:</strong></p>
+<pre><code class="language-bash"># Run crawler
+npm run crawl:siko
+
+# Check output
+cat data/products/siko_*.json | head -50
+</code></pre>
+<h3 id="b-test-claude-api-integration">B. Test Claude API Integration</h3>
+<pre><code class="language-bash"># Edit this file to test:
+src/llm/client.js
+
+# Create a test script:
+node -e &quot;
+import client from './src/llm/client.js';
+const result = await client.sendMessage({
+  prompt: 'Say hello in Czech',
+  model: 'haiku'
+});
+console.log(result.text);
+console.log('Cost:', result.cost);
+&quot;
+</code></pre>
+<h3 id="c-define-product-schema">C. Define Product Schema</h3>
+<pre><code class="language-bash"># Create schema validation:
+src/crawler/schema.js
+
+# Should validate:
+# - Required fields
+# - Data types
+# - Format constraints
+</code></pre>
+<hr>
+<h2 id="common-tasks">🔧 Common Tasks</h2>
+<h3 id="add-a-new-e-shop-crawler">Add a New E-Shop Crawler</h3>
+<pre><code class="language-bash"># 1. Copy template
+cp src/crawler/siko.js src/crawler/YOUR_SHOP.js
+
+# 2. Update config
+# - baseUrl
+# - category paths
+# - selectors
+
+# 3. Test
+npm run crawl:YOUR_SHOP
+</code></pre>
+<h3 id="test-llm-prompt">Test LLM Prompt</h3>
+<pre><code class="language-javascript">import client from './src/llm/client.js';
+
+const response = await client.sendMessage({
+  prompt: 'Your test prompt here',
+  system: 'You are a helpful assistant',
+  model: 'haiku', // or 'sonnet'
+  maxTokens: 500
+});
+
+console.log(response.text);
+console.log('Cost: $' + response.cost.toFixed(4));
+</code></pre>
+<h3 id="check-api-costs">Check API Costs</h3>
+<pre><code class="language-javascript">import client from './src/llm/client.js';
+const costs = await client.getTotalCosts();
+console.log('Total spent: $' + costs.total);
+console.log('API calls: ' + costs.calls);
+</code></pre>
+<hr>
+<h2 id="troubleshooting">🐛 Troubleshooting</h2>
+<h3 id="quotanthropic_api_key-not-setquot">&quot;ANTHROPIC_API_KEY not set&quot;</h3>
+<pre><code class="language-bash"># Make sure .env file exists
+ls -la .env
+
+# Check it contains your key
+cat .env | grep ANTHROPIC
+
+# If not, add it:
+echo &quot;ANTHROPIC_API_KEY=your_key_here&quot; &gt;&gt; .env
+</code></pre>
+<h3 id="quotmodule-not-foundquot">&quot;Module not found&quot;</h3>
+<pre><code class="language-bash"># Install dependencies
+npm install
+
+# Check package.json has correct type
+cat package.json | grep '&quot;type&quot;'
+# Should show: &quot;type&quot;: &quot;module&quot;
+</code></pre>
+<h3 id="crawler-not-working">Crawler not working</h3>
+<pre><code class="language-bash"># Install Playwright browsers
+npx playwright install chromium
+
+# Test with visible browser
+# (change headless: false in siko.js)
+</code></pre>
+<hr>
+<h2 id="key-files-reference">📚 Key Files Reference</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CLAUDE_CONTEXT.md</code></td>
+<td>Full context for AI agents</td>
+</tr>
+<tr>
+<td><code>PROJECT_PLAN.md</code></td>
+<td>Detailed roadmap &amp; phases</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Human-readable overview</td>
+</tr>
+<tr>
+<td><code>package.json</code></td>
+<td>Dependencies &amp; scripts</td>
+</tr>
+<tr>
+<td><code>.env</code></td>
+<td>Secrets &amp; config (don't commit!)</td>
+</tr>
+<tr>
+<td><code>src/crawler/siko.js</code></td>
+<td>First crawler to implement</td>
+</tr>
+<tr>
+<td><code>src/llm/client.js</code></td>
+<td>Claude API wrapper</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="learning-resources">🎓 Learning Resources</h2>
+<ul>
+<li><a href="https://playwright.dev/docs/intro">Playwright Docs</a></li>
+<li><a href="https://docs.anthropic.com/">Anthropic API Docs</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering">Claude Prompt Engineering</a></li>
+</ul>
+<hr>
+<h2 id="questions">💬 Questions?</h2>
+<p>Check these files for answers:</p>
+<ol>
+<li>Technical details → <code>src/**/README.md</code></li>
+<li>Project goals → <code>CLAUDE_CONTEXT.md</code></li>
+<li>Next steps → <code>PROJECT_PLAN.md</code></li>
+<li>Setup issues → This file!</li>
+</ol>
+<hr>
+<p>Happy coding! 🚀</p>

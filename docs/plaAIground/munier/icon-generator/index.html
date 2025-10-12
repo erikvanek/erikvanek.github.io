@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Generator - IS MU Offline Extension</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { color: #2c3e50; margin-bottom: 10px; }
+    .subtitle { color: #7f8c8d; margin-bottom: 30px; }
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .icon-item {
+      text-align: center;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 2px solid #dee2e6;
+    }
+    canvas {
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background: #3498db;
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    .instructions {
+      background: #e8f4f8;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+      border-left: 4px solid #3498db;
+    }
+    code {
+      background: #f1f3f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="icon-generator">📥 Icon Generator</h1>
+    <p class="subtitle">Generate placeholder icons for IS MU Offline Curriculum Extension</p>
+
+    <div class="icon-grid">
+      <div class="icon-item">
+        <h3 id="16x16-inactive">16x16 Inactive</h3>
+        <canvas id="icon-16" width="16" height="16"></canvas>
+        <button onclick="downloadIcon('icon-16', 'icon-16.png')">Download</button>
+      </div>
+      
+      <div class="icon-item">
+        <h3 id="16x16-active">16x16 Active</h3>
+        <canvas id="icon-16-active" width="16" height="16"></canvas>
+        <button onclick="downloadIcon('icon-16-active', 'icon-16-active.png')">Download</button>
+      </div>
+
+      <div class="icon-item">
+        <h3 id="48x48-inactive">48x48 Inactive</h3>
+        <canvas id="icon-48" width="48" height="48"></canvas>
+        <button onclick="downloadIcon('icon-48', 'icon-48.png')">Download</button>
+      </div>
+      
+      <div class="icon-item">
+        <h3 id="48x48-active">48x48 Active</h3>
+        <canvas id="icon-48-active" width="48" height="48"></canvas>
+        <button onclick="downloadIcon('icon-48-active', 'icon-48-active.png')">Download</button>
+      </div>
+
+      <div class="icon-item">
+        <h3 id="128x128-inactive">128x128 Inactive</h3>
+        <canvas id="icon-128" width="128" height="128"></canvas>
+        <button onclick="downloadIcon('icon-128', 'icon-128.png')">Download</button>
+      </div>
+      
+      <div class="icon-item">
+        <h3 id="128x128-active">128x128 Active</h3>
+        <canvas id="icon-128-active" width="128" height="128"></canvas>
+        <button onclick="downloadIcon('icon-128-active', 'icon-128-active.png')">Download</button>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="downloadAll()" style="background: #27ae60; font-size: 14px; padding: 12px 24px;">
+        📦 Download All Icons
+      </button>
+    </div>
+
+    <div class="instructions">
+      <h3 id="instructions">📋 Instructions</h3>
+      <ol>
+        <li>Click "Download All Icons" button above</li>
+        <li>Save all 6 PNG files</li>
+        <li>Move them to the <code>icons/</code> folder in the extension directory</li>
+        <li>Load the extension in Chrome</li>
+      </ol>
+      <p><strong>Note:</strong> These are simple placeholder icons. You can replace them with better designs later!</p>
+    </div>
+  </div>
+
+  <script>
+    function drawIcon(canvasId, size, isActive) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = isActive ? '#27ae60' : '#95a5a6';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Border
+      ctx.strokeStyle = '#2c3e50';
+      ctx.lineWidth = Math.max(1, size / 32);
+      ctx.strokeRect(0, 0, size, size);
+      
+      // Text
+      ctx.fillStyle = 'white';
+      ctx.font = `bold ${size * 0.5}px Arial`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('MU', size / 2, size / 2);
+      
+      // Download icon emoji for larger sizes
+      if (size >= 48) {
+        ctx.font = `${size * 0.25}px Arial`;
+        ctx.fillText('📥', size / 2, size * 0.75);
+      }
+    }
+
+    function downloadIcon(canvasId, filename) {
+      const canvas = document.getElementById(canvasId);
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    function downloadAll() {
+      const icons = [
+        'icon-16',
+        'icon-16-active',
+        'icon-48',
+        'icon-48-active',
+        'icon-128',
+        'icon-128-active'
+      ];
+      
+      icons.forEach((id, index) => {
+        setTimeout(() => {
+          downloadIcon(id, id + '.png');
+        }, index * 300); // Stagger downloads
+      });
+      
+      alert('Downloading all 6 icons! Check your downloads folder.');
+    }
+
+    // Generate all icons on page load
+    window.onload = function() {
+      drawIcon('icon-16', 16, false);
+      drawIcon('icon-16-active', 16, true);
+      drawIcon('icon-48', 48, false);
+      drawIcon('icon-48-active', 48, true);
+      drawIcon('icon-128', 128, false);
+      drawIcon('icon-128-active', 128, true);
+    };
+  </script>
+</body>
+</html>

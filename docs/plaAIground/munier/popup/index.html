@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS MU Offline Curriculum</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="is-mu-offline">📥 IS MU Offline</h1>
+      <p class="subtitle">Download curriculum for offline reading</p>
+    </div>
+
+    <div id="status" class="status">
+      <div class="status-icon">✓</div>
+      <div class="status-text">Curriculum detected!</div>
+    </div>
+
+    <div id="not-detected" class="not-detected" style="display: none;">
+      <div class="status-icon">⚠️</div>
+      <div class="status-text">No curriculum detected on this page</div>
+      <p class="hint">Navigate to a curriculum page with <code>index.qwarp</code> in the URL</p>
+    </div>
+
+    <div id="processing" class="processing" style="display: none;">
+      <div class="spinner"></div>
+      <div class="processing-text">Processing curriculum...</div>
+      <div class="progress-details" id="progress-details"></div>
+    </div>
+
+    <div id="error" class="error" style="display: none;">
+      <div class="status-icon">❌</div>
+      <div class="error-text" id="error-text"></div>
+    </div>
+
+    <div id="success" class="success" style="display: none;">
+      <div class="status-icon">✅</div>
+      <div class="success-text">Download complete!</div>
+      <p class="hint">Check your downloads folder</p>
+    </div>
+
+    <div class="actions">
+      <button id="download-btn" class="btn btn-primary">
+        📥 Download Curriculum
+      </button>
+    </div>
+
+    <div class="footer">
+      <p class="version">v1.0.0</p>
+    </div>
+  </div>
+
+  <script src="libs/jszip.min.js"></script>
+  <script src="libs/html2pdf.bundle.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

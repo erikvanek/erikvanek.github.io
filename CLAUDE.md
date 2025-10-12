@@ -21,3 +21,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Error Handling**: Log errors with meaningful messages
 
 Follow the existing patterns in the codebase when creating new components or modifying existing ones.
+- make sure the progress in all relevant markdown docs

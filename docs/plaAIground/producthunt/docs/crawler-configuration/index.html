@@ -1,0 +1,255 @@
+<h1 id="a-hrefhttpsikoczsikocza-crawler-configuration"><a href="http://Siko.cz">Siko.cz</a> Crawler Configuration</h1>
+<h2 id="overview">Overview</h2>
+<p>The <a href="http://Siko.cz">Siko.cz</a> crawler (<code>src/crawler/siko.js</code>) is a comprehensive web scraper that extracts product information from <a href="http://Siko.cz">Siko.cz</a> with full pagination support and detailed product information extraction.</p>
+<h2 id="configuration-options">Configuration Options</h2>
+<h3 id="basic-configuration">Basic Configuration</h3>
+<pre><code class="language-javascript">// In src/crawler/siko.js
+const URL = 'https://www.siko.cz/sanitarni-keramika/c/C99803';
+const MAX_PRODUCTS = 10; // Set limit for testing
+const MAX_PAGES = 5;     // Safety limit for pagination
+</code></pre>
+<h3 id="configuration-variables">Configuration Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>URL</code></td>
+<td>string</td>
+<td>Target section URL</td>
+<td>Sanitary ceramics</td>
+<td>Any <a href="http://Siko.cz">Siko.cz</a> category URL</td>
+</tr>
+<tr>
+<td><code>MAX_PRODUCTS</code></td>
+<td>number/null</td>
+<td>Max products to extract</td>
+<td>10</td>
+<td>Any number, or <code>null</code> for all</td>
+</tr>
+<tr>
+<td><code>MAX_PAGES</code></td>
+<td>number</td>
+<td>Max pages to crawl</td>
+<td>5</td>
+<td>Any positive number</td>
+</tr>
+</tbody>
+</table>
+<h2 id="running-the-crawler">Running the Crawler</h2>
+<h3 id="npm-scripts">NPM Scripts</h3>
+<pre><code class="language-bash"># Test run (current configuration)
+npm run crawl:siko
+
+# Full crawl (all products - overrides MAX_PRODUCTS)
+npm run crawl:siko:full
+
+# All crawlers
+npm run crawl:all
+</code></pre>
+<h3 id="environment-variables">Environment Variables</h3>
+<p>You can override configuration via environment variables:</p>
+<pre><code class="language-bash"># Crawl all products
+MAX_PRODUCTS=null npm run crawl:siko
+
+# Crawl specific amount
+MAX_PRODUCTS=50 npm run crawl:siko
+
+# Increase page limit
+MAX_PAGES=10 npm run crawl:siko
+</code></pre>
+<h2 id="different-a-hrefhttpsikoczsikocza-sections">Different <a href="http://Siko.cz">Siko.cz</a> Sections</h2>
+<p>To crawl different product categories, change the URL:</p>
+<pre><code class="language-javascript">// Bathrooms - Sanitary ceramics (default)
+const URL = 'https://www.siko.cz/sanitarni-keramika/c/C99803';
+
+// Kitchens
+const URL = 'https://www.siko.cz/kuchyne';
+
+// Tiles
+const URL = 'https://www.siko.cz/obklady-a-dlazby';
+
+// Lighting
+const URL = 'https://www.siko.cz/osvetleni';
+
+// Bathroom furniture
+const URL = 'https://www.siko.cz/koupelnovy-nabytek';
+</code></pre>
+<h2 id="output-configuration">Output Configuration</h2>
+<h3 id="output-files">Output Files</h3>
+<pre><code class="language-javascript">// Current: timestamped files
+const timestamp = new Date().toISOString().split('T')[0];
+const outputPath = path.join(outputDir, `siko_all_products_${timestamp}.json`);
+</code></pre>
+<p>Generated files:</p>
+<ul>
+<li><code>data/products/siko_all_products_2025-10-08.json</code></li>
+<li>One file per run with timestamp</li>
+</ul>
+<h3 id="output-structure">Output Structure</h3>
+<p>Each product contains:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Product name in Czech&quot;,
+  &quot;price&quot;: &quot;Price in CZK&quot;,
+  &quot;imageUrl&quot;: &quot;Main product image URL&quot;,
+  &quot;productUrl&quot;: &quot;Link to product page&quot;,
+  &quot;extractedAt&quot;: &quot;ISO timestamp&quot;,
+  &quot;details&quot;: {
+    &quot;specifications&quot;: {
+      &quot;Rozměry&quot;: &quot;Dimensions&quot;,
+      &quot;Výška&quot;: &quot;Height&quot;,
+      &quot;Materiál&quot;: &quot;Material&quot;,
+      &quot;Barva&quot;: &quot;Color&quot;
+    },
+    &quot;materials&quot;: [&quot;keramika&quot;, &quot;sanitární&quot;, &quot;bílá&quot;],
+    &quot;description&quot;: &quot;Product description/breadcrumbs&quot;,
+    &quot;technicalDetails&quot;: {
+      &quot;odpad&quot;: &quot;Waste/drainage info&quot;,
+      &quot;montáž&quot;: &quot;Installation info&quot;,
+      &quot;technologie&quot;: &quot;Technology info&quot;
+    },
+    &quot;additionalImages&quot;: [&quot;url1&quot;, &quot;url2&quot;, ...],
+    &quot;detailsExtractedAt&quot;: &quot;ISO timestamp&quot;,
+    &quot;debug&quot;: {
+      &quot;potentialSpecs&quot;: [...],
+      &quot;potentialMaterials&quot;: [...],
+      &quot;potentialDescriptions&quot;: [...]
+    }
+  }
+}
+</code></pre>
+<h2 id="performance-tuning">Performance Tuning</h2>
+<h3 id="wait-times">Wait Times</h3>
+<pre><code class="language-javascript">// Page load wait time
+await page.waitForTimeout(3000);
+
+// Between product detail requests
+await page.waitForTimeout(1000);
+
+// Between pagination pages
+await page.waitForTimeout(2000);
+</code></pre>
+<h3 id="browser-configuration">Browser Configuration</h3>
+<pre><code class="language-javascript">// Browser launch options
+browser = await chromium.launch({
+  headless: true,  // Set to false for debugging
+  slowMo: 0       // Add delay for debugging
+});
+
+// User agent for better compatibility
+await page.setExtraHTTPHeaders({
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+});
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="built-in-error-handling">Built-in Error Handling</h3>
+<ul>
+<li><strong>Network timeouts</strong>: 10s timeout for selectors</li>
+<li><strong>Missing elements</strong>: Fallback to &quot;N/A&quot; values</li>
+<li><strong>Page load failures</strong>: Graceful degradation</li>
+<li><strong>Pagination errors</strong>: Stops crawling vs. crashing</li>
+</ul>
+<h3 id="debug-information">Debug Information</h3>
+<p>Each product includes debug information:</p>
+<ul>
+<li><code>potentialSpecs</code>: Elements that might contain specifications</li>
+<li><code>potentialMaterials</code>: Elements that might contain materials</li>
+<li><code>potentialDescriptions</code>: Elements that might contain descriptions</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>No products found</strong></p>
+<ul>
+<li>Check if URL is correct</li>
+<li>Verify selectors in <code>docs/siko-structure.md</code></li>
+<li>Increase wait times for slow loading</li>
+</ul>
+</li>
+<li>
+<p><strong>Timeout errors</strong></p>
+<ul>
+<li>Increase <code>page.waitForTimeout()</code> values</li>
+<li>Check internet connection</li>
+<li>Verify site availability</li>
+</ul>
+</li>
+<li>
+<p><strong>Missing details</strong></p>
+<ul>
+<li>Check debug output in generated JSON</li>
+<li>Update selectors based on page changes</li>
+<li>Verify Czech language attributes</li>
+</ul>
+</li>
+</ol>
+<h3 id="debug-mode">Debug Mode</h3>
+<p>Set <code>headless: false</code> to watch the browser:</p>
+<pre><code class="language-javascript">browser = await chromium.launch({ headless: false });
+</code></pre>
+<h3 id="logging">Logging</h3>
+<p>The crawler provides extensive console output:</p>
+<ul>
+<li>Page-by-page progress</li>
+<li>Product extraction status</li>
+<li>Pagination information</li>
+<li>Final statistics</li>
+</ul>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="custom-selectors">Custom Selectors</h3>
+<p>Update selectors in the crawler code:</p>
+<pre><code class="language-javascript">// Product card containers
+const selectors = [
+  'siko-b2c-product-card',  // Primary selector
+  '.product-card',          // Fallback
+  // Add more fallbacks...
+];
+
+// Product detail selectors
+const nameSelectors = [
+  '.carousel-product-title',
+  '.product-name',
+  'h2', 'h3'
+];
+</code></pre>
+<h3 id="custom-data-extraction">Custom Data Extraction</h3>
+<p>Add new extraction functions:</p>
+<pre><code class="language-javascript">const getCustomField = () =&gt; {
+  // Your custom extraction logic
+  return extractedValue;
+};
+
+// Add to product details
+technicalDetails: {
+  ...details.technicalDetails,
+  customField: getCustomField()
+}
+</code></pre>
+<h2 id="performance-recommendations">Performance Recommendations</h2>
+<h3 id="for-developmenttesting">For Development/Testing</h3>
+<ul>
+<li><code>MAX_PRODUCTS = 5-10</code></li>
+<li><code>MAX_PAGES = 1-2</code></li>
+<li>Keep debug information</li>
+</ul>
+<h3 id="for-production-data-collection">For Production Data Collection</h3>
+<ul>
+<li><code>MAX_PRODUCTS = null</code> (all products)</li>
+<li><code>MAX_PAGES = 10+</code> (or based on actual page count)</li>
+<li>Consider removing debug info to reduce file size</li>
+</ul>
+<h3 id="for-large-scale-crawling">For Large Scale Crawling</h3>
+<ul>
+<li>Add delays between requests</li>
+<li>Use multiple browser instances</li>
+<li>Implement retry logic</li>
+<li>Consider IP rotation if needed</li>
+</ul>

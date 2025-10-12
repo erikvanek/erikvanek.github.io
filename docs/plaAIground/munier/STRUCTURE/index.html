@@ -1,0 +1,104 @@
+<h1 id="is-mu-offline-curriculum-extension-project-structure">IS MU Offline Curriculum Extension - Project Structure</h1>
+<h2 id="current-directory-structure">Current Directory Structure</h2>
+<pre><code>munier/
+├── manifest.json           ✅ Extension configuration
+├── background.js           ✅ Icon state management
+├── content.js              ✅ Page detection &amp; content extraction
+├── popup.html              ✅ Extension popup UI
+├── popup.js                ✅ Download logic
+├── popup.css               ✅ Styling
+├── setup.sh                ✅ Setup script (downloads libraries)
+├── README.md               ✅ Full documentation
+├── SETUP.md                ✅ Quick setup guide
+├── TODO.md                 ✅ Task checklist
+├── STRUCTURE.md            ✅ This file
+│
+├── icons/                  ⚠️  NEEDS ICONS (6 PNG files)
+│   ├── icon-16.png         ❌ Required
+│   ├── icon-16-active.png  ❌ Required
+│   ├── icon-48.png         ❌ Required
+│   ├── icon-48-active.png  ❌ Required
+│   ├── icon-128.png        ❌ Required
+│   └── icon-128-active.png ❌ Required
+│
+└── libs/                   ⚠️  NEEDS LIBRARIES (2 JS files)
+    ├── jszip.min.js        ❌ Required - Download from CDN
+    └── html2pdf.bundle.min.js ❌ Required - Download from CDN
+</code></pre>
+<h2 id="whats-complete">What's Complete ✅</h2>
+<p>All core extension code is written and ready:</p>
+<ul>
+<li>Manifest configuration</li>
+<li>Background service worker (icon management)</li>
+<li>Content script (curriculum detection &amp; extraction)</li>
+<li>Popup UI (HTML + CSS)</li>
+<li>Download logic (PDF + ZIP generation)</li>
+<li>Documentation (README, SETUP, TODO)</li>
+<li>Setup script for downloading libraries</li>
+</ul>
+<h2 id="whats-missing">What's Missing ❌</h2>
+<h3 id="1-libraries-critical">1. Libraries (CRITICAL)</h3>
+<p>You need to download 2 JavaScript libraries:</p>
+<p><strong>Quick way:</strong></p>
+<pre><code class="language-bash">cd /Users/erik/dev/erikvanek.github.io/pages/plaAIground/munier
+chmod +x setup.sh
+./setup.sh
+</code></pre>
+<p><strong>Manual way:</strong><br>
+See <a href="http://SETUP.md">SETUP.md</a> for URLs and manual download instructions.</p>
+<h3 id="2-icons-critical">2. Icons (CRITICAL)</h3>
+<p>You need to create 6 PNG icon files. The extension won't load without them.</p>
+<p><strong>Simplest way (placeholder icons):</strong><br>
+Use any image editor to create simple colored squares:</p>
+<ul>
+<li>Gray (RGB: 128, 128, 128) for inactive icons</li>
+<li>Green (RGB: 0, 200, 0) for active icons</li>
+<li>Sizes: 16x16, 48x48, 128x128 pixels</li>
+</ul>
+<p><strong>Better way:</strong><br>
+Design proper icons with &quot;MU&quot; text or a download symbol (📥)</p>
+<p>See <a href="http://SETUP.md">SETUP.md</a> for detailed instructions.</p>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li><strong>Run setup script</strong> or download libraries manually</li>
+<li><strong>Create icon files</strong> (6 PNG files in icons/ folder)</li>
+<li><strong>Load extension</strong> in Chrome:
+<ul>
+<li>Go to <code>chrome://extensions/</code></li>
+<li>Enable Developer mode</li>
+<li>Click &quot;Load unpacked&quot;</li>
+<li>Select the <code>munier</code> folder</li>
+</ul>
+</li>
+<li><strong>Test</strong> on IS MU curriculum page</li>
+<li><strong>Share</strong> with classmates!</li>
+</ol>
+<h2 id="file-sizes-approximate">File Sizes (Approximate)</h2>
+<ul>
+<li>Core extension code: ~50 KB</li>
+<li>JSZip library: ~100 KB</li>
+<li>html2pdf library: ~500 KB</li>
+<li>Icons (6 files): ~50 KB</li>
+<li><strong>Total</strong>: ~700 KB</li>
+</ul>
+<h2 id="browser-compatibility">Browser Compatibility</h2>
+<ul>
+<li>✅ Chrome/Edge/Brave: Primary target (Manifest V3)</li>
+<li>⚠️  Firefox: Should work with minor adjustments</li>
+<li>❌ Safari: Requires more work</li>
+</ul>
+<h2 id="technical-stack">Technical Stack</h2>
+<ul>
+<li>Pure HTML + CSS + JavaScript (no frameworks)</li>
+<li>No external API calls</li>
+<li>No tracking or analytics</li>
+<li>Offline-first approach</li>
+<li>Privacy-focused</li>
+</ul>
+<h2 id="questions">Questions?</h2>
+<p>Check the documentation:</p>
+<ul>
+<li><code>README.md</code> - Full documentation</li>
+<li><code>SETUP.md</code> - Quick setup guide</li>
+<li><code>TODO.md</code> - Checklist and future enhancements</li>
+</ul>

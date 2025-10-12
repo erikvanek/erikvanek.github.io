@@ -1,0 +1,64 @@
+<h1 id="crawler-module">Crawler Module</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Scrape product data from Czech e-commerce sites and store in structured format.</p>
+<h2 id="e-shops-to-crawl">E-shops to Crawl</h2>
+<ol>
+<li><strong>Siko</strong> (<a href="http://siko.cz">siko.cz</a>) - Bathrooms, kitchens [START HERE]</li>
+<li><strong>Baumax</strong> (<a href="http://baumax.cz">baumax.cz</a>) - Home improvement</li>
+<li><strong>Hornbach</strong> (<a href="http://hornbach.cz">hornbach.cz</a>) - DIY &amp; building materials</li>
+<li><strong>XXXLutz</strong> (<a href="http://xxxlutz.cz">xxxlutz.cz</a>) - Furniture</li>
+<li><strong>Sconto</strong> (<a href="http://sconto-nabytek.cz">sconto-nabytek.cz</a>) - Budget furniture</li>
+</ol>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>siko.js</code> - <a href="http://Siko.cz">Siko.cz</a> crawler (start here)</li>
+<li><code>baumax.js</code> - Baumax crawler</li>
+<li><code>hornbach.js</code> - Hornbach crawler</li>
+<li><code>xxxlutz.js</code> - XXXLutz crawler</li>
+<li><code>sconto.js</code> - Sconto crawler</li>
+<li><code>utils.js</code> - Shared utilities (rate limiting, error handling)</li>
+<li><code>schema.js</code> - Product data schema validation</li>
+</ul>
+<h2 id="product-schema">Product Schema</h2>
+<pre><code class="language-javascript">{
+  id: string (uuid),
+  source: string,
+  name: string,
+  category: string,
+  price: number,
+  currency: string,
+  dimensions: { width, height, depth, unit },
+  materials: string[],
+  colors: string[],
+  style_tags: string[],
+  images: string[],
+  url: string,
+  availability: string,
+  has_3d_model: boolean,
+  description: string,
+  scraped_at: ISO date string
+}
+</code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="language-bash"># Crawl single site
+npm run crawl:siko
+
+# Crawl all sites
+npm run crawl:all
+</code></pre>
+<h2 id="tips-for-development">Tips for Development</h2>
+<ol>
+<li>Start with static pages (product listings)</li>
+<li>Use Playwright only if pages are heavily JavaScript-rendered</li>
+<li>Add delays between requests (1000ms minimum)</li>
+<li>Implement proper error handling</li>
+<li>Save progress incrementally</li>
+<li>Validate data before saving</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>[ ] Build <a href="http://Siko.cz">Siko.cz</a> crawler</li>
+<li>[ ] Test with 100 products</li>
+<li>[ ] Validate data quality</li>
+<li>[ ] Create sample dataset</li>
+</ul>

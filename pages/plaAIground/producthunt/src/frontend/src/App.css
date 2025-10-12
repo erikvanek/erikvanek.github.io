@@ -1,0 +1,101 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-header {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.app-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.results-section {
+  padding-bottom: 2rem;
+}
+
+.design-dna {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.design-dna h2 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-weight: 400;
+}
+
+.dna-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.dna-details p {
+  margin: 0;
+  padding: 0.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  color: #333;
+}
+
+.dna-details strong {
+  color: #667eea;
+}
+
+.products-chat-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 0 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .products-chat-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .design-dna {
+    padding: 1rem;
+  }
+
+  .dna-details {
+    grid-template-columns: 1fr;
+  }
+}

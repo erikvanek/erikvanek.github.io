@@ -1,0 +1,217 @@
+<h1 id="development-checklist">Development Checklist</h1>
+<p>Track your progress through the project phases.</p>
+<h2 id="setup-5-min">✅ Setup (5 min)</h2>
+<ul>
+<li>[ ] Cloned/navigated to project folder</li>
+<li>[ ] Ran <code>npm install</code></li>
+<li>[ ] Created <code>.env</code> file with API key</li>
+<li>[ ] Read <code>README.md</code></li>
+<li>[ ] Read <code>CLAUDE_CONTEXT.md</code> (if you're Claude)</li>
+<li>[ ] Read <code>NEXT_STEPS.md</code></li>
+</ul>
+<h2 id="phase-1-data-collection-week-1">📊 Phase 1: Data Collection (Week 1)</h2>
+<h3 id="research-amp-documentation">Research &amp; Documentation</h3>
+<ul>
+<li>[ ] Visited <a href="http://Siko.cz">Siko.cz</a></li>
+<li>[ ] Documented HTML structure (<code>docs/siko-structure.md</code>)</li>
+<li>[ ] Identified product selectors</li>
+<li>[ ] Tested selectors in browser console</li>
+</ul>
+<h3 id="crawler-development">Crawler Development</h3>
+<ul>
+<li>[ ] Edited <code>src/crawler/siko.js</code></li>
+<li>[ ] Extracted first 5 products successfully</li>
+<li>[ ] Added product detail extraction</li>
+<li>[ ] Implemented pagination</li>
+<li>[ ] Added error handling</li>
+<li>[ ] Crawled 50 products</li>
+<li>[ ] Crawled 100+ products</li>
+</ul>
+<h3 id="data-quality">Data Quality</h3>
+<ul>
+<li>[ ] Validated product schema</li>
+<li>[ ] Checked data completeness (&gt;90%)</li>
+<li>[ ] Verified image URLs work</li>
+<li>[ ] No duplicate products</li>
+<li>[ ] Created sample dataset</li>
+</ul>
+<h2 id="phase-2-llm-integration-week-2">🤖 Phase 2: LLM Integration (Week 2)</h2>
+<h3 id="setup">Setup</h3>
+<ul>
+<li>[ ] Tested Claude API connection</li>
+<li>[ ] Verified cost tracking works</li>
+<li>[ ] Confirmed API key works</li>
+</ul>
+<h3 id="moodboard-analysis">Moodboard Analysis</h3>
+<ul>
+<li>[ ] Created moodboard analysis prompt</li>
+<li>[ ] Tested with 5 sample images</li>
+<li>[ ] Achieved &gt;80% accuracy vs manual tagging</li>
+<li>[ ] Optimized prompt for cost</li>
+<li>[ ] Documented prompt template</li>
+</ul>
+<h3 id="product-enrichment">Product Enrichment</h3>
+<ul>
+<li>[ ] Generated embeddings for products</li>
+<li>[ ] Added style tags using Claude</li>
+<li>[ ] Validated enriched data</li>
+</ul>
+<h2 id="phase-3-product-matching-week-2-3">🔍 Phase 3: Product Matching (Week 2-3)</h2>
+<h3 id="vector-search">Vector Search</h3>
+<ul>
+<li>[ ] Set up vector database</li>
+<li>[ ] Indexed product catalog</li>
+<li>[ ] Tested similarity search</li>
+<li>[ ] Achieved &lt;100ms search time</li>
+</ul>
+<h3 id="matching-algorithm">Matching Algorithm</h3>
+<ul>
+<li>[ ] Implemented similarity search</li>
+<li>[ ] Added constraint filtering</li>
+<li>[ ] Built re-ranking logic</li>
+<li>[ ] Tested with 10 queries</li>
+<li>[ ] Achieved &gt;80% relevance</li>
+</ul>
+<h3 id="testing">Testing</h3>
+<ul>
+<li>[ ] Created test dataset</li>
+<li>[ ] Measured precision@10</li>
+<li>[ ] Tuned similarity threshold</li>
+<li>[ ] Documented accuracy metrics</li>
+</ul>
+<h2 id="phase-4-backend-api-week-3">🔌 Phase 4: Backend API (Week 3)</h2>
+<h3 id="api-endpoints">API Endpoints</h3>
+<ul>
+<li>[ ] POST /api/analyze-moodboard</li>
+<li>[ ] POST /api/search-products</li>
+<li>[ ] POST /api/refine-search</li>
+<li>[ ] GET /api/products/:id</li>
+</ul>
+<h3 id="features">Features</h3>
+<ul>
+<li>[ ] Session management</li>
+<li>[ ] Conversation history</li>
+<li>[ ] Error handling</li>
+<li>[ ] Input validation</li>
+<li>[ ] CORS configuration</li>
+</ul>
+<h3 id="testing">Testing</h3>
+<ul>
+<li>[ ] API tests written</li>
+<li>[ ] All endpoints working</li>
+<li>[ ] Error cases handled</li>
+<li>[ ] Performance acceptable (&lt;2s)</li>
+</ul>
+<h2 id="phase-5-frontend-mvp-week-4">🎨 Phase 5: Frontend MVP (Week 4)</h2>
+<h3 id="setup">Setup</h3>
+<ul>
+<li>[ ] React app created</li>
+<li>[ ] TailwindCSS configured</li>
+<li>[ ] API client set up</li>
+</ul>
+<h3 id="components">Components</h3>
+<ul>
+<li>[ ] MoodboardUploader</li>
+<li>[ ] ConstraintForm</li>
+<li>[ ] ChatInterface</li>
+<li>[ ] ProductGallery</li>
+<li>[ ] ProductCard</li>
+<li>[ ] FilterSidebar</li>
+</ul>
+<h3 id="ux-polish">UX Polish</h3>
+<ul>
+<li>[ ] Loading states</li>
+<li>[ ] Error messages</li>
+<li>[ ] Responsive design</li>
+<li>[ ] Smooth animations</li>
+<li>[ ] Accessibility basics</li>
+</ul>
+<h2 id="phase-6-testing-amp-launch-week-5">🧪 Phase 6: Testing &amp; Launch (Week 5)</h2>
+<h3 id="user-testing">User Testing</h3>
+<ul>
+<li>[ ] Recruited 5 testers</li>
+<li>[ ] Prepared test scenarios</li>
+<li>[ ] Conducted sessions</li>
+<li>[ ] Gathered feedback</li>
+<li>[ ] Documented learnings</li>
+</ul>
+<h3 id="optimization">Optimization</h3>
+<ul>
+<li>[ ] Cost per session &lt;$0.15</li>
+<li>[ ] Search relevance &gt;85%</li>
+<li>[ ] Response time &lt;2s</li>
+<li>[ ] Fixed critical bugs</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>[ ] User guide written</li>
+<li>[ ] API docs complete</li>
+<li>[ ] Deployment guide ready</li>
+<li>[ ] Cost analysis done</li>
+</ul>
+<h3 id="launch">Launch</h3>
+<ul>
+<li>[ ] Deployed to production</li>
+<li>[ ] Monitoring set up</li>
+<li>[ ] Backup strategy in place</li>
+<li>[ ] Support channels ready</li>
+</ul>
+<h2 id="post-mvp-month-2">🚀 Post-MVP (Month 2+)</h2>
+<h3 id="expansion">Expansion</h3>
+<ul>
+<li>[ ] Added Baumax crawler</li>
+<li>[ ] Added Hornbach crawler</li>
+<li>[ ] Added XXXLutz crawler</li>
+<li>[ ] Added Sconto crawler</li>
+<li>[ ] Expanded to 1000+ products</li>
+</ul>
+<h3 id="features">Features</h3>
+<ul>
+<li>[ ] 3D model search</li>
+<li>[ ] Project save/share</li>
+<li>[ ] Price tracking</li>
+<li>[ ] Email alerts</li>
+<li>[ ] Multi-language support</li>
+</ul>
+<h3 id="scale">Scale</h3>
+<ul>
+<li>[ ] Migrated to PostgreSQL</li>
+<li>[ ] Implemented caching</li>
+<li>[ ] Added CDN</li>
+<li>[ ] 100+ active users</li>
+</ul>
+<hr>
+<h2 id="progress-tracking">📈 Progress Tracking</h2>
+<p><strong>Current Phase:</strong> Phase 1<br>
+<strong>Completion:</strong> 20%<br>
+<strong>Next Milestone:</strong> First 100 products crawled<br>
+<strong>Blockers:</strong> None</p>
+<p><strong>Last Updated:</strong> 2025-10-08</p>
+<hr>
+<h2 id="quick-wins-do-these-first">🎯 Quick Wins (Do These First!)</h2>
+<ol>
+<li>[ ] Get first 5 products from Siko</li>
+<li>[ ] Test Claude API with simple prompt</li>
+<li>[ ] Create sample moodboard analysis</li>
+<li>[ ] Document HTML selectors</li>
+<li>[ ] Validate one complete product</li>
+</ol>
+<p><strong>Total time:</strong> ~2-3 hours<br>
+<strong>Impact:</strong> Foundation for entire project!</p>
+<hr>
+<h2 id="notes-amp-learnings">💭 Notes &amp; Learnings</h2>
+<p>Use this space to track insights:</p>
+<pre><code>Date: YYYY-MM-DD
+Learning: 
+Next time: 
+
+
+Date: YYYY-MM-DD
+Issue: 
+Solution: 
+
+
+Date: YYYY-MM-DD
+Idea: 
+Priority: 
+</code></pre>
