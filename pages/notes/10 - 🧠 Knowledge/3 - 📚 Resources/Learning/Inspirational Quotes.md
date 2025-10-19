@@ -8,6 +8,8 @@
 - Anatol Adams: "There's nothing worse than a brilliant image of a fuzzy concept"
 - John Maeda: "Design is a reasoned intention"
 - Alexis Lloyd: "Speed and thoughtfulness need to coexist in order to make good things - not just fast things"
+- Maya Angelou: "I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
+	- on importance of [grout](https://medium.com/centre-for-public-impact/honouring-the-grout-ea9327a1d2aa)
 
 ---
 

@@ -6,6 +6,7 @@ resources:
   - https://www.nngroup.com/articles/channels-devices-touchpoints/
   - https://www.zendesk.com/blog/customer-journey-map/
   - https://uxpressia.com/blog/customer-journey-map-guide-examples
+  - https://medium.com/good-shift/what-does-a-good-ending-look-like-b73c5e82a002
 ---
 
 - visualize the experience of a person over time
@@ -82,3 +83,5 @@ resources:
 ## Concepts
 - **Channels:** The methods by which your business communicates information or messages to the customer. E.g. an app, a website, print media, etc
 - **Touchpoint:** Any point where a customer observes or interacts with your brand, from the on-boarding process to customer service chat.
+### Misc
+- on proper [endings](https://medium.com/good-shift/what-does-a-good-ending-look-like-b73c5e82a002)

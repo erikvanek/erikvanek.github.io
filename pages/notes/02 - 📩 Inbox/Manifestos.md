@@ -1,0 +1,1 @@
+- https://www.responsive.org/ on creating agile and fast-adopting organizations ready for challenges of 21st century

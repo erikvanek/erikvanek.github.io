@@ -6,13 +6,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./pages');
 
     // Remove statusMessage from server options to fix HTTP/2 warning
-    eleventyConfig.setServerOptions({
-        https: {
-            key: './localhost.key',
-            cert: './localhost.cert',
-        },
-        showAllHosts: true
-    });
+    // eleventyConfig.setServerOptions({
+    //     https: {
+    //         key: './localhost.key',
+    //         cert: './localhost.cert',
+    //     },
+    //     showAllHosts: true
+    // });
 
     // Add string split filter
     eleventyConfig.addNunjucksFilter("split", function (str, separator) {
