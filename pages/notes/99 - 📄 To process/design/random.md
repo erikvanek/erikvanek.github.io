@@ -26,4 +26,5 @@
 - Heart for measuring UX https://dovetail.com/ux/heart-framework/
 - [The myth of the genius designer](https://www.nngroup.com/articles/the-myth-of-the-genius-designer/)
 - [Product market fit](https://www.lennysnewsletter.com/p/finding-product-market-fit) by Lenny
-- well-reframed design https://en.wikipedia.org/wiki/Hitachi_Magic_Wand
+- well-reframed design https://en.wikipedia.org/wiki/Hitachi_Magic_Wand\
+- [Honoring the grout](https://medium.com/centre-for-public-impact/honouring-the-grout-ea9327a1d2aa) explains why not the tangible pieces might matter more than those that are visible or measurable
