@@ -1,0 +1,43 @@
+---
+sources: https://www.youtube.com/watch?v=0NlML-xA_lA https://www.youtube.com/watch?v=DonJQk9_OBg
+---
+# Ingredients
+- 500g macaroni
+- 1l milk
+- 3 bay leaves
+- 3 cloves of garlic
+- 300g of cheese
+	- 100g of cheddar
+	- 100g of parm
+	- 100g of some well melting stringy cheese
+- 3 tablespons of flour
+- 3 onions
+- salt, pepper, nutmeg
+- tablespoon of mustard
+- 2 tablespoons of worcestershire sauce / sherry vineagar
+# Process
+- infused milk
+	- bash garlic and heat the milk to the boiling point, once boiling, take off the theat, add garlic and bay leaves and let infuse for ~ 10 mins
+- - pasta
+	- half cook the pasta
+	- reserve some pasta water
+- base
+	- heat butter
+	- add sliced onions and a bit of salt
+	- caramelize on mid heat for ~ 15 mins
+	- then add flour, whisk in, fry a bit
+	- then gradually add infused milk
+	- get off the heat
+		- add mustard
+		- add cheeses
+		- add worcestershire sauce / vineagar
+		- dillute with pasta water to get smooth texture that is not stiff and not totally running
+		- add pre-cooked pasta in
+		- mix together
+	- transfer to a baking dish
+	- bake at 200 deg. C for 30 mins
+Pangritata
+	- fry 100g of bacon / pancetta / fuet until crispy
+	- get off the heat and let dry out		
+	- add some herbs, garlic, ...
+	- add breadcrumbs and fry them on mid heat until crunchy

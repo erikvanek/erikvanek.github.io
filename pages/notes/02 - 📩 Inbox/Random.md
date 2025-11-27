@@ -1,3 +1,5 @@
 - Try to postpone the moment of drawing the first line on the canvas – because the moment you draw one, it locks you in
 - Also try to give yourself space and time to explore more than the first order thinking
 - Bob Baxley on design takes more time myth – "Design exists. There is going to be a design. The question is whether there's going to be a good one or not"
+- "Every feature you add is friction in the interface and an added burden, however small, on your users"
+	- Joshua Porter in his [principles of product design](http://bokardo.com/principles-of-product-design/)

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nástup do výkonu trestu – Průvodce a podpora</title>
+    <meta name="description" content="Praktický průvodce pro osoby nastupující do výkonu trestu odnětí svobody a jejich blízké. Checklisty, informace, kontakty na pomoc.">
+    
+    <style>
+        /* ===========================================
+           CSS VARIABLES - Easy to customize
+           =========================================== */
+        :root {
+            /* Colors - warm, accessible palette */
+            --color-bg: #FFFBF5;
+            --color-bg-alt: #FFF8ED;
+            --color-text: #2D2A26;
+            --color-text-light: #5C5650;
+            --color-primary: #E07A3D;
+            --color-primary-dark: #C4642D;
+            --color-accent: #3D7E9E;
+            --color-accent-light: #E8F4F8;
+            --color-warning: #D4432F;
+            --color-warning-bg: #FEF2F0;
+            --color-success: #4A8B5C;
+            --color-success-bg: #F0F7F2;
+            --color-border: #E5DED4;
+            
+            /* Typography */
+            --font-main: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-size-base: 18px;
+            --line-height: 1.6;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-xxl: 5rem;
+            
+            /* Border radius */
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        /* ===========================================
+           RESET & BASE
+           =========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        /* ===========================================
+           TYPOGRAPHY
+           =========================================== */
+        h1, h2, h3, h4 {
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--color-text);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        p {
+            margin-bottom: var(--space-sm);
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--color-primary);
+        }
+
+        /* ===========================================
+           LAYOUT
+           =========================================== */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        /* ===========================================
+           HERO SECTION
+           =========================================== */
+        .hero {
+            background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+            padding: var(--space-xl) 0 var(--space-xxl);
+            text-align: center;
+            border-bottom: 3px solid var(--color-border);
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            color: var(--color-text);
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+
+        /* ===========================================
+           BUTTONS
+           =========================================== */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-accent-light);
+            color: var(--color-accent);
+        }
+
+        /* ===========================================
+           WARNING BOX
+           =========================================== */
+        .warning-box {
+            background-color: var(--color-warning-bg);
+            border-left: 4px solid var(--color-warning);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .warning-box h3 {
+            color: var(--color-warning);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-xs);
+        }
+
+        .warning-box p {
+            margin-bottom: var(--space-xs);
+            color: var(--color-text);
+        }
+
+        .warning-box p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        /* ===========================================
+           INFO BOX
+           =========================================== */
+        .info-box {
+            background-color: var(--color-accent-light);
+            border-left: 4px solid var(--color-accent);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ===========================================
+           CARDS
+           =========================================== */
+        .card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--color-border);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+        }
+
+        /* ===========================================
+           CHECKLIST STYLES
+           =========================================== */
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .checklist-note {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-top: var(--space-xs);
+        }
+
+        /* ===========================================
+           SECTION DIVIDERS
+           =========================================== */
+        .section-odsouzeni {
+            background-color: var(--color-bg);
+        }
+
+        .section-rodina {
+            background-color: var(--color-bg-alt);
+        }
+
+        .section-pomoc {
+            background-color: var(--color-success-bg);
+        }
+
+        .section-odbornici {
+            background-color: var(--color-accent-light);
+        }
+
+        /* ===========================================
+           NAVIGATION CARDS
+           =========================================== */
+        .nav-cards {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .nav-card {
+            display: block;
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 2px solid var(--color-border);
+            transition: all 0.2s ease;
+        }
+
+        .nav-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .nav-card h3 {
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .nav-card p {
+            color: var(--color-text-light);
+            margin-bottom: 0;
+            margin-top: var(--space-xs);
+        }
+
+        /* ===========================================
+           CONTACT SECTION
+           =========================================== */
+        .contact-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            text-align: center;
+            border: 2px solid var(--color-success);
+        }
+
+        .contact-card h3 {
+            color: var(--color-success);
+        }
+
+        .contact-phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-success);
+            margin: var(--space-sm) 0;
+        }
+
+        /* ===========================================
+           DOWNLOAD SECTION
+           =========================================== */
+        .download-list {
+            list-style: none;
+        }
+
+        .download-list li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .download-list a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-md);
+            background: white;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .download-list a:hover {
+            background: var(--color-bg-alt);
+            border-color: var(--color-primary);
+        }
+
+        /* ===========================================
+           FOOTER
+           =========================================== */
+        footer {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--color-bg);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ===========================================
+           PRINT STYLES
+           =========================================== */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+        }
+
+        /* ===========================================
+           RESPONSIVE - TABLET+
+           =========================================== */
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .nav-cards {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .nav-card {
+                flex: 1 1 calc(50% - var(--space-md));
+            }
+        }
+
+        /* ===========================================
+           UTILITY CLASSES
+           =========================================== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-lg {
+            margin-top: var(--space-lg);
+        }
+
+        .mb-lg {
+            margin-bottom: var(--space-lg);
+        }
+
+        .emoji-icon {
+            font-size: 1.3em;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================
+         HERO SECTION
+         ========================================= -->
+    <header class="hero">
+        <div class="container">
+            <h1>Nastupujete do výkonu trestu?</h1>
+            <p class="subtitle">
+                Nejste v tom sami. Tady najdete vše, co potřebujete vědět – 
+                pro vás i vaše blízké.
+            </p>
+            
+            <div class="hero-cta no-print">
+                <a href="#pro-odsouzene" class="btn btn-primary">Nastupuji do vězení</a>
+                <a href="#pro-rodiny" class="btn btn-secondary">Můj blízký nastupuje</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================
+         WARNING BOX
+         ========================================= -->
+    <section style="padding-top: var(--space-lg); padding-bottom: 0;">
+        <div class="container">
+            <div class="warning-box">
+                <h3><span class="emoji-icon">⚠️</span> Nejdůležitější věc</h3>
+                <p><strong>Nastupte včas.</strong> Když nenastoupíte v termínu:</p>
+                <p>→ Přijde pro vás policie<br>
+                   → Dostanete další trest<br>
+                   → Ztratíte šanci na podmínku</p>
+                <p>Čím dřív nastoupíte, tím dřív budete venku.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         PRO ODSOUZENÉ
+         ========================================= -->
+    <section id="pro-odsouzene" class="section-odsouzeni">
+        <div class="container">
+            <h2><span class="emoji-icon">📋</span> Před nástupem do VTOS</h2>
+            
+            <!-- MUSÍM UDĚLAT -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="emoji-icon">🔴</span>
+                    <h3>Musím udělat</h3>
+                </div>
+                
+                <ul class="checklist">
+                    <li>
+                        <strong>Vím kdy a kam nastupuji</strong>
+                        <p class="checklist-note">Datum a věznice jsou v dopise, který přijde 1-4 měsíce po rozsudku.</p>
+                    </li>
+                    <li>
+                        <strong>Přebírám poštu</strong>
+                        <p class="checklist-note">⚠️ Když dopis nepřevezmete, stejně platí! Zajistěte, aby někdo poštu vybíral.</p>
+                    </li>
+                    <li>
+                        <strong>Mám občanku a kartičku pojišťovny</strong>
+                        <p class="checklist-note">Nemáte občanku? Jděte hned na úřad – trvá až měsíc!</p>
+                    </li>
+                    <li>
+                        <strong>Někdo ví, že nastupuji</strong>
+                        <p class="checklist-note">Rodina, partner, kamarád – někdo by měl vědět.</p>
+                    </li>
+                    <li>
+                        <strong>Napsal jsem si telefonní čísla blízkých</strong>
+                        <p class="checklist-note">Ve vězení nebudete mít mobil. Čísla napište na papír!</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- MĚL BYCH ZAŘÍDIT -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="emoji-icon">🟡</span>
+                    <h3>Měl bych zařídit</h3>
+                </div>
+                
+                <ul class="checklist">
+                    <li>Zrušit tarif na telefon <span class="checklist-note">(jinak vzniká dluh)</span></li>
+                    <li>Nahlásit na úřad práce / zaměstnavateli</li>
+                    <li>Požádat obec o odpuštění poplatku za odpad</li>
+                    <li>Zajistit přebírání pošty <span class="checklist-note">(plná moc pro blízkého)</span></li>
+                </ul>
+            </div>
+
+            <!-- CO S SEBOU -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="emoji-icon">📦</span>
+                    <h3>Co s sebou v den nástupu</h3>
+                </div>
+                
+                <div style="display: grid; gap: var(--space-md);">
+                    <div>
+                        <h4 style="color: var(--color-success); margin-bottom: var(--space-xs);">✅ Vzít</h4>
+                        <p>Občanku + kartičku pojišťovny • Peníze v hotovosti (co nejvíc) • Tabák, káva • Telefonní čísla na papíře • Léky + lékařské zprávy</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--color-warning); margin-bottom: var(--space-xs);">❌ Nebrat</h4>
+                        <p>Mobil • Sklo, plechovky • Značkové oblečení</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TÝKÁ SE MĚ? -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="emoji-icon">❓</span>
+                    <h3>Týká se mě?</h3>
+                </div>
+                
+                <ul class="checklist">
+                    <li>
+                        <strong>Mám děti</strong>
+                        <p class="checklist-note">Je zajištěna péče? Mám kopie rodných listů?</p>
+                    </li>
+                    <li>
+                        <strong>Mám auto</strong>
+                        <p class="checklist-note">Je bezpečně zaparkované? Nehrozí odtah?</p>
+                    </li>
+                    <li>
+                        <strong>Podnikám</strong>
+                        <p class="checklist-note">Pozastavit živnost a zrušit registrace.</p>
+                    </li>
+                    <li>
+                        <strong>Mám dluhy/exekuce</strong>
+                        <p class="checklist-note">Peníze, které si vezmete DO vězení, exekutor nesebere!</p>
+                    </li>
+                    <li>
+                        <strong>Beru léky</strong>
+                        <p class="checklist-note">Vzít v originálním balení + zprávu od lékaře.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-lg no-print">
+                <a href="#ke-stazeni" class="btn btn-primary">📥 Stáhnout checklist (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         PRO RODINY
+         ========================================= -->
+    <section id="pro-rodiny" class="section-rodina">
+        <div class="container">
+            <h2><span class="emoji-icon">👨‍👩‍👧</span> Informace pro blízké</h2>
+            
+            <div class="info-box">
+                <p><strong>Váš blízký nastupuje do výkonu trestu.</strong><br>
+                Je to těžká situace pro něj i pro vás. Tady najdete, jak můžete pomoct.</p>
+            </div>
+
+            <div class="card">
+                <h3>Co potřebujete vědět</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                        <strong>Nástup je důležitý.</strong><br>
+                        <span style="color: var(--color-text-light);">Když nastoupí včas, má šanci na dřívější propuštění.</span>
+                    </li>
+                    <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                        <strong>Nebudete hned v kontaktu.</strong><br>
+                        <span style="color: var(--color-text-light);">První dny až týdny může trvat, než se ozve. Je to normální.</span>
+                    </li>
+                    <li style="padding: var(--space-sm) 0;">
+                        <strong>Můžete zůstat v kontaktu.</strong><br>
+                        <span style="color: var(--color-text-light);">Dopisy, telefon, návštěvy – vše je možné.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="emoji-icon">🤝</span> Jak můžete pomoct</h3>
+                <ul class="checklist">
+                    <li><strong>Buďte tam</strong> – někdy stačí vyslechnout</li>
+                    <li><strong>Pomozte s praktickými věcmi</strong> – doklady, úřady, pošta</li>
+                    <li><strong>Zapamatujte si společně telefonní čísla</strong> – nebude mít mobil</li>
+                    <li><strong>Doprovoďte ho k bráně věznice</strong> – pokud můžete</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="emoji-icon">📞</span> Jak zůstat v kontaktu</h3>
+                <div style="display: grid; gap: var(--space-md);">
+                    <div>
+                        <strong>Telefon</strong>
+                        <p class="checklist-note">Max 20 min denně, číslo musí být schválené, hovory jsou nahrávané.</p>
+                    </div>
+                    <div>
+                        <strong>Dopisy</strong>
+                        <p class="checklist-note">Můžete psát hned po nástupu. Pište často – hodně to znamená.</p>
+                    </div>
+                    <div>
+                        <strong>Návštěvy</strong>
+                        <p class="checklist-note">Až po převozu do kmenové věznice. Většinou 3 hodiny měsíčně.</p>
+                    </div>
+                    <div>
+                        <strong>Balíky</strong>
+                        <p class="checklist-note">1× za půl roku, max 5 kg. Tabák, káva, hygiena, trvanlivé jídlo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-lg no-print">
+                <a href="#ke-stazeni" class="btn btn-secondary">📥 Stáhnout materiály pro rodiny</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         POMOC
+         ========================================= -->
+    <section id="pomoc" class="section-pomoc">
+        <div class="container">
+            <h2><span class="emoji-icon">💚</span> Potřebujete pomoct?</h2>
+            
+            <p class="text-center mb-lg">Nemusíte to zvládat sami. V poradnách vám pomohou zdarma.</p>
+
+            <div class="contact-card">
+                <h3>Občanská poradna</h3>
+                <p>Pomůžeme vám zorientovat se v situaci a naplánovat další kroky.</p>
+                <p class="contact-phone">📞 XXX XXX XXX</p>
+                <p><a href="#">Najít nejbližší poradnu →</a></p>
+            </div>
+
+            <div class="nav-cards">
+                <div class="nav-card" style="cursor: default;">
+                    <h3><span class="emoji-icon">💰</span> Dluhy</h3>
+                    <p>Dluhové poradenství zdarma</p>
+                </div>
+                <div class="nav-card" style="cursor: default;">
+                    <h3><span class="emoji-icon">👶</span> Děti</h3>
+                    <p>OSPOD – pomoc s péčí o děti</p>
+                </div>
+                <div class="nav-card" style="cursor: default;">
+                    <h3><span class="emoji-icon">🧠</span> Psychika</h3>
+                    <p>Krizová linka, psycholog</p>
+                </div>
+                <div class="nav-card" style="cursor: default;">
+                    <h3><span class="emoji-icon">🚬</span> Závislost</h3>
+                    <p>Adiktologické služby</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         KE STAŽENÍ
+         ========================================= -->
+    <section id="ke-stazeni">
+        <div class="container">
+            <h2><span class="emoji-icon">📥</span> Materiály ke stažení</h2>
+            
+            <p class="mb-lg">Vytiskněte si a vezměte s sebou do poradny nebo domů.</p>
+
+            <ul class="download-list">
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">📋</span>
+                        <span><strong>Checklist před nástupem</strong><br>
+                        <small style="color: var(--color-text-light);">PDF, 1 strana</small></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">👨‍👩‍👧</span>
+                        <span><strong>Informace pro rodiny</strong><br>
+                        <small style="color: var(--color-text-light);">PDF, 2 strany</small></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">📦</span>
+                        <span><strong>Co s sebou do vězení</strong><br>
+                        <small style="color: var(--color-text-light);">PDF, 1 strana</small></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- =========================================
+         PRO ODBORNÍKY
+         ========================================= -->
+    <section id="pro-odborniky" class="section-odbornici">
+        <div class="container">
+            <h2><span class="emoji-icon">👩‍💼</span> Pro odborníky</h2>
+            
+            <p>Pracujete s klienty, kteří nastupují do VTOS? Připravili jsme nástroje pro vaši práci.</p>
+
+            <ul class="download-list mt-lg">
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">🔍</span>
+                        <span><strong>Triážní dotazník</strong><br>
+                        <small style="color: var(--color-text-light);">Rychlé zmapování situace klienta</small></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">🗣️</span>
+                        <span><strong>Návod na rozhovor</strong><br>
+                        <small style="color: var(--color-text-light);">Jak vést 15-30 min schůzku</small></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="emoji-icon">✅</span>
+                        <span><strong>Předávací checklist</strong><br>
+                        <small style="color: var(--color-text-light);">Co nezapomenout před odchodem klienta</small></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+    <footer class="no-print">
+        <div class="container">
+            <p>Vytvořeno v rámci projektu <strong>"Mám rozsudek a co dál?"</strong></p>
+            <p style="margin-top: var(--space-sm);">
+                <a href="https://erikvanek.com">erikvanek.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

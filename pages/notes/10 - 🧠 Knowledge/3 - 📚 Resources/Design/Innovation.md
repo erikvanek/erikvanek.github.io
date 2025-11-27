@@ -32,6 +32,10 @@ tags:
 	- thus [[04 - 💽 RAW/2025/04/06/Customer#Needs|Customer Needs]] are only bound to their imagination and existing experience
 - "Change is driven by how people use technology"
 	- Josh Zak
+- "product innovation isn't about new products that solve new problems. Product innovation is about new products that solve existing problems better than they're currently solved."
+	- Joshua Porter in his [product design principles](http://bokardo.com/principles-of-product-design/)
+- "When people tell you something’s wrong or doesn’t work for them, they are almost always right. When they tell you exactly what they think is wrong and how to fix it, they are almost always wrong."
+	- Neil Gaiman
 
 ## Articles
 - [How to make something great](https://ryolu.notion.site/how-to-make-something-great)
