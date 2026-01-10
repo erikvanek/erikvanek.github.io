@@ -1,4 +1,4 @@
-# Inspirational Quotes
+# Quotes
 
 - Peter Senge: "Many of the problems we face today are yesterday's solutions"
 - Erika Hall: "Relevance to the real world is what separates innovation from invention"

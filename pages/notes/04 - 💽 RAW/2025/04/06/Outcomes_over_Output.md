@@ -37,7 +37,7 @@ Implementing this approach requires fundamental organizational shifts, as most c
 - MVP is an example of an experiment
 - Outcomes (behavior change) → impact (increase in revenue, loyalty...) is a side effect
 - Designing for outcomes, when done well, yields impact
-- To figure out what desired outcomes (i.e. customer actions that drive business value), we must understand what customers are doing that drives the results we care about
+- To figure out what are desired outcomes (i.e. customer actions that drive business value), we must understand what customers are doing that drives the results we care about
 
 ## Implementing Outcome-Based Thinking
 - When we state goals with outcomes, we propose some relationship between our work and its results which we can then capture in a hypothesis and test with an experiment

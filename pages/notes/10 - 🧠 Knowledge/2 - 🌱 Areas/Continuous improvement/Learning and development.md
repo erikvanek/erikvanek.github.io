@@ -1,0 +1,1 @@
+- course on [speculative design](https://www.critical.design/product/speculative-design-basics-course-online)
