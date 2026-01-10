@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>This research compilation explores the intersection of ethics and design practice across multiple dimensions. The core tension examined is whether design—as a practical activity—can be separated from ethics as a system of beliefs, and how designers can meaningfully integrate ethical considerations into their daily work rather than treating them as afterthoughts.</p>
+<p>Several frameworks emerge as practical approaches: the five principles of research ethics (respect, responsibility, inclusion, honesty, evolution), the concept of &quot;daily ethical design&quot; with its emphasis on tracking assumptions and seeking falsifiability, and consequence scanning as a lightweight method for anticipating intended and unintended impacts. A key insight is that ethical design requires a paradigm shift—moving ethics from a constraint to a foundational objective, ideally embedded at project kick-off through a &quot;smaller diamond&quot; that precedes the traditional double diamond process.</p>
+<p>The research also surfaces critical questions designers should continuously ask: who benefits and who loses, what perspectives are excluded, how might designs be misused, and whether we're making promises we can't keep. The underlying theme is that designers are guests in participants' worlds, and responsible practice means building relationships rooted in trust, consent, and genuine respect for people's time and stories.</p>
+<hr>
+<h1 id="from-quotdid-hitler-have-great-designersquot">From &quot;Did Hitler have great designers?&quot;</h1>
+<ul>
+<li>design is a practical activity whereas ethics is a system of beliefs</li>
+<li><em>Potter Stewart: &quot;Ethics is the difference between what you have to do and what is right to do&quot;</em></li>
+</ul>
+<h1 id="from-quotthe-little-book-of-research-ethicsquot">From &quot;The Little book of research ethics&quot;</h1>
+<ul>
+<li>5 principles - respect, responsibility, inclusion, honesty, evolution</li>
+<li>centering respect in relationships helps minimize extractive interactions with people and their stories</li>
+<li>responsible research is rooted in trust and consent - it helps to craft more honest relationship between the design team and participants</li>
+<li><em>inclusion principle - we seek out, include and deeply value the voices and experiences of people who are often unheard or ignored</em></li>
+<li>when we ask people to fill in information during screening and then not inviting them to the research, we've not being respectful of their time and we risk worsening our relationship and our research credibility</li>
+<li>when we're recruiting research participants, we're building a relationship</li>
+<li>by seeking community expertise by closely working with one or more SMEs, we can easily fill in our gaps in understanding during recruitment phase</li>
+<li><em>we are guests in our participants' world</em></li>
+<li>participatory methods and co-design approaches shift power from designers to research participants</li>
+<li><em>by remaining open to being wrong, we continue and are able to revise and correct our designs in ways that avoid harm</em></li>
+<li><strong>following up after the research ends with participants is a way of respecting them, and of appreciating their contribution and, most importantly, may help to build trust and also it's a way how to shed light at possibly overlooked contributions</strong></li>
+</ul>
+<h1 id="thought-provoking-questions">Thought provoking questions</h1>
+<ul>
+<li>What perspectives are not included in our research?</li>
+<li>Might participants' participation harm them somehow in their future?</li>
+<li>Are our research activities considerate of participant's time and needs?</li>
+<li>Informed consent is an ongoing process, not a single event</li>
+<li>Aren't we promising something we're not in charge of keeping? (e.g. a tool delivery when we're responsible &quot;only&quot; for the discovery)</li>
+<li>Are we appropriately crediting those that should be acknowledged?</li>
+<li>Who is (un)intentionally left out?</li>
+<li>What are the long-term benefits/cons for individual/organization/society?</li>
+<li>Who benefits and who loses from our design?</li>
+<li><em>How could your design be misused?</em></li>
+</ul>
+<h1 id="from-daily-ethical-design">From Daily Ethical Design</h1>
+<ul>
+<li>ethical design definition from <a href="http://encyclopedia.com">encyclopedia.com</a> says &quot;design ethics concerns moral behavior and responsible choices in design practice&quot; i.e. it is about &quot;goodness&quot; in terms of benefits to the individual/organization/society</li>
+<li>there's never a black-and-white answer to if design is right or wrong</li>
+<li>areas to consider when designing - privacy, user involvement, persuasion, focus, sustainability, society, usability, accessibility</li>
+<li>design ethics is often an afterthought, especially in times of tough deadlines and common resource constraints</li>
+<li><em>therefore we must shift design ethics to being integral part of our practice in a way that without it - designing feels incomplete - the first step is to practice &quot;daily ethical design&quot;</em></li>
+<li>4 practices that prove to be valuable to start doing:
+<ol>
+<li>connect to your organization's mission and values</li>
+<li>keep track of your assumptions</li>
+<li>aim to be proven wrong</li>
+<li>use the power of checklists</li>
+</ol>
+</li>
+<li>tracking assumptions systematically allows us to systematically observe potential flaws in our designs by not choosing the right solution</li>
+<li>assumptions are ideally tested and evaluated continuously</li>
+<li>assumptions are known unknowns, but there are also unknown unknowns that we should be open to by adhering to falsifiability - seeking actively to be proven wrong</li>
+<li>conducting continuous speculative/dark reality sessions might help foresee potential drawbacks</li>
+<li>it is better to do dark reality sessions during convergent phases by using tools like Tarot cards of tech</li>
+</ul>
+<h1 id="do-prce">Do práce</h1>
+<ul>
+<li>cítt z Daily ethical design o shiftu z afterthought do integral part</li>
+</ul>
+<h1 id="from-designers-redefine-success-first">From Designers (re)define success first</h1>
+<ul>
+<li>continuation of daily design ethics two years later with more experience</li>
+<li><em>typical risk taxonomy is not balanced out equally - desirable &amp; feasible are not on par with viable but they are means whereas viability is the goal</em></li>
+<li>genuinely purpose-driven company wants to reverse that so that viability &amp; feasibility are means and desirability is a goal</li>
+<li><em>fourth missing aspect in taxonomy is ethical that encapsulates all the others → to be able to embed this in our design practice, we must create <strong>objectives</strong> for ethical design that are achievable and inspirational</em></li>
+<li>3 levels of interventions (individual, society, world) bring 3 levels of objectives (e.g. in this case well-being, equity, sustainability) → ethical design means in this case well-being for users, an equitable value distribution within society and a design that can be sustained by living on our planet</li>
+<li>desirability is a poor indicator of success</li>
+<li><em>project kick-off is the most impactful moment where ethical design (or any other paradigmatic shift) can be embedded to the process</em></li>
+<li><strong>so eventually ethical design &quot;inserts&quot; one smaller diamond in front of a typical double diamond that focuses on identifying &quot;the right objective&quot; to focus on - so by (re)defining the success at the very beginning we're able to bring most ethical aspects to our projects</strong></li>
+<li>the role of a strategic designer is to define ethical objectives and choose right metrics to measure a way to get there</li>
+</ul>
+<h1 id="from-design-white-lies-and-ethics">From Design, White Lies and Ethics</h1>
+<ul>
+<li>world is full of placebo buttons - is that good or bad design?</li>
+<li><em>placebo buttons are called false affordances</em></li>
+<li><em>dark patterns put users in positions of acting against their own interest</em></li>
+</ul>
+<h1 id="from-consequence-scanning">From Consequence Scanning</h1>
+<ul>
+<li>should be organized at initial conception of a product, during roadmap planning and before feature creation</li>
+<li>it is lightweight, simple to orchestrate but difficult to master</li>
+<li>consists of 3 key questions:
+<ol>
+<li>What are the intended and unintended consequences of this feature or product?</li>
+<li>What are the positive consequences we want to focus on?</li>
+<li>What are the consequences we want to mitigate?</li>
+</ol>
+</li>
+<li>these questions might help to map out impact of your product/feature</li>
+<li>consequences = results of actions</li>
+<li>don't give it more than 45 minutes</li>
+<li>workshop guidance available online</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://vanschneider.medium.com/can-good-design-be-bad-design-f76504b8e018" target="_blank" rel="noopener noreferrer">https://vanschneider.medium.com/can-good-design-be-bad-design-f76504b8e018</a></li>
+            
+            <li><a href="https://doteveryone.org.uk/project/consequence-scanning/" target="_blank" rel="noopener noreferrer">https://doteveryone.org.uk/project/consequence-scanning/</a></li>
+            
+            <li><a href="https://www.ethicsfordesigners.com/ethical-disclaimer" target="_blank" rel="noopener noreferrer">https://www.ethicsfordesigners.com/ethical-disclaimer</a></li>
+            
+            <li><a href="https://www.ethicsfordesigners.com/normative-design-scheme" target="_blank" rel="noopener noreferrer">https://www.ethicsfordesigners.com/normative-design-scheme</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>
