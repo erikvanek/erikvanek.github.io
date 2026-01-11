@@ -1,0 +1,110 @@
+<h1 id="book-notes-processor">Book Notes Processor</h1>
+<p>Transcribe handwritten book notes into structured Obsidian notes.</p>
+<h2 id="trigger">Trigger</h2>
+<p>User says &quot;process book notes&quot; and provides either:</p>
+<ul>
+<li>A PDF file (reMarkable export)</li>
+<li>Multiple image files (photos of paper notes)</li>
+</ul>
+<h2 id="language">Language</h2>
+<p>Notes may be in <strong>Czech or English</strong>. Preserve the original language throughout. Do not translate.</p>
+<h2 id="workflow">Workflow</h2>
+<h3 id="1-convert-and-transcribe">1. Convert and Transcribe</h3>
+<p><strong>For PDF input:</strong></p>
+<pre><code class="language-python">from pdf2image import convert_from_path
+images = convert_from_path('notes.pdf', dpi=150)
+for i, img in enumerate(images):
+    img.save(f'page_{i+1}.png', 'PNG')
+</code></pre>
+<p><strong>For image input:</strong><br>
+Accept images directly and process in order.</p>
+<p>Then visually read and transcribe each page.</p>
+<h3 id="2-verify-content-type">2. Verify Content Type</h3>
+<p>Book notes typically have:</p>
+<ul>
+<li>Single book source</li>
+<li>Optional chapter/section structure (H2 headings)</li>
+<li>Cohesive narrative around one text</li>
+</ul>
+<p>If user provides multi-source research notes, suggest: &quot;This looks like multi-source research notes. Should I use 'process deep dive notes' instead?&quot;</p>
+<h3 id="3-apply-formatting-rules">3. Apply Formatting Rules</h3>
+<p>See <code>../shared/formatting-rules.md</code> for complete conventions. Key rules:</p>
+<ul>
+<li><code>!</code> at bullet start → <em>italics</em></li>
+<li><code>!!!</code> at bullet start → <strong>bold</strong></li>
+<li>Underscored words → <strong>bold</strong></li>
+<li>Numbered sequences → numbered lists</li>
+<li>H1 (<code>#</code>) marks book title</li>
+<li>H2 (<code>##</code>) marks chapters/sections if present</li>
+<li>Quotes: <code>Author: *&quot;Quote text&quot;*</code></li>
+</ul>
+<h3 id="4-collect-metadata">4. Collect Metadata</h3>
+<p>Ask user for:</p>
+<ul>
+<li><strong>Book title</strong> (if not clear from notes)</li>
+<li><strong>Author</strong></li>
+<li><strong>Year</strong> (optional)</li>
+</ul>
+<p>Then query Obsidian for existing tags:</p>
+<pre><code>obsidian-mcp-tools:search_vault_simple with relevant keywords
+</code></pre>
+<p>Select 3-5 tags that match the vault's existing taxonomy.</p>
+<h3 id="5-generate-summary">5. Generate Summary</h3>
+<p>If transcribed content exceeds ~1 A4 of text, generate a 1-3 paragraph summary covering:</p>
+<ul>
+<li>Core argument or thesis</li>
+<li>Key concepts or frameworks</li>
+<li>Personal insights or applications</li>
+</ul>
+<p>Place summary after frontmatter, before raw transcription.</p>
+<h3 id="6-build-frontmatter">6. Build Frontmatter</h3>
+<pre><code class="language-yaml">---
+title: [Book title]
+author: [Author name]
+year: [Publication year - optional]
+date_created: [YYYY-MM-DD]
+source_type: book
+tags:
+  - [3-5 relevant tags from vault]
+---
+</code></pre>
+<h3 id="7-handle-quotes">7. Handle Quotes</h3>
+<p>If transcription contains quotes (format: <code>Author: &quot;Quote text&quot;</code>):</p>
+<p>In transcription:</p>
+<pre><code class="language-markdown">- Author: *&quot;Quote text&quot;*
+</code></pre>
+<p>Append to Obsidian quotes file <code>10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Quotes.md</code>:</p>
+<pre><code class="language-markdown">- Author: &quot;Quote text&quot;
+</code></pre>
+<h3 id="8-save-to-obsidian">8. Save to Obsidian</h3>
+<p>Create file in inbox: <code>02 - 📩 Inbox/[Book Title].md</code></p>
+<p>Use <code>obsidian-mcp-tools:create_vault_file</code> with the complete markdown content.</p>
+<h3 id="9-add-related-notes">9. Add Related Notes</h3>
+<p>Query Obsidian for related existing notes and add a <code>## Related notes</code> section with wiki-links at the end.</p>
+<h2 id="output-structure">Output Structure</h2>
+<pre><code class="language-markdown">---
+[frontmatter]
+---
+
+## Summary
+
+[AI-generated summary if content is long enough]
+
+---
+
+# [Book Title]
+
+- [transcribed bullets with formatting]
+- *important point*
+- **very important point**
+- Author: *&quot;Quote text&quot;*
+
+## [Chapter/Section Name] (if applicable)
+
+- [chapter-specific notes]
+
+## Related notes
+
+- [[Related Note 1]]
+- [[Related Note 2]]
+</code></pre>

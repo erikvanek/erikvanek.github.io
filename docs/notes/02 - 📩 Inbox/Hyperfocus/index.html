@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>Chris Bailey's Hyperfocus explores the dual modes of attention that define knowledge work: hyperfocus (deliberate, singular concentration) and scatterfocus (mind-wandering that enables creativity and planning). The book reframes productivity not as cramming more tasks but as intentionally directing attention toward what matters most. Bailey argues that our brains evolved for survival, not knowledge work, making distractions naturally attractive—especially novelty, pleasure, and threat.</p>
+<p>The solution lies in managing attentional space: maintaining awareness of what occupies your mind, preventing overload, and deliberately choosing when to focus versus when to scatter. Key practices include setting hourly awareness check-ins, using implementation intentions to anchor tasks to environmental cues, eliminating external distractions before they arise, and taking strategic breaks before exhaustion sets in. The book distinguishes three types of scatterfocus—capture mode (free-roaming thoughts), problem-crunching mode (deliberate rumination), and habitual mode (simple tasks that allow background processing)—each serving different creative and restorative functions.</p>
+<p>Ultimately, the quality of your attention determines the quality of your life, and managing it requires treating your brain as a guest that needs both structure and space.</p>
+<hr>
+<h1 id="hyperfocus">Hyperfocus</h1>
+<h2 id="attention-and-intention">Attention and Intention</h2>
+<ul>
+<li>intention enables us to prioritize so that we don't overload our attentional space</li>
+<li>overeating as a metaphor for being overwhelmed</li>
+<li><em>at any time, your attentional space should hold at most two key things - what you intend to accomplish and what you're currently doing</em></li>
+<li><em>the best way to prevent overload is to be more selective with what you permit into your attentional space</em></li>
+<li><em>the brain is not built to do knowledge work - it's wired for survival and reproduction and craves dopamine</em></li>
+<li><em>our brain rewards us for poorly managing our attention as it was useful early in evolution to seek novel threats</em></li>
+<li><em>productivity means accomplishing what we intend to do, it is not about cramming more but doing the right thing</em></li>
+</ul>
+<h2 id="multitasking-and-switching">Multitasking and Switching</h2>
+<ul>
+<li>there's a difference between multitasking and shifting attention - first is concurrently focusing on more than one thing &amp; the latter means switching to a completely new context which might be costly &amp; overwhelming and eventually can end up slipping into autopilot</li>
+<li>switching to a new task becomes way easier after successfully closing the previous one as it frees up from attentional residue</li>
+<li>constantly switching before tasks make them last at 50% longer</li>
+</ul>
+<h2 id="stages-of-hyperfocus">Stages of Hyperfocus</h2>
+<ul>
+<li><em>intention is the bouncer of your attentional space</em></li>
+<li>the most important aspect of hyperfocus is that only one meaningful task consumes your attentional space</li>
+<li><em>one of the best ways to get more done and done faster is to prevent yourself from focusing on things that aren't important</em></li>
+<li>the way to get to a hyperfocus is to engage both your thoughts and your external environment and direct them at one thing intentionally</li>
+<li>4 stages of hyperfocus: 1. choose an object of attention; 2. eliminate external and internal distractions; 3. focus on object of attention; 4. continuously draw your focus back to that object</li>
+<li><em>intention has to precede attention</em></li>
+<li><em>key principle - keep one important, complex object of attention in your awareness as you work</em></li>
+</ul>
+<h2 id="managing-distractions">Managing Distractions</h2>
+<ul>
+<li>distractions are infinitely easier to deal with in advance - once they appear, it's already too late</li>
+<li>research shows our mind wanders 47% of time</li>
+<li>it takes 22 minutes on average to resume on a task</li>
+<li><em>attention without intention is a wasted energy</em></li>
+<li>the best way to become more productive is to choose what you want to accomplish before you start</li>
+<li><em>when focusing well, we're able to work more intelligently instead of just harder</em></li>
+<li>one top low to practice better intentionality is to setup an hourly awareness chime to check-in on an hourly basis if I direct my attention where it makes the most sense → this can give some data for what distracts the most so that it can be tackled later</li>
+<li><em>garbage in/garbage out works for intentions as well</em> - the more specific they are, the higher the chance of us following our intent</li>
+<li>implementation intention works similarly well to habits and it is a specific plan that helps us to reach my desired intent, works especially well if connected to some environmental cue like time or place</li>
+<li><em>the more aversive you are to the task or a project, the more important is to tame distractions ahead of time</em></li>
+<li>the more aversive a task, the more hyperfocus is needed</li>
+<li>our attentional space shrink as we get older but on the other side your mind wonders less</li>
+</ul>
+<h2 id="sources-of-distraction">Sources of Distraction</h2>
+<ul>
+<li>distractions are so attractive to our brain especially when tackling a difficult task due to our brain's novelty bias baked in</li>
+<li>there are two sources of distractions - others + us</li>
+<li>while we can't prevent interruptions from arising we can control how we respond to them</li>
+<li>knowledge workers alternate between focus and collaborative work; the question is for each to identify their individual ratio</li>
+<li>breaks are a pocket of time in which we can press pause on regulating our behavior</li>
+<li>the less energy we have, the more we're prone to notifications stealing away our focus</li>
+<li>eliminating novel cues as well as keeping the work environment safe clean allows to focus better</li>
+<li>David Allen: <em>&quot;our brain is for having thoughts, not for holding them&quot;</em> → an empty brain is a productive brain</li>
+<li><em>you experience guilt when you feel tension about your past; worry when you feel tension about the future and doubt and stress when you feel tension about the present moment and those feelings evaporate when you set intentions and make a rough plan how you'll complete your important tasks</em></li>
+</ul>
+<h2 id="attentional-space">Attentional Space</h2>
+<ul>
+<li><em>brain invariably resists complex tasks, especially when starting, and looks for more stimulating things to do instead - that's why clearing your working</em></li>
+<li>the more unused attentional space we have, the more our mind has a tendency to wander</li>
+<li>the larger your attentional space, the more your mind wanders when working on small tasks</li>
+<li><em>be mindful of Parkinson's law - the amount of time assigned to a task is often completely used</em></li>
+<li>doing mindless stuff is a sign that you don't have enough important on your plate and that's an illustration of why busywork gets set aside &amp; when you're on a deadline as there's no more time to expend</li>
+<li>usually more important tasks are more aversive</li>
+<li>the one proven way to increase attentional space is meditation</li>
+<li>when you hyperfocus, you're surrounded by very few novel objects of distraction/attention</li>
+<li><em>the quality of your attention determines the quality of your life</em></li>
+</ul>
+<h2 id="scatterfocus">Scatterfocus</h2>
+<ul>
+<li>mind wandering / scatterfocus, directing your attention inward</li>
+<li>hyperfocus - productivity × scatterfocus - creativity</li>
+<li>you enter scatterfocus whenever you leave your attentional space free</li>
+<li>scatterfocus allows 3 things - plan for future, recharge and think creatively</li>
+<li>society has crafted the world around us (smartphones, Netflix, news) to feed our three primary instincts - novelty, pleasure and threat</li>
+<li>instincts like store food and have sex now transform into overeating sugar and porn addiction</li>
+</ul>
+<h2 id="three-types-of-scatterfocus">Three Types of Scatterfocus</h2>
+<ul>
+<li>3 types of scatterfocus: 1. capture mode - letting mind roam freely; 2. problem-crunching mode - wandering with thoughts around a problem; 3. habitual mode - engaging in a simple task and capturing ideas and plans that rise to the surface while doing it</li>
+<li><strong>capture mode identifies what's on your mind, problem crunching for mulling over a specific idea and habitual mode is best for recharging and connecting the greatest number of ideas</strong></li>
+<li><em>unresolved tasks weigh heavily on our mind similarly like threats</em></li>
+<li>cutting away from distraction helps to make your thoughts to be the most interesting thing surrounding you</li>
+<li><em>elevated mood expands the size of your attentional space</em></li>
+<li>w habitual mode - the time when new ideas pop up while having a shower</li>
+<li>that habitual task serves as an anchor and while it's ongoing, your mind is stimulated to continue thinking</li>
+<li>devices like smartphones derail our focus like water - they seep into gaps of our schedule and steal valuable time we'd normally spend planning or correcting new ideas</li>
+<li><strong>a primary reason we feel burnt out is that we never give our attention a rest</strong></li>
+<li><em>you are what you decide to focus on (similarly to food)</em></li>
+</ul>
+<h2 id="meta-awareness-and-boredom">Meta-awareness and Boredom</h2>
+<ul>
+<li>? practicing active meta-awareness (being able to focus on what's occupying my attentional space) is another way how to strengthen my scatterfocus mode</li>
+<li>boredom: the feeling when we transition into a level of lower stimulation</li>
+<li>the less stimulated you are, the deeper you can think</li>
+<li>mind wandering is like hard disk defragmentation</li>
+<li><em>signs of low energy (and motivation to enter scatterfocus recharge) - switching among tasks, losing gap on your intention, getting tasks done slower, opting to do monkey work</em></li>
+</ul>
+<h2 id="breaks-and-energy-management">Breaks and Energy Management</h2>
+<ul>
+<li><em>the best time to take a break is before you need it</em></li>
+<li>the size of our attentional space can shrink by as much as 60 percent as a result of sleep deficit</li>
+<li><em>taking more break leads you to work smarter - the busier you are, the more you need them</em></li>
+<li>Zeigarnik effect explains why open loops/unresolved tasks are so annoying to us</li>
+</ul>
+<h2 id="insights-and-creativity">Insights and Creativity</h2>
+<ul>
+<li>insight is a notoriously difficult subject to study</li>
+<li><em>the richer our environment, and the richer our experiences, the more insights we're able to unlock</em></li>
+<li>insight triggers w/ f-lux moment e.g. when apple fell on Newton's head</li>
+<li>scatterfocus powerups - scatter attention in richer environment, write down problems you try to crack, sleep on a problem, step back, intentionally leave tasks unfinished, consume more valuable dots</li>
+<li>dreaming is scatterfocus on steroids</li>
+<li>clustering is a common practice of cumulating knowledge and the more we cluster, the deeper our expertise</li>
+<li>the more we know about a subject, the less attentional space it consumes</li>
+<li><em>intelligence and creativity are both about connecting dots but intelligence is about understanding a topic more intricately whereas creativity is about connecting dots in novel ways</em></li>
+</ul>
+<h2 id="consuming-information">Consuming Information</h2>
+<ul>
+<li>when in doubt if to consume something, asks: <em>&quot;how do you think your life will be different knowing this piece of information?&quot;</em></li>
+<li><em>the more creativity your job requires, the more often you should scatter your attention</em></li>
+<li>we're unable to be in hyperfocus and scatterfocus simultaneously, i.e. when we focus - we consume and collect dots, when we scatter our attention, we connect those dots</li>
+<li>happiness affects the size of our attentional space - the happier we are, the bigger it gets</li>
+<li><strong>scatterfocus is most powerful when you have the least energy as your brain does not inhibit ideas it generates</strong></li>
+<li>solution to creative problems come when you connect the greatest number of ideas</li>
+<li><em>when it comes to solving creative problems - the less control we have over our attention, the better</em></li>
+<li><em>meaning is not something we try to find, it is something we make an effort to notice</em></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="#" class="pending-link">11 - ⏳ interim knowledge/Productivity/Second Brain</a></li>
+<li><a href="/notes/99 - 📄 To process/Learning/">Learning</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Cognitive Processes/">Cognitive Processes</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

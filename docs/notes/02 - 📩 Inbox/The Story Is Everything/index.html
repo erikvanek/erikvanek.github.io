@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>This book provides a comprehensive framework for business storytelling and communication. It argues that knowing your story's end helps you begin effectively, and emphasizes that stories work by targeting feelings, actions, and beliefs (FAB framework).</p>
+<p>The book draws on Robert Cialdini's influence principles and covers practical writing techniques including the Flesch reading ease score, sentence structure, and the rule of thumb (one idea per sentence). It explores story structure through the hero's journey and three-act paradigm, emphasizing that emotional connection trumps facts.</p>
+<p>The book also addresses audience engagement (you have only 8 seconds to make an impression), presentation techniques using Aristotle's rhetorical triad (ethos, pathos, logos), and data presentation strategies that transform raw data into audience knowledge.</p>
+<hr>
+<h1 id="the-story-is-everything">The Story Is Everything</h1>
+<ul>
+<li>knowing how your story ends is a huge help at the beginning</li>
+<li>FAB - feelings, actions and beliefs</li>
+<li>a story works if it changes the feelings, actions or thoughts of audience</li>
+<li>feelings - instinctive reactions</li>
+<li>actions - we attempt listeners to change their behavior somehow</li>
+<li>beliefs - reflect the way how we perceive the world</li>
+<li>a great story causes a change in beliefs and thoughts and that often causes changes in how people act</li>
+<li>Robert Cialdini understood the fundamental aspects of influencing people and while technology has improved a lot since then, people haven't and thus his findings are even more important now than before; when working on a story - consider Cialdini's 6 influencing principles</li>
+</ul>
+<h2 id="4-types-of-microstories">4 types of microstories</h2>
+<h3 id="past">past</h3>
+<ul>
+<li>what did we do in the past?</li>
+<li>how do we do it differently now?</li>
+</ul>
+<h3 id="now-motivated-by-fear">now (motivated by fear)</h3>
+<ul>
+<li>what's the problem?</li>
+<li>what happens if we do nothing about it?</li>
+</ul>
+<h3 id="near-future">near future</h3>
+<ul>
+<li>are always positive</li>
+<li>what was I trying at?</li>
+<li>how did I feel when I succeeded?</li>
+</ul>
+<h3 id="far-future">far future</h3>
+<ul>
+<li>it's hard to convince people about a future that's far away</li>
+<li>what's your vision?</li>
+<li>what will be the emotional impact of your vision on the audience?</li>
+<li>three decades of internet browsing have given us the attention span of a smelly, not particularly smart chicken</li>
+<li><em>the first step in business writing is thinking long and hard about your audience and what they want</em></li>
+</ul>
+<h2 id="audience-engagement">Audience engagement</h2>
+<ul>
+<li><em>you might be the best storyteller in the world but if your audience isn't interested in your tale, you're selling double glazing to someone who doesn't have any windows</em></li>
+<li>you need to show your audience a reason to listen</li>
+</ul>
+<h2 id="3-typical-reasons-to-listen">3 typical reasons to listen:</h2>
+<ul>
+<li>your story is useful - they can use it right now</li>
+<li>your story is interesting - it might be handy in the future</li>
+<li>your story is enjoyable - it brings strong emotions</li>
+<li>ideally, your story should land somewhere in this &quot;triangle&quot; of reasons</li>
+</ul>
+<h2 id="keep-audience-engaged-by">Keep audience engaged by:</h2>
+<ul>
+<li>beginning with the end in mind</li>
+<li>opening strongly</li>
+<li>practicing well (to enable you improvise later)</li>
+<li>don't rely on slides as a crutch as it shows people you haven't bothered learning your lines</li>
+<li><em>well prepared to sharing a story is like when leaves appear on a tree in springtime</em></li>
+<li>if content is king, simplicity is queen - style should be precise and easy to understand</li>
+<li>2 key readability components - sentence length and word choice - no one wants to reread a sentence</li>
+</ul>
+<h2 id="flesch-reading-ease-score">Flesch reading ease score</h2>
+<ul>
+<li><em>Flesch reading ease score is the most common measure of readability</em></li>
+<li>rule of thumb - limit yourself to one idea per sentence - if your sentence is 25 words on average, you risk losing a third of readers even if they are interested in the topic</li>
+</ul>
+<h2 id="4-ways-how-to-cut-words">4 ways how to cut words:</h2>
+<ul>
+<li>cut adverbs and turn fluff into more fitting verbs</li>
+<li>use the passive voice sparingly</li>
+<li>choose everyday language over bizspeak</li>
+<li>cut out redundant words (e.g. end result → result)</li>
+<li>trying to sound important can easily become meaningless</li>
+<li><em>a barrier is any factor that stops the right meaning from being communicated</em></li>
+<li>words change meaning when used by different groups</li>
+<li><em>any illness weakens our mental functions, therefore it is hard to process new information and make plans for patients</em></li>
+<li>it is communicator's choice to communicate in a simpler way</li>
+<li>two key attributes of communication - it's richness and ability to spread well - the richer the method, the more personal it is and the worse it spreads</li>
+<li>information that can easily spread is easily dismissed</li>
+</ul>
+<h2 id="senior-communication">Senior communication</h2>
+<ul>
+<li><em>the more senior a person, the less time they have to work on poor-quality communication</em></li>
+<li>simple storytelling structure - situation, complication, resolution and they ideally transform main characters into heroes</li>
+<li><em>start with the end scene very clear in your mind and focus on what you want your audience to leave with when your talk is finished - what single thing you want them to leave remembered? - make sure your hero's transformation shows the value of this idea</em></li>
+</ul>
+<h2 id="syd-field-three-act-paradigm">Syd Field Three-Act Paradigm</h2>
+<ul>
+<li>complication is often extended to more explanation</li>
+<li><em>emotional connection is more important than facts and thus experience trumps evidence all the time - we remember experience forever but bullet points get forgotten</em></li>
+<li>humans love stories and humans love music</li>
+<li><em>finish stories with a cliffhanger</em></li>
+<li>a hero without a journey is like a cowboy without a horse</li>
+<li>a great storyteller takes the audience on a journey</li>
+<li>presentations fail because they lack emotional connection</li>
+</ul>
+<h2 id="6-elements-of-heros-journey">6 elements of hero's journey:</h2>
+<ol>
+<li>audience begins in their ordinary world</li>
+<li>the call to adventure</li>
+<li>meet a mentor</li>
+<li>guaranteed engagement when they cross the threshold</li>
+<li>facing the ordeal creates a world of contrasts</li>
+<li>heroes in your audience will be changed by their journey</li>
+</ol>
+<h2 id="8-second-attention-window">8-second attention window</h2>
+<ul>
+<li><em>you've got no more than eight seconds to make a positive impression on your audience before they tone out</em></li>
+<li>it is important to understand what holds your audience back from reaching lasting change - what helps them is to contrast where they are versus where they could be after spending time with you</li>
+<li><em>most people like the thought of personal transformation but the pain of change stops them from taking action and your job is to motivate them out of their comfort zone</em></li>
+<li><em>the whole point of storytelling is not about the storyteller but about the audience and your point is to help them overcome their obstacles</em></li>
+<li>mentioning the word creativity almost always kills it</li>
+</ul>
+<h2 id="5-creativity-boosting-techniques">5 creativity boosting techniques:</h2>
+<ol>
+<li>pretend to be someone different</li>
+<li>become a child again</li>
+<li>copy without producing fakes</li>
+<li>keep creative work for mornings</li>
+<li>find more time to do nothing</li>
+</ol>
+<ul>
+<li>stories are the one place where conflict is encouraged → a hero needs to struggle so make sure they face at least one strong opposing force - either internal or external - the more obstacles hero has to face, the less certain the end of the story</li>
+<li>myths are specific kind of stories - they don't need to be necessarily truthy but they spread and last well</li>
+</ul>
+<h2 id="good-quotthis-is-what-we-do-and-this-is-why-we-do-itquot-story">Good &quot;This is what we do and this is why we do it&quot; story</h2>
+<ul>
+<li>a two-line explanation should punch one into their face, otherwise it's not sad well</li>
+<li>FAB - feelings, reactions &amp; beliefs - are great to be used in gap analysis</li>
+<li>dilemmas work even better than conflicts in stories and they both make the audience want to know more</li>
+<li><em>storytelling is inevitably an experience - it it's possible - try to make it multisensory</em></li>
+<li>stories need tension and release, ups and downs, darkness &amp; light</li>
+<li><em>embrace the mindset that every member of your audience is on their own personal journey and they definitely care more about their story than your plumbing when talking about a product - make the client your hero and help them how your product helps them achieve their goals</em></li>
+<li><em>your message should be as simple and catchy so that customers are happy to tell others about</em></li>
+<li><em>if working with loss aversion - make sure to show what can be done to prevent the loss</em></li>
+<li><em>the default setting of a human brain is story</em></li>
+</ul>
+<h2 id="3-rs-of-writing">3 Rs of writing</h2>
+<ul>
+<li>ritual, regular, routine</li>
+<li>never wait for ideal conditions to come as they probably never will</li>
+<li>3 factors for work environment selection - time, space and noise → the worst time is after lunch - a full tummy is the enemy of good writing</li>
+<li><em>&quot;The secret of being boring is to say everything&quot;</em> - Voltaire</li>
+<li>use shorter words to keep momentum (e.g. prohibit → ban, administer → give) - the longer the words/sentences, the less chance of grabbing audience's attention</li>
+<li>pompous wording is a clue that the speaker is struggling with the topic</li>
+<li>it is good to thank for feedback as it is difficult to give it</li>
+</ul>
+<h2 id="aristotles-triad-of-good-presentations">Aristotle's triad of good presentations:</h2>
+<ol>
+<li><strong>ethos</strong> - the speaker</li>
+<li><strong>pathos</strong> - the audience</li>
+<li><strong>logos</strong> - the logic of the speech</li>
+</ol>
+<ul>
+<li>successful presentations change how we feel</li>
+<li>pathos occurs when the audience feels exactly what we want them to feel</li>
+<li>pathos comes from storytelling your worries/ones</li>
+<li>pathos is about them, not about you</li>
+<li><strong>logos</strong> - ancient greek for &quot;word&quot; and it's the root of &quot;logic&quot; - is concerned about reason</li>
+</ul>
+<h2 id="take-your-listener-on-a-journey">Take your listener on a journey</h2>
+<ul>
+<li>be clear about the starting point, what they know and what they are about to learn - each step must connect to the previous one and it must feel logical at the end</li>
+</ul>
+<h2 id="when-presenting-quotrawquot-data-follow-these-4-steps">When presenting &quot;raw&quot; data - follow these 4 steps:</h2>
+<ol>
+<li>collect your data</li>
+<li>turn it into information</li>
+<li>transmit your data</li>
+<li>transmit knowledge to your audience</li>
+</ol>
+<ul>
+<li>presentation success = when data becomes audience's knowledge - you know it happened when you get questions about how the audience can use that new knowledge with their audience</li>
+<li><em>&quot;just because you can make a graph in Excel does not mean you should&quot;</em></li>
+<li>headlines should provoke audience to ask: <em>&quot;what's your story about?&quot;</em></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+
+
+    
+</body>
+
+</html>

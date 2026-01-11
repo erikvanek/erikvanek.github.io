@@ -1,0 +1,75 @@
+<h1 id="formatting-rules-for-handwritten-note-transcription">Formatting Rules for Handwritten Note Transcription</h1>
+<h2 id="language">Language</h2>
+<p>Notes may be in <strong>Czech or English</strong>. Preserve the original language. Do not translate.</p>
+<h2 id="emphasis-markers">Emphasis Markers</h2>
+<table>
+<thead>
+<tr>
+<th>Handwritten</th>
+<th>Markdown Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>- ! text</code></td>
+<td><code>- *text*</code> (italics)</td>
+</tr>
+<tr>
+<td><code>- !!! text</code></td>
+<td><code>- **text**</code> (bold)</td>
+</tr>
+<tr>
+<td><code>- !! text</code></td>
+<td><code>- **text**</code> (treat as !!!)</td>
+</tr>
+<tr>
+<td>underscored word</td>
+<td><strong>word</strong> (bold)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="structure">Structure</h2>
+<table>
+<thead>
+<tr>
+<th>Handwritten</th>
+<th>Markdown Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code># Title</code></td>
+<td><code># From &quot;Title&quot;</code></td>
+</tr>
+<tr>
+<td><code>- bullet</code></td>
+<td><code>- bullet</code></td>
+</tr>
+<tr>
+<td>numbered items (1. 2. 3.)</td>
+<td>numbered list</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quotes">Quotes</h2>
+<p>Quotes appear as: <code>Author: &quot;Quote text&quot;</code></p>
+<p>Output in transcription:</p>
+<pre><code class="language-markdown">- Author: *&quot;Quote text&quot;*
+</code></pre>
+<p>Also append to <a href="http://Quotes.md">Quotes.md</a>:</p>
+<pre><code class="language-markdown">- Author: &quot;Quote text&quot;
+</code></pre>
+<h2 id="lists">Lists</h2>
+<p>When encountering numbered sequences in prose (e.g., &quot;4 practices: 1. first 2. second&quot;):</p>
+<pre><code class="language-markdown">- 4 practices that prove valuable:
+    1. first item
+    2. second item
+    3. third item
+    4. fourth item
+</code></pre>
+<h2 id="page-headers">Page Headers</h2>
+<p>Each page typically starts with <code># Source Title</code>. These become H1 headings in the transcription:</p>
+<pre><code class="language-markdown"># From &quot;Source Title&quot;
+</code></pre>
+<h2 id="personal-notes">Personal Notes</h2>
+<p>Preserve personal notes/todos in their original language (Czech or English).</p>
