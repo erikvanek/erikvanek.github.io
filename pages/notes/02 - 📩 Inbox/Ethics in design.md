@@ -1,18 +1,24 @@
 ---
 title: Ethics in Design
-source_type: research
 date_created: 2026-01-10
+source_type: research
 tags:
-  - design-ethics
-  - responsible-design
-  - research-ethics
+  - design
+  - design-research
   - human-centered-design
+  - behavioral-design
+  - discovery
 resources:
   - https://vanschneider.medium.com/can-good-design-be-bad-design-f76504b8e018
   - https://doteveryone.org.uk/project/consequence-scanning/
   - https://www.ethicsfordesigners.com/ethical-disclaimer
   - https://www.ethicsfordesigners.com/normative-design-scheme
+  - https://www.ideo.com/journal/the-little-book-of-design-research-ethics
+  - https://alistapart.com/article/redefine-success-first/
+  - https://alistapart.com/article/daily-ethical-design/
+  - https://alistapart.com/article/design-white-lies-ethics/
 ---
+
 ## Summary
 
 This research compilation explores the intersection of ethics and design practice across multiple dimensions. The core tension examined is whether design—as a practical activity—can be separated from ethics as a system of beliefs, and how designers can meaningfully integrate ethical considerations into their daily work rather than treating them as afterthoughts.
@@ -26,20 +32,20 @@ The research also surfaces critical questions designers should continuously ask:
 # From "Did Hitler have great designers?"
 
 - design is a practical activity whereas ethics is a system of beliefs
-- _Potter Stewart: "Ethics is the difference between what you have to do and what is right to do"_
+- *Potter Stewart: "Ethics is the difference between what you have to do and what is right to do"*
 
 # From "The Little book of research ethics"
 
 - 5 principles - respect, responsibility, inclusion, honesty, evolution
 - centering respect in relationships helps minimize extractive interactions with people and their stories
 - responsible research is rooted in trust and consent - it helps to craft more honest relationship between the design team and participants
-- _inclusion principle - we seek out, include and deeply value the voices and experiences of people who are often unheard or ignored_
+- *inclusion principle - we seek out, include and deeply value the voices and experiences of people who are often unheard or ignored*
 - when we ask people to fill in information during screening and then not inviting them to the research, we've not being respectful of their time and we risk worsening our relationship and our research credibility
 - when we're recruiting research participants, we're building a relationship
 - by seeking community expertise by closely working with one or more SMEs, we can easily fill in our gaps in understanding during recruitment phase
-- _we are guests in our participants' world_
+- *we are guests in our participants' world*
 - participatory methods and co-design approaches shift power from designers to research participants
-- _by remaining open to being wrong, we continue and are able to revise and correct our designs in ways that avoid harm_
+- *by remaining open to being wrong, we continue and are able to revise and correct our designs in ways that avoid harm*
 - **following up after the research ends with participants is a way of respecting them, and of appreciating their contribution and, most importantly, may help to build trust and also it's a way how to shed light at possibly overlooked contributions**
 
 # Thought provoking questions
@@ -53,7 +59,7 @@ The research also surfaces critical questions designers should continuously ask:
 - Who is (un)intentionally left out?
 - What are the long-term benefits/cons for individual/organization/society?
 - Who benefits and who loses from our design?
-- _How could your design be misused?_
+- *How could your design be misused?*
 
 # From Daily Ethical Design
 
@@ -61,7 +67,7 @@ The research also surfaces critical questions designers should continuously ask:
 - there's never a black-and-white answer to if design is right or wrong
 - areas to consider when designing - privacy, user involvement, persuasion, focus, sustainability, society, usability, accessibility
 - design ethics is often an afterthought, especially in times of tough deadlines and common resource constraints
-- _therefore we must shift design ethics to being integral part of our practice in a way that without it - designing feels incomplete - the first step is to practice "daily ethical design"_
+- *therefore we must shift design ethics to being integral part of our practice in a way that without it - designing feels incomplete - the first step is to practice "daily ethical design"*
 - 4 practices that prove to be valuable to start doing:
     1. connect to your organization's mission and values
     2. keep track of your assumptions
@@ -80,20 +86,20 @@ The research also surfaces critical questions designers should continuously ask:
 # From Designers (re)define success first
 
 - continuation of daily design ethics two years later with more experience
-- _typical risk taxonomy is not balanced out equally - desirable & feasible are not on par with viable but they are means whereas viability is the goal_
+- *typical risk taxonomy is not balanced out equally - desirable & feasible are not on par with viable but they are means whereas viability is the goal*
 - genuinely purpose-driven company wants to reverse that so that viability & feasibility are means and desirability is a goal
-- _fourth missing aspect in taxonomy is ethical that encapsulates all the others → to be able to embed this in our design practice, we must create **objectives** for ethical design that are achievable and inspirational_
+- *fourth missing aspect in taxonomy is ethical that encapsulates all the others → to be able to embed this in our design practice, we must create **objectives** for ethical design that are achievable and inspirational*
 - 3 levels of interventions (individual, society, world) bring 3 levels of objectives (e.g. in this case well-being, equity, sustainability) → ethical design means in this case well-being for users, an equitable value distribution within society and a design that can be sustained by living on our planet
 - desirability is a poor indicator of success
-- _project kick-off is the most impactful moment where ethical design (or any other paradigmatic shift) can be embedded to the process_
+- *project kick-off is the most impactful moment where ethical design (or any other paradigmatic shift) can be embedded to the process*
 - **so eventually ethical design "inserts" one smaller diamond in front of a typical double diamond that focuses on identifying "the right objective" to focus on - so by (re)defining the success at the very beginning we're able to bring most ethical aspects to our projects**
 - the role of a strategic designer is to define ethical objectives and choose right metrics to measure a way to get there
 
 # From Design, White Lies and Ethics
 
 - world is full of placebo buttons - is that good or bad design?
-- _placebo buttons are called false affordances_
-- _dark patterns put users in positions of acting against their own interest_
+- *placebo buttons are called false affordances*
+- *dark patterns put users in positions of acting against their own interest*
 
 # From Consequence Scanning
 
@@ -107,3 +113,10 @@ The research also surfaces critical questions designers should continuously ask:
 - consequences = results of actions
 - don't give it more than 45 minutes
 - workshop guidance available online
+
+## Related notes
+
+- [[Design research]]
+- [[Behavioral design]]
+- [[Innovation]]
+- [[Discovery MOC]]
