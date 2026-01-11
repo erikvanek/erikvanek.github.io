@@ -1,15 +1,17 @@
 ---
-name: remarkable-notes
-description: Transcribe handwritten notes from reMarkable PDF exports and save them to Obsidian. Trigger phrase "process remarkable notes". Handles multi-source research compilations (multiple sources per PDF) and single-source notes (book, article, podcast). Converts handwriting to markdown, applies formatting conventions, generates metadata, creates AI summaries, and appends quotes to a central quotes file. Notes may be in Czech or English.
+name: book-notes
+description: Transcribe handwritten book notes from reMarkable PDFs or paper photos. Trigger phrase "process book notes". Handles single-source book notes with optional chapter structure. Converts handwriting to markdown, applies formatting conventions, generates metadata, creates AI summaries, and appends quotes to a central quotes file. Notes may be in Czech or English.
 ---
 
-# reMarkable Notes Processor
+# Book Notes Processor
 
-Transcribe handwritten reMarkable PDF exports into structured Obsidian notes.
+Transcribe handwritten book notes into structured Obsidian notes.
 
 ## Trigger
 
-User says "process remarkable notes" and provides a PDF file.
+User says "process book notes" and provides either:
+- A PDF file (reMarkable export)
+- Multiple image files (photos of paper notes)
 
 ## Language
 
@@ -19,8 +21,7 @@ Notes may be in **Czech or English**. Preserve the original language throughout.
 
 ### 1. Convert and Transcribe
 
-Convert PDF pages to images using pdf2image, then visually read and transcribe each page:
-
+**For PDF input:**
 ```python
 from pdf2image import convert_from_path
 images = convert_from_path('notes.pdf', dpi=150)
@@ -28,28 +29,38 @@ for i, img in enumerate(images):
     img.save(f'page_{i+1}.png', 'PNG')
 ```
 
-### 2. Determine Source Type
+**For image input:**
+Accept images directly and process in order.
 
-Ask user: "Is this a multi-source research compilation or single-source notes (book/article/podcast)?"
+Then visually read and transcribe each page.
 
-- **Multi-source research**: Multiple H1 headings per PDF, each representing a different source
-- **Single-source**: One source (book, article, podcast, random) — future implementation, ask user for details when encountered
+### 2. Verify Content Type
+
+Book notes typically have:
+- Single book source
+- Optional chapter/section structure (H2 headings)
+- Cohesive narrative around one text
+
+If user provides multi-source research notes, suggest: "This looks like multi-source research notes. Should I use 'process deep dive notes' instead?"
 
 ### 3. Apply Formatting Rules
 
-See `references/formatting-rules.md` for complete conventions. Key rules:
+See `../shared/formatting-rules.md` for complete conventions. Key rules:
 
 - `!` at bullet start → *italics*
 - `!!!` at bullet start → **bold**
 - Underscored words → **bold**
 - Numbered sequences → numbered lists
-- H1 (`#`) marks source titles
+- H1 (`#`) marks book title
+- H2 (`##`) marks chapters/sections if present
 - Quotes: `Author: *"Quote text"*`
 
 ### 4. Collect Metadata
 
-For research type, ask user for:
-- Resources list (URLs to original sources)
+Ask user for:
+- **Book title** (if not clear from notes)
+- **Author**
+- **Year** (optional)
 
 Then query Obsidian for existing tags:
 ```
@@ -60,9 +71,9 @@ Select 3-5 tags that match the vault's existing taxonomy.
 ### 5. Generate Summary
 
 If transcribed content exceeds ~1 A4 of text, generate a 1-3 paragraph summary covering:
-- Core tension or theme
-- Key frameworks or approaches
-- Critical questions or insights
+- Core argument or thesis
+- Key concepts or frameworks
+- Personal insights or applications
 
 Place summary after frontmatter, before raw transcription.
 
@@ -70,15 +81,13 @@ Place summary after frontmatter, before raw transcription.
 
 ```yaml
 ---
-title: [Derived from content]
+title: [Book title]
+author: [Author name]
+year: [Publication year - optional]
 date_created: [YYYY-MM-DD]
-source_type: research | book | article | podcast | random
+source_type: book
 tags:
   - [3-5 relevant tags from vault]
-resources:  # Only for research type
-  - [URL 1]
-  - [URL 2]
-author: [Only for book/article]
 ---
 ```
 
@@ -98,7 +107,7 @@ Append to Obsidian quotes file `10 - 🧠 Knowledge/3 - 📚 Resources/Learning/
 
 ### 8. Save to Obsidian
 
-Create file in inbox: `02 - 📩 Inbox/[Title].md`
+Create file in inbox: `02 - 📩 Inbox/[Book Title].md`
 
 Use `obsidian-mcp-tools:create_vault_file` with the complete markdown content.
 
@@ -119,16 +128,16 @@ Query Obsidian for related existing notes and add a `## Related notes` section w
 
 ---
 
-# From "[Source 1]"
+# [Book Title]
 
 - [transcribed bullets with formatting]
 - *important point*
 - **very important point**
 - Author: *"Quote text"*
 
-# From "[Source 2]"
+## [Chapter/Section Name] (if applicable)
 
-...
+- [chapter-specific notes]
 
 ## Related notes
 

@@ -1,4 +1,4 @@
-# Formatting Rules for reMarkable Transcription
+# Formatting Rules for Handwritten Note Transcription
 
 ## Language
 
