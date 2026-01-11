@@ -11,7 +11,7 @@
 - Maya Angelou: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
 	- on importance of [grout](https://medium.com/centre-for-public-impact/honouring-the-grout-ea9327a1d2aa)
 - Potter Stewart: "Ethics is the difference between what you have to do and what is right to do"
-
+- David Allen: "our brain is for having thoughts, not for holding them"
 ---
 
 **Tags:** #quotes #insights #wisdom #productivity #design #innovation
@@ -24,3 +24,12 @@
 - [[Product Vision]]
 - [[Learning]]
 - [[Behavioral design]]
+- Dave Gray: "Reality as a whole is unknowable"
+- Dave Gray: "Which are like fingers pointing to some aspects of reality, don't mistake 'em for reality"
+- Dave Gray: "The obvious is not obvious"
+- Dave Gray: "The way it is was created by someone, and therefore if someone created it, someone can change it"
+- Dave Gray: "Do I truly understand the need?"
+- Dave Gray: "It's impossible to be angry with a warm cup of tea in your hands"
+- Dave Gray: "Action may not always bring happiness, but there is no happiness without action"
+- Dave Gray: "The best way to promote a new or different belief is not with facts, but with a story"
+- Dave Gray: "Liminal thinking is a way of navigating change by opening the door to ambiguity and uncertainty"
