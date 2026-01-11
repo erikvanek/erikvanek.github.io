@@ -1,0 +1,64 @@
+<h1 id="skills">Skills</h1>
+<p>Custom Claude skills for personal workflows.</p>
+<h2 id="structure">Structure</h2>
+<pre><code>skills/
+├── shared/                    # Shared resources
+│   └── formatting-rules.md   # Common formatting conventions
+├── deep-dive-notes/          # Multi-source research notes
+│   └── SKILL.md
+└── book-notes/               # Single-source book notes
+    └── SKILL.md
+</code></pre>
+<h2 id="updating-a-skill">Updating a skill</h2>
+<ol>
+<li>Edit files in the skill folder (e.g., <code>deep-dive-notes/</code>)</li>
+<li>Commit changes:<pre><code class="language-bash">git add pages/skills/
+git commit -m &quot;skill-name: description of change&quot;
+</code></pre>
+</li>
+</ol>
+<h2 id="deploying-to-a-hrefhttpclaudeaiclaudeaia">Deploying to <a href="http://Claude.ai">Claude.ai</a></h2>
+<ol>
+<li>Package the skill:<pre><code class="language-bash">cd pages/skills
+zip -r skill-name.skill skill-name/
+</code></pre>
+</li>
+<li>Go to <a href="https://claude.ai/settings/capabilities">Settings &gt; Capabilities</a></li>
+<li>Scroll to <strong>Skills</strong> section</li>
+<li>Click <strong>Upload skill</strong> and select the <code>.skill</code> file</li>
+<li>If replacing an existing skill, it will be overwritten</li>
+</ol>
+<h2 id="available-skills">Available skills</h2>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Trigger</th>
+<th>Input</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deep-dive-notes</td>
+<td>&quot;process deep dive notes&quot;</td>
+<td>PDF or images</td>
+<td>Transcribe multi-source research notes to Obsidian</td>
+</tr>
+<tr>
+<td>book-notes</td>
+<td>&quot;process book notes&quot;</td>
+<td>PDF or images</td>
+<td>Transcribe single-source book notes to Obsidian</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shared-resources">Shared Resources</h2>
+<p>Both skills reference <code>shared/formatting-rules.md</code> for consistent transcription conventions.</p>
+<h2 id="what-we-will-build-next">What we will build next</h2>
+<ul>
+<li>processing inbox in my second brain</li>
+<li>agent for processing my second brain and getting it to a better shape than it is now</li>
+<li>templates for book &amp; deep dive notes</li>
+<li>weekly report what are the new things I learned recently (summary of important and bold items, ...)</li>
+</ul>
