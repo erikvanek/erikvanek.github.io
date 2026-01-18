@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "11b55a32dfdcb255",
+        "id": "53518a8893fcbdf5",
         "type": "tabs",
         "children": [
           {
-            "id": "2cd28e76e864a953",
+            "id": "6e7c716d0fc44c2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - 📩 Inbox/Liminal Thinking.md",
+                "file": "02 - 📩 Inbox/Evals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Liminal Thinking"
+              "title": "Evals"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#design",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -84,13 +84,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 444.5,
-    "collapsed": true
+    "width": 444.5
   },
   "right": {
     "id": "5bde52dce7d98592",
@@ -188,50 +186,50 @@
       "tldraw:Create new tldrawing": false
     }
   },
-  "active": "2cd28e76e864a953",
+  "active": "6e7c716d0fc44c2c",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Reading list.md",
+    "02 - 📩 Inbox/Evals.md",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
+    "10 - 🧠 Knowledge/4 - 🏛️ Archives/README.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/Product Vision.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Learning.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Planning.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Daily shutdown.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation/Index.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Second brain.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Tooling.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Freelance design practice/Weekly planning.md",
+    "10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Learning and development.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Personal Development/Goal Frameworks.md",
+    "20 - ✨ Ephemeron/Digest-Tracker.md",
+    "20 - ✨ Ephemeron/Digest-1.md",
+    "20 - ✨ Ephemeron/✨ Ephemeron.md",
+    "02 - 📩 Inbox/Untitled.base",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/External resources/Artefact-Tarot-Cards-of-Tech_downloadable.pdf",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19.pdf",
+    "99 - 📄 To process/resume/experiences/Adacta.md",
+    "99 - 📄 To process/Calendly.md",
+    "99 - 📄 To process/agile.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Behavioral design.md",
+    "02 - 📩 Inbox/Liminal Thinking.md",
     "02 - 📩 Inbox/Second brain.md",
     "02 - 📩 Inbox/Tldraw 2026-01-11 9.37PM.md",
-    "02 - 📩 Inbox/Liminal Thinking.md",
     "02 - 📩 Inbox/Hyperfocus.md",
     "02 - 📩 Inbox/The Story Is Everything.md",
-    "02 - 📩 Inbox/Ethics in design.md",
-    "02 - 📩 Inbox/Manifestos.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Ethical design.md",
     "Untitled",
     "causal-loops.png",
     "Pasted image 20251031093148.png",
-    "04 - 💽 RAW/2025/06/29/How_to_Speak_Machine.md",
-    "02 - 📩 Inbox/Random.md",
-    "02 - 📩 Inbox/Systemic design.md",
-    "02 - 📩 Inbox/Value proposition canvas.md",
-    "02 - 📩 Inbox/Iteration.md",
-    "02 - 📩 Inbox/Business case.md",
-    "02 - 📩 Inbox/Busy culture.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Quotes.md",
-    "02 - 📩 Inbox/Untitled.base",
-    "02 - 📩 Inbox/System dynamics.md",
-    "02 - 📩 Inbox/Product vision.md",
-    "02 - 📩 Inbox/Product market fit.md",
-    "02 - 📩 Inbox/Jobs to be done.md",
-    "02 - 📩 Inbox/Facilitation.md",
-    "02 - 📩 Inbox/Evals.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/Product Vision.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Cognitive Processes.md",
-    "04 - 💽 RAW/2025/04/06/Outcomes_over_Output.md",
-    "11 - ⏳ interim knowledge/ProductManagement/Books/Outcomes_over_Output.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Bike 🚲",
     "01 - 🤖 Second brain/Routines/eleventy-social-filters.js",
     "01 - 🤖 Second brain/scripts/url_manager.py",
     "04 - 💽 RAW/2025/06/29",
     "04 - 💽 RAW/2025/06",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Personal Development",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Product",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Methods",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/roman-foto.jpeg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/erik.png",
-    "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225133343.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134243.png",

@@ -51,3 +51,4 @@ Both skills reference `shared/formatting-rules.md` for consistent transcription 
 - agent for processing my second brain and getting it to a better shape than it is now
 - templates for book & deep dive notes
 - weekly report what are the new things I learned recently (summary of important and bold items, ...)
+- skills from processing my own experience from workshops/research/prototyping/...

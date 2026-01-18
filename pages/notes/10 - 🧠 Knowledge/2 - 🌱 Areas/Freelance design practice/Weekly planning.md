@@ -9,3 +9,4 @@
 - Go through **important and self-betterment** tasks and see how to fit them in
 	- Can I squeeze one **important** item to my schedule?
 - Try to focus assign deep work blocks for the rest of the week
+- Traveling plans for next 2 weeks
