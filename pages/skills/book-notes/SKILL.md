@@ -60,7 +60,6 @@ See `../shared/formatting-rules.md` for complete conventions. Key rules:
 Ask user for:
 - **Book title** (if not clear from notes)
 - **Author**
-- **Year** (optional)
 
 Then query Obsidian for existing tags:
 ```
@@ -83,7 +82,6 @@ Place summary after frontmatter, before raw transcription.
 ---
 title: [Book title]
 author: [Author name]
-year: [Publication year - optional]
 date_created: [YYYY-MM-DD]
 source_type: book
 tags:

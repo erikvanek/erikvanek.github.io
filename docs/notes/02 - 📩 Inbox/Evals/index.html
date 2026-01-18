@@ -194,6 +194,193 @@
 
     <ul>
 <li>a technique for evaluation of LLM model performance</li>
+<li>Evals make problems and behavioral changes visible before they affect users, and their value compounds over the lifecycle of an agent</li>
+<li>Evals also shape how quickly you can adopt new models.</li>
+<li>An <strong>evaluation</strong> (“eval”) is a test for an AI system: give an AI an input, then apply grading logic to its output to measure success
+<ul>
+<li><strong>Single-turn evaluations</strong> are straightforward: a prompt, a response, and grading logic</li>
+<li><strong>multi-turn evaluations</strong> have become increasingly common</li>
+</ul>
+</li>
+<li>When does the need for evals occur
+<ul>
+<li>The breaking point often comes <strong>when users report the agent feels worse after changes</strong>, and the team is ‘flying blind’ with no way to verify except to guess and check</li>
+<li>Absent evals, debugging is reactive</li>
+<li>Evals are especially useful at the start of agent development to explicitly encode expected behavior</li>
+</ul>
+</li>
+<li>Eval types
+<ul>
+<li>Capability
+<ul>
+<li><strong>Capability or “quality” evals</strong> ask “what can this agent do well?”</li>
+</ul>
+</li>
+<li>Regression
+<ul>
+<li><strong>Regression evals</strong> ask “does the agent still handle all the tasks it used to?”</li>
+<li>Should have a nearly 100% pass rate</li>
+<li>Protect against backsliding</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Defining eval tasks is <strong>one of the best ways to stress-test whether the product requirements are concrete enough</strong> to start building</li>
+<li><strong>eval-driven development</strong>: build evals to define planned capabilities before agents can fulfill them, then iterate until the agent performs well</li>
+</ul>
+<h2 id="building-evals">Building evals</h2>
+<h3 id="key-notions">Key notions</h3>
+<ul>
+<li>
+<ul>
+<li>A <strong>task</strong> (a.k.a <strong>problem</strong> or <strong>test case</strong>) is a single test with defined inputs and success criteria</li>
+</ul>
+</li>
+<li>Each attempt at a task is a <strong>trial</strong>. Because model outputs vary between runs, we run multiple trials to produce more consistent results.</li>
+<li>A <strong>grader</strong> is logic that scores some aspect of the agent’s performance. A task can have multiple graders, each containing multiple assertions (sometimes called <strong>checks</strong>)<strong>.</strong></li>
+<li>A <strong>transcript</strong> (also called a <strong>trace</strong> or <strong>trajectory</strong>) is the complete record of a trial, including outputs, tool calls, reasoning, intermediate results, and any other interactions.</li>
+<li>The <strong>outcome</strong> is the final state in the environment at the end of the trial.</li>
+<li>An <strong>evaluation suite</strong> is a collection of tasks designed to measure specific capabilities or behaviors</li>
+</ul>
+<h2 id="grader-types">Grader types</h2>
+<p>Each grader evaluates some portion of either the transcript or the outcome.</p>
+<h3 id="code-based">Code-based</h3>
+<p>•  String match checks (exact, regex, fuzzy, etc)<br>
+• Binary tests (fail-to-pass, pass-to-pass)<br>
+• Static analysis (lint, type, security)<br>
+• Outcome verification<br>
+• Tool calls verification (tools used, parameters)<br>
+• Transcript analysis (turns taken, token usage)</p>
+<h3 id="model-based">Model-based</h3>
+<ul>
+<li>Rubric-based scoring</li>
+<li>Natural language assertions</li>
+<li>Pairwise comparison</li>
+<li>Reference-based evaluation</li>
+<li>Multi-judge consensus</li>
+</ul>
+<h3 id="human">Human</h3>
+<ul>
+<li>SME review</li>
+<li>Crowdsourced judgment</li>
+<li>Spot-check sampling</li>
+<li>A/B testing</li>
+<li>Inter-annotator agreement</li>
+</ul>
+<h1 id="evaluation">Evaluation</h1>
+<ul>
+<li>For each task, scoring can be weighted (combined grader scores must hit a threshold), binary (all graders must pass), or a hybrid.</li>
+</ul>
+<h2 id="evaluating-conversational-agents">Evaluating conversational agents</h2>
+<ul>
+<li>Unlike traditional chatbots, they maintain state, use tools, and take actions mid-conversation</li>
+<li>conversational agents present a distinct challenge: the quality of the interaction itself is part of what you're evaluating</li>
+<li>Effective evals for conversational agents usually rely on verifiable end-state outcomes and rubrics that capture both task completion and interaction quality</li>
+<li>Unlike most other evals, they often require a second LLM to simulate the user</li>
+</ul>
+<h2 id="evaluating-research-agents">Evaluating research agents</h2>
+<ul>
+<li><strong>Research agents</strong> gather, synthesize, and analyze information, then produce output like an answer or report</li>
+<li>What counts as “comprehensive,” “well-sourced,” or even “correct” depends on context: a market scan, due diligence for an acquisition, and a scientific report each require different standards.</li>
+</ul>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li>Two typical metrics used in evaluation</li>
+<li>Both metrics are useful, and which to use depends on product requirements:
+<ul>
+<li>pass@k for tools where one success matters</li>
+<li>pass^k for agents where consistency is essential.</li>
+</ul>
+</li>
+</ul>
+<h3 id="a-hrefhttpsproceedingsneuripsccpaper2019file7298332f04ac004a0ca44cc69ecf6f6b-paperpdfstrongpasskstronga"><a href="https://proceedings.neurips.cc/paper/2019/file/7298332f04ac004a0ca44cc69ecf6f6b-Paper.pdf"><strong>pass@k</strong></a></h3>
+<ul>
+<li>measures the likelihood that an agent gets at least one correct solution in <em>k</em> attempts</li>
+<li>A score of 50% pass@1 means that a model succeeds at half the tasks in the eval on its first try</li>
+</ul>
+<h3 id="a-hrefhttpsarxivorgabs240612045strongpasskstronga"><a href="https://arxiv.org/abs/2406.12045"><strong>pass^k</strong></a></h3>
+<ul>
+<li>measures the probability that <em>all k</em> trials succeed</li>
+<li>If your agent has a 75% per-trial success rate and you run 3 trials, the probability of passing all three is (0.75)³ ≈ 42%</li>
+</ul>
+<h1 id="building-evals-for-agents">Building evals for agents</h1>
+<ul>
+<li>think of it like eval-driven agent development
+<ul>
+<li>define success early, measure it clearly, and iterate continuously</li>
+</ul>
+</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="collecting-initial-eval-dataset">Collecting initial eval dataset</h3>
+<h4 id="0-start-early">0. Start early</h4>
+<ul>
+<li>0-50 simple tasks drawn from real failures is a great start</li>
+<li>More mature agents may need larger, more difficult evals to detect smaller effects, but it’s best to take the 80/20 approach in the beginning</li>
+<li>Early on, product requirements naturally translate into test cases</li>
+</ul>
+<h4 id="1-start-with-what-you-already-test-manually">1. Start with what you already test manually</h4>
+<ul>
+<li>Converting user-reported failures into test cases ensures your suite reflects actual usage</li>
+</ul>
+<h4 id="2-write-clearly-defined-tasks-with-reference-solutions">2. Write clearly defined tasks with reference solutions</h4>
+<ul>
+<li><strong>A good task is one where two domain experts would independently reach the same pass/fail verdict</strong></li>
+<li>Ambiguity in task specifications becomes noise in metrics</li>
+<li>agents shouldn’t fail due to ambiguous specs</li>
+<li>For each task, it’s useful to create a reference solution: a known-working output that passes all graders</li>
+</ul>
+<h4 id="3-build-balanced-problem-sets">3. Build balanced problem sets</h4>
+<ul>
+<li>Test both the cases where a behavior <em>should</em> occur and where it <em>shouldn't</em></li>
+<li><strong>One-sided evals create one-sided optimization</strong></li>
+<li>if you only test whether the agent searches when it should, you might end up with an agent that searches for almost everything</li>
+<li>Striking the right balance between undertriggering (not searching when it should) or overtriggering (searching when it shouldn’t) might be difficult</li>
+</ul>
+<h3 id="design-the-eval-harness-and-graders">Design the eval harness and graders</h3>
+<h4 id="4-build-a-robust-eval-environment">4. Build a robust eval environment</h4>
+<ul>
+<li>it is essential that the agent in the eval functions roughly the same as the agend used in production and the environment does not add any additional noise</li>
+<li>Each trial should be “isolated” by starting from a clean environment.</li>
+<li>Unnecessary shared state between runs (leftover files, cached data, resource exhaustion) can cause correlated failures due to infrastructure flakiness rather than agent performance</li>
+</ul>
+<h4 id="5-design-graders-well">5. Design graders well</h4>
+<ul>
+<li>great eval design involves choosing the best graders for the agent and the tasks</li>
+<li>choose deterministic graders where possible, LLM graders where necessary or for additional flexibility, and using human graders judiciously for additional validation</li>
+<li>There is a common instinct to check that agents followed very specific steps like a sequence of tool calls in the right order
+<ul>
+<li><em>his approach too rigid and results in overly brittle tests, as agents regularly find valid approaches that eval designers didn’t anticipate</em></li>
+</ul>
+</li>
+<li><strong>it’s often better to grade what the agent produced, not the path it took</strong></li>
+<li>For tasks with multiple components, build in partial credit
+<ul>
+<li>A support agent that correctly identifies the problem and verifies the customer but fails to process a refund is meaningfully better than one that fails immediately</li>
+<li>It’s important to represent this continuum of success in results.</li>
+</ul>
+</li>
+<li><strong>To avoid hallucinations, give the LLM a way out like providing an instruction to return “Unknown” when it doesn’t have enough information</strong></li>
+<li><strong>The agent shouldn’t be able to easily “cheat” the eval. Tasks and graders should be designed so that passing genuinely requires solving the problem rather than exploiting unintended loopholes</strong></li>
+</ul>
+<h3 id="maintain-and-use-the-eval-long-term">Maintain and use the eval long-term</h3>
+<h4 id="6-check-the-transcripts">6. Check the transcripts</h4>
+<ul>
+<li>You won't know if your graders are working well unless you read the transcripts and grades from many trials</li>
+<li>When a task fails, the transcript tells you whether the agent made a genuine mistake or whether your graders rejected a valid solution</li>
+</ul>
+<h4 id="7-monitor-for-eval-saturation">7. Monitor for eval saturation</h4>
+<ul>
+<li>An eval at 100% tracks regressions but provides no signal for improvement</li>
+<li><strong>Eval saturation</strong> occurs when an agent passes all of the solvable tasks, leaving no room for improvement</li>
+<li>As evals approach saturation, progress will also slow, as only the most difficult tasks remain</li>
+<li><strong>Do not take eval scores at face value until someone digs into the details of the eval and reads some transcripts</strong></li>
+</ul>
+<h4 id="8-keep-evaluation-suites-healthy-through-open-contribution">8. Keep evaluation suites healthy through open contribution</h4>
+<ul>
+<li>An eval suite is a living artifact which needs ongoing attention and clear ownership to remain useful</li>
+<li>What proved most effective (at Anthropic) was establishing dedicated evals teams to own the core infrastructure, while domain experts and product teams contribute most eval tasks and run the evaluations themselves</li>
+<li>For AI product teams, owning and iterating on evaluations should be as routine as maintaining unit tests.</li>
 </ul>
 
 
@@ -205,6 +392,8 @@
             <li><a href="https://open.spotify.com/episode/7JBDnz8nqN305VkGcxUeZL?si=ba58ebc3eb354422" target="_blank" rel="noopener noreferrer">https://open.spotify.com/episode/7JBDnz8nqN305VkGcxUeZL?si=ba58ebc3eb354422</a></li>
             
             <li><a href="https://edwinchen.ai/blog/you-are-your-objective-function" target="_blank" rel="noopener noreferrer">https://edwinchen.ai/blog/you-are-your-objective-function</a></li>
+            
+            <li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents</a></li>
             
         </ul>
     </section>

@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.size
+    sort:
+      - property: file.size
+        direction: DESC
+    columnSize:
+      file.name: 434

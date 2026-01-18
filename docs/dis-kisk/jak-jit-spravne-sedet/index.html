@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jak jít správně sedět | Průvodce před nástupem do VTOS</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 8px 4px;
+    }
+    .screen { min-height: 80vh; }
+    h1 { font-size: 24px; margin-bottom: 16px; }
+    h2 { font-size: 20px; margin-bottom: 12px; }
+    p { margin-bottom: 12px; }
+    .option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      margin: 8px 0;
+      border: 2px solid #ccc;
+      background: white;
+    }
+    .option.selected {
+      border-color: #38b4e0;
+      background: #e6f7fc;
+    }
+    .progress {
+      background: #eee;
+      height: 8px;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      background: #38b4e0;
+      height: 100%;
+      transition: width 0.3s;
+    }
+    .plan-item {
+      border: 1px solid #ddd;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .plan-item h3 { font-size: 18px; margin-bottom: 8px; }
+    .priority-critical { border-left: 4px solid #dc2626; }
+    .priority-important { border-left: 4px solid #f59e0b; }
+    .priority-nice { border-left: 4px solid #10b981; }
+    .checklist-item {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checklist-item input { width: 20px; height: 20px; }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    const DIAGNOSTIC_QUESTIONS = [
+      {
+        id: 'family',
+        question: 'Staráš se o někoho?',
+        subtext: 'Pomůže nám to připravit plán podle tvé situace.',
+        multiSelect: true,
+        options: [
+          { id: 'children', label: 'Mám děti', emoji: '👶' },
+          { id: 'parents', label: 'Starám se o rodiče', emoji: '👵' },
+          { id: 'partner', label: 'Mám partnera/partnerku', emoji: '💑' },
+          { id: 'none', label: 'O nikoho se nestarám', emoji: '✓', exclusive: true },
+        ]
+      },
+      {
+        id: 'finance',
+        question: 'Jak jsi na tom s financemi?',
+        subtext: 'Vyber vše, co platí.',
+        multiSelect: true,
+        options: [
+          { id: 'debts', label: 'Mám dluhy nebo exekuce', emoji: '💰' },
+          { id: 'property', label: 'Mám majetek (byt, auto)', emoji: '🏠' },
+          { id: 'job', label: 'Mám práci', emoji: '💼' },
+          { id: 'none', label: 'Nic z toho', emoji: '✓', exclusive: true },
+        ]
+      },
+      {
+        id: 'health',
+        question: 'Máš nějaké zdravotní potřeby?',
+        subtext: 'Vyber vše, co platí.',
+        multiSelect: true,
+        options: [
+          { id: 'medications', label: 'Beru pravidelně léky', emoji: '💊' },
+          { id: 'conditions', label: 'Mám chronické onemocnění', emoji: '🏥' },
+          { id: 'addiction', label: 'Řeším závislost', emoji: '🚭' },
+          { id: 'none', label: 'Nic z toho', emoji: '✓', exclusive: true },
+        ]
+      },
+      {
+        id: 'timeframe',
+        question: 'Kolik času máš do nástupu?',
+        subtext: 'Přizpůsobíme priority.',
+        multiSelect: false,
+        options: [
+          { id: 'week', label: 'Méně než týden', emoji: '⚡' },
+          { id: '2weeks', label: '1-2 týdny', emoji: '📅' },
+          { id: 'month', label: '2-4 týdny', emoji: '📆' },
+          { id: 'more', label: 'Víc než měsíc', emoji: '🗓️' },
+          { id: 'unknown', label: 'Nevím', emoji: '❓' },
+        ]
+      },
+    ];
+
+    const PLAN_ITEMS = [
+      {
+        id: 'children-care',
+        title: 'Péče o děti',
+        priority: 'critical',
+        description: 'Zajisti, kdo se postará o tvé děti během výkonu trestu.',
+        conditions: [{ field: 'family', includes: 'children' }],
+        checklist: [
+          { id: 1, text: 'Domluvit s partnerkou/rodinou kdo převezme péči' },
+          { id: 2, text: 'Pokud nemáš nikoho, kontaktovat OSPOD' },
+          { id: 3, text: 'Připravit děti na situaci' },
+          { id: 4, text: 'Zajistit školu/školku (omluvenky, kontakty)' },
+        ]
+      },
+      {
+        id: 'debts',
+        title: 'Dluhy a exekuce',
+        priority: 'critical',
+        description: 'Před nástupem je dobré mít přehled o dluzích.',
+        conditions: [{ field: 'finance', includes: 'debts' }],
+        checklist: [
+          { id: 1, text: 'Zjistit stav dluhů (výpis z registru)' },
+          { id: 2, text: 'Kontaktovat věřitele a informovat o situaci' },
+          { id: 3, text: 'Zvážit oddlužení (osobní bankrot)' },
+        ]
+      },
+      {
+        id: 'medications',
+        title: 'Léky a zdraví',
+        priority: 'critical',
+        description: 'Zajisti si dostatek léků a zdravotní dokumentaci.',
+        conditions: [{ field: 'health', includes: 'medications' }],
+        checklist: [
+          { id: 1, text: 'Zajistit zásobu léků na první týdny' },
+          { id: 2, text: 'Připravit seznam léků a diagnóz' },
+          { id: 3, text: 'Získat zprávu od lékaře' },
+        ]
+      },
+      {
+        id: 'job',
+        title: 'Zaměstnání',
+        priority: 'important',
+        description: 'Řeš situaci se zaměstnavatelem.',
+        conditions: [{ field: 'finance', includes: 'job' }],
+        checklist: [
+          { id: 1, text: 'Informovat zaměstnavatele' },
+          { id: 2, text: 'Zjistit možnosti (neplacené volno vs. výpověď)' },
+          { id: 3, text: 'Vyřídit potřebné dokumenty' },
+        ]
+      },
+      {
+        id: 'property',
+        title: 'Majetek a bydlení',
+        priority: 'important',
+        description: 'Zajisti svůj majetek po dobu trestu.',
+        conditions: [{ field: 'finance', includes: 'property' }],
+        checklist: [
+          { id: 1, text: 'Rozhodnout co s bytem/domem' },
+          { id: 2, text: 'Zajistit platby (nájem, energie)' },
+          { id: 3, text: 'Uschovat cennosti' },
+        ]
+      },
+      {
+        id: 'partner-communication',
+        title: 'Komunikace s partnerem',
+        priority: 'important',
+        description: 'Domluv se s partnerem na fungování během trestu.',
+        conditions: [{ field: 'family', includes: 'partner' }],
+        checklist: [
+          { id: 1, text: 'Probrat finanční zajištění' },
+          { id: 2, text: 'Domluvit se na návštěvách' },
+          { id: 3, text: 'Nastavit komunikační pravidla' },
+        ]
+      },
+      {
+        id: 'documents',
+        title: 'Důležité dokumenty',
+        priority: 'nice_to_have',
+        description: 'Připrav si dokumenty, které budeš potřebovat.',
+        conditions: [],
+        checklist: [
+          { id: 1, text: 'Občanský průkaz' },
+          { id: 2, text: 'Kartička pojištěnce' },
+          { id: 3, text: 'Rozsudek' },
+          { id: 4, text: 'Předvolání k nástupu' },
+        ]
+      },
+      {
+        id: 'what-to-pack',
+        title: 'Co si vzít s sebou',
+        priority: 'nice_to_have',
+        description: 'Seznam povolených věcí při nástupu.',
+        conditions: [],
+        checklist: [
+          { id: 1, text: 'Osobní hygiena (základní)' },
+          { id: 2, text: 'Spodní prádlo a ponožky' },
+          { id: 3, text: 'Fotky rodiny (max 5)' },
+          { id: 4, text: 'Kontakty na blízké (na papíře)' },
+        ]
+      },
+    ];
+
+    function useLocalStorage(key, initialValue) {
+      const [value, setValue] = useState(() => {
+        try {
+          const stored = localStorage.getItem(key);
+          return stored ? JSON.parse(stored) : initialValue;
+        } catch {
+          return initialValue;
+        }
+      });
+
+      useEffect(() => {
+        localStorage.setItem(key, JSON.stringify(value));
+      }, [key, value]);
+
+      return [value, setValue];
+    }
+
+    function generatePlan(responses) {
+      return PLAN_ITEMS.filter(item => {
+        if (item.conditions.length === 0) return true;
+        return item.conditions.some(cond => {
+          const userValue = responses[cond.field] || [];
+          return userValue.includes(cond.includes);
+        });
+      }).sort((a, b) => {
+        const order = { critical: 0, important: 1, nice_to_have: 2 };
+        return order[a.priority] - order[b.priority];
+      });
+    }
+
+    function LandingScreen({ onStart, onFamily, onExpert }) {
+      return (
+        <div className="screen">
+          <h1 id="dostal-jsi-rozsudek-a-nev-co-dlat">Dostal jsi rozsudek a nevíš co dělat?</h1>
+          <p>Pomůžeme ti zorientovat se. Za 10 minut budeš mít jasný plán.</p>
+          <button onClick={onStart} style={{ background: '#38b4e0', color: 'white', border: 'none', width: '100%', fontSize: '18px', padding: '16px' }}>
+            Začít
+          </button>
+          <p style={{ marginTop: '32px', color: '#666' }}>Nebo:</p>
+          <button onClick={onFamily} className="option">Jsem blízký odsouzeného →</button>
+          <button onClick={onExpert} className="option">Jsem odborník v poradně →</button>
+          <div className="footer">
+            Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank">Sovia z.s.</a>
+            <br /><small>Mám rozsudek a co dál?</small>
+          </div>
+        </div>
+      );
+    }
+
+    function DiagnosticScreen({ question, questionIndex, totalQuestions, responses, onAnswer, onNext, onBack }) {
+      const q = question;
+      const currentValue = responses[q.id] || [];
+
+      const handleOptionClick = (optionId, exclusive) => {
+        let newValue;
+        if (q.multiSelect) {
+          if (exclusive) {
+            newValue = [optionId];
+          } else {
+            if (currentValue.includes(optionId)) {
+              newValue = currentValue.filter(v => v !== optionId);
+            } else {
+              newValue = [...currentValue.filter(v => {
+                const opt = q.options.find(o => o.id === v);
+                return !opt?.exclusive;
+              }), optionId];
+            }
+          }
+        } else {
+          newValue = optionId;
+        }
+        onAnswer(q.id, q.multiSelect ? newValue : [newValue]);
+      };
+
+      const canContinue = currentValue.length > 0;
+
+      return (
+        <div className="screen">
+          <div className="progress">
+            <div className="progress-bar" style={{ width: `${((questionIndex + 1) / totalQuestions) * 100}%` }} />
+          </div>
+          <small style={{ color: '#666' }}>Krok {questionIndex + 1} z {totalQuestions}</small>
+          <h2 style={{ marginTop: '12px' }}>{q.question}</h2>
+          <p style={{ color: '#666' }}>{q.subtext}</p>
+          <div style={{ marginTop: '20px' }}>
+            {q.options.map(opt => (
+              <button key={opt.id} className={`option ${currentValue.includes(opt.id) ? 'selected' : ''}`} onClick={() => handleOptionClick(opt.id, opt.exclusive)}>
+                {opt.emoji} {opt.label}
+              </button>
+            ))}
+          </div>
+          {q.multiSelect && <small style={{ color: '#666' }}>(můžeš vybrat víc možností)</small>}
+          <div className="nav-buttons">
+            <button onClick={onBack} disabled={questionIndex === 0}>← Zpět</button>
+            <button onClick={onNext} disabled={!canContinue} style={{ background: canContinue ? '#38b4e0' : '#ccc', color: 'white', border: 'none' }}>
+              Pokračovat →
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    function PlanScreen({ plan, completed, onToggle, onItemClick, onReset }) {
+      const completedCount = plan.reduce((acc, item) => acc + item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length, 0);
+      const totalCount = plan.reduce((acc, item) => acc + item.checklist.length, 0);
+
+      return (
+        <div className="screen">
+          <h1 id="tvj-pln">Tvůj plán</h1>
+          <p>Dokončeno: {completedCount} / {totalCount} úkolů</p>
+          <div className="progress">
+            <div className="progress-bar" style={{ width: `${(completedCount / totalCount) * 100}%` }} />
+          </div>
+          {['critical', 'important', 'nice_to_have'].map(priority => {
+            const items = plan.filter(i => i.priority === priority);
+            if (items.length === 0) return null;
+            const labels = { critical: '🔴 UDĚLEJ IHNED', important: '🟡 DŮLEŽITÉ', nice_to_have: '🟢 PŘED NÁSTUPEM' };
+            return (
+              <div key={priority}>
+                <h3 style={{ marginTop: '24px', marginBottom: '12px' }}>{labels[priority]}</h3>
+                {items.map(item => (
+                  <div key={item.id} className={`plan-item priority-${priority === 'nice_to_have' ? 'nice' : priority}`} onClick={() => onItemClick(item)} style={{ cursor: 'pointer' }}>
+                    <h3 id="itemtitle">{item.title}</h3>
+                    <p style={{ color: '#666', fontSize: '14px' }}>{item.description}</p>
+                    <small>{item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length} / {item.checklist.length} hotovo</small>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+          <div className="footer">
+            <button onClick={onReset} style={{ fontSize: '14px' }}>Začít znovu</button>
+            <br /><br />
+            Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a> – Mám rozsudek a co dál?
+          </div>
+        </div>
+      );
+    }
+
+    function ItemDetailScreen({ item, completed, onToggle, onBack }) {
+      return (
+        <div className="screen">
+          <button onClick={onBack} style={{ marginBottom: '16px' }}>← Zpět na plán</button>
+          <h1 id="itemtitle">{item.title}</h1>
+          <p>{item.description}</p>
+          <h3 style={{ marginTop: '24px' }}>Co je potřeba udělat:</h3>
+          {item.checklist.map(check => {
+            const key = `${item.id}:${check.id}`;
+            return (
+              <label key={check.id} className="checklist-item">
+                <input type="checkbox" checked={!!completed[key]} onChange={() => onToggle(key)} />
+                <span style={{ textDecoration: completed[key] ? 'line-through' : 'none', color: completed[key] ? '#999' : 'inherit' }}>{check.text}</span>
+              </label>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function FamilyScreen({ onBack }) {
+      return (
+        <div className="screen">
+          <button onClick={onBack}>← Zpět</button>
+          <h1 style={{ marginTop: '16px' }}>Pro rodiny a blízké</h1>
+          <p>Tvůj blízký nastupuje do vězení. Je to těžká situace pro vás oba.</p>
+          <h3 style={{ marginTop: '24px' }}>Jak mu pomoci TEĎ</h3>
+          <ul style={{ paddingLeft: '20px' }}><li>Pomoz mu s checklistem věcí k vyřízení</li><li>Nabídni se, že něco vyřídíš za něj</li><li>Doprovod ho k bráně věznice</li></ul>
+          <h3 style={{ marginTop: '24px' }}>Co nepomáhá</h3>
+          <ul style={{ paddingLeft: '20px' }}><li>"Já ti to říkal/a"</li><li>"Ty ses do toho dostal sám"</li><li>Vyhýbání se tématu</li></ul>
+          <div className="footer">Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a></div>
+        </div>
+      );
+    }
+
+    function ExpertScreen({ onBack }) {
+      return (
+        <div className="screen">
+          <button onClick={onBack}>← Zpět</button>
+          <h1 style={{ marginTop: '16px' }}>Pro odborníky</h1>
+          <p>Tento nástroj můžete využít při práci s klienty před nástupem do VTOS.</p>
+          <h3 style={{ marginTop: '24px' }}>Jak nástroj využít</h3>
+          <ul style={{ paddingLeft: '20px' }}><li>Projděte diagnostiku společně s klientem</li><li>Vygenerovaný plán slouží jako základ pro další práci</li><li>Checklisty lze vytisknout</li></ul>
+          <div className="footer">Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a> – Mám rozsudek a co dál?</div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [screen, setScreen] = useState('landing');
+      const [questionIndex, setQuestionIndex] = useState(0);
+      const [responses, setResponses] = useLocalStorage('vtos-responses', {});
+      const [completed, setCompleted] = useLocalStorage('vtos-completed', {});
+      const [selectedItem, setSelectedItem] = useState(null);
+
+      const plan = useMemo(() => generatePlan(responses), [responses]);
+
+      const handleAnswer = (field, value) => {
+        setResponses(prev => ({ ...prev, [field]: value }));
+      };
+
+      const handleNext = () => {
+        if (questionIndex < DIAGNOSTIC_QUESTIONS.length - 1) {
+          setQuestionIndex(prev => prev + 1);
+        } else {
+          setScreen('plan');
+        }
+      };
+
+      const handleBack = () => {
+        if (questionIndex > 0) {
+          setQuestionIndex(prev => prev - 1);
+        } else {
+          setScreen('landing');
+        }
+      };
+
+      const handleToggle = (key) => {
+        setCompleted(prev => ({ ...prev, [key]: !prev[key] }));
+      };
+
+      const handleReset = () => {
+        setResponses({});
+        setCompleted({});
+        setQuestionIndex(0);
+        setScreen('landing');
+      };
+
+      if (screen === 'landing') {
+        return <LandingScreen onStart={() => setScreen('diagnostic')} onFamily={() => setScreen('family')} onExpert={() => setScreen('expert')} />;
+      }
+      if (screen === 'diagnostic') {
+        return <DiagnosticScreen question={DIAGNOSTIC_QUESTIONS[questionIndex]} questionIndex={questionIndex} totalQuestions={DIAGNOSTIC_QUESTIONS.length} responses={responses} onAnswer={handleAnswer} onNext={handleNext} onBack={handleBack} />;
+      }
+      if (screen === 'plan') {
+        return <PlanScreen plan={plan} completed={completed} onToggle={handleToggle} onItemClick={(item) => { setSelectedItem(item); setScreen('detail'); }} onReset={handleReset} />;
+      }
+      if (screen === 'detail' && selectedItem) {
+        return <ItemDetailScreen item={selectedItem} completed={completed} onToggle={handleToggle} onBack={() => setScreen('plan')} />;
+      }
+      if (screen === 'family') {
+        return <FamilyScreen onBack={() => setScreen('landing')} />;
+      }
+      if (screen === 'expert') {
+        return <ExpertScreen onBack={() => setScreen('landing')} />;
+      }
+      return <div>Něco se pokazilo...</div>;
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
