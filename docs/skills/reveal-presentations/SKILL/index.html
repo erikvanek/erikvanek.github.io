@@ -1,0 +1,113 @@
+<h1 id="revealjs-presentation-skill">Reveal.js Presentation Skill</h1>
+<p>Build reveal.js presentations that are pedagogically sound, visually clean, and leverage advanced features systematically.</p>
+<h2 id="workflow">Workflow</h2>
+<h3 id="1-identify-presentation-type">1. Identify Presentation Type</h3>
+<p>Ask user which type (or infer from context):</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key Characteristics</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Teaching</strong></td>
+<td>Course content, learning objectives, progressive concept building</td>
+<td><a href="references/teaching.md">teaching.md</a></td>
+</tr>
+<tr>
+<td><strong>Workshop</strong></td>
+<td>Timed activities, facilitator notes, group exercises</td>
+<td><a href="references/workshop.md">workshop.md</a></td>
+</tr>
+<tr>
+<td><strong>Case Study</strong></td>
+<td>Project narrative, methods, outcomes, lessons</td>
+<td><a href="references/case-study.md">case-study.md</a></td>
+</tr>
+<tr>
+<td><strong>Talk</strong></td>
+<td>Personal intro, project showcase, engagement</td>
+<td><a href="references/talk.md">talk.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>Read the appropriate reference file before drafting.</p>
+<h3 id="2-gather-content-requirements">2. Gather Content Requirements</h3>
+<p>Ask about:</p>
+<ul>
+<li><strong>Topic and audience</strong> – what level of familiarity?</li>
+<li><strong>Duration</strong> – how many slides roughly?</li>
+<li><strong>Key messages</strong> – what 3-5 things must audience remember?</li>
+<li><strong>Activities</strong> – any interactive elements?</li>
+<li><strong>Existing content</strong> – reuse from documents, notes, outlines?</li>
+</ul>
+<h3 id="3-draft-structure">3. Draft Structure</h3>
+<p>Before writing HTML, propose a slide outline:</p>
+<pre><code>1. Title + context
+2. Agenda/roadmap
+3-N. Core content (grouped by theme)
+N+1. Summary/takeaways
+N+2. Q&amp;A/contact
+</code></pre>
+<p>Get user approval on structure before proceeding.</p>
+<h3 id="4-apply-power-user-patterns">4. Apply Power User Patterns</h3>
+<p>Read <a href="references/patterns.md">patterns.md</a> for implementation details. Key patterns to consider:</p>
+<ul>
+<li><strong>Fragments</strong> for progressive disclosure (don't reveal everything at once)</li>
+<li><strong>Vertical slides</strong> for optional depth (main concept horizontal, details vertical)</li>
+<li><strong>Speaker notes</strong> for teaching prompts and timing</li>
+<li><strong>Two-column layouts</strong> for comparisons</li>
+<li><strong>Background images/iframes</strong> for context</li>
+<li><strong>r-fit-text</strong> for emphasis slides</li>
+</ul>
+<h3 id="5-generate-html">5. Generate HTML</h3>
+<p>Use this frontmatter structure:</p>
+<pre><code class="language-yaml">---
+title: Presentation Title
+date: YYYY-MM-DD
+layout: presentation-jinag.njk
+permalink: /SKILL/
+eleventyExcludeFromCollections: true
+description: Subtitle or description
+---
+</code></pre>
+<p>Follow code patterns in <a href="references/examples.md">examples.md</a>.</p>
+<h3 id="6-review-checklist">6. Review Checklist</h3>
+<p>Before delivering:</p>
+<ul>
+<li>[ ] No slide has more than 6 bullet points</li>
+<li>[ ] Key concepts use fragments for pacing</li>
+<li>[ ] Comparison slides use two-column layout</li>
+<li>[ ] Speaker notes on complex slides</li>
+<li>[ ] Question slides before major transitions</li>
+<li>[ ] Closing slide with contact/resources</li>
+</ul>
+<h2 id="output-location">Output Location</h2>
+<p>Save presentations to <code>/Users/erik/dev/erikvanek.github.io/pages/presentations/</code> in the appropriate subdirectory, or create a new one if needed.</p>
+<h2 id="language">Language</h2>
+<p>Default to Czech unless user specifies otherwise. Technical terms may remain in English with Czech explanation.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<h3 id="essential-classes">Essential Classes</h3>
+<ul>
+<li><code>r-fit-text</code> – auto-scale text to fit</li>
+<li><code>fragment</code> – progressive reveal</li>
+<li><code>equal-columns</code> – two-column grid layout</li>
+<li><code>text-shadow-black</code> – text shadow for readability over images</li>
+</ul>
+<h3 id="essential-attributes">Essential Attributes</h3>
+<ul>
+<li><code>data-background-image</code> – full-bleed background</li>
+<li><code>data-background-color</code> – solid background</li>
+<li><code>data-fragment-index</code> – control fragment order</li>
+<li><code>data-auto-animate</code> – smooth element transitions</li>
+</ul>
+<h3 id="keyboard-shortcuts-for-user">Keyboard Shortcuts (for user)</h3>
+<ul>
+<li><code>S</code> – speaker notes view</li>
+<li><code>O</code> – overview mode</li>
+<li><code>B</code> – blank screen</li>
+<li><code>F</code> – fullscreen</li>
+</ul>

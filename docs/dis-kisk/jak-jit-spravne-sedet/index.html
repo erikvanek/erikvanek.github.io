@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -12,41 +11,49 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.5;
+      line-height: 1.6;
       padding: 20px;
       max-width: 480px;
       margin: 0 auto;
+      background: #fafafa;
     }
     button {
       padding: 12px 24px;
       font-size: 16px;
       cursor: pointer;
       margin: 8px 4px;
+      border-radius: 8px;
     }
     .screen { min-height: 80vh; }
-    h1 { font-size: 24px; margin-bottom: 16px; }
-    h2 { font-size: 20px; margin-bottom: 12px; }
-    p { margin-bottom: 12px; }
+    h1 { font-size: 24px; margin-bottom: 16px; color: #1a1a1a; }
+    h2 { font-size: 20px; margin-bottom: 12px; color: #1a1a1a; }
+    h3 { font-size: 16px; margin-bottom: 8px; color: #333; }
+    p { margin-bottom: 12px; color: #444; }
     .option {
       display: block;
       width: 100%;
       text-align: left;
       padding: 16px;
       margin: 8px 0;
-      border: 2px solid #ccc;
+      border: 2px solid #ddd;
       background: white;
+      border-radius: 12px;
+      transition: all 0.2s;
     }
+    .option:hover { border-color: #38b4e0; }
     .option.selected {
       border-color: #38b4e0;
       background: #e6f7fc;
     }
     .progress {
-      background: #eee;
+      background: #e0e0e0;
       height: 8px;
       margin-bottom: 20px;
+      border-radius: 4px;
+      overflow: hidden;
     }
     .progress-bar {
-      background: #38b4e0;
+      background: linear-gradient(90deg, #38b4e0, #158ebf);
       height: 100%;
       transition: width 0.3s;
     }
@@ -54,18 +61,29 @@
       border: 1px solid #ddd;
       padding: 16px;
       margin: 12px 0;
+      background: white;
+      border-radius: 12px;
+      transition: all 0.2s;
     }
+    .plan-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .plan-item h3 { font-size: 18px; margin-bottom: 8px; }
     .priority-critical { border-left: 4px solid #dc2626; }
     .priority-important { border-left: 4px solid #f59e0b; }
     .priority-nice { border-left: 4px solid #10b981; }
     .checklist-item {
-      padding: 8px 0;
+      padding: 12px 0;
       display: flex;
-      align-items: center;
-      gap: 8px;
+      align-items: flex-start;
+      gap: 12px;
+      border-bottom: 1px solid #eee;
     }
-    .checklist-item input { width: 20px; height: 20px; }
+    .checklist-item:last-child { border-bottom: none; }
+    .checklist-item input {
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      accent-color: #38b4e0;
+    }
     .nav-buttons {
       display: flex;
       justify-content: space-between;
@@ -77,7 +95,46 @@
       border-top: 1px solid #ddd;
       font-size: 14px;
       color: #666;
+      text-align: center;
     }
+    .tip {
+      background: #fffbeb;
+      border: 1px solid #fbbf24;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .warning {
+      background: #fef2f2;
+      border: 1px solid #dc2626;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .contact-card {
+      background: #f0f9ff;
+      border: 1px solid #38b4e0;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 12px 0;
+    }
+    .contact-card a {
+      color: #158ebf;
+      font-weight: 600;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .badge-critical { background: #fecaca; color: #991b1b; }
+    .badge-important { background: #fef3c7; color: #92400e; }
+    .badge-nice { background: #d1fae5; color: #065f46; }
   </style>
 </head>
 <body>
@@ -86,6 +143,10 @@
   <script type="text/babel">
     const { useState, useEffect, useMemo } = React;
 
+    // =====================================================
+    // DATA - ROZŠÍŘENÁ DIAGNOSTIKA
+    // =====================================================
+
     const DIAGNOSTIC_QUESTIONS = [
       {
         id: 'family',
@@ -93,10 +154,24 @@
         subtext: 'Pomůže nám to připravit plán podle tvé situace.',
         multiSelect: true,
         options: [
-          { id: 'children', label: 'Mám děti', emoji: '👶' },
-          { id: 'parents', label: 'Starám se o rodiče', emoji: '👵' },
+          { id: 'children', label: 'Mám děti (nebo jsem jejich hlavní pečovatel)', emoji: '👶' },
+          { id: 'parents', label: 'Starám se o rodiče nebo jiné příbuzné', emoji: '👵' },
           { id: 'partner', label: 'Mám partnera/partnerku', emoji: '💑' },
+          { id: 'pets', label: 'Mám domácí zvířata', emoji: '🐕' },
           { id: 'none', label: 'O nikoho se nestarám', emoji: '✓', exclusive: true },
+        ]
+      },
+      {
+        id: 'housing',
+        question: 'Jaká je tvá bytová situace?',
+        subtext: 'Pomůže nám zjistit, co bude potřeba vyřešit.',
+        multiSelect: false,
+        options: [
+          { id: 'rent', label: 'Bydlím v nájmu', emoji: '🏢' },
+          { id: 'own', label: 'Vlastním byt nebo dům', emoji: '🏠' },
+          { id: 'family', label: 'Bydlím u rodiny', emoji: '👨‍👩‍👧' },
+          { id: 'social', label: 'Sociální bydlení / ubytovna', emoji: '🏨' },
+          { id: 'none', label: 'Nemám stálé bydlení', emoji: '❓' },
         ]
       },
       {
@@ -106,8 +181,9 @@
         multiSelect: true,
         options: [
           { id: 'debts', label: 'Mám dluhy nebo exekuce', emoji: '💰' },
-          { id: 'property', label: 'Mám majetek (byt, auto)', emoji: '🏠' },
-          { id: 'job', label: 'Mám práci', emoji: '💼' },
+          { id: 'job', label: 'Mám práci (zaměstnanec nebo OSVČ)', emoji: '💼' },
+          { id: 'car', label: 'Mám auto (vlastní nebo na leasing)', emoji: '🚗' },
+          { id: 'benefits', label: 'Pobírám dávky nebo důchod', emoji: '📋' },
           { id: 'none', label: 'Nic z toho', emoji: '✓', exclusive: true },
         ]
       },
@@ -117,128 +193,319 @@
         subtext: 'Vyber vše, co platí.',
         multiSelect: true,
         options: [
-          { id: 'medications', label: 'Beru pravidelně léky', emoji: '💊' },
+          { id: 'medications', label: 'Beru pravidelně léky na předpis', emoji: '💊' },
           { id: 'conditions', label: 'Mám chronické onemocnění', emoji: '🏥' },
-          { id: 'addiction', label: 'Řeším závislost', emoji: '🚭' },
+          { id: 'mental', label: 'Řeším psychické potíže', emoji: '🧠' },
+          { id: 'addiction', label: 'Řeším závislost (alkohol, drogy, hráčství)', emoji: '🚭' },
           { id: 'none', label: 'Nic z toho', emoji: '✓', exclusive: true },
+        ]
+      },
+      {
+        id: 'legal',
+        question: 'Máš už rozsudek?',
+        subtext: 'Podle toho upravíme doporučení.',
+        multiSelect: false,
+        options: [
+          { id: 'final', label: 'Ano, rozsudek je pravomocný', emoji: '📜' },
+          { id: 'appeal', label: 'Podal jsem odvolání', emoji: '⚖️' },
+          { id: 'waiting', label: 'Čekám na předvolání k nástupu', emoji: '📬' },
+          { id: 'summons', label: 'Mám předvolání k nástupu', emoji: '📋' },
         ]
       },
       {
         id: 'timeframe',
         question: 'Kolik času máš do nástupu?',
-        subtext: 'Přizpůsobíme priority.',
+        subtext: 'Přizpůsobíme priority podle času.',
         multiSelect: false,
         options: [
-          { id: 'week', label: 'Méně než týden', emoji: '⚡' },
+          { id: 'days', label: 'Méně než týden', emoji: '⚡' },
           { id: '2weeks', label: '1-2 týdny', emoji: '📅' },
           { id: 'month', label: '2-4 týdny', emoji: '📆' },
           { id: 'more', label: 'Víc než měsíc', emoji: '🗓️' },
-          { id: 'unknown', label: 'Nevím', emoji: '❓' },
+          { id: 'unknown', label: 'Ještě nevím', emoji: '❓' },
         ]
       },
     ];
 
+    // =====================================================
+    // DATA - ROZŠÍŘENÉ PLAN ITEMS
+    // =====================================================
+
     const PLAN_ITEMS = [
+      // CRITICAL - VŽDY ZOBRAZIT
+      {
+        id: 'entry-day',
+        title: 'Den nástupu - co potřebuješ vědět',
+        priority: 'critical',
+        description: 'Základní informace o tom, jak probíhá nástup do výkonu trestu.',
+        conditions: [],
+        tips: ['Přijď střízlivý a včas - pozdní příchod může mít vážné následky.'],
+        checklist: [
+          { id: 1, text: 'Zjistit přesnou adresu a čas nástupu (je v předvolání)' },
+          { id: 2, text: 'Naplánovat cestu - raději s rezervou' },
+          { id: 3, text: 'Připravit si občanku a předvolání k nástupu' },
+          { id: 4, text: 'Sbalit povolené věci (viz checklist níže)' },
+          { id: 5, text: 'Rozloučit se s blízkými - můžeš je vzít až k bráně' },
+          { id: 6, text: 'Nechat doma telefon, peníze a cennosti' },
+        ]
+      },
+
+      // CRITICAL - PODMÍNĚNÉ
       {
         id: 'children-care',
         title: 'Péče o děti',
         priority: 'critical',
         description: 'Zajisti, kdo se postará o tvé děti během výkonu trestu.',
         conditions: [{ field: 'family', includes: 'children' }],
+        warning: 'Pokud nemáš nikoho, kdo by se o děti postaral, kontaktuj OSPOD co nejdříve!',
+        tips: ['Děti zvládají situaci lépe, když se s nimi mluví přímo a přiměřeně jejich věku.'],
         checklist: [
           { id: 1, text: 'Domluvit s partnerkou/rodinou kdo převezme péči' },
-          { id: 2, text: 'Pokud nemáš nikoho, kontaktovat OSPOD' },
-          { id: 3, text: 'Připravit děti na situaci' },
-          { id: 4, text: 'Zajistit školu/školku (omluvenky, kontakty)' },
+          { id: 2, text: 'Pokud není nikdo - kontaktovat OSPOD ihned' },
+          { id: 3, text: 'Připravit děti na situaci (máme materiály, jak na to)' },
+          { id: 4, text: 'Informovat školu/školku o situaci' },
+          { id: 5, text: 'Zajistit kontakty - komu může škola volat' },
+          { id: 6, text: 'Domluivt způsob komunikace s dětmi (dopisy, návštěvy)' },
+        ]
+      },
+      {
+        id: 'medications',
+        title: 'Léky a zdravotní dokumentace',
+        priority: 'critical',
+        description: 'Bez léků a dokumentace můžeš mít ve věznici problémy.',
+        conditions: [{ field: 'health', includes: 'medications' }],
+        warning: 'Vezmi si zásobu léků alespoň na 14 dní a zprávu od lékaře!',
+        checklist: [
+          { id: 1, text: 'Navštívit lékaře a získat aktuální zprávu' },
+          { id: 2, text: 'Připravit seznam všech léků (názvy, dávkování)' },
+          { id: 3, text: 'Zajistit zásobu léků na 14+ dní' },
+          { id: 4, text: 'Zjistit, jestli jsou léky povolené (některé ne)' },
+          { id: 5, text: 'Připravit kartičku pojištěnce' },
         ]
       },
       {
         id: 'debts',
         title: 'Dluhy a exekuce',
         priority: 'critical',
-        description: 'Před nástupem je dobré mít přehled o dluzích.',
+        description: 'Během trestu dluhy nezmizí - naopak mohou růst. Ale dá se to řešit.',
         conditions: [{ field: 'finance', includes: 'debts' }],
+        tips: ['Ve věznici můžeš požádat o oddlužení (osobní bankrot) - poradí ti sociální pracovník.'],
         checklist: [
-          { id: 1, text: 'Zjistit stav dluhů (výpis z registru)' },
-          { id: 2, text: 'Kontaktovat věřitele a informovat o situaci' },
-          { id: 3, text: 'Zvážit oddlužení (osobní bankrot)' },
+          { id: 1, text: 'Zjistit přehled dluhů - výpis z registru dlužníků' },
+          { id: 2, text: 'Kontaktovat dluhovou poradnu (je zdarma)' },
+          { id: 3, text: 'Informovat exekutory o nástupu do VTOS' },
+          { id: 4, text: 'Zvážit oddlužení (osobní bankrot)' },
+          { id: 5, text: 'Zajistit, aby někdo vybíral poštu (úřední dopisy)' },
         ]
       },
       {
-        id: 'medications',
-        title: 'Léky a zdraví',
+        id: 'mental-health',
+        title: 'Psychická pohoda',
         priority: 'critical',
-        description: 'Zajisti si dostatek léků a zdravotní dokumentaci.',
-        conditions: [{ field: 'health', includes: 'medications' }],
+        description: 'Je normální mít strach nebo úzkost. Existuje pomoc.',
+        conditions: [{ field: 'health', includes: 'mental' }],
+        tips: ['Krizová linka 116 123 funguje 24/7, je zdarma a anonymní.'],
         checklist: [
-          { id: 1, text: 'Zajistit zásobu léků na první týdny' },
-          { id: 2, text: 'Připravit seznam léků a diagnóz' },
-          { id: 3, text: 'Získat zprávu od lékaře' },
+          { id: 1, text: 'Promluvit s někým blízkým o svých pocitech' },
+          { id: 2, text: 'Zvážit návštěvu psychologa před nástupem' },
+          { id: 3, text: 'Uložit si číslo krizové linky: 116 123' },
+          { id: 4, text: 'Připravit zprávu od psychiatra (pokud ho máš)' },
+          { id: 5, text: 'Zjistit možnosti terapie ve věznici' },
         ]
       },
+      {
+        id: 'addiction',
+        title: 'Závislost - co vědět',
+        priority: 'critical',
+        description: 'Ve věznici jsou programy pro lidi se závislostí. Můžeš to využít.',
+        conditions: [{ field: 'health', includes: 'addiction' }],
+        tips: ['Buď upřímný při vstupním pohovoru - pomohou ti najít vhodný program.'],
+        checklist: [
+          { id: 1, text: 'Informovat se o léčebných programech ve věznici' },
+          { id: 2, text: 'Zvážit nástup do léčebny před VTOS (může ovlivnit podmínky)' },
+          { id: 3, text: 'Připravit zprávu od adiktologa (pokud ho máš)' },
+          { id: 4, text: 'Kontaktovat organizaci pro závislé (Sananim, Drop In...)' },
+        ]
+      },
+
+      // IMPORTANT - PRÁCE A BYDLENÍ
       {
         id: 'job',
         title: 'Zaměstnání',
         priority: 'important',
-        description: 'Řeš situaci se zaměstnavatelem.',
+        description: 'Zaměstnavatel se to dozví. Lepší je to říct sám.',
         conditions: [{ field: 'finance', includes: 'job' }],
+        tips: ['Některé profese vyžadují čistý rejstřík - zeptej se, jaké máš možnosti po návratu.'],
         checklist: [
-          { id: 1, text: 'Informovat zaměstnavatele' },
-          { id: 2, text: 'Zjistit možnosti (neplacené volno vs. výpověď)' },
-          { id: 3, text: 'Vyřídit potřebné dokumenty' },
+          { id: 1, text: 'Informovat zaměstnavatele o situaci' },
+          { id: 2, text: 'Zjistit možnosti: neplacené volno, výpověď, dohoda' },
+          { id: 3, text: 'Požádat o potvrzení o zaměstnání' },
+          { id: 4, text: 'Vyřídit případnou výpověď písemně' },
+          { id: 5, text: 'Zjistit nárok na podporu v nezaměstnanosti po návratu' },
         ]
       },
       {
-        id: 'property',
-        title: 'Majetek a bydlení',
+        id: 'rent',
+        title: 'Nájem a bydlení',
         priority: 'important',
-        description: 'Zajisti svůj majetek po dobu trestu.',
-        conditions: [{ field: 'finance', includes: 'property' }],
+        description: 'Pokud bydlíš v nájmu, musíš vyřešit co s bytem.',
+        conditions: [{ field: 'housing', includes: 'rent' }],
         checklist: [
-          { id: 1, text: 'Rozhodnout co s bytem/domem' },
-          { id: 2, text: 'Zajistit platby (nájem, energie)' },
-          { id: 3, text: 'Uschovat cennosti' },
+          { id: 1, text: 'Rozhodnout: ukončit nájem nebo ponechat?' },
+          { id: 2, text: 'Informovat pronajímatele o situaci' },
+          { id: 3, text: 'Pokud ukončuješ: podat výpověď (pozor na lhůty!)' },
+          { id: 4, text: 'Pokud necháváš: zajistit platby (partner, rodina)' },
+          { id: 5, text: 'Vyklidit osobní věci nebo zajistit úschovu' },
+          { id: 6, text: 'Přesměrovat poštu na jinou adresu' },
+        ]
+      },
+      {
+        id: 'own-housing',
+        title: 'Vlastní nemovitost',
+        priority: 'important',
+        description: 'Co s bytem nebo domem, když budeš pryč.',
+        conditions: [{ field: 'housing', includes: 'own' }],
+        checklist: [
+          { id: 1, text: 'Zajistit platby hypotéky, energií, pojištění' },
+          { id: 2, text: 'Domluvit někoho, kdo bude dohlížet na nemovitost' },
+          { id: 3, text: 'Zvážit pronájem (příjem během trestu)' },
+          { id: 4, text: 'Zajistit důležité dokumenty a cennosti' },
+          { id: 5, text: 'Přesměrovat poštu' },
+        ]
+      },
+      {
+        id: 'car',
+        title: 'Auto',
+        priority: 'important',
+        description: 'Co s autem během výkonu trestu.',
+        conditions: [{ field: 'finance', includes: 'car' }],
+        checklist: [
+          { id: 1, text: 'Rozhodnout: prodat, půjčit rodině, nebo uskladnit?' },
+          { id: 2, text: 'Pokud leasing: kontaktovat leasingovou společnost' },
+          { id: 3, text: 'Vyřešit pojištění (pozastavit nebo zrušit)' },
+          { id: 4, text: 'Zajistit parkování, pokud auto necháváš' },
+          { id: 5, text: 'Odhlásit auto z pojištění odpovědnosti (pokud nebude jezdit)' },
         ]
       },
       {
         id: 'partner-communication',
         title: 'Komunikace s partnerem',
         priority: 'important',
-        description: 'Domluv se s partnerem na fungování během trestu.',
+        description: 'Domluvte se předem na fungování během trestu.',
         conditions: [{ field: 'family', includes: 'partner' }],
         checklist: [
-          { id: 1, text: 'Probrat finanční zajištění' },
-          { id: 2, text: 'Domluvit se na návštěvách' },
-          { id: 3, text: 'Nastavit komunikační pravidla' },
+          { id: 1, text: 'Probrat finanční zajištění rodiny' },
+          { id: 2, text: 'Domluvit se na návštěvách (kdy, jak často)' },
+          { id: 3, text: 'Nastavit pravidla pro dopisy a telefony' },
+          { id: 4, text: 'Domluvit plnou moc pro úřední záležitosti' },
+          { id: 5, text: 'Probrat očekávání ohledně vztahu' },
         ]
       },
+      {
+        id: 'parents-care',
+        title: 'Péče o rodiče / příbuzné',
+        priority: 'important',
+        description: 'Kdo se postará o tvé blízké, o které se staráš ty.',
+        conditions: [{ field: 'family', includes: 'parents' }],
+        checklist: [
+          { id: 1, text: 'Najít někoho, kdo převezme péči' },
+          { id: 2, text: 'Kontaktovat sociální služby (pečovatelská služba apod.)' },
+          { id: 3, text: 'Zajistit předání klíčů a kontaktů' },
+          { id: 4, text: 'Informovat lékaře rodičů o změně' },
+        ]
+      },
+      {
+        id: 'pets',
+        title: 'Domácí zvířata',
+        priority: 'important',
+        description: 'Zvířata do vězení nemůžeš, najdi jim dočasný domov.',
+        conditions: [{ field: 'family', includes: 'pets' }],
+        checklist: [
+          { id: 1, text: 'Najít někoho, kdo se o zvíře postará' },
+          { id: 2, text: 'Předat očkovací průkaz a zdravotní dokumentaci' },
+          { id: 3, text: 'Zajistit zásobu krmiva' },
+          { id: 4, text: 'Pokud není nikdo: kontaktovat útulek' },
+        ]
+      },
+      {
+        id: 'benefits',
+        title: 'Dávky a důchod',
+        priority: 'important',
+        description: 'Některé dávky se ve vězení zastavují, jiné ne.',
+        conditions: [{ field: 'finance', includes: 'benefits' }],
+        checklist: [
+          { id: 1, text: 'Zjistit, které dávky se zastaví a které ne' },
+          { id: 2, text: 'Informovat Úřad práce o nástupu' },
+          { id: 3, text: 'Informovat ČSSZ (pokud pobíráš důchod)' },
+          { id: 4, text: 'Domluvit, kam posílat případné platby' },
+        ]
+      },
+
+      // NICE TO HAVE - PŘÍPRAVA
       {
         id: 'documents',
         title: 'Důležité dokumenty',
         priority: 'nice_to_have',
-        description: 'Připrav si dokumenty, které budeš potřebovat.',
+        description: 'Co si vzít s sebou a co nechat doma.',
         conditions: [],
         checklist: [
-          { id: 1, text: 'Občanský průkaz' },
-          { id: 2, text: 'Kartička pojištěnce' },
+          { id: 1, text: 'Občanský průkaz (povinné!)' },
+          { id: 2, text: 'Kartička zdravotního pojištění' },
           { id: 3, text: 'Rozsudek' },
           { id: 4, text: 'Předvolání k nástupu' },
+          { id: 5, text: 'Lékařské zprávy (pokud máš)' },
+          { id: 6, text: 'Seznam kontaktů na papíře' },
         ]
       },
       {
         id: 'what-to-pack',
         title: 'Co si vzít s sebou',
         priority: 'nice_to_have',
-        description: 'Seznam povolených věcí při nástupu.',
+        description: 'Seznam povolených věcí. Věznice může některé odmítnout.',
+        conditions: [],
+        tips: ['Neber nic cenného - mohlo by se ztratit. Peníze, telefon a šperky nech doma.'],
+        checklist: [
+          { id: 1, text: 'Základní hygiena (mýdlo, zubní pasta, kartáček)' },
+          { id: 2, text: 'Spodní prádlo a ponožky (max 5 kusů)' },
+          { id: 3, text: 'Tepláky nebo pyžamo' },
+          { id: 4, text: 'Fotky rodiny (max 5 kusů)' },
+          { id: 5, text: 'Kniha nebo časopis' },
+          { id: 6, text: 'Kontakty na blízké NAPSANÉ NA PAPÍŘE' },
+          { id: 7, text: 'Peníze NENECH doma (budeš je mít na kontě ve věznici)' },
+        ]
+      },
+      {
+        id: 'phone-contracts',
+        title: 'Telefon a smlouvy',
+        priority: 'nice_to_have',
+        description: 'Co s telefonem a tarify během trestu.',
         conditions: [],
         checklist: [
-          { id: 1, text: 'Osobní hygiena (základní)' },
-          { id: 2, text: 'Spodní prádlo a ponožky' },
-          { id: 3, text: 'Fotky rodiny (max 5)' },
-          { id: 4, text: 'Kontakty na blízké (na papíře)' },
+          { id: 1, text: 'Zrušit nebo pozastavit telefonní tarif' },
+          { id: 2, text: 'Zrušit nepotřebné předplatné (Netflix, Spotify...)' },
+          { id: 3, text: 'Zálohovat důležité kontakty' },
+          { id: 4, text: 'Zjistit pravidla pro volání z věznice' },
+          { id: 5, text: 'Napsat důležitá čísla na papír' },
+        ]
+      },
+      {
+        id: 'mail-databox',
+        title: 'Pošta a datová schránka',
+        priority: 'nice_to_have',
+        description: 'Úřední dopisy budou chodit dál. Zajisti, že je někdo vyzvedne.',
+        conditions: [],
+        checklist: [
+          { id: 1, text: 'Domluvit někoho, kdo bude vybírat poštu' },
+          { id: 2, text: 'Zvážit přesměrování pošty' },
+          { id: 3, text: 'Pokud máš datovou schránku: nastavit přístup někomu dalšímu' },
+          { id: 4, text: 'Dát plnou moc pro přebírání zásilek' },
         ]
       },
     ];
+
+    // =====================================================
+    // HOOKS & UTILS
+    // =====================================================
 
     function useLocalStorage(key, initialValue) {
       const [value, setValue] = useState(() => {
@@ -258,31 +525,70 @@
     }
 
     function generatePlan(responses) {
-      return PLAN_ITEMS.filter(item => {
+      // Filtruj položky podle podmínek
+      let items = PLAN_ITEMS.filter(item => {
         if (item.conditions.length === 0) return true;
         return item.conditions.some(cond => {
           const userValue = responses[cond.field] || [];
-          return userValue.includes(cond.includes);
+          if (Array.isArray(userValue)) {
+            return userValue.includes(cond.includes);
+          }
+          return userValue === cond.includes;
         });
-      }).sort((a, b) => {
+      });
+
+      // Úprava priorit podle času
+      if (responses.timeframe && ['days', '2weeks'].includes(responses.timeframe[0])) {
+        items = items.map(item => {
+          if (item.priority === 'nice_to_have') {
+            return { ...item, priority: 'important' };
+          }
+          return item;
+        });
+      }
+
+      // Seřadit podle priority
+      return items.sort((a, b) => {
         const order = { critical: 0, important: 1, nice_to_have: 2 };
         return order[a.priority] - order[b.priority];
       });
     }
 
+    // =====================================================
+    // KOMPONENTY
+    // =====================================================
+
     function LandingScreen({ onStart, onFamily, onExpert }) {
       return (
         <div className="screen">
           <h1 id="dostal-jsi-rozsudek-a-nev-co-dlat">Dostal jsi rozsudek a nevíš co dělat?</h1>
-          <p>Pomůžeme ti zorientovat se. Za 10 minut budeš mít jasný plán.</p>
-          <button onClick={onStart} style={{ background: '#38b4e0', color: 'white', border: 'none', width: '100%', fontSize: '18px', padding: '16px' }}>
-            Začít
+          <p>Pomůžeme ti zorientovat se. Za 10 minut budeš mít jasný plán, co vyřídit před nástupem.</p>
+
+          <button
+            onClick={onStart}
+            style={{
+              background: 'linear-gradient(135deg, #38b4e0, #158ebf)',
+              color: 'white',
+              border: 'none',
+              width: '100%',
+              fontSize: '18px',
+              padding: '18px',
+              fontWeight: '600'
+            }}>
+            Začít →
           </button>
-          <p style={{ marginTop: '32px', color: '#666' }}>Nebo:</p>
-          <button onClick={onFamily} className="option">Jsem blízký odsouzeného →</button>
-          <button onClick={onExpert} className="option">Jsem odborník v poradně →</button>
+
+          <p style={{ marginTop: '32px', color: '#666', fontSize: '14px' }}>Nebo:</p>
+          <button onClick={onFamily} className="option">👨‍👩‍👧 Jsem blízký odsouzeného</button>
+          <button onClick={onExpert} className="option">👔 Jsem odborník v poradně</button>
+
+          <div className="contact-card" style={{ marginTop: '24px' }}>
+            <strong>📞 Potřebuješ pomoct hned?</strong><br/>
+            Krizová linka: <a href="tel:116123">116 123</a> (24/7, zdarma)
+          </div>
+
           <div className="footer">
-            Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank">Sovia z.s.</a>
+            Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a>
             <br /><small>Mám rozsudek a co dál?</small>
           </div>
         </div>
@@ -309,9 +615,9 @@
             }
           }
         } else {
-          newValue = optionId;
+          newValue = [optionId];
         }
-        onAnswer(q.id, q.multiSelect ? newValue : [newValue]);
+        onAnswer(q.id, newValue);
       };
 
       const canContinue = currentValue.length > 0;
@@ -322,19 +628,42 @@
             <div className="progress-bar" style={{ width: `${((questionIndex + 1) / totalQuestions) * 100}%` }} />
           </div>
           <small style={{ color: '#666' }}>Krok {questionIndex + 1} z {totalQuestions}</small>
-          <h2 style={{ marginTop: '12px' }}>{q.question}</h2>
+
+          <h2 style={{ marginTop: '16px' }}>{q.question}</h2>
           <p style={{ color: '#666' }}>{q.subtext}</p>
+
           <div style={{ marginTop: '20px' }}>
             {q.options.map(opt => (
-              <button key={opt.id} className={`option ${currentValue.includes(opt.id) ? 'selected' : ''}`} onClick={() => handleOptionClick(opt.id, opt.exclusive)}>
-                {opt.emoji} {opt.label}
+              <button
+                key={opt.id}
+                className={`option ${currentValue.includes(opt.id) ? 'selected' : ''}`}
+                onClick={() => handleOptionClick(opt.id, opt.exclusive)}
+              >
+                <span style={{ fontSize: '20px', marginRight: '8px' }}>{opt.emoji}</span>
+                {opt.label}
               </button>
             ))}
           </div>
-          {q.multiSelect && <small style={{ color: '#666' }}>(můžeš vybrat víc možností)</small>}
+
+          {q.multiSelect && <small style={{ color: '#888', display: 'block', marginTop: '8px' }}>💡 Můžeš vybrat víc možností</small>}
+
           <div className="nav-buttons">
-            <button onClick={onBack} disabled={questionIndex === 0}>← Zpět</button>
-            <button onClick={onNext} disabled={!canContinue} style={{ background: canContinue ? '#38b4e0' : '#ccc', color: 'white', border: 'none' }}>
+            <button
+              onClick={onBack}
+              style={{ background: 'white', border: '1px solid #ddd' }}
+            >
+              ← Zpět
+            </button>
+            <button
+              onClick={onNext}
+              disabled={!canContinue}
+              style={{
+                background: canContinue ? 'linear-gradient(135deg, #38b4e0, #158ebf)' : '#ccc',
+                color: 'white',
+                border: 'none',
+                opacity: canContinue ? 1 : 0.5
+              }}
+            >
               Pokračovat →
             </button>
           </div>
@@ -342,59 +671,144 @@
       );
     }
 
-    function PlanScreen({ plan, completed, onToggle, onItemClick, onReset }) {
-      const completedCount = plan.reduce((acc, item) => acc + item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length, 0);
+    function PlanScreen({ plan, completed, onItemClick, onReset }) {
+      const completedCount = plan.reduce((acc, item) =>
+        acc + item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length, 0
+      );
       const totalCount = plan.reduce((acc, item) => acc + item.checklist.length, 0);
+      const progress = totalCount > 0 ? (completedCount / totalCount) * 100 : 0;
+
+      const priorityLabels = {
+        critical: '🔴 UDĚLEJ IHNED',
+        important: '🟡 DŮLEŽITÉ',
+        nice_to_have: '🟢 PŘED NÁSTUPEM'
+      };
 
       return (
         <div className="screen">
           <h1 id="tvj-pln">Tvůj plán</h1>
-          <p>Dokončeno: {completedCount} / {totalCount} úkolů</p>
+          <p style={{ marginBottom: '8px' }}>
+            Připravili jsme ti seznam věcí na základě tvé situace.
+          </p>
+          <p style={{ fontWeight: '600', color: '#38b4e0' }}>
+            Hotovo: {completedCount} / {totalCount} úkolů
+          </p>
+
           <div className="progress">
-            <div className="progress-bar" style={{ width: `${(completedCount / totalCount) * 100}%` }} />
+            <div className="progress-bar" style={{ width: `${progress}%` }} />
           </div>
+
           {['critical', 'important', 'nice_to_have'].map(priority => {
             const items = plan.filter(i => i.priority === priority);
             if (items.length === 0) return null;
-            const labels = { critical: '🔴 UDĚLEJ IHNED', important: '🟡 DŮLEŽITÉ', nice_to_have: '🟢 PŘED NÁSTUPEM' };
+
             return (
               <div key={priority}>
-                <h3 style={{ marginTop: '24px', marginBottom: '12px' }}>{labels[priority]}</h3>
-                {items.map(item => (
-                  <div key={item.id} className={`plan-item priority-${priority === 'nice_to_have' ? 'nice' : priority}`} onClick={() => onItemClick(item)} style={{ cursor: 'pointer' }}>
-                    <h3 id="itemtitle">{item.title}</h3>
-                    <p style={{ color: '#666', fontSize: '14px' }}>{item.description}</p>
-                    <small>{item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length} / {item.checklist.length} hotovo</small>
-                  </div>
-                ))}
+                <h3 style={{ marginTop: '28px', marginBottom: '12px' }}>
+                  {priorityLabels[priority]}
+                </h3>
+                {items.map(item => {
+                  const itemCompleted = item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length;
+                  const itemTotal = item.checklist.length;
+                  const isDone = itemCompleted === itemTotal;
+
+                  return (
+                    <div
+                      key={item.id}
+                      className={`plan-item priority-${priority === 'nice_to_have' ? 'nice' : priority}`}
+                      onClick={() => onItemClick(item)}
+                      style={{ cursor: 'pointer', opacity: isDone ? 0.7 : 1 }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                        <h3 style={{ textDecoration: isDone ? 'line-through' : 'none' }}>{item.title}</h3>
+                        {isDone && <span style={{ color: '#10b981', fontSize: '20px' }}>✓</span>}
+                      </div>
+                      <p style={{ color: '#666', fontSize: '14px', marginBottom: '8px' }}>{item.description}</p>
+                      <small style={{ color: '#888' }}>{itemCompleted} / {itemTotal} hotovo</small>
+                    </div>
+                  );
+                })}
               </div>
             );
           })}
+
+          <div className="contact-card" style={{ marginTop: '32px' }}>
+            <strong>📞 Potřebuješ pomoct?</strong><br/>
+            Krizová linka: <a href="tel:116123">116 123</a> (24/7, zdarma)
+          </div>
+
           <div className="footer">
-            <button onClick={onReset} style={{ fontSize: '14px' }}>Začít znovu</button>
+            <button
+              onClick={onReset}
+              style={{ fontSize: '14px', background: 'white', border: '1px solid #ddd' }}
+            >
+              Začít znovu
+            </button>
             <br /><br />
-            Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a> – Mám rozsudek a co dál?
+            Projekt <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a> – Mám rozsudek a co dál?
           </div>
         </div>
       );
     }
 
     function ItemDetailScreen({ item, completed, onToggle, onBack }) {
+      const itemCompleted = item.checklist.filter(c => completed[`${item.id}:${c.id}`]).length;
+      const itemTotal = item.checklist.length;
+
       return (
         <div className="screen">
-          <button onClick={onBack} style={{ marginBottom: '16px' }}>← Zpět na plán</button>
+          <button
+            onClick={onBack}
+            style={{ marginBottom: '16px', background: 'white', border: '1px solid #ddd' }}
+          >
+            ← Zpět na plán
+          </button>
+
           <h1 id="itemtitle">{item.title}</h1>
           <p>{item.description}</p>
-          <h3 style={{ marginTop: '24px' }}>Co je potřeba udělat:</h3>
+
+          <p style={{ fontWeight: '600', color: '#38b4e0', margin: '16px 0' }}>
+            {itemCompleted} / {itemTotal} hotovo
+          </p>
+
+          {item.warning && (
+            <div className="warning">
+              ⚠️ {item.warning}
+            </div>
+          )}
+
+          {item.tips && item.tips.map((tip, i) => (
+            <div key={i} className="tip">
+              💡 {tip}
+            </div>
+          ))}
+
+          <h3 style={{ marginTop: '24px', marginBottom: '16px' }}>Co je potřeba udělat:</h3>
+
           {item.checklist.map(check => {
             const key = `${item.id}:${check.id}`;
+            const isChecked = !!completed[key];
             return (
-              <label key={check.id} className="checklist-item">
-                <input type="checkbox" checked={!!completed[key]} onChange={() => onToggle(key)} />
-                <span style={{ textDecoration: completed[key] ? 'line-through' : 'none', color: completed[key] ? '#999' : 'inherit' }}>{check.text}</span>
+              <label key={check.id} className="checklist-item" style={{ cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={() => onToggle(key)}
+                />
+                <span style={{
+                  textDecoration: isChecked ? 'line-through' : 'none',
+                  color: isChecked ? '#999' : '#333'
+                }}>
+                  {check.text}
+                </span>
               </label>
             );
           })}
+
+          <div className="contact-card" style={{ marginTop: '32px' }}>
+            <strong>📞 Potřebuješ pomoct?</strong><br/>
+            Krizová linka: <a href="tel:116123">116 123</a> (24/7, zdarma)
+          </div>
         </div>
       );
     }
@@ -402,14 +816,43 @@
     function FamilyScreen({ onBack }) {
       return (
         <div className="screen">
-          <button onClick={onBack}>← Zpět</button>
+          <button onClick={onBack} style={{ background: 'white', border: '1px solid #ddd' }}>← Zpět</button>
+
           <h1 style={{ marginTop: '16px' }}>Pro rodiny a blízké</h1>
-          <p>Tvůj blízký nastupuje do vězení. Je to těžká situace pro vás oba.</p>
+          <p>Tvůj blízký nastupuje do výkonu trestu. Je to těžká situace pro vás oba. Tady jsou informace, které ti pomůžou.</p>
+
           <h3 style={{ marginTop: '24px' }}>Jak mu pomoci TEĎ</h3>
-          <ul style={{ paddingLeft: '20px' }}><li>Pomoz mu s checklistem věcí k vyřízení</li><li>Nabídni se, že něco vyřídíš za něj</li><li>Doprovod ho k bráně věznice</li></ul>
-          <h3 style={{ marginTop: '24px' }}>Co nepomáhá</h3>
-          <ul style={{ paddingLeft: '20px' }}><li>"Já ti to říkal/a"</li><li>"Ty ses do toho dostal sám"</li><li>Vyhýbání se tématu</li></ul>
-          <div className="footer">Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a></div>
+          <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+            <li>Pomoz mu s checklistem věcí k vyřízení</li>
+            <li>Nabídni se, že něco vyřídíš za něj (úřady, smlouvy...)</li>
+            <li>Doprovod ho k bráně věznice - je to důležitější, než si myslíš</li>
+            <li>Buď trpělivý - může být ve stresu nebo šoku</li>
+          </ul>
+
+          <h3 id="co-nepomh">Co NEPOMÁHÁ</h3>
+          <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+            <li>"Já ti to říkal/a"</li>
+            <li>"Ty ses do toho dostal sám"</li>
+            <li>Vyhýbání se tématu</li>
+            <li>Předstírání, že se nic neděje</li>
+          </ul>
+
+          <h3 id="komunikace-bhem-trestu">Komunikace během trestu</h3>
+          <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+            <li><strong>Návštěvy:</strong> obvykle 1x za 2-3 týdny, musíš být na seznamu</li>
+            <li><strong>Dopisy:</strong> můžeš psát kdykoliv, jsou kontrolované</li>
+            <li><strong>Telefony:</strong> volá on tobě, z kreditu</li>
+            <li><strong>Peníze:</strong> posíláš na vězeňský účet</li>
+          </ul>
+
+          <div className="contact-card">
+            <strong>📞 Linka pro rodiny odsouzených</strong><br/>
+            <a href="tel:116123">116 123</a> (24/7, zdarma)
+          </div>
+
+          <div className="footer">
+            Projekt <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a>
+          </div>
         </div>
       );
     }
@@ -417,21 +860,46 @@
     function ExpertScreen({ onBack }) {
       return (
         <div className="screen">
-          <button onClick={onBack}>← Zpět</button>
+          <button onClick={onBack} style={{ background: 'white', border: '1px solid #ddd' }}>← Zpět</button>
+
           <h1 style={{ marginTop: '16px' }}>Pro odborníky</h1>
           <p>Tento nástroj můžete využít při práci s klienty před nástupem do VTOS.</p>
+
           <h3 style={{ marginTop: '24px' }}>Jak nástroj využít</h3>
-          <ul style={{ paddingLeft: '20px' }}><li>Projděte diagnostiku společně s klientem</li><li>Vygenerovaný plán slouží jako základ pro další práci</li><li>Checklisty lze vytisknout</li></ul>
-          <div className="footer">Projekt <a href="https://sovia.cz" target="_blank">Sovia z.s.</a> – Mám rozsudek a co dál?</div>
+          <ul style={{ paddingLeft: '20px', marginBottom: '16px' }}>
+            <li>Projděte diagnostiku společně s klientem</li>
+            <li>Vygenerovaný plán slouží jako základ pro další práci</li>
+            <li>Checklisty lze vytisknout (Ctrl+P)</li>
+            <li>Klient si může plán uložit na svém telefonu</li>
+          </ul>
+
+          <h3 id="o-projektu">O projektu</h3>
+          <p>
+            Nástroj vznikl v rámci projektu "Mám rozsudek a co dál?" organizace Sovia z.s.
+            na základě výzkumu s prvně odsouzenými.
+          </p>
+
+          <div className="contact-card">
+            <strong>📧 Kontakt pro odborníky</strong><br/>
+            <a href="mailto:sovia@sovia.cz">sovia@sovia.cz</a>
+          </div>
+
+          <div className="footer">
+            Projekt <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a> – Mám rozsudek a co dál?
+          </div>
         </div>
       );
     }
 
+    // =====================================================
+    // MAIN APP
+    // =====================================================
+
     function App() {
       const [screen, setScreen] = useState('landing');
       const [questionIndex, setQuestionIndex] = useState(0);
-      const [responses, setResponses] = useLocalStorage('vtos-responses', {});
-      const [completed, setCompleted] = useLocalStorage('vtos-completed', {});
+      const [responses, setResponses] = useLocalStorage('vtos-responses-v2', {});
+      const [completed, setCompleted] = useLocalStorage('vtos-completed-v2', {});
       const [selectedItem, setSelectedItem] = useState(null);
 
       const plan = useMemo(() => generatePlan(responses), [responses]);
@@ -468,23 +936,59 @@
       };
 
       if (screen === 'landing') {
-        return <LandingScreen onStart={() => setScreen('diagnostic')} onFamily={() => setScreen('family')} onExpert={() => setScreen('expert')} />;
+        return (
+          <LandingScreen
+            onStart={() => setScreen('diagnostic')}
+            onFamily={() => setScreen('family')}
+            onExpert={() => setScreen('expert')}
+          />
+        );
       }
+
       if (screen === 'diagnostic') {
-        return <DiagnosticScreen question={DIAGNOSTIC_QUESTIONS[questionIndex]} questionIndex={questionIndex} totalQuestions={DIAGNOSTIC_QUESTIONS.length} responses={responses} onAnswer={handleAnswer} onNext={handleNext} onBack={handleBack} />;
+        return (
+          <DiagnosticScreen
+            question={DIAGNOSTIC_QUESTIONS[questionIndex]}
+            questionIndex={questionIndex}
+            totalQuestions={DIAGNOSTIC_QUESTIONS.length}
+            responses={responses}
+            onAnswer={handleAnswer}
+            onNext={handleNext}
+            onBack={handleBack}
+          />
+        );
       }
+
       if (screen === 'plan') {
-        return <PlanScreen plan={plan} completed={completed} onToggle={handleToggle} onItemClick={(item) => { setSelectedItem(item); setScreen('detail'); }} onReset={handleReset} />;
+        return (
+          <PlanScreen
+            plan={plan}
+            completed={completed}
+            onItemClick={(item) => { setSelectedItem(item); setScreen('detail'); }}
+            onReset={handleReset}
+          />
+        );
       }
+
       if (screen === 'detail' && selectedItem) {
-        return <ItemDetailScreen item={selectedItem} completed={completed} onToggle={handleToggle} onBack={() => setScreen('plan')} />;
+        return (
+          <ItemDetailScreen
+            item={selectedItem}
+            completed={completed}
+            onToggle={handleToggle}
+            onBack={() => setScreen('plan')}
+          />
+        );
       }
+
       if (screen === 'family') {
         return <FamilyScreen onBack={() => setScreen('landing')} />;
       }
+
       if (screen === 'expert') {
         return <ExpertScreen onBack={() => setScreen('landing')} />;
       }
+
       return <div>Něco se pokazilo...</div>;
     }
 

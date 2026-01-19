@@ -1,0 +1,137 @@
+<h1 id="university-teaching-presentations">University Teaching Presentations</h1>
+<p>For courses, lectures, and educational content at KISK and similar contexts.</p>
+<h2 id="typical-structure">Typical Structure</h2>
+<ol>
+<li><strong>Title</strong> – Course name, date, contact</li>
+<li><strong>Úvodní hodina</strong> – What to expect, disclaimers</li>
+<li><strong>Agenda</strong> – What we'll cover today</li>
+<li><strong>Expectations</strong> – What students should/shouldn't expect</li>
+<li><strong>Core content</strong> – Grouped by theme with fragments</li>
+<li><strong>Praktická část</strong> – Exercises, discussion prompts</li>
+<li><strong>Shrnutí</strong> – Key takeaways</li>
+<li><strong>Do příště</strong> – Homework, next steps</li>
+<li><strong>Otázky?</strong> – Q&amp;A slide</li>
+<li><strong>Kontakt</strong> – Email, resources</li>
+</ol>
+<h2 id="key-patterns">Key Patterns</h2>
+<h3 id="course-introduction-slides">Course Introduction Slides</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Co čekat v kurzu&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;fragment&quot;&gt;&lt;strong&gt;Design&lt;/strong&gt; 🔥&lt;/li&gt;
+    &lt;li class=&quot;fragment&quot;&gt;Společnou práci a &lt;strong&gt;workshopy&lt;/strong&gt;&lt;/li&gt;
+    &lt;li class=&quot;fragment&quot;&gt;Týmový projekt&lt;/li&gt;
+    &lt;li class=&quot;fragment&quot;&gt;Vzájemné sdílení a reflexe procesu&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h1&gt;Co od kurzu nečekat&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Dominanci frontální výuky&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;„A for effort&quot;&lt;/em&gt; hodnocení&lt;/li&gt;
+    &lt;li&gt;Babysitting – jste tu dobrovolně a dospělí&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="concept-explanation-with-fragments">Concept Explanation with Fragments</h3>
+<p>Build up complex concepts step by step:</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Service design?🤔&lt;/h1&gt;
+  &lt;div class=&quot;fragment custom blur&quot;&gt;
+    &lt;img src=&quot;service-design.png&quot; alt=&quot;&quot; style=&quot;border-radius: .5rem; max-width: 800px;&quot;&gt;
+    &lt;p style=&quot;font-size: 1.25rem;&quot;&gt;Sarah Gibbons – &lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;Service Design 101&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="reference-section-with-vertical-slides">Reference Section with Vertical Slides</h3>
+<p>Main concept horizontal, detailed examples vertical:</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Projekty&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Budeme v 2. diamantu&lt;/li&gt;
+      &lt;li&gt;ideace, iterace, prototypy, testování&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Projekt 1: Informovanost o službách&lt;/h2&gt;
+    &lt;!-- Detailed project description --&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Projekt 2: Inovace ve státní správě&lt;/h2&gt;
+    &lt;!-- Detailed project description --&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="assignment-slide">Assignment Slide</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Do příště&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Pokuste si najít tým&lt;/li&gt;
+    &lt;li&gt;Zkuste si vybrat téma
+      &lt;ul&gt;
+        &lt;li&gt;Pokud se to podaří, zamyslete se nad tím kudy byste chtěli jít&lt;/li&gt;
+        &lt;li&gt;Příště bychom si nasdíleli pro vzájemnou inspiraci&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="speaker-notes-for-teaching">Speaker Notes for Teaching</h2>
+<p>Always add notes for:</p>
+<ul>
+<li>Timing estimates</li>
+<li>Examples to mention from your experience</li>
+<li>Questions students typically ask</li>
+<li>Transition prompts</li>
+</ul>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Úvodní kolečko 👋&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Populární technika!&lt;/li&gt;
+    &lt;li&gt;Vezměte si čas, není potřeba spěchat&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;aside class=&quot;notes&quot;&gt;
+    - Allocate ~2 min per student
+    - If &gt;15 students, split into pairs first
+    - Watch for students who seem reluctant
+  &lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="visual-elements">Visual Elements</h2>
+<h3 id="questiontransition-slides">Question/Transition Slides</h3>
+<p>Create breathing room between sections:</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Otázky?&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Pauza?&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="closing-with-background">Closing with Background</h3>
+<pre><code class="language-html">&lt;section data-background=&quot;../img/random/light-glass.png&quot; data-background-size=&quot;fit&quot;&gt;
+  &lt;h2 class=&quot;r-fit-text text-shadow-black&quot; style=&quot;color: white;&quot;&gt;Dík!&lt;/h2&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;h3 class=&quot;r-fit-text text-shadow-black&quot; style=&quot;color: white;&quot;&gt;Otázky?&lt;/h3&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="content-guidelines">Content Guidelines</h2>
+<ul>
+<li><strong>Max 6 bullets</strong> per slide</li>
+<li><strong>Use fragments</strong> for concepts students need to process one at a time</li>
+<li><strong>Include page numbers</strong> – students reference specific slides</li>
+<li><strong>Add speaker notes</strong> – you'll thank yourself next semester</li>
+<li><strong>Pros/cons</strong> always use two-column layout</li>
+<li><strong>End with homework</strong> – clear next steps</li>
+</ul>
+<h2 id="emoji-usage">Emoji Usage</h2>
+<p>Sparingly. Good for:</p>
+<ul>
+<li>Emphasis on key points (🔥)</li>
+<li>Transitions/breaks (☕, 🌈)</li>
+<li>Humanizing moments (👋, ❤️)</li>
+</ul>
+<p>Avoid: Decorating every slide or multiple emojis in one list.</p>

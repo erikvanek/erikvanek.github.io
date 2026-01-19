@@ -1,0 +1,307 @@
+<h1 id="code-examples-and-templates">Code Examples and Templates</h1>
+<p>Reusable HTML patterns for reveal.js presentations.</p>
+<h2 id="file-template">File Template</h2>
+<pre><code class="language-html">---
+title: Presentation Title
+date: YYYY-MM-DD
+layout: presentation-jinag.njk
+permalink: /examples/
+eleventyExcludeFromCollections: true
+description: Subtitle or short description
+---
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/presentation-kisk.css&quot;&gt;
+
+&lt;section&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;h2&gt;&lt;/h2&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;h4&gt;Erik Vaněk, &lt;/h4&gt;
+  &lt;h4&gt;&lt;a href=&quot;mailto:me@erikvanek.com&quot;&gt;me@erikvanek.com&lt;/a&gt;&lt;/h4&gt;
+&lt;/section&gt;
+
+&lt;!-- Content slides here --&gt;
+
+&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Díky! ❤️&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="basic-slide-types">Basic Slide Types</h2>
+<h3 id="text-slide">Text Slide</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Slide Title&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Point one&lt;/li&gt;
+    &lt;li&gt;Point two
+      &lt;ul&gt;&lt;li&gt;Sub-point&lt;/li&gt;&lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Point three&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="emphasis-slide">Emphasis Slide</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Big Statement&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="emphasis-with-subtext">Emphasis with Subtext</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Big Statement&lt;/h1&gt;
+  &lt;h3 class=&quot;r-fit-text&quot; style=&quot;text-align: center;&quot;&gt;Supporting context&lt;/h3&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="quote-slide">Quote Slide</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;p&gt;&lt;em&gt;&quot;Quote text goes here that should be memorable and impactful.&quot;&lt;/em&gt;&lt;/p&gt;
+  &lt;br&gt;
+  &lt;p&gt;— Attribution&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="fragment-patterns">Fragment Patterns</h2>
+<h3 id="sequential-reveal">Sequential Reveal</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Building Concepts&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;fragment&quot;&gt;First concept&lt;/li&gt;
+    &lt;li class=&quot;fragment&quot;&gt;Second concept&lt;/li&gt;
+    &lt;li class=&quot;fragment&quot;&gt;Third concept&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="controlled-order">Controlled Order</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Non-linear Reveal&lt;/h1&gt;
+  &lt;p class=&quot;fragment&quot; data-fragment-index=&quot;3&quot;&gt;Appears third&lt;/p&gt;
+  &lt;p class=&quot;fragment&quot; data-fragment-index=&quot;1&quot;&gt;Appears first&lt;/p&gt;
+  &lt;p class=&quot;fragment&quot; data-fragment-index=&quot;2&quot;&gt;Appears second&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="fragment-with-image">Fragment with Image</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Concept?🤔&lt;/h1&gt;
+  &lt;div class=&quot;fragment&quot;&gt;
+    &lt;img src=&quot;diagram.png&quot; alt=&quot;&quot; style=&quot;border-radius: .5rem; max-width: 800px;&quot;&gt;
+    &lt;p style=&quot;font-size: 1.25rem;&quot;&gt;Source — &lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="layout-patterns">Layout Patterns</h2>
+<h3 id="two-columns-equal-columns">Two Columns (equal-columns)</h3>
+<pre><code class="language-html">&lt;section class=&quot;equal-columns&quot;&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Left Column&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Point 1&lt;/li&gt;
+      &lt;li&gt;Point 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Right Column&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Point 1&lt;/li&gt;
+      &lt;li&gt;Point 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="two-columns-with-image">Two Columns with Image</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;div class=&quot;equal-columns&quot;&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Text Content&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Point one&lt;/li&gt;
+        &lt;li&gt;Point two&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;img src=&quot;image.png&quot; alt=&quot;&quot; style=&quot;max-width: 25rem;&quot;&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="centered-content-column">Centered Content Column</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;div style=&quot;display: flex; align-items: center; flex-direction: column;&quot;&gt;
+    &lt;h1&gt;&lt;/h1&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;h4&gt;Date and venue&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="background-patterns">Background Patterns</h2>
+<h3 id="image-background-dimmed">Image Background (dimmed)</h3>
+<pre><code class="language-html">&lt;section data-background-image=&quot;image.jpg&quot; data-background-opacity=&quot;0.3&quot;&gt;
+  &lt;h2&gt;Text over dimmed background&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="image-background-full">Image Background (full)</h3>
+<pre><code class="language-html">&lt;section data-background=&quot;image.jpg&quot; data-background-size=&quot;contain&quot;&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="image-with-text-overlay">Image with Text Overlay</h3>
+<pre><code class="language-html">&lt;section data-background=&quot;image.jpg&quot; data-background-size=&quot;fill&quot;&gt;
+  &lt;h2 class=&quot;text-shadow-black&quot; style=&quot;color: whitesmoke;&quot;&gt;Readable text&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="color-background">Color Background</h3>
+<pre><code class="language-html">&lt;section data-background-color=&quot;#483a6e&quot;&gt;
+  &lt;h1 style=&quot;color: whitesmoke;&quot;&gt;Content on colored background&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="interactive-iframe-background">Interactive iframe Background</h3>
+<pre><code class="language-html">&lt;section data-background-iframe=&quot;https://miro.com/board/...&quot; data-background-interactive&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="video-background-looping">Video Background (looping)</h3>
+<pre><code class="language-html">&lt;section data-background-video-loop data-background-video=&quot;video.mp4&quot;&gt;
+  &lt;h1 style=&quot;text-shadow: 4px 4px 4px black;&quot;&gt;Text over video&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="embedded-youtube">Embedded YouTube</h3>
+<pre><code class="language-html">&lt;section data-autoplay
+  data-background-iframe=&quot;https://www.youtube.com/embed/VIDEO_ID?si=...&amp;amp;controls=0&quot;
+  allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="vertical-slides">Vertical Slides</h2>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Main Concept&lt;/h2&gt;
+    &lt;p&gt;Overview content&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h3&gt;Detailed Example 1&lt;/h3&gt;
+    &lt;p&gt;Deep dive content&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h3&gt;Detailed Example 2&lt;/h3&gt;
+    &lt;p&gt;More detail&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="speaker-notes">Speaker Notes</h2>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Slide Title&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Visible content&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;aside class=&quot;notes&quot;&gt;
+    - Timing: 3-5 minutes
+    - Mention the MPSV example
+    - Common question: &quot;What about X?&quot;
+    - Transition: &quot;So what does this mean for...&quot;
+  &lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="interactive-elements">Interactive Elements</h2>
+<h3 id="qr-code-with-text">QR Code with Text</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;div class=&quot;equal-columns&quot;&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Call to Action&lt;/h1&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Question 1?&lt;/li&gt;
+        &lt;li&gt;Question 2?&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;img src=&quot;qr-code.png&quot; style=&quot;max-width: 400px;&quot;&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="external-timer-link">External Timer Link</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Časovač&lt;/h1&gt;
+  &lt;a href=&quot;https://www.bigtimer.net/?minutes=18&amp;repeat=false&quot; target=&quot;_blank&quot;&gt;časovač&lt;/a&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="live-clock-display">Live Clock Display</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;div style=&quot;font-size: 20rem;&quot;&gt;
+    &lt;span id=&quot;hours&quot;&gt;&lt;/span&gt;:&lt;span id=&quot;minutes&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;script&gt;
+(function() {
+  function updateClock() {
+    const now = new Date();
+    const h = now.getHours();
+    const m = now.getMinutes();
+    document.getElementById('hours').textContent = h &lt; 10 ? '0' + h : h;
+    document.getElementById('minutes').textContent = m &lt; 10 ? '0' + m : m;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+})();
+&lt;/script&gt;
+</code></pre>
+<h2 id="common-closing-slides">Common Closing Slides</h2>
+<h3 id="simple-thanks">Simple Thanks</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Díky! ❤️&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="thanks-with-background">Thanks with Background</h3>
+<pre><code class="language-html">&lt;section data-background=&quot;nice-image.png&quot; data-background-size=&quot;fit&quot;&gt;
+  &lt;h2 class=&quot;r-fit-text text-shadow-black&quot; style=&quot;color: white;&quot;&gt;Dík!&lt;/h2&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;h3 class=&quot;r-fit-text text-shadow-black&quot; style=&quot;color: white;&quot;&gt;Otázky?&lt;/h3&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="contact-info">Contact Info</h3>
+<pre><code class="language-html">&lt;section class=&quot;equal-columns&quot;&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Moc díky!&lt;/h1&gt;
+    &lt;p&gt;Buďme dále v kontaktu!&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;mailto:me@erikvanek.com&quot;&gt;me@erikvanek.com&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://erikvanek.com&quot;&gt;erikvanek.com&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;qr-code.png&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="css-classes-reference">CSS Classes Reference</h2>
+<p>Available in presentation-kisk.css:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r-fit-text</code></td>
+<td>Auto-scale text to fit container</td>
+</tr>
+<tr>
+<td><code>fragment</code></td>
+<td>Progressive reveal</td>
+</tr>
+<tr>
+<td><code>equal-columns</code></td>
+<td>Two-column grid layout</td>
+</tr>
+<tr>
+<td><code>text-shadow-black</code></td>
+<td>Black text shadow for readability</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inline-style-patterns">Inline Style Patterns</h2>
+<h3 id="readable-text-over-images">Readable text over images</h3>
+<pre><code class="language-html">style=&quot;color: whitesmoke; text-shadow: 4px 4px 4px black;&quot;
+</code></pre>
+<h3 id="centered-heading">Centered heading</h3>
+<pre><code class="language-html">style=&quot;text-align: center;&quot;
+</code></pre>
+<h3 id="constrained-image-width">Constrained image width</h3>
+<pre><code class="language-html">style=&quot;max-width: 800px; border-radius: .5rem;&quot;
+</code></pre>
+<h3 id="small-source-text">Small source text</h3>
+<pre><code class="language-html">style=&quot;font-size: 1.25rem; color: whitesmoke;&quot;
+</code></pre>
