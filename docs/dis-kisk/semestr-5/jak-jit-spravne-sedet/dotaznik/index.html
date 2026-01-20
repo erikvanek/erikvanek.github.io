@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostický dotazník | Jak jít správně sedět</title>
+  <link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="diagnostick-dotaznk-pro-odbornky">👔 Diagnostický dotazník pro odborníky</h1>
+    <p class="subtitle">Nástroj pro sociální pracovníky a poradce</p>
+  </header>
+
+  <main>
+    <a href="../" class="back-link">← Zpět na rozcestník</a>
+
+    <section class="intro">
+      <p>Tento dotazník je určen pro <strong>sociální pracovníky, probační úředníky a poradce</strong>, kteří pracují s klienty před nástupem do výkonu trestu odnětí svobody.</p>
+      <p>Dotazník pomáhá systematicky zmapovat situaci klienta a identifikovat oblasti, které vyžadují intervenci.</p>
+    </section>
+
+    <div class="info-box">
+      <h4 id="jak-dotaznk-pouvat">📋 Jak dotazník používat</h4>
+      <ol>
+        <li>Projděte s klientem všechny oblasti</li>
+        <li>U každé oblasti zaznamenejte stav a potřebnou intervenci</li>
+        <li>Na základě výsledků doporučte klientovi konkrétní kroky</li>
+        <li>Můžete klienta odkázat na <a href="../pruvodce/">interaktivního průvodce</a> pro samostatnou práci</li>
+      </ol>
+    </div>
+
+    <h2 class="section-heading">1. Základní údaje</h2>
+    <div class="form-section">
+      <div class="form-group">
+        <label>Datum nástupu do VTOS:</label>
+        <input type="date" class="form-input">
+      </div>
+      <div class="form-group">
+        <label>Délka trestu:</label>
+        <input type="text" class="form-input" placeholder="např. 2 roky">
+      </div>
+      <div class="form-group">
+        <label>První výkon trestu:</label>
+        <select class="form-input">
+          <option value="">Vyberte...</option>
+          <option value="yes">Ano, poprvé</option>
+          <option value="no">Ne, opakovaně</option>
+        </select>
+      </div>
+    </div>
+
+    <h2 class="section-heading">2. Bytová situace</h2>
+    <div class="assessment-area">
+      <div class="assessment-question">
+        <label>Současné bydlení:</label>
+        <select class="form-input">
+          <option value="">Vyberte...</option>
+          <option value="own">Vlastní byt/dům</option>
+          <option value="rent">Nájem</option>
+          <option value="family">U rodiny</option>
+          <option value="unstable">Nestabilní/bez domova</option>
+        </select>
+      </div>
+      <div class="assessment-question">
+        <label>Je vyřešeno, co bude s bydlením během VTOS?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="housing-solved" value="yes"> Ano</label>
+          <label><input type="radio" name="housing-solved" value="partial"> Částečně</label>
+          <label><input type="radio" name="housing-solved" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-notes">
+        <label>Poznámky / potřebná intervence:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-heading">3. Rodinná situace</h2>
+    <div class="assessment-area">
+      <div class="assessment-question">
+        <label>Má klient děti ve své péči?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="children" value="yes"> Ano</label>
+          <label><input type="radio" name="children" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Je zajištěna péče o děti během VTOS?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="children-care" value="yes"> Ano</label>
+          <label><input type="radio" name="children-care" value="partial"> Částečně</label>
+          <label><input type="radio" name="children-care" value="no"> Ne</label>
+          <label><input type="radio" name="children-care" value="na"> N/A</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Pečuje klient o další osoby (rodiče, příbuzné)?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="caregiving" value="yes"> Ano</label>
+          <label><input type="radio" name="caregiving" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Má klient funkční rodinné/sociální zázemí?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="support" value="strong"> Silné</label>
+          <label><input type="radio" name="support" value="partial"> Částečné</label>
+          <label><input type="radio" name="support" value="none"> Žádné</label>
+        </div>
+      </div>
+      <div class="assessment-notes">
+        <label>Poznámky / potřebná intervence:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-heading">4. Finanční situace</h2>
+    <div class="assessment-area">
+      <div class="assessment-question">
+        <label>Má klient dluhy nebo exekuce?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="debt" value="none"> Žádné</label>
+          <label><input type="radio" name="debt" value="small"> Menší dluhy</label>
+          <label><input type="radio" name="debt" value="large"> Velké dluhy/exekuce</label>
+          <label><input type="radio" name="debt" value="unknown"> Neví</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Je klient v kontaktu s dluhovou poradnou?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="debt-counseling" value="yes"> Ano</label>
+          <label><input type="radio" name="debt-counseling" value="no"> Ne</label>
+          <label><input type="radio" name="debt-counseling" value="na"> Nepotřebuje</label>
+        </div>
+      </div>
+      <div class="assessment-notes">
+        <label>Poznámky / potřebná intervence:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-heading">5. Zdravotní stav</h2>
+    <div class="assessment-area">
+      <div class="assessment-question">
+        <label>Užívá klient pravidelné léky?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="medication" value="yes"> Ano</label>
+          <label><input type="radio" name="medication" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Má psychické obtíže nebo závislost?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="mental" value="mental"> Psychické obtíže</label>
+          <label><input type="radio" name="mental" value="addiction"> Závislost</label>
+          <label><input type="radio" name="mental" value="both"> Obojí</label>
+          <label><input type="radio" name="mental" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Má klient připravenou zdravotní dokumentaci?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="health-docs" value="yes"> Ano</label>
+          <label><input type="radio" name="health-docs" value="partial"> Částečně</label>
+          <label><input type="radio" name="health-docs" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-notes">
+        <label>Poznámky / potřebná intervence:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-heading">6. Administrativa</h2>
+    <div class="assessment-area">
+      <div class="assessment-question">
+        <label>Platný občanský průkaz:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="id" value="yes"> Ano</label>
+          <label><input type="radio" name="id" value="expiring"> Brzy vyprší</label>
+          <label><input type="radio" name="id" value="no"> Nemá</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Má datovou schránku?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="databox" value="yes"> Ano</label>
+          <label><input type="radio" name="databox" value="no"> Ne</label>
+        </div>
+      </div>
+      <div class="assessment-question">
+        <label>Je odhlášen z evidence ÚP / informována ČSSZ?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="authorities" value="yes"> Ano</label>
+          <label><input type="radio" name="authorities" value="no"> Ne</label>
+          <label><input type="radio" name="authorities" value="na"> Nepotřebuje</label>
+        </div>
+      </div>
+      <div class="assessment-notes">
+        <label>Poznámky / potřebná intervence:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-heading">7. Shrnutí a doporučení</h2>
+    <div class="form-section">
+      <div class="assessment-notes">
+        <label>Hlavní rizikové oblasti:</label>
+        <textarea class="form-input" rows="3" placeholder="Vypište oblasti vyžadující prioritní intervenci..."></textarea>
+      </div>
+      <div class="assessment-notes">
+        <label>Doporučené kroky:</label>
+        <textarea class="form-input" rows="3" placeholder="Konkrétní kroky a doporučení pro klienta..."></textarea>
+      </div>
+      <div class="assessment-notes">
+        <label>Další poznámky:</label>
+        <textarea class="form-input" rows="2"></textarea>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-primary" onclick="window.print()">🖨️ Vytisknout dotazník</button>
+    </div>
+
+    <div class="info-box" style="margin-top: var(--space-xl);">
+      <h4 id="dal-zdroje-pro-odbornky">📚 Další zdroje pro odborníky</h4>
+      <ul>
+        <li><a href="https://www.vscr.cz" target="_blank">Vězeňská služba ČR</a> – oficiální informace</li>
+        <li><a href="https://www.pmscr.cz" target="_blank">Probační a mediační služba</a></li>
+        <li><a href="https://www.sovia.cz" target="_blank">Sovia z.s.</a> – projekt „Mám rozsudek a co dál?"</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a>
+    </p>
+  </footer>
+</body>
+</html>
