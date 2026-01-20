@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktivní průvodce | Jak jít správně sedět</title>
+  <link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="interaktivn-prvodce">🧭 Interaktivní průvodce</h1>
+    <p class="subtitle">Odpověz na pár otázek a dostaneš personalizovaný plán</p>
+  </header>
+
+  <main>
+    <a href="../" class="back-link">← Zpět na rozcestník</a>
+
+    <section class="intro">
+      <p>Tento průvodce ti pomůže zjistit, co všechno potřebuješ vyřídit před nástupem do výkonu trestu. Na základě tvých odpovědí ti sestavíme přehled úkolů seřazených podle důležitosti.</p>
+      <p><strong>Zabere ti to asi 10 minut.</strong></p>
+    </section>
+
+    <div id="pruvodce-app"></div>
+
+    <noscript>
+      <div class="warning-box info-box">
+        <h4 id="javascript-je-vypnut">⚠️ JavaScript je vypnutý</h4>
+        <p>Pro použití interaktivního průvodce potřebuješ zapnutý JavaScript. Alternativně můžeš použít <a href="../checklisty/">tištěné checklisty</a>.</p>
+      </div>
+    </noscript>
+
+    <section class="crisis">
+      <h3 id="potebuje-pomoct-hned">📞 Potřebuješ pomoct hned?</h3>
+      <p>Krizová linka: <a href="tel:116123"><strong>116 123</strong></a></p>
+      <p class="crisis-note">Nonstop, zdarma, anonymně</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="app.js"></script>
+</body>
+</html>
