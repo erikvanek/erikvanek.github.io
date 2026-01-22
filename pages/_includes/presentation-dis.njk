@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:description" property="og:description" itemprop="description" content='{{description}}'>
+    <title>{{ title }} | Erik Vaněk</title>
+    <meta name="description" content='{{description}}'>
+    
+    <!-- Reveal.js core -->
+    <link rel="stylesheet" href="/css/revealjs/reveal.css">
+    
+    <!-- Presentation styles -->
+    <link rel="stylesheet" href="/dis-kisk/semestr-5/DIS-public-design/styles/main.css">
+</head>
+
+{% include "_analytics.html" %}
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            {{content | safe}}
+        </div>
+
+        <footer>
+            <a href="/{{page.fileSlug}}" target="_blank">erikvanek.com/{{page.fileSlug}}</a>
+        </footer>
+    </div>
+
+    <script src="/js/reveal.js"></script>
+    <script src="/js/reveal-notes.js"></script>
+    <script src="/dis-kisk/semestr-5/DIS-public-design/js/blob.js"></script>
+
+    <script>
+        Reveal.initialize({
+            center: true,
+            hash: true,
+            autoPlayMedia: true,
+            transition: 'fade',
+            transitionSpeed: 'default',
+            plugins: [RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

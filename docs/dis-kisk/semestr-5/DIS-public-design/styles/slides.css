@@ -1,0 +1,215 @@
+/* ==========================================================================
+   SLIDES.CSS
+   Slide structure and image treatments
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Slide Base Layout
+   -------------------------------------------------------------------------- */
+
+.reveal .slides section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+/* Left-aligned slides (opt-in) */
+.reveal .slides section.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Image Treatment
+   Consistent styling for all images
+   -------------------------------------------------------------------------- */
+
+.reveal img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove shadow for specific cases */
+.reveal img.no-shadow {
+  box-shadow: none;
+}
+
+/* Remove border-radius for edge-to-edge */
+.reveal img.no-radius {
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Image Layouts
+   -------------------------------------------------------------------------- */
+
+/* Full-width image (takes most of the slide) */
+.reveal .image-full {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  margin: var(--space-lg) 0;
+}
+
+/* Half-screen image layout */
+.reveal .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  width: 100%;
+}
+
+.reveal .split img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+.reveal .split .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image on right */
+.reveal .split.image-right {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Image on left */
+.reveal .split.image-left {
+  grid-template-columns: 1fr 1fr;
+}
+
+.reveal .split.image-left img {
+  order: -1;
+}
+
+/* --------------------------------------------------------------------------
+   Background Image Slides
+   -------------------------------------------------------------------------- */
+
+.reveal section[data-background-image] h1,
+.reveal section[data-background-image] h2,
+.reveal section[data-background-image] p {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Two-Column Layout
+   -------------------------------------------------------------------------- */
+
+.reveal .columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+  width: 100%;
+}
+
+.reveal .columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* --------------------------------------------------------------------------
+   Quote Slides
+   -------------------------------------------------------------------------- */
+
+.reveal blockquote {
+  margin: var(--space-xl) 0;
+  padding: 0 0 0 var(--space-xl);
+  border-left: 4px solid var(--color-purple);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: var(--space-md);
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+.reveal blockquote cite::before {
+  content: '— ';
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.presentation-footer {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  z-index: 100;
+}
+
+.presentation-footer a {
+  color: var(--color-purple);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 150ms ease;
+}
+
+.presentation-footer a:hover {
+  border-bottom-color: var(--color-purple);
+}
+
+/* --------------------------------------------------------------------------
+   Spacing Utilities
+   -------------------------------------------------------------------------- */
+
+.reveal .mt-sm { margin-top: var(--space-sm); }
+.reveal .mt-md { margin-top: var(--space-md); }
+.reveal .mt-lg { margin-top: var(--space-lg); }
+.reveal .mt-xl { margin-top: var(--space-xl); }
+.reveal .mt-2xl { margin-top: var(--space-2xl); }
+
+.reveal .mb-sm { margin-bottom: var(--space-sm); }
+.reveal .mb-md { margin-bottom: var(--space-md); }
+.reveal .mb-lg { margin-bottom: var(--space-lg); }
+.reveal .mb-xl { margin-bottom: var(--space-xl); }
+.reveal .mb-2xl { margin-bottom: var(--space-2xl); }
+
+/* --------------------------------------------------------------------------
+   Speaker Notes (hidden in presentation)
+   -------------------------------------------------------------------------- */
+
+.reveal aside.notes {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Print / PDF Export
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .reveal .slides section {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  
+  .blob-container {
+    display: none !important;
+  }
+  
+  .presentation-footer {
+    display: none;
+  }
+}

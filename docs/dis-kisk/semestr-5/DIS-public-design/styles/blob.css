@@ -1,0 +1,239 @@
+/* ==========================================================================
+   BLOB.CSS
+   Lava lamp animated background - subtle tints
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SVG Filter Container (for gooey effect)
+   -------------------------------------------------------------------------- */
+
+.blob-svg-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Blob Container
+   -------------------------------------------------------------------------- */
+
+.blob-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  /* Apply gooey filter for merging effect */
+  filter: url('#goo-filter');
+}
+
+/* --------------------------------------------------------------------------
+   Individual Blobs
+   -------------------------------------------------------------------------- */
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  /* Blend with background and each other */
+  mix-blend-mode: multiply;
+  /* Smooth rendering */
+  will-change: transform;
+  /* Soft edges - increased blur for subtlety */
+  filter: blur(80px);
+}
+
+/* --------------------------------------------------------------------------
+   Blob Variants - Colors and Sizes (very subtle)
+   -------------------------------------------------------------------------- */
+
+.blob--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--blob-color-1),
+    var(--blob-color-3) 70%
+  );
+  opacity: 0.2;
+}
+
+.blob--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--blob-color-2),
+    var(--blob-color-4) 70%
+  );
+  opacity: 0.18;
+}
+
+.blob--3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle at 50% 70%,
+    var(--blob-color-3),
+    var(--blob-color-1) 70%
+  );
+  opacity: 0.16;
+}
+
+.blob--4 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle at 40% 60%,
+    var(--blob-color-4),
+    var(--blob-color-2) 70%
+  );
+  opacity: 0.15;
+}
+
+.blob--5 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle at 60% 40%,
+    var(--blob-color-1),
+    var(--blob-color-4) 70%
+  );
+  opacity: 0.12;
+}
+
+/* --------------------------------------------------------------------------
+   Blob Animations - Organic floating paths
+   -------------------------------------------------------------------------- */
+
+.blob--1 {
+  animation: float-1 35s ease-in-out infinite;
+}
+
+.blob--2 {
+  animation: float-2 40s ease-in-out infinite;
+}
+
+.blob--3 {
+  animation: float-3 38s ease-in-out infinite;
+}
+
+.blob--4 {
+  animation: float-4 32s ease-in-out infinite;
+}
+
+.blob--5 {
+  animation: float-5 36s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes - Wandering paths across the viewport
+   -------------------------------------------------------------------------- */
+
+@keyframes float-1 {
+  0%, 100% {
+    transform: translate(5vw, 10vh) scale(1);
+  }
+  20% {
+    transform: translate(70vw, 5vh) scale(1.05);
+  }
+  40% {
+    transform: translate(85vw, 50vh) scale(0.95);
+  }
+  60% {
+    transform: translate(40vw, 80vh) scale(1.1);
+  }
+  80% {
+    transform: translate(10vw, 60vh) scale(0.9);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translate(80vw, 70vh) scale(1);
+  }
+  25% {
+    transform: translate(30vw, 85vh) scale(0.9);
+  }
+  50% {
+    transform: translate(5vw, 30vh) scale(1.1);
+  }
+  75% {
+    transform: translate(60vw, 10vh) scale(0.95);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translate(50vw, 5vh) scale(1);
+  }
+  33% {
+    transform: translate(90vw, 40vh) scale(1.05);
+  }
+  66% {
+    transform: translate(20vw, 75vh) scale(0.9);
+  }
+}
+
+@keyframes float-4 {
+  0%, 100% {
+    transform: translate(15vw, 85vh) scale(1);
+  }
+  25% {
+    transform: translate(45vw, 45vh) scale(1.15);
+  }
+  50% {
+    transform: translate(85vw, 15vh) scale(0.85);
+  }
+  75% {
+    transform: translate(55vw, 65vh) scale(1.05);
+  }
+}
+
+@keyframes float-5 {
+  0%, 100% {
+    transform: translate(75vw, 35vh) scale(1);
+  }
+  20% {
+    transform: translate(25vw, 15vh) scale(0.9);
+  }
+  40% {
+    transform: translate(5vw, 55vh) scale(1.1);
+  }
+  60% {
+    transform: translate(35vw, 90vh) scale(0.95);
+  }
+  80% {
+    transform: translate(65vw, 50vh) scale(1.05);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion - Static positions for accessibility
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none !important;
+  }
+  
+  .blob--1 { transform: translate(10vw, 20vh); }
+  .blob--2 { transform: translate(70vw, 60vh); }
+  .blob--3 { transform: translate(40vw, 10vh); }
+  .blob--4 { transform: translate(20vw, 70vh); }
+  .blob--5 { transform: translate(60vw, 40vh); }
+}
+
+/* --------------------------------------------------------------------------
+   Hide blobs during print/PDF export
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .blob-container,
+  .blob-svg-filters {
+    display: none !important;
+  }
+}

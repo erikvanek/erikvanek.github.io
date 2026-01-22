@@ -1,0 +1,92 @@
+/* ===========================================
+   VARIABLES
+   Design tokens for the presentation
+   =========================================== */
+
+:root {
+  /* -------------------------
+     COLORS - Purple/Pink/Navy palette
+     ------------------------- */
+  
+  /* Background */
+  --color-bg: #f8f6f3;              /* Warm cream */
+  --color-bg-alt: #f2f0ed;          /* Slightly darker cream */
+  
+  /* Text */
+  --color-text: #1a1625;            /* Deep purple-black */
+  --color-text-muted: #5c566b;      /* Muted purple-gray */
+  
+  /* Accent palette - bold and expressive */
+  --color-purple: #6b4c9a;          /* Rich purple */
+  --color-pink: #c44b8c;            /* Vibrant pink */
+  --color-navy: #2a2d4e;            /* Deep navy */
+  
+  /* Blob gradient colors */
+  --color-blob-1: #8b5fbf;          /* Light purple */
+  --color-blob-2: #c44b8c;          /* Pink */
+  --color-blob-3: #5c4b8a;          /* Muted purple */
+  --color-blob-4: #d66ba0;          /* Soft pink */
+  
+  /* -------------------------
+     TYPOGRAPHY
+     ------------------------- */
+  
+  --font-sans: 'Inter', 'SF Pro Display', -apple-system, 
+               BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  
+  /* Type scale - crisp and sharp */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1.125rem;   /* 18px */
+  --text-lg: 1.5rem;       /* 24px */
+  --text-xl: 2rem;         /* 32px */
+  --text-2xl: 2.75rem;     /* 44px */
+  --text-3xl: 3.5rem;      /* 56px */
+  --text-4xl: 4.5rem;      /* 72px */
+  
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  
+  /* -------------------------
+     SPACING
+     ------------------------- */
+  
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  --space-24: 6rem;        /* 96px */
+  
+  /* -------------------------
+     LAYOUT
+     ------------------------- */
+  
+  --slide-padding: var(--space-12);
+  --content-max-width: 1200px;
+  
+  /* -------------------------
+     IMAGES
+     ------------------------- */
+  
+  --image-radius: 12px;
+  --image-shadow: 0 4px 24px rgba(26, 22, 37, 0.12);
+  
+  /* -------------------------
+     TRANSITIONS
+     ------------------------- */
+  
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+}

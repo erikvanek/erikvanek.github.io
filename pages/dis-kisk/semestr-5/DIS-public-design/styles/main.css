@@ -1,0 +1,16 @@
+/* ==========================================================================
+   MAIN.CSS
+   Master stylesheet - imports all partials
+   ========================================================================== */
+
+/* Design tokens and reveal.js overrides */
+/* @import 'base.css'; */
+
+/* Typography - fonts and text styles */
+@import 'typography.css';
+
+/* Slide layouts and image treatments */
+@import 'slides.css';
+
+/* Blob animation background */
+@import 'blob.css';
