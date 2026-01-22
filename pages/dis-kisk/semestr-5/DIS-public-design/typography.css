@@ -1,0 +1,197 @@
+/* ===========================================
+   TYPOGRAPHY
+   Type styles for the presentation
+   =========================================== */
+
+/* -------------------------
+   Font Import
+   ------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* -------------------------
+   Base Typography
+   ------------------------- */
+
+.reveal {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------
+   Headings
+   ------------------------- */
+
+.reveal h1 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.reveal h2 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.reveal h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.reveal h4 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3) 0;
+}
+
+/* -------------------------
+   Body Text
+   ------------------------- */
+
+.reveal p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.reveal p:last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------------
+   Lists
+   ------------------------- */
+
+.reveal ul,
+.reveal ol {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  margin: 0 0 var(--space-4) 0;
+  padding-left: var(--space-6);
+  text-align: left;
+}
+
+.reveal li {
+  margin-bottom: var(--space-3);
+}
+
+.reveal li:last-child {
+  margin-bottom: 0;
+}
+
+.reveal ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+  border-radius: 50%;
+}
+
+/* -------------------------
+   Links
+   ------------------------- */
+
+.reveal a {
+  color: var(--color-purple);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.reveal a:hover {
+  border-bottom-color: var(--color-purple);
+}
+
+/* -------------------------
+   Emphasis
+   ------------------------- */
+
+.reveal strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reveal em {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------
+   Code
+   ------------------------- */
+
+.reveal code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-bg-alt);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+/* -------------------------
+   Utility Classes
+   ------------------------- */
+
+.reveal .text-purple {
+  color: var(--color-purple);
+}
+
+.reveal .text-pink {
+  color: var(--color-pink);
+}
+
+.reveal .text-navy {
+  color: var(--color-navy);
+}
+
+.reveal .text-muted {
+  color: var(--color-text-muted);
+}
+
+.reveal .text-center {
+  text-align: center;
+}
+
+.reveal .text-left {
+  text-align: left;
+}
+
+/* Gradient text for special emphasis */
+.reveal .text-gradient {
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
