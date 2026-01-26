@@ -1,0 +1,91 @@
+/* ===========================================
+   Layout & Structure
+   Page-level layouts and navigation
+   =========================================== */
+
+/* Top Navigation */
+.top-nav {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-home {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-home:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/* Layout */
+header,
+main,
+footer {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-sm);
+}
+
+header h1 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+}
+
+header .subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+  line-height: var(--line-height-base);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+footer p {
+  margin: var(--space-xs) 0;
+}
+
+.project-name {
+  font-style: italic;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
