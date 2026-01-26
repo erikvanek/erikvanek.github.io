@@ -140,11 +140,6 @@
     text-decoration: none;
   }
   
-  .tool-card.tool-primary {
-    border-color: var(--color-primary);
-    background: linear-gradient(135deg, rgba(56, 180, 224, 0.05) 0%, rgba(56, 180, 224, 0.1) 100%);
-  }
-  
   .tool-card.tool-secondary {
     opacity: 0.8;
   }
