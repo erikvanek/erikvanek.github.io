@@ -1,0 +1,80 @@
+<h1 id="feedback-amp-progress-tracker">Feedback &amp; Progress Tracker</h1>
+<p>Date: 2026-01-26</p>
+<h2 id="feedback-summary">Feedback Summary</h2>
+<h3 id="critical-issues">Critical Issues</h3>
+<ol>
+<li><strong>Cards not visible without scrolling</strong> - Main content should contain at most 60% of the width of the site</li>
+<li><strong>Spacing too large</strong> - Space between 'Průvodce před nástupem do výkonu trestu' and 'Dostal(a) jsi rozsudek a nevíš co dělat?' is unnecessary</li>
+<li><strong>SOS section misrepresented</strong> - 'Potřebuješ pomoct hned' should be a footer/disclaimer/SOS button, not presented as a card</li>
+</ol>
+<h3 id="styling-improvements">Styling Improvements</h3>
+<ol start="4">
+<li><strong>Card padding</strong> - Cut inner padding by half</li>
+<li><strong>Card corners</strong> - Add rounded corners (4px)</li>
+<li><strong>Emoji placement</strong> - Emojis should be part of headings, not on separate line</li>
+<li><strong>Hover effect missing</strong> - 'Pro odborníky' card should have blue border on hover</li>
+<li><strong>Checklist padding</strong> - Reduce padding to half the size</li>
+</ol>
+<h3 id="inspirations-amp-considerations">Inspirations &amp; Considerations</h3>
+<ol start="9">
+<li><strong>Typography &amp; whitespace</strong> - Inspire from Linear's landing page approach</li>
+<li><strong>Navigation</strong> - Consider adding top-level navigation (especially for checklists)</li>
+<li><strong>CSS organization</strong> - Split shared CSS file into several files for more efficient changes</li>
+</ol>
+<h3 id="markup-flexibility">Markup Flexibility</h3>
+<ol start="12">
+<li><strong>Don't be afraid to change markup</strong> - Index page structure can be modified</li>
+</ol>
+<hr>
+<h2 id="progress-tracking">Progress Tracking</h2>
+<h3 id="completed">✅ Completed</h3>
+<ol>
+<li>✅ <strong>Card padding reduced by half</strong> - Changed from 40px to 20px for tool-card and checklist-link</li>
+<li>✅ <strong>Checklist item padding reduced by half</strong> - Changed from 24px to 12px</li>
+<li>✅ <strong>Added 4px rounded corners</strong> - Applied to .tool-card, .checklist-link (not crisis - it's now a banner)</li>
+<li>✅ <strong>Emojis moved inline with headings</strong> - Removed .tool-icon spans, emojis now part of h3 text</li>
+<li>✅ <strong>Blue border hover for 'Pro odborníky' card</strong> - Added hover state with primary color border</li>
+<li>✅ <strong>Redesigned crisis section as SOS banner</strong> - Moved outside nav, banner style with top/bottom borders, extends to edges</li>
+<li>✅ <strong>Aggressive spacing reduction</strong> - Reduced header padding, subtitle font size, intro margins, line-height, card gaps, h3 margins to make cards visible without scrolling</li>
+<li>✅ <strong>Typography improvements (Linear-inspired)</strong> - Added tighter letter-spacing to headings, refined line-heights, improved visual hierarchy with better font weights</li>
+<li>✅ <strong>Navigation implementation</strong> - Added sticky top navigation bar to all pages with link back to home, minimal and clean design</li>
+<li>✅ <strong>CSS file splitting (prepared)</strong> - Created modular CSS files (base.css, layout.css, components.css) for better organization. Files are ready for implementation when needed.</li>
+<li>✅ <strong>Responsive width fix</strong> - Changed from fixed 60% to responsive widths (100% mobile → 90% tablet → 80% laptop → 70% desktop → 60% large screens) for better mid-sized viewport support</li>
+</ol>
+<h3 id="in-progress">🔄 In Progress</h3>
+<ul>
+<li>(none yet)</li>
+</ul>
+<h3 id="to-do">⏳ To Do</h3>
+<ol>
+<li>[x] Reduce main content width to max 60% - Done with responsive width approach in #11 (adaptive based on viewport)</li>
+<li>[x] Reduce spacing between title and main heading - Done with aggressive spacing reduction in #7</li>
+<li>[x] Cut card inner padding by half</li>
+<li>[x] Add 4px rounded corners to cards</li>
+<li>[x] Move emojis inline with headings</li>
+<li>[x] Redesign 'Potřebuješ pomoct hned' as footer/SOS element</li>
+<li>[x] Add blue border hover effect to 'Pro odborníky' card</li>
+<li>[x] Reduce checklist padding by half</li>
+<li>[x] Consider navigation implementation</li>
+<li>[x] Consider splitting CSS files</li>
+<li>[x] Review typography/whitespace inspired by Linear</li>
+</ol>
+<hr>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Working one change at a time with approval</li>
+<li>Session may need continuation due to credit limits</li>
+</ul>
+<h3 id="css-file-organization-ready-for-implementation">CSS File Organization (Ready for Implementation)</h3>
+<p>Three modular CSS files have been created in <code>shared/</code> folder:</p>
+<ul>
+<li><strong>base.css</strong>: Variables, reset, typography foundation</li>
+<li><strong>layout.css</strong>: Page structure, navigation, header, footer</li>
+<li><strong>components.css</strong>: Reusable UI components (cards, buttons, info boxes)</li>
+</ul>
+<p>To implement, update HTML files to include:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;../shared/base.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../shared/layout.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../shared/components.css&quot;&gt;
+</code></pre>
+<p>Current single-file approach (styles.css) is still in use and working.</p>
