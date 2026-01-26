@@ -803,3 +803,21 @@ textarea.form-input {
     display: none;
   }
 }
+
+.tool-card.tool-professional {
+  background: var(--color-bg-secondary);
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+.tool-card.tool-professional:hover {
+  opacity: 1;
+}
+
+.tool-note {
+  display: block;
+  margin-top: var(--space-sm);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
