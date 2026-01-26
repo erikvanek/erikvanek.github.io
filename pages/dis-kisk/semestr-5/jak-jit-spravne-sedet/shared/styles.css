@@ -803,3 +803,21 @@ textarea.form-input {
     display: none;
   }
 }
+
+.checklist-link.checklist-featured {
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(135deg, rgba(56, 180, 224, 0.05) 0%, rgba(56, 180, 224, 0.1) 100%);
+}
+
+.badge-critical {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-left: var(--space-sm);
+  background: var(--color-accent);
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+}
