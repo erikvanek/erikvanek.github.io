@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1 id="gemini-agent-context-the-second-brain-pkm">Gemini Agent Context: The Second Brain (PKM)</h1>
+<h2 id="1-system-philosophy-quotthe-garden-of-knowledgequot">1. System Philosophy: &quot;The Garden of Knowledge&quot;</h2>
+<p>This directory (<code>/notes</code>) is the user's <strong>Second Brain</strong>. It is a Personal Knowledge Management (PKM) system likely built on the &quot;Building a Second Brain&quot; (BASB) or Zettelkasten methodologies.</p>
+<p><strong>Core Principle:</strong> This is where <em>information</em> is transformed into <em>understanding</em>.</p>
+<ul>
+<li><strong>Project Repos</strong> contain <em>what</em> the user is working on (the &quot;Factory&quot;).</li>
+<li><strong>This Repo</strong> contains <em>how</em> the user thinks, learns, and operates (the &quot;Library&quot; or &quot;Laboratory&quot;).</li>
+</ul>
+<h2 id="2-navigating-the-mental-map">2. Navigating the Mental Map</h2>
+<p>The folder structure implies a lifecycle of ideas:</p>
+<h3 id="code02-inboxcode-the-entry-point"><code>02 - 📩 Inbox</code> (The Entry Point)</h3>
+<ul>
+<li><strong>Status:</strong> Raw, chaotic, unprocessed.</li>
+<li><strong>Content:</strong> Fleeting notes, quick captures, book excerpts.</li>
+<li><strong>Action:</strong> Things here need to be &quot;processed&quot;—categorized, summarized, and moved to permanent storage.</li>
+</ul>
+<h3 id="code04-rawcode-the-archive"><code>04 - 💽 RAW</code> ( The Archive)</h3>
+<ul>
+<li><strong>Status:</strong> Chronological immutable record.</li>
+<li><strong>Content:</strong> Daily logs, meeting notes, &quot;stream of consciousness&quot; dumps.</li>
+<li><strong>Use Case:</strong> &quot;What did I do on March 14th?&quot;</li>
+</ul>
+<h3 id="code10-knowledgecode-the-core"><code>10 - 🧠 Knowledge</code> (The Core)</h3>
+<ul>
+<li><strong>Status:</strong> Permanent, refined, crystallized.</li>
+<li><strong>Content:</strong>
+<ul>
+<li><strong>Mental Models:</strong> (e.g., &quot;The Hero's Journey&quot;, &quot;FAB Framework&quot;, &quot;Pareto Principle&quot;).</li>
+<li><strong>Frameworks:</strong> How to structure a pitch, how to conduct an interview.</li>
+<li><strong>Evergreen Notes:</strong> Concepts that remain true over time.</li>
+</ul>
+</li>
+<li><strong>Agent Instruction:</strong> <strong>This is your primary lookup table for &quot;How-To&quot;.</strong> If the user asks &quot;Help me write a pitch,&quot; look here first for their preferred frameworks (e.g., Aristotle's Triad, FAB).</li>
+</ul>
+<h3 id="code99-to-processcode-the-working-memory"><code>99 - 📄 To process</code> (The Working Memory)</h3>
+<ul>
+<li><strong>Status:</strong> Active, transient.</li>
+<li><strong>Content:</strong> Notes from recent interviews (like the Upstrix research) that are being synthesized but aren't yet filed permanently.</li>
+</ul>
+<h2 id="3-key-frameworks-detected-reference-these">3. Key Frameworks Detected (Reference these!)</h2>
+<p>Based on recent activity, the user heavily relies on:</p>
+<ul>
+<li><strong>Storytelling:</strong> The &quot;Hero's Journey&quot; (Campbell) and &quot;FAB&quot; (Feelings, Actions, Beliefs) for pitches.</li>
+<li><strong>Rhetoric:</strong> Ethos/Pathos/Logos (Aristotle) for persuasion.</li>
+<li><strong>Clarity:</strong> Flesch Reading Ease scores for communication.</li>
+</ul>
+<h2 id="4-agent-operational-rules">4. Agent Operational Rules</h2>
+<ol>
+<li><strong>Read-Only Default:</strong> Treat this repo as a reference library. Do not modify files in <code>10 - 🧠 Knowledge</code> unless explicitly instructed to &quot;update my mental model of X&quot;.</li>
+<li><strong>Cross-Pollinate:</strong> When working in a project repo (like Upstrix), check this Second Brain for relevant frameworks.
+<ul>
+<li><em>Example:</em> &quot;I see you're writing a pitch in Upstrix. Should I apply the 'FAB' framework from your Second Brain?&quot;</li>
+</ul>
+</li>
+<li><strong>Respect the Path:</strong> This directory sits outside the typical project root. Always use absolute paths or relative paths from the workspace root (e.g., <code>../erikvanek.github.io/pages/notes/...</code>).</li>
+</ol>
+
+
+    
+</body>
+
+</html>
