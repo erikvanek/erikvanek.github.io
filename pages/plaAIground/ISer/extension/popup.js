@@ -71,22 +71,16 @@ async function handleDownload() {
       throw new Error(response?.error || 'Failed to extract content');
     }
 
-    const { title, content, resources } = response;
+    const { title, content, inlineStyles, stylesheetUrls, resources } = response;
     resourceCount.textContent = `Found ${resources.length} resource(s)`;
 
-    if (resources.length === 0) {
-      setStatus('No downloadable resources found.', 'error');
-      setButtonEnabled(true);
-      return;
-    }
-
     setStatus('Starting download...');
-    setProgress(0, resources.length + 1); // +1 for curriculum PDF
+    setProgress(0, resources.length + 2); // +2 for curriculum PDF and HTML
 
     // Send to background worker for processing
     chrome.runtime.sendMessage({
       action: 'startDownload',
-      data: { title, content, resources, tabId: tab.id }
+      data: { title, content, inlineStyles, stylesheetUrls, resources, tabId: tab.id }
     });
 
   } catch (error) {

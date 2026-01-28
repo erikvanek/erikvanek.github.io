@@ -32,11 +32,9 @@
   // Utility: Check if URL points to downloadable file
   function isDownloadableUrl(url) {
     const lowerUrl = url.toLowerCase();
-    // Check file extension
     if (CONFIG.downloadableExtensions.some(ext => lowerUrl.includes(ext))) {
       return true;
     }
-    // Check for common download URL patterns
     if (lowerUrl.includes('/download/') || lowerUrl.includes('action=download') || lowerUrl.includes('export=')) {
       return true;
     }
@@ -57,11 +55,11 @@
   function sanitizeFilename(name) {
     if (!name) return 'unnamed';
     return name
-      .replace(/[/\\:*?"<>|]/g, '-')  // Replace illegal chars
-      .replace(/\s+/g, ' ')            // Normalize whitespace
-      .replace(/^\.+/, '_')            // Don't start with dots
+      .replace(/[/\\:*?"<>|]/g, '-')
+      .replace(/\s+/g, ' ')
+      .replace(/^\.+/, '_')
       .trim()
-      .substring(0, 200);              // Limit length
+      .substring(0, 200);
   }
 
   // Utility: Extract filename from URL
@@ -73,9 +71,7 @@
       if (filename && filename.includes('.')) {
         return decodeURIComponent(filename);
       }
-    } catch {
-      // Ignore URL parsing errors
-    }
+    } catch {}
     return null;
   }
 
@@ -90,59 +86,45 @@
       const match = filename.match(/\.[a-z0-9]+$/i);
       if (match) return match[0].toLowerCase();
     }
-    // Default to .pdf for download URLs without clear extension
     return '.pdf';
   }
 
   // IS MUNI specific: Extract name from element title or nearby context
   function extractISMuniResourceName(linkElement) {
-    // 1. Check for .io-element-title in the same .io-element container
     const ioElement = linkElement.closest('.io-element');
     if (ioElement) {
       const titleEl = ioElement.querySelector('.io-element-title');
       if (titleEl) {
         const title = titleEl.textContent?.trim();
-        if (title && !isGenericText(title)) {
-          return title;
-        }
+        if (title && !isGenericText(title)) return title;
       }
     }
 
-    // 2. Check for .io-element-title as sibling (for links inside object fallback)
     const parent = linkElement.parentElement;
     if (parent) {
       const prevSibling = parent.previousElementSibling;
       if (prevSibling?.classList?.contains('io-element-title')) {
         const title = prevSibling.textContent?.trim();
-        if (title && !isGenericText(title)) {
-          return title;
-        }
+        if (title && !isGenericText(title)) return title;
       }
     }
 
-    // 3. Check for h1.io-verejne in nearest section (chapter heading)
     const section = linkElement.closest('[id^="prvek-obsah"], [id^="io-q-"]');
     if (section) {
-      // Look backwards for the chapter heading
       let prev = section.previousElementSibling;
       while (prev) {
         const h1 = prev.querySelector('h1.io-verejne, h1');
         if (h1) {
           const heading = h1.textContent?.trim();
-          if (heading && heading.length < 100) {
-            return heading;
-          }
+          if (heading && heading.length < 100) return heading;
         }
         prev = prev.previousElementSibling;
       }
     }
 
-    // 4. Check for a.io-element-title (direct title link)
     if (linkElement.classList.contains('io-element-title')) {
       const title = linkElement.textContent?.trim();
-      if (title && !isGenericText(title)) {
-        return title;
-      }
+      if (title && !isGenericText(title)) return title;
     }
 
     return null;
@@ -150,30 +132,17 @@
 
   // Extract meaningful name for a resource link
   function extractResourceName(linkElement) {
-    // Try IS MUNI specific extraction first
     const ismuniName = extractISMuniResourceName(linkElement);
-    if (ismuniName) {
-      return ismuniName;
-    }
+    if (ismuniName) return ismuniName;
 
-    // 1. Try link text
     let linkText = linkElement.textContent?.trim();
-    if (linkText && !isGenericText(linkText)) {
-      return linkText;
-    }
+    if (linkText && !isGenericText(linkText)) return linkText;
 
-    // 2. Check for image alt text (if link contains image)
     const img = linkElement.querySelector('img');
-    if (img && img.alt && !isGenericText(img.alt)) {
-      return img.alt;
-    }
+    if (img && img.alt && !isGenericText(img.alt)) return img.alt;
 
-    // 3. Check title attribute
-    if (linkElement.title && !isGenericText(linkElement.title)) {
-      return linkElement.title;
-    }
+    if (linkElement.title && !isGenericText(linkElement.title)) return linkElement.title;
 
-    // 4. Check parent element text
     const parent = linkElement.parentElement;
     if (parent) {
       const clone = parent.cloneNode(true);
@@ -185,7 +154,6 @@
       }
     }
 
-    // 5. Check nearest heading
     let element = linkElement;
     while (element && element !== document.body) {
       element = element.parentElement;
@@ -205,74 +173,46 @@
       }
     }
 
-    // 6. Fallback to URL filename
     const urlFilename = getFilenameFromUrl(linkElement.href);
     if (urlFilename) {
-      // Remove extension for cleaner name, replace underscores with spaces
       return urlFilename.replace(/\.[^.]+$/, '').replace(/_/g, ' ');
     }
 
     return 'unnamed';
   }
 
-  // Find main content container (IS MUNI specific)
+  // Find main content container
   function findMainContent() {
-    // IS MUNI specific selectors first
-    const ismuniSelectors = [
-      '#app_content',           // Main app content
-      '.io-nejvyssi-obal',      // Interactive syllabus wrapper
-      'main[role="main"]',
-      'main'
-    ];
-
-    for (const selector of ismuniSelectors) {
+    const selectors = ['#app_content', '.io-nejvyssi-obal', 'main[role="main"]', 'main', '[role="main"]', '.content', '#content', 'article'];
+    for (const selector of selectors) {
       const element = document.querySelector(selector);
       if (element) return element;
     }
-
-    // Generic fallbacks
-    const genericSelectors = [
-      '[role="main"]',
-      '.content',
-      '#content',
-      'article'
-    ];
-
-    for (const selector of genericSelectors) {
-      const element = document.querySelector(selector);
-      if (element) return element;
-    }
-
     return document.body;
   }
 
-  // Extract page title (IS MUNI specific)
+  // Extract page title
   function extractPageTitle() {
-    // IS MUNI: Check for io-name-header first
     const ioHeader = document.querySelector('#io-name-header');
     if (ioHeader) {
       const title = ioHeader.textContent?.trim();
       if (title) return sanitizeFilename(title);
     }
 
-    // IS MUNI: Check for course title in breadcrumb or header
     const courseTitle = document.querySelector('.predmet-nazev, .course-title');
     if (courseTitle) {
       const title = courseTitle.textContent?.trim();
       if (title) return sanitizeFilename(title);
     }
 
-    // Try first h1
     const h1 = document.querySelector('h1');
     if (h1) {
       const title = h1.textContent?.trim();
       if (title) return sanitizeFilename(title);
     }
 
-    // Fall back to document title
     const docTitle = document.title?.trim();
     if (docTitle) {
-      // Clean common suffixes
       return sanitizeFilename(
         docTitle
           .replace(/\s*[-|–]\s*IS\s*MUNI.*$/i, '')
@@ -285,12 +225,95 @@
     return 'curriculum';
   }
 
+  // Extract all stylesheets from the page
+  function extractStyles() {
+    const styles = [];
+    document.querySelectorAll('style').forEach(style => {
+      styles.push(style.textContent);
+    });
+
+    const stylesheetUrls = [];
+    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      if (link.href) stylesheetUrls.push(link.href);
+    });
+
+    return { inlineStyles: styles.join('\n'), stylesheetUrls };
+  }
+
+  // Inject script into page context
+  function injectScript(url) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = url;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error(`Failed to load ${url}`));
+      document.head.appendChild(script);
+    });
+  }
+
+  // Generate PDF by injecting scripts into page context
+  let pdfGeneratorReady = false;
+
+  async function initPdfGenerator() {
+    if (pdfGeneratorReady) return;
+
+    try {
+      // Inject html2pdf library
+      await injectScript(chrome.runtime.getURL('lib/html2pdf.bundle.min.js'));
+      // Inject our PDF generator script
+      await injectScript(chrome.runtime.getURL('pdf-generator.js'));
+      pdfGeneratorReady = true;
+      console.log('PDF generator initialized');
+    } catch (error) {
+      console.error('Failed to initialize PDF generator:', error);
+      throw error;
+    }
+  }
+
+  async function generatePdf() {
+    await initPdfGenerator();
+
+    return new Promise((resolve, reject) => {
+      const requestId = Math.random().toString(36).substring(7);
+      const title = extractPageTitle();
+
+      // Listen for result
+      const handler = (event) => {
+        if (event.detail.requestId !== requestId) return;
+        window.removeEventListener('__studyPathPdfResult', handler);
+
+        if (event.detail.success) {
+          resolve(event.detail.pdfBase64);
+        } else {
+          reject(new Error(event.detail.error || 'PDF generation failed'));
+        }
+      };
+
+      window.addEventListener('__studyPathPdfResult', handler);
+
+      // Set timeout
+      setTimeout(() => {
+        window.removeEventListener('__studyPathPdfResult', handler);
+        reject(new Error('PDF generation timed out'));
+      }, 60000);
+
+      // Trigger PDF generation
+      window.dispatchEvent(new CustomEvent('__studyPathGeneratePdf', {
+        detail: {
+          requestId,
+          contentSelector: '#app_content',
+          title
+        }
+      }));
+    });
+  }
+
   // Main extraction function
   function extractContent() {
     const mainContent = findMainContent();
     const title = extractPageTitle();
+    const { inlineStyles, stylesheetUrls } = extractStyles();
 
-    // Find all links in content
     const links = mainContent.querySelectorAll('a[href]');
     const resources = [];
     const seenUrls = new Set();
@@ -298,24 +321,16 @@
 
     for (const link of links) {
       const href = link.href;
-
-      // Skip if already processed
       if (seenUrls.has(href)) continue;
-
-      // Skip navigation links, anchors
       if (href.includes('#io-q-') || href.includes('data-warp-id')) continue;
-
-      // Check if internal and downloadable
       if (!isInternalUrl(href)) continue;
       if (!isDownloadableUrl(href)) continue;
 
       seenUrls.add(href);
 
-      // Extract name
       let name = extractResourceName(link);
       name = sanitizeFilename(name);
 
-      // Handle duplicates by appending number
       const baseName = name;
       if (nameCount[baseName]) {
         nameCount[baseName]++;
@@ -324,10 +339,7 @@
         nameCount[baseName] = 1;
       }
 
-      // Get extension
       const extension = getExtension(href, name);
-
-      // Ensure name has extension
       if (!name.toLowerCase().endsWith(extension)) {
         name = name + extension;
       }
@@ -339,12 +351,13 @@
       });
     }
 
-    // Get content HTML for PDF generation
     const contentHtml = mainContent.innerHTML;
 
     return {
       title,
       content: contentHtml,
+      inlineStyles,
+      stylesheetUrls,
       resources,
       url: window.location.href
     };
@@ -356,14 +369,23 @@
       try {
         const data = extractContent();
         console.log('Study Path Downloader: Extracted', data.resources.length, 'resources');
-        console.log('Resources:', data.resources.map(r => r.name));
         sendResponse(data);
       } catch (error) {
         console.error('Content extraction error:', error);
         sendResponse({ error: error.message });
       }
+    } else if (message.action === 'generatePdf') {
+      generatePdf()
+        .then(base64Pdf => {
+          sendResponse({ pdfBase64: base64Pdf });
+        })
+        .catch(error => {
+          console.error('PDF generation error:', error);
+          sendResponse({ error: error.message });
+        });
+      return true;
     }
-    return true; // Keep message channel open for async response
+    return true;
   });
 
   console.log('Study Path Downloader: Content script loaded');

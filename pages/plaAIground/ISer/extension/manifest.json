@@ -3,7 +3,7 @@
   "name": "Study Path Downloader",
   "version": "1.0.0",
   "description": "Download IS MUNI curriculum pages with all resources as a structured zip file",
-  "permissions": ["activeTab", "downloads", "scripting"],
+  "permissions": ["activeTab", "downloads", "scripting", "debugger"],
   "host_permissions": ["*://*.muni.cz/*"],
   "action": {
     "default_popup": "popup.html",
@@ -20,5 +20,9 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "web_accessible_resources": [{
+    "resources": ["lib/html2pdf.bundle.min.js", "pdf-generator.js"],
+    "matches": ["*://*.muni.cz/*"]
+  }]
 }
