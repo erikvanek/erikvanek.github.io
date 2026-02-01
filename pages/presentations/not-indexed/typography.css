@@ -304,18 +304,31 @@
 
 /* ============================================
    PEAK SECTION - FUCK FACTS
-   Bold red background, white text
+   Bold red background, white text, full bleed
    ============================================ */
 .reveal section.peak {
-    background: var(--color-accent);
+    background: var(--color-accent) !important;
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    padding: 3rem !important;
+    /* Override reveal.js slide background */
+}
+
+.reveal .slides section.peak {
+    background: var(--color-accent) !important;
+}
+
+/* Force red background on the slide container */
+.reveal section.peak::before {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    background: var(--color-accent);
+    z-index: -1;
 }
 
 .reveal section.peak h1,
@@ -412,18 +425,44 @@
     opacity: 1;
 }
 
-.equal {
+/* ============================================
+   EQUAL SPLIT LAYOUT
+   ============================================ */
+.reveal section.equal {
     display: flex !important;
     flex-direction: row !important;
-    gap: 4rem;
-    height: 100vh;
+    gap: 0;
+    padding: 0 !important;
+    height: 100%;
+    align-items: stretch;
 }
 
-.equal > * {
-    max-width: 50%;
+.equal > div {
+    width: 45%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.equal > img {
+    width: 55%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: none;
 }
 
 .equal h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+    line-height: 1.25;
+}
+
+/* Variant: bigger photo */
+.equal.photo-big > div {
+    width: 35%;
+}
+
+.equal.photo-big > img {
+    width: 65%;
 }
