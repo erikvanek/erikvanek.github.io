@@ -1,4 +1,4 @@
-# Study Path Downloader - Quick Start
+# ISer - Quick Start
 
 ## What This Is
 Browser extension that downloads university curriculum pages (IS MUNI) as PDF plus all referenced resources into a structured zip file, ready for reMarkable.

@@ -1,0 +1,68 @@
+<h1 id="iser-quick-start">ISer - Quick Start</h1>
+<h2 id="what-this-is">What This Is</h2>
+<p>Browser extension that downloads university curriculum pages (IS MUNI) as PDF plus all referenced resources into a structured zip file, ready for reMarkable.</p>
+<h2 id="spec-files">Spec Files</h2>
+<ul>
+<li><strong><a href="http://SPEC.md">SPEC.md</a></strong> - Full specification, architecture, requirements</li>
+<li><strong><a href="http://IMPLEMENTATION.md">IMPLEMENTATION.md</a></strong> - Step-by-step build plan (10 phases)</li>
+<li><strong>TECHNICAL_NOTES.md</strong> - Design decisions, pitfalls, evaluation points</li>
+</ul>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li>Vanilla JavaScript (no build tools)</li>
+<li>Manifest V3 browser extension</li>
+<li>JSZip library (only dependency)</li>
+<li>html2pdf.js (for PDF generation)</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="1-prepare-sample-markup">1. Prepare Sample Markup</h3>
+<p>Before implementation, provide:</p>
+<ul>
+<li>HTML markup from a typical curriculum page</li>
+<li>Markup from a complex page (many resources, nested structure)</li>
+<li>Screenshots showing resource naming in context</li>
+</ul>
+<p>This validates the reference detection logic before building the full extension.</p>
+<h3 id="2-follow-implementation-plan">2. Follow Implementation Plan</h3>
+<p>Build in order (<a href="http://IMPLEMENTATION.md">IMPLEMENTATION.md</a>):</p>
+<ul>
+<li><strong>Phase 1:</strong> Content extraction &amp; reference detection (Steps 1-3)</li>
+<li><strong>Phase 2:</strong> PDF generation (Step 4)</li>
+<li><strong>Phase 3:</strong> Download orchestration (Steps 5-6)</li>
+<li><strong>Phase 4:</strong> Packaging &amp; delivery (Steps 7-8)</li>
+<li><strong>Phase 5:</strong> UI &amp; polish (Steps 9-10)</li>
+</ul>
+<h3 id="3-evaluate-at-checkpoints">3. Evaluate at Checkpoints</h3>
+<p>After Steps 3, 4, 6, and 10:</p>
+<ul>
+<li>Review technical approach (still vanilla JS? Still working well?)</li>
+<li>Check for emerging patterns (need utilities? frameworks?)</li>
+<li>Validate output quality (PDFs, naming, structure)</li>
+</ul>
+<h2 id="handoff-to-cli-tool">Handoff to CLI Tool</h2>
+<p>For each step:</p>
+<pre><code>1. State current step number and goal
+2. Provide existing code files
+3. Include relevant context (sample markup, edge cases)
+4. Let tool implement step
+5. Review, test, evaluate
+6. Continue to next step or adjust plan
+</code></pre>
+<h2 id="key-constraints">Key Constraints</h2>
+<ul>
+<li>No npm, no bundlers, no build step (unless complexity demands it)</li>
+<li>Chrome/Edge target (Manifest V3)</li>
+<li>Internal university URLs only (no external resources)</li>
+<li>Sequential downloads (avoid rate limiting)</li>
+</ul>
+<h2 id="expected-behavior">Expected Behavior</h2>
+<p><strong>Input:</strong> User clicks extension on curriculum page<br>
+<strong>Output:</strong> <code>Curriculum-Title.zip</code> containing:</p>
+<pre><code>├── curriculum.pdf
+└── resources/
+    ├── Smith2023.pdf
+    ├── Chapter3-Notes.pdf
+    └── ...
+</code></pre>
+<h2 id="next-step">Next Step</h2>
+<p>Provide sample curriculum page markup to validate reference detection approach before starting Phase 1 implementation.</p>

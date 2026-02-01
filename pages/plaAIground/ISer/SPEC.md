@@ -1,4 +1,4 @@
-# Study Path Downloader - Browser Extension Spec
+# ISer - Browser Extension Spec
 
 ## Purpose
 Download all materials from a university study path curriculum page into a structured zip file, including the curriculum content (as PDF) and all nested referenced resources.
@@ -83,7 +83,7 @@ Curriculum-Title.zip
 ```json
 {
   "manifest_version": 3,
-  "name": "Study Path Downloader",
+  "name": "ISer",
   "version": "1.0.0",
   "permissions": ["activeTab", "downloads", "scripting"],
   "host_permissions": ["*://*.muni.cz/*"],

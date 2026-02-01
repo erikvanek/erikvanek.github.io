@@ -1,0 +1,247 @@
+<h1 id="implementation-plan">Implementation Plan</h1>
+<h2 id="development-strategy">Development Strategy</h2>
+<p>Build incrementally, testing each piece before moving forward. After each step, evaluate whether the current approach still makes sense.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Chrome/Edge browser for testing</li>
+<li>Access to a live curriculum page (IS MUNI)</li>
+<li>Sample curriculum markup for initial testing</li>
+</ul>
+<hr>
+<h2 id="phase-1-content-extraction-amp-reference-detection">Phase 1: Content Extraction &amp; Reference Detection</h2>
+<h3 id="step-1-extract-page-content">Step 1: Extract Page Content</h3>
+<p><strong>Goal:</strong> Get the main curriculum content from the active tab.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Create basic extension structure (manifest.json, popup.html)</li>
+<li>Inject content script into active tab</li>
+<li>Identify the main content container in the DOM</li>
+<li>Extract innerHTML of curriculum content</li>
+<li>Log extracted content to console for verification</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Does it capture all visible content?</li>
+<li>Are collapsible sections included when expanded?</li>
+<li>Is nested structure preserved?</li>
+</ul>
+<p><strong>Checkpoint:</strong> Review extracted HTML structure before proceeding.</p>
+<hr>
+<h3 id="step-2-identify-referenced-resources">Step 2: Identify Referenced Resources</h3>
+<p><strong>Goal:</strong> Find all links to downloadable resources in the curriculum content.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Parse extracted content for <code>&lt;a&gt;</code> tags</li>
+<li>Filter links by URL pattern (internal university URLs only)</li>
+<li>Filter by file extension (PDF, DOC, DOCX, PPT, etc.)</li>
+<li>Create list of resource objects: <code>{ url, name, element }</code></li>
+<li>Log resource list to console</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Are all document links captured?</li>
+<li>Are external links correctly excluded?</li>
+<li>Test with sample markup provided by user</li>
+</ul>
+<p><strong>Checkpoint:</strong> Confirm resource detection accuracy with real page.</p>
+<hr>
+<h3 id="step-3-resource-naming-logic">Step 3: Resource Naming Logic</h3>
+<p><strong>Goal:</strong> Extract meaningful names for each resource.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Implement name extraction algorithm:
+<ol>
+<li>Try link text first</li>
+<li>If generic, check parent element text</li>
+<li>If still generic, check nearest heading</li>
+<li>Fallback to URL filename</li>
+</ol>
+</li>
+<li>Sanitize names (remove special chars, limit length)</li>
+<li>Add name deduplication (append numbers if duplicates)</li>
+<li>Update resource objects with extracted names</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Do names match how resources are referenced in text?</li>
+<li>Are there any naming collisions?</li>
+<li>Test edge cases: empty link text, images as links, etc.</li>
+</ul>
+<p><strong>Checkpoint:</strong> Verify naming makes sense for reMarkable reading experience.</p>
+<hr>
+<h2 id="phase-2-pdf-generation">Phase 2: PDF Generation</h2>
+<h3 id="step-4-generate-curriculum-pdf">Step 4: Generate Curriculum PDF</h3>
+<p><strong>Goal:</strong> Convert curriculum page content to PDF preserving visual layout.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Research browser print APIs: <code>window.print()</code> or html2pdf.js library</li>
+<li>Implement PDF generation of curriculum content</li>
+<li>Test different approaches:
+<ul>
+<li>Native browser print to PDF (if accessible via extension)</li>
+<li>html2pdf.js library (if native approach limited)</li>
+</ul>
+</li>
+<li>Save generated PDF to temporary location</li>
+<li>Verify PDF quality and layout preservation</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Does PDF preserve layout as seen in browser?</li>
+<li>Are fonts, spacing, images intact?</li>
+<li>Is file size reasonable?</li>
+</ul>
+<p><strong>Tech Stack Checkpoint:</strong></p>
+<ul>
+<li>Can we use native APIs or do we need a library?</li>
+<li>If library is needed, is vanilla JS + library still manageable?</li>
+<li>Are there browser limitations we need to work around?</li>
+</ul>
+<hr>
+<h2 id="phase-3-download-orchestration">Phase 3: Download Orchestration</h2>
+<h3 id="step-5-download-single-resource">Step 5: Download Single Resource</h3>
+<p><strong>Goal:</strong> Download one resource file using existing auth session.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Implement fetch() or XMLHttpRequest to download file</li>
+<li>Use blob response type to handle binary files</li>
+<li>Verify cookies/auth are passed correctly</li>
+<li>Handle CORS if needed</li>
+<li>Test with one PDF from real curriculum page</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Does download succeed with user's session?</li>
+<li>Is file content intact?</li>
+<li>What error cases exist? (404, 403, timeout)</li>
+</ul>
+<hr>
+<h3 id="step-6-batch-download-resources">Step 6: Batch Download Resources</h3>
+<p><strong>Goal:</strong> Download all identified resources sequentially.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Implement download queue/loop</li>
+<li>Add delays between requests (500ms-1s) to avoid rate limiting</li>
+<li>Track download progress (completed, failed, pending)</li>
+<li>Store downloaded files as blobs with names</li>
+<li>Implement error handling: skip failed files, continue process</li>
+<li>Send progress updates to popup UI</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Can it handle 10+ files without failures?</li>
+<li>Does error handling work correctly?</li>
+<li>Is rate limiting avoided?</li>
+</ul>
+<p><strong>Checkpoint:</strong> Test with curriculum page that has many resources.</p>
+<hr>
+<h2 id="phase-4-packaging-amp-delivery">Phase 4: Packaging &amp; Delivery</h2>
+<h3 id="step-7-create-zip-file">Step 7: Create Zip File</h3>
+<p><strong>Goal:</strong> Package curriculum PDF and resources into structured zip.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Integrate JSZip library</li>
+<li>Create zip with structure: <code>curriculum.pdf</code> at root, <code>resources/</code> folder</li>
+<li>Add curriculum PDF to zip</li>
+<li>Add each resource to <code>resources/</code> folder with extracted name</li>
+<li>Generate zip blob</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Does zip structure match spec?</li>
+<li>Can user extract and read files?</li>
+<li>Are filenames correct?</li>
+</ul>
+<hr>
+<h3 id="step-8-trigger-browser-download">Step 8: Trigger Browser Download</h3>
+<p><strong>Goal:</strong> Deliver zip file to user.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Extract curriculum title from page (main heading, page title)</li>
+<li>Sanitize title for use as filename</li>
+<li>Use <code>chrome.downloads.download()</code> API to trigger download</li>
+<li>Set filename as <code>[curriculum-title].zip</code></li>
+<li>Show completion message in popup</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Does download trigger correctly?</li>
+<li>Is filename meaningful?</li>
+<li>Where does file land (Downloads folder)?</li>
+</ul>
+<hr>
+<h2 id="phase-5-ui-amp-polish">Phase 5: UI &amp; Polish</h2>
+<h3 id="step-9-build-popup-ui">Step 9: Build Popup UI</h3>
+<p><strong>Goal:</strong> Create simple, functional interface.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Design minimal popup:
+<ul>
+<li>&quot;Download Materials&quot; button</li>
+<li>Progress indicator (X of Y files)</li>
+<li>Status messages (starting, downloading, complete)</li>
+<li>Error summary if applicable</li>
+</ul>
+</li>
+<li>Wire up popup.js to trigger download flow</li>
+<li>Send messages between popup and background script</li>
+<li>Handle loading states</li>
+</ul>
+<p><strong>Validation:</strong></p>
+<ul>
+<li>Is UI clear and functional?</li>
+<li>Does progress update in real-time?</li>
+<li>Are errors communicated clearly?</li>
+</ul>
+<hr>
+<h3 id="step-10-testing-amp-refinement">Step 10: Testing &amp; Refinement</h3>
+<p><strong>Goal:</strong> Validate on real curriculum pages, fix edge cases.</p>
+<p><strong>Tasks:</strong></p>
+<ul>
+<li>Test on multiple curriculum pages (different structures)</li>
+<li>Test edge cases:
+<ul>
+<li>No resources found</li>
+<li>All resources fail to download</li>
+<li>Very long resource list</li>
+<li>Special characters in filenames</li>
+<li>Large files (slow downloads)</li>
+</ul>
+</li>
+<li>Fix bugs discovered during testing</li>
+<li>Optimize performance if needed</li>
+</ul>
+<hr>
+<h2 id="tech-stack-evaluation-schedule">Tech Stack Evaluation Schedule</h2>
+<p><strong>After Step 3:</strong> Evaluate DOM parsing and naming logic</p>
+<ul>
+<li>Is vanilla JS sufficient for complex DOM traversal?</li>
+<li>Are there patterns emerging that would benefit from a framework?</li>
+</ul>
+<p><strong>After Step 4:</strong> Evaluate PDF generation approach</p>
+<ul>
+<li>Did native APIs work or did we need a library?</li>
+<li>Is PDF quality acceptable?</li>
+</ul>
+<p><strong>After Step 6:</strong> Evaluate download orchestration</p>
+<ul>
+<li>Is sequential downloading performant enough?</li>
+<li>Do we need worker threads or parallel downloads?</li>
+<li>Is error handling robust?</li>
+</ul>
+<p><strong>After Step 10:</strong> Final architecture review</p>
+<ul>
+<li>Did vanilla JS + minimal dependencies work?</li>
+<li>What would we change for v2?</li>
+<li>Are there performance bottlenecks?</li>
+</ul>
+<hr>
+<h2 id="handoff-to-cli-tool-claude-code-gemini-cli">Handoff to CLI Tool (Claude Code / Gemini CLI)</h2>
+<p>Each step can be implemented by providing:</p>
+<ol>
+<li>Current state of codebase</li>
+<li>Step number and goal</li>
+<li>Relevant context (e.g., sample markup for Step 2)</li>
+<li>Specific requirements from this document</li>
+</ol>
+<p>The CLI tool should implement the step, run basic validation, and return code for review before proceeding to next step.</p>
