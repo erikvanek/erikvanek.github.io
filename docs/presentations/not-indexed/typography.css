@@ -366,6 +366,37 @@
 }
 
 /* ============================================
+   TESTIMONIAL SLIDE
+   ============================================ */
+.reveal section.testimonial {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal .testimonial-question {
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    max-width: 80%;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.reveal .testimonial-answer {
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+.reveal .testimonial-signature {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* ============================================
    UTILITY CLASSES
    ============================================ */
 .text-center {
