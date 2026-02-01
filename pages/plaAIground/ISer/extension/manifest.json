@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Study Path Downloader",
+  "name": "ISer",
   "version": "1.0.0",
   "description": "Download IS MUNI curriculum pages with all resources as a structured zip file",
   "permissions": ["activeTab", "downloads", "scripting", "debugger"],
