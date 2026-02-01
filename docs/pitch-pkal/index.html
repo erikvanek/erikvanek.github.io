@@ -27,135 +27,137 @@
             
 <link rel="stylesheet" href="/presentations/not-indexed/typography.css">
 
-<section data-background="/presentations/not-indexed/img/title.jpeg">
-    <h1 class="r-fit-text" style="text-shadow: none; font-size: 30px !important; margin-top: 6rem;">Tohle je Petr</h1>
-    <p><i>"Tančím a je mi jedno kdo se dívá"</i></p>
-    <!-- TODO: deadpan photo jako background -->
+<!-- OPENER: Petr is LEFT, skyline RIGHT. Big prominent text bottom-right -->
+<section data-background="/presentations/not-indexed/img/title.jpeg" class="pos-bottom-right opener">
+    <div class="text-box" style="position: relative; left: 6rem; top: 3rem;">
+        <h1 id="tohle-je-petr">Tohle je Petr</h1>
+        <p><i>"Tančím a je mi jedno kdo se dívá"</i></p>
+    </div>
 </section>
 
-<section data-background="/presentations/not-indexed/img/designer.jpeg">
-    <h1 id="35-let-ux-designer-brno">35 let. UX designer. Brno.</h1>
-    <p>Ale to ti o něm neřekne vůbec nic.</p>
+<!-- INTRO: Petr CENTER with DESIGN sign. Text top-left, pushed to edge -->
+<section data-background="/presentations/not-indexed/img/designer.jpeg" class="pos-top-left">
+    <div class="text-box" style="max-width: 50%; position: relative; left: -10rem; ">
+        <h1 id="35-let-ux-designer-brno">35 let. UX designer. Brno.</h1>
+        <p>Ale to ti o něm neřekne vůbec nic.</p>
+    </div>
 </section>
 
-<section data-background="/presentations/not-indexed/img/dolce-vita.jpg" data-background-size="contain">
-    <h1 class="r-fit-text">Čím tě potěší</h1>
+<!-- TRANSITION: Good parts - split layout -->
+<section class="equal">
+    <div>
+        <h1 id="jak">Jaký</h1>
+        <h1 id="teda">teda</h1>
+        <h1 id="vlastn">vlastně</h1>
+        <h1 id="je">je?</h1>
+    </div>
+        <img src="/presentations/not-indexed/img/dolce-vita.jpg" alt="">
 </section>
 
-<section data-background="/presentations/not-indexed/img/hike-open.jpeg">
-    <h1 id="vythne-t-na-vzduch">Vytáhne tě na vzduch</h1>
-    <p>Kolo, hory, túry v Rumunsku. A když je minus deset a padá sníh? Kein problem!</p>
-    <p>Chodící ilustrace pravidla <i>neexistuje špatné počasí, jen špatné oblečení</i></p>
+<!-- GOOD: Outdoors. Petr BOTTOM-LEFT. Text top-right, narrower box pushed to edge -->
+<section data-background="/presentations/not-indexed/img/hike-open.jpeg" class="pos-top-right">
+    <div class="text-box" style="text-align: left; max-width: 70%; position: relative; left: 8rem; background: rgba(0, 0, 0, 0.55) !important;">
+        <h2 id="vythne-t-na-vzduch">Vytáhne tě na vzduch</h2>
+        <p>Kolo, hory, túry v Rumunsku.</p>
+        <p>A když je minus deset a padá sníh? Kein problem.</p>
+        <p class="mt-1"><i>Chodící ilustrace pravidla "neexistuje špatné počasí, jen špatné oblečení"</i></p>
+    </div>
 </section>
 
-<section data-background="/presentations/not-indexed/img/soldaten.jpeg" data-background-size="contain">
-    <h2 id="pedvkuje-t-kulturou">Předávkuje tě kulturou</h2>
-    <p>Divadlo, poezie, rave, rap, klasická hudba, NTS Radio, Bandcamp fridays</p>
-    <p>Člověk, se kterým budeš utíkat před medvědem v Banátu a týden potom půjdeš na balet</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p><i>Tady zrovna ve Stockholmu cestou na koncert svýho oblíbenýho rappera</i></p>
+<!-- GOOD: Culture. Petr BOTTOM-LEFT. Text top-left with box -->
+<section data-background="/presentations/not-indexed/img/soldaten.jpeg" data-background-size="contain" class="pos-top-left">
+    <div class="text-box" style="position: relative; left: 24rem; max-width: 60%; background: rgba(0, 0, 0, 0.45) !important;">
+        <h2 id="pedvkuje-t-kulturou">Předávkuje tě kulturou</h2>
+        <p>Divadlo, poezie, rave, rap, klasická hudba, NTS Radio, Bandcamp fridays.</p>
+        <p>Člověk, se kterým budeš utíkat před medvědem v Banátu a týden potom půjdeš na balet.</p>
+    </div>
+    <p class="caption"><i>Tady zrovna ve Stockholmu cestou na koncert svýho oblíbenýho rappera</i></p>
 </section>
 
-<section data-background="/presentations/not-indexed/img/maps.png" data-background-size="contain">
-    <h2 class="r-fit-text">Neztratíš se</h2>
-    <p>Mapy.cz jsou jeho druhý domov.</p>
-    <p>Na výlet budeš mít v plánu každou odbočku, každou zastávku, každý výhled a super jídlo.</p>
+<!-- GOOD: Maps. Busy background - needs solid text-box -->
+<section data-background="/presentations/not-indexed/img/maps.png" data-background-size="contain" class="pos-bottom-left">
+    <div class="text-box">
+        <h2 id="neztrat-se">Neztratíš se</h2>
+        <p>Mapy.cz jsou jeho druhý domov.</p>
+        <p>Na výlet budeš mít v plánu každou odbočku, každou zastávku, každý výhled a super jídlo.</p>
+    </div>
 </section>
 
-<section data-background="/presentations/not-indexed/img/rohliky.jpg">
-    <h2 class="r-fit-text">Umí péct</h2>
-    <!-- <p>Vanilkové rohlíčky. Domácí. A výborný.</p> -->
+<!-- GOOD: Baking -->
+<section data-background="/presentations/not-indexed/img/rohliky.jpg" class="section-title">
+    <h1 class="r-fit-text">Upeče</h1>
+    <h1 class="r-fit-text">rohlíky</h1>
 </section>
 
-<section>
-    <h1 class="r-fit-text">Co chceš taky vědět</h1>
-    <p>Chytrej jak drak -> Má dost přehled</p>
-    <p> Klimatická změna, sociální nerovnost...</p>
-    <i>
-        <p> Výhoda i nevýhoda zároveň</p>
-    </i>
-    <p>Over-planning as a way of life – možná výhoda?</p>
-    <p>People pleasing</p>
-    <p>Deutsch B2 🇩🇪</p>
-    <p>Straight</p>
+<!-- THE OTHER SIDE -->
+<section class="dense">
+    <h2 id="co-chce-taky-vdt">Co chceš taky vědět</h2>
+    <p><strong>Chytrej jak drak</strong> – má přehled o světě. Klimatická změna, sociální nerovnost...</p>
+    <p><i>Výhoda i nevýhoda zároveň.</i></p>
+    <p><strong>Over-planning as a way of life</strong> – možná výhoda?</p>
+    <p><strong>People pleasing</strong> – pracuje na tom.</p>
+    <p><strong>Deutsch B2</strong></p>
+    <p><strong>Straight</strong></p>
 </section>
 
+<!-- OTHER: Drinking -->
 <section>
     <h2 id="skoro-nepije">Skoro nepije</h2>
     <p>Pro někoho deal-breaker, pro někoho výhra.</p>
     <p>Levný rande, žádný kocoviny, ale taky žádná divočina.</p>
-    <p class="text-accent">Ale soutěžil ve dvou barmanských soutěžích 🍸</p>
+    <p class="text-accent mt-2">Ale soutěžil ve dvou barmanských soutěžích.</p>
 </section>
 
-<section data-background="/presentations/not-indexed/img/beskydy.jpg" data-background-size="contain">
+<!-- TRANSITION: Stories -->
+<section data-background="/presentations/not-indexed/img/beskydy.jpg" data-background-size="contain" class="section-title">
     <h1 class="r-fit-text">Příběhy z terénu</h1>
 </section>
 
-<section data-background="/presentations/not-indexed/img/kolo.jpg">
-    <h2 id="4c-kolo-slavkov-prosinec-2022">-4°C, kolo, Slavkov, prosinec 2022</h2>
-    <p>Já umrzlej, nadávám, chci domů a nejede to</p>
-    <p>Petr? Klid, trpělivost, žádný "tak vole dělej".</p>
-    <p>Za mě člověk, kterého chcete vedle sebe i přes blbý okolnosti.</p>
+<!-- STORY: Bike ride -->
+<section data-background="/presentations/not-indexed/img/kolo.jpg" class="pos-top-left">
+    <div class="text-box">
+        <h2 id="4c-kolo-slavkov-prosinec-2022">-4°C, kolo, Slavkov, prosinec 2022</h2>
+        <p>Já umrzlej, nadávám, chci domů a nejede to.</p>
+        <p>Petr? Klid, trpělivost, žádný "tak vole dělej".</p>
+        <p class="mt-1"><i>Člověk, kterého chcete vedle sebe i přes blbý okolnosti.</i></p>
+    </div>
 </section>
 
-    <section data-background="/presentations/not-indexed/img/kimchi.jpg">
-    <h2 id="10-kilo-kimchi">10 kilo kimchi</h2>
-    <p>Jednou jsme spolu dělali plnej kýbl kimchi</p>
-    <p>Žádný kecy, žádnu fňukání – krájel, mixoval, dlachnil jak o život</p>
-    <p>Dobrej parťák, kterýho chceš vedle sebe</p>
+<!-- STORY: Kimchi -->
+<section data-background="/presentations/not-indexed/img/kimchi.jpg" class="pos-top-left">
+    <div class="text-box">
+        <h2 id="10-kilo-kimchi">10 kilo kimchi</h2>
+        <p>Jednou jsme spolu dělali plnej kýbl kimchi.</p>
+        <p>Žádný kecy, žádný fňukání – krájel, mixoval, dlachnil jak o život.</p>
+        <p class="mt-1"><i>Dobrej parťák, kterýho chceš vedle sebe.</i></p>
+    </div>
 </section>
 
-<section>
+<!-- PEAK: Fuck facts -->
+<section class="peak">
     <h1 class="r-fit-text">Fuck facts</h1>
-    <p>(proč byste ho měla chtít)</p>
+    <p>(aka proč ho chceš)</p>
+    <div class="qualities">
+        <div class="fragment fade-up">Emocionální dostupnost</div>
+        <div class="fragment fade-up">Spolehlivost</div>
+        <div class="fragment fade-up">Široký záběr</div>
+        <div class="fragment fade-up">Nebezpečně chytrej</div>
+        <div class="fragment fade-up">Nejlepší novoroční zprávy</div>
+    </div>
 </section>
 
-<section>
-    <h2 class="r-fit-text">Emocionální dostupnost</h2>
-    <p><i>(možná až moc? 😅)</i></p>
-    <!-- <p>Dneska hodně důležitá vzácný</p>
-    <p>Chlap, který umí být přítomný</p>
-    <p>Když je s vámi, je s vámi. Ne někde v hlavě, ne na mobilu.</p> -->
-</section>
-
-<section>
-    <h2 class="r-fit-text">Spolehlivost</h2>
-    <!-- <p>Prostě tam je, když ho potřebuješ</p> -->
-</section>
-
-<section>
-    <h2 class="r-fit-text">Široký záběr</h2>
-    <!-- <p>Ráno kolo, večer divadlo. Víkend v horách, další víkend contemporary výstava</p>
-    <p>Nudit se s ním určitě nebudeš pokud nechceš</p> -->
-</section>
-
-<section>
-    <h2 class="r-fit-text">Je nebezpečně chytrej</h2>
-    <!-- <p>Fakt chytrej kluk – nemá jen "názory"</p>
-    <p>Super parťák na intelektuální deep dives</p> -->
-</section>
-
-<section>
-    <h2 class="r-fit-text">Nejlepší novoroční zprávy</h2>
-    <!-- <p>Audio, video, promyšlené, osobní.</p>
-    <p>Tohle dělá pro lidi, na kterých mu záleží.</p> -->
-</section>
-
-<section>
+<!-- CTA: Contact -->
+<section class="closer">
     <h1 class="r-fit-text">Zájem?</h1>
-    <p>QR, handle, ...</p>
-    <!-- TODO: QR kód + Instagram handle -->
+    <p class="mt-2">QR kód / Instagram handle</p>
+    <!-- TODO: Add QR code image here -->
 </section>
 
-<section data-background="/presentations/not-indexed/img/hotornot.jpeg" data-background-size="contain">
+<!-- CLOSER: Funny photo -->
+<section data-background="/presentations/not-indexed/img/hotornot.jpeg" data-background-size="contain" class="section-title">
     <h1 class="r-fit-text">Hot or not?</h1>
-    <!-- TODO: funny photo jako background -->
 </section>
+
 
         </div>
     </div>

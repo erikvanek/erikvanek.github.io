@@ -13,28 +13,28 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
-    --color-text: white;
-    /* --color-text: #FFFDF2; */
-    --color-text-muted: #666666;
-    --color-background: black;
+    --color-text: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+    --color-background: #0a0a0a;
     --color-accent: #e63946;
-    --slide-padding: 4rem;
+    --color-accent-dark: #c1121f;
+
+    --slide-padding: 3rem;
+
+    /* Text shadows for readability over images */
+    --text-shadow-subtle: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    --text-shadow-strong: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 /* ============================================
-     REVEAL OVERRIDES - BASE
-     ============================================ */
+   REVEAL OVERRIDES - BASE
+   ============================================ */
 .reveal {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-normal);
-    font-size: 32px;
-    color: var(--color-text) !important;
+    font-size: 28px;
+    color: var(--color-text);
     background: var(--color-background);
-}
-*
-{
-    text-shadow: none !important;
-    text-shadow: 2px 2px 2px #444 !important;
 }
 
 .reveal .slides {
@@ -51,10 +51,10 @@
 }
 
 /* ============================================
-     HEADINGS
-     ============================================ */
+   HEADINGS
+   ============================================ */
 .reveal h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -63,16 +63,16 @@
 }
 
 .reveal h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: var(--font-weight-bold);
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 1.25rem;
     letter-spacing: -0.01em;
     color: var(--color-text);
 }
 
 .reveal h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: var(--font-weight-medium);
     line-height: 1.3;
     margin-bottom: 1rem;
@@ -80,8 +80,8 @@
 }
 
 /* ============================================
-     BODY TEXT
-     ============================================ */
+   BODY TEXT
+   ============================================ */
 .reveal p {
     font-size: 1.75rem;
     line-height: 1.5;
@@ -104,6 +104,7 @@
 .reveal em,
 .reveal i {
     font-style: italic;
+    color: var(--color-text-muted);
 }
 
 .reveal strong,
@@ -112,18 +113,18 @@
 }
 
 /* ============================================
-     R-FIT-TEXT OVERRIDES
-     ============================================ */
+   R-FIT-TEXT OVERRIDES
+   ============================================ */
 .reveal .r-fit-text {
     font-weight: var(--font-weight-bold);
     letter-spacing: -0.03em;
-    line-height: 1.05;
+    line-height: 1.0;
 }
 
 /* ============================================
-     SECTION TITLE SLIDES
-     Slides that are just a big question/statement
-     ============================================ */
+   SECTION TITLE SLIDES
+   Big statements / transitions
+   ============================================ */
 .reveal section.section-title {
     text-align: center;
     justify-content: center;
@@ -131,7 +132,7 @@
 }
 
 .reveal section.section-title h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .reveal section.section-title p {
@@ -140,33 +141,156 @@
 }
 
 /* ============================================
-     CONTENT SLIDES
-     ============================================ */
-.reveal section.content {
-    justify-content: flex-start;
-    padding-top: 6rem;
-}
-
-/* ============================================
-     BACKGROUND IMAGE SLIDES
-     ============================================ */
+   BACKGROUND IMAGE SLIDES
+   Text shadow for readability
+   ============================================ */
 .reveal section[data-background-image] h1,
 .reveal section[data-background-image] h2,
-.reveal section[data-background-image] p {
-    /* color: #ffffff; */
-    
-    /* text-shadow: 0 2px 20px var(--color-text),
-        0 4px 40px var(--color-background); */
+.reveal section[data-background-image] h3 {
+    text-shadow: var(--text-shadow-strong);
 }
 
-/* Dark overlay helper class */
-.reveal section.dark-overlay {
-    background: rgba(0, 0, 0, 0.4);
+.reveal section[data-background-image] p,
+.reveal section[data-background-image] i {
+    text-shadow: var(--text-shadow-strong);
+    color: var(--color-text);
+}
+
+/* Bottom-anchored caption for image slides */
+.reveal section[data-background-image] .caption {
+    position: absolute;
+    bottom: 2rem;
+    left: var(--slide-padding);
+    right: var(--slide-padding);
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    text-shadow: var(--text-shadow-subtle);
 }
 
 /* ============================================
-     LISTS (if needed)
-     ============================================ */
+   TEXT BOX - semi-transparent background
+   For busy image backgrounds
+   ============================================ */
+.reveal .text-box {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 70%;
+}
+
+.reveal .text-box h1,
+.reveal .text-box h2,
+.reveal .text-box p {
+    text-shadow: none;
+    margin-bottom: 0.5rem;
+}
+
+.reveal .text-box i {
+    text-shadow: none;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.reveal .text-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SLIDE-SPECIFIC POSITIONING
+   ============================================ */
+
+/* Position content at bottom-right */
+.reveal section.pos-bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding-bottom: 4rem;
+}
+
+/* Position content at top-right */
+.reveal section.pos-top-right {
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 4rem;
+}
+
+/* Position content at bottom-left */
+.reveal section.pos-bottom-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+}
+
+/* Position content at top-left */
+.reveal section.pos-top-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 4rem;
+}
+
+/* Center content */
+.reveal section.pos-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Position content at bottom-center */
+.reveal section.pos-bottom-center {
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+/* ============================================
+   SPLIT LAYOUT - image right, text left
+   ============================================ */
+.reveal section.split-right-image {
+    background: var(--color-background) !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.reveal section.split-right-image .split-text {
+    width: 45%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reveal section.split-right-image .split-image {
+    width: 55%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ============================================
+   OPENER SLIDE - big prominent text
+   ============================================ */
+.reveal section.opener .text-box {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 2rem 3rem;
+}
+
+.reveal section.opener .text-box h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.reveal section.opener .text-box p {
+    font-size: 2rem;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
 .reveal ul,
 .reveal ol {
     font-size: 1.75rem;
@@ -179,10 +303,59 @@
 }
 
 /* ============================================
-     UTILITY CLASSES
-     ============================================ */
+   PEAK SECTION - FUCK FACTS
+   Bold red background, white text
+   ============================================ */
+.reveal section.peak {
+    background: var(--color-accent);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal section.peak h1,
+.reveal section.peak h2 {
+    color: var(--color-text);
+    text-shadow: none;
+}
+
+.reveal section.peak p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Qualities list styling within peak */
+.reveal section.peak .qualities {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.reveal section.peak .qualities .fragment {
+    font-size: 2.25rem;
+    font-weight: var(--font-weight-medium);
+    padding: 0.25rem 0;
+}
+
+/* ============================================
+   CLOSER SLIDE
+   ============================================ */
+.reveal section.closer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
 
 .text-muted {
@@ -193,34 +366,59 @@
     color: var(--color-accent);
 }
 
-.mt-1 {
-    margin-top: 1rem;
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+/* Spacing for slides with lots of content */
+.reveal section.dense p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.mt-2 {
-    margin-top: 2rem;
+/* Push content toward bottom of slide */
+.reveal section.bottom-aligned {
+    justify-content: flex-end;
+    padding-bottom: 4rem;
 }
 
-.mt-3 {
-    margin-top: 3rem;
-}
-
-.mb-1 {
-    margin-bottom: 1rem;
-}
-
-.mb-2 {
-    margin-bottom: 2rem;
-}
-
-.mb-3 {
-    margin-bottom: 3rem;
+/* Subtle divider between content blocks */
+.divider {
+    height: 2px;
+    background: var(--color-text-muted);
+    margin: 1.5rem 0;
+    width: 60px;
 }
 
 /* ============================================
-     SPECIAL: FUCK FACTS SLIDE
-     Optional accent styling
-     ============================================ */
-.reveal section.fuck-facts h1 {
-    color: var(--color-accent);
+   FRAGMENT ANIMATIONS
+   ============================================ */
+.reveal .fragment.fade-up {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.reveal .fragment.fade-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.equal {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 4rem;
+    height: 100vh;
+}
+
+.equal > * {
+    max-width: 50%;
+    height: 100%;
+}
+
+.equal h1 {
+    font-size: 6rem;
 }
