@@ -350,6 +350,11 @@
     text-align: center;
 }
 
+.qualities * {
+    font-size: 2.5rem !important;
+    line-height: 3rem;
+}
+
 .reveal section.peak .qualities .fragment {
     font-size: 2.25rem;
     font-weight: var(--font-weight-medium);
