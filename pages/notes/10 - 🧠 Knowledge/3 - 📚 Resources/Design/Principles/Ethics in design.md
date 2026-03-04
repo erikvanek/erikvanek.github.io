@@ -40,7 +40,7 @@ The research also surfaces critical questions designers should continuously ask:
 - centering respect in relationships helps minimize extractive interactions with people and their stories
 - responsible research is rooted in trust and consent - it helps to craft more honest relationship between the design team and participants
 - *inclusion principle - we seek out, include and deeply value the voices and experiences of people who are often unheard or ignored*
-- when we ask people to fill in information during screening and then not inviting them to the research, we've not being respectful of their time and we risk worsening our relationship and our research credibility
+- when we ask people to fill in information during screening and then not inviting them to the research, we've not being respectful of their time and we risk worsening our research credibility
 - when we're recruiting research participants, we're building a relationship
 - by seeking community expertise by closely working with one or more SMEs, we can easily fill in our gaps in understanding during recruitment phase
 - *we are guests in our participants' world*
@@ -78,10 +78,6 @@ The research also surfaces critical questions designers should continuously ask:
 - assumptions are known unknowns, but there are also unknown unknowns that we should be open to by adhering to falsifiability - seeking actively to be proven wrong
 - conducting continuous speculative/dark reality sessions might help foresee potential drawbacks
 - it is better to do dark reality sessions during convergent phases by using tools like Tarot cards of tech
-
-# Do práce
-
-- cítt z Daily ethical design o shiftu z afterthought do integral part
 
 # From Designers (re)define success first
 

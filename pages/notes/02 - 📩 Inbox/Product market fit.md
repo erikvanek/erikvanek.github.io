@@ -1,2 +1,0 @@
-- happens when users become your active salespeople
-	- in [product design principles](http://bokardo.com/principles-of-product-design/)

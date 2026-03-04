@@ -150,6 +150,5 @@ Ultimately, the quality of your attention determines the quality of your life, a
 
 ## Related notes
 
-- [[11 - ⏳ interim knowledge/Productivity/Second Brain]]
 - [[Learning]]
 - [[Cognitive Processes]]

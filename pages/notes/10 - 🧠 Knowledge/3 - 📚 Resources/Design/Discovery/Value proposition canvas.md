@@ -16,7 +16,7 @@ resources:
 			- functional (getting from A-B)
 				- specific tasks that have practical benefits
 			- social (impressing friends)
-				- are how customers want others to [perceive](https://www.interaction-design.org/literature/topics/perception "What is Perception in UX/UI Design?") them and their desire to fit into or stand out within their social circles
+				- are how customers want others to perceive them and their desire to fit into or stand out within their social circles
 			- emotional (gaining piece of mind)
 				- cater to the feelings and emotional states that customers wish to achieve when using a product
 		- highlight pains that prevent to get their job done
@@ -27,11 +27,11 @@ resources:
 			- positive outcomes customers hope to achieve like concrete results, benefits and even aspirations
 			- represent the outcomes and benefits your customers want, and that would give them moments of delight
 			- they are not the simple result of a job
-			- aren’t just the inverse of pains
-				- For example, if a pain is “What if I don't learn anything new?” a gain isn’t “Learning something new.” Instead, a gain would be “Educational materials tailored to my level of knowledge and career stage.”
+			- aren't just the inverse of pains
+				- For example, if a pain is "What if I don't learn anything new?" a gain isn't "Learning something new." Instead, a gain would be "Educational materials tailored to my level of knowledge and career stage."
 	- value map
 		- with it, you **list products and services your value proposition builds on**
-			-  **If a business tries to address every customer job, pain and gain, they will likely do it poorly**
+			-  **If a business tries to address every customer job, pain and gain, they will likely do it poorly**
 			- Products can be:
 				- Tangible (e.g., a physical product, an in-person service).
 				- Digital (e.g., an application, an online course).
@@ -40,6 +40,7 @@ resources:
 		- gain creators outline how they produce increase and maximize outcomes and benefits your customers expect, desire or would be surprised by
 - **you achieve fit when you create clear connection between what matters to customer and how your products, services and features ease pains and create gains**
 - great value propositions target essential customer jobs, pains and gains and do so extremely well
+
 ## Value proposition statement
 - value proposition is a statement or short paragraph that
 	- Clearly describes what a service, business or organization offers.

@@ -48,39 +48,9 @@
               "icon": "lucide-file",
               "title": "Product discovery"
             }
-          },
-          {
-            "id": "9b571db3404de44d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - 📩 Inbox/Design research goals.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Design research goals"
-            }
-          },
-          {
-            "id": "cbe7c812eef37174",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Quotes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Quotes"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -245,8 +215,29 @@
       "tldraw:Create new tldrawing": false
     }
   },
-  "active": "ee613e5f4402eea4",
+  "active": "f86182de5d275782",
   "lastOpenFiles": [
+    "02 - 📩 Inbox/Design research goals.md",
+    "05 - 🌱 Staging/Krkonose-list.md",
+    "05 - 🌱 Staging/Facilitation.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/Product market fit.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/Busy culture.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/New product.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Systems thinking/System dynamics.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Systems thinking",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Technology/Evals.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery/Iteration.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Liminal Thinking.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Hyperfocus.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Value proposition canvas.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research goals.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/Business case.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/The Story Is Everything.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Random design insights.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Manifestos.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Ethics in design.md",
+    "02 - 📩 Inbox/Untitled.base",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Quotes.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Product & Design practice/Weekly review.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Product & Design practice/Weekly planning.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Product & Design practice/Planning.md",
@@ -255,39 +246,18 @@
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Process reflection.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Second brain.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/PKM Improvement 3 - Discovery Triggers.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/PKM Improvement 2 - Learning Loops.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/PKM Improvement 1 - Project Knowledge Maps.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/PKM Improvements Backlog.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Working-on-wheels.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Tooling.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Reading list.md",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Learning and development.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Nonprofit design/Index.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Nonprofit design",
-    "10 - 🧠 Knowledge/2 - 🌱 Areas/Teaching & Lecturing/Index.md",
     "10 - 🧠 Knowledge/2 - 🌱 Areas/Teaching & Lecturing",
-    "05 - 🌱 Staging/README.md",
     "05 - 🌱 Staging",
-    "01 - 🤖 Second brain/Progress-Log.md",
-    "01 - 🤖 Second brain/Decision-Log.md",
-    "01 - 🤖 Second brain/Revival-Strategy.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design.md",
-    "02 - 📩 Inbox/Design research goals.md",
-    "02 - 📩 Inbox/The Story Is Everything.md",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Food/Pickled fennel.md",
-    "02 - 📩 Inbox/Untitled.md",
-    "99 - 📄 To process/Product discovery.md",
     "Pasted image 20251031093148.png",
     "erika-on-discovery.png",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
-    "02 - 📩 Inbox/Untitled.base",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/External resources/Artefact-Tarot-Cards-of-Tech_downloadable.pdf",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19.pdf",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/a_b0a3406.jpg",
     "Untitled",
     "causal-loops.png",
-    "10 - 🧠 Knowledge/3 - 📚 Resources/Bike 🚲",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/roman-foto.jpeg",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/HCD for officers course/published/kisked19_files/erik.png",
     "99 - 📄 To process/JTBD/Pasted image 20241225134006.png",

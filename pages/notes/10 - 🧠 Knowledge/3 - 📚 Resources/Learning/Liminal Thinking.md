@@ -47,14 +47,13 @@ Gray emphasizes that emotional needs drive behavior more than reason, and unmet 
 
 ### #2 Beliefs Are Created
 
-- we band together in "obvious clubs" that defend our competing versions of reality, keeps
+- we band together in "obvious clubs" that defend our competing versions of reality
 - human ability to perceive the world in ways beyond 40 bps?
 - expands what you sense, but don't do notice
 - in essence we simply make it (*societal judgement*)
 - to reduce its complexity to make it easier to understand
 - **it is easy to confuse reality with beliefs**
-- we do reinforce our beliefs by talking to others about what they believe form the fundamental
-- mental model for ppl to navigate the world
+- we do reinforce our beliefs by talking to others about what they believe form the fundamental mental model for ppl to navigate the world
 - **the space between reality and beliefs in a Belief Pyramid IS liminal space. If those happen inside each of us, we don't talk about those and four layers are invisible to others**
 - **Beliefs create & share a world**
 - a belief IS a story in your head that triggers a cause-effect chain, like a recipe or a rule for action
@@ -83,7 +82,7 @@ Gray emphasizes that emotional needs drive behavior more than reason, and unmet 
 - liminal thinking aims at identifying limiting beliefs
 - **believed constraints can often be artificial**
 - **Beliefs defend themselves**
-- people like stability → once a belief is formed, we have tendencies to reinforce so that it creates phosphots (pathways?)
+- people like stability → once a belief is formed, we have tendencies to reinforce so that it creates pathways
 - People rarely test ideas for external validity when they don't have internal coherence
 
 ### #6 Beliefs Are Tied to Identity
@@ -92,13 +91,10 @@ Gray emphasizes that emotional needs drive behavior more than reason, and unmet 
 - the deeper in one's belief system, the more governing beliefs we can find
 - the deeper it is, the more it defends itself!
 - **Questioning your governing beliefs can lead to profound change**
-- governing beliefs form the foundation of your (version of) reality. They create quemate feelings of self-worth, group identity and social stability. They give order and meaning to life
+- governing beliefs form the foundation of your (version of) reality. They create feelings of self-worth, group identity and social stability. They give order and meaning to life
 
 #### The Johari Window
 
-What to do with it?
-- *If you are not objective*
-- The Johari window relates to me/you
 - problems most resistant to change are **system problems**
 - if you're part of the system, you're part of the problem
 - **→ Your biggest blindspot is yourself, so you need to start evaluating your contribution to the problem**
@@ -108,21 +104,18 @@ What to do with it?
 ### Practice #1: Empty Your Cup
 
 - goal: leaders supplement the information that's coming to them through official channels with a lot of walking around and sense making on the ground
-- often unconsciously (How hard? Who shows joy?)
-- How one engages w/ work actually, you want to hear
-- In order to learn sth new, you must empty part or so narcissistic knowledge/beliefs don't get in the way
+- In order to learn sth new, you must empty part of your knowledge/beliefs so they don't get in the way
 - ***"Beginner's mind"***
-- **opening your mind, willingness to "be dumb 2nto newbie"; your brain is the essence of liminal thinking**
+- **opening your mind, willingness to be a newbie; your brain is the essence of liminal thinking**
 - you can't learn new things w/o letting go old things
 
 ### Practice #2: Create Safe Space
 
 - if a meeting environment is not a safe space, ppl will bullshit you and try to tell you what you want to hear—not what they think
 - reason does not make people act, **emotions do!**
-- **→ what's the point of playing the ball game w/o emotion!**
-- ppl alieve their beliefs casually, emotions can be trickier, by revealing emotions make ppl vulnerable to each other; give to manipulation
-- needs are not only invisible but often in hurt & usually they're hidden to prevent being vulnerable
-- **If emotional needs are not met**—the brain acts as if the body was starving since for the brain emotional needs areas such as physical ones → that leads to activation of **fight-or-flight**
+- ppl reveal their beliefs casually, emotions can be trickier; by revealing emotions ppl make themselves vulnerable
+- needs are not only invisible but often hurt & usually they're hidden to prevent being vulnerable
+- **If emotional needs are not met**—the brain acts as if the body was starving → that leads to activation of **fight-or-flight**
 - **The SCARF model as a checklist of emotional needs:**
   - **Status**—does the person feel recognized/needed & where?
   - **Certainty**—does the person feel confident about what's coming?
@@ -130,70 +123,51 @@ What to do with it?
   - **Relatedness**—feeling of belonging, does represent their group?
   - **Fairness**—feeling of being treated fairly
 - people need to feel that they matter
-- people won't (not only?) better w/s their emotional needs are met
-- when are people emotionally starving, they come w/s conspiracy & start playing games
+- when people are emotionally starving, they come up with conspiracy & start playing games
 - **emotional needs → beliefs formation → habits**
-- **traction → contribution to the world we live in**
 
 #### In Conflicting Situations—Try to Ask a Question:
 
 - *"Do I truly understand the need?"*
-- *It's impossible to be angry w/a warm cup of tea in your hands*
 - Sharing food & drinks is the ultimate safe space catalyst
 - Trust has to be earned & it takes a lot of time
-- Safe space does not mean brainlessly agree with things but allow sharing & suggesting judgement
+- Safe space does not mean brainlessly agree with things but allow sharing without judgement
 
 ### Practice #4: Triangulate & Validate
 
-- Many theories ppl have about other ppl are like horoscopes, they are not falsifiable—just like you can predict someone's behavior does not validate your theories but in
 - most people don't test their theories about other people because it's a potential bubble burst
-- Highlight as the ultimate fake testing machine
-- Wake tests help you to feel better about yourself and explain
-- **Triangulation can help where**—the practice of developing multiple viewpoints, theories that you can compare, contrast, combine & validate back
-- **culture as many theories as you can and hold them loosely; don't get too attached to any of them**
-- employ your cup → give ppl full attention → note carefully while supporting judgement
+- **Triangulation**—the practice of developing multiple viewpoints, theories that you can compare, contrast, combine & validate
+- **cultivate as many theories as you can and hold them loosely; don't get too attached to any of them**
 
 ### Practice #5: Ask Questions, Make Connections
 
 - asking for hopes, dreams, fears and frustrations we can reveal the latent needs & goals of ppl
-- A kind of "ecosystem" of needs & solutions
 
 ### Practice #6: Disrupt Routines
 
-- attacking the problem & attacking the typical solution, or to "mob programming" caught
-- if you find yourself stuck in any kind of recurring pattern, try something random & anything you can do that throws the brain off the rails is an opportunity for a new perspective—just the setting different
+- if you find yourself stuck in any kind of recurring pattern, try something random — anything you can do that throws the brain off the rails is an opportunity for a new perspective
 
 ### Practice #7: Act As If in the Here & Now
 
 - Gray: *"Action may not always bring happiness, but there is no happiness without action"*
 - **If you can form a hypothesis, you don't need to necessarily believe it's true in order to test it** → #design research
-- → you can simply act as if it was true one what happens
+- → you can simply act as if it was true and see what happens
 - Sometimes single loop learning is not enough—**double loop learning** helps to challenge your own beliefs and trying on new ones
-- You can and should even test beliefs you think are wrong
-- acting in here-and-now is acting in a way that a different world existed if needed
 - **w/each new set of beliefs comes a new set of opportunities**
-- fake it til you make it chapter
 
 ### Practice #8: Make Sense With Stories
 
-- **stories encounter the primary ways we make sense of experiences**
+- **stories are the primary ways we make sense of experiences**
 - give ppl facts w/o a story and they will create a story to make sense of the facts
-- Moral coupling—origin at the moment of a story teller other moment
-- **+ SDG prompt**—question about ppl's XPs & how they made meaning out of them, e.g.:
-  - "What is the most scared you've ever been? What happened?"
-  - "Tell me about a time you felt encouraged by what this you admire"
-- Vulnerability someone's story you're inviting them to deepen the boundary
-- → A simple step to create a shared world w/ that makes going
 - ***The best way to promote a new or different belief is not w/ facts, but w/ a story***
 
 ### Practice #9: Evolve Yourself
 
-- It's important to consider **this** as you are taking in any kind of change work
-- change → succeeds (not just the result, the process & the attempt is the key & you are contributing to create the future you want)
+- change → the process & the attempt is the key & you are contributing to create the future you want
 - **the biggest barrier to change is fear**
 - often most constraints preventing change are in your mind
-- What helps is not being "results" oriented & being less personally attached to the outcome—being open to more alternatives gives more freedom to experiment
-- Sometimes to create new structures, if the old ones must be destroyed so the blocks can be recombined differently
+- What helps is not being "results" oriented & being less personally attached to the outcome
+- Sometimes to create new structures, the old ones must be destroyed so the blocks can be recombined differently
 - **the world is not static → our beliefs must evolve**
 - ***liminal thinking is a way of navigating change by opening the door to ambiguity & uncertainty***
 
