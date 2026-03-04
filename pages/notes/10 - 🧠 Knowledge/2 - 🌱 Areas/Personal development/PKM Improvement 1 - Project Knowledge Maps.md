@@ -183,4 +183,4 @@ Claude, based on this project knowledge map, what knowledge gaps do you see? Wha
 - **What worked well**:
 - **What needs adjustment**:
 - **Unexpected benefits**:
-- **Time required in practice**:
+- **Time investment required**:

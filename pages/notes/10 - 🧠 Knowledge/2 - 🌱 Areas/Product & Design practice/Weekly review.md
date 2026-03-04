@@ -6,7 +6,7 @@
 - go through "scheduled" label in Todoist and see what got checked off
 - review successes and failures
 	- are there some reflections that are worth mentioning?
-		- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2beR-VD2HMYufPy1I/edit?tab=t.0)
+		- add to [lessons learnt](https://docs.google.com/document/d/1osFt0K5-JgpnrylTbsdDNvtcjI2berf-VD2HMYufPy1I/edit?tab=t.0)
 - go through incomplete tasks from last week and and either put them to plan for next week or drop to todoist
 - add things to plan for next week
 - add things for next month plan if needed
