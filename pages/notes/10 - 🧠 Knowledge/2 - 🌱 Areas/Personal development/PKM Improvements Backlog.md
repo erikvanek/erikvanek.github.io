@@ -113,7 +113,7 @@ Add to your [[Weekly planning]] routine:
 - [[Process reflection]] - Current project reflection template
 - [[Weekly review]] - Integration point for progress tracking
 - [[Weekly planning]] - Implementation scheduling
-- [[10 - 🧠 Knowledge/2 - 🌱 Areas/Continuous improvement/Second brain]] - Core system principles
+- [[Second brain]] - Core system principles
 - [[Knowledge Rebalancing]] - Complementary improvement process
 
 ## 🚀 **Quick Start**
