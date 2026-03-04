@@ -16,13 +16,46 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 ## Current State (update this section when resuming)
 
 **Last active**: 2026-03-04  
-**Current phase**: Phase 0 complete. Phase 1 ready to start.  
+**Current phase**: Phase 1 complete. Phase 2 ready to start.  
 **Blocking**: None.  
-**Next action**: Git commit, then begin Phase 1 — process `02 - 📩 Inbox` (22 notes).
+**Next action**: Git commit, then begin Phase 2 — absorb `11 - ⏳ interim knowledge` into `10 - 🧠 Knowledge`.
 
 ---
 
 ## Log Entries
+
+### 2026-03-04 — Phase 1 complete: Inbox cleared
+**By**: Claude (session with Erik)  
+**What happened**:
+- Triaged all 22 notes in `02 - 📩 Inbox`
+- 15 notes migrated to `10 - 🧠 Knowledge`
+- 1 note staged in `05 - 🌱 Staging` (Facilitation.md)
+- 1 Czech note staged with flag (Krkonose-list.md)
+- 4 notes discarded (Jobs to be done, Product vision, Tldraw canvas, Untitled.base — all empty or junk)
+- `Systemic design.md` merged into `System dynamics.md`, then discarded
+- Inbox is now empty
+
+**File routing — migrated**:
+- `Ethics in design.md` → `Resources/Design/Principles/`
+- `Manifestos.md` → `Resources/Design/Principles/`
+- `Random.md` → `Resources/Design/Principles/` (as "Random design insights.md")
+- `The Story Is Everything.md` → `Resources/Design/Storytelling/`
+- `Business case.md` → `Resources/Design/Storytelling/`
+- `Design research goals.md` → `Resources/Design/Discovery/`
+- `Value proposition canvas.md` → `Resources/Design/Discovery/`
+- `Iteration.md` → `Resources/Design/Delivery/`
+- `System dynamics.md` + `Systemic design.md` → `Resources/Design/Systems thinking/` (merged, new subfolder)
+- `Hyperfocus.md` → `Resources/Learning/`
+- `Liminal Thinking.md` → `Resources/Learning/`
+- `Evals.md` → `Resources/Technology/`
+- `New product.md` → `Resources/Product/`
+- `Busy culture.md` → `Resources/Product/`
+- `Product market fit.md` → `Resources/Product/`
+
+**Vault changes**: 22 files deleted from Inbox, 17 files created across Knowledge + Staging  
+**Git commit**: Not yet — commit now before starting Phase 2
+
+---
 
 ### 2026-03-04 — Phase 0 complete: structure set up
 **By**: Claude (session with Erik)  
@@ -37,12 +70,8 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
   - Deleted `Freelance design practice` folder (all content migrated)
   - Kept `Cooking and fermentation` and `Home` as-is
 
-**File routing decisions**:
-- `Freelance design practice/{Daily shutdown, Planning, Weekly planning, Weekly review}` → `Product & Design practice/`
-- `Continuous improvement/{Learning and development, PKM Improvements Backlog, PKM Improvement 1-3, Process reflection, Reading list, Second brain, Tooling, Working-on-wheels}` → `Personal development/`
-
 **Vault changes**: 2 folders removed, 4 folders created, 14 files relocated, 1 new top-level folder  
-**Git commit**: Not yet — commit now before starting Phase 1
+**Git commit**: Committed by Erik after Phase 0
 
 ---
 
@@ -64,7 +93,7 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 | Phase | Name | Status | Last touched |
 |-------|------|--------|-------------|
 | 0 | Structure setup | ✅ Complete | 2026-03-04 |
-| 1 | Process Inbox | ⬜ Not started | — |
+| 1 | Process Inbox | ✅ Complete | 2026-03-04 |
 | 2 | Absorb interim knowledge | ⬜ Not started | — |
 | 3 | Process 99 backlog | ⬜ Not started | — |
 | 4 | Build weekly routine | ⬜ Not started | — |
@@ -76,11 +105,9 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 
 Notes identified as Czech-language. Human decision required for each: translate, keep as-is, or discard.
 
-*(Populated during Phase 1 and Phase 3)*
-
 | File | Location | Proposed action | Decision |
 |------|----------|----------------|---------|
-| — | — | — | — |
+| Krkonose-list.md | `05 - 🌱 Staging/` | Translate to English + move to personal checklists, or keep as-is | Pending |
 
 ---
 

@@ -2,7 +2,7 @@
 - Principles of product design
 	- http://bokardo.com/principles-of-product-design/
 	- Joshua Porter's principles of good product design
-	- "If your product is not _useful_, if humans do not find use for it, then the design has failed. Your product must help people do something valuable in their lives."
+	- "If your product is not _useful_, if humans do not find use for it, then the design has failed. Your product must help people do something valuable in their lives."
 		- value
 			- functional (e.g. works well)
 			- social (e.g. impresses friends)

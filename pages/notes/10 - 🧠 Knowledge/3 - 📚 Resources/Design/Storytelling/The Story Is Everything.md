@@ -181,6 +181,3 @@ The book also addresses audience engagement (you have only 8 seconds to make an 
 - presentation success = when data becomes audience's knowledge - you know it happened when you get questions about how the audience can use that new knowledge with their audience
 - *"just because you can make a graph in Excel does not mean you should"*
 - headlines should provoke audience to ask: *"what's your story about?"*
-
-## Related notes
-
