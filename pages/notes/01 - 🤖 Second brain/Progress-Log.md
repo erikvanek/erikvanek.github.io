@@ -15,14 +15,55 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 
 ## Current State (update this section when resuming)
 
-**Last active**: 2026-03-04  
-**Current phase**: Phase 1 complete. Phase 2 ready to start.  
+**Last active**: 2026-03-05  
+**Current phase**: Phase 2 complete. Phase 3 ready to start.  
 **Blocking**: None.  
-**Next action**: Git commit, then begin Phase 2 — absorb `11 - ⏳ interim knowledge` into `10 - 🧠 Knowledge`.
+**Next action**: Git commit, then begin Phase 3 — process `99 - 📄 To process` backlog.
 
 ---
 
 ## Log Entries
+
+### 2026-03-05 — Phase 2 complete: interim knowledge absorbed
+**By**: Claude (session with Erik)  
+**What happened**:
+- Triaged all 20 notes in `11 - ⏳ interim knowledge`
+- 14 notes migrated to `10 - 🧠 Knowledge`
+- 1 Czech note staged with flag (UX Customer Experience.md)
+- 5 stale MOC files discarded (Design-MOC, Learning-MOC, ProductManagement-MOC, Productivity-MOC, Research-MOC — all had broken links to old paths)
+- `11 - ⏳ interim knowledge` folder is now empty and removed
+
+**File routing — migrated**:
+- `Design/Books/Hooked.md` → `Resources/Design/`
+- `Design/Books/TISDD.md` → `Resources/Design/`
+- `Design/Concepts/Prototyping.md` → `Resources/Design/Delivery/`
+- `Design/Methods/Lo-Fi_Prototyping_Methods.md` → `Resources/Design/Delivery/` (as "Lo-Fi Prototyping Methods.md")
+- `Design/Design Crit.md` → `Resources/Design/Activities/`
+- `Learning/Learning.md` → `Resources/Learning/` (as "Learning Techniques.md" — existing Learning.md has different content)
+- `ProductManagement/Books/Outcomes_over_Output.md` → `Resources/Product/` (as "Outcomes over Output.md")
+- `ProductManagement/Measuring Business Value.md` → `Resources/Product/`
+- `ProductManagement/Product Discovery.md` → `Resources/Design/Discovery/`
+- `Productivity/Eisenhower Matrix.md` → `Resources/Personal Development/`
+- `Productivity/Productivity.md` → `Resources/Personal Development/`
+- `Productivity/Second Brain.md` → `Resources/Personal Development/`
+- `Research/Books/The_Mom_Test.md` → `Resources/Design/Discovery/` (as "The Mom Test.md")
+- `Research/Qualitative Research.md` → `Resources/Design/Discovery/`
+
+**File routing — staged**:
+- `Design/UX_Customer_Experience.md` → `05 - 🌱 Staging/` (Czech — translate before migrating to Resources/Design/)
+
+**File routing — discarded**:
+- `Design/Design-MOC.md` — stale links to `02 - 📩 Inbox/` and `99 - 📄 To process/` paths
+- `Learning/Learning-MOC.md` — superseded by existing structure
+- `ProductManagement/ProductManagement-MOC.md` — superseded
+- `Productivity/Productivity-MOC.md` — superseded
+- `Research/Research-MOC.md` — superseded
+
+**Vault changes**: 20 files deleted from interim knowledge, 14 files created in Knowledge, 1 file staged  
+**Git commit**: Not yet — commit now before starting Phase 3  
+**Czech flags**: UX Customer Experience.md staged in `05 - 🌱 Staging/`
+
+---
 
 ### 2026-03-04 — Phase 1 complete: Inbox cleared
 **By**: Claude (session with Erik)  
@@ -94,7 +135,7 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 |-------|------|--------|-------------|
 | 0 | Structure setup | ✅ Complete | 2026-03-04 |
 | 1 | Process Inbox | ✅ Complete | 2026-03-04 |
-| 2 | Absorb interim knowledge | ⬜ Not started | — |
+| 2 | Absorb interim knowledge | ✅ Complete | 2026-03-05 |
 | 3 | Process 99 backlog | ⬜ Not started | — |
 | 4 | Build weekly routine | ⬜ Not started | — |
 | 5 | Build agent skills | ⬜ Not started | — |
@@ -108,6 +149,7 @@ Notes identified as Czech-language. Human decision required for each: translate,
 | File | Location | Proposed action | Decision |
 |------|----------|----------------|---------|
 | Krkonose-list.md | `05 - 🌱 Staging/` | Translate to English + move to personal checklists, or keep as-is | Pending |
+| UX Customer Experience.md | `05 - 🌱 Staging/` | Translate to English + migrate to `Resources/Design/` | Pending |
 
 ---
 

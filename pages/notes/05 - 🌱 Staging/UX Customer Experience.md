@@ -8,6 +8,7 @@ tags:
   - Metrics
   - Design
   - Framework
+staging_note: "Czech language — translate to English before migrating to Resources/Design/. Content covers UX metrics (task success, eye-tracking, biometrics), CX metrics (NPS, CSAT, CES), HEART framework, AARRR, and Nir Eyal's Hook model in CX context."
 ---
 
 # UX a zákaznická zkušenost (CX)
@@ -105,66 +106,28 @@ Strategické metriky sledující hodnotu produktu a byznysové cíle:
   - Všechny KPI jsou metriky, ale ne všechny metriky jsou KPI
 
 ### Psychologie návykových produktů (Nir Eyal)
-Jak Nir Eyal popisuje v [[04 - 💽 RAW/2023/01/06/hooked|Hooked]], úspěšné produkty vytvářejí návykové cykly prostřednictvím Hook Modelu:
-
-- **Trigger → Action → Variable Reward → Investment** - kompletní cyklus, který posiluje zapojení
+- **Trigger → Action → Variable Reward → Investment** - kompletní cyklus
 - Návykové produkty vytvářejí vazbu mezi pocítěním určité bolesti a jejím řešením
-- Klíčová je variabilita odměn - nepravidelnost udržuje uživatele v očekávání
-
-Při návrhu UX je důležité zaměřit se na tři základní lidské motivace:
-- Hledání potěšení a vyhýbání se bolesti
-- Hledání naděje a vyhýbání se strachu
-- Hledání sociálního přijetí a vyhýbání se odmítnutí
+- Klíčová je variabilita odměn
 
 ## Kombinování metrik pro komplexní pochopení
 
 ### HEART Framework (Google)
-Framework pro komplexní hodnocení uživatelské zkušenosti:
-
-- **H**appiness (Spokojenost): Subjektivní dojmy a spokojenost
-- **E**ngagement (Zapojení): Míra aktivní interakce s produktem
-- **A**doption (Přijetí): Kolik uživatelů začíná systém aktivně používat
-- **R**etention (Udržení): Míra, s jakou se uživatelé vracejí k produktu
-- **T**ask success (Úspěšnost úkolu): Efektivita a eficience dokončování úkolů
+- **H**appiness (Spokojenost)
+- **E**ngagement (Zapojení)
+- **A**doption (Přijetí)
+- **R**etention (Udržení)
+- **T**ask success (Úspěšnost úkolu)
 
 ### Pirate/AARRR Framework
-Framework pro startupové prostředí zaměřený na sledování zákaznické cesty:
-
-- **A**cquisition (Získání): Jak se uživatelé dostávají k produktu
-- **A**ctivation (Aktivace): První pozitivní zkušenost s produktem
-- **R**etention (Udržení): Opakované používání produktu v čase
-- **R**evenue (Příjem): Jak produkt generuje příjmy
-- **R**eferral (Doporučení): Jak uživatelé doporučují produkt ostatním
+- **A**cquisition → **A**ctivation → **R**etention → **R**evenue → **R**eferral
 
 ## Navrhování experimentů
 
 ### Operacionalizace
-Proces převodu obecných otázek do konkrétních měřitelných metrik:
-
-- Příklad: "Je tato navigace lepší?" → "Kolik uživatelů najde cílovou stránku do 30 sekund?"
-- Zajišťuje, že měříme relevantní aspekty designu
-- Umožňuje porovnávat různé verze designu
+Proces převodu obecných otázek do konkrétních měřitelných metrik.
+Příklad: "Je tato navigace lepší?" → "Kolik uživatelů najde cílovou stránku do 30 sekund?"
 
 ### Formulace hypotézy
-Základní struktura pro testování designových rozhodnutí:
-
 - **Tvrzení (belief)**: Co si myslíme, že bude fungovat
 - **Důkazy (evidence)**: Jaká data budeme hledat pro potvrzení nebo vyvrácení hypotézy
-
-### Výběr vhodných metrik
-Kritéria pro výběr efektivních metrik:
-
-- Relevantní pro experiment a hypotézu
-- Měřitelné s dostupnými prostředky
-- Jasně interpretovatelné
-- Poskytující akční vhledy pro další iterace designu
-
-## Související poznámky
-- [[Design-MOC|Mapa obsahu: Design]]
-- [[UX_Metriky|UX Metriky]]
-- [[CX_Metriky|CX Metriky]]
-- [[Designove_experimenty_metodika|Metodika designových experimentů]]
-- [[Designove_experimenty|Designové experimenty]]
-- [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
-- [[99 - 📄 To process/Product discovery|Product discovery]]
-- [[Behavioral design|Behavioral design]]

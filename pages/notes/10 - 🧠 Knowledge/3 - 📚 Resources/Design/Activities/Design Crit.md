@@ -10,9 +10,6 @@ tags:
 resources:
   - https://open.spotify.com/episode/6NhMKH6ZqVewNF2lApvjHr
   - https://www.figma.com/blog/design-critiques-at-figma/
-related:
-  - "Feedback"
-  - "Design Process"
 ---
 
 # Design Crit
@@ -76,6 +73,3 @@ Design critique (or "design crit") is a structured technique for reviewing desig
 - Use in both early conceptual phases and more refined design stages
 - Can be formal scheduled sessions or informal desk critiques
 - Adapt format based on project needs and timeline
-
-## Raw Notes
-This note has been processed from a top-level note into the knowledge base structure.

@@ -39,7 +39,7 @@ Prototyping is the iterative process of creating representations of design solut
 4. **Implementation** - Move toward final solution
 
 ### Fidelity Spectrum
-- **Low-fidelity** ([[Lo-Fi_Prototyping_Methods]])
+- **Low-fidelity** ([[Lo-Fi Prototyping Methods]])
   - Sketches, paper prototypes
   - Wizard of Oz simulations
   - Role-playing activities
@@ -56,11 +56,11 @@ Prototyping is the iterative process of creating representations of design solut
 
 Prototypes can be categorized by what they aim to represent or test:
 
-- [[Actions, processes & experiences prototype]] - Testing flows and interactions
-- [[Physical prototypes]] - Tangible objects and hardware
-- [[Environment, spaces & architecture prototypes]] - Spatial experiences
-- [[Digital & SW prototypes]] - Software and digital experiences
-- [[Ecosystem & business value prototypes]] - Service ecosystems and business models
+- Actions, processes & experiences prototype - Testing flows and interactions
+- Physical prototypes - Tangible objects and hardware
+- Environment, spaces & architecture prototypes - Spatial experiences
+- Digital & SW prototypes - Software and digital experiences
+- Ecosystem & business value prototypes - Service ecosystems and business models
 
 ## Best Practices
 
@@ -84,13 +84,9 @@ Prototypes can be categorized by what they aim to represent or test:
 Prototyping serves as a bridge between conceptual models (the interface people interact with) and mental models (what humans have in mind). Effective prototyping aligns these models through iterative exploration and validation.
 
 ## Related Notes
-- [[Lo-Fi_Prototyping_Methods]]
-- [[Design methods]]
+- [[Lo-Fi Prototyping Methods]]
 - [[Iteration]]
-- [[User testing]]
-- [[Design Thinking]]
-- [[Service design]]
-- [[Interaction design]]
+- [[TISDD]]
 
 ## Resources
 - [IDEO: The Secret Power of Prototyping](https://www.ideo.com/journal/the-secret-power-of-prototyping)
