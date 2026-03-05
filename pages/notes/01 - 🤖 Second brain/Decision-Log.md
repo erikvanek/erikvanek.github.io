@@ -149,3 +149,24 @@ Format: `DEC-XXX` with date, decision, rationale, and implications.
 
 **Implications**: [What changes as a result]
 ```
+# *To add a new decision: copy the template below, increment the number, fill in the fields.*
+## DEC-011 — Mandatory metadata on all Knowledge nodes
+**Date**: 2026-03-04  
+**Status**: Decided  
+
+**Decision**: Every note in `10 - 🧠 Knowledge` should eventually carry a minimum set of frontmatter metadata:
+- `date_created` — when the note was first added
+- `date_modified` — when it was last meaningfully edited
+- `tags` — most relevant content tags (aim for 3–5)
+
+This is not blocking current migration work. It will be enforced as a routine pass once the structure is stable (after Phase 3), and should be built into the Phase 5 agent skills as a maintenance sweep.
+
+**Rationale**: Consistent metadata enables agents to surface notes by recency, detect staleness, and query by topic. Without it, the knowledge base is only navigable by humans who remember what's in it.
+
+**Implications**: 
+- Phase 5 should include a "metadata enrichment" skill that sweeps Knowledge for notes missing frontmatter and adds it
+- The weekly rebalancing routine (DEC-010) should include a check for notes lacking required metadata
+- New notes added during Phase 2 and 3 should include this metadata from the start where possible
+
+---
+

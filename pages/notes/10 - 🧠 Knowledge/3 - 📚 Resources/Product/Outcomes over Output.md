@@ -58,10 +58,5 @@ Planning with outputs is like promising to cross a desert of unknown size by a s
 - Outcome: "Boost sales by 10% from IDP"
 
 ## Related Notes
-- [[ProductManagement-MOC|Product Management]]
-- [[99 - 📄 To process/Product discovery]]
-- [[99 - 📄 To process/Measuring Business Value]]
-- [[02 - 📩 Inbox/Product vision]]
-
-## Raw Notes
-This note has been created as part of the second-brain system refinement process to address empty referenced files.
+- [[Measuring Business Value]]
+- [[Product Discovery]]

@@ -81,9 +81,6 @@ For consumers wanting to protect their attention:
 ## Related Notes
 - [[Behavioral design]]
 - [[Attention]]
-- [[Design-MOC]]
-- [[99 - 📄 To process/Product discovery]]
-- [[99 - 📄 To process/UX_Customer_Experience]]
 
 ## Reading Notes & Observations
 

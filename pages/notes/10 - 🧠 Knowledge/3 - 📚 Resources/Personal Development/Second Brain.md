@@ -7,10 +7,6 @@ tags:
   - KnowledgeManagement
   - Productivity
   - PersonalEffectiveness
-related:
-  - "Productivity"
-  - "Personal effectiveness"
-  - "Learning"
 ---
 
 # Second Brain
@@ -20,7 +16,7 @@ related:
 A "Second Brain" is a personal knowledge management system that extends your cognitive capabilities through external tools and organized information.
 
 ### Fundamental Insight
-- Don't reinvent the wheel - leverage past efforts and knowledge
+- Don't reinvent the wheel — leverage past efforts and knowledge
 - Build upon what's already "80% done" from previous work
 - Create a system that helps you retrieve and apply existing knowledge effectively
 
@@ -69,8 +65,6 @@ A "Second Brain" is a personal knowledge management system that extends your cog
 - Enhanced ability to build upon previous work
 - More efficient project initiation through existing resources
 
-## System Documentation
-For detailed implementation of this second brain system, see [[second-brain-guide]].
-
-## Raw Notes
-This note has been processed from a top-level note into the knowledge base structure.
+## Related Notes
+- [[Productivity]]
+- [[01 - 🤖 Second brain/Revival-Strategy]]

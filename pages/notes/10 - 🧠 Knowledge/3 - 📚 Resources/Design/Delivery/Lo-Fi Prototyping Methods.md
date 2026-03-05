@@ -98,14 +98,6 @@ Both methods fit within the early exploratory and concept validation phases of t
 4. Use findings to inform higher-fidelity prototyping and development
 
 ## Related Notes
-- [[Design research]]
-- [[99 - 📄 To process/design/Concepts/Prototyping]]
-- [[Design methods]]
-- [[User testing]]
-- [[Digital & SW prototypes]]
-- [[Actions, processes & experiences prototype]]
-
-## Additional Resources
-- Paper prototyping techniques
-- Role-playing in service design
-- Simulation methods in UX research
+- [[Prototyping]]
+- [[TISDD]]
+- [[Usability testing]]

@@ -12,8 +12,8 @@ tags:
 # Qualitative Research
 
 ## Core Characteristics
-- _small-n_ research - works with smaller sample sizes
-- Not statistically significant - different purpose than quantitative research
+- _small-n_ research — works with smaller sample sizes
+- Not statistically significant — different purpose than quantitative research
 - Complementary to quantitative research, not a replacement
 - Focuses on understanding "the why" behind problems and root causes
 - Aims to gather in-depth insights for informed decision-making
@@ -23,15 +23,13 @@ tags:
 - The goal isn't to disprove hypotheses but to understand problems in detail
 - Quantifying qualitative findings ("three of six participants said...") can undermine their value
 
-## Principles of Quality in Qualitative Research
+## Principles of Quality
 
-### [[Rules for qualitative rigor]]
-1. **Credibility** - confidence in the 'truth' of the findings
-2. **Transferability** - showing that the findings have applicability in other contexts
-3. **Dependability** - showing that the findings are consistent and could be repeated
-4. **Confirmability** - degree of neutrality or extent to which findings are shaped by respondents not researcher bias
-
-*Originally formulated by Yvonna Lincoln and Egon Guba*
+### Rules for Qualitative Rigor (Lincoln & Guba)
+1. **Credibility** — confidence in the truth of the findings
+2. **Transferability** — showing that the findings have applicability in other contexts
+3. **Dependability** — showing that the findings are consistent and could be repeated
+4. **Confirmability** — degree of neutrality; extent to which findings are shaped by respondents, not researcher bias
 
 ### Elements of Systematic Qualitative Research
 - Formulates specific research questions before conducting research
@@ -48,29 +46,13 @@ tags:
 ### Best Practices (from [[The Mom Test]])
 - Show genuine interest to encourage openness
 - Ask "Talk me through the last time [it] happened" to get concrete examples
-- Avoid mentioning your solution too early - focus on their problems first
+- Avoid mentioning your solution too early — focus on their problems first
 - Watch for bad data: compliments and hypothetical statements (would/could/might)
 - Focus on concrete past behavior rather than hypothetical situations
-- Don't prematurely zoom in unless you're sure you're on the right track
 - Plan the three most important things to learn from each participant
-- Look for people expressing strong emotions about problems - often your best prospects
+- Look for people expressing strong emotions about problems — often your best prospects
 
 ## Related Notes
-- [[Rules for qualitative rigor]]
 - [[The Mom Test]]
-- [[User Research]]
-- [[Interview Techniques]]
-
-## Applications
-- User research for product development
-- Understanding customer needs and pain points
-- Evaluating existing solutions and processes
-- Generating insights for innovation
-
-## Action Items
-- Create a standard interview guide template
-- Develop a qualitative coding system for research analysis
-- Establish best practices for triangulating qualitative findings
-
-## Raw Notes
-This note has been processed from a top-level note into the knowledge base structure.
+- [[Product Discovery]]
+- [[Interviews]]

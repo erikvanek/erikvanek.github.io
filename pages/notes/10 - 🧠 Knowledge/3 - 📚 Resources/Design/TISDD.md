@@ -178,12 +178,10 @@ This balance requires careful consideration of both detailed elements and the ov
 
 ## Related Notes
 - [[Service design]]
-- [[99 - 📄 To process/design/Concepts/Prototyping]]
-- [[Lo-Fi_Prototyping_Methods]]
+- [[Delivery/Prototyping]]
+- [[Delivery/Lo-Fi Prototyping Methods]]
 - [[Journey maps]]
 - [[Design Thinking]]
-- [[Design methods]]
-- [[Design-MOC]]
 
 ## References
 Stickdorn, M., Hormess, M., Lawrence, A., & Schneider, J. (2018). This is Service Design Doing: Applying Service Design Thinking in the Real World. O'Reilly Media.
