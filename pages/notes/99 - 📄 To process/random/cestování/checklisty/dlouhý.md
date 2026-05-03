@@ -1,2 +1,0 @@
-- [ ] lékárnička
-- [ ] (zelený) kalhoty

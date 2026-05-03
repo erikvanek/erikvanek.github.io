@@ -1,0 +1,191 @@
+<h1 id="yaml-schema-reference">YAML Schema Reference</h1>
+<p>Complete schema for <code>slides.yaml</code>. Every field listed as required must be present on every slide, even if empty string.</p>
+<hr>
+<h2 id="presentation-metadata">Presentation metadata</h2>
+<p>Use YAML anchors to keep key values DRY — define once in <code>presentation:</code>, reuse in the title slide. Anchors only resolve at node level; they cannot be interpolated inside block scalars (<code>|</code>).</p>
+<pre><code class="language-yaml">presentation:
+  title: &amp;title &quot;...&quot;             # Anchor — reused in title slide
+  date: &amp;date YYYY-MM-DD          # Anchor
+  event: &amp;event &quot;...&quot;             # Anchor — event name (e.g. &quot;UX Monday Prague&quot;)
+  venue: &quot;...&quot;                    # City or venue (no anchor needed)
+  speaker: &amp;speaker &quot;...&quot;         # Anchor — speaker full name
+  duration: 45                    # Minutes
+  language: en                    # 'en' or 'cs' — explicit, never assumed
+  layout: presentation-jinag.njk
+  permalink: /slug/
+  eleventyExcludeFromCollections: true
+  description: &amp;description &quot;...&quot;  # Anchor — one-line subtitle or abstract
+  customizations:
+    partner_logo:                 # optional
+      src: &quot;...&quot;
+      org: &quot;...&quot;
+    colors:                       # optional
+      primary: &quot;#...&quot;
+      secondary: &quot;#...&quot;
+</code></pre>
+<hr>
+<h2 id="slide-schema">Slide schema</h2>
+<pre><code class="language-yaml">- heading: &quot;...&quot;          # Required. String. Empty string if layout doesn't use a heading.
+  layout: heading-body    # Required. One of 8 types — see below.
+  content: |              # Required. Markdown string. Empty string if layout handles content via dedicated fields.
+    ...
+  images: []              # Required. Array of image objects, or empty array.
+  speaker_notes: |        # Required. Plain prose. Never mixed with content. Never empty if brain dump has context.
+    ...
+</code></pre>
+<hr>
+<h2 id="layout-types">Layout types</h2>
+<h3 id="codetitlecode"><code>title</code></h3>
+<p>Opening slide. Uses YAML aliases to stay DRY — heading and subtitle reference frontmatter anchors. Without <code>qr_code</code>: single centered column. With <code>qr_code</code>: title/info left, QR right.</p>
+<pre><code class="language-yaml">- heading: *title         # alias — references &amp;title anchor in presentation:
+  subtitle: *description  # alias — references &amp;description anchor
+  layout: title
+  speaker: *speaker       # alias
+  event: *event           # alias
+  date: *date             # alias
+  qr_code:                # optional
+    src: qr.png
+    url: &quot;https://...&quot;
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codeheading-bodycode"><code>heading-body</code></h3>
+<p>Standard slide. Heading + any markdown content: bullets, prose, numbered list, code block.</p>
+<pre><code class="language-yaml">- heading: &quot;...&quot;
+  layout: heading-body
+  content: |
+    - Point one
+    - Point two
+  images: []              # optional image below or beside content
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codestatementcode"><code>statement</code></h3>
+<p>One or two short lines only. No heading needed — the content is the whole slide.</p>
+<pre><code class="language-yaml">- heading: &quot;&quot;
+  layout: statement
+  content: |
+    Big claim goes here.
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codequotecode"><code>quote</code></h3>
+<p>Featured quote with optional attribution. <code>content</code> is optional framing text above the quote.</p>
+<pre><code class="language-yaml">- heading: &quot;&quot;
+  layout: quote
+  content: &quot;&quot;
+  quote: &quot;The quote text.&quot;
+  author: &quot;Name&quot;          # optional — omit or empty string if unattributed
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codetwo-columncode"><code>two-column</code></h3>
+<p>Two columns via a <code>columns</code> array. Each column is <code>type: text</code>, <code>type: image</code>, or <code>type: mermaid</code>. Handles all variants:</p>
+<ul>
+<li>text + text</li>
+<li>text + image</li>
+<li>text + mermaid</li>
+<li>image + image</li>
+</ul>
+<pre><code class="language-yaml">- heading: &quot;...&quot;
+  layout: two-column
+  content: &quot;&quot;
+  columns:
+    - type: text
+      content: |
+        Left column markdown
+    - type: image
+      src: diagram.png
+      width: 480
+      height: 320
+      alt: &quot;...&quot;
+      caption: &quot;...&quot;      # optional
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<p>Mermaid column — use when a diagram belongs beside text rather than full-slide:</p>
+<pre><code class="language-yaml">  columns:
+    - type: text
+      content: |
+        Explanation text here
+    - type: mermaid
+      content: |
+        flowchart LR
+          A[&quot;Node A&quot;] --&gt;|label| B((&quot;Node B&quot;))
+</code></pre>
+<h3 id="codefull-imagecode"><code>full-image</code></h3>
+<p>Full-bleed background image. Heading and content optional — use only if text overlay adds value.</p>
+<pre><code class="language-yaml">- heading: &quot;&quot;
+  layout: full-image
+  content: &quot;&quot;
+  images:
+    - src: image.jpg
+      placement: background
+      opacity: 0.85       # 0.0–1.0
+      alt: &quot;...&quot;
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codesection-breakcode"><code>section-break</code></h3>
+<p>Major section divider. Minimal — section name and optional subtitle only.</p>
+<pre><code class="language-yaml">- heading: &quot;Part 1&quot;
+  layout: section-break
+  content: |
+    ## Discovery
+  images: []
+  speaker_notes: &quot;Transition note — what gear shift this represents.&quot;
+</code></pre>
+<h3 id="codedemocode"><code>demo</code></h3>
+<p>Live demo placeholder. Speaker notes carry the full step-by-step instructions including fallback.</p>
+<pre><code class="language-yaml">- heading: &quot;Demo 1&quot;
+  layout: demo
+  content: |
+    **Brief description of what the demo covers**
+  images: []
+  speaker_notes: |
+    Step 1: ...
+    Step 2: ...
+    Step 3: ...
+    Fallback if live demo fails: ...
+</code></pre>
+<h3 id="codetranscripts-stackcode"><code>transcripts-stack</code></h3>
+<p>Custom light-mode visualization for showing transcripts analysis.</p>
+<pre><code class="language-yaml">- heading: &quot;Now you have transcripts&quot;
+  layout: transcripts-stack
+  subtitle: &quot;Research plan · interview script · transcripts · research goals&quot;
+  content: &quot;&quot;
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<h3 id="codecustomcode"><code>custom</code></h3>
+<p>Fully hand-authored HTML. Use when a slide requires bespoke markup that no standard layout can produce — custom charts, complex infographics, hand-tuned SVG compositions, etc.</p>
+<p>The <code>&lt;section&gt;</code> markup lives in a <strong>separate file</strong> named <code>slide-N.html</code> (where N is the slide's 1-based position in the deck), stored in the same directory as the presentation. The YAML entry is metadata only — <code>content</code> is always <code>&quot;&quot;</code>. Use <code>description</code> to document what the slide renders. <code>speaker_notes</code> is still managed in YAML and must be kept current.</p>
+<pre><code class="language-yaml">- heading: &quot;...&quot;
+  layout: custom
+  custom_file: &quot;slide-7.html&quot;   # relative to the presentation directory
+  description: &quot;One-line description of what the custom HTML renders&quot;
+  content: &quot;&quot;
+  images: []
+  speaker_notes: &quot;...&quot;
+</code></pre>
+<p><strong>HTML generation rule:</strong> read <code>custom_file</code>, embed its <code>&lt;section&gt;</code> block verbatim at the correct slide position. Update only <code>&lt;aside class=&quot;notes&quot;&gt;</code> inside the embedded section if <code>speaker_notes</code> has changed. If <code>custom_file</code> does not exist yet, create it with a placeholder and note it in the visual-review summary:</p>
+<pre><code class="language-html">&lt;!-- slide-N.html — custom slide: [heading] --&gt;
+&lt;section&gt;
+  &lt;!-- TODO: hand-author markup here --&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong><code>type: custom-svg</code> column</strong> (two-column variant): when a <code>two-column</code> slide has a column with <code>type: custom-svg</code>, that column contains a description string only — the actual SVG lives directly in the HTML file. During regeneration, preserve the SVG column markup verbatim; do not replace it with Mermaid or generated SVG.</p>
+<hr>
+<h2 id="image-object">Image object</h2>
+<p>Used in the <code>images</code> array on any layout.</p>
+<pre><code class="language-yaml">images:
+  - src: &quot;...&quot;              # direct asset URL, filename, or TBD — never a CDN optimizer wrapper
+    placement: inline       # inline | background
+    width: 800              # px
+    height: 400             # px
+    alt: &quot;...&quot;              # required — describe the image for accessibility and as a placeholder note
+    caption: &quot;...&quot;          # optional — use a clean study/page URL, not the raw asset URL
+    author: &quot;...&quot;           # optional — organisation or person
+    source_url: &quot;...&quot;       # optional — canonical study or page URL for attribution
+    opacity: 1.0            # optional — relevant for background placement
+</code></pre>
+<p>For <code>full-image</code> background slides use <code>placement: background</code>. For <code>heading-body</code> or <code>two-column</code> use <code>placement: inline</code>.</p>

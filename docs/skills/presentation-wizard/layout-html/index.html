@@ -1,0 +1,359 @@
+<h1 id="layout-html-patterns">Layout HTML Patterns</h1>
+<p>Lean HTML patterns for converting each layout type from <code>slides.yaml</code> to reveal.js <code>&lt;section&gt;</code> blocks.</p>
+<p>CSS is handled by <code>presentation-wizard.css</code>. Layout classes follow <code>.layout-[type]</code> naming. Do not add inline styles for visual design — only structural layout inline styles are acceptable.</p>
+<p>Speaker notes always go in <code>&lt;aside class=&quot;notes&quot;&gt;</code> at the end of the section.</p>
+<hr>
+<h2 id="codetitlecode-without-qr-code"><code>title</code> — without QR code</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-title&quot;&gt;
+  &lt;h1&gt;HEADING&lt;/h1&gt;
+  &lt;h3&gt;SUBTITLE&lt;/h3&gt;            &lt;!-- omit if no subtitle --&gt;
+  &lt;p&gt;SPEAKER · EVENT · DATE&lt;/p&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="footer-visibility-rule">Footer visibility rule</h2>
+<p>The URL footer (<code>erikvanek.com/[slug]</code>) is shown <strong>only on the first and last slides</strong> — not on every slide. On all other slides it creates noise without value.</p>
+<p>Implementation in <code>presentation-wizard.njk</code>: hook into reveal.js <code>slidechanged</code> and <code>ready</code> events, show/hide a fixed footer element based on slide index:</p>
+<pre><code class="language-js">function updateFooter(event) {
+  const total = Reveal.getTotalSlides();
+  const index = Reveal.getState().indexh;
+  const footer = document.querySelector('.slide-footer');
+  if (footer) {
+    footer.style.display = (index === 0 || index === total - 1) ? 'flex' : 'none';
+  }
+}
+Reveal.on('ready', updateFooter);
+Reveal.on('slidechanged', updateFooter);
+</code></pre>
+<p>The footer element itself is placed outside <code>.slides</code>, with <code>position: fixed</code> and <code>z-index: 100</code>.</p>
+<hr>
+<h2 id="codetitlecode-with-qr-code"><code>title</code> — with QR code</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-title layout-two-col&quot;&gt;
+  &lt;div&gt;
+    &lt;h1&gt;HEADING&lt;/h1&gt;
+    &lt;h3&gt;SUBTITLE&lt;/h3&gt;          &lt;!-- omit if no subtitle --&gt;
+    &lt;p&gt;SPEAKER · EVENT · DATE&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;QR_SRC&quot; alt=&quot;QR code — QR_URL&quot;&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codeheading-bodycode"><code>heading-body</code></h2>
+<p><strong>Default rule: content should be a <code>&lt;ul&gt;</code> bullet list, not bare <code>&lt;p&gt;</code> blocks.</strong> Use <code>&lt;p&gt;</code> only for a single introductory sentence before a list, or for genuinely standalone prose (e.g. a short statement that fills the slide). Never convert list-like content into multiple <code>&lt;p&gt;</code> tags.</p>
+<p><strong>Optional eyebrow:</strong> Add <code>&lt;p class=&quot;slide-eyebrow&quot;&gt;LABEL&lt;/p&gt;</code> immediately before <code>&lt;h2&gt;</code> to render a small orange uppercase label above the heading — same visual style as the <code>section-label</code> in section-break slides. Use for brief summaries, section tags, or numbered takeaways.</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-heading-body&quot;&gt;
+  &lt;p class=&quot;slide-eyebrow&quot;&gt;LABEL&lt;/p&gt;   &lt;!-- omit if no eyebrow --&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;ITEM&lt;/li&gt;
+    &lt;li&gt;ITEM
+      &lt;ul&gt;
+        &lt;li&gt;Sub-item (no arrow, dim, aligned with parent text)&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p>If <code>images</code> array has an inline image, add after content:</p>
+<pre><code class="language-html">  &lt;figure&gt;
+    &lt;img src=&quot;SRC&quot; alt=&quot;ALT&quot; width=&quot;WIDTH&quot; height=&quot;HEIGHT&quot;&gt;
+    &lt;figcaption&gt;&lt;a href=&quot;SOURCE_URL&quot; target=&quot;_blank&quot;&gt;CAPTION&lt;/a&gt;&lt;/figcaption&gt;   &lt;!-- omit if no caption; wrap in &lt;a&gt; when source_url set --&gt;
+  &lt;/figure&gt;
+</code></pre>
+<p><strong>Optional quote-block accent:</strong> A <code>&lt;div class=&quot;quote-block&quot;&gt;</code> can be placed inside a <code>heading-body</code> slide (not just <code>layout-quote</code>) to give a statement visual weight — amber left bar + italic quote treatment. Add <code>style=&quot;margin-top: 2rem;&quot;</code> to create separation from preceding content.</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-heading-body&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;
+  &lt;div class=&quot;quote-block&quot; style=&quot;margin-top: 2rem;&quot;&gt;
+    &lt;blockquote&gt;STATEMENT&lt;/blockquote&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codestatementcode"><code>statement</code></h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-statement&quot;&gt;
+  &lt;h1&gt;CONTENT&lt;/h1&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codequotecode"><code>quote</code></h2>
+<p><strong>Simple</strong> — blockquote centered vertically, optional intro prose above it:</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-quote&quot;&gt;
+  &lt;p&gt;CONTENT&lt;/p&gt;                       &lt;!-- omit if content is empty --&gt;
+  &lt;blockquote&gt;QUOTE&lt;/blockquote&gt;
+  &lt;cite&gt;— AUTHOR&lt;/cite&gt;                &lt;!-- omit if no author --&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>With heading + list</strong> — heading and list at top, blockquote separated below. When <code>ul</code> precedes <code>.quote-block</code>, CSS applies <code>margin-top: 4rem</code> (doubled gap). When only <code>h2</code> precedes, <code>margin-top: auto</code> pushes it to the bottom of available space. The amber border spans both the quote text and the attribution:</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-quote&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;ITEM
+      &lt;ul&gt;
+        &lt;li&gt;Sub-item (no arrow, dim, aligned with parent text)&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;ITEM&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;quote-block&quot;&gt;
+    &lt;blockquote&gt;QUOTE&lt;/blockquote&gt;
+    &lt;cite&gt;— AUTHOR&lt;/cite&gt;      &lt;!-- omit if no author --&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p>Use <code>&lt;div class=&quot;quote-block&quot;&gt;</code> whenever <code>&lt;cite&gt;</code> is present — it extends the amber left bar over both the quote and the attribution. For simple quote slides without <code>&lt;cite&gt;</code>, the bare <code>&lt;blockquote&gt;</code> is fine.</p>
+<hr>
+<p><strong>All two-column variants require a <code>.cols</code> wrapper</strong> so the CSS flex-row kicks in. Without it, columns stack vertically (the section is flex-column to allow an optional <code>&lt;h2&gt;</code> heading above the columns).</p>
+<h2 id="codetwo-columncode-text-text"><code>two-column</code> — text + text</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-two-col&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;                &lt;!-- omit if no heading --&gt;
+  &lt;div class=&quot;cols&quot;&gt;
+    &lt;div&gt;
+      COLUMN_0_CONTENT_AS_HTML
+    &lt;/div&gt;
+    &lt;div&gt;
+      COLUMN_1_CONTENT_AS_HTML
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="codetwo-columncode-text-image"><code>two-column</code> — text + image</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-two-col&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;                &lt;!-- omit if no heading --&gt;
+  &lt;div class=&quot;cols&quot;&gt;
+    &lt;div&gt;
+      COLUMN_0_CONTENT_AS_HTML
+    &lt;/div&gt;
+    &lt;figure&gt;
+      &lt;img src=&quot;SRC&quot; alt=&quot;ALT&quot;&gt;
+      &lt;figcaption&gt;&lt;a href=&quot;SOURCE_URL&quot; target=&quot;_blank&quot;&gt;CAPTION&lt;/a&gt;&lt;/figcaption&gt;   &lt;!-- omit if no caption; wrap in &lt;a&gt; when source_url set --&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="codetwo-columncode-image-image"><code>two-column</code> — image + image</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-two-col&quot;&gt;
+  &lt;div class=&quot;cols&quot;&gt;
+    &lt;figure&gt;
+      &lt;img src=&quot;SRC_0&quot; alt=&quot;ALT_0&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+      &lt;img src=&quot;SRC_1&quot; alt=&quot;ALT_1&quot;&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="codetwo-columncode-text-mermaid"><code>two-column</code> — text + mermaid</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-two-col&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;                &lt;!-- omit if no heading --&gt;
+  &lt;div class=&quot;cols&quot;&gt;
+    &lt;div&gt;
+      COLUMN_0_CONTENT_AS_HTML
+    &lt;/div&gt;
+    &lt;div class=&quot;mermaid&quot;&gt;
+MERMAID_DIAGRAM_CONTENT
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="codetwo-columncode-mermaid-text"><code>two-column</code> — mermaid + text</h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-two-col&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;                &lt;!-- omit if no heading --&gt;
+  &lt;div class=&quot;cols&quot;&gt;
+    &lt;div class=&quot;mermaid&quot;&gt;
+MERMAID_DIAGRAM_CONTENT
+    &lt;/div&gt;
+    &lt;div&gt;
+      COLUMN_1_CONTENT_AS_HTML
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codefull-imagecode"><code>full-image</code></h2>
+<pre><code class="language-html">&lt;section class=&quot;layout-full-image&quot;
+  data-background-image=&quot;SRC&quot;
+  data-background-opacity=&quot;OPACITY&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;               &lt;!-- omit if heading is empty --&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codesection-breakcode"><code>section-break</code></h2>
+<p>Always include the orange section label above the h1 and the rule below it. LABEL is typically the section number or category (e.g. &quot;Part 1&quot;, &quot;Context&quot;, &quot;Closing&quot;).</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-section-break&quot;&gt;
+  &lt;p class=&quot;section-label&quot;&gt;LABEL&lt;/p&gt;
+  &lt;h1&gt;HEADING&lt;/h1&gt;
+  &lt;div class=&quot;section-rule&quot;&gt;&lt;/div&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codedemocode"><code>demo</code></h2>
+<p>Always include the demo badge before the heading. The badge renders a small amber dot + &quot;Live demo&quot; label.</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-demo&quot;&gt;
+  &lt;div class=&quot;demo-badge&quot;&gt;&lt;span&gt;Live demo&lt;/span&gt;&lt;/div&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;
+  CONTENT_AS_HTML
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codetranscripts-stackcode"><code>transcripts-stack</code></h2>
+<p>A custom progress UI layout for showing qualitative analysis steps.</p>
+<pre><code class="language-html">&lt;section class=&quot;layout-transcripts-stack&quot;&gt;
+  &lt;h2&gt;HEADING&lt;/h2&gt;
+  &lt;div class=&quot;subtitle&quot;&gt;SUBTITLE&lt;/div&gt;
+
+  &lt;div class=&quot;visual-container&quot;&gt;
+    &lt;div class=&quot;transcripts-stack-container&quot;&gt;
+      &lt;!-- Bottom Sheet --&gt;
+      &lt;div class=&quot;transcript-paper&quot; style=&quot;top: 40px; left: 0; transform: rotate(-4deg);&quot;&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 90%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line highlight&quot; style=&quot;width: 40%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 95%;&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Middle Sheet --&gt;
+      &lt;div class=&quot;transcript-paper&quot; style=&quot;top: 20px; left: 40px; transform: rotate(2deg);&quot;&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 70%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line highlight&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 80%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 90%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 65%;&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Top Sheet --&gt;
+      &lt;div class=&quot;transcript-paper top&quot; style=&quot;top: 0; left: 80px; transform: rotate(-1deg);&quot;&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 60%; background: #1c1812; height: 10px; margin-bottom: 8px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line highlight&quot; style=&quot;width: 70%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line highlight&quot; style=&quot;width: 40%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;paper-line&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Progress List --&gt;
+    &lt;div class=&quot;progress-list&quot;&gt;
+      &lt;div class=&quot;progress-header&quot;&gt;Qualitative Analysis&lt;/div&gt;
+      &lt;div class=&quot;progress-items&quot;&gt;
+        &lt;div class=&quot;progress-item&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;&lt;span&gt;✓&lt;/span&gt;&lt;/div&gt;
+          &lt;span class=&quot;item-text done&quot;&gt;Brain dump&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-item&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;&lt;span&gt;✓&lt;/span&gt;&lt;/div&gt;
+          &lt;span class=&quot;item-text done&quot;&gt;Research plan&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-item&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;&lt;span&gt;✓&lt;/span&gt;&lt;/div&gt;
+          &lt;span class=&quot;item-text done&quot;&gt;Interview script&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-item&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;&lt;span&gt;✓&lt;/span&gt;&lt;/div&gt;
+          &lt;span class=&quot;item-text done&quot;&gt;Interviews conducted&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-item&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;&lt;span&gt;✓&lt;/span&gt;&lt;/div&gt;
+          &lt;span class=&quot;item-text&quot;&gt;Transcripts generated&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="codecustomcode"><code>custom</code></h2>
+<p>Do not generate markup from YAML for this layout. The <code>&lt;section&gt;</code> lives in a separate file identified by the <code>custom_file</code> field in YAML (e.g., <code>slide-7.html</code>), stored in the same directory as the presentation.</p>
+<p><strong>Regeneration:</strong> read <code>custom_file</code>, embed its full content verbatim at the correct slide position. Update only <code>&lt;aside class=&quot;notes&quot;&gt;</code> inside the embedded section if <code>speaker_notes</code> in YAML has changed from what is in the file — and write that change back to the file too, so the file stays in sync.</p>
+<p><strong>If <code>custom_file</code> does not exist yet:</strong> create it as a placeholder, flag it in the post-generation summary:</p>
+<pre><code class="language-html">&lt;!-- slide-N.html — custom slide: [heading] --&gt;
+&lt;section&gt;
+  &lt;!-- TODO: hand-author markup here --&gt;
+  &lt;aside class=&quot;notes&quot;&gt;SPEAKER_NOTES&lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong><code>type: custom-svg</code> column (inside a <code>two-column</code> slide):</strong> the SVG markup lives directly in the main HTML file. During regeneration, copy it unchanged — never substitute Mermaid or a generated diagram.</p>
+<hr>
+<h2 id="markdown-html-conversion-rules">Markdown → HTML conversion rules</h2>
+<p>When converting <code>content</code> markdown to HTML for embedding in sections:</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>- item</code> / <code>* item</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;</code></td>
+</tr>
+<tr>
+<td><code>1. item</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;</code></td>
+</tr>
+<tr>
+<td><code>**bold**</code></td>
+<td><code>&lt;strong&gt;</code></td>
+</tr>
+<tr>
+<td><code>*italic*</code></td>
+<td><code>&lt;em&gt;</code></td>
+</tr>
+<tr>
+<td><code>&gt; quote</code></td>
+<td><code>&lt;blockquote&gt;</code></td>
+</tr>
+<tr>
+<td><code>```lang</code> block</td>
+<td><code>&lt;pre&gt;&lt;code class=&quot;language-lang&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>[text](url)</code></td>
+<td><code>&lt;a href=&quot;url&quot;&gt;text&lt;/a&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Nested lists: use nested <code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code>. Max two levels deep in a presentation context.</p>
+<hr>
+<h2 id="fragment-progressive-reveal">Fragment (progressive reveal)</h2>
+<p>To reveal bullet points one at a time, add <code>class=&quot;fragment&quot;</code> to each <code>&lt;li&gt;</code>:</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li class=&quot;fragment&quot;&gt;First point&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Second point&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Third point&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Use fragments when the speaker notes indicate building up a concept step by step. Do not use by default — only when explicitly useful for pacing.</p>
+<hr>
+<h2 id="vertical-sub-slides">Vertical sub-slides</h2>
+<p>When a slide has deep content best split across two screens, wrap in a parent <code>&lt;section&gt;</code>:</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;section class=&quot;layout-heading-body&quot;&gt;
+    &lt;h2&gt;Main concept&lt;/h2&gt;
+    ...
+  &lt;/section&gt;
+  &lt;section class=&quot;layout-heading-body&quot;&gt;
+    &lt;h2&gt;Detail / example&lt;/h2&gt;
+    ...
+  &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>

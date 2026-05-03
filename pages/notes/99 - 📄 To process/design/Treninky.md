@@ -1,3 +1,0 @@
-- https://www.popoli-facilitace.com/
-- https://nazemi.cz/workshop-facilitace/
-- https://motivacnirozhovory.cz/

@@ -1,0 +1,152 @@
+<h1 id="diagrams">Diagrams</h1>
+<p>Two tools for generating visuals from descriptions:</p>
+<ul>
+<li><strong>Mermaid</strong> — structured/process diagrams</li>
+<li><strong>Inline SVG</strong> — spatial and geometric layouts</li>
+</ul>
+<p>Both embed directly in the <code>content</code> field of a slide's YAML, and render in the HTML <code>&lt;section&gt;</code> without build steps.</p>
+<hr>
+<h2 id="when-to-use-which">When to use which</h2>
+<table>
+<thead>
+<tr>
+<th>Use Mermaid</th>
+<th>Use SVG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process flows, step sequences</td>
+<td>Venn diagrams, overlapping circles</td>
+</tr>
+<tr>
+<td>Decision trees</td>
+<td>Concentric shapes, spatial relationships</td>
+</tr>
+<tr>
+<td>Timelines</td>
+<td>Custom icons or freehand-ish geometry</td>
+</tr>
+<tr>
+<td>Before/after comparisons (horizontal flow)</td>
+<td>Diagrams where position matters more than connection</td>
+</tr>
+</tbody>
+</table>
+<p>If unsure: Mermaid for &quot;things that happen in order,&quot; SVG for &quot;things that exist in relation to each other.&quot;</p>
+<hr>
+<h2 id="mermaid">Mermaid</h2>
+<h3 id="basic-embed-in-codecontentcode-field">Basic embed in <code>content</code> field</h3>
+<pre><code class="language-yaml">content: |
+  ```mermaid
+  flowchart LR
+    A[Brain dump] --&gt; B[Structure] --&gt; C[YAML] --&gt; D[HTML]
+  ```
+</code></pre>
+<p>In the HTML output this becomes:</p>
+<pre><code class="language-html">&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+  A[Brain dump] --&gt; B[Structure] --&gt; C[YAML] --&gt; D[HTML]
+&lt;/div&gt;
+</code></pre>
+<h3 id="theming">Theming</h3>
+<p>Always use <code>base</code> theme with <code>themeVariables</code> so diagrams respond to CSS custom properties.</p>
+<p>Minimal init block (add at top of diagram):</p>
+<pre><code>%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#e0e0e0', 'primaryTextColor': '#1a1a1a', 'lineColor': '#666666', 'fontSize': '18px'}}}%%
+</code></pre>
+<p>If custom colors were set in <code>presentation.customizations.colors</code>, replace <code>primaryColor</code> with the primary color value.</p>
+<h3 id="per-node-styling-flowcharts">Per-node styling (flowcharts)</h3>
+<pre><code>classDef highlight fill:#6366f1,color:#fff,stroke:none
+A:::highlight --&gt; B --&gt; C
+</code></pre>
+<h3 id="common-diagram-types">Common diagram types</h3>
+<p><strong>Process flow (left to right):</strong></p>
+<pre><code>flowchart LR
+  A[Start] --&gt; B[Step 2] --&gt; C[End]
+</code></pre>
+<p><strong>Process flow with decision:</strong></p>
+<pre><code>flowchart TD
+  A[Input] --&gt; B{Good enough?}
+  B --&gt;|Yes| C[Ship]
+  B --&gt;|No| D[Iterate] --&gt; A
+</code></pre>
+<p><strong>Timeline / phases:</strong></p>
+<pre><code>flowchart LR
+  subgraph Discovery
+    A[Research] --&gt; B[Synthesis]
+  end
+  subgraph Delivery
+    C[Prototype] --&gt; D[Handover]
+  end
+  B --&gt; C
+</code></pre>
+<p><strong>Simple sequence:</strong></p>
+<pre><code>sequenceDiagram
+  Designer-&gt;&gt;AI: Here are my codes
+  AI--&gt;&gt;Designer: Codebook draft
+  Designer-&gt;&gt;AI: Code these transcripts
+  AI--&gt;&gt;Designer: Coded data
+</code></pre>
+<hr>
+<h2 id="inline-svg">Inline SVG</h2>
+<p>Used for spatial and geometric diagrams where position conveys meaning.</p>
+<h3 id="basic-embed-in-codecontentcode-field">Basic embed in <code>content</code> field</h3>
+<pre><code class="language-yaml">content: |
+  &lt;svg viewBox=&quot;0 0 500 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
+    &lt;!-- shapes here --&gt;
+  &lt;/svg&gt;
+</code></pre>
+<h3 id="color-convention">Color convention</h3>
+<p>Always use CSS custom properties for colors so SVG responds to light/dark mode:</p>
+<pre><code class="language-svg">fill=&quot;var(--accent)&quot;
+fill=&quot;var(--text)&quot;
+stroke=&quot;var(--muted)&quot;
+</code></pre>
+<h3 id="venn-diagram-3-circles">Venn diagram (3 circles)</h3>
+<pre><code class="language-svg">&lt;svg viewBox=&quot;0 0 500 320&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
+  &lt;circle cx=&quot;200&quot; cy=&quot;140&quot; r=&quot;110&quot; fill=&quot;var(--accent)&quot; opacity=&quot;0.25&quot;/&gt;
+  &lt;circle cx=&quot;300&quot; cy=&quot;140&quot; r=&quot;110&quot; fill=&quot;var(--accent)&quot; opacity=&quot;0.25&quot;/&gt;
+  &lt;circle cx=&quot;250&quot; cy=&quot;230&quot; r=&quot;110&quot; fill=&quot;var(--accent)&quot; opacity=&quot;0.25&quot;/&gt;
+  &lt;text x=&quot;155&quot; y=&quot;100&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;16&quot;&gt;Label A&lt;/text&gt;
+  &lt;text x=&quot;345&quot; y=&quot;100&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;16&quot;&gt;Label B&lt;/text&gt;
+  &lt;text x=&quot;250&quot; y=&quot;295&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;16&quot;&gt;Label C&lt;/text&gt;
+  &lt;text x=&quot;250&quot; y=&quot;175&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;14&quot; font-style=&quot;italic&quot;&gt;You&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h3 id="two-overlapping-circles">Two overlapping circles</h3>
+<pre><code class="language-svg">&lt;svg viewBox=&quot;0 0 400 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
+  &lt;circle cx=&quot;140&quot; cy=&quot;100&quot; r=&quot;90&quot; fill=&quot;var(--accent)&quot; opacity=&quot;0.3&quot;/&gt;
+  &lt;circle cx=&quot;260&quot; cy=&quot;100&quot; r=&quot;90&quot; fill=&quot;var(--muted)&quot; opacity=&quot;0.3&quot;/&gt;
+  &lt;text x=&quot;95&quot;  y=&quot;105&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;16&quot;&gt;Left&lt;/text&gt;
+  &lt;text x=&quot;305&quot; y=&quot;105&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;16&quot;&gt;Right&lt;/text&gt;
+  &lt;text x=&quot;200&quot; y=&quot;105&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;13&quot; font-style=&quot;italic&quot;&gt;Both&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h3 id="simple-arrow-flow-horizontal">Simple arrow / flow (horizontal)</h3>
+<pre><code class="language-svg">&lt;svg viewBox=&quot;0 0 500 80&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
+  &lt;rect x=&quot;10&quot;  y=&quot;20&quot; width=&quot;120&quot; height=&quot;40&quot; rx=&quot;6&quot; fill=&quot;var(--surface)&quot; stroke=&quot;var(--accent)&quot;/&gt;
+  &lt;rect x=&quot;190&quot; y=&quot;20&quot; width=&quot;120&quot; height=&quot;40&quot; rx=&quot;6&quot; fill=&quot;var(--surface)&quot; stroke=&quot;var(--accent)&quot;/&gt;
+  &lt;rect x=&quot;370&quot; y=&quot;20&quot; width=&quot;120&quot; height=&quot;40&quot; rx=&quot;6&quot; fill=&quot;var(--surface)&quot; stroke=&quot;var(--accent)&quot;/&gt;
+  &lt;line x1=&quot;130&quot; y1=&quot;40&quot; x2=&quot;190&quot; y2=&quot;40&quot; stroke=&quot;var(--muted)&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#arr)&quot;/&gt;
+  &lt;line x1=&quot;310&quot; y1=&quot;40&quot; x2=&quot;370&quot; y2=&quot;40&quot; stroke=&quot;var(--muted)&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#arr)&quot;/&gt;
+  &lt;defs&gt;
+    &lt;marker id=&quot;arr&quot; markerWidth=&quot;8&quot; markerHeight=&quot;8&quot; refX=&quot;6&quot; refY=&quot;3&quot; orient=&quot;auto&quot;&gt;
+      &lt;path d=&quot;M0,0 L0,6 L8,3 z&quot; fill=&quot;var(--muted)&quot;/&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+  &lt;text x=&quot;70&quot;  y=&quot;45&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;14&quot;&gt;Step 1&lt;/text&gt;
+  &lt;text x=&quot;250&quot; y=&quot;45&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;14&quot;&gt;Step 2&lt;/text&gt;
+  &lt;text x=&quot;430&quot; y=&quot;45&quot; text-anchor=&quot;middle&quot; fill=&quot;var(--text)&quot; font-size=&quot;14&quot;&gt;Step 3&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<hr>
+<h2 id="generating-diagrams-from-brain-dump-descriptions">Generating diagrams from brain dump descriptions</h2>
+<p>When the brain dump contains a description like:</p>
+<ul>
+<li><em>&quot;a process with steps A, B, C&quot;</em> → Mermaid <code>flowchart LR</code></li>
+<li><em>&quot;I'm somewhere between X, Y, Z&quot;</em> → SVG 3-circle Venn</li>
+<li><em>&quot;before and after&quot;</em> → Mermaid <code>flowchart LR</code> with two nodes and a contrast arrow</li>
+<li><em>&quot;how X connects to Y&quot;</em> → Mermaid <code>flowchart</code> or SVG two-circle overlap</li>
+<li><em>&quot;phases or timeline&quot;</em> → Mermaid <code>flowchart LR</code> with subgraphs</li>
+</ul>
+<p>Always generate a draft diagram and offer it to the user for approval before embedding.</p>

@@ -1,0 +1,8 @@
+- [ ] chci SIM-kartu pokud je to non-EU?
+- [ ] jak vyřeším zahraniční peníze?
+	- [ ] mám nějaký doma, který si můžu vzít?
+- [ ] cestovní pojištění
+- [ ] offline mapy
+- [ ] offline slovník
+- [ ] základní slovíčka
+- [ ] jak je otevřeno v obchodech o víkendech / státní svátky

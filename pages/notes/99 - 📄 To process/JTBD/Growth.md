@@ -1,2 +1,0 @@
-- having a [[JTBD 1]] and getting it done helps the market to grow
-- grow your business by unlocking new aspirations and offering solutions to them by continuously exploring the [[JTBD 1#System of progress]]

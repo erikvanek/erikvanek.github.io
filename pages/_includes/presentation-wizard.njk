@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ presentation.language or 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description }}">
+  <title>{{ title }} | Erik Vaněk</title>
+  <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+  <link rel="stylesheet" href="../../css/presentation-wizard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+{% include "_analytics.html" %}
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      {{ content | safe }}
+    </div>
+    <div class="slide-footer"><span>erikvanek.com/{{ page.fileSlug }}</span></div>
+  </div>
+
+  <script src="../../js/reveal.js"></script>
+  <script src="../../js/reveal-notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    Reveal.initialize({ center: false, hash: true, autoPlayMedia: true, plugins: [RevealNotes] });
+
+    mermaid.initialize({ startOnLoad: false, theme: 'base' });
+
+    function renderMermaidInSlide(slide) {
+      var nodes = Array.from(slide.querySelectorAll('.mermaid:not([data-processed])'));
+      if (nodes.length) { mermaid.run({ nodes: nodes }); }
+    }
+    Reveal.on('ready', function (event) { renderMermaidInSlide(event.currentSlide); });
+    Reveal.on('slidechanged', function (event) { renderMermaidInSlide(event.currentSlide); });
+
+    function updateFooter() {
+      var total = Reveal.getTotalSlides();
+      var index = Reveal.getState().indexh;
+      var footer = document.querySelector('.slide-footer');
+      if (footer) {
+        footer.style.display = (index === 0 || index === total - 1) ? 'flex' : 'none';
+      }
+    }
+    Reveal.on('ready', updateFooter);
+    Reveal.on('slidechanged', updateFooter);
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+- common artifacts that have different meaning in different contexts
+- e.g. Journey maps are differently viewed by product managers, engineers and designers
+- work best if they employ languages and models that are easily understood across disciplines and functions
+- Design tools are usually good boundary objects
+- used in Prototyping

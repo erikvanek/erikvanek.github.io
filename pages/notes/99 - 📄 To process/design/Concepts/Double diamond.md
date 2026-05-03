@@ -1,1 +1,0 @@
-- the ultimate analogy for R & D

@@ -1,0 +1,27 @@
+---
+resources:
+  - https://medium.com/@Howard_C/a-beginners-guide-to-what-service-design-is-not-40884a856fd
+---
+
+- it is the patchwork background that makes service design such powerful
+- focuses on finding _the right problem_ to solve
+	- starts by identifying user needs first
+- built on research & testing, not on authority
+- no strong pressure on making it right the first time
+	- we can evolve & move on towards better solution
+- focuses not only on creating value for the customer, but also for surrounding ecosystems
+- the process is _not linear_
+	- builds on top of deepening, exploratory loops — iterations
+- Two main _spaces_, illustrated by Double diamond
+	- Problem
+		- Identifying & defining the right problem
+	- Solution
+		- Developing the right solution to the problem
+- not (only) solving customer problems, it designs value propositions, processes & business models
+- is:
+	- human-centered (internally & externally)
+	- collaborative — by using stakeholder co-creation
+	- iterative — exploratory, adaptive & iterative towards implementation
+	- sequential — visualized and _orchestrated_ as a sequence of interrelated actions
+	- real — researched and prototyped in reality
+	- holistic — should address the needs of all stakeholders through the entire service across the business

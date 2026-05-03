@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How modern tooling makes design process faster, more structured, and accessible to the whole team - without replacing craft.">
+  <title>The process isn&#39;t dead. It&#39;s just different. | Erik Vaněk</title>
+  <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+  <link rel="stylesheet" href="../../css/presentation-wizard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+<!-- ─── TITLE ─── -->
+
+<section class="layout-title">
+  <h1 id="the-process-isnt-dead-its-just-different">The process isn't dead. It's just different.</h1>
+  <div class="slide-subtitle">How modern tooling makes design process faster, more structured, and accessible to the whole team - without replacing craft.</div>
+  <div class="slide-rule"></div>
+  <div class="slide-byline">Erik Vaněk · UX Monday Prague · 4 May 2026</div>
+  <aside class="notes">Take a breath. Thank Běla for the invite, mention Jitka as the connector.
+This talk started as a walk. Literally - I'll show you that at the end.</aside>
+</section>
+
+
+<!-- ─── INTRO ─── -->
+
+<section class="layout-heading-body">
+  <h2 id="what-well-cover-today">What we'll cover today</h2>
+  <ul>
+    <li>1. Intro - setting the stage</li>
+    <li>2. Broader context - why this matters now</li>
+    <li>3. Discovery - how AI changes research, with a live demo</li>
+    <li>4. Delivery - prototyping and handoff, with a live demo</li>
+    <li>5. Post-digital design - where the process goes next</li>
+  </ul>
+  <aside class="notes">Quick roadmap so people know where we're going. Two demos - one in each half.
+This isn't a how-to talk. It's a "here's what's possible and here's how I actually work" talk.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="a-little-about-myself">A little about myself</h2>
+  <ul>
+    <li>Started in software engineering</li>
+    <li>Shifted toward design, research, product</li>
+    <li>Scale-ups · public services · non-profit
+      <ul>
+        <li>most recently Datamole - data &amp; AI softwarehouse</li>
+      </ul>
+    </li>
+    <li>Teaching at KISK, Masaryk University</li>
+    <li>Before that - hydroponics, gallery curator, pro poker player</li>
+  </ul>
+  <aside class="notes">Keep this fast. The point isn't the bio - it's to establish that you're a practitioner who moves across roles, not a purist. "I've done enough engineering to have empathy for it, enough design to know what it asks of you."</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="before-we-dig-in-aka-my-biases">Before we dig in aka my biases</h2>
+  <ul>
+    <li>Design = discovery + delivery. I don't split the roles.</li>
+    <li>Designers should understand code.</li>
+    <li>What happened in tooling over the past ~ year is just wow.</li>
+    <li>Handover should live in plaintext and code.</li>
+    <li>Stop saying "AI" - it's just how things get done now.</li>
+  </ul>
+  <aside class="notes">"I want to be upfront about where I'm coming from. These are opinions, not facts - but they'll colour everything I say."
+
+1. For me design and research are one practice. Some people specialise - fine. But I don't separate discovery from delivery.
+2. Auth, security, APIs, how data flows. Not so you can do it yourself, but so you can have honest conversations with the people who do.
+3. Not to become a developer. To understand how changes happen, how code ships. Your favourite engineer will explain it in 30 minutes.
+4. I'm a Claude fan, genuinely. But this is not a sales pitch. ChatGPT, Gemini, whatever - the principles are the same.
+5. I've never seen anything like this shift. I'll try to stay pragmatic. If it turns into another "AI wow" talk, call me out.
+6. Not in design files that rot the moment a developer touches them. Will come back in the second demo.
+7. Talking about "AI" in 2026 is like talking about "the internet" in 2010. I'll try to follow my own advice in this talk.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="on-demos">On demos</h2>
+  <ul>
+    <li>I'm running demos from the command line today.
+      <ul>
+        <li>Same thing in the desktop UI - just not my daily setup.</li>
+      </ul>
+    </li>
+    <li>Using Claude Code, Obsidian, Paper.design, GitHub.
+      <ul>
+        <li>principles work the same with other tooling</li>
+      </ul>
+    </li>
+  </ul>
+  <aside class="notes">Quick side-by-side moment here to demystify - show terminal and UI next to each other, say "same engine underneath," then stay in the UI for the rest of the talk. Mixed audience, less intimidating this way. Also reinforces provider-agnostic point - in the conversational UI it could be any tool.</aside>
+</section>
+
+
+<!-- ─── CONTEXT ─── -->
+
+<section class="layout-section-break">
+  <p class="section-label">Context</p>
+  <h1 id="whats-happening-out-there">What's happening out there</h1>
+  <div class="section-rule"></div>
+  <aside class="notes">Transition to the broader context section. "Let me spend a few minutes on why this moment is different before showing you the practical stuff."</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="the-labor-market-is-shifting">The labor market is shifting</h2>
+  <div class="cols">
+    <div>
+      <p>Anthropic's research on AI's impact on jobs: design and knowledge work are in scope.</p>
+      <div class="quote-block" style="margin-top: 2rem;">
+        <blockquote>"This is not like previous technological shifts."</blockquote>
+        <cite>— Dario Amodei</cite>
+      </div>
+    </div>
+    <figure>
+      <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/c1952c81bca02a7c8cc05ef7801e67ca60831c55-4096x4096.png" alt="Spider chart showing occupational exposure to AI across job categories - design and knowledge work among highest-exposure roles">
+      <figcaption><a href="https://www.anthropic.com/research/labor-market-impacts" target="_blank">Occupational AI exposure - anthropic.com/research/labor-market-impacts</a></figcaption>
+    </figure>
+  </div>
+  <aside class="notes">Reference https://www.anthropic.com/research/labor-market-impacts - don't read it out, just put it on screen as a QR or short URL. The quote (or its spirit) is: this is qualitatively different from previous automation waves. It's hitting white-collar work directly.</aside>
+</section>
+
+<!-- slide-7.html — custom slide: "Are we enjoying our work more?" — embedded verbatim -->
+<section class="layout-custom-chart">
+
+  <!-- heading -->
+  <div style="margin-bottom: 2.25rem;">
+    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #e8a030; margin-bottom: 0.4rem;">Context</div>
+    <h2 style="margin: 0; font-size: 2.5rem;">Are we enjoying our work more?</h2>
+  </div>
+
+  <!-- body: chart + annotation -->
+  <div style="display: flex; flex-direction: row; gap: 3.5rem; flex: 1; align-items: flex-start;">
+
+    <!-- chart column -->
+    <div style="display: flex; flex-direction: column; gap: 1.75rem; flex: 1;">
+
+      <!-- legend -->
+      <div style="display: flex; flex-direction: row; gap: 1.5rem; align-items: center;">
+        <div style="display: flex; flex-direction: row; gap: 0.5rem; align-items: center;">
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #e8a030; flex-shrink: 0;"></div>
+          <span style="font-family: 'Inter', sans-serif; font-size: 0.875rem; color: #ddd8d0;">Enjoying more</span>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 0.5rem; align-items: center;">
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #968878; flex-shrink: 0;"></div>
+          <span style="font-family: 'Inter', sans-serif; font-size: 0.875rem; color: #ddd8d0;">Enjoying less</span>
+        </div>
+      </div>
+
+      <!-- engineers -->
+      <div style="display: flex; flex-direction: column; gap: 0.55rem;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 500; color: #968878; letter-spacing: 0.08em; text-transform: uppercase;">Engineers</div>
+        <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 72.2%; height: 100%; background: #e8a030; border-radius: 3px;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; color: #e8a030; width: 3rem; flex-shrink: 0;">72.2%</span>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 10.7%; height: 100%; background: #968878; border-radius: 3px; opacity: 0.6;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 500; color: #7a7060; width: 3rem; flex-shrink: 0;">10.7%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- product managers -->
+      <div style="display: flex; flex-direction: column; gap: 0.55rem;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 500; color: #968878; letter-spacing: 0.08em; text-transform: uppercase;">Product managers</div>
+        <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 70.2%; height: 100%; background: #e8a030; border-radius: 3px;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; color: #e8a030; width: 3rem; flex-shrink: 0;">70.2%</span>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 11.1%; height: 100%; background: #968878; border-radius: 3px; opacity: 0.6;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 500; color: #7a7060; width: 3rem; flex-shrink: 0;">11.1%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- designers (highlighted) -->
+      <div style="display: flex; flex-direction: column; gap: 0.55rem; border-left: 2px solid #e8a030; padding: 0.75rem 1rem; background: rgba(232,160,48,0.05); border-radius: 0 4px 4px 0; margin-left: -1.125rem;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; color: #f0ece4; letter-spacing: 0.08em; text-transform: uppercase;">Designers</div>
+        <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 55%; height: 100%; background: #e8a030; border-radius: 3px; opacity: 0.75;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; color: #e8a030; width: 3rem; flex-shrink: 0;">55.0%</span>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 0.6rem;">
+            <div style="flex: 1; height: 1.6rem; background: #2c2820; border-radius: 3px;">
+              <div style="width: 18.2%; height: 100%; background: #c06040; border-radius: 3px;"></div>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; color: #c06040; width: 3rem; flex-shrink: 0;">18.2%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- annotation column -->
+    <div style="display: flex; flex-direction: column; gap: 1.25rem; width: 22rem; flex-shrink: 0; padding-top: 2.75rem;">
+      <p style="font-family: 'Inter', sans-serif; font-size: 1.375rem; line-height: 1.55; color: #ddd8d0; margin: 0; font-style: italic;">"Have you been enjoying your job more or less since adopting AI tools?"</p>
+      <p style="font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; margin: 0; line-height: 1.5;"><a href="https://x.com/lennysan/status/2020266745722991051" target="_blank">— Lenny Rachitsky / x.com/lennysan</a></p>
+    </div>
+
+  </div>
+
+  <aside class="notes">Lenny Rachitsky ran three separate X polls: "Have you been enjoying your job more or less since adopting AI tools?"
+Engineers: 72.2% more, 10.7% less, 17.1% no change.
+PMs: 70.2% more, 11.1% less, 18.7% no change.
+Designers: 55.0% more, 18.2% less, 26.8% no change.
+
+The designer number is the one worth naming out loud. Engineers and PMs are a headline - but designers are meaningfully different. 18.2% saying less is not noise.
+Don't editorialize too much here. Just let the gap land. Your audience is mostly designers - they'll feel it.
+Transition: "So something is different about how this shift is hitting our discipline. That's partly what this talk is about."</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="is-the-design-process-dead">Is the design process dead?</h2>
+  <p>I wrote about this in 2024: <em><a href="https://erikvanek.com/is-coding-dead/" target="_blank" rel="noopener">"Is Coding Dead? A LLM-assisted prototyping case study"</a></em></p>
+  <ul>
+    <li>AI amplifies existing skills - it does not replace them</li>
+    <li>Human oversight stays essential throughout</li>
+    <li>Prompt quality is itself a craft skill</li>
+    <li>Best practices are emerging, but the process isn't dead</li>
+  </ul>
+  <aside class="notes">Rhetorical question - but grounded in something real. The article explored AI-assisted prototyping: 30-minute card-sorting prototype, no developer, just Claude. Key finding: AI amplifies existing skills rather than replacing them. Human oversight stays essential. Prompt quality matters. NNg says design process isn't dead - and I agree. But "not dead" and "unchanged" are very different things.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="what-emhasem-changed">What <em>has</em> changed</h2>
+  <ul>
+    <li>Writing standard software is a solved problem
+      <ul>
+        <li>BAU dashboards, reports, forms: done</li>
+      </ul>
+    </li>
+    <li>Execution cost of coding is collapsing</li>
+    <li>SaaS is under pressure</li>
+    <li>Tech's golden cage is opening - and shutting for some</li>
+  </ul>
+  <aside class="notes">"Garbage in, garbage out" - if your knowledge base is a mess, AI won't save you. The inconsistency you've been tolerating becomes a structural problem. The sooner you curate for machines, the sooner new types of value for humans can emerge.</aside>
+</section>
+
+<section class="layout-quote">
+  <h2 id="what-emwontem-change-soon">What <em>won't</em> change soon</h2>
+  <ul>
+    <li>Doing <strong>the right thing</strong>
+      <ul>
+        <li>Not just doing things right</li>
+      </ul>
+    </li>
+    <li>Human emotions, aspirations, frustrations</li>
+    <li>The value of face time</li>
+    <li>Being humane to each other</li>
+  </ul>
+  <div class="quote-block">
+    <blockquote>"If it becomes easier to make more things, it also becomes easier to make the wrong things."</blockquote>
+    <cite>— Karri Saarinen</cite>
+  </div>
+  <aside class="notes">This is where design lives. Not in the execution layer - in the judgment layer. That's not going away.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="designers-are-masters-of-process">Designers are masters of process</h2>
+  <ul>
+    <li>Enormous opportunity to shape <em>how</em> experiences are delivered</li>
+    <li>Own the full journey - from user need to shipped experience</li>
+    <li>Orchestrate workflows, don't just execute tasks</li>
+    <li>Don't be afraid to take the lead here</li>
+  </ul>
+  <aside class="notes">The people who understand the full journey - discovery to delivery - are exactly what's needed to orchestrate these new workflows. That's you. If a tool can spin up a decent brand manual in an hour, what's the value proposition for commodity design work? The opportunity is on the other end: designers are masters of process. That's enormously valuable right now. Don't run from the change - shape it.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="today-two-concrete-examples">Today: two concrete examples</h2>
+  <div class="cols">
+    <div>
+      <p><strong>Demo 1 - Discovery</strong></p>
+      <ul>
+        <li>AI-assisted qualitative research</li>
+        <li>From brain dump to research plan</li>
+        <li>Coding transcripts and synthesis</li>
+        <li>Making research accessible to the team</li>
+      </ul>
+    </div>
+    <div>
+      <p><strong>Demo 2 - Delivery</strong></p>
+      <ul>
+        <li>Code-first prototyping</li>
+        <li>Spec - PR - preview in one loop</li>
+        <li>Handover in text and code</li>
+        <li>Source of truth that doesn't drift</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">Double diamond structure - one demo per diamond. Both are from real projects, not invented for the talk. Say here: "These are side projects - the majority of my work is under NDA, so I can't show it publicly."</aside>
+</section>
+
+
+<!-- ─── PART 1: DISCOVERY ─── -->
+
+<section class="layout-section-break">
+  <p class="section-label">Part 1</p>
+  <h1 id="discovery">Discovery</h1>
+  <div class="section-rule"></div>
+  <aside class="notes">Take a breath. Shift gears. "Let me show you how my research practice has changed."</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="bydlo">Bydlo</h2>
+  <div class="cols cols--70-30">
+    <div>
+      <ul>
+        <li>Started with my friend Franta</li>
+        <li>Freelance marketplace for architects and interior designers</li>
+        <li>One-off consultations · smaller contracts · new leads</li>
+        <li>Side project - most client work is NDA-protected</li>
+        <li>How does research on something like this actually start?</li>
+      </ul>
+    </div>
+    <figure style="display: flex; align-items: flex-start; justify-content: center;">
+      <img src="../../assets/images/bydlo-mobile.png" alt="Mobile screenshot of the Bydlo app - freelance marketplace for architects and interior designers" style="height: 110%; width: auto; max-width: 110%; object-fit: contain; object-position: top center;">
+    </figure>
+  </div>
+  <aside class="notes">My partner is an architect. I'm around a lot of people from that world. A friend noticed a gap - how do architects find smaller, flexible gigs? Walk the audience through the full research workflow step by step.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="step-1-the-brain-dump">Step 1: The brain dump</h2>
+  <ul>
+    <li>Walk outside</li>
+    <li>Think aloud - pile thoughts on top of each other</li>
+    <li>Don't structure yet. Let it be messy.</li>
+    <li>Brad Frost calls this "mouth coding"
+      <ul>
+        <li><a href="https://bradfrost.com/blog/post/mouth-coding/" target="_blank" rel="noopener">bradfrost.com/blog/post/mouth-coding/</a></li>
+      </ul>
+    </li>
+  </ul>
+  <aside class="notes">I recorded myself thinking through the scope of this project on a walk - dog interruptions, unfinished sentences, mid-thought redirects. The AI listened, didn't lose patience, captured what mattered. What you get from this: project scope, initial hunches, open questions, what you already know vs. what you need to find out. And yes - this entire presentation started exactly this way.
+
+Brad Frost recently coined "mouth coding" for the same idea - talking interfaces into existence through live conversation with AI. I call it the brain dump method. Same instinct: speak first, structure later.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="step-2-connect-your-second-brain">Step 2: Connect your second brain</h2>
+  <div class="cols">
+    <div>
+      <ul>
+        <li><strong>MCP</strong> - a universal tool connector
+          <ul>
+            <li>Lets your LLM talk to external tools and data sources</li>
+            <li>Think of it as a USB port for context</li>
+          </ul>
+        </li>
+        <li>Connect once - "80/20 head start" on every project</li>
+      </ul>
+    </div>
+    <!-- custom-svg: MCP diagram — designed in Paper, do not replace with Mermaid -->
+    <svg viewBox="0 0 500 260" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+      <defs>
+        <marker id="mcp-tip" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="#7a7060" />
+        </marker>
+      </defs>
+      <path d="M 160,65 C 260,65 310,118 385,118" fill="none" stroke="#3a342c" stroke-width="1.5" marker-end="url(#mcp-tip)" />
+      <path d="M 160,130 C 295,130 310,130 383,130" fill="none" stroke="#3a342c" stroke-width="1.5" marker-end="url(#mcp-tip)" />
+      <path d="M 160,195 C 260,195 310,142 385,142" fill="none" stroke="#3a342c" stroke-width="1.5" marker-end="url(#mcp-tip)" />
+      <rect x="0" y="41" width="160" height="48" rx="8" fill="#252019" stroke="#46403a" stroke-width="1" />
+      <text x="80" y="70" font-family="Space Grotesk" font-size="15" font-weight="500" fill="#ddd8d0" text-anchor="middle">Obsidian</text>
+      <rect x="0" y="106" width="160" height="48" rx="8" fill="#252019" stroke="#46403a" stroke-width="1" />
+      <text x="80" y="135" font-family="Space Grotesk" font-size="15" font-weight="500" fill="#ddd8d0" text-anchor="middle">Google Drive</text>
+      <rect x="0" y="171" width="160" height="48" rx="8" fill="#252019" stroke="#46403a" stroke-width="1" />
+      <text x="80" y="200" font-family="Space Grotesk" font-size="15" font-weight="500" fill="#ddd8d0" text-anchor="middle">Paper.design</text>
+      <rect x="258" y="83.5" width="48" height="17" rx="8.5" fill="#ddd8d0" />
+      <text x="282" y="95" font-family="Inter" font-size="9" font-weight="700" fill="#2a251e" text-anchor="middle" letter-spacing="0.14em">MCP</text>
+      <rect x="248" y="121.5" width="48" height="17" rx="8.5" fill="#ddd8d0" />
+      <text x="272" y="133" font-family="Inter" font-size="9" font-weight="700" fill="#2a251e" text-anchor="middle" letter-spacing="0.14em">MCP</text>
+      <rect x="258" y="160.5" width="48" height="17" rx="8.5" fill="#ddd8d0" />
+      <text x="282" y="172" font-family="Inter" font-size="9" font-weight="700" fill="#2a251e" text-anchor="middle" letter-spacing="0.14em">MCP</text>
+      <circle cx="435" cy="130" r="52" fill="#e8a030" />
+      <text x="435" y="136" font-family="Space Grotesk" font-size="16" font-weight="700" fill="#1c1812" text-anchor="middle">Claude</text>
+    </svg>
+  </div>
+  <aside class="notes">MCP stands for Model Context Protocol - Anthropic open-sourced it, now the whole industry uses it. The simplest way to explain it: it's a universal tool connector. Like a USB port - one standard, anything can plug in. Your LLM stays the same; you just keep adding tools.
+
+My notes in Obsidian are connected via MCP. Before a single interview, the AI can already help draft a research objective, spot gaps in the brief, sketch stakeholder mapping, pitch recruiting criteria - because my accumulated knowledge from past projects is right there as active input, not a passive archive. Book highlights, method notes, past reflections, all of it. This is what I mean by curating for machines: the sooner your notes are structured for it, the more useful they become at project kickoff.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="this-is-context-engineering">This is context engineering</h2>
+  <ul>
+    <li>MCP connection = directing the agent toward <strong>your</strong> accumulated knowledge</li>
+    <li>Not the internet's average. Yours.</li>
+    <li>Output quality reflects your craft - your biases, your blind spots</li>
+    <li>Even a messy vault beats none - directionality matters, not perfection</li>
+  </ul>
+  <aside class="notes">People talk a lot about "context engineering" - this is what it looks like in practice. When you connect to your second brain, you're not just giving the AI more data. You're biasing it toward your way of thinking, your prior work, your craft. The output reflects that.
+
+My vault is chaotic. I don't maintain it religiously. It's tilted - heavy in some areas, almost empty in others. It still works. The point isn't a perfect knowledge base - it's directionality.
+
+Honest constraint: where my notes are thin (strategy, business framing), the AI reflects that gap. Knowing it lets you work with it intentionally rather than being surprised by it.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="pick-what-fits-your-setup">Pick what fits your setup</h2>
+  <ul>
+    <li>Notion · Google Drive · Confluence · a shared folder</li>
+    <li>Whatever you have, are allowed to use, or actually like</li>
+    <li>I use Obsidian
+      <ul>
+        <li>plain text, vendor-agnostic, backlinks help agents connect the dots</li>
+      </ul>
+    </li>
+    <li>The tool choice is secondary.</li>
+  </ul>
+  <aside class="notes">The tool is secondary. What matters is that your context is somewhere the agent can reach it.
+
+Why I use Obsidian: it's plain text - vendor-agnostic, works with any tool now or five years from now. Simple frontmatter metadata, easy to maintain, easy for agents to parse. And linking - I think this one actually matters, though I'm not certain. When you ask the agent to look up "how to write a good research plan," it doesn't just find that note. It follows the links: research plan - research goals - research questions - interview groups - qualitative research - case studies. It traverses the conceptual graph you've already built, rather than treating everything as a flat pile of documents.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="now-you-have-a-plan">Now you have a plan</h2>
+  <ul>
+    <li>Research objective</li>
+    <li>Interview script - with <em>"pause here, go deeper"</em> instructions baked in</li>
+    <li>Recruitment criteria</li>
+    <li>Stakeholder map</li>
+    <li>All in markdown. In a shared repo.</li>
+  </ul>
+  <aside class="notes">Anyone on the team can read it. Any AI tool can query it. No tool license required. This is also the foundation of the client-empowerment story coming up - high-quality artifacts let non-researchers run sessions without you. The script quality is what made that work.</aside>
+</section>
+
+<section class="layout-quote">
+  <blockquote>"Talk me through the last time X happened..."</blockquote>
+  <aside class="notes">This part doesn't change. You still need to sit with people and listen. What changes is the quality of your preparation - which makes sessions more focused, higher signal, and easier for others to replicate if needed.</aside>
+</section>
+
+<section class="layout-transcripts-stack">
+  <h2 id="now-you-have-transcripts">Now you have transcripts</h2>
+  <div class="subtitle">How modern tooling accelerates the messy middle</div>
+
+  <div class="visual-container">
+    <div class="transcripts-stack-container">
+      <!-- Bottom Sheet -->
+      <div class="transcript-paper" style="top: 40px; left: 0; transform: rotate(-4deg);">
+        <div class="paper-line" style="width: 60%;"></div>
+        <div class="paper-line" style="width: 90%;"></div>
+        <div class="paper-line" style="width: 85%;"></div>
+        <div class="paper-line highlight" style="width: 40%;"></div>
+        <div class="paper-line" style="width: 95%;"></div>
+      </div>
+      <!-- Middle Sheet -->
+      <div class="transcript-paper" style="top: 20px; left: 40px; transform: rotate(2deg);">
+        <div class="paper-line" style="width: 70%;"></div>
+        <div class="paper-line highlight" style="width: 30%;"></div>
+        <div class="paper-line" style="width: 80%;"></div>
+        <div class="paper-line" style="width: 90%;"></div>
+        <div class="paper-line" style="width: 65%;"></div>
+      </div>
+      <!-- Top Sheet -->
+      <div class="transcript-paper top" style="top: 0; left: 80px; transform: rotate(-1deg);">
+        <div class="paper-line" style="width: 60%; background: #1c1812; height: 10px; margin-bottom: 8px;"></div>
+        <div class="paper-line" style="width: 100%;"></div>
+        <div class="paper-line" style="width: 100%;"></div>
+        <div class="paper-line highlight" style="width: 70%;"></div>
+        <div class="paper-line" style="width: 100%;"></div>
+        <div class="paper-line highlight" style="width: 40%;"></div>
+        <div class="paper-line" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- Progress List -->
+    <div class="progress-list">
+      <div class="progress-header">Discovery data sense-making</div>
+      <div class="progress-items">
+        <div class="progress-item">
+          <div class="checkbox"><span>✓</span></div>
+          <span class="item-text done">Brain dump</span>
+        </div>
+        <div class="progress-item">
+          <div class="checkbox"><span>✓</span></div>
+          <span class="item-text done">Research plan</span>
+        </div>
+        <div class="progress-item">
+          <div class="checkbox"><span>✓</span></div>
+          <span class="item-text done">Interview script</span>
+        </div>
+        <div class="progress-item">
+          <div class="checkbox"><span>✓</span></div>
+          <span class="item-text done">Interviews conducted</span>
+        </div>
+        <div class="progress-item">
+          <div class="checkbox"><span>✓</span></div>
+          <span class="item-text done">Transcripts generated</span>
+        </div>
+        <div class="progress-item">
+          <div class="checkbox pending"><div style="width: 6px; height: 6px; border-radius: 3px; background: var(--dim);"></div></div>
+          <span class="item-text">Crafting insights</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="notes">AI accelerated four transitions to get you here: plan, script, codes, synthesis. The middle part - sitting with people, listening, reading transcripts - stays entirely human. Direction and judgment are yours throughout.
+
+This is the moment where most researchers either: (a) open Dovetail/Condens and spend hours, or (b) skim and form intuitions too fast. There's a better path - and this is where the demo starts.</aside>
+</section>
+
+<section class="layout-quote">
+  <blockquote>"Here are my transcripts. What are the themes?"</blockquote>
+  <aside class="notes">This is the YOLO prompt. You get something back. It looks structured. It's often slop. The categories are obvious, the nuance is gone, and you can't trust it because you didn't guide it. Garbage in, garbage out - at the synthesis stage too.</aside>
+</section>
+
+<section class="layout-quote">
+  <h2 id="my-way-to-code">My way to code</h2>
+  <ul>
+    <li>Write 4-5 codes yourself first - give the AI a starting direction</li>
+    <li>"Here are my initial codes. Here's my research objective. Generate a full codebook."</li>
+    <li>Iterate until solid. Then hand over the transcripts.</li>
+  </ul>
+  <div class="quote-block">
+    <blockquote>"Here are my transcripts. Here's the codebook. Code these."</blockquote>
+  </div>
+  <aside class="notes">Step 1: Write 4-5 codes yourself before touching the AI. Force yourself to read one or two transcripts, form some initial impressions, name them. A good starting direction produces dramatically better results.
+Step 2: AI generates codebook collaboratively. You're reviewing, pushing back, refining - not just delegating.
+Step 3: Hand over the transcripts with the codebook. Like printing them out, highlighting, cutting into chunks, posting on a wall - except it takes minutes.
+1 hour of interview = traditionally 1-2 hours of analysis. Now it's a coffee break. That's not a marginal improvement - it's a category change.</aside>
+</section>
+
+<section class="layout-statement">
+  <h1 id="walk-away-come-back-with-fresh-eyes">Walk away. Come back with fresh eyes.</h1>
+  <aside class="notes">Every major milestone in this process - codes in, codes out; transcripts in, coded data out - is a natural moment to step back. Don't immediately synthesize. Let it settle. Sleep on it. This is where human judgment matters most, and you can't rush it.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="now-synthesize">Now synthesize</h2>
+  <ul>
+    <li>You have coded data. Now what?</li>
+    <li>Feed your notes on <em>what good synthesis looks like</em> alongside the coded data</li>
+    <li>"I saw this" + "I know this" = insight</li>
+    <li>The AI handles the pattern. You bring the judgment.</li>
+    <li>MCP reconnects your research methodology knowledge to the process</li>
+  </ul>
+  <aside class="notes">This is the second moment where your second brain becomes active. First it helped you plan - research objective, recruiting criteria. Now it helps you make sense of what you found. Feed the coded data alongside your notes on insight anatomy, what makes a finding vs. an observation, how to tell a research story. The output is calibrated by your craft knowledge, not just pattern-matched from the transcripts. The circle closes: second brain - project head start - research - coding - synthesis guided by second brain again.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="a-word-on-model-quality">A word on model quality</h2>
+  <p style="color: var(--dim); font-style: italic;">[Placeholder - side-by-side real coding excerpt screenshots coming]</p>
+  <aside class="notes">The difference is visible - not in whether they respond, but in how they handle nuance, ambiguity, edge cases. Simple tasks: lightweight model. Daily work: mid-tier. Something genuinely hard - deduplication logic, complex synthesis, a tricky design decision? Go to the best model. Same prompt, same transcript. The gap shows up in code quality and depth. Opus codes carry more analytical load - they're interpretations, not just labels.</aside>
+</section>
+
+<section class="layout-demo">
+  <div class="demo-badge"><span>Live demo</span></div>
+  <h2 id="demo-1">Demo 1</h2>
+  <p><strong>Qualitative coding · live</strong></p>
+  <aside class="notes">Run the demo here. Walk through:
+1. Show the research plan and transcripts
+2. Show your pre-written codes
+3. Show the AI generating the codebook collaboratively
+4. Hand over transcripts for coding
+5. Show synthesis phase using second brain notes
+Optional: Opus vs Sonnet comparison on one coding task.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="three-wins-from-this-workflow">Three wins from this workflow</h2>
+  <div class="quote-block" style="margin-top: 2rem;">
+    <blockquote>I call it <strong>data accessibility</strong></blockquote>
+  </div>
+  <aside class="notes">Transition to the democratization section. These are three real stories, three different contexts.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="win-1-the-team-can-query-the-research">Win 1: The team can query the research</h2>
+  <ul>
+    <li>Markdown files in a shared repo</li>
+    <li>Anyone can point their AI tool at it and get up to speed</li>
+    <li>No license required. No gatekeeper. Researcher stops being the bottleneck.</li>
+  </ul>
+  <aside class="notes">No Dovetail license required. No gatekeeper. A developer, a PM, a new team member - they can ask questions, get context, understand what was found. The researcher stops being the bottleneck.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="win-2-the-client-ran-the-sessions">Win 2: The client ran the sessions</h2>
+  <ul>
+    <li>High-quality prep artifacts - non-researchers facilitated onboarding</li>
+    <li>Script with built-in "pause here, go deeper" prompts</li>
+    <li>Client's managers ran more than half the sessions themselves</li>
+  </ul>
+  <aside class="notes">Real story: I prepared a script, a brief, an accompanying presentation for onboarding sessions with an LLM-based product. I expected to run all 10 sessions. The client's managers volunteered. The script had built-in "pause here, go deeper" prompts. They handled more than half. They built empathy with their own direct reports. This wouldn't have worked with sloppy prep.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="win-3-ditch-the-tool">Win 3: Ditch the tool</h2>
+  <ul>
+    <li>PM/CEO colleague: tried Dovetail for a week, too steep a learning curve</li>
+    <li>Switched to plain text + LLM</li>
+    <li>Time saved went straight into strategy and pivots</li>
+  </ul>
+  <aside class="notes">The "proper" research tool was the obstacle. The simpler approach freed up time for higher-value conversations. This loops back to the slop warning - the reason this worked is that the plain text artifacts were good. Easily readable, well-structured, trustworthy.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="you-are-the-gatekeeper">You are the gatekeeper.</h2>
+  <ul>
+    <li>Slop is easy to generate. Easy to spot. Hard to undo.</li>
+    <li>It's a risk to your professional reputation.</li>
+    <li>Don't ship it if you don't like it.</li>
+  </ul>
+  <aside class="notes">Say this directly. "I have to say this because I've seen it. The tooling makes it trivially easy to produce mediocre output and ship it without thinking. That's a professional reputation risk. If you wouldn't put your name on it without the AI, don't put your name on it with it."</aside>
+</section>
+
+
+<!-- ─── PART 2: DELIVERY ─── -->
+
+<section class="layout-section-break">
+  <p class="section-label">Part 2</p>
+  <h1 id="delivery">Delivery</h1>
+  <div class="section-rule"></div>
+  <aside class="notes">Second diamond. Shift from research/synthesis to prototyping and handover.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="the-context">The context</h2>
+  <div class="cols" style="align-items:stretch;">
+    <div>
+      <p>My landlord sold the flat.</p>
+      <p>4+ months to find a new place.</p>
+      <p>I hate the noise of rental portals.</p>
+    </div>
+    <figure style="display:flex; flex-direction:column; min-height:0; margin:0;">
+      <img src="../../assets/images/teo-new.jpg" alt="Close-up of a whippet dog staring intently at the camera" style="flex:1; min-height:0; width:100%; object-fit:cover; object-position:center top; border-radius:4px;">
+      <figcaption>How do you filter for this fella? Rental portals don't let you.</figcaption>
+    </figure>
+  </div>
+  <aside class="notes">The apartment search is miserable - spam, missed listings, WhatsApp link-ping-pong with my partner. And rental portals don't even let you filter for dogs - which eliminates a third to a half of listings for us. So I built a tool.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="what-i-built">What I built</h2>
+  <ul>
+    <li>Scrapes listings from real estate portals</li>
+    <li>Scores on hard attributes (area, size, price) and soft ones (dog-friendly, extracted from descriptions)</li>
+    <li>Notifies both of us when a listing passes the threshold</li>
+    <li>Each of us ranks independently - hot or not</li>
+    <li>Match - book a viewing</li>
+  </ul>
+  <aside class="notes">No more sending links over WhatsApp. No more "did you see that one?" conversations. The tool does the filtering; we just respond to what passes. It's essentially Tinder for apartments - or agile retrospective voting, if you prefer that metaphor.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="the-prototyping-workflow">The prototyping workflow</h2>
+  <ol>
+    <li>Write the spec in a GitHub issue</li>
+    <li>Send Claude to implement it</li>
+    <li>PR created on GitHub, reviewed by Copilot</li>
+    <li>Preview auto-deployed, tests run</li>
+    <li>Ship if it's good</li>
+  </ol>
+  <aside class="notes">The spec lives in a GitHub issue - plain text, no special format. Claude picks it up, implements it, opens a PR. Copilot reviews the PR. A preview URL is auto-deployed so you can click through it before merging. Tests run in CI. No Figma. No back-and-forth with a developer. Source of truth stays in code.</aside>
+</section>
+
+<section class="layout-quote">
+  <p>Sunday morning. My partner over coffee.</p>
+  <blockquote>"Honey, I wish there was an image carousel so I can quickly glance through before diving in fully..."</blockquote>
+  <aside class="notes">That's the moment that crystallised it for me. Not "I'm fast" - but "the feedback loop collapsed to a single conversation." She expressed a need. I described it to Claude Code. It built it, created a PR, the preview auto-deployed. I showed her the link. She approved it. Feature shipped. That's a fundamentally different way of working.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="the-infra-looks-heavier-than-it-is">The infra looks heavier than it is</h2>
+  <ul>
+    <li>PR auto-previews</li>
+    <li>Git workflow</li>
+    <li>MCP server connections
+      <ul>
+        <li>One-time setup - 1-2 hours for someone technical</li>
+      </ul>
+    </li>
+  </ul>
+  <aside class="notes">I know it can look intimidating from the outside. But the heavy lifting is done once, and usually by someone who already knows how. After that, it just works. Don't let the initial complexity stop you from asking your favourite engineer for an afternoon.</aside>
+</section>
+
+<section class="layout-demo">
+  <div class="demo-badge"><span>Live demo</span></div>
+  <h2 id="demo-2">Demo 2</h2>
+  <p><strong>Paper.design MCP connector · live</strong></p>
+  <aside class="notes">Show the Paper.design MCP connected to the rental tool codebase.
+Walk through:
+1. Describe a UI change in text
+2. Watch it build and create a PR
+3. Check the preview
+4. Discuss what would come next
+Reference the Michael Riddering LinkedIn post here - "someone described this better than I can" - show the post briefly.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="github-speckit">GitHub SpecKit</h2>
+  <ul>
+    <li>Learn a mental model of GitHub - it's not hard</li>
+    <li>Ask your favourite engineer for 30 minutes - they'll probably love explaining it</li>
+    <li>Discovery - findings in markdown - SpecKit - engineering handoff</li>
+    <li>SpecKit is not a silver bullet - even plain "plan mode" in Claude could help a lot</li>
+  </ul>
+  <aside class="notes">Figma is great. But when the source of truth lives in a design tool, it diverges from what's actually built. Text and code don't diverge in the same way - they are what's running. SpecKit is GitHub's tool for specifying features and products. After research synthesis, I use it to formalise what we learned into specs, then hand off to engineering with a shared reference point. The conversation between design and engineering becomes less "here's a Figma link" and more "here's what we know, here's what we're building, here's why."</aside>
+</section>
+
+
+<!-- ─── PART 3: DESIGN BEYOND SCREENS ─── -->
+
+<section class="layout-section-break">
+  <p class="section-label">Part 3</p>
+  <h1 id="design-beyond-screens">Design beyond screens</h1>
+  <div class="section-rule"></div>
+  <aside class="notes">Brief section. Shift in tone - broader lens.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="preschool-childcare-service">Preschool childcare service</h2>
+  <div class="cols">
+    <div>
+      <ul>
+        <li>Startup died - didn't want to build another CRM</li>
+        <li>Picked a domain I knew nothing about</li>
+        <li>Designed a preschool childcare service</li>
+        <li>Won a medal for it</li>
+      </ul>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.75rem; overflow:hidden; padding-bottom:24px;">
+      <img src="../../assets/images/preschool-play.jpg" alt="Sand toy figures in a kindergarten sandbox" style="flex:1; height:0; width:100%; object-fit:cover; border-radius:4px;">
+      <img src="../../assets/images/preschool-award.jpg" alt="Award team photo for preschool childcare service design" style="flex:1; height:0; width:100%; object-fit:cover; border-radius:4px;">
+    </div>
+  </div>
+  <aside class="notes">After the hydroponic farming startup ended, I deliberately picked a domain I knew nothing about. Childcare. No kids at the time, no expertise. The learning was enormous - and humbling. That's part of the point: design skills transfer. The domain is the variable.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="penitentiary-onboarding">Penitentiary onboarding</h2>
+  <div class="cols">
+    <div>
+      <ul>
+        <li>Helping people navigate entry into the prison system</li>
+        <li>One day late on paperwork - cycle of repeated offences</li>
+        <li>Design as a tool to break the recidivism cycle</li>
+      </ul>
+    </div>
+    <figure style="margin:8px -9rem -180px 0; overflow:visible;">
+      <img src="../../assets/images/penitentiary-workshop.jpg" alt="Workshop session mapping the pre-penitentiary client journey on a whiteboard" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:4px 0 0 4px;">
+    </figure>
+  </div>
+  <aside class="notes">The goal was to help people not fall through the cracks in the first days and weeks. Administrative confusion as a driver of recidivism. Design as a tool to break the cycle. This is service design in its most honest form.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="health-social-services">Health × social services</h2>
+  <div class="cols">
+    <div>
+      <ul>
+        <li>Jihomoravský kraj - intersection of health and social care</li>
+        <li>Social workers, health professionals, institutional silos</li>
+        <li>Used LLM tooling here too</li>
+      </ul>
+    </div>
+    <figure style="margin:0;">
+      <img src="../../assets/images/health-social-jarmilka.jpg" alt="Jarmilka - AI guide for navigating social and health services in Jihomoravský kraj" style="width:100%; height:100%; object-fit:cover; object-position:top center; border-radius:4px;">
+    </figure>
+  </div>
+  <aside class="notes">Real project with real complexity - social workers, health professionals, institutional silos. The same skills: research, facilitation, prototyping, structured thinking. With the added bonus of being able to process qualitative data faster than ever before.</aside>
+</section>
+
+<section class="layout-two-col">
+  <h2 id="innovative-teams-in-czech-public-services">Innovative teams in Czech public services</h2>
+  <div class="cols" style="align-items:stretch;">
+    <ul>
+      <li>Research with KISK FF MUNI (2024) - 14 interviews, 12 findings</li>
+      <li>How teams change public administration from the inside</li>
+      <li>Ideation workshop for 25 ministry secretaries (May 2025)</li>
+      <li>World Café format - highest state secretary Jindřich Fryč in the room</li>
+      <li><a href="https://www.inovacnitymystatnispravy.cz/">inovacnitymystatnispravy.cz</a></li>
+    </ul>
+    <figure style="margin:0; min-height:0; overflow:hidden;">
+      <img src="https://www.inovacnitymystatnispravy.cz/report-cover.png" alt="Research report cover - How do teams that change Czech public administration work? 12 key findings" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:4px;">
+    </figure>
+  </div>
+  <aside class="notes">Research team: Veronika Dufek, František Pfann, Johana Šperlová, Erik Vaněk - all from KISK FF MUNI. We ran hloubkové interviews during April 2024, 60-120 minutes each, mostly online. 12 findings grouped into three questions: how do successful teams function, under what circumstances do they form, and what enables them to transform the system. Key finding: success depends on strong leadership, shared vision, motivation, trust, and personal accountability. "Islands of positive deviance" in a sea of established rules.
+
+The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the research. 25 top managers including the highest state secretary. World Café format rotating through 3 themes: 1) Recruiting and retaining talent, 2) Learning teams, 3) Networking and relationships. Atmosphere was noticeably informal - people wrote first names on name tags instead of titles. That small detail set the tone for the whole day. People left with concrete "small steps" they could take the next day.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="people-doing-great-work-in-this-space">People doing great work in this space</h2>
+  <ul>
+    <li><strong>KISK❤️</strong> in Brno – MUNI department pioneering participative design</li>
+    <li><strong>Pabení</strong> agency - worth following</li>
+    <li><strong>Roman Hřebecký</strong> - go-to person for social innovation projects</li>
+    <li><strong>Zlín design week</strong> this weekend - come say hi in my hometown</li>
+    <li><strong>MPSIV</strong> - their innovation department, genuinely impressive</li>
+    <li><strong>Festival kreativní byrokracie</strong> in June - let's meet there!</li>
+  </ul>
+  <aside class="notes">If you're curious about social innovation design, start here. These are people and organisations doing it seriously.</aside>
+</section>
+
+<section class="layout-statement">
+  <h1 id="in-20-years-many-of-us-will-need-care">In 20 years, many of us will need care.</h1>
+  <p>Someone has to design that experience.</p>
+  <aside class="notes">Not a scare tactic - a genuine observation. If you're restless in digital product work, if you want problems that feel real, social innovation is worth exploring. The skills transfer. The problems are harder. The stakes are higher.</aside>
+</section>
+
+
+<!-- ─── CLOSING ─── -->
+
+<section class="layout-section-break">
+  <p class="section-label">Closing</p>
+  <h1 id="to-wrap-this-up">To wrap this up</h1>
+  <div class="section-rule"></div>
+  <aside class="notes"></aside>
+</section>
+
+<section class="layout-heading-body">
+  <p class="slide-eyebrow">Reframe</p>
+  <h2 id="1-challenge-im-not-a-technical-person">1. Challenge "I'm not a technical person"</h2>
+  <p>That's one way to look at it.</p>
+  <p>The other: approach it with curiosity. See how it works. Then connect two things together.</p>
+  <aside class="notes">You don't need to become an engineer. You need to be curious enough to ask. Your favourite engineer will probably love explaining it. You'll understand their world better. They'll understand yours.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <p class="slide-eyebrow">Iterate</p>
+  <h2 id="2-experiment-with-your-process">2. Experiment with your process</h2>
+  <p>What worked 6 months ago is already different.</p>
+  <aside class="notes">The tool landscape moves fast. Center around one major tool, connect things to it incrementally. Don't try to rebuild your whole workflow at once. Notice what's slow, what's frustrating, and see if there's a better path.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <p class="slide-eyebrow">Start now</p>
+  <h2 id="3-jump-on-to-proven-parts-soon">3. Jump on to proven parts soon</h2>
+  <p>The later you wait, the harder it gets.</p>
+  <p>No need to be an early adopter of 'that new thing' - but don't wait until it's too late.</p>
+  <aside class="notes">Not because you'll be left behind - though that's real - but because the learning compounds. Every week of practice with this stuff is a week of intuition built. Start now, even imperfectly.</aside>
+</section>
+
+<!-- slide-53.html — custom slide: "Thank you 🙏" — embedded verbatim -->
+<section style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+
+  <div style="display:flex; flex-direction:column; align-items:center; gap:40px; padding-bottom:48px;">
+    <div style="font-family:'Space Grotesk', sans-serif; font-size:96px; font-weight:700; color:#f0ece4; letter-spacing:-0.03em; line-height:1;">Thank you 🙏</div>
+    <div style="width:48px; height:2px; border-radius:1px; background-color:#e8a030;"></div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px;">
+
+    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
+      <span style="color:#5a4838;">erikvanek.com</span><span style="color:#f0ece4;">/ux-monday-26</span>
+    </div>
+
+    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
+      <span style="color:#5a4838;">erikvanek.com</span><span style="color:#f0ece4;">/bydlo</span>
+    </div>
+
+    <div style="width:32px; height:2px; border-radius:1px; background-color:#e8a030; margin-top:6px; margin-bottom:6px;"></div>
+
+    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
+      <span style="color:#f0ece4;">me@</span><span style="color:#5a4838;">erikvanek.com</span>
+    </div>
+
+    <div style="padding-top:4px;">
+      <span style="font-family:'Inter', sans-serif; font-size:14px; font-style:italic; font-weight:400; color:#968878; letter-spacing:0.02em; line-height:18px;">Let's meet or connect.</span>
+    </div>
+
+  </div>
+
+  <aside class="notes">Don't rush this slide. Take questions if there's time. You can add: "I've been partnering with Datamole on AI and data products over the last year and a half - happy to talk about that too if it's relevant to what you're working on."</aside>
+</section>
+
+    </div>
+    <div class="slide-footer"><span>erikvanek.com/ux-monday-26</span></div>
+  </div>
+
+  <script src="../../js/reveal.js"></script>
+  <script src="../../js/reveal-notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    Reveal.initialize({ center: false, hash: true, autoPlayMedia: true, plugins: [RevealNotes] });
+
+    mermaid.initialize({ startOnLoad: false, theme: 'base' });
+
+    function renderMermaidInSlide(slide) {
+      var nodes = Array.from(slide.querySelectorAll('.mermaid:not([data-processed])'));
+      if (nodes.length) { mermaid.run({ nodes: nodes }); }
+    }
+    Reveal.on('ready', function (event) { renderMermaidInSlide(event.currentSlide); });
+    Reveal.on('slidechanged', function (event) { renderMermaidInSlide(event.currentSlide); });
+
+    function updateFooter() {
+      var total = Reveal.getTotalSlides();
+      var index = Reveal.getState().indexh;
+      var footer = document.querySelector('.slide-footer');
+      if (footer) {
+        footer.style.display = (index === 0 || index === total - 1) ? 'flex' : 'none';
+      }
+    }
+    Reveal.on('ready', updateFooter);
+    Reveal.on('slidechanged', updateFooter);
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+- [Aalto NODUS group](https://www.aalto.fi/en/department-of-design/nodus-sustainable-design-research-group) — studies design solutions, business models, bottom-up initiatives and governance innovations for sustainability; transdisciplinary research and co-creative approaches
+- [NESTA](https://www.nesta.org.uk/)
+- [D.school Stanford](https://dschool.stanford.edu/)
+- [Snook](https://wearesnook.com/)

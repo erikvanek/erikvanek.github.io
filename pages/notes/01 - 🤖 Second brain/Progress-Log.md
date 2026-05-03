@@ -16,13 +16,68 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 ## Current State (update this section when resuming)
 
 **Last active**: 2026-03-05  
-**Current phase**: Phase 2 complete. Phase 3 ready to start.  
-**Blocking**: None.  
-**Next action**: Git commit, then begin Phase 3 — process `99 - 📄 To process` backlog.
+**Current phase**: Phase 3 complete. Phase 4 (weekly routine) ready to start.  
+**Blocking**: 9 binary files in `99 - 📄 To process` need manual moves in Finder (see below).  
+**Next action**: Manually move binary files, git commit, then begin Phase 4.
 
 ---
 
 ## Log Entries
+
+### 2026-03-05 — Phase 3 complete: 99 backlog processed
+**By**: Claude (session with Erik)
+
+**What happened**:
+All markdown content in `99 - 📄 To process` has been triaged and migrated. The folder now contains only binary files (PDFs, PNGs, XLSX) that cannot be moved via MCP — these need manual handling in Finder.
+
+**Subfolders processed**:
+- `design/` (~35 files) — fully reconciled against `Resources/Design/`; 17 migrated, 11 discarded (stubs/empty/superseded), 2 links merged into existing Prototyping.md
+- `JTBD/` (7 md + 5 PNGs) — all markdown migrated to `Resources/Product/JTBD/`; 5 images remain (manual move needed)
+- `Tools 1/` (7 md + scoresheet folder) — all markdown migrated to `Resources/Design/Tools/`; scoresheet XLSX+PDF remain (manual move needed)
+- `Knowledge/Design/Tools/` — only Nesta Playbook PDF remains (manual move needed)
+- All other subfolders (Lectures/, Planning/, Product Management/, Themes/, tools/) — fully processed
+
+**Root-level files** (35 files): all processed — ~25 migrated, ~10 discarded (empty/stub/stale/duplicate)
+
+**Key destinations**:
+- `Resources/Design/Concepts/` — Ability, Boundary objects, Buzzwords, Cone of possibilities, Design Thinking, Glossary, Humans, Indexing, Memory, Speculative design
+- `Resources/Design/Discovery/` — Calendly, Codebook, Customer research synthesis, Fake door tests, Interview Reflections/, Recruiting for research, Selective coding, Trauma informed research, Usability goals
+- `Resources/Design/Tools/` — Business model canvas, Business analysis, Design brief, Design tools, Journey maps, Persona, Service blueprint, System maps, Three horizons
+- `Resources/Design/` — Agencies, AI, AI-native design, Design checklist, Design competence, Design conferences, Design portfolios, Education, Institutions, People, Random finds, Reference links, Research through design, Service design, Working with clients
+- `Resources/Design/Activities/` — Design activities, Workshops
+- `Resources/Product/` — Agile, Navigating the corporate maze, Product risk taxonomy, Product teams, Risk management
+- `Resources/Product/JTBD/` — Activity-centered design, Competition, Growth, Measuring, Motivation, Value, Value proposition
+- `Resources/Technology/` — Human in the loop, MCP, Tools 2024
+- `Resources/Team/` — Company culture, Debriefing
+- `Resources/Personal Development/` — Learning techniques, Mindset, Personal effectiveness, Reflection
+- `Areas/Home/Recipes/` — Kuře (Czech recipe)
+- `Areas/Personal development/` — previously migrated in Phase 3 earlier (resume, experiences, travel)
+- `Resources/Learning/Courses/` — DESB42 Czech course notes
+
+**Discarded** (stub/empty/duplicate/stale):
+- design/: Design.md, Human-centered design.md, Double diamond.md, Ideation.md, VUCA world.md, Implementation.md, Good design.md, Social design.md, Design for public.md, Treninky.md, Design methods stubs, Walkthroughs (empty)
+- Root: Freelancing.md, Problem statements.md, Prompt engineering.md, Remote.md, System-Integration-README.md, feature.md
+- Product Management/: Navigating_Corporate_Maze.md + PM_Challenges_and_Strategies.md (duplicates of Lectures/ version)
+- Themes/: Measuring_Business_Value.md + Outcome_Driven_Product_Strategy.md (superseded by richer existing notes)
+
+**Binary files requiring manual move** (Finder):
+| File | Current location | Suggested destination |
+|------|-----------------|----------------------|
+| AFA Workshop Templates.pdf | `99/design/` | `Resources/Design/Tools/` |
+| Nesta Playbook.pdf | `99/Knowledge/Design/Tools/` | `Resources/Design/Tools/` |
+| TheMoment-ServiceDesignScorecard-Worksheet-V2.xlsx | `99/Tools 1/Design tools/Service design scoresheet/` | `Resources/Design/Tools/Service design scoresheet/` |
+| themoment_ServiceDesignScoresheetGuide_FINAL-1.pdf | `99/Tools 1/Design tools/Service design scoresheet/` | `Resources/Design/Tools/Service design scoresheet/` |
+| Pasted image 20241225133343.png | `99/JTBD/` | `Resources/Product/JTBD/` |
+| Pasted image 20241225134006.png | `99/JTBD/` | `Resources/Product/JTBD/` |
+| Pasted image 20241225134148.png | `99/JTBD/` | `Resources/Product/JTBD/` |
+| Pasted image 20241225134219.png | `99/JTBD/` | `Resources/Product/JTBD/` |
+| Pasted image 20241225134243.png | `99/JTBD/` | `Resources/Product/JTBD/` |
+
+**Vault changes**: ~100 files deleted from `99 - 📄 To process`, ~80 files created across Knowledge and Areas  
+**Git commit**: Not yet — commit after manual binary file moves  
+**Czech flags**: Workshops.md migrated as-is in Czech (workshop prep notes, minimal); Kuře.md migrated as Czech recipe to Areas/Home/Recipes/
+
+---
 
 ### 2026-03-05 — Phase 2 complete: interim knowledge absorbed
 **By**: Claude (session with Erik)  
@@ -37,31 +92,23 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 - `Design/Books/Hooked.md` → `Resources/Design/`
 - `Design/Books/TISDD.md` → `Resources/Design/`
 - `Design/Concepts/Prototyping.md` → `Resources/Design/Delivery/`
-- `Design/Methods/Lo-Fi_Prototyping_Methods.md` → `Resources/Design/Delivery/` (as "Lo-Fi Prototyping Methods.md")
+- `Design/Methods/Lo-Fi_Prototyping_Methods.md` → `Resources/Design/Delivery/`
 - `Design/Design Crit.md` → `Resources/Design/Activities/`
-- `Learning/Learning.md` → `Resources/Learning/` (as "Learning Techniques.md" — existing Learning.md has different content)
-- `ProductManagement/Books/Outcomes_over_Output.md` → `Resources/Product/` (as "Outcomes over Output.md")
+- `Learning/Learning.md` → `Resources/Learning/`
+- `ProductManagement/Books/Outcomes_over_Output.md` → `Resources/Product/`
 - `ProductManagement/Measuring Business Value.md` → `Resources/Product/`
 - `ProductManagement/Product Discovery.md` → `Resources/Design/Discovery/`
 - `Productivity/Eisenhower Matrix.md` → `Resources/Personal Development/`
 - `Productivity/Productivity.md` → `Resources/Personal Development/`
 - `Productivity/Second Brain.md` → `Resources/Personal Development/`
-- `Research/Books/The_Mom_Test.md` → `Resources/Design/Discovery/` (as "The Mom Test.md")
+- `Research/Books/The_Mom_Test.md` → `Resources/Design/Discovery/`
 - `Research/Qualitative Research.md` → `Resources/Design/Discovery/`
 
 **File routing — staged**:
-- `Design/UX_Customer_Experience.md` → `05 - 🌱 Staging/` (Czech — translate before migrating to Resources/Design/)
-
-**File routing — discarded**:
-- `Design/Design-MOC.md` — stale links to `02 - 📩 Inbox/` and `99 - 📄 To process/` paths
-- `Learning/Learning-MOC.md` — superseded by existing structure
-- `ProductManagement/ProductManagement-MOC.md` — superseded
-- `Productivity/Productivity-MOC.md` — superseded
-- `Research/Research-MOC.md` — superseded
+- `Design/UX_Customer_Experience.md` → `05 - 🌱 Staging/` (Czech — translate before migrating)
 
 **Vault changes**: 20 files deleted from interim knowledge, 14 files created in Knowledge, 1 file staged  
-**Git commit**: Not yet — commit now before starting Phase 3  
-**Czech flags**: UX Customer Experience.md staged in `05 - 🌱 Staging/`
+**Git commit**: Not yet
 
 ---
 
@@ -72,44 +119,21 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 - 15 notes migrated to `10 - 🧠 Knowledge`
 - 1 note staged in `05 - 🌱 Staging` (Facilitation.md)
 - 1 Czech note staged with flag (Krkonose-list.md)
-- 4 notes discarded (Jobs to be done, Product vision, Tldraw canvas, Untitled.base — all empty or junk)
+- 4 notes discarded (Jobs to be done, Product vision, Tldraw canvas, Untitled.base)
 - `Systemic design.md` merged into `System dynamics.md`, then discarded
-- Inbox is now empty
 
-**File routing — migrated**:
-- `Ethics in design.md` → `Resources/Design/Principles/`
-- `Manifestos.md` → `Resources/Design/Principles/`
-- `Random.md` → `Resources/Design/Principles/` (as "Random design insights.md")
-- `The Story Is Everything.md` → `Resources/Design/Storytelling/`
-- `Business case.md` → `Resources/Design/Storytelling/`
-- `Design research goals.md` → `Resources/Design/Discovery/`
-- `Value proposition canvas.md` → `Resources/Design/Discovery/`
-- `Iteration.md` → `Resources/Design/Delivery/`
-- `System dynamics.md` + `Systemic design.md` → `Resources/Design/Systems thinking/` (merged, new subfolder)
-- `Hyperfocus.md` → `Resources/Learning/`
-- `Liminal Thinking.md` → `Resources/Learning/`
-- `Evals.md` → `Resources/Technology/`
-- `New product.md` → `Resources/Product/`
-- `Busy culture.md` → `Resources/Product/`
-- `Product market fit.md` → `Resources/Product/`
+**File routing — migrated**: Ethics in design, Manifestos, Random design insights, The Story Is Everything, Business case, Design research goals, Value proposition canvas, Iteration, System dynamics (+ Systemic design merged), Hyperfocus, Liminal Thinking, Evals, New product, Busy culture, Product market fit
 
 **Vault changes**: 22 files deleted from Inbox, 17 files created across Knowledge + Staging  
-**Git commit**: Not yet — commit now before starting Phase 2
+**Git commit**: Not yet
 
 ---
 
 ### 2026-03-04 — Phase 0 complete: structure set up
 **By**: Claude (session with Erik)  
 **What happened**:
-- Created `05 - 🌱 Staging/README.md` (new incubation layer)
-- Restructured `10 - 🧠 Knowledge/2 - 🌱 Areas`:
-  - Created `Product & Design practice` (4 files from old `Freelance design practice`)
-  - Created `Personal development` (10 files from old `Continuous improvement`)
-  - Created `Teaching & Lecturing` (empty, Index.md only)
-  - Created `Nonprofit design` (empty, Index.md only)
-  - Deleted `Continuous improvement` folder (all content migrated)
-  - Deleted `Freelance design practice` folder (all content migrated)
-  - Kept `Cooking and fermentation` and `Home` as-is
+- Created `05 - 🌱 Staging/README.md`
+- Restructured `10 - 🧠 Knowledge/2 - 🌱 Areas`: created Product & Design practice, Personal development, Teaching & Lecturing, Nonprofit design; deleted Continuous improvement and Freelance design practice
 
 **Vault changes**: 2 folders removed, 4 folders created, 14 files relocated, 1 new top-level folder  
 **Git commit**: Committed by Erik after Phase 0
@@ -119,13 +143,11 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 ### 2026-03-04 — Strategy and documentation created
 **By**: Claude (dialogue with Erik)  
 **What happened**:
-- Full vault analysis completed using Obsidian MCP
-- Diagnosed three eras of stranded content (`02 - Inbox`, `11 - interim knowledge`, `99 - To process`)
-- Agreed on revised Areas structure (DEC-001 through DEC-010)
-- Created [[Revival-Strategy]], [[Decision-Log]], [[Progress-Log]]
+- Full vault analysis, agreed on Areas structure (DEC-001 through DEC-010)
+- Created Revival-Strategy, Decision-Log, Progress-Log
 
 **Vault changes**: 3 new files in `01 - 🤖 Second brain/`  
-**Git commit**: Clean baseline committed by Erik before this session
+**Git commit**: Clean baseline committed by Erik
 
 ---
 
@@ -136,7 +158,7 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 | 0 | Structure setup | ✅ Complete | 2026-03-04 |
 | 1 | Process Inbox | ✅ Complete | 2026-03-04 |
 | 2 | Absorb interim knowledge | ✅ Complete | 2026-03-05 |
-| 3 | Process 99 backlog | ⬜ Not started | — |
+| 3 | Process 99 backlog | ✅ Complete (9 binary files need manual move) | 2026-03-05 |
 | 4 | Build weekly routine | ⬜ Not started | — |
 | 5 | Build agent skills | ⬜ Not started | — |
 
@@ -144,12 +166,12 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 
 ## Czech Content Tracker
 
-Notes identified as Czech-language. Human decision required for each: translate, keep as-is, or discard.
-
 | File | Location | Proposed action | Decision |
 |------|----------|----------------|---------|
-| Krkonose-list.md | `05 - 🌱 Staging/` | Translate to English + move to personal checklists, or keep as-is | Pending |
-| UX Customer Experience.md | `05 - 🌱 Staging/` | Translate to English + migrate to `Resources/Design/` | Pending |
+| Krkonose-list.md | `05 - 🌱 Staging/` | Translate or keep as-is in personal checklists | Pending |
+| UX Customer Experience.md | `05 - 🌱 Staging/` | Translate + migrate to `Resources/Design/` | Pending |
+| Workshops.md | `Resources/Design/Activities/` | Minimal Czech prep notes — translate when expanding | Pending |
+| Kuře.md | `Areas/Home/Recipes/` | Czech recipe — keep as-is | Done |
 
 ---
 

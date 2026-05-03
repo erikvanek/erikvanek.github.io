@@ -1,8 +1,0 @@
-- [ ] montpáky
-- [ ] duše
-- [ ] pumpička
-- [ ] blikačka
-- [ ] světlo
-- [ ] tyče
-- [ ] brýle
-- [ ] hroznový cukr

@@ -90,3 +90,5 @@ Prototyping serves as a bridge between conceptual models (the interface people i
 
 ## Resources
 - [IDEO: The Secret Power of Prototyping](https://www.ideo.com/journal/the-secret-power-of-prototyping)
+- [Nesta Prototyping Framework](https://media.nesta.org.uk/documents/prototyping_framework.pdf) — comprehensive guide
+- [Whittington pharmacy service design prototype](https://bruno.hannibaltaylor.com/whittington-hospital/) — real-life service design case study

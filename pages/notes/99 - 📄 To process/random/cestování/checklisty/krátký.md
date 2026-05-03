@@ -1,1 +1,0 @@
-- [ ] jakej nejmenší batoh mi na výlet stačí?

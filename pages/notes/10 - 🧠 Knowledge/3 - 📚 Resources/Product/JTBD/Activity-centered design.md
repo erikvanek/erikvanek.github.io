@@ -1,0 +1,9 @@
+- by Don Norman
+- Steps:
+	- Form a goal
+	- Intent to act
+	- Plan to act
+	- Execute
+	- Perceive effects
+	- Interpret effects
+	- Evaluate outcome
