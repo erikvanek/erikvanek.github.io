@@ -1,7 +1,10 @@
 ---
 name: reveal-presentations
-description: Create high-quality reveal.js presentations with progressive disclosure, fragments, and pedagogical structure. Trigger when user asks to create or improve a presentation, slides, lecture content, workshop materials, or case study deck. Supports university teaching, workshop facilitation, case studies, and conference talks. Outputs HTML compatible with 11ty/Nunjucks templating.
+description: DEPRECATED — use presentation-wizard instead.
 ---
+
+> **Deprecated.** This skill has been superseded by `presentation-wizard`.
+> See `/pages/skills/presentation-wizard/SKILL.md`.
 
 # Reveal.js Presentation Skill
 

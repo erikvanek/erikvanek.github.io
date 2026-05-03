@@ -1,4 +1,0 @@
-- [ ] pláštěnka
-- [ ] nepromokavá bunda
-- [ ] boty na přezutí
-- [ ] naimpregnovat boty

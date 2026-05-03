@@ -1,0 +1,3 @@
+- useful tool for booking research appointments
+- setup is pretty straightforward
+- **quirk — Timezones setup**: important to set up your own timezone in All Settings > Profile > Time Zone; when not set properly it can result in weird timezone mismatches and miscommunication with recruits

@@ -12,18 +12,20 @@ resources:
 - composed of two parts
 	- customer profile
 		- used to define customer profiles
-		- describe [[JTBD]]
-			- functional (getting from A-B)
-				- specific tasks that have practical benefits
-			- social (impressing friends)
-				- are how customers want others to perceive them and their desire to fit into or stand out within their social circles
-			- emotional (gaining piece of mind)
-				- cater to the feelings and emotional states that customers wish to achieve when using a product
-		- highlight pains that prevent to get their job done
+		- jobs
+			- describe [[JTBD]]
+				- functional (getting from A-B)
+					- specific tasks that have practical benefits
+				- social (impressing friends)
+					- are how customers want others to perceive them and their desire to fit into or stand out within their social circles
+				- emotional (gaining piece of mind)
+					- cater to the feelings and emotional states that customers wish to achieve when using a product
+		- pains
+			- highlight pains that prevent to get their job done
 			- frustrations, obstacles and what gets them annoyed to get their job done
 			- pains and negative outcomes customers want to avoid
 		- gains
-			- describe how we customers measure the success of the job was well done
+			- describe how customers measure the success of the job was well done
 			- positive outcomes customers hope to achieve like concrete results, benefits and even aspirations
 			- represent the outcomes and benefits your customers want, and that would give them moments of delight
 			- they are not the simple result of a job

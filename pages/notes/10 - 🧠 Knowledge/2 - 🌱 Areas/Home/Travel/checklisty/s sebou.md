@@ -1,0 +1,19 @@
+- co nejlehčí čtení 
+- co nejlehčí psaní
+- snacky
+- jízdenky
+- mikina
+- komp v případě potřeby
+- nabíječku
+- nesesér
+	- kartáček
+	- mezizubní kartáček
+	- pasta
+	- sprcháč
+	- hřeben
+	- (kondicionér)
+	- (gumička)
+	- doplňky stravy
+- když non-EU tak
+	- pas
+	- sekundární mobil na místní SIMku

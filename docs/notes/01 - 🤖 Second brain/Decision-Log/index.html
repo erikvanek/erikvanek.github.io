@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="decision-log">Decision Log</h1>
+<p>Chronological record of structural and strategic decisions. Whenever a significant decision is made — in dialogue with Claude or independently — log it here. The goal is to avoid re-litigating the same questions and to understand why things are the way they are.</p>
+<p>Format: <code>DEC-XXX</code> with date, decision, rationale, and implications.</p>
+<hr>
+<h2 id="dec-001-areas-structure">DEC-001 — Areas structure</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Replace the existing 4 Areas with a new set that reflects actual professional life:</p>
+<ul>
+<li>Product &amp; Design practice</li>
+<li>Teaching &amp; Lecturing</li>
+<li>Nonprofit design</li>
+<li>Personal development</li>
+<li>Cooking and fermentation (kept)</li>
+<li>Home (kept)</li>
+</ul>
+<p><strong>What changed</strong>: Previous Areas were <code>Continuous improvement</code>, <code>Cooking and fermentation</code>, <code>Freelance design practice</code>, <code>Home</code>. These didn't reflect the actual scope of work.</p>
+<p><strong>Rationale</strong>: Areas should represent ongoing responsibilities with standards to maintain. The old Areas were either too generic (&quot;Continuous improvement&quot;) or too narrow (&quot;Freelance design practice&quot;) to serve as useful anchors for project and resource linking.</p>
+<p><strong>Implications</strong>: <code>Freelance design practice</code> folder will be renamed/restructured into <code>Product &amp; Design practice</code>. <code>Continuous improvement</code> content will be reviewed and folded into <code>Personal development</code>. Two new Areas created: <code>Teaching &amp; Lecturing</code>, <code>Nonprofit design</code>.</p>
+<hr>
+<h2 id="dec-002-service-design-degree-placement">DEC-002 — Service design degree placement</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Service design degree work lives inside <code>Product &amp; Design practice</code>, not as a separate Area.</p>
+<p><strong>Rationale</strong>: The work is closely related to primary professional practice and doesn't need its own maintenance standard. It would add noise as a separate Area.</p>
+<hr>
+<h2 id="dec-003-staging-layer">DEC-003 — Staging layer</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Create <code>05 - 🌱 Staging</code> as a new top-level folder. This is an incubation zone for content that's interesting but not yet validated as worth keeping in Knowledge.</p>
+<p><strong>Graduation heuristic</strong>: After 2–4 weeks, ask &quot;Would I actively use this in a project?&quot; If yes → Knowledge. If no → archive or discard.</p>
+<p><strong>Rationale</strong>: The &quot;interesting vs. valuable&quot; problem. Curation at ingestion is hard because value is often retrospective. Staging gives content time to prove itself without cluttering the Knowledge base.</p>
+<p><strong>Implications</strong>: Inbox becomes a true short-term transit zone (days, not weeks). Staging holds content on a medium-term horizon. Removes the temptation to use Inbox as a holding area.</p>
+<hr>
+<h2 id="dec-004-ephemeron-deferred">DEC-004 — Ephemeron deferred</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: <code>20 - ✨ Ephemeron</code> is left untouched for now. The agent-ranking and project-scoring workflow it was designed for will be revisited in a later phase.</p>
+<p><strong>Rationale</strong>: It's a different beast from the knowledge management workflow. Scope control — tackle the core PARA structure first.</p>
+<hr>
+<h2 id="dec-005-eliminate-code11-interim-knowledgecode">DEC-005 — Eliminate <code>11 - ⏳ interim knowledge</code></h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: <code>11 - ⏳ interim knowledge</code> will be fully absorbed into <code>10 - 🧠 Knowledge</code> and the folder deleted.</p>
+<p><strong>Rationale</strong>: It exists as a half-completed migration from a previous attempt. Having two parallel quasi-PARA structures creates confusion and makes agent queries incomplete.</p>
+<p><strong>Implications</strong>: Content in <code>11</code> will be mapped to the correct <code>10 - Knowledge</code> subfolders during Phase 2. Duplicates with existing content in <code>10</code> will be merged, not duplicated.</p>
+<hr>
+<h2 id="dec-006-czech-content-handling">DEC-006 — Czech content handling</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Czech notes already in the vault are preserved but tagged with <code>#czech</code>. They are NOT silently discarded. They are listed in the <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> so the human can make explicit decisions about each one. Future Czech captures are flagged by agents with a warning (&quot;This appears to be in Czech — the vault uses English&quot;).</p>
+<p><strong>Rationale</strong>: The vault's English-only principle (from <code>Principles.md</code>) was already being violated. Rather than hard-deleting content that might be valuable, surface it explicitly for human decision.</p>
+<p><strong>Implications</strong>: During Phase 3 triage, all Czech notes will be flagged. A dedicated pass on Czech content may be needed after Phase 3.</p>
+<hr>
+<h2 id="dec-007-nothing-deleted-without-human-review">DEC-007 — Nothing deleted without human review</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: No content is permanently deleted by an agent without the human first reviewing a triage list and explicitly approving each discard. Agents propose, humans decide.</p>
+<p><strong>Rationale</strong>: Git provides recovery but requires knowing what to recover. Better to surface the decision explicitly than to rely on git archaeology later.</p>
+<p><strong>Implications</strong>: Phase 3 (99 - To process) requires a human review pass before any discards are executed.</p>
+<hr>
+<h2 id="dec-008-code99-to-processcode-backlog-handling">DEC-008 — <code>99 - To process</code> backlog handling</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Agent produces a full triage list for <code>99 - 📄 To process</code> (title, proposed action, proposed destination, language flag). Human reviews. Agent executes approved actions only.</p>
+<p><strong>Expected split</strong>: ~30–40% discard, remainder migrated to Knowledge or Staging.</p>
+<hr>
+<h2 id="dec-009-agent-role-definition">DEC-009 — Agent role definition</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Agents assist with metadata, routing, tagging, linking, and summarizing. They do not author content. All content in the vault remains human-created or human-curated.</p>
+<p><strong>Rationale</strong>: From the existing <code>Principles.md</code>. Reaffirmed in the revival strategy. The point of the second brain is curated personal knowledge, not AI-generated filler.</p>
+<hr>
+<h2 id="dec-010-weekly-routine-structure">DEC-010 — Weekly routine structure</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>:</p>
+<ul>
+<li>Monday ~15 min: Inbox review with agent routing suggestions</li>
+<li>Friday ~20 min: Staging review (graduate or discard items 3–4 weeks old) + reflection note</li>
+<li>Monthly ~45 min: Rebalancing run (agent-assisted structure analysis + connection suggestions)</li>
+</ul>
+<p><strong>Rationale</strong>: Consistent with stated willingness to do start/end-of-week reviews. Kept lean to avoid the consistency failure mode of previous attempts.</p>
+<hr>
+<p><em>To add a new decision: copy the template below, increment the number, fill in the fields.</em></p>
+<pre><code>## DEC-XXX — Short title
+**Date**: YYYY-MM-DD  
+**Status**: Decided / Under review / Superseded by DEC-XXX  
+
+**Decision**: [What was decided]
+
+**Rationale**: [Why]
+
+**Implications**: [What changes as a result]
+</code></pre>
+<h1 id="emto-add-a-new-decision-copy-the-template-below-increment-the-number-fill-in-the-fieldsem"><em>To add a new decision: copy the template below, increment the number, fill in the fields.</em></h1>
+<h2 id="dec-011-mandatory-metadata-on-all-knowledge-nodes">DEC-011 — Mandatory metadata on all Knowledge nodes</h2>
+<p><strong>Date</strong>: 2026-03-04<br>
+<strong>Status</strong>: Decided</p>
+<p><strong>Decision</strong>: Every note in <code>10 - 🧠 Knowledge</code> should eventually carry a minimum set of frontmatter metadata:</p>
+<ul>
+<li><code>date_created</code> — when the note was first added</li>
+<li><code>date_modified</code> — when it was last meaningfully edited</li>
+<li><code>tags</code> — most relevant content tags (aim for 3–5)</li>
+</ul>
+<p>This is not blocking current migration work. It will be enforced as a routine pass once the structure is stable (after Phase 3), and should be built into the Phase 5 agent skills as a maintenance sweep.</p>
+<p><strong>Rationale</strong>: Consistent metadata enables agents to surface notes by recency, detect staleness, and query by topic. Without it, the knowledge base is only navigable by humans who remember what's in it.</p>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>Phase 5 should include a &quot;metadata enrichment&quot; skill that sweeps Knowledge for notes missing frontmatter and adds it</li>
+<li>The weekly rebalancing routine (DEC-010) should include a check for notes lacking required metadata</li>
+<li>New notes added during Phase 2 and 3 should include this metadata from the start where possible</li>
+</ul>
+<hr>
+
+
+    
+</body>
+
+</html>

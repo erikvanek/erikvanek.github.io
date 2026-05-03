@@ -1,1 +1,0 @@
-- 'if you can't measure it, you can't manage it' is a myth – it would work if things are constrained only by visible measures, bot it ignores unknown metrics to those who measure

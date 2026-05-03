@@ -14,6 +14,9 @@
 - David Allen: "our brain is for having thoughts, not for holding them"
 - Erika Hall: "A design project is a series of decisions. It doesn't matter how beautiful the artifacts, or how quickly you can create them if the decision-making process is broken or ill-informed. The decisions are the work."
 	- [linkedin](https://www.linkedin.com/posts/erikahall_a-design-project-is-a-series-of-decisions-activity-7434778305926574080-CMMN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAyJBDEBZomIpb8LSNwSjoEjDf4xk56P-zY)
+- Karri Saarinen on [X](https://x.com/karrisaarinen/status/1999623683065987330) – Design is search
+	- "If you let constraints define the space too early, you do not just get a worse outcome. You lose outcomes that never get discovered."
+	- "Protect exploration from premature constraint. Invite constraints when you are ready to learn from them"
 ---
 
 **Tags:** #quotes #insights #wisdom #productivity #design #innovation

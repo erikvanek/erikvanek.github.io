@@ -1,9 +1,0 @@
-- [ ] rukavice
-- [ ] teplý boty
-- [ ] vlněný ponožky
-- [ ] dobrý pyžamo
-- [ ] jelení lůj
-- [ ] krém na ruce
-- [ ] termoska
-- [ ] nesmeky
-- [ ] šusťákové kalhoty

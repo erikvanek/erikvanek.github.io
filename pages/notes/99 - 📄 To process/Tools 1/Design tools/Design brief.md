@@ -1,2 +1,0 @@
-- https://maze.co/blog/design-brief/
-- https://matejkaninsky.com/blog/ux-project-brief-template/

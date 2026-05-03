@@ -1,0 +1,14 @@
+- [Groan zone](https://www.nceas.ucsb.edu/news/how-spark-joy-groan-zone-collaboration) — how to work with the groan zone in collaboration; also [Czech version](https://futuropolis.cz/knihovna/groan-zone-zona-kvileni/)
+- [Liberating Structures — 1-2-4-All](https://www.liberatingstructures.com/1-1-2-4-all/)
+- [Applying behavioural design for sustainable choices](https://wearesnook.com/applying-behavioural-design-to-help-people-make-more-sustainable-choices/) — Snook
+- [Stop brainstorming, start sprinting](https://jakek.medium.com/stop-brainstorming-and-start-sprinting-16180839b43d) — design sprint as a more structured evolution of brainstorming
+- It's easier to plan research than prototyping — hard to foresee phases that are supposed to follow research at the beginning
+- [Good Services Scale](https://good.services/the-good-services-scale) + [how-to](https://good.services/good-service-scale-how-to) — service evaluation
+- "What is the problem of the problem?" — what's the underlying problem?
+- "How do you know that the thing you found is the thing you did not know?"
+- Name → Frame → Act → Reflect — paradigm from Reflective practice theory
+- [A nicely curated list of biases](https://thedecisionlab.com/biases)
+- [HEART framework for measuring UX](https://dovetail.com/ux/heart-framework/)
+- [The myth of the genius designer](https://www.nngroup.com/articles/the-myth-of-the-genius-designer/) — NNg
+- [Product market fit](https://www.lennysnewsletter.com/p/finding-product-market-fit) — Lenny
+- [Honoring the grout](https://medium.com/centre-for-public-impact/honouring-the-grout-ea9327a1d2aa) — why the invisible parts of a service may matter more than those visible or measurable

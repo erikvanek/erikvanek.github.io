@@ -1,0 +1,4 @@
+- [Lou Downe](https://good.services/) — Good Services
+- [Sarah Drummond](https://sarah-drummond.com/12-2/) — Snook co-founder; [full stack service design](https://sarah-drummond.com/full-stack-service-design/) concept
+- [Austin Z. Henley](https://austinhenley.com/index.html) — researching AI interfaces
+- [Nate B. Jones](https://natesnewsletter.substack.com/) — on AI

@@ -1,0 +1,23 @@
+- Tech rider & __knowing who is supposed to deliver what from the rider__
+- Duck tape
+- Scrap paper
+- Pencil(case)
+- Razor
+- Permanent markers
+- Power bank
+- Head torch
+- Snacks
+- Plasters
+- Scissors
+- Pliers
+- Hard deck
+- Masking tape
+- Rubber bands
+- Work gloves
+- Multitool
+- Printed Lineup multiple times with sound check times included
+- prepare packs for each artist
+	- table
+	- extender
+	- cabling
+	- stuff from the rider

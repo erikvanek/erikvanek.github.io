@@ -1,9 +1,0 @@
-- a tool to interpret, analyze and classify qualitative data
-- provides a consistent coding framwork
-- how to create it?
-	- review the data to identify key concepts
-	- identify codes based on patterns in data
-	- define each code and specify what it is and what it is not
-	- develop a coding hierarchy to express relationships
-	- review the data and assign them codes
-	- refine base on coders' feedback and research question evolution

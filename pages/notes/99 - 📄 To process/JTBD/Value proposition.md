@@ -1,1 +1,0 @@
-- knowing pros and cons of other solutions help to distinguish from them
