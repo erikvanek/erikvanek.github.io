@@ -146,6 +146,11 @@ body {
   padding: 0;
 }
 
+.reveal ol li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* ─── Reveal.js UI ─── */
 .reveal .progress {
   height: 6px;
@@ -323,9 +328,15 @@ body {
 
 /* ─── Layout: statement ─── */
 .layout-statement {
-  justify-content: center !important;
-  align-items: flex-start !important;
-  padding: 0 7.5rem !important;
+  padding: 0 !important;
+}
+
+.layout-statement .statement-inner {
+  position: absolute;
+  top: 50%;
+  left: 7.5rem;
+  right: 7.5rem;
+  transform: translateY(-50%);
 }
 
 .layout-statement h1 {
@@ -334,7 +345,7 @@ body {
   letter-spacing: -0.03em;
   line-height: 1.15;
   max-width: 20ch;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 /* ─── Layout: quote ─── */
@@ -366,6 +377,54 @@ body {
 
 .layout-quote blockquote {
   margin-top: 1.5rem;
+}
+
+.reveal del {
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Switch-to-Claude badge ─── */
+@keyframes claude-beep {
+  0%   { opacity: 0; }
+  60%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes claude-beep-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#claude-badge {
+  position: fixed;
+  bottom: 24px;
+  right: 120px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 2.5px solid var(--accent);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#claude-badge span {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+#claude-badge.active {
+  animation: claude-beep 1.5s ease-in-out forwards;
+}
+
+#claude-badge.leaving {
+  animation: claude-beep-out 0.5s ease-in-out forwards;
 }
 
 .layout-quote > p {
