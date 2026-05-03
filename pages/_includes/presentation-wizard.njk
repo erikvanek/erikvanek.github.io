@@ -21,6 +21,7 @@
     </div>
     <div class="slide-footer"><span>erikvanek.com/{{ page.fileSlug }}</span></div>
   </div>
+  <div id="claude-badge"><span></span></div>
 
   <script src="../../js/reveal.js"></script>
   <script src="../../js/reveal-notes.js"></script>
@@ -47,6 +48,25 @@
     }
     Reveal.on('ready', updateFooter);
     Reveal.on('slidechanged', updateFooter);
+
+    var claudeBadgeShown = false;
+    function updateClaudeBadge(slide) {
+      var badge = document.getElementById('claude-badge');
+      if (!badge) return;
+      if (slide.hasAttribute('data-switch-to-claude')) {
+        badge.classList.remove('active', 'leaving');
+        void badge.offsetWidth;
+        badge.classList.add('active');
+        claudeBadgeShown = true;
+      } else if (claudeBadgeShown) {
+        badge.classList.remove('active', 'leaving');
+        void badge.offsetWidth;
+        badge.classList.add('leaving');
+        claudeBadgeShown = false;
+      }
+    }
+    Reveal.on('ready', function(e) { updateClaudeBadge(e.currentSlide); });
+    Reveal.on('slidechanged', function(e) { updateClaudeBadge(e.currentSlide); });
   </script>
 </body>
 </html>

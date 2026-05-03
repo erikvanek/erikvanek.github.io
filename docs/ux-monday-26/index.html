@@ -48,13 +48,13 @@ This talk started as a walk. Literally - I'll show you that at the end.</aside>
 
 <section class="layout-heading-body">
   <h2 id="what-well-cover-today">What we'll cover today</h2>
-  <ul>
-    <li>1. Intro - setting the stage</li>
-    <li>2. Broader context - why this matters now</li>
-    <li>3. Discovery - how AI changes research, with a live demo</li>
-    <li>4. Delivery - prototyping and handoff, with a live demo</li>
-    <li>5. Post-digital design - where the process goes next</li>
-  </ul>
+  <ol>
+    <li>Intro - setting the stage</li>
+    <li>Broader context - why this matters now</li>
+    <li>Discovery - AI-powered sense-making + demo</li>
+    <li>Delivery - prototyping and handoff + demo</li>
+    <li>Design for social innovation</li>
+  </ol>
   <aside class="notes">Quick roadmap so people know where we're going. Two demos - one in each half.
 This isn't a how-to talk. It's a "here's what's possible and here's how I actually work" talk.</aside>
 </section>
@@ -63,14 +63,14 @@ This isn't a how-to talk. It's a "here's what's possible and here's how I actual
   <h2 id="a-little-about-myself">A little about myself</h2>
   <ul>
     <li>Started in software engineering</li>
-    <li>Shifted toward design, research, product</li>
+    <li>Shifted toward design, product</li>
     <li>Scale-ups · public services · non-profit
       <ul>
         <li>most recently Datamole - data &amp; AI softwarehouse</li>
       </ul>
     </li>
-    <li>Teaching at KISK, Masaryk University</li>
-    <li>Before that - hydroponics, gallery curator, pro poker player</li>
+    <li>Study &amp; teach at KISK, Masaryk University</li>
+    <li>Before - hydroponics, curator, poker pro</li>
   </ul>
   <aside class="notes">Keep this fast. The point isn't the bio - it's to establish that you're a practitioner who moves across roles, not a purist. "I've done enough engineering to have empathy for it, enough design to know what it asks of you."</aside>
 </section>
@@ -78,7 +78,7 @@ This isn't a how-to talk. It's a "here's what's possible and here's how I actual
 <section class="layout-heading-body">
   <h2 id="before-we-dig-in-aka-my-biases">Before we dig in aka my biases</h2>
   <ul>
-    <li>Design = discovery + delivery. I don't split the roles.</li>
+    <li>Design = discovery + delivery.</li>
     <li>Designers should understand code.</li>
     <li>What happened in tooling over the past ~ year is just wow.</li>
     <li>Handover should live in plaintext and code.</li>
@@ -103,9 +103,9 @@ This isn't a how-to talk. It's a "here's what's possible and here's how I actual
         <li>Same thing in the desktop UI - just not my daily setup.</li>
       </ul>
     </li>
-    <li>Using Claude Code, Obsidian, Paper.design, GitHub.
+    <li>Using Claude code, Obsidian, Paper.design, GitHub, VS Code.
       <ul>
-        <li>principles work the same with other tooling</li>
+        <li>Principles work the same with other tooling.</li>
       </ul>
     </li>
   </ul>
@@ -229,7 +229,7 @@ This isn't a how-to talk. It's a "here's what's possible and here's how I actual
     <!-- annotation column -->
     <div style="display: flex; flex-direction: column; gap: 1.25rem; width: 22rem; flex-shrink: 0; padding-top: 2.75rem;">
       <p style="font-family: 'Inter', sans-serif; font-size: 1.375rem; line-height: 1.55; color: #ddd8d0; margin: 0; font-style: italic;">"Have you been enjoying your job more or less since adopting AI tools?"</p>
-      <p style="font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; margin: 0; line-height: 1.5;"><a href="https://x.com/lennysan/status/2020266745722991051" target="_blank">— Lenny Rachitsky / x.com/lennysan</a></p>
+      <p style="font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; margin: 0; line-height: 1.5;"><a href="https://x.com/lennysan/status/2020266745722991051" target="_blank" style="color: var(--accent); text-decoration: none;">— Lenny Rachitsky / x.com/lennysan</a></p>
     </div>
 
   </div>
@@ -246,12 +246,16 @@ Transition: "So something is different about how this shift is hitting our disci
 
 <section class="layout-heading-body">
   <h2 id="is-the-design-process-dead">Is the design process dead?</h2>
-  <p>I wrote about this in 2024: <em><a href="https://erikvanek.com/is-coding-dead/" target="_blank" rel="noopener">"Is Coding Dead? A LLM-assisted prototyping case study"</a></em></p>
+  <p>I wrote about this in 2024: <em><a href="https://erikvanek.com/is-coding-dead/" target="_blank" rel="noopener">"Is Coding Dead?"</a></em></p>
   <ul>
-    <li>AI amplifies existing skills - it does not replace them</li>
+    <li>AI amplifies existing skills
+      <ul>
+        <li>does not replace them</li>
+      </ul>
+    </li>
     <li>Human oversight stays essential throughout</li>
     <li>Prompt quality is itself a craft skill</li>
-    <li>Best practices are emerging, but the process isn't dead</li>
+    <li>Best practices are emerging, but the process stays but (constantly) changes</li>
   </ul>
   <aside class="notes">Rhetorical question - but grounded in something real. The article explored AI-assisted prototyping: 30-minute card-sorting prototype, no developer, just Claude. Key finding: AI amplifies existing skills rather than replacing them. Human oversight stays essential. Prompt quality matters. NNg says design process isn't dead - and I agree. But "not dead" and "unchanged" are very different things.</aside>
 </section>
@@ -264,9 +268,12 @@ Transition: "So something is different about how this shift is hitting our disci
         <li>BAU dashboards, reports, forms: done</li>
       </ul>
     </li>
-    <li>Execution cost of coding is collapsing</li>
+    <li>Execution cost of coding is collapsing
+      <ul>
+        <li>"everyone" can code now</li>
+      </ul>
+    </li>
     <li>SaaS is under pressure</li>
-    <li>Tech's golden cage is opening - and shutting for some</li>
   </ul>
   <aside class="notes">"Garbage in, garbage out" - if your knowledge base is a mess, AI won't save you. The inconsistency you've been tolerating becomes a structural problem. The sooner you curate for machines, the sooner new types of value for humans can emerge.</aside>
 </section>
@@ -274,11 +281,7 @@ Transition: "So something is different about how this shift is hitting our disci
 <section class="layout-quote">
   <h2 id="what-emwontem-change-soon">What <em>won't</em> change soon</h2>
   <ul>
-    <li>Doing <strong>the right thing</strong>
-      <ul>
-        <li>Not just doing things right</li>
-      </ul>
-    </li>
+    <li>Doing <strong>the right thing</strong></li>
     <li>Human emotions, aspirations, frustrations</li>
     <li>The value of face time</li>
     <li>Being humane to each other</li>
@@ -307,9 +310,9 @@ Transition: "So something is different about how this shift is hitting our disci
     <div>
       <p><strong>Demo 1 - Discovery</strong></p>
       <ul>
-        <li>AI-assisted qualitative research</li>
-        <li>From brain dump to research plan</li>
-        <li>Coding transcripts and synthesis</li>
+        <li>AI-assisted qualitative data sense-making</li>
+        <li>From brain dump to insights</li>
+        <li>Powered by personal second brain</li>
         <li>Making research accessible to the team</li>
       </ul>
     </div>
@@ -317,9 +320,9 @@ Transition: "So something is different about how this shift is hitting our disci
       <p><strong>Demo 2 - Delivery</strong></p>
       <ul>
         <li>Code-first prototyping</li>
-        <li>Spec - PR - preview in one loop</li>
+        <li>Spec → PR → preview in one loop</li>
         <li>Handover in text and code</li>
-        <li>Source of truth that doesn't drift</li>
+        <li>multiple tools integration</li>
       </ul>
     </div>
   </div>
@@ -341,10 +344,9 @@ Transition: "So something is different about how this shift is hitting our disci
   <div class="cols cols--70-30">
     <div>
       <ul>
-        <li>Started with my friend Franta</li>
+        <li>Side-project with my friend Franta</li>
         <li>Freelance marketplace for architects and interior designers</li>
         <li>One-off consultations · smaller contracts · new leads</li>
-        <li>Side project - most client work is NDA-protected</li>
         <li>How does research on something like this actually start?</li>
       </ul>
     </div>
@@ -360,7 +362,11 @@ Transition: "So something is different about how this shift is hitting our disci
   <ul>
     <li>Walk outside</li>
     <li>Think aloud - pile thoughts on top of each other</li>
-    <li>Don't structure yet. Let it be messy.</li>
+    <li>Don't structure yet. Let it be messy.
+      <ul>
+        <li>or differently - LLM can untangle for you</li>
+      </ul>
+    </li>
     <li>Brad Frost calls this "mouth coding"
       <ul>
         <li><a href="https://bradfrost.com/blog/post/mouth-coding/" target="_blank" rel="noopener">bradfrost.com/blog/post/mouth-coding/</a></li>
@@ -379,11 +385,11 @@ Brad Frost recently coined "mouth coding" for the same idea - talking interfaces
       <ul>
         <li><strong>MCP</strong> - a universal tool connector
           <ul>
-            <li>Lets your LLM talk to external tools and data sources</li>
-            <li>Think of it as a USB port for context</li>
+            <li>Lets your agent talk to external tools and data sources</li>
+            <li>Think of it as a USB port to other tools</li>
           </ul>
         </li>
-        <li>Connect once - "80/20 head start" on every project</li>
+        <li>Connect once → "80/20 head start" on every project</li>
       </ul>
     </div>
     <!-- custom-svg: MCP diagram — designed in Paper, do not replace with Mermaid -->
@@ -423,7 +429,7 @@ My notes in Obsidian are connected via MCP. Before a single interview, the AI ca
     <li>MCP connection = directing the agent toward <strong>your</strong> accumulated knowledge</li>
     <li>Not the internet's average. Yours.</li>
     <li>Output quality reflects your craft - your biases, your blind spots</li>
-    <li>Even a messy vault beats none - directionality matters, not perfection</li>
+    <li>Even a messy vault beats none - brief notes over perfect ones</li>
   </ul>
   <aside class="notes">People talk a lot about "context engineering" - this is what it looks like in practice. When you connect to your second brain, you're not just giving the AI more data. You're biasing it toward your way of thinking, your prior work, your craft. The output reflects that.
 
@@ -435,11 +441,11 @@ Honest constraint: where my notes are thin (strategy, business framing), the AI 
 <section class="layout-heading-body">
   <h2 id="pick-what-fits-your-setup">Pick what fits your setup</h2>
   <ul>
-    <li>Notion · Google Drive · Confluence · a shared folder</li>
-    <li>Whatever you have, are allowed to use, or actually like</li>
+    <li>Notion · Google Drive · Confluence · Obsidian · a shared folder</li>
+    <li>Whatever you have, are allowed to use, or actually like to use</li>
     <li>I use Obsidian
       <ul>
-        <li>plain text, vendor-agnostic, backlinks help agents connect the dots</li>
+        <li>plain text, vendor-agnostic, backlinks help connect the dots</li>
       </ul>
     </li>
     <li>The tool choice is secondary.</li>
@@ -468,7 +474,7 @@ Why I use Obsidian: it's plain text - vendor-agnostic, works with any tool now o
 
 <section class="layout-transcripts-stack">
   <h2 id="now-you-have-transcripts">Now you have transcripts</h2>
-  <div class="subtitle">How modern tooling accelerates the messy middle</div>
+  <div class="subtitle">Accelerating the messy middle with modern tools</div>
 
   <div class="visual-container">
     <div class="transcripts-stack-container">
@@ -537,50 +543,6 @@ Why I use Obsidian: it's plain text - vendor-agnostic, works with any tool now o
 This is the moment where most researchers either: (a) open Dovetail/Condens and spend hours, or (b) skim and form intuitions too fast. There's a better path - and this is where the demo starts.</aside>
 </section>
 
-<section class="layout-quote">
-  <blockquote>"Here are my transcripts. What are the themes?"</blockquote>
-  <aside class="notes">This is the YOLO prompt. You get something back. It looks structured. It's often slop. The categories are obvious, the nuance is gone, and you can't trust it because you didn't guide it. Garbage in, garbage out - at the synthesis stage too.</aside>
-</section>
-
-<section class="layout-quote">
-  <h2 id="my-way-to-code">My way to code</h2>
-  <ul>
-    <li>Write 4-5 codes yourself first - give the AI a starting direction</li>
-    <li>"Here are my initial codes. Here's my research objective. Generate a full codebook."</li>
-    <li>Iterate until solid. Then hand over the transcripts.</li>
-  </ul>
-  <div class="quote-block">
-    <blockquote>"Here are my transcripts. Here's the codebook. Code these."</blockquote>
-  </div>
-  <aside class="notes">Step 1: Write 4-5 codes yourself before touching the AI. Force yourself to read one or two transcripts, form some initial impressions, name them. A good starting direction produces dramatically better results.
-Step 2: AI generates codebook collaboratively. You're reviewing, pushing back, refining - not just delegating.
-Step 3: Hand over the transcripts with the codebook. Like printing them out, highlighting, cutting into chunks, posting on a wall - except it takes minutes.
-1 hour of interview = traditionally 1-2 hours of analysis. Now it's a coffee break. That's not a marginal improvement - it's a category change.</aside>
-</section>
-
-<section class="layout-statement">
-  <h1 id="walk-away-come-back-with-fresh-eyes">Walk away. Come back with fresh eyes.</h1>
-  <aside class="notes">Every major milestone in this process - codes in, codes out; transcripts in, coded data out - is a natural moment to step back. Don't immediately synthesize. Let it settle. Sleep on it. This is where human judgment matters most, and you can't rush it.</aside>
-</section>
-
-<section class="layout-heading-body">
-  <h2 id="now-synthesize">Now synthesize</h2>
-  <ul>
-    <li>You have coded data. Now what?</li>
-    <li>Feed your notes on <em>what good synthesis looks like</em> alongside the coded data</li>
-    <li>"I saw this" + "I know this" = insight</li>
-    <li>The AI handles the pattern. You bring the judgment.</li>
-    <li>MCP reconnects your research methodology knowledge to the process</li>
-  </ul>
-  <aside class="notes">This is the second moment where your second brain becomes active. First it helped you plan - research objective, recruiting criteria. Now it helps you make sense of what you found. Feed the coded data alongside your notes on insight anatomy, what makes a finding vs. an observation, how to tell a research story. The output is calibrated by your craft knowledge, not just pattern-matched from the transcripts. The circle closes: second brain - project head start - research - coding - synthesis guided by second brain again.</aside>
-</section>
-
-<section class="layout-heading-body">
-  <h2 id="a-word-on-model-quality">A word on model quality</h2>
-  <p style="color: var(--dim); font-style: italic;">[Placeholder - side-by-side real coding excerpt screenshots coming]</p>
-  <aside class="notes">The difference is visible - not in whether they respond, but in how they handle nuance, ambiguity, edge cases. Simple tasks: lightweight model. Daily work: mid-tier. Something genuinely hard - deduplication logic, complex synthesis, a tricky design decision? Go to the best model. Same prompt, same transcript. The gap shows up in code quality and depth. Opus codes carry more analytical load - they're interpretations, not just labels.</aside>
-</section>
-
 <section class="layout-demo">
   <div class="demo-badge"><span>Live demo</span></div>
   <h2 id="demo-1">Demo 1</h2>
@@ -592,6 +554,81 @@ Step 3: Hand over the transcripts with the codebook. Like printing them out, hig
 4. Hand over transcripts for coding
 5. Show synthesis phase using second brain notes
 Optional: Opus vs Sonnet comparison on one coding task.</aside>
+</section>
+
+<section class="layout-quote">
+  <blockquote><del>"Here are my transcripts. What are the themes?"</del></blockquote>
+  <aside class="notes">This is the YOLO prompt. You get something back. It looks structured. It's often slop. The categories are obvious, the nuance is gone, and you can't trust it because you didn't guide it. Garbage in, garbage out - at the synthesis stage too.</aside>
+</section>
+
+<section class="layout-quote" data-switch-to-claude>
+  <h2 id="my-way-to-code">My way to code</h2>
+  <ul>
+    <li>Write 4-5 codes yourself first - give the AI a starting direction</li>
+    <li>"Here are my initial codes. Here's my research objective. Generate a full codebook."</li>
+    <li>Read my second brain on coding best practices.</li>
+    <li>Iterate until solid. Then hand over the transcripts.</li>
+  </ul>
+  <div class="quote-block">
+    <blockquote>"Here are my transcripts. Here's the codebook. Code these."</blockquote>
+  </div>
+  <aside class="notes">Step 1: Write 4-5 codes yourself before touching the AI. Force yourself to read one or two transcripts, form some initial impressions, name them. A good starting direction produces dramatically better results.
+Step 2: AI generates codebook collaboratively. You're reviewing, pushing back, refining - not just delegating.
+Step 3: Hand over the transcripts with the codebook. Like printing them out, highlighting, cutting into chunks, posting on a wall - except it takes minutes.
+1 hour of interview = traditionally 1-2 hours of analysis. Now it's a coffee break. That's not a marginal improvement - it's a category change.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="the-codebook-prompt">The codebook prompt</h2>
+  <p><strong>Research objective:</strong> how architects find and manage freelance work</p>
+  <p><strong>My initial codes</strong> (seeds): move trigger · selection criteria · search process · space setup · help-seeking</p>
+  <p>Read from my second brain: <em>"Open Coding"</em>, <em>"Codebook"</em><br>
+  Go through each transcript. <strong>Grow from 5 to 10-15 codes.</strong></p>
+  <aside class="notes">Three parts: the objective anchors the AI in what we're learning. The initial codes are the most important input - they come from a real first read, they show direction. The second brain pull is what makes the output reflect qualitative best practice rather than just pattern-matching on frequency.</aside>
+</section>
+
+<section class="layout-heading-body" data-switch-to-claude>
+  <h2 id="the-coding-prompt">The coding prompt</h2>
+  <p>Finalized codebook is in <code>results/codebook.md</code></p>
+  <p>Read from my second brain: <em>"Closed Coding"</em>, <em>"Thematic Analysis"</em><br>
+  <strong>Code all 3 transcripts</strong> using only these codes.</p>
+  <p>Save as one file per code, named with occurrence count.<br>
+  <strong>Flag anything that doesn't fit</strong> in a separate file.</p>
+  <aside class="notes">Much simpler. All the complexity is upstream - in the codebook quality, the initial codes you wrote yourself. This prompt is short by design. The AI is executing a framework you designed, not making judgment calls. That's the distinction.</aside>
+</section>
+
+<section class="layout-statement">
+  <div class="statement-inner">
+    <h1 id="walk-away-come-back-with-fresh-eyes">Walk away. Come back with fresh eyes.</h1>
+  </div>
+  <aside class="notes">Every major milestone in this process - codes in, codes out; transcripts in, coded data out - is a natural moment to step back. Don't immediately synthesize. Let it settle. Sleep on it. This is where human judgment matters most, and you can't rush it.</aside>
+</section>
+
+<section class="layout-heading-body" data-switch-to-claude>
+  <h2 id="now-synthesize">Now synthesize</h2>
+  <ul>
+    <li>You have coded data. Now what?</li>
+    <li>Feed your notes on <em>what good synthesis looks like</em> alongside the coded data</li>
+    <li>"I saw this" + "I know this" = insight</li>
+    <li>The AI handles the pattern. You bring the judgment.</li>
+    <li>MCP reconnects your knowledge</li>
+  </ul>
+  <aside class="notes">This is the second moment where your second brain becomes active. First it helped you plan - research objective, recruiting criteria. Now it helps you make sense of what you found. Feed the coded data alongside your notes on insight anatomy, what makes a finding vs. an observation, how to tell a research story. The output is calibrated by your craft knowledge, not just pattern-matched from the transcripts. The circle closes: second brain - project head start - research - coding - synthesis guided by second brain again.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="the-synthesis-prompt">The synthesis prompt</h2>
+  <p>Read: coded data in <code>results/coding/</code> + research plan</p>
+  <p>Read from my second brain: <em>"Insight"</em>, <em>"Customer research synthesis"</em>, <em>"Storytelling"</em></p>
+  <p>Form <strong>3-5 insights</strong> - not summaries, not findings.<br>
+  For each: what's true · why it's non-obvious · evidence · design opportunity</p>
+  <aside class="notes">The structure does a lot of work here. "Not summaries, not findings" is a real constraint - the AI will default to summaries if you let it. Naming the four fields forces it into insight anatomy: the claim, the challenge to an assumption, the evidence, and the open design space. Second brain notes on insight and synthesis shape what it considers a valid insight vs. a weak one.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="a-word-on-model-quality">A word on model quality</h2>
+  <p style="color: var(--dim); font-style: italic;">[If there's time]</p>
+  <aside class="notes">The difference is visible - not in whether they respond, but in how they handle nuance, ambiguity, edge cases. Simple tasks: lightweight model. Daily work: mid-tier. Something genuinely hard - deduplication logic, complex synthesis, a tricky design decision? Go to the best model. Same prompt, same transcript. The gap shows up in code quality and depth. Opus codes carry more analytical load - they're interpretations, not just labels.</aside>
 </section>
 
 <section class="layout-heading-body">
@@ -656,12 +693,20 @@ Optional: Opus vs Sonnet comparison on one coding task.</aside>
   <h2 id="the-context">The context</h2>
   <div class="cols" style="align-items:stretch;">
     <div>
-      <p>My landlord sold the flat.</p>
-      <p>4+ months to find a new place.</p>
-      <p>I hate the noise of rental portals.</p>
+      <ul>
+        <li>4+ months to find a new place with a partner and a dog.</li>
+        <li>I hate the noise of rental portals.</li>
+        <li>Custom watchdog capable of scanning:
+          <ul>
+            <li>dog-friendly listings</li>
+            <li>good light conditions</li>
+            <li>preferable area in town</li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <figure style="display:flex; flex-direction:column; min-height:0; margin:0;">
-      <img src="../../assets/images/teo-new.jpg" alt="Close-up of a whippet dog staring intently at the camera" style="flex:1; min-height:0; width:100%; object-fit:cover; object-position:center top; border-radius:4px;">
+      <img src="../../assets/images/teo-new.png" alt="Close-up of a whippet dog staring intently at the camera" style="flex:1; min-height:0; width:100%; object-fit:cover; object-position:center top; border-radius:4px;">
       <figcaption>How do you filter for this fella? Rental portals don't let you.</figcaption>
     </figure>
   </div>
@@ -674,28 +719,48 @@ Optional: Opus vs Sonnet comparison on one coding task.</aside>
     <li>Scrapes listings from real estate portals</li>
     <li>Scores on hard attributes (area, size, price) and soft ones (dog-friendly, extracted from descriptions)</li>
     <li>Notifies both of us when a listing passes the threshold</li>
-    <li>Each of us ranks independently - hot or not</li>
-    <li>Match - book a viewing</li>
+    <li>Each of us ranks independently - <em>hot or not</em></li>
+    <li>Match → book a viewing + visit management</li>
   </ul>
   <aside class="notes">No more sending links over WhatsApp. No more "did you see that one?" conversations. The tool does the filtering; we just respond to what passes. It's essentially Tinder for apartments - or agile retrospective voting, if you prefer that metaphor.</aside>
 </section>
 
-<section class="layout-heading-body">
-  <h2 id="the-prototyping-workflow">The prototyping workflow</h2>
-  <ol>
-    <li>Write the spec in a GitHub issue</li>
-    <li>Send Claude to implement it</li>
-    <li>PR created on GitHub, reviewed by Copilot</li>
-    <li>Preview auto-deployed, tests run</li>
-    <li>Ship if it's good</li>
-  </ol>
-  <aside class="notes">The spec lives in a GitHub issue - plain text, no special format. Claude picks it up, implements it, opens a PR. Copilot reviews the PR. A preview URL is auto-deployed so you can click through it before merging. Tests run in CI. No Figma. No back-and-forth with a developer. Source of truth stays in code.</aside>
+<section class="layout-demo">
+  <div class="demo-badge"><span>Live demo</span></div>
+  <h2 id="demo-2">Demo 2</h2>
+  <p><strong>Paper.design MCP connector + Github-centered workflow</strong></p>
+  <aside class="notes">Show the Paper.design MCP connected to the rental tool codebase.
+Walk through:
+1. Describe a UI change in text
+2. Watch it build and create a PR
+3. Check the preview
+4. Discuss what would come next
+Reference the Michael Riddering LinkedIn post here - "someone described this better than I can" - show the post briefly.</aside>
 </section>
 
 <section class="layout-quote">
   <p>Sunday morning. My partner over coffee.</p>
   <blockquote>"Honey, I wish there was an image carousel so I can quickly glance through before diving in fully..."</blockquote>
   <aside class="notes">That's the moment that crystallised it for me. Not "I'm fast" - but "the feedback loop collapsed to a single conversation." She expressed a need. I described it to Claude Code. It built it, created a PR, the preview auto-deployed. I showed her the link. She approved it. Feature shipped. That's a fundamentally different way of working.</aside>
+</section>
+
+<section class="layout-quote" data-switch-to-claude>
+  <p>As easy as that</p>
+  <blockquote>work on issue 122</blockquote>
+  <aside class="notes">That's it. The entire prompt. The spec is in the GitHub issue - context, requirements, constraints. Claude reads it, implements it, opens a PR. The brevity is the whole point. Compare this to the three prompts from the research side.</aside>
+</section>
+
+<section class="layout-heading-body">
+  <h2 id="prototyping-workflow">Prototyping workflow</h2>
+  <ol>
+    <li>Write the spec in a GitHub issue</li>
+    <li>Send Claude code to implement it</li>
+    <li>Fine-tune layout with Paper.design</li>
+    <li>PR created on GitHub, reviewed by Copilot</li>
+    <li>Preview auto-deployed, tests run</li>
+    <li>Auto deploy if it's good</li>
+  </ol>
+  <aside class="notes">The spec lives in a GitHub issue - plain text, no special format. Claude picks it up, implements it, opens a PR. Copilot reviews the PR. A preview URL is auto-deployed so you can click through it before merging. Tests run in CI. No Figma. No back-and-forth with a developer. Source of truth stays in code.</aside>
 </section>
 
 <section class="layout-heading-body">
@@ -712,25 +777,12 @@ Optional: Opus vs Sonnet comparison on one coding task.</aside>
   <aside class="notes">I know it can look intimidating from the outside. But the heavy lifting is done once, and usually by someone who already knows how. After that, it just works. Don't let the initial complexity stop you from asking your favourite engineer for an afternoon.</aside>
 </section>
 
-<section class="layout-demo">
-  <div class="demo-badge"><span>Live demo</span></div>
-  <h2 id="demo-2">Demo 2</h2>
-  <p><strong>Paper.design MCP connector · live</strong></p>
-  <aside class="notes">Show the Paper.design MCP connected to the rental tool codebase.
-Walk through:
-1. Describe a UI change in text
-2. Watch it build and create a PR
-3. Check the preview
-4. Discuss what would come next
-Reference the Michael Riddering LinkedIn post here - "someone described this better than I can" - show the post briefly.</aside>
-</section>
-
 <section class="layout-heading-body">
   <h2 id="github-speckit">GitHub SpecKit</h2>
   <ul>
     <li>Learn a mental model of GitHub - it's not hard</li>
     <li>Ask your favourite engineer for 30 minutes - they'll probably love explaining it</li>
-    <li>Discovery - findings in markdown - SpecKit - engineering handoff</li>
+    <li>Discovery → findings in markdown → SpecKit → engineering handoff</li>
     <li>SpecKit is not a silver bullet - even plain "plan mode" in Claude could help a lot</li>
   </ul>
   <aside class="notes">Figma is great. But when the source of truth lives in a design tool, it diverges from what's actually built. Text and code don't diverge in the same way - they are what's running. SpecKit is GitHub's tool for specifying features and products. After research synthesis, I use it to formalise what we learned into specs, then hand off to engineering with a shared reference point. The conversation between design and engineering becomes less "here's a Figma link" and more "here's what we know, here's what we're building, here's why."</aside>
@@ -748,19 +800,19 @@ Reference the Michael Riddering LinkedIn post here - "someone described this bet
 
 <section class="layout-two-col">
   <h2 id="preschool-childcare-service">Preschool childcare service</h2>
-  <div class="cols">
+  <div class="cols cols--60-40">
     <div>
       <ul>
-        <li>Startup died - didn't want to build another CRM</li>
-        <li>Picked a domain I knew nothing about</li>
+        <li>Mid-covid layoffs in hydroponics 😢</li>
+        <li>Switched to more <em>analog</em> services</li>
         <li>Designed a preschool childcare service</li>
         <li>Won a medal for it</li>
+        <li>Working for a ministry is hard!</li>
       </ul>
     </div>
-    <div style="display:flex; flex-direction:column; gap:0.75rem; overflow:hidden; padding-bottom:24px;">
-      <img src="../../assets/images/preschool-play.jpg" alt="Sand toy figures in a kindergarten sandbox" style="flex:1; height:0; width:100%; object-fit:cover; border-radius:4px;">
-      <img src="../../assets/images/preschool-award.jpg" alt="Award team photo for preschool childcare service design" style="flex:1; height:0; width:100%; object-fit:cover; border-radius:4px;">
-    </div>
+    <figure style="flex: 10 0 38%; margin:8px -9rem -180px 0; overflow:visible;">
+      <img src="../../assets/images/preschool-award.jpg" alt="Award team photo for preschool childcare service design" style="width:100%; height:100%; object-fit:cover; object-position:top center; border-radius:4px 0 0 4px;">
+    </figure>
   </div>
   <aside class="notes">After the hydroponic farming startup ended, I deliberately picked a domain I knew nothing about. Childcare. No kids at the time, no expertise. The learning was enormous - and humbling. That's part of the point: design skills transfer. The domain is the variable.</aside>
 </section>
@@ -770,9 +822,9 @@ Reference the Michael Riddering LinkedIn post here - "someone described this bet
   <div class="cols">
     <div>
       <ul>
-        <li>Helping people navigate entry into the prison system</li>
-        <li>One day late on paperwork - cycle of repeated offences</li>
-        <li>Design as a tool to break the recidivism cycle</li>
+        <li>Helping people navigate entry into the prison</li>
+        <li>One day late to arrive? You better not</li>
+        <li>Design as a tool for a systemic change</li>
       </ul>
     </div>
     <figure style="margin:8px -9rem -180px 0; overflow:visible;">
@@ -789,7 +841,7 @@ Reference the Michael Riddering LinkedIn post here - "someone described this bet
       <ul>
         <li>Jihomoravský kraj - intersection of health and social care</li>
         <li>Social workers, health professionals, institutional silos</li>
-        <li>Used LLM tooling here too</li>
+        <li>designed LLM-based assistant to navigate the system</li>
       </ul>
     </div>
     <figure style="margin:0;">
@@ -800,40 +852,43 @@ Reference the Michael Riddering LinkedIn post here - "someone described this bet
 </section>
 
 <section class="layout-two-col">
-  <h2 id="innovative-teams-in-czech-public-services">Innovative teams in Czech public services</h2>
-  <div class="cols" style="align-items:stretch;">
+  <h2 id="innovative-teams-in-public-services">Innovative teams in public services</h2>
+  <div class="cols cols--70-30">
     <ul>
-      <li>Research with KISK FF MUNI (2024) - 14 interviews, 12 findings</li>
-      <li>How teams change public administration from the inside</li>
-      <li>Ideation workshop for 25 ministry secretaries (May 2025)</li>
-      <li>World Café format - highest state secretary Jindřich Fryč in the room</li>
-      <li><a href="https://www.inovacnitymystatnispravy.cz/">inovacnitymystatnispravy.cz</a></li>
+      <li>Research with fellow DIS KISK students</li>
+      <li>How teams change public administration from the inside?</li>
+      <li>Ideation workshop for ministry secretaries (May 2025)</li>
+      <li>Co-created with chief state secretary</li>
+      <li><a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">inovacnitymystatnispravy.cz</a></li>
     </ul>
-    <figure style="margin:0; min-height:0; overflow:hidden;">
-      <img src="https://www.inovacnitymystatnispravy.cz/report-cover.png" alt="Research report cover - How do teams that change Czech public administration work? 12 key findings" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:4px;">
+    <figure style="margin:0;">
+      <img src="https://www.inovacnitymystatnispravy.cz/report-cover.png" alt="Research report cover - How do teams that change Czech public administration work? 12 key findings" style="width:100%; height:auto; display:block; border-radius:4px;">
+      <figcaption><a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">inovacnitymystatnispravy.cz</a></figcaption>
     </figure>
   </div>
-  <aside class="notes">Research team: Veronika Dufek, František Pfann, Johana Šperlová, Erik Vaněk - all from KISK FF MUNI. We ran hloubkové interviews during April 2024, 60-120 minutes each, mostly online. 12 findings grouped into three questions: how do successful teams function, under what circumstances do they form, and what enables them to transform the system. Key finding: success depends on strong leadership, shared vision, motivation, trust, and personal accountability. "Islands of positive deviance" in a sea of established rules.
+  <aside class="notes">Research team: Veronika Dufek, František Pfann, Johana Šperlová, Erik Vaněk - all from KISK FF MUNI. 14 in-depth interviews in April 2024, 60-120 minutes each. 12 findings on three questions: how do successful teams function, under what circumstances do they form, and what enables them to transform the system. "Islands of positive deviance" in a sea of established rules.
 
-The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the research. 25 top managers including the highest state secretary. World Café format rotating through 3 themes: 1) Recruiting and retaining talent, 2) Learning teams, 3) Networking and relationships. Atmosphere was noticeably informal - people wrote first names on name tags instead of titles. That small detail set the tone for the whole day. People left with concrete "small steps" they could take the next day.</aside>
+The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the research. 25 top managers including the highest state secretary Jindřich Fryč. World Café format rotating through 3 themes: 1) Recruiting and retaining talent, 2) Learning teams, 3) Networking and relationships. People wrote first names on name tags instead of titles - that small detail set the tone for the whole day. Left with concrete small steps they could take the next day.</aside>
 </section>
 
 <section class="layout-heading-body">
-  <h2 id="people-doing-great-work-in-this-space">People doing great work in this space</h2>
+  <h2 id="peopleorgs-doing-great-work">People/orgs doing great work</h2>
   <ul>
-    <li><strong>KISK❤️</strong> in Brno – MUNI department pioneering participative design</li>
+    <li><strong>KISK❤️</strong> in Brno - Design department at MUNI</li>
     <li><strong>Pabení</strong> agency - worth following</li>
-    <li><strong>Roman Hřebecký</strong> - go-to person for social innovation projects</li>
+    <li><strong>Roman Hřebecký</strong> - go-to person for social innovation</li>
     <li><strong>Zlín design week</strong> this weekend - come say hi in my hometown</li>
-    <li><strong>MPSIV</strong> - their innovation department, genuinely impressive</li>
+    <li><strong>MPSV</strong> &amp; their innovation department</li>
     <li><strong>Festival kreativní byrokracie</strong> in June - let's meet there!</li>
   </ul>
   <aside class="notes">If you're curious about social innovation design, start here. These are people and organisations doing it seriously.</aside>
 </section>
 
 <section class="layout-statement">
-  <h1 id="in-20-years-many-of-us-will-need-care">In 20 years, many of us will need care.</h1>
-  <p>Someone has to design that experience.</p>
+  <div class="statement-inner">
+    <h1 id="in-20-30-years-many-of-us-will-need-care">In 20-30 years, many of us will need care.</h1>
+    <p>Someone has to design that experience.</p>
+  </div>
   <aside class="notes">Not a scare tactic - a genuine observation. If you're restless in digital product work, if you want problems that feel real, social innovation is worth exploring. The skills transfer. The problems are harder. The stakes are higher.</aside>
 </section>
 
@@ -848,11 +903,11 @@ The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the resear
 </section>
 
 <section class="layout-heading-body">
-  <p class="slide-eyebrow">Reframe</p>
-  <h2 id="1-challenge-im-not-a-technical-person">1. Challenge "I'm not a technical person"</h2>
-  <p>That's one way to look at it.</p>
-  <p>The other: approach it with curiosity. See how it works. Then connect two things together.</p>
-  <aside class="notes">You don't need to become an engineer. You need to be curious enough to ask. Your favourite engineer will probably love explaining it. You'll understand their world better. They'll understand yours.</aside>
+  <p class="slide-eyebrow">Take a breath</p>
+  <h2 id="1-you-dont-need-to-become-technical">1. You don't need to become technical</h2>
+  <p>The barrier is lower than it looks.</p>
+  <p>A short conversation with a developer you trust is enough to get started.</p>
+  <aside class="notes">"I'm not a technical person" can become a self-limiting story. The tools today are genuinely more accessible than they were even a year ago, and they keep meeting you further where you are. You don't need to learn to code. You just need to ask one honest question. The rest follows.</aside>
 </section>
 
 <section class="layout-heading-body">
@@ -871,41 +926,20 @@ The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the resear
 </section>
 
 <!-- slide-53.html — custom slide: "Thank you 🙏" — embedded verbatim -->
-<section style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
-
-  <div style="display:flex; flex-direction:column; align-items:center; gap:40px; padding-bottom:48px;">
-    <div style="font-family:'Space Grotesk', sans-serif; font-size:96px; font-weight:700; color:#f0ece4; letter-spacing:-0.03em; line-height:1;">Thank you 🙏</div>
-    <div style="width:48px; height:2px; border-radius:1px; background-color:#e8a030;"></div>
+<section class="layout-statement">
+  <div class="statement-inner" style="align-items: flex-start;">
+    <h1 id="thank-you">Thank you 🙏</h1>
+    <div style="width:48px; height:2px; border-radius:1px; background-color:#e8a030; margin:2rem 0 2.5rem;"></div>
+    <p style="font-family:'Space Grotesk', sans-serif; font-size:1.75rem; font-weight:400; color:#f0ece4; margin:0;">me@erikvanek.com</p>
+    <p style="font-family:'Inter', sans-serif; font-size:1rem; font-style:italic; color:#ddd8d0; letter-spacing:0.02em; margin-top:1rem;">Let's meet or connect.</p>
   </div>
-
-  <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px;">
-
-    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
-      <span style="color:#5a4838;">erikvanek.com</span><span style="color:#f0ece4;">/ux-monday-26</span>
-    </div>
-
-    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
-      <span style="color:#5a4838;">erikvanek.com</span><span style="color:#f0ece4;">/bydlo</span>
-    </div>
-
-    <div style="width:32px; height:2px; border-radius:1px; background-color:#e8a030; margin-top:6px; margin-bottom:6px;"></div>
-
-    <div style="display:flex; flex-direction:row; font-family:'Space Grotesk', sans-serif; font-size:34px; font-weight:400; line-height:1.15; letter-spacing:-0.01em;">
-      <span style="color:#f0ece4;">me@</span><span style="color:#5a4838;">erikvanek.com</span>
-    </div>
-
-    <div style="padding-top:4px;">
-      <span style="font-family:'Inter', sans-serif; font-size:14px; font-style:italic; font-weight:400; color:#968878; letter-spacing:0.02em; line-height:18px;">Let's meet or connect.</span>
-    </div>
-
-  </div>
-
   <aside class="notes">Don't rush this slide. Take questions if there's time. You can add: "I've been partnering with Datamole on AI and data products over the last year and a half - happy to talk about that too if it's relevant to what you're working on."</aside>
 </section>
 
     </div>
     <div class="slide-footer"><span>erikvanek.com/ux-monday-26</span></div>
   </div>
+  <div id="claude-badge"><span></span></div>
 
   <script src="../../js/reveal.js"></script>
   <script src="../../js/reveal-notes.js"></script>
@@ -932,6 +966,25 @@ The ideation workshop (May 5, 2025, Hotel Spiritka) built directly on the resear
     }
     Reveal.on('ready', updateFooter);
     Reveal.on('slidechanged', updateFooter);
+
+    var claudeBadgeShown = false;
+    function updateClaudeBadge(slide) {
+      var badge = document.getElementById('claude-badge');
+      if (!badge) return;
+      if (slide.hasAttribute('data-switch-to-claude')) {
+        badge.classList.remove('active', 'leaving');
+        void badge.offsetWidth;
+        badge.classList.add('active');
+        claudeBadgeShown = true;
+      } else if (claudeBadgeShown) {
+        badge.classList.remove('active', 'leaving');
+        void badge.offsetWidth;
+        badge.classList.add('leaving');
+        claudeBadgeShown = false;
+      }
+    }
+    Reveal.on('ready', function(e) { updateClaudeBadge(e.currentSlide); });
+    Reveal.on('slidechanged', function(e) { updateClaudeBadge(e.currentSlide); });
   </script>
 </body>
 </html>
