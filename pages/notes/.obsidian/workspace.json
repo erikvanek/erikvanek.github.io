@@ -4,24 +4,107 @@
     "type": "split",
     "children": [
       {
-        "id": "b5b0ccef8141230c",
+        "id": "dda6c740b0d59a38",
         "type": "tabs",
         "children": [
           {
-            "id": "cef355ab9a4807d6",
+            "id": "6f23684381200d2b",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Customer research synthesis.md",
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Customer research synthesis"
+              "title": "Design research"
+            }
+          },
+          {
+            "id": "54958f4770ca0f0a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Research question"
+            }
+          },
+          {
+            "id": "80ca178d5f0885b6",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Interviews"
+            }
+          },
+          {
+            "id": "3cbf16b9f4d9e85a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Sense-making.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Sense-making"
+            }
+          },
+          {
+            "id": "fc34a390eafb543b",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Problem framing"
+            }
+          },
+          {
+            "id": "a543cef274707093",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Research question"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -88,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.5,
-    "collapsed": true
+    "width": 444.5
   },
   "right": {
     "id": "5bde52dce7d98592",
@@ -187,44 +269,44 @@
       "tldraw:Create new tldrawing": false
     }
   },
-  "active": "cef355ab9a4807d6",
+  "active": "a543cef274707093",
   "lastOpenFiles": [
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results/coded-interview.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results/codebook.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/transcripts/clean/participant-3.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/transcripts/clean/participant-2.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/transcripts/clean/participant-1.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/transcripts/clean",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/towf.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/Untitled.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo-script.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Sense-making.md",
+    "02 - 📩 Inbox/Untitled.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Data.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Customer research synthesis.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Codebook.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Selective coding.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Qualitative Research.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Product/Outcomes over Output.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Product Discovery.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Triangulation.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Hypothesis.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Grounded theory.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Fake door tests.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research goals.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Tools/Journey maps.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Research Visualization.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Focus groups.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Ethnographic observation.md",
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Desk research.md",
+    "02 - 📩 Inbox/Research-MOC.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/research plan.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/Untitled",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/insights/search-as-coping-ritual.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/insights/provisional-state-hidden-pain.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/insights/help-seeking-is-socially-gated.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/insights/criteria-are-emergent.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/space-setup-approach-6.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/selection-criteria-12.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/search-process-9.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/professional-gating-5.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/move-trigger-6.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/lease-deadline-pressure-4.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/infrastructure-friction-5.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/incremental-furnishing-5.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/help-seeking-behavior-10.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/emotional-anchoring-8.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding/diy-self-reliance-6.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/research-report.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/next-round.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-one-interview/interview-2.md",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-one-interview",
+    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/transcripts/clean",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/insights",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/coding",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full/codebook.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-full",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/demo/results-one-transcript",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/results",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/deprecated/outputs",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/deprecated",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/UX Monday - May 2026/bydlo.png",
     "causal-loops.png",
     "10 - 🧠 Knowledge/4 - 🏛️ Archives/Work-process/2023-thoughts.jpg",
