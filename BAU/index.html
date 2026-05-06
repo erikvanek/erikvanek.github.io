@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4lzLUckaWn8onmSxB6y18ZD6ljLzNqdBzMtvGXXQL6s" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content='AI navigátor sociálně-zdravotní sítí'>
+    <title>Jarmilka | Erik Vaněk</title>
+    <meta name="description" content='AI navigátor sociálně-zdravotní sítí'>
+    <link rel="stylesheet" href="/css/nu.css">
+    <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+</link>
+<!-- <link rel="stylesheet" href="../../css/revealjs/black.css">
+</link> -->
+    <link rel="stylesheet" href="../css/presentation-jinag.css">
+    </link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+    <div class="backgrounds">
+            <!-- <div class="background-grid"></div> -->
+        <div></div>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+            
+<link rel="stylesheet" href="../css/presentation-kisk.css">
+
+<!-- SLIDE 1: Titulka -->
+<section>
+    <h1 class="r-fit-text">Jarmilka</h1>
+    <div class="equal-columns">
+        <div>
+            <h2 id="navigtor-sociln-zdravotn-st-slueb-vnbspjihomoravskm-kraji">Navigátor sociálně-zdravotní sítí služeb v&nbsp;Jihomoravském kraji</h2>
+            <br><br>
+    <br><br>
+    <p><small>Business as unusual | KISK | leden 2026</small></p>
+    <p>Erik Vaněk</p>
+        </div>
+        
+        <div>
+            <br>
+            <br>
+            <br>
+            <img src="../dis-kisk/img/jarmilka.png" alt="" style="max-width: 25rem;">
+        </div>
+    </div>
+
+    <aside class="notes">
+        - Představit se krátce
+        - "Dnes vám představím projekt, na kterém jsem pracoval půl roku ve spolupráci s JINAGem a JmK"
+        - Framing: žádám o podporu pilotního nasazení
+    </aside>
+</section>
+
+<!-- SLIDE 2: Problém -->
+<section>
+    <h1 id="problm">Problém</h1>
+    <p><strong>Obyvatelé (nejen) JmK se těžko orientují v síti sociálně-zdravotních služeb v momentě potřeby</strong></p>
+    <ul>
+        <li>Reaktivní přístup</li>
+        <li>Roztříštěnost informací</li>
+        <li>Nesrozumitelný jazyk</li>
+        <li>Absence průvodcovství</li>
+    </ul>
+    <p><br><em>Pozdní příchod do služeb → horší výsledky + vyšší náklady</em></p>
+
+    <aside class="notes">
+        - Toto jsou zjištění z hloubkových rozhovorů + workshopů se stakeholdery
+        - Validováno s praktickými lékaři, klienty služeb, zřizovateli, komunitními centry
+        - Klíčové: začarovaný kruh – čím později přijdou, tím hůř se orientují
+    </aside>
+</section>
+
+<!-- SLIDE 3: Existující alternativy -->
+<section>
+    <h1 id="existujc-alternativy">Existující alternativy</h1>
+    <ul>
+        <li><strong>NZIP</strong> – Národní zdravotní informační portál
+            <ul>
+                <li>Zaměřený na zdraví, ne na sociální služby</li>
+            </ul>
+        </li>
+        <li><strong>Katalogy JmK</strong> – Ordinace, Elektronický katalog soc. služeb
+            <ul>
+                <li>Statické, nepersonalizované, málo známé</li>
+            </ul>
+        </li>
+        <li><strong>Registr MPSV</strong> – Registr poskytovatelů
+            <ul>
+                <li>Určený spíš pro úředníky než pro občany</li>
+            </ul>
+        </li>
+        <li><strong>Neformální poradenství</strong> – blízké okolí, "tribal knowledge"</li>
+    </ul>
+    <p><br><strong>→ Žádný nástroj nepomáhá s otázkou „Co mám dělat, když...?"</strong></p>
+
+    <aside class="notes">
+        - Konkurenční analýza: všechny jsou pasivní katalogy
+        - Chybí personalizace, chybí průvodcovství
+        - Nikdo neřeší životní situace, jen nabízí seznamy služeb
+    </aside>
+</section>
+
+<!-- SLIDE 4: Proč teď? -->
+<section>
+    <h1 id="pro-te">Proč teď?</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="demografick-tlak">📈 Demografický tlak</h3>
+            <ul>
+                <li>Stárnoucí populace</li>
+                <li>Rostoucí nároky na péči</li>
+                <li>Přetížené služby</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="technologick-zralost">🤖 Technologická zralost</h3>
+            <ul>
+                <li>LLM dokáží vést dialog v přirozeném jazyce</li>
+                <li>Náklady na AI dramaticky klesají</li>
+                <li>Veřejnost si na AI asistenty zvyká</li>
+            </ul>
+        </div>
+    </div>
+
+    <aside class="notes">
+        - PESTEL kontext: politická podpora (krajská inovační strategie), technologický trend
+        - JmK má ve strategii "Zvyšování informovanosti o službách"
+        - Timing je klíčový – AI je teď dostatečně dobrá a dostupná
+    </aside>
+</section>
+
+<!-- SLIDE 5: Řešení -->
+<section>
+    <h1 id="nvrh-een-jarmilka">Návrh řešení – Jarmilka</h1>
+    <p><strong>Digitální průvodkyně sociálně-zdravotní sítí</strong></p>
+    <ul>
+        <li><strong>Chatbot / hlasová linka</strong> využívající AI</li>
+        <li>Popis své situace <strong>vlastními slovy</strong></li>
+        <li>Jarmilka se doptá, navrhne <strong>konkrétní kroky</strong></li>
+        <li>Předá <strong>kontakty na relevantní služby</strong></li>
+        <li>Když neví → <strong>eskalace na lidského operátora</strong></li>
+    </ul>
+    <p><br><em>Existuje interaktivní prototyp otestovaný s uživateli</em></p>
+
+    <aside class="notes">
+        - Prototyp ve Figmě, testováno s cílovou skupinou
+        - Klíčové: nenahrazuje služby, pomáhá je najít
+        - "SOS tlačítko" – vždy možnost eskalovat na člověka
+        - Odkaz na prototyp: figma.com/proto/...
+    </aside>
+</section>
+
+<section>
+    <img src="../dis-kisk/img/jarmilka-2.png" alt="" style="max-width: 40rem; margin-left: 8rem; margin-bottom: 2rem;">
+</section>
+
+<!-- SLIDE 6: Value Proposition -->
+<section>
+    <h1 id="value-proposition">Value proposition</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="klient-slueb">👤 Klient služeb</h3>
+            <ul>
+                <li><strong>Job:</strong> Vyřešit životní situaci</li>
+                <li><strong>Pain:</strong> Nevím kam se obrátit, stydím se ptát</li>
+                <li><strong>Gain:</strong> Rychle najdu správnou službu</li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="poskytovatel-sluby">🏥 Poskytovatel služby</h3>
+            <ul>
+                <li><strong>Job:</strong> Pomáhat klientům efektivně</li>
+                <li><strong>Pain:</strong> Odbavuji lidi, kterým nemůžu pomoct</li>
+                <li><strong>Gain:</strong> Přicházejí připravení klienti</li>
+            </ul>
+        </div>
+    </div>
+    <p><br><strong>Fit:</strong> Jarmilka řeší „false positive" návštěvy a zkracuje čas k pomoci</p>
+
+    <aside class="notes">
+        - Dva zákaznické segmenty s různými potřebami
+        - Pro klienty: snížení bariéry, srozumitelnost
+        - Pro poskytovatele: efektivita, méně zbytečné práce
+        - Pro kraj: data pro plánování kapacit
+    </aside>
+</section>
+
+<!-- SLIDE 7: KPI a metriky -->
+<section>
+    <h1 id="jak-poznme-spch">Jak poznáme úspěch?</h1>
+    <ul>
+        <li><strong>Primární metrika:</strong> Počet úspěšných propojení klient → služba
+            <ul>
+                <li>Měřitelné přes kontaktní formulář nebo rezervaci</li>
+            </ul>
+        </li>
+        <li><strong>Kvalitativní:</strong> NPS / spokojenost po interakci
+            <ul>
+                <li>Follow-up dotazník po návštěvě služby</li>
+            </ul>
+        </li>
+        <li><strong>Systémová:</strong> Čas od „mám problém" → „mám termín"
+            <ul>
+                <li>Dnes: dny až týdny → Cíl: minuty</li>
+            </ul>
+        </li>
+        <li><strong>Vedlejší:</strong> Sběr dat o poptávce → podklad pro plánování kapacit</li>
+    </ul>
+
+    <aside class="notes">
+        - Žádné vanity metrics typu "počet konverzací"
+        - Měříme reálný dopad – dostal se člověk k pomoci?
+        - Důležité: zpětná vazba od klientů I od služeb
+        - Data pro kraj = bonus, ne hlavní cíl
+    </aside>
+</section>
+
+<!-- SLIDE 8: Náklady a přínosy -->
+<section>
+    <h1 id="investice-a-nvratnost">Investice a návratnost</h1>
+    <div class="equal-columns">
+        <div>
+            <h3 id="nklady-2-roky">💰 Náklady (2 roky)</h3>
+            <ul>
+                <li>Vývoj produktu: 4M Kč (včetně údržby)</li>
+                <li>Sběr dat a tvorba obsahu: 1M Kč</li>
+                <li>Promo: 1M Kč</li>
+                <li><strong>Celkem: ~6M Kč</strong></li>
+            </ul>
+        </div>
+        <div>
+            <h3 id="oekvan-pnosy">📈 Očekávané přínosy</h3>
+            <ul>
+                <li>Úspora času pracovníků služeb</li>
+                <li>Méně „false positive" návštěv</li>
+                <li>Rychlejší přístup k pomoci</li>
+                <li>Data pro plánování</li>
+                <li>Škálovatelnost do dalších krajů</li>
+            </ul>
+        </div>
+    </div>
+
+    <aside class="notes">
+        - ROI těžko vyčíslit přesně – jde o systémovou změnu
+        - Ale: každá ušetřená hodina sociálního pracovníka = stovky Kč
+        - Škálovatelnost: náklady na rozšíření do dalších krajů výrazně nižší
+        - Srovnání: kolik stojí neinformovanost? (pozdní intervence, horší výsledky)
+    </aside>
+</section>
+
+<!-- SLIDE 9: Rizika -->
+<section>
+    <h1 id="klov-rizika">Klíčová rizika</h1>
+    <ul>
+        <li><strong>Nízká adopce veřejností</strong>
+            <ul>
+                <li>Mitigace: Kampaň + napojení na existující touchpointy (čekárny, knihovny)</li>
+            </ul>
+        </li>
+        <li><strong>Nepřesné informace od AI</strong>
+            <ul>
+                <li>Mitigace: Human-in-the-loop, pravidelná aktualizace dat</li>
+            </ul>
+        </li>
+        <li><strong>Nedostatečná spolupráce služeb</strong>
+            <ul>
+                <li>Mitigace: Zapojení od začátku, ukázat přínos (méně zbytečných návštěv)</li>
+            </ul>
+        </li>
+    </ul>
+    <p><br><em>Jarmilka není silver bullet – je to jeden díl skládačky</em></p>
+
+    <aside class="notes">
+        - Upřímnost o limitech buduje důvěru
+        - AI není náhrada za systémovou změnu
+        - Ale může být katalyzátor – centrální bod pro sběr dat a feedback
+    </aside>
+</section>
+
+<!-- SLIDE 10: Žádost -->
+<section>
+    <h1 id="co-potebujeme">Co potřebujeme?</h1>
+    <ul>
+        <li><strong>Pilotní nasazení</strong> na vybraném tématu (např. péče o seniory)</li>
+        <li><strong>Partnerství</strong> s 3-5 službami pro testování</li>
+        <li><strong>Data</strong> o službách pro znalostní bázi</li>
+        <li><strong>Budget</strong> na 6měsíční pilotní fázi</li>
+    </ul>
+    <p><br><strong>Cíl pilotu:</strong> Ověřit, že Jarmilka dokáže měřitelně zlepšit cestu klienta ke
+        službě</p>
+
+    <aside class="notes">
+        - Konkrétní ask – ne "dejte nám peníze", ale "pojďme společně ověřit hypotézu"
+        - Pilot = nízké riziko, možnost iterovat
+        - Navázáno na krajskou inovační strategii
+    </aside>
+</section>
+
+<!-- SLIDE 11: Q&A -->
+<section>
+    <h1 class="r-fit-text">Díky za pozornost!</h1>
+    <h3 id="co-se-vm-te-hon-hlavou">Co se vám teď honí hlavou?</h3>
+    <br>
+    <p><small>Případová studie: <a href="https://www.erikvanek.com/jarmilka/"
+        target="_blank">erikvanek.com/jarmilka</a></small></p>
+    <p><small>Byznys case: <a href="https://jinag.eu/files/2025/10/jarmilka-osobni-pruvodkyne-socialne-zdravotni-siti.pdf"
+            target="_blank">na webu JINAG</a></small></p>
+    <p><small><a href="https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka"
+                target="_blank">Figma prototyp</a></small></p>
+    <p><small><a href="https://eriks-workspace-kxhy.dovetail.com/projects/2kRtfeVIkD68X4WRRxXUys/v/4I17JQ1g6MFoEAKNvU20FI/present"
+                    target="_blank">Výsledky uživatelského výzkumu</a></small></p>
+
+    <aside class="notes">
+        - Připravit se na otázky o:
+        - Konkurenci (proč ne jen vylepšit existující katalogy?)
+        - Metrikách (jak přesně budeme měřit ROI?)
+        - Rizicích (co když AI řekne blbost?)
+        - Škálovatelnosti (proč by to fungovalo jinde?)
+    </aside>
+</section>
+
+        </div>
+
+        <footer>Presentation at <a href="/BAU" target="_blank">erikvanek.com/BAU</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
+
+    <script>
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
+    </script>
+</body>

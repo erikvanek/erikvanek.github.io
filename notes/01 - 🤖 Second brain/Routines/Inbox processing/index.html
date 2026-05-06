@@ -192,39 +192,188 @@
         </div>
     
 
-    <h1 id="inbox-processing">Inbox processing</h1>
-
-    <h1 id="02-inbox">02 - 📩 Inbox</h1>
+    <h1 id="02-inbox-processing">02 - 📩 Inbox Processing</h1>
+<p>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos, classes.</p>
+<h2 id="strong-processing-scopestrong"><strong>📍 Processing Scope</strong></h2>
+<p>When asked to process second brain inbox, <strong>focus specifically on content in the <code>02 - 📩 Inbox</code> folder</strong>.</p>
+<h2 id="special-processing-for-random-notes">Special Processing for 'Random' Notes</h2>
 <ul>
-<li>Inbox contains notes that I have compiled by myself by learning from various sources - books, articles, videos</li>
+<li>'Random' notes contain weekly collections of bullet points from different sources</li>
+<li>Process each bullet point separately</li>
+<li>For each point:
+<ul>
+<li>Find an appropriate existing node in the knowledge base to append to</li>
+<li>If no appropriate node exists, create a new one</li>
+<li>Be aware that multiple bullet points may relate to one common topic</li>
+<li>Group related bullet points together when creating or updating nodes</li>
+</ul>
+</li>
+<li><strong>Preventing Duplication</strong>:
+<ul>
+<li>Before creating a new node, check if the concept is already captured in an existing node</li>
+<li>If a concept appears to deserve its own node but is closely related to an existing one (e.g., &quot;Psychological Safety&quot; vs &quot;Team Effectiveness&quot;), choose the broader concept as the main node and incorporate the more specific concept within it</li>
+<li>Add appropriate tags to ensure the incorporated concepts are still discoverable</li>
+<li>When in doubt, favor enhancing existing nodes rather than creating highly overlapping new ones</li>
+</ul>
+</li>
+</ul>
+<h2 id="strong-book-processing-workflowstrong"><strong>📖 Book Processing Workflow</strong></h2>
+<p>For complete book processing workflow (handwritten A5 pages to integrated knowledge), see:<br>
+<strong>→ <a href="/notes/01 - 🤖 Second brain/Routines/Book Notes Extraction/">Book Notes Extraction</a></strong></p>
+<p>Key book processing principles:</p>
+<ul>
+<li>Preserve hierarchical indentation and emphasis formatting</li>
+<li>Use clean file naming (no &quot;_Notes&quot; or &quot;_I&quot; suffixes)</li>
+<li>Always create AI-assisted summary for books (regardless of character count)</li>
+<li>Extract and integrate 3-5 key insights into existing knowledge nodes</li>
+<li>Use clean link format: <code><a href="#" class="pending-link">Note Name</a></code> not full paths</li>
+<li>Validate all links using <code>validate_notes.py --check-summaries</code></li>
+</ul>
+<h2 id="core-principles">Core Principles</h2>
+<ul>
+<li>Preserve original content exactly as written - no expansions or embellishments</li>
+<li>Maintain the original brevity and structure of notes</li>
+<li>Never add AI-generated content to &quot;improve&quot; or &quot;enhance&quot; notes</li>
+<li>Focus on organization and connections, not content creation</li>
+</ul>
+<h2 id="processing-workflow">Processing Workflow</h2>
+<ol>
+<li><strong>Analyze First</strong>: Review all inbox notes to understand their content and relationships</li>
+<li><strong>Categorize</strong>: Determine if each note is:
+<ul>
+<li>A RAW material (store in RAW folder)</li>
+<li>A knowledge nugget (store in Knowledge folder)</li>
+<li>A fragment that could be combined with another inbox note</li>
+<li>Content that could enhance an existing knowledge note</li>
+</ul>
+</li>
+<li><strong>Process Appropriately</strong>:
+<ul>
+<li>Move RAW materials to: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
+<li>Move knowledge nuggets to appropriate Knowledge subfolder</li>
+<li>If combining notes, maintain all original content from both notes</li>
+<li>If enhancing existing notes, append content verbatim - don't rewrite or expand it</li>
+</ul>
+</li>
+<li><strong>Structure Minimally</strong>:
+<ul>
+<li><strong>REQUIRED: Place YAML frontmatter metadata at the very top of each file</strong></li>
+<li>Add only essential metadata (title, creation date, tags)</li>
+<li>Create simple linking structure to relevant notes</li>
+<li>Keep original formatting whenever possible</li>
+</ul>
+</li>
+<li><strong>Connect</strong>: Add bidirectional links to related notes where appropriate</li>
+<li><strong>Cleanup</strong>:
+<ul>
+<li>Move processed inbox notes to the Dump folder with today's date: <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
+<li>Include both the original notes and any intermediate processing files</li>
+<li>Use descriptive filenames (e.g., append &quot;-original&quot; to original files)</li>
+<li>Git provides backup in case recovery is needed</li>
+</ul>
+</li>
+</ol>
+<h2 id="note-combination-guidelines">Note Combination Guidelines</h2>
+<ul>
+<li><strong>When to Combine Notes</strong>:
+<ul>
+<li>Notes that explicitly reference each other</li>
+<li>Notes covering the same concept from different angles</li>
+<li>Notes that would be more useful as a single cohesive unit</li>
+<li>Fragments that naturally complement each other</li>
+</ul>
+</li>
+<li><strong>How to Combine Notes</strong>:
+<ul>
+<li>Preserve 100% of the original content from all combined notes</li>
+<li>Interweave related content when it makes sense, rather than simply appending</li>
+<li>Choose the most fitting title for the content, not necessarily a broader umbrella title</li>
+<li>Restructure into logical sections that maintain the spirit of the original notes</li>
+<li>Merge related bullet points that address the same concept</li>
+<li>Combine all relevant bidirectional links in a single &quot;Related notes&quot; section</li>
+</ul>
+</li>
+<li><strong>Absolute Requirements</strong>:
+<ul>
+<li>Never paraphrase or alter the specific wording within bullet points</li>
+<li>Never add explanatory text between original content points</li>
+<li>Preserve the core concepts and ideas exactly as written</li>
+<li>Don't add AI-generated transitions between combined elements</li>
+</ul>
+</li>
+<li><strong>Cleanup After Combining</strong>:
+<ul>
+<li>After creating the combined note, move the original source notes to the Dump folder following the cleanup process</li>
+<li>Any temporary or interim files should also be moved to the Dump folder</li>
+</ul>
+</li>
 </ul>
 <h2 id="process">Process</h2>
 <ul>
 <li>Take a look at what is in a given note and assign 5 tags to it based on <a href="/notes/01 - 🤖 Second brain/Routines/Tagging/">Tagging</a> process</li>
 <li>Use appropriate templates from <a href="#" class="pending-link">Note Template</a> for structured processing</li>
 </ul>
-<h2 id="related-nodes">Related nodes</h2>
+<h2 id="strong-related-notes-validation-criticalstrong"><strong>🔗 Related Notes Validation (CRITICAL)</strong></h2>
+<p>Find 5 related nodes in my existing knowledge base <strong>ONLY</strong> from these specific folders:</p>
 <ul>
-<li>Find 5 related nodes in my existing knowledge base (only in folders <code>10 - 🧠 Knowledge</code>) that this nugget is related to, create a section <code>Related notes</code> at the end of the file and link those related notes as bullet points
-<ul>
-<li>If you don't find enough related notes in those two subfolders, it's fine</li>
+<li><code>10 - 🧠 Knowledge/2 - 🌱 Areas</code></li>
+<li><code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
 </ul>
-</li>
-</ul>
-<h2 id="ai-assisted-summary">AI-assisted summary</h2>
+<p><strong>VALIDATION REQUIREMENTS:</strong></p>
+<ol>
+<li><strong>Verify existence</strong>: Before adding any link to &quot;Related notes&quot;, you MUST confirm the linked note actually exists in one of the above folders</li>
+<li><strong>No Projects folder links</strong>: NEVER link to files in <code>10 - 🧠 Knowledge/1 - 🚀 Projects</code> folder in &quot;Related notes&quot; section</li>
+<li><strong>No RAW links in Related notes</strong>: NEVER link to files in <code>04 - 💽 RAW</code> folder in &quot;Related notes&quot; section</li>
+<li><strong>No processing links in Related notes</strong>: NEVER link to files in <code>99 - 📄 To process</code> folder in &quot;Related notes&quot; section</li>
+<li><strong>No made-up links</strong>: NEVER create links to notes that don't exist</li>
+<li><strong>Search first</strong>: Use the knowledge base search to find actual existing notes before creating links</li>
+<li><strong>Quality over quantity</strong>: It's better to have 2-3 real, relevant links than 5 links with some being fictional</li>
+<li><strong>RAW references OK in content</strong>: It's perfectly fine to reference RAW or other folders within note content, just not in &quot;Related notes&quot; section</li>
+</ol>
+<p><strong>Link Format</strong>: Create a section <code>Related notes</code> at the end of the file and link exactly 5 related notes as bullet points:</p>
+<pre><code class="language-markdown">## Related notes
+- <a href="#" class="pending-link">Actual Note Title</a>
+- <a href="#" class="pending-link">Another Real Note</a>
+- <a href="#" class="pending-link">Third Existing Note</a>
+- <a href="#" class="pending-link">Fourth Real Note</a>
+- <a href="#" class="pending-link">Fifth Existing Note</a>
+</code></pre>
+<p>If you cannot find enough related notes in the valid folders, search more broadly or use loosely related concepts rather than creating fake links.</p>
+<h2 id="strong-ai-assisted-summary-logic-updatedstrong"><strong>📏 AI-assisted Summary Logic (Updated)</strong></h2>
+<h3 id="for-new-notes">For NEW notes:</h3>
 <ul>
-<li><strong>!important</strong> include summary only for notes longer than 1500 characters
+<li><strong>Include summary only for notes longer than 1500 characters</strong>
 <ul>
-<li>if a note is longer than that create a section on top called <code>AI-assisted summary</code> with a concise summary of the main ideas
-<ul>
+<li>If a note is longer than that, create a section on top called <code>AI-assisted summary</code> with a concise summary of the main ideas</li>
 <li>Structure this summary into at least two paragraphs for better readability</li>
 <li>First paragraph should cover the core concept/main idea</li>
 <li>Second paragraph should expand on application, implications, or specific details</li>
 <li>Aim for 5-7 sentences length max, it should be like 8 lines of text at most</li>
-<li>then add horizontal line</li>
+<li>Then add horizontal line</li>
 </ul>
 </li>
-<li>if a note is shorter, ignore this</li>
+<li>If a note is shorter, ignore this</li>
+<li><strong>Exception for book notes</strong>: Always create AI-assisted summary regardless of character count</li>
+</ul>
+<h3 id="strongfor-updatedexpanded-notes-new-requirementstrong"><strong>For UPDATED/EXPANDED notes (NEW REQUIREMENT):</strong></h3>
+<ul>
+<li><strong>After adding content to an existing note</strong>, check the total character count of the final note</li>
+<li><strong>If the updated note now exceeds 1500 characters AND doesn't already have an AI-assisted summary:</strong>
+<ul>
+<li>Generate a new <code>AI-assisted summary</code> section at the top of the note</li>
+<li>Follow the same formatting and length guidelines as for new notes</li>
+<li>The summary should cover the entire note content (original + newly added)</li>
+</ul>
+</li>
+<li><strong>If the note already has an AI-assisted summary and new content was added:</strong>
+<ul>
+<li>Update the existing summary to reflect the expanded content</li>
+<li>Maintain the same format and length constraints</li>
+</ul>
+</li>
+<li><strong>If the updated note is still under 1500 characters:</strong>
+<ul>
+<li>Do not add an AI-assisted summary</li>
 </ul>
 </li>
 </ul>
@@ -235,47 +384,61 @@
 <h2 id="storage">Storage</h2>
 <ul>
 <li>Inbox serves as the entrypoint to new knowledge</li>
-<li><strong>important workflow clarification</strong> - After processing, the note should be:
+<li><strong>Important workflow clarification</strong> - Content type determines destination folder:
 <ol>
-<li>Enhanced with proper metadata, tags, AI summary, and related notes</li>
-<li>Stored in the <code>04 - 💽 RAW</code> folder following a hierarchical structure:
+<li><strong>RAW materials</strong> (book notes, interview transcripts, article summaries, attended lectures):
 <ul>
-<li>Create folders based on the note's creation date from frontmatter metadata</li>
-<li>Structure: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
-<li>Example: For a note created on April 6, 2025: <code>04 - 💽 RAW/2025/04/06/Note_Title.md</code></li>
+<li>Store in <code>04 - 💽 RAW</code> following: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[NOTE_TITLE].md</code></li>
+<li>Example: <code>04 - 💽 RAW/2025/04/06/Book_Notes.md</code></li>
 </ul>
 </li>
-<li>Deleted from the Inbox folder after being properly stored in RAW</li>
-<li>Smaller nuggets of information may be created and connected to most relevant notes in <code>10 - 🧠 Knowledge</code> folder if appropriate</li>
+<li><strong>Knowledge nuggets</strong> (concepts, principles, methods, insights):
+<ul>
+<li>Store directly in relevant subfolder of <code>10 - 🧠 Knowledge</code> (typically under <code>3 - 📚 Resources</code>)</li>
+<li>Example: <code>10 - 🧠 Knowledge/3 - 📚 Resources/Development/Technical_Debt.md</code></li>
+</ul>
+</li>
+<li>Always enhance with proper metadata, tags, AI summary (if needed), and related notes</li>
+<li>Delete original inbox notes after proper storage</li>
 </ol>
 </li>
 </ul>
-<h1 id="typical-information-coming-in">Typical information coming in</h1>
+<h2 id="absolute-restrictions">Absolute Restrictions</h2>
+<ul>
+<li>Never expand bullet points into paragraphs</li>
+<li>Never add information not present in original notes</li>
+<li>Never reorganize the internal structure of notes</li>
+<li>Never change writing style or terminology</li>
+<li>Never &quot;improve&quot; note content with AI-generated material</li>
+<li><strong>Never create fictional links in &quot;Related notes&quot; sections</strong></li>
+<li><strong>Never link to RAW, &quot;To process&quot;, or Projects folders in &quot;Related notes&quot;</strong></li>
+</ul>
+<h1 id="typical-information-coming-in">Typical Information Coming In</h1>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>it is &quot;passive&quot; knowledge that I gathered somewhere
+<li>It is &quot;passive&quot; knowledge that I gathered somewhere
 <ul>
-<li>notes from books, articles, podcasts, attended lectures, conferences or classes</li>
+<li>Notes from books, articles, podcasts, attended lectures, conferences or classes</li>
 </ul>
 </li>
 </ul>
-<h2 id="research-artifacts">Research artifacts</h2>
+<h2 id="research-artifacts">Research Artifacts</h2>
 <ul>
 <li>Interview and workshop debriefs notes, post-mortems and learning</li>
 <li>Research plans, scripts and reports</li>
 </ul>
-<h2 id="serendipity-moments">Serendipity moments</h2>
+<h2 id="serendipity-moments">Serendipity Moments</h2>
 <ul>
 <li>&quot;A-ha moments&quot; in shower, toilet, while biking etc</li>
 <li>These are going to be pretty small</li>
 </ul>
-<h2 id="design-artefacts">Design artefacts</h2>
+<h2 id="design-artifacts">Design Artifacts</h2>
 <ul>
-<li>prototypes, test results, boundary objects and results when doing some further research with them</li>
+<li>Prototypes, test results, boundary objects and results when doing some further research with them</li>
 </ul>
 <h2 id="reflections">Reflections</h2>
 <ul>
-<li>weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables</li>
+<li>Weekly or monthly recaps and learnings on what went well and what did not and maybe with some actionables</li>
 </ul>
 
 

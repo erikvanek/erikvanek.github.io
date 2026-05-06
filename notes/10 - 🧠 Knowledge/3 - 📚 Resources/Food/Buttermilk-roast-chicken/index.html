@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="salt-chicken">salt chicken</h1>
+<ul>
+<li>salt chicken from both sides well – 1 tablespoon of salt per 1kg of chicken</li>
+<li>let sit 30 mins</li>
+</ul>
+<h1 id="buttermilk-mixture">buttermilk mixture</h1>
+<ul>
+<li>prepare buttermilk mixture – 500ml of buttermilk for a 1,5kg chicken is fine</li>
+<li>pour 500ml of buttermilk to a bowl, add half a tablespoon of salt</li>
+<li>add flavorings per preference
+<ul>
+<li>e.g. grind 4 cloves of garlic</li>
+<li>skin of 1 lemon</li>
+<li>1 tablespoon of ground cumin</li>
+<li>1 tablespoon of ground coriander seeds</li>
+<li>.5 tablespoon of ground black pepper</li>
+<li>2 tablespoons of paprika</li>
+</ul>
+</li>
+<li>mix well</li>
+</ul>
+<h1 id="marinate-chicken">marinate chicken</h1>
+<ul>
+<li>place the chicken inside a big zip-lock bag</li>
+<li>pour first part ~ a third ~ of the mixture to the chicken</li>
+<li>the rest on and around</li>
+<li>once coated, get the remaining air from the ziplock and zip tightly</li>
+<li>massage it properly so that the marinade hits the chicken from all sides</li>
+<li>put it to a fridge, preferably overnight – massage every now and then to ensure even coating</li>
+</ul>
+<h1 id="baking">baking</h1>
+<ul>
+<li>take the chicken from the fridge at least an hour before baking to warm up a bit</li>
+<li>preheat your oven to 200 deg. Celsius and put a cast iron pan inside</li>
+<li>drain as much marinate as you can from your chicken and pat dry with a paper towel</li>
+<li>once cleaned and an oven (and a skillet) is pre-heated – open the oven and carefully put the chicken back side down to the cast iron</li>
+<li>FYI – most heated part of the oven are back corners so try to have breasts most in the center of the oven while thighs are more in the corner – that should help more even baking</li>
+<li>bake for ~ 60 mins</li>
+<li>after 60 mins – insert a thermometer to the center of a thigh – if the temperature is at least 74, preferably 76, the chicken is done</li>
+<li><strong>imporatant</strong> – let the bird rest at least 10 minutes, preferably 15-20 – juices will redistribute back to it and it will be easier to handle</li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.youtube.com/watch?v=N0S-GAiXt6M&amp;t=334s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=N0S-GAiXt6M&amp;t=334s</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

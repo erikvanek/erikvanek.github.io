@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zdraví | Checklisty</title>
+  <link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="zdrav">🏥 Zdraví</h1>
+    <p class="subtitle">Léky, lékařské zprávy, pojištění</p>
+  </header>
+
+  <main>
+    <a href="./" class="back-link">← Zpět na checklisty</a>
+
+    <h2 class="section-heading">Pokud bereš pravidelné léky</h2>
+    <ul class="checklist">
+      <li>
+        <input type="checkbox" id="item1">
+        <div class="item-content">
+          <div class="item-title">Zajisti zásobu léků na 3 dny <span class="priority priority-critical">Kritické</span></div>
+          <div class="item-detail">Tyto léky si vezmeš s sebou při nástupu. Pak ti je bude předepisovat vězeňský lékař.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item2">
+        <div class="item-content">
+          <div class="item-title">Vyžádej si lékařskou zprávu <span class="priority priority-critical">Kritické</span></div>
+          <div class="item-detail">Od praktického lékaře nebo specialisty. Uveď všechny diagnózy a léky.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item3">
+        <div class="item-content">
+          <div class="item-title">Obstarej si recept s dostatečnou zásobou</div>
+          <div class="item-detail">Pokud je to možné, ať máš léky na delší dobu pro případ komplikací.</div>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="section-heading">Zdravotní dokumentace</h2>
+    <ul class="checklist">
+      <li>
+        <input type="checkbox" id="item10">
+        <div class="item-content">
+          <div class="item-title">Zkopíruj si důležité lékařské zprávy</div>
+          <div class="item-detail">Vyšetření, operace, chronická onemocnění. Vezmi kopie s sebou.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item11">
+        <div class="item-content">
+          <div class="item-title">Zapiš si seznam všech léků a dávkování</div>
+          <div class="item-detail">Včetně volně prodejných léků, které pravidelně bereš.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item12">
+        <div class="item-content">
+          <div class="item-title">Informuj lékaře o plánovaném trestu</div>
+          <div class="item-detail">Může ti připravit souhrn zdravotní dokumentace pro vězeňského lékaře.</div>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="section-heading">Pokud máš psychické obtíže nebo závislost</h2>
+    <ul class="checklist">
+      <li>
+        <input type="checkbox" id="item20">
+        <div class="item-content">
+          <div class="item-title">Informuj o tom při nástupu <span class="priority priority-important">Důležité</span></div>
+          <div class="item-detail">Ve věznici jsou psychologové a programy pro závislé. Nestyď se říct si o pomoc.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item21">
+        <div class="item-content">
+          <div class="item-title">Vezmi si dokumentaci od psychiatra</div>
+          <div class="item-detail">Diagnózy, léky, průběh léčby. Usnadní to navázání péče ve věznici.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item22">
+        <div class="item-content">
+          <div class="item-title">Zjisti si možnosti léčby ve VTOS</div>
+          <div class="item-detail">Některé věznice mají specializovaná oddělení pro léčbu závislostí.</div>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="section-heading">Zdravotní pojištění</h2>
+    <ul class="checklist">
+      <li>
+        <input type="checkbox" id="item30">
+        <div class="item-content">
+          <div class="item-title">Zjisti stav pojištění</div>
+          <div class="item-detail">Během VTOS za tebe platí pojištění stát. Ale ověř, že nemáš dluh na pojistném.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" id="item31">
+        <div class="item-content">
+          <div class="item-title">Vyřeš případné nedoplatky</div>
+          <div class="item-detail">Nezaplacené pojistné ti naroste na penále.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="info-box">
+      <h4 id="tip">💡 Tip</h4>
+      <p>Pokud máš brýle nebo kontaktní čočky, vezmi si je s sebou. Pokud máš protézu nebo naslouchátko, také je vezmi.</p>
+    </div>
+
+    <section class="crisis">
+      <h3 id="potebuje-pomoct-hned">📞 Potřebuješ pomoct hned?</h3>
+      <p>Krizová linka: <a href="tel:116123"><strong>116 123</strong></a></p>
+      <p class="crisis-note">Nonstop, zdarma, anonymně</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Projekt vznikl ve spolupráci s <a href="https://sovia.cz" target="_blank" rel="noopener">Sovia z.s.</a>
+    </p>
+  </footer>
+</body>
+</html>

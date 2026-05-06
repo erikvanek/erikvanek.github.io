@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>Dave Gray's &quot;Liminal Thinking&quot; presents a framework for creating change through understanding and reframing beliefs. The core concept revolves around the &quot;limen&quot; or threshold—boundaries where change naturally occurs.</p>
+<p>Gray argues that beliefs are not objective truths but constructed models of reality that shape our perception through layers of attention, theories, judgments, and perception. The book outlines six fundamental principles about beliefs and nine practical principles for working with them. Central to the methodology is creating &quot;safe space&quot;—psychological environments where people can share vulnerabilities without judgment.</p>
+<p>Gray emphasizes that emotional needs drive behavior more than reason, and unmet emotional needs trigger fight-or-flight responses. The most profound changes come from questioning governing beliefs—those deeply tied to identity and self-worth. Liminal thinking is less about having the right answers and more about developing the capacity to hold multiple perspectives loosely while remaining open to revision.</p>
+<hr>
+<h1 id="liminal-thinking">Liminal Thinking</h1>
+<ul>
+<li>Limen = threshold</li>
+<li>threshold defines two things but does not belong to any of them</li>
+<li>boundaries give life structure but often are <strong>convenient fictions</strong></li>
+<li><strong>change happens at the boundaries of things</strong></li>
+<li>some roles being inherently liminal—coach, therapist, teacher, consultant</li>
+<li>agility &quot;liminal moments&quot;—falling asleep, waking up → hypnagogia</li>
+<li>think of a threshold as a <strong>door of opportunity</strong></li>
+<li><strong>Liminal thinking—the art of creating change by understanding, shaping &amp; reframing beliefs</strong></li>
+</ul>
+<h2 id="6-principles-followbeliefs-about-beliefs">6 Principles Follow—Beliefs About Beliefs</h2>
+<h3 id="1-beliefs-are-models">#1 Beliefs Are Models</h3>
+<ul>
+<li>Gray: <em>&quot;Reality as a whole is unknowable&quot;</em></li>
+<li>Reality is like an elephant from &quot;the elephant and blind men&quot;</li>
+<li>beliefs are similarly wrong as maps or models</li>
+<li>beliefs are not facts but constructions</li>
+<li><em>&quot;which are like fingers pointing to some aspects of reality, don't mistake 'em for reality&quot;</em></li>
+<li><em>&quot;the obvious is not obvious&quot;</em></li>
+</ul>
+<h3 id="2-beliefs-are-created">#2 Beliefs Are Created</h3>
+<ul>
+<li>we band together in &quot;obvious clubs&quot; that defend our competing versions of reality, keeps</li>
+<li>human ability to perceive the world in ways beyond 40 bps?</li>
+<li>expands what you sense, but don't do notice</li>
+<li>in essence we simply make it (<em>societal judgement</em>)</li>
+<li>to reduce its complexity to make it easier to understand</li>
+<li><strong>it is easy to confuse reality with beliefs</strong></li>
+<li>we do reinforce our beliefs by talking to others about what they believe form the fundamental</li>
+<li>mental model for ppl to navigate the world</li>
+<li><strong>the space between reality and beliefs in a Belief Pyramid IS liminal space. If those happen inside each of us, we don't talk about those and four layers are invisible to others</strong></li>
+<li><strong>Beliefs create &amp; share a world</strong></li>
+<li>a belief IS a story in your head that triggers a cause-effect chain, like a recipe or a rule for action</li>
+<li>if you have a need, then you look for a belief that provides a rule to get the result you want</li>
+<li>beliefs are usually in a form: <strong>&quot;If X, then Y&quot;</strong></li>
+</ul>
+<h4 id="learning-loopthe-basic-way-how-we-learn">Learning Loop—The Basic Way How We Learn</h4>
+<p><strong>Needs:</strong> &quot;How do I feel?&quot;<br>
+<strong>Beliefs:</strong> &quot;What are my options?&quot;<br>
+<strong>Actions:</strong> &quot;What will I do?&quot;<br>
+<strong>Results:</strong> &quot;What happened &amp; why?&quot;</p>
+<ul>
+<li>connected w/ the pyramid of beliefs</li>
+<li><strong>beliefs cause behavior</strong></li>
+<li><strong>doom loop</strong>—punishing, reinforces the behavior &amp; makes one stick more to it</li>
+<li><strong>delight loop</strong>—rewarding builds on top of good behavior</li>
+</ul>
+<h3 id="3-the-more-we-reinforce-our-habits-amp-beliefs-the-more-they-become-invisible">#3 The More We Reinforce Our Habits &amp; Beliefs, the More They Become Invisible</h3>
+<ul>
+<li><em>&quot;The way it is&quot; is created by someone &amp; therefore if someone created it, someone can change it</em></li>
+</ul>
+<h3 id="4-beliefs-create-blind-spots">#4 Beliefs Create Blind Spots</h3>
+<ul>
+<li>beliefs help us to navigate &amp; survive, but also limit us</li>
+<li>liminal thinking aims at identifying limiting beliefs</li>
+<li><strong>believed constraints can often be artificial</strong></li>
+<li><strong>Beliefs defend themselves</strong></li>
+<li>people like stability → once a belief is formed, we have tendencies to reinforce so that it creates phosphots (pathways?)</li>
+<li>People rarely test ideas for external validity when they don't have internal coherence</li>
+</ul>
+<h3 id="6-beliefs-are-tied-to-identity">#6 Beliefs Are Tied to Identity</h3>
+<ul>
+<li><strong>governing belief</strong>—a belief that is deeply tied to identity or feeling of self-worth</li>
+<li>the deeper in one's belief system, the more governing beliefs we can find</li>
+<li>the deeper it is, the more it defends itself!</li>
+<li><strong>Questioning your governing beliefs can lead to profound change</strong></li>
+<li>governing beliefs form the foundation of your (version of) reality. They create quemate feelings of self-worth, group identity and social stability. They give order and meaning to life</li>
+</ul>
+<h4 id="the-johari-window">The Johari Window</h4>
+<p>What to do with it?</p>
+<ul>
+<li><em>If you are not objective</em></li>
+<li>The Johari window relates to me/you</li>
+<li>problems most resistant to change are <strong>system problems</strong></li>
+<li>if you're part of the system, you're part of the problem</li>
+<li><strong>→ Your biggest blindspot is yourself, so you need to start evaluating your contribution to the problem</strong></li>
+</ul>
+<h2 id="9-practices">9 Practices</h2>
+<h3 id="practice-1-empty-your-cup">Practice #1: Empty Your Cup</h3>
+<ul>
+<li>goal: leaders supplement the information that's coming to them through official channels with a lot of walking around and sense making on the ground</li>
+<li>often unconsciously (How hard? Who shows joy?)</li>
+<li>How one engages w/ work actually, you want to hear</li>
+<li>In order to learn sth new, you must empty part or so narcissistic knowledge/beliefs don't get in the way</li>
+<li><em><strong>&quot;Beginner's mind&quot;</strong></em></li>
+<li><strong>opening your mind, willingness to &quot;be dumb 2nto newbie&quot;; your brain is the essence of liminal thinking</strong></li>
+<li>you can't learn new things w/o letting go old things</li>
+</ul>
+<h3 id="practice-2-create-safe-space">Practice #2: Create Safe Space</h3>
+<ul>
+<li>if a meeting environment is not a safe space, ppl will bullshit you and try to tell you what you want to hear—not what they think</li>
+<li>reason does not make people act, <strong>emotions do!</strong></li>
+<li><strong>→ what's the point of playing the ball game w/o emotion!</strong></li>
+<li>ppl alieve their beliefs casually, emotions can be trickier, by revealing emotions make ppl vulnerable to each other; give to manipulation</li>
+<li>needs are not only invisible but often in hurt &amp; usually they're hidden to prevent being vulnerable</li>
+<li><strong>If emotional needs are not met</strong>—the brain acts as if the body was starving since for the brain emotional needs areas such as physical ones → that leads to activation of <strong>fight-or-flight</strong></li>
+<li><strong>The SCARF model as a checklist of emotional needs:</strong>
+<ul>
+<li><strong>Status</strong>—does the person feel recognized/needed &amp; where?</li>
+<li><strong>Certainty</strong>—does the person feel confident about what's coming?</li>
+<li><strong>Autonomy</strong>—does the person feel like they have control over their life?</li>
+<li><strong>Relatedness</strong>—feeling of belonging, does represent their group?</li>
+<li><strong>Fairness</strong>—feeling of being treated fairly</li>
+</ul>
+</li>
+<li>people need to feel that they matter</li>
+<li>people won't (not only?) better w/s their emotional needs are met</li>
+<li>when are people emotionally starving, they come w/s conspiracy &amp; start playing games</li>
+<li><strong>emotional needs → beliefs formation → habits</strong></li>
+<li><strong>traction → contribution to the world we live in</strong></li>
+</ul>
+<h4 id="in-conflicting-situationstry-to-ask-a-question">In Conflicting Situations—Try to Ask a Question:</h4>
+<ul>
+<li><em>&quot;Do I truly understand the need?&quot;</em></li>
+<li><em>It's impossible to be angry w/a warm cup of tea in your hands</em></li>
+<li>Sharing food &amp; drinks is the ultimate safe space catalyst</li>
+<li>Trust has to be earned &amp; it takes a lot of time</li>
+<li>Safe space does not mean brainlessly agree with things but allow sharing &amp; suggesting judgement</li>
+</ul>
+<h3 id="practice-4-triangulate-amp-validate">Practice #4: Triangulate &amp; Validate</h3>
+<ul>
+<li>Many theories ppl have about other ppl are like horoscopes, they are not falsifiable—just like you can predict someone's behavior does not validate your theories but in</li>
+<li>most people don't test their theories about other people because it's a potential bubble burst</li>
+<li>Highlight as the ultimate fake testing machine</li>
+<li>Wake tests help you to feel better about yourself and explain</li>
+<li><strong>Triangulation can help where</strong>—the practice of developing multiple viewpoints, theories that you can compare, contrast, combine &amp; validate back</li>
+<li><strong>culture as many theories as you can and hold them loosely; don't get too attached to any of them</strong></li>
+<li>employ your cup → give ppl full attention → note carefully while supporting judgement</li>
+</ul>
+<h3 id="practice-5-ask-questions-make-connections">Practice #5: Ask Questions, Make Connections</h3>
+<ul>
+<li>asking for hopes, dreams, fears and frustrations we can reveal the latent needs &amp; goals of ppl</li>
+<li>A kind of &quot;ecosystem&quot; of needs &amp; solutions</li>
+</ul>
+<h3 id="practice-6-disrupt-routines">Practice #6: Disrupt Routines</h3>
+<ul>
+<li>attacking the problem &amp; attacking the typical solution, or to &quot;mob programming&quot; caught</li>
+<li>if you find yourself stuck in any kind of recurring pattern, try something random &amp; anything you can do that throws the brain off the rails is an opportunity for a new perspective—just the setting different</li>
+</ul>
+<h3 id="practice-7-act-as-if-in-the-here-amp-now">Practice #7: Act As If in the Here &amp; Now</h3>
+<ul>
+<li>Gray: <em>&quot;Action may not always bring happiness, but there is no happiness without action&quot;</em></li>
+<li><strong>If you can form a hypothesis, you don't need to necessarily believe it's true in order to test it</strong> → #design research</li>
+<li>→ you can simply act as if it was true one what happens</li>
+<li>Sometimes single loop learning is not enough—<strong>double loop learning</strong> helps to challenge your own beliefs and trying on new ones</li>
+<li>You can and should even test beliefs you think are wrong</li>
+<li>acting in here-and-now is acting in a way that a different world existed if needed</li>
+<li><strong>w/each new set of beliefs comes a new set of opportunities</strong></li>
+<li>fake it til you make it chapter</li>
+</ul>
+<h3 id="practice-8-make-sense-with-stories">Practice #8: Make Sense With Stories</h3>
+<ul>
+<li><strong>stories encounter the primary ways we make sense of experiences</strong></li>
+<li>give ppl facts w/o a story and they will create a story to make sense of the facts</li>
+<li>Moral coupling—origin at the moment of a story teller other moment</li>
+<li><strong>+ SDG prompt</strong>—question about ppl's XPs &amp; how they made meaning out of them, e.g.:
+<ul>
+<li>&quot;What is the most scared you've ever been? What happened?&quot;</li>
+<li>&quot;Tell me about a time you felt encouraged by what this you admire&quot;</li>
+</ul>
+</li>
+<li>Vulnerability someone's story you're inviting them to deepen the boundary</li>
+<li>→ A simple step to create a shared world w/ that makes going</li>
+<li><em><strong>The best way to promote a new or different belief is not w/ facts, but w/ a story</strong></em></li>
+</ul>
+<h3 id="practice-9-evolve-yourself">Practice #9: Evolve Yourself</h3>
+<ul>
+<li>It's important to consider <strong>this</strong> as you are taking in any kind of change work</li>
+<li>change → succeeds (not just the result, the process &amp; the attempt is the key &amp; you are contributing to create the future you want)</li>
+<li><strong>the biggest barrier to change is fear</strong></li>
+<li>often most constraints preventing change are in your mind</li>
+<li>What helps is not being &quot;results&quot; oriented &amp; being less personally attached to the outcome—being open to more alternatives gives more freedom to experiment</li>
+<li>Sometimes to create new structures, if the old ones must be destroyed so the blocks can be recombined differently</li>
+<li><strong>the world is not static → our beliefs must evolve</strong></li>
+<li><em><strong>liminal thinking is a way of navigating change by opening the door to ambiguity &amp; uncertainty</strong></em></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/Learning/">Learning</a></li>
+<li><a href="/notes/02 - 📩 Inbox/Hyperfocus/">Hyperfocus</a></li>
+<li><a href="/notes/02 - 📩 Inbox/The Story Is Everything/">The Story Is Everything</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

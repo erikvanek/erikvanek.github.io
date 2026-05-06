@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="second-brain-revival-strategy">Second Brain Revival Strategy</h1>
+<p>This document is the master reference for the ongoing second brain reorganization. It was created through a dialogue with Claude on 2026-03-04. Any significant structural changes should be reflected here, and the <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> should record what was done and when.</p>
+<p>If you're picking this up mid-process: check <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> first to see current state, then return here for the full plan.</p>
+<hr>
+<h2 id="why-this-exists">Why this exists</h2>
+<p>The vault accumulated three eras of content that never converged into the intended PARA structure. This strategy is the plan to fix that — gradually, with agent assistance, across multiple sessions — without losing anything and without getting stuck in yet another incomplete migration.</p>
+<p><strong>Core principle</strong>: structure first, content second, automation third. Migrating content into a broken structure just moves the mess.</p>
+<hr>
+<h2 id="definitive-target-structure">Definitive Target Structure</h2>
+<h3 id="top-level-folders">Top-level folders</h3>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01 - 🤖 Second brain</code></td>
+<td>System meta: strategy, decisions, routines, templates, scripts</td>
+</tr>
+<tr>
+<td><code>02 - 📩 Inbox</code></td>
+<td>True transit zone. Process within ~1 week. Nothing lives here permanently.</td>
+</tr>
+<tr>
+<td><code>04 - 💽 RAW</code></td>
+<td>Chronological storage of raw source materials (book notes, transcripts, article captures). Format: <code>YYYY/MM/DD/</code></td>
+</tr>
+<tr>
+<td><code>05 - 🌱 Staging</code></td>
+<td>Incubation layer. Content that's interesting but not yet validated. Review after ~2–4 weeks.</td>
+</tr>
+<tr>
+<td><code>10 - 🧠 Knowledge</code></td>
+<td>The living PARA structure. This is the primary knowledge base.</td>
+</tr>
+<tr>
+<td><code>20 - ✨ Ephemeron</code></td>
+<td>Link/FOMO dump. Separate beast — revisit later. Leave untouched for now.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Folders to be eliminated</strong> (absorbed into <code>10 - Knowledge</code>):</p>
+<ul>
+<li><code>11 - ⏳ interim knowledge</code> — half-migrated PARA content, never completed. Absorb fully.</li>
+<li><code>99 - 📄 To process</code> — pre-PARA backlog. Process with agent, nothing deleted without review.</li>
+</ul>
+<h3 id="areas-fixed-structure">Areas (fixed structure)</h3>
+<p>The previous Areas were misaligned with actual professional life. New structure:</p>
+<ul>
+<li><code>Product &amp; Design practice</code> — primary professional domain, includes service design degree work</li>
+<li><code>Teaching &amp; Lecturing</code> — university lecturer role</li>
+<li><code>Nonprofit design</code> — part-time nonprofit design work</li>
+<li><code>Personal development</code> — learning, habits, self-improvement (replaces &quot;Continuous improvement&quot;)</li>
+<li><code>Cooking and fermentation</code> — keep as-is</li>
+<li><code>Home</code> — keep as-is</li>
+</ul>
+<h3 id="staging-layer-new">Staging layer (new)</h3>
+<p><code>05 - 🌱 Staging</code> is a new folder. The graduation heuristic is simple: <strong>&quot;Would I actively use this in a project?&quot;</strong> — ask this after 2–4 weeks. If yes, migrate to Knowledge. If not, archive or discard.</p>
+<p>No complex scoring system. Single question, human judgment.</p>
+<hr>
+<h2 id="migration-phases">Migration Phases</h2>
+<h3 id="phase-0-structure-setup-not-started">Phase 0 — Structure setup ⬜ Not started</h3>
+<p><em>Estimated effort: 1 session</em></p>
+<ol>
+<li>Create <code>05 - 🌱 Staging</code> folder</li>
+<li>Restructure <code>10 - Knowledge/2 - 🌱 Areas</code> to match new Areas above</li>
+<li>Update this document and <a href="/notes/01 - 🤖 Second brain/Decision-Log/">Decision-Log</a> to reflect any deviations</li>
+<li>Commit to git before starting Phase 1</li>
+</ol>
+<p><strong>Do not touch content yet.</strong></p>
+<hr>
+<h3 id="phase-1-process-inbox-not-started">Phase 1 — Process Inbox ⬜ Not started</h3>
+<p><em>Estimated effort: 1–2 sessions, agent-assisted</em></p>
+<p><strong>Goal</strong>: Clear all 22 notes currently stuck in <code>02 - 📩 Inbox</code>. These are knowledge nuggets in the wrong place, not true inbox captures.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Agent reviews each note in <code>02 - 📩 Inbox</code></li>
+<li>For each note, agent proposes: route to <code>Knowledge</code> subfolder, or hold in <code>Staging</code>, or flag for discard</li>
+<li>Human approves routing for each note (quick pass)</li>
+<li>Agent executes approved moves</li>
+<li>Commit to git</li>
+</ol>
+<p><strong>Rules</strong>:</p>
+<ul>
+<li>Czech-language notes: do NOT discard. Add <code>#czech</code> tag. Flag in <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> so human can review separately.</li>
+<li>Nothing is permanently deleted — git provides recovery</li>
+<li>After processing, Inbox should be genuinely empty</li>
+</ul>
+<p><strong>This is also the weekly routine</strong>: once cleared, the Inbox should stay processed within ~1 week of capture.</p>
+<hr>
+<h3 id="phase-2-absorb-interim-knowledge-not-started">Phase 2 — Absorb interim knowledge ⬜ Not started</h3>
+<p><em>Estimated effort: 1 session, agent-assisted</em></p>
+<p><strong>Goal</strong>: Eliminate <code>11 - ⏳ interim knowledge</code> by migrating content into <code>10 - Knowledge</code>.</p>
+<p><strong>Contents of <code>11</code></strong>:</p>
+<ul>
+<li><code>Design/</code> — Books, Concepts, Methods, UX_Customer_Experience, Design-MOC, Design Crit</li>
+<li><code>Learning/</code></li>
+<li><code>ProductManagement/</code></li>
+<li><code>Productivity/</code></li>
+<li><code>Research/</code></li>
+</ul>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Agent maps each subfolder/note to its target in <code>10 - Knowledge</code></li>
+<li>Check for duplication against existing <code>10 - Knowledge/3 - Resources</code> content (especially Design, which already has structure)</li>
+<li>Human approves mapping</li>
+<li>Agent executes moves, merges duplicates</li>
+<li>Delete <code>11 - ⏳ interim knowledge</code> folder</li>
+<li>Commit to git</li>
+</ol>
+<hr>
+<h3 id="phase-3-process-the-code99-to-processcode-backlog-not-started">Phase 3 — Process the <code>99 - To process</code> backlog ⬜ Not started</h3>
+<p><em>Estimated effort: 2–3 sessions, agent-assisted + human review pass</em></p>
+<p><strong>Goal</strong>: Clear ~60 notes from <code>99 - 📄 To process</code>. This is the messiest layer — mix of gold content and genuine junk.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Agent produces a triage list: title, proposed action (migrate/stage/discard), proposed destination, language flag</li>
+<li><strong>Human reviews the triage list</strong> — this is a required step, nothing is discarded without review</li>
+<li>Human approves or overrides each decision</li>
+<li>Agent executes approved actions</li>
+<li>Czech notes: flagged with <code>#czech</code>, held in Staging or a dedicated <code>Czech</code> subfolder until human decides</li>
+<li>Commit after each batch</li>
+</ol>
+<p><strong>Expected outcome</strong>: ~30–40% discarded (junk, outdated, redundant), remainder migrated to Knowledge or Staging.</p>
+<p><strong>Czech handling</strong>:</p>
+<ul>
+<li>All Czech notes preserved, tagged <code>#czech</code></li>
+<li>Logged in <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a></li>
+<li>Future: any new Czech content triggers a warning from agent (&quot;This note appears to be in Czech — the vault uses English. Process in English or flag for translation.&quot;)</li>
+</ul>
+<hr>
+<h3 id="phase-4-build-weekly-routine-not-started">Phase 4 — Build weekly routine ⬜ Not started</h3>
+<p><em>Estimated effort: 1 setup session</em></p>
+<p><strong>Monday (15 min)</strong>:</p>
+<ul>
+<li>Review Inbox. Agent suggests routing for captures from the past week. Human approves or redirects.</li>
+</ul>
+<p><strong>Friday (20 min)</strong>:</p>
+<ul>
+<li>Review Staging. Anything older than 3–4 weeks gets a decision: graduate to Knowledge or discard.</li>
+<li>Quick reflection note into relevant Area.</li>
+</ul>
+<p><strong>Monthly (45 min)</strong>:</p>
+<ul>
+<li>Rebalancing run. Agent analyzes Knowledge structure, surfaces orphaned notes, suggests connections. Human approves changes.</li>
+<li>Review <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> and update status of phases.</li>
+</ul>
+<p>Existing Routines documentation in <code>01 - 🤖 Second brain/Routines/</code> contains detailed procedures — these are the reference, not the agent prompts. Agent prompts (skills) are leaner versions.</p>
+<hr>
+<h3 id="phase-5-agent-skills-not-started">Phase 5 — Agent skills ⬜ Not started</h3>
+<p><em>Estimated effort: 1–2 sessions</em></p>
+<p>Skills to build, in priority order:</p>
+<ol>
+<li><strong>Inbox processing skill</strong> — lean version of <code>Routines/Inbox processing.md</code>. Routes captures to Knowledge or Staging, flags Czech content.</li>
+<li><strong>Project jumpstart skill</strong> — given a project domain/brief, searches Knowledge + Areas, surfaces relevant notes, generates a starting context brief.</li>
+<li><strong>Staleness tagger</strong> — monthly sweep, flags notes with no links and no recent modification.</li>
+<li><strong>Czech migration skill</strong> — one-time pass, human-reviewed translation or discard decisions.</li>
+</ol>
+<p>Defer: Ephemeron ranker (out of scope for now, revisit later).</p>
+<hr>
+<h2 id="language-policy">Language policy</h2>
+<ul>
+<li>Vault language: <strong>English</strong></li>
+<li>Czech notes already in vault: preserved, tagged <code>#czech</code>, held for human decision</li>
+<li>New Czech content: agent flags it immediately with a warning</li>
+<li>Target: fully English vault over time, no hard deadline</li>
+</ul>
+<hr>
+<h2 id="agent-interaction-principles">Agent interaction principles</h2>
+<p>From <code>01 - 🤖 Second brain/Principles.md</code> — preserved and summarized here for agent context:</p>
+<ol>
+<li>All content is human-created or human-curated. Agents assist, they don't author.</li>
+<li>Agents help with metadata, routing, tagging, linking, and summarizing — not content creation.</li>
+<li>Human is always in the loop for decisions about what stays and what goes.</li>
+<li>Store RAW materials as-is. Enrich existing knowledge nodes rather than creating parallel ones.</li>
+<li>Keep it lean. Avoid over-engineering.</li>
+</ol>
+<hr>
+<h2 id="how-to-update-this-document">How to update this document</h2>
+<p>When a phase is completed:</p>
+<ol>
+<li>Change its status marker from <code>⬜ Not started</code> / <code>🔄 In progress</code> to <code>✅ Complete</code></li>
+<li>Add a note under the phase with the completion date and any deviations</li>
+<li>Add a <a href="/notes/01 - 🤖 Second brain/Progress-Log/">Progress-Log</a> entry</li>
+<li>Commit to git</li>
+</ol>
+<p>When a structural decision changes:</p>
+<ol>
+<li>Update the relevant section here</li>
+<li>Add a <a href="/notes/01 - 🤖 Second brain/Decision-Log/">Decision-Log</a> entry with date, what changed, and why</li>
+</ol>
+
+
+    
+</body>
+
+</html>

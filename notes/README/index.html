@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1 id="readme">README</h1>
+
+    <h1 id="second-brain-workflow-guide">Second Brain Workflow Guide</h1>
+<p>This document provides instructions for managing your Second Brain repository with private submodules.</p>
+<h2 id="repository-structure">Repository Structure</h2>
+<p>This Second Brain uses Git submodules to keep certain content private while maintaining a unified folder structure locally. The configuration is stored in <code>.env.private</code> (not tracked in the public repository).</p>
+<pre><code>Second Brain Repository
+├── public content
+└── private content (managed as submodules)
+    ├── PROJECTS_SUBMODULE (private)
+    └── ARCHIVES_SUBMODULE (private)
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Make sure to add <code>.env.private</code> to your <code>.gitignore</code> file to prevent exposing private repository information.</p>
+</blockquote>
+<h2 id="initial-setup">Initial Setup</h2>
+<p>If you're setting this up on a new machine:</p>
+<pre><code class="language-bash"># Clone the main repository
+git clone https://github.com/erikvanek/erikvanek.github.io.git
+cd erikvanek.github.io
+
+# Initialize and update all submodules
+git submodule update --init --recursive
+</code></pre>
+<h2 id="daily-workflow">Daily Workflow</h2>
+<h3 id="1-pulling-latest-changes">1. Pulling Latest Changes</h3>
+<p>Always start your work session by pulling the latest changes:</p>
+<pre><code class="language-bash"># Navigate to your main repository
+cd /Users/erik/dev/erikvanek.github.io
+
+# Pull changes in the main repository
+git pull
+
+# Update all submodules to their latest commits
+git submodule update --init --recursive
+</code></pre>
+<h3 id="2-adding-new-knowledge">2. Adding New Knowledge</h3>
+<p>When adding new knowledge to your Second Brain:</p>
+<h4 id="for-public-content">For public content:</h4>
+<pre><code class="language-bash"># Edit your files normally
+# Then commit and push as usual
+git add &lt;files_or_folders&gt;
+git commit -m &quot;Add new notes about XYZ&quot;
+git push
+</code></pre>
+<h4 id="for-private-content-in-a-submodule">For private content (in a submodule):</h4>
+<pre><code class="language-bash"># 1. Navigate to the appropriate submodule
+cd &quot;$(grep PROJECTS_PATH .env.private | cut -d= -f2)&quot;  # For projects
+# OR
+cd &quot;$(grep ARCHIVES_PATH .env.private | cut -d= -f2)&quot;  # For archives
+
+# 2. Make your changes
+
+# 3. Commit and push changes in the submodule
+git add .
+git commit -m &quot;Add new private notes about XYZ&quot;
+git push
+
+# 4. Return to the main repository
+cd /Users/erik/dev/erikvanek.github.io
+
+# 5. Update the reference to the submodule
+git add &quot;$(grep PROJECTS_PATH .env.private | cut -d= -f2)&quot;  # Adjust as needed
+git commit -m &quot;Update private submodule reference&quot;
+git push
+</code></pre>
+<h3 id="3-working-with-submodule-content">3. Working with Submodule Content</h3>
+<p>Remember that each submodule is an independent Git repository:</p>
+<ul>
+<li>Changes must be committed in the submodule first</li>
+<li>Then committed in the main repository to update the reference</li>
+<li>Each has its own history and branches</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="detached-head-in-submodule">Detached HEAD in Submodule</h3>
+<p>If you find yourself in a &quot;detached HEAD&quot; state in a submodule:</p>
+<pre><code class="language-bash"># Navigate to the submodule
+cd &quot;$(grep PROJECTS_PATH .env.private | cut -d= -f2)&quot;
+
+# Check out the main branch
+git checkout main
+
+# Pull latest changes
+git pull
+</code></pre>
+<h3 id="submodule-out-of-sync">Submodule Out of Sync</h3>
+<p>If the submodule reference is out of sync:</p>
+<pre><code class="language-bash"># From the main repository
+git submodule update --remote --merge
+</code></pre>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><strong>Pull everything:</strong> <code>git pull &amp;&amp; git submodule update --init --recursive</code></li>
+<li><strong>Check submodule status:</strong> <code>git submodule status</code></li>
+<li><strong>Update submodule to latest remote version:</strong> <code>git submodule update --remote</code></li>
+</ul>
+<p>Remember to always commit changes to the submodule repository first, then update the reference in the main repository.</p>
+
+
+    
+</body>
+
+</html>

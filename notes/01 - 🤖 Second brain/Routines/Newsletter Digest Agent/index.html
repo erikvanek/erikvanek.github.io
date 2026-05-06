@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="newsletter-digest-agent">Newsletter Digest Agent</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This agent processes newsletter subscriptions from Gmail labels to create a focused digest of professional content aligned with my design-first interests and supporting areas.</p>
+<h2 id="when-to-use">When to Use</h2>
+<ul>
+<li>During weekly reviews</li>
+<li>When I need to catch up on industry news</li>
+<li>Before strategic planning sessions</li>
+<li>After returning from time away</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<h3 id="input-sources">Input Sources</h3>
+<ul>
+<li><strong>Gmail Labels</strong>:
+<ul>
+<li>&quot;Blogs&quot; - Main newsletter subscriptions</li>
+<li>&quot;Product updates&quot; - Product release notes and updates</li>
+<li>&quot;Konference&quot; - Conference announcements and event information</li>
+</ul>
+</li>
+</ul>
+<h3 id="focus-areas-priority-order">Focus Areas (Priority Order)</h3>
+<ol>
+<li>Design (primary focus)</li>
+<li>AI development</li>
+<li>Supporting areas:
+<ul>
+<li>Business</li>
+<li>Development</li>
+<li>Leadership</li>
+<li>Learning</li>
+<li>Team</li>
+</ul>
+</li>
+</ol>
+<h3 id="content-priorities">Content Priorities</h3>
+<ul>
+<li>Content from C-level executives of respectable startups/companies</li>
+<li>Content from frequent conference speakers and published authors</li>
+<li>Podcasts with AI company CEOs and leaders</li>
+<li>Product releases and AI industry milestones</li>
+<li>European design events and conferences</li>
+<li>Novel approaches to UX/UI design</li>
+<li>Novel approaches to design leadership</li>
+<li>AI development techniques and applications</li>
+</ul>
+<h3 id="current-interest-areas">Current Interest Areas</h3>
+<ul>
+<li>Design research methodologies and findings</li>
+<li>AI-assisted design tools and approaches</li>
+<li>Design leadership frameworks and practices</li>
+<li>Product management and product trio collaboration models</li>
+<li>Efficient leadership techniques</li>
+<li>Cross-department collaboration strategies</li>
+</ul>
+<h3 id="content-evaluation-criteria">Content Evaluation Criteria</h3>
+<ul>
+<li><strong>Novelty of ideas</strong> (high priority) - Does the content present fresh perspectives or innovative approaches?</li>
+<li><strong>Practical applicability</strong> (high priority) - Can the insights be applied to real-world design and leadership challenges?</li>
+<li><strong>Source reputation</strong> (high priority) - Is the author/speaker a recognized authority in their field?</li>
+<li><strong>Intellectual depth</strong> (medium priority) - Unless exceptionally insightful</li>
+<li><strong>Contrarian perspectives</strong> (variable priority) - Higher if from reputable sources like Jakob Nielsen, lower if from less established voices</li>
+</ul>
+<h2 id="process">Process</h2>
+<h3 id="1-initialization">1. Initialization</h3>
+<pre><code>claude, create a digest from my newsletter subscriptions since [date of last digest]
+</code></pre>
+<p>The agent will:</p>
+<ul>
+<li>Check the <a href="http://Digest-Tracker.md">Digest-Tracker.md</a> to determine the latest digest number and when it was created</li>
+<li>Set the time range from the last digest date to present</li>
+<li>Collect emails from specified labels within that timeframe</li>
+</ul>
+<h3 id="2-email-analysis">2. Email Analysis</h3>
+<p>The agent will:</p>
+<ul>
+<li>Read all emails with the specified labels</li>
+<li>For newsletters that contain multiple items:
+<ul>
+<li>Extract individual pieces of content rather than summarizing the entire newsletter</li>
+<li>Use web_fetch to read the full content of linked articles when possible</li>
+<li>Evaluate each piece separately based on relevance to focus areas</li>
+</ul>
+</li>
+<li>Group related articles by topic (if applicable)</li>
+<li>Consolidate multiple entries from the same source into one comprehensive entry</li>
+<li>Prioritize content based on relevance to focus areas and content priorities</li>
+</ul>
+<h3 id="3-content-curation-amp-evaluation">3. Content Curation &amp; Evaluation</h3>
+<p>The agent will:</p>
+<ul>
+<li>Perform deep analysis of each potential content item (spending significant time on this step)</li>
+<li>Retrieve and analyze the full text of linked articles using web_fetch when possible</li>
+<li>Apply a rigorous scoring system based on the content evaluation criteria</li>
+<li>Prioritize only the highest-quality content that meets multiple criteria</li>
+<li>Consider the author's credentials and reputation as a strong factor in selection</li>
+<li>Ensure representation from current interest areas</li>
+<li>Select only the most valuable content, even if this means fewer total items</li>
+<li>IMPORTANT: Only include actual content from the emails - never fabricate articles, resources, or links</li>
+<li>Only use the exact links provided in the original newsletters</li>
+<li>Limit creative writing to ONLY the introductory paragraph - all other content should use direct excerpts</li>
+</ul>
+<h3 id="4-digest-creation">4. Digest Creation</h3>
+<p>The agent will create a digest with:</p>
+<p><strong>Frontmatter:</strong></p>
+<pre><code>---
+title: &quot;Newsletter Digest #[N]: [Start Date] to [End Date]&quot;
+date_created: YYYY-MM-DD
+period_start: YYYY-MM-DD
+period_end: YYYY-MM-DD
+type: digest
+layout: note.njk
+permalink: /ephemeron-[N]/
+tags:
+  - ephemeron
+  - digest
+  - design
+  - ai-development
+  - [other relevant tags based on content]
+---
+</code></pre>
+<p><strong>Content Structure:</strong></p>
+<ul>
+<li>Direct excerpts from relevant newsletters with minimal interpretation</li>
+<li>Bold text for key points to enhance scannability</li>
+<li>Each extracted item must have its own &quot;Learn more&quot; link to the original source</li>
+<li>Sections only included when relevant content exists</li>
+<li>Length based on quality and relevance of available content, not timespan</li>
+<li>No general introduction or summary section</li>
+</ul>
+<h3 id="5-email-labeling">5. Email Labeling</h3>
+<p>After creating the digest, the agent will add the label &quot;claude-digested&quot; to all processed emails to track what has been included.</p>
+<h3 id="6-storage">6. Storage</h3>
+<p>The agent will:</p>
+<ul>
+<li>Save the digest to <code>/Users/erik/dev/erikvanek.github.io/pages/notes/20 - ✨ Ephemeron/Digest-[N].md</code> where [N] is the sequential number</li>
+<li>Update the <a href="http://Digest-Tracker.md">Digest-Tracker.md</a> with the new digest information</li>
+</ul>
+<h2 id="storage-structure">Storage Structure</h2>
+<h3 id="digest-storage">Digest Storage</h3>
+<p>All digests are stored in:</p>
+<pre><code>/Users/erik/dev/erikvanek.github.io/pages/notes/20 - ✨ Ephemeron/
+</code></pre>
+<h3 id="tracker-file">Tracker File</h3>
+<p>The agent maintains a tracker file at:</p>
+<pre><code>/Users/erik/dev/erikvanek.github.io/pages/notes/20 - ✨ Ephemeron/Digest-Tracker.md
+</code></pre>
+<h2 id="web-access">Web Access</h2>
+<p>Digests are accessible through your website at:</p>
+<pre><code>erikvanek.com/ephemeron-[N]/
+</code></pre>
+<p>Where [N] is the sequential number of the digest.</p>
+<h2 id="important-guidelines">Important Guidelines</h2>
+<ol>
+<li><strong>Extract specific content</strong> - Never summarize entire newsletters; extract and evaluate individual pieces</li>
+<li><strong>Fetch full content</strong> - Use web_fetch to retrieve complete article content when evaluating relevance</li>
+<li><strong>Provide individual links</strong> - Each content item must have its own &quot;Learn more&quot; link</li>
+<li><strong>Consolidate from same source</strong> - Merge multiple entries from the same source into one comprehensive item</li>
+<li><strong>Skip sections without content</strong> - No need to mention when a section is empty</li>
+<li><strong>Quality over quantity</strong> - Length based on relevance, not timespan</li>
+<li><strong>Include only what exists</strong> - Never fabricate content or create fictional resources</li>
+<li><strong>Use exact links from source</strong> - Always use the original links from the newsletters</li>
+<li><strong>Only use real content</strong> - Only include articles, events, and updates that actually appear in the Gmail emails</li>
+<li><strong>Prioritize European events</strong> - For conference listings when available</li>
+<li><strong>Omit redundant title</strong> - Do not include the H1 title as it's already in the layout</li>
+<li><strong>Rigorously analyze everything</strong> - Spend significant time analyzing all potential content items</li>
+<li><strong>Check author credentials</strong> - Research author backgrounds to assess credibility and relevance</li>
+<li><strong>Verify content quality</strong> - Read the full content when possible to ensure quality and depth</li>
+</ol>
+<h2 id="content-analysis-process">Content Analysis Process</h2>
+<p>When analyzing potential content for inclusion:</p>
+<ol>
+<li>
+<p><strong>Initial screening</strong>:</p>
+<ul>
+<li>Check the author's credentials and position</li>
+<li>Evaluate the publishing platform's reputation</li>
+<li>Assess if the topic aligns with focus areas and current interests</li>
+</ul>
+</li>
+<li>
+<p><strong>Deep analysis</strong>:</p>
+<ul>
+<li>Fetch and read the complete content where possible</li>
+<li>Score the content on:
+<ul>
+<li>Novelty (1-10)</li>
+<li>Practical value (1-10)</li>
+<li>Authority of source (1-10)</li>
+<li>Relevance to current interests (1-10)</li>
+</ul>
+</li>
+<li>Only include content scoring highly in multiple categories</li>
+</ul>
+</li>
+<li>
+<p><strong>Final selection</strong>:</p>
+<ul>
+<li>Compare across all analyzed content</li>
+<li>Select only the highest-quality items</li>
+<li>Ensure representation across key interest areas</li>
+<li>Prioritize content from recognized authorities and thought leaders</li>
+</ul>
+</li>
+</ol>
+<h2 id="digest-template">Digest Template</h2>
+<pre><code class="language-markdown">## Welcome to Ephemeron
+
+This is Ephemeron issue vol. [N] – your weekly distillation of design brilliance, AI innovations, and leadership insights. Today's issue explores [brief overview of main themes in this digest].
+
+[2-3 sentences highlighting key content pieces, mentioning specific articles/insights that stand out].
+
+Ready for a thought-provoking journey through the ideas and innovations shaping our creative landscape? Let's begin.
+
+## Design Insights
+
+### [Article Title]
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+### [Another Article Title]
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+[Additional articles as available...]
+
+## AI Development
+
+### [Article Title]
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+[Additional articles as available...]
+
+## Supporting Areas
+
+### Business
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+### Development
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+### Leadership
+**[Key excerpt directly from the content]** Additional relevant information with minimal interpretation.
+[Learn more](link to original)
+
+[etc. as needed for other supporting areas...]
+
+## Product Updates
+- **[Product A]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- **[Product B]**: [Direct excerpt about update from newsletter] [Learn more](link)
+- [etc. as available]
+
+## Upcoming Conferences
+- **[Conference Name]**: [Dates] - [Location: European city] - [Description from newsletter] - [Registration deadline] [Learn more](link)
+- [etc. as available]
+
+## Related notes
+- <a href="#" class="pending-link">Related note 1</a>
+- <a href="#" class="pending-link">Related note 2</a>
+- <a href="#" class="pending-link">Related note 3</a>
+- <a href="#" class="pending-link">Related note 4</a>
+- <a href="#" class="pending-link">Related note 5</a>
+</code></pre>
+<h2 id="example-command">Example Command</h2>
+<pre><code>claude, create a digest from my newsletter subscriptions since April 30, 2025
+</code></pre>
+<h2 id="future-improvements">Future Improvements</h2>
+<ul>
+<li>Consider moving to a dedicated &quot;Agents&quot; folder when created</li>
+<li>Implement tagging suggestions based on digest content</li>
+<li>Add analytics to track most frequent newsletter sources and topics</li>
+<li>Develop preference learning to improve curation quality over time</li>
+</ul>
+
+
+    
+</body>
+
+</html>

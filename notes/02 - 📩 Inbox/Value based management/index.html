@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h1 id="value-based-management">Value based management</h1>
+
+    <ul>
+<li>Value-based management (VBM) provides a precise and unambiguous metric—value—upon which an entire organization can be built.</li>
+<li><strong>The value of a company is determined by its discounted future cash flows. Value is created only when companies invest capital at returns that exceed the cost of that capital.</strong></li>
+<li>The focus of VBM should not be on methodology. It should be on the why and how of changing your corporate culture.</li>
+<li><strong>Traditional financial performance measures, such as earnings or earnings growth, are not always good proxies for value creation</strong>
+<ul>
+<li>To focus more directly on creating value, companies should set goals in terms of discounted cash flow value, the most direct measure of value creation.</li>
+</ul>
+</li>
+<li>We strongly believe that value is the only correct criterion of performance.</li>
+<li>for VBM to stick, it must eventually involve every decision maker in the company like with every change management initiative</li>
+</ul>
+<h2 id="value-drivers">Value drivers</h2>
+<ul>
+<li><strong>performance variables</strong> that will actually create the value of the business</li>
+<li>it is through these drivers of value that senior management learns to understand the rest of the organization and to establish a dialogue about what it expects to be accomplished</li>
+<li><strong>A value driver is any variable that affects the value of the company</strong></li>
+<li>Key value drivers are not static; they must be regularly reviewed</li>
+<li>To be useful, however, value drivers need to be organized so that managers can identify which have the greatest impact on value</li>
+<li><strong>ROIC trees</strong> as a tool to illustrate company value drivers hierarchy</li>
+<li>usually divided into 3 levels
+<ul>
+<li><strong>generic</strong>
+<ul>
+<li>operating margins and invested capital are combined to compute ROIC</li>
+</ul>
+</li>
+<li><strong>business unit</strong>
+<ul>
+<li>variables such as customer mix are particularly relevant</li>
+</ul>
+</li>
+<li><strong>grass roots</strong>
+<ul>
+<li>value drivers are precisely defined and tied to specific decisions that front-line managers have under their control</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    
+</body>
+
+</html>

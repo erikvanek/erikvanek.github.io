@@ -1,0 +1,138 @@
+<h1 id="iser-browser-extension-spec">ISer - Browser Extension Spec</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Download all materials from a university study path curriculum page into a structured zip file, including the curriculum content (as PDF) and all nested referenced resources.</p>
+<h2 id="user-flow">User Flow</h2>
+<ol>
+<li>User navigates to a study path curriculum page (IS MUNI)</li>
+<li>User clicks browser extension icon</li>
+<li>Extension scrapes current page, preserves content structure, identifies all referenced resources</li>
+<li>Extension downloads curriculum as PDF and all referenced files (only internal university URLs)</li>
+<li>Extension packages everything into a zip file</li>
+<li>User receives: <code>[curriculum-title].zip</code></li>
+</ol>
+<h2 id="output-structure">Output Structure</h2>
+<pre><code>Curriculum-Title.zip
+├── curriculum.pdf          # Visual PDF of the curriculum page (preserves layout)
+└── resources/              # Folder containing all referenced materials
+    ├── Smith2023.pdf
+    ├── Chapter3-Notes.pdf
+    └── Lecture-Slides.pdf
+</code></pre>
+<p><strong>File naming:</strong></p>
+<ul>
+<li>Zip file: Extracted from main page title/heading</li>
+<li>Resources: Named as they appear in curriculum references (link text or context), not URL filenames</li>
+</ul>
+<h2 id="technical-constraints">Technical Constraints</h2>
+<ul>
+<li><strong>Vanilla JavaScript only</strong> - no build tools, no bundlers</li>
+<li><strong>Manifest V3</strong> browser extension (Chrome/Edge primary target)</li>
+<li><strong>Incremental development</strong> - validate approach at each step</li>
+<li><strong>Minimal dependencies</strong> - only include libraries when essential (JSZip for packaging)</li>
+</ul>
+<h2 id="core-functionality">Core Functionality</h2>
+<h3 id="1-content-extraction">1. Content Extraction</h3>
+<ul>
+<li>Parse active tab DOM</li>
+<li>Extract main curriculum content</li>
+<li>Preserve structure (headings, lists, nested sections)</li>
+<li>Identify all resource links within content</li>
+</ul>
+<h3 id="2-link-filtering">2. Link Filtering</h3>
+<ul>
+<li>Only process URLs pointing to university information system</li>
+<li>Exclude external domains (YouTube, third-party sites)</li>
+<li>Focus on document types: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX</li>
+<li>Use URL hostname/path patterns to identify internal resources</li>
+</ul>
+<h3 id="3-resource-naming">3. Resource Naming</h3>
+<ul>
+<li>Extract meaningful names from link text</li>
+<li>If link text is generic (&quot;here&quot;, &quot;download&quot;, &quot;attachment&quot;), look at surrounding context:
+<ul>
+<li>Nearest heading</li>
+<li>Parent list item text</li>
+<li>Adjacent text nodes</li>
+</ul>
+</li>
+<li>Fallback to filename from URL if no clear name exists</li>
+<li>Sanitize names for filesystem compatibility (remove special chars)</li>
+</ul>
+<h3 id="4-pdf-generation">4. PDF Generation</h3>
+<ul>
+<li>Generate visual PDF of curriculum page using browser print API</li>
+<li>Preserve layout, formatting, styling as seen in browser</li>
+<li>Handle collapsible sections (content should be visible when page is in &quot;show all&quot; state)</li>
+</ul>
+<h3 id="5-download-orchestration">5. Download Orchestration</h3>
+<ul>
+<li>Use existing browser session/cookies for authentication</li>
+<li>Download curriculum PDF first</li>
+<li>Download resources sequentially (to avoid rate limiting)</li>
+<li>Track progress for each file</li>
+</ul>
+<h3 id="6-packaging">6. Packaging</h3>
+<ul>
+<li>Use JSZip library to create zip file</li>
+<li>Structure: curriculum.pdf at root, resources in subfolder</li>
+<li>Trigger browser download of final zip</li>
+</ul>
+<h2 id="error-handling">Error Handling</h2>
+<ul>
+<li>Skip individual files that fail to download</li>
+<li>Log failures to browser console</li>
+<li>Continue with remaining files</li>
+<li>Show summary at completion: &quot;Downloaded X of Y files, Z failed&quot;</li>
+<li>Don't block entire process on single file failure</li>
+</ul>
+<h2 id="browser-extension-structure">Browser Extension Structure</h2>
+<h3 id="manifest-manifestjson">Manifest (manifest.json)</h3>
+<pre><code class="language-json">{
+  &quot;manifest_version&quot;: 3,
+  &quot;name&quot;: &quot;ISer&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;permissions&quot;: [&quot;activeTab&quot;, &quot;downloads&quot;, &quot;scripting&quot;],
+  &quot;host_permissions&quot;: [&quot;*://*.muni.cz/*&quot;],
+  &quot;action&quot;: {
+    &quot;default_popup&quot;: &quot;popup.html&quot;,
+    &quot;default_icon&quot;: &quot;icon.png&quot;
+  },
+  &quot;background&quot;: {
+    &quot;service_worker&quot;: &quot;background.js&quot;
+  }
+}
+</code></pre>
+<h3 id="files">Files</h3>
+<ul>
+<li><code>manifest.json</code> - Extension configuration</li>
+<li><code>popup.html</code> - Simple UI (button to trigger download, progress indicator)</li>
+<li><code>popup.js</code> - Popup logic</li>
+<li><code>content.js</code> - Content script (injected into page to extract content)</li>
+<li><code>background.js</code> - Service worker (orchestrates downloads, creates zip)</li>
+<li><code>lib/jszip.min.js</code> - JSZip library (only external dependency)</li>
+</ul>
+<h2 id="permissions-required">Permissions Required</h2>
+<ul>
+<li><code>activeTab</code> - Read current page content</li>
+<li><code>downloads</code> - Trigger zip file download</li>
+<li><code>scripting</code> - Inject content script</li>
+<li>Host permissions for <code>*.muni.cz</code> (university domain)</li>
+</ul>
+<h2 id="implementation-approach">Implementation Approach</h2>
+<p>See <code>IMPLEMENTATION.md</code> for step-by-step build plan.</p>
+<h2 id="future-enhancements-post-mvp">Future Enhancements (Post-MVP)</h2>
+<ol>
+<li><strong>Markdown output option</strong> - Generate <a href="http://curriculum.md">curriculum.md</a> instead of PDF</li>
+<li><strong>Batch download</strong> - Multiple curriculum pages at once</li>
+<li><strong>Settings panel</strong> - Choose PDF vs markdown, naming patterns, file filters</li>
+<li><strong>Progress persistence</strong> - Resume interrupted downloads</li>
+</ol>
+<h2 id="tech-stack-evaluation-points">Tech Stack Evaluation Points</h2>
+<p>After implementing each step, evaluate:</p>
+<ul>
+<li>Is vanilla JS still manageable or are we fighting the browser?</li>
+<li>Do we need a build step yet? (probably not until complexity demands it)</li>
+<li>Are there browser API limitations we're hitting?</li>
+<li>Should we reconsider architecture if patterns become unwieldy?</li>
+</ul>
+<p>The goal is to stay lean until the problem demands more tooling.</p>

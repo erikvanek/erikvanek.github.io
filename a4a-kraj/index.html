@@ -11,9 +11,9 @@
     <meta name="description" content='Jak bychom mohli využít AI pro průvodcovství obyvatel sítí dostupných zdravotních a sociálních služeb?'>
     <link rel="stylesheet" href="/css/nu.css">
     <link rel="stylesheet" href="../../css/revealjs/reveal.css">
-    </link>
-    <link rel="stylesheet" href="../../css/revealjs/black.css">
-    </link>
+</link>
+<!-- <link rel="stylesheet" href="../../css/revealjs/black.css">
+</link> -->
     <link rel="stylesheet" href="../css/presentation-jinag.css">
     </link>
 
@@ -45,7 +45,8 @@
 
 <body>
     <div class="backgrounds">
-        <div class="background-grid"></div>
+            <!-- <div class="background-grid"></div> -->
+        <div></div>
     </div>
     <div class="reveal">
         <div class="slides">
@@ -322,13 +323,16 @@
 
         </div>
 
-        <footer>Prezentace na <a href="/a4a-kraj" target="_blank">erikvanek.com/a4a-kraj</a>
+        <footer>Presentation at <a href="/a4a-kraj" target="_blank">erikvanek.com/a4a-kraj</a>
         </footer>
     </div>
 
     <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
 
     <script>
-        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true });
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
     </script>
 </body>

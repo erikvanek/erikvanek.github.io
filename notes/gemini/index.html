@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1 id="gemini-agent-context-the-second-brain-pkm">Gemini Agent Context: The Second Brain (PKM)</h1>
+<h2 id="1-system-philosophy-quotthe-garden-of-knowledgequot">1. System Philosophy: &quot;The Garden of Knowledge&quot;</h2>
+<p>This vault is a Personal Knowledge Management (PKM) system built on <strong>PARA</strong> (Projects, Areas, Resources, Archives) and <strong>BASB</strong> principles.</p>
+<p><strong>Core Goal:</strong> &quot;Start projects that are already 80 percent done&quot; by leveraging gathered notes and unusual connections.</p>
+<h2 id="2-mandatory-principles-for-ai-assistance">2. Mandatory Principles for AI Assistance</h2>
+<ol>
+<li><strong>Strict English-Only:</strong> All outputs (note names, content, tags, summaries) MUST be in English. If the input is in Czech, translate it during processing.</li>
+<li><strong>Human-in-the-Loop:</strong> Propose changes or structures, but always wait for user confirmation for permanent filing.</li>
+<li><strong>PARA Alignment:</strong> Always categorize knowledge into:
+<ul>
+<li><code>1 - 🚀 Projects</code>: Active, time-bound tasks (Private Submodule).</li>
+<li><code>2 - 🌱 Areas</code>: Long-term responsibilities (Design, Product, Personal).</li>
+<li><code>3 - 📚 Resources</code>: Interests/Library for future reference.</li>
+<li><code>4 - 🏛️ Archives</code>: Completed/Inactive items (Private Submodule).</li>
+</ul>
+</li>
+<li><strong>Store RAW, Enrich Existing:</strong> Keep original notes in <code>04 - 💽 RAW</code> for provenance. Use new information to enrich &quot;knowledge nuggets&quot; in <code>10 - 🧠 Knowledge</code>.</li>
+</ol>
+<h2 id="3-specialized-domain-knowledge">3. Specialized Domain Knowledge</h2>
+<p>When assisting with projects, leverage these existing frameworks found in <code>10 - 🧠 Knowledge/3 - 📚 Resources</code>:</p>
+<ul>
+<li><strong>Design:</strong> Service Design, UX Metrics (HEART, NPS), Behavioral Design (Nudges, Hook model), Design Research.</li>
+<li><strong>Product:</strong> Outcome-over-Output, Product Market Fit, Product Strategy, Agile (Vibe coding/Design Engineering).</li>
+<li><strong>Storytelling/Persuasion:</strong> Hero's Journey, FAB Framework (Feelings, Actions, Beliefs), Aristotle's Triad (Ethos/Pathos/Logos).</li>
+</ul>
+<h2 id="4-navigating-the-lifecycle">4. Navigating the Lifecycle</h2>
+<ul>
+<li><strong>Processing:</strong> Check <code>99 - 📄 To process</code> for current synthesis work.</li>
+<li><strong>Metadata:</strong> Use existing templates in <code>01 - 🤖 Second brain/Templates</code> for consistency.</li>
+<li><strong>Routines:</strong> Refer to <code>01 - 🤖 Second brain/Routines/</code> for specific workflows (Inbox processing, Retrieval, Rebalancing).</li>
+</ul>
+<h2 id="5-security-amp-privacy">5. Security &amp; Privacy</h2>
+<ul>
+<li>Be aware that <code>10 - 🧠 Knowledge/1 - 🚀 Projects</code> and <code>10 - 🧠 Knowledge/4 - 🏛️ Archives</code> are private submodules.</li>
+<li>Never leak private submodule content into the public main repository.</li>
+</ul>
+
+
+    
+</body>
+
+</html>

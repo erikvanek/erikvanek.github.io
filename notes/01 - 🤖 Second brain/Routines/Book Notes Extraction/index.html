@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="book-processing-workflow">📖 Book Processing Workflow</h1>
+<p>Complete end-to-end workflow for processing handwritten book notes from A5 pages to fully integrated knowledge base entries.</p>
+<h2 id="stronginput-formatstrong"><strong>Input Format:</strong></h2>
+<ul>
+<li>A5 pages with handwritten bullet points</li>
+<li>Pages numbered with Roman numerals (I, II, III...) in top corner</li>
+<li>First page contains book title as first bullet point</li>
+<li>Photos provided page by page</li>
+</ul>
+<h2 id="strongprocessing-stepsstrong"><strong>Processing Steps:</strong></h2>
+<h3 id="strong1-transcription-phasestrong"><strong>1. Transcription Phase</strong></h3>
+<ul>
+<li>Transcribe handwritten text from each page photo to digital text</li>
+<li><strong>Preserve hierarchical indentation structure</strong> - if bullet points are indented under other points, maintain that relationship using proper markdown indentation</li>
+<li><strong>Preserve emphasis formatting</strong>:
+<ul>
+<li>If text is underlined in handwriting, use <em>emphasized text</em> in markdown</li>
+<li>If line starts with an exclamation mark (!), <strong>bold the entire line</strong></li>
+</ul>
+</li>
+<li>Compile all pages into single continuous note (no page breaks in final RAW file)</li>
+<li>Keep all content verbatim (following core principle of no expansions/embellishments)</li>
+</ul>
+<h3 id="strong2-raw-file-creationstrong"><strong>2. RAW File Creation</strong></h3>
+<ul>
+<li><strong>Storage Location</strong>: <code>04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md</code>
+<ul>
+<li><strong>File naming</strong>: Use clean book title without suffixes like &quot;_Notes&quot; or volume numbers like &quot;_I&quot;</li>
+<li>Example: &quot;How_to_Speak_Machine.md&quot; not &quot;How_to_Speak_Machine_I_Notes.md&quot;</li>
+</ul>
+</li>
+<li><strong>Generate Clean URL</strong>:<pre><code class="language-bash"># Generate slug and add to registry
+cd &quot;01 - 🤖 Second brain/scripts/&quot;
+python url_manager.py add \
+  --title &quot;[Book Title] - Reading Notes&quot; \
+  --file &quot;04 - 💽 RAW/[YEAR]/[MONTH]/[DAY]/[BOOK_TITLE].md&quot; \
+  --category &quot;book&quot;
+</code></pre>
+</li>
+<li><strong>Structure</strong>:<pre><code class="language-markdown">---
+title: &quot;[Book Title] - Reading Notes&quot;
+date: YYYY-MM-DD
+tags: [book-notes, reading, [relevant-tags]]
+source: &quot;[Book Title by Author]&quot;
+type: raw-material
+layout: note.njk
+slug: &quot;generated-slug&quot;
+permalink: &quot;//&quot;
+url_category: &quot;book&quot;
+---
+
+# [Book Title] - Reading Notes
+
+## AI-assisted Summary
+[Brief 2-paragraph summary of main themes and insights]
+
+---
+
+[All transcribed bullet points compiled together]
+
+## Related notes
+[Links to enriched/created knowledge nodes]
+</code></pre>
+</li>
+</ul>
+<h3 id="strong3-summary-creationstrong"><strong>3. Summary Creation</strong></h3>
+<ul>
+<li><strong>Always create AI-assisted summary</strong> for book notes (regardless of character count - exception to normal rule)</li>
+<li>Follow existing format: 2 paragraphs, 5-7 sentences max</li>
+<li>First paragraph: Core themes/main ideas from the book</li>
+<li>Second paragraph: Key applications/implications/specific insights</li>
+</ul>
+<h3 id="strong4-insight-distillation-amp-knowledge-enrichmentstrong"><strong>4. Insight Distillation &amp; Knowledge Enrichment</strong></h3>
+<ul>
+<li><strong>Identify 3-5 most insightful concepts</strong> from the book notes</li>
+<li><strong>Search existing knowledge base</strong> in <code>10 - 🧠 Knowledge/2 - 🌱 Areas</code> and <code>10 - 🧠 Knowledge/3 - 📚 Resources</code></li>
+<li><strong>Extract inspirational quotes</strong>: If notes contain quotes attributed to specific people, add them to <code>10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Inspirational Quotes.md</code></li>
+<li><strong>For each key insight</strong>:
+<ul>
+<li>Find the most relevant existing knowledge node</li>
+<li>If perfect match exists: Append insight to existing node (preserving exact wording)</li>
+<li>If no match: Create new knowledge nugget in appropriate subfolder</li>
+<li>Add reference back to the RAW book notes</li>
+<li>Update related notes connections bidirectionally</li>
+</ul>
+</li>
+</ul>
+<h3 id="strong5-enhanced-linkingstrong"><strong>5. Enhanced Linking</strong></h3>
+<ul>
+<li><strong>In RAW book notes</strong>: Add &quot;Related notes&quot; section linking to any enriched/created knowledge nodes</li>
+<li><strong>In enriched knowledge nodes</strong>: Add back-reference to the book notes in RAW folder</li>
+<li><strong>Use clean link format</strong>: Use simple note names <code><a href="#" class="pending-link">Note Name</a></code> rather than full paths <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/...</a></code>
+<ul>
+<li>Good: <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP/">MVP</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Team/Team Effectiveness/">Team Effectiveness</a></code>, <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Innovation/">Innovation</a></code></li>
+<li>Bad: <code><a href="#" class="pending-link">10 - 🧠 Knowledge/3 - 📚 Resources/Development/MVP</a></code></li>
+</ul>
+</li>
+<li><strong>Follow existing validation rules</strong>: Verify all links exist before adding</li>
+</ul>
+<h3 id="strong6-cleanup-amp-validationstrong"><strong>6. Cleanup &amp; Validation</strong></h3>
+<ul>
+<li>Move any intermediate processing files to <code>03 - 🗑️ Dump/YYYY-MM-DD/</code></li>
+<li>Keep final RAW book notes in RAW folder</li>
+<li>Keep enriched knowledge nodes in Knowledge folders</li>
+<li><strong>Run comprehensive validation</strong>:<pre><code class="language-bash">cd &quot;01 - 🤖 Second brain/scripts/&quot;
+
+# Validate note links and summaries
+python validate_notes.py &quot;../../..&quot; --check-summaries
+
+# Validate URL registry and clean URLs
+python url_manager.py validate --notes-dir &quot;../../..&quot;
+</code></pre>
+</li>
+</ul>
+<h2 id="strongcore-principlesstrong"><strong>Core Principles</strong></h2>
+<ul>
+<li>Preserve original content exactly as written - no expansions or embellishments</li>
+<li>Maintain original hierarchical structure and emphasis formatting</li>
+<li>Always create AI-assisted summary for books (exception to normal character count rule)</li>
+<li>Use clean link format for proper HTML rendering</li>
+<li>Validate all links before completing process</li>
+<li>Focus on organization and connections, not content creation</li>
+</ul>
+<h2 id="strongquality-assurancestrong"><strong>Quality Assurance</strong></h2>
+<ul>
+<li><strong>Link Validation</strong>: All <code><a href="#" class="pending-link">links</a></code> must point to existing files in valid knowledge folders</li>
+<li><strong>Bidirectional Connections</strong>: Enriched knowledge nodes must link back to book notes</li>
+<li><strong>No Forbidden Links</strong>: Never link to RAW, &quot;To process&quot;, or Projects folders in &quot;Related notes&quot; sections</li>
+<li><strong>Formatting Consistency</strong>: Maintain emphasis markers, indentation, and structure from handwritten notes</li>
+</ul>
+<h2 id="strongintegration-with-existing-systemstrong"><strong>Integration with Existing System</strong></h2>
+<p>This workflow integrates with:</p>
+<ul>
+<li><strong>Inbox Processing</strong>: General processing rules and principles</li>
+<li><strong>Tagging</strong>: Uses established tagging system for book notes</li>
+<li><strong>Validation Scripts</strong>: Leverages <code>validate_notes.py</code> for quality control</li>
+<li><strong>Knowledge Rebalancing</strong>: Creates properly structured notes for future rebalancing</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Inbox processing/">Inbox processing</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Tagging/">Tagging</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Knowledge Rebalancing/">Knowledge Rebalancing</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Chunking/">Chunking</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Routines/Clean URL System/">Clean URL System</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

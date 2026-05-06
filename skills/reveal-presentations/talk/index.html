@@ -1,0 +1,186 @@
+<h1 id="conference-talk-presentations">Conference Talk Presentations</h1>
+<p>For conference sessions, guest lectures, and keynote-style presentations.</p>
+<h2 id="typical-structure">Typical Structure</h2>
+<ol>
+<li><strong>Title</strong> – Talk name, date, venue</li>
+<li><strong>Cíl</strong> – What audience will learn</li>
+<li><strong>Agenda</strong> – Roadmap of the talk</li>
+<li><strong>Představení</strong> – Who you are (brief)</li>
+<li><strong>Core content</strong> – Main sections with visual anchors</li>
+<li><strong>Interactive moment</strong> – Question, demo, or reflection</li>
+<li><strong>Zdroje</strong> – Further reading, links</li>
+<li><strong>Q&amp;A</strong> – Questions slide</li>
+<li><strong>Díky</strong> – Closing with contact</li>
+</ol>
+<h2 id="key-patterns">Key Patterns</h2>
+<h3 id="title-slide-with-context">Title Slide with Context</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Vývoj (digitálních) produktů&lt;/h1&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;h4&gt;Erik Vaněk | &lt;a href=&quot;erikvanek.com&quot;&gt;erikvanek.com&lt;/a&gt;&lt;/h4&gt;
+  &lt;h4&gt;15. 11. 2024, KISK FF MUNI&lt;/h4&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="goal-statement">Goal Statement</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Cíl: představit moderní&lt;br&gt;způsoby vývoje (nejen)&lt;br&gt;digitálních produktů&lt;/h1&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;p&gt;Příklady budou na digitálních produktech, ale lze je překlopit i do jiných prostředí.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="agenda-overview">Agenda Overview</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h2&gt;Co nás dnes čeká?&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Představení&lt;/li&gt;
+    &lt;li&gt;Výlet do historie&lt;/li&gt;
+    &lt;li&gt;Rozmach agilních přístupů&lt;/li&gt;
+    &lt;li&gt;Role a struktura&lt;/li&gt;
+    &lt;li&gt;Nové odnože a možnosti&lt;/li&gt;
+    &lt;li&gt;Co s tím dál?&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="disclaimersmeta">Disclaimers/Meta</h3>
+<p>Set expectations early.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Disclaimer&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Ptejte se kdykoli pls!&lt;/li&gt;
+    &lt;li&gt;Anglicismy – co nešlo přeložit dávám do uvozovek&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;Subjektivní&lt;/em&gt; perspektiva zakotvená v literatuře
+      &lt;ul&gt;&lt;li&gt;Vítám kritiku 🙌&lt;/li&gt;&lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Možná nuda pro lidi, který tvorba produktů nezajímá&lt;/li&gt;
+    &lt;li&gt;Generické maskulinum&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="personal-introduction">Personal Introduction</h3>
+<p>Keep it brief, relevant to the topic.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Zdarec! 👋&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h1&gt;Něco o mně&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Cca 10 let v technologických firmách
+      &lt;ul&gt;
+        &lt;li&gt;engineering a vedení týmů&lt;/li&gt;
+        &lt;li&gt;design&lt;/li&gt;
+        &lt;li&gt;product management&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Odvětví: Finančnictví, pohostinost, &lt;strong&gt;hydroponie&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="visual-story-slides">Visual Story Slides</h3>
+<p>Use full-bleed backgrounds for impactful moments.</p>
+<pre><code class="language-html">&lt;section data-background=&quot;infarm/store-2.jpg&quot;&gt;
+  &lt;h1 class=&quot;r-fit-text&quot; style=&quot;text-shadow: 4px 4px 4px black;&quot;&gt;Infarm 🌿&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;section data-background=&quot;infarm/bust.png&quot; data-background-size=&quot;contain&quot;&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="video-embeds">Video Embeds</h3>
+<pre><code class="language-html">&lt;section data-autoplay
+  data-background-iframe=&quot;https://www.youtube.com/embed/VIDEO_ID?si=...&amp;amp;controls=0&quot;
+  allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="concept-explanation">Concept Explanation</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Klíčové charakteristiky&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Říká se tomu vodopád 🌊&lt;/li&gt;
+    &lt;li&gt;Detailní plánování&lt;/li&gt;
+    &lt;li&gt;Lineární proces&lt;/li&gt;
+    &lt;li&gt;&quot;Kaskáda&quot;&lt;/li&gt;
+    &lt;li&gt;Validace probíhá úplně na konci&lt;/li&gt;
+    &lt;li&gt;Chybí důraz na člověka&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="check-in-with-audience">Check-in with Audience</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Co se vám honí hlavou?&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Koho tu dnes máme?&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="example-companiesproducts">Example Companies/Products</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;3 konkrétní příklady&lt;/h1&gt;
+  &lt;div style=&quot;display: flex; gap: 5rem; justify-content: center; margin-top: 2rem;&quot;&gt;
+    &lt;img src=&quot;basecamp-logo.svg&quot; style=&quot;height: 15rem; width: 15rem; border-radius: 2rem;&quot;&gt;
+    &lt;img src=&quot;linear-logo.avif&quot; style=&quot;height: 15rem; width: 15rem; border-radius: 2rem;&quot;&gt;
+    &lt;img src=&quot;arc-logo.svg&quot; style=&quot;height: 15rem; width: 15rem; border-radius: 2rem;&quot;&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;Znáte / používáte nějaký z těchto produktů?&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="interactive-demo-section">Interactive Demo Section</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Interaktivní demo&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Jednoduchý nástroj na prioritizaci úkolů&lt;/li&gt;
+    &lt;li&gt;Postupně rozvíjíme přidáváním featur&lt;/li&gt;
+    &lt;li&gt;Pouze copy-paste, není nutné umět kódovat&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="further-resources">Further Resources</h3>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Další zdroje&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;Lenny's podcast&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;Teresa Torres&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;David Heinemeier Hansson&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;...&quot; target=&quot;_blank&quot;&gt;Design better podcast&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="closing-with-video-background">Closing with Video Background</h3>
+<pre><code class="language-html">&lt;section data-background-video-loop data-background-video=&quot;kombucha-compressed.mp4&quot;&gt;
+  &lt;h2 style=&quot;text-align: center;&quot;&gt;Dík za pozornost!&lt;/h2&gt;
+  &lt;h1&gt;Máte otázky? 🌈&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="content-guidelines">Content Guidelines</h2>
+<ul>
+<li><strong>Hook early</strong> – why should audience care?</li>
+<li><strong>Keep intro short</strong> – ~2 slides max about yourself</li>
+<li><strong>Visual variety</strong> – alternate text slides with full-bleed images/videos</li>
+<li><strong>Check in periodically</strong> – &quot;Co se vám honí hlavou?&quot;</li>
+<li><strong>Concrete examples</strong> – name companies, products, projects</li>
+<li><strong>End with resources</strong> – give audience places to go deeper</li>
+<li><strong>Leave Q&amp;A time</strong> – don't cram content to the last minute</li>
+</ul>
+<h2 id="pacing">Pacing</h2>
+<p>For a 45-minute talk:</p>
+<ul>
+<li>5 min: intro + context</li>
+<li>30 min: core content (~15-20 slides)</li>
+<li>5 min: wrap-up + resources</li>
+<li>5 min: Q&amp;A</li>
+</ul>
+<h2 id="visual-style">Visual Style</h2>
+<ul>
+<li>Use <code>r-fit-text</code> for impact statements and transitions</li>
+<li>Full-bleed backgrounds for story moments</li>
+<li>Consistent image styling across examples</li>
+<li>Video backgrounds for memorable closing</li>
+</ul>
+<h2 id="audience-engagement">Audience Engagement</h2>
+<ul>
+<li>Ask questions even if rhetorical</li>
+<li>Show of hands for calibration (&quot;Kdo z vás už...?&quot;)</li>
+<li>Reference what you've heard about the audience</li>
+<li>Interactive demo if technical topic allows</li>
+</ul>

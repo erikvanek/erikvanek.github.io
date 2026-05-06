@@ -11,9 +11,9 @@
     <meta name="description" content='Přednáška v rámci KISKfórua říjen 24'>
     <link rel="stylesheet" href="/css/nu.css">
     <link rel="stylesheet" href="../../css/revealjs/reveal.css">
-    </link>
-    <link rel="stylesheet" href="../../css/revealjs/black.css">
-    </link>
+</link>
+<!-- <link rel="stylesheet" href="../../css/revealjs/black.css">
+</link> -->
     <link rel="stylesheet" href="../css/presentation-jinag.css">
     </link>
 
@@ -45,7 +45,8 @@
 
 <body>
     <div class="backgrounds">
-        <div class="background-grid"></div>
+            <!-- <div class="background-grid"></div> -->
+        <div></div>
     </div>
     <div class="reveal">
         <div class="slides">
@@ -482,13 +483,16 @@
 
         </div>
 
-        <footer>Prezentace na <a href="/roboton" target="_blank">erikvanek.com/roboton</a>
+        <footer>Presentation at <a href="/roboton" target="_blank">erikvanek.com/roboton</a>
         </footer>
     </div>
 
     <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
 
     <script>
-        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true });
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
     </script>
 </body>

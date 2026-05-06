@@ -1,0 +1,132 @@
+<h1 id="is-mu-offline-curriculum-extension">IS MU Offline Curriculum Extension</h1>
+<p>Chrome extension to download IS MU interactive curriculum for offline reading on reMarkable and other devices.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>✅ <strong>Auto-detection</strong>: Icon turns green when curriculum page is detected</li>
+<li>✅ <strong>One-click download</strong>: Click extension → starts processing</li>
+<li>✅ <strong>PDF output</strong>: Clean, formatted curriculum content</li>
+<li>✅ <strong>Resources folder</strong>: All external files organized with smart naming</li>
+<li>✅ <strong>Collision handling</strong>: Duplicate names get (1), (2), etc.</li>
+<li>✅ <strong>Progress indicator</strong>: Shows what's being processed</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="1-download-required-libraries">1. Download Required Libraries</h3>
+<p>The extension needs two JavaScript libraries. Download them and place them in the <code>libs/</code> folder:</p>
+<p><strong>a) JSZip (for creating ZIP files)</strong></p>
+<ul>
+<li>Go to: <a href="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js</a></li>
+<li>Save as: <code>libs/jszip.min.js</code></li>
+</ul>
+<p><strong>b) html2pdf.js (for PDF generation)</strong></p>
+<ul>
+<li>Go to: <a href="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js</a></li>
+<li>Save as: <code>libs/html2pdf.bundle.min.js</code></li>
+</ul>
+<h3 id="2-create-icons">2. Create Icons</h3>
+<p>You need to create placeholder icons or the extension won't load. Create simple PNG files:</p>
+<ul>
+<li><code>icons/icon-16.png</code> (16x16px) - gray icon</li>
+<li><code>icons/icon-16-active.png</code> (16x16px) - green icon</li>
+<li><code>icons/icon-48.png</code> (48x48px) - gray icon</li>
+<li><code>icons/icon-48-active.png</code> (48x48px) - green icon</li>
+<li><code>icons/icon-128.png</code> (128x128px) - gray icon</li>
+<li><code>icons/icon-128-active.png</code> (128x128px) - green icon</li>
+</ul>
+<p><strong>Quick way to create icons:</strong></p>
+<ol>
+<li>Open any image editor (Preview on Mac, Paint on Windows)</li>
+<li>Create a 128x128px image with a solid color (gray for inactive, green for active)</li>
+<li>Add text &quot;MU&quot; or &quot;📥&quot; in the center</li>
+<li>Resize/save copies as 16x16 and 48x48</li>
+<li>Save in the <code>icons/</code> folder</li>
+</ol>
+<h3 id="3-load-extension-in-chrome">3. Load Extension in Chrome</h3>
+<ol>
+<li>Open Chrome and go to <code>chrome://extensions/</code></li>
+<li>Enable <strong>Developer mode</strong> (toggle in top-right corner)</li>
+<li>Click <strong>Load unpacked</strong></li>
+<li>Select the <code>munier</code> folder</li>
+<li>The extension should now appear in your extensions list</li>
+</ol>
+<h3 id="4-pin-the-extension-optional">4. Pin the Extension (Optional)</h3>
+<ol>
+<li>Click the puzzle piece icon in Chrome toolbar</li>
+<li>Find &quot;IS MU Offline Curriculum&quot;</li>
+<li>Click the pin icon to keep it visible</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<ol>
+<li><strong>Navigate</strong> to any IS MU curriculum page (e.g., <code>https://is.muni.cz/auth/el/phil/podzim2025/DESB54/index.qwarp</code>)</li>
+<li><strong>Icon turns green</strong> when curriculum is detected</li>
+<li><strong>Click the extension icon</strong></li>
+<li><strong>Click &quot;Download Curriculum&quot;</strong> button</li>
+<li><strong>Wait</strong> for processing (progress shown in popup)</li>
+<li><strong>Save</strong> the ZIP file when prompted</li>
+</ol>
+<h2 id="output-structure">Output Structure</h2>
+<pre><code>DESB54-Learning_Design.zip
+├── DESB54-Learning_Design.pdf
+└── resources/
+    ├── Uvodni_pozdrav_k_1_modulu.mp3
+    ├── Learning_design.png
+    ├── Terminologie.png
+    ├── ADDIE_model.png
+    └── ...
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="extension-wont-load">Extension won't load</h3>
+<ul>
+<li>Check that all files are in place</li>
+<li>Make sure libraries are in <code>libs/</code> folder</li>
+<li>Verify icons exist in <code>icons/</code> folder</li>
+</ul>
+<h3 id="icon-doesnt-turn-green">Icon doesn't turn green</h3>
+<ul>
+<li>Make sure you're on a page with <code>index.qwarp</code> in the URL</li>
+<li>Try refreshing the page</li>
+<li>Check the console for errors (F12)</li>
+</ul>
+<h3 id="download-fails">Download fails</h3>
+<ul>
+<li>Check your internet connection</li>
+<li>Some resources might be unavailable</li>
+<li>Try refreshing the page and downloading again</li>
+</ul>
+<h3 id="quotcurriculum-not-detectedquot">&quot;Curriculum not detected&quot;</h3>
+<ul>
+<li>Navigate to the curriculum page (with <code>index.qwarp</code>)</li>
+<li>Click the extension icon again</li>
+</ul>
+<h2 id="technical-details">Technical Details</h2>
+<ul>
+<li><strong>Manifest Version</strong>: 3</li>
+<li><strong>Required Permissions</strong>:
+<ul>
+<li><code>activeTab</code>: Access current page content</li>
+<li><code>downloads</code>: Save files to disk</li>
+<li><code>storage</code>: Remember settings</li>
+<li><code>scripting</code>: Inject content scripts</li>
+</ul>
+</li>
+<li><strong>Host Permissions</strong>: <code>https://is.muni.cz/*</code></li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Audio/video streams (.m3u8) may not download properly - these are links in the PDF</li>
+<li>Large curricula might take a few minutes to process</li>
+<li>Make sure you have enough disk space</li>
+<li>The extension works only on authenticated IS MU pages (you must be logged in)</li>
+</ul>
+<h2 id="sharing-with-classmates">Sharing with Classmates</h2>
+<p>To share this extension with classmates:</p>
+<ol>
+<li>Zip the entire <code>munier</code> folder</li>
+<li>Share the ZIP file</li>
+<li>Include these installation instructions</li>
+<li>Tell them to download the required libraries (jszip and html2pdf)</li>
+<li>Help them create simple icons if needed</li>
+</ol>
+<h2 id="version">Version</h2>
+<p><strong>v1.0.0</strong> - Initial MVP release</p>
+<h2 id="license">License</h2>
+<p>Created for educational purposes at Masaryk University.</p>

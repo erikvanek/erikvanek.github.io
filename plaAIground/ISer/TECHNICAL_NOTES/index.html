@@ -1,0 +1,275 @@
+<h1 id="technical-notes-amp-decision-rationale">Technical Notes &amp; Decision Rationale</h1>
+<h2 id="architecture-decisions">Architecture Decisions</h2>
+<h3 id="vanilla-javascript-minimal-dependencies">Vanilla JavaScript + Minimal Dependencies</h3>
+<p><strong>Why:</strong></p>
+<ul>
+<li>Avoids build step complexity for MVP</li>
+<li>Faster iteration during development</li>
+<li>Easier to debug in browser DevTools</li>
+<li>Less abstraction = clearer understanding of browser APIs</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li>DOM manipulation becoming unwieldy</li>
+<li>Repetitive patterns that would benefit from utility functions</li>
+<li>Callback hell or promise chain complexity</li>
+</ul>
+<p><strong>Pivot if:</strong> Code becomes harder to reason about than the tooling would be.</p>
+<hr>
+<h3 id="manifest-v3">Manifest V3</h3>
+<p><strong>Why:</strong></p>
+<ul>
+<li>Chrome/Edge default, Manifest V2 being deprecated</li>
+<li>Service workers instead of background pages (better resource usage)</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li>Service workers can be terminated by browser (must handle state carefully)</li>
+<li>No persistent background page means downloads must complete in one session</li>
+<li>Some APIs work differently than Manifest V2</li>
+</ul>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>Keep download process in single service worker invocation</li>
+<li>Store minimal state, reconstruct from messages if needed</li>
+</ul>
+<hr>
+<h3 id="sequential-downloads-not-parallel">Sequential Downloads (Not Parallel)</h3>
+<p><strong>Why:</strong></p>
+<ul>
+<li>Simpler error handling</li>
+<li>Avoids rate limiting</li>
+<li>Easier to track progress</li>
+<li>Most curriculum pages have &lt;20 resources, speed not critical</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li>User frustration with long download times</li>
+<li>Rate limiting even with delays</li>
+</ul>
+<p><strong>Pivot if:</strong> Pages consistently have 50+ resources and users complain about speed.</p>
+<hr>
+<h2 id="key-technical-challenges">Key Technical Challenges</h2>
+<h3 id="challenge-1-pdf-generation">Challenge 1: PDF Generation</h3>
+<p><strong>Problem:</strong> How to convert curriculum page to PDF while preserving layout?</p>
+<p><strong>Options:</strong></p>
+<ol>
+<li>
+<p><strong>Native browser print API</strong> (<code>window.print()</code>)</p>
+<ul>
+<li>Pros: No dependencies, uses browser's own rendering</li>
+<li>Cons: Limited control, requires user interaction (?)</li>
+</ul>
+</li>
+<li>
+<p><strong>html2pdf.js / jsPDF + html2canvas</strong></p>
+<ul>
+<li>Pros: Programmatic, no user interaction</li>
+<li>Cons: Adds dependency (~300KB), rendering may differ from browser</li>
+</ul>
+</li>
+<li>
+<p><strong>Headless Chrome via API</strong> (future consideration)</p>
+<ul>
+<li>Pros: Perfect rendering</li>
+<li>Cons: Requires backend service, overkill for MVP</li>
+</ul>
+</li>
+</ol>
+<p><strong>Recommendation:</strong> Start with html2pdf.js. It's the pragmatic choice for automated PDF generation with decent quality. Re-evaluate if rendering quality is poor.</p>
+<hr>
+<h3 id="challenge-2-authentication-amp-cookies">Challenge 2: Authentication &amp; Cookies</h3>
+<p><strong>Problem:</strong> Downloads need to work with user's authenticated session.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Content script runs in context of page (has access to cookies)</li>
+<li>Use <code>fetch()</code> with <code>credentials: 'include'</code> to pass cookies</li>
+<li>Verify same-origin policy doesn't block requests</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li>CORS issues if resources are on different subdomains</li>
+<li>Session expiration during long download processes</li>
+</ul>
+<hr>
+<h3 id="challenge-3-resource-name-extraction">Challenge 3: Resource Name Extraction</h3>
+<p><strong>Problem:</strong> Links may have generic text like &quot;Download&quot;, &quot;here&quot;, &quot;PDF&quot;, etc.</p>
+<p><strong>Strategy:</strong></p>
+<pre><code>1. Check link text (e.g., &quot;Smith2023.pdf&quot;)
+   └─&gt; If meaningful → use it
+
+2. Check parent element text
+   └─&gt; e.g., &lt;li&gt;Chapter 3 Notes &lt;a&gt;download&lt;/a&gt;&lt;/li&gt;
+   └─&gt; Extract &quot;Chapter 3 Notes&quot;
+
+3. Check nearest heading
+   └─&gt; &lt;h3&gt;Week 1: Introduction&lt;/h3&gt;
+   └─&gt; &lt;a&gt;lecture slides&lt;/a&gt;
+   └─&gt; Extract &quot;Week 1 Introduction - lecture slides&quot;
+
+4. Fallback to URL filename
+   └─&gt; Extract from URL path
+</code></pre>
+<p><strong>Edge cases:</strong></p>
+<ul>
+<li>Multiple resources with same name → append numbers</li>
+<li>Special characters in names → sanitize for filesystem</li>
+<li>Empty link text with image → use image alt text</li>
+</ul>
+<hr>
+<h3 id="challenge-4-large-files-amp-timeouts">Challenge 4: Large Files &amp; Timeouts</h3>
+<p><strong>Problem:</strong> Some resources may be large (multi-MB PDFs), download takes time.</p>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>Set reasonable fetch timeout (30-60 seconds)</li>
+<li>Show progress per file, not just overall count</li>
+<li>Allow individual file failures without blocking process</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li>Browser memory issues with many large files in memory</li>
+<li>Service worker termination during long downloads</li>
+</ul>
+<p><strong>Pivot if:</strong> Need to implement streaming downloads or chunk processing.</p>
+<hr>
+<h2 id="browser-api-considerations">Browser API Considerations</h2>
+<h3 id="content-scripts-vs-background-service-worker">Content Scripts vs Background Service Worker</h3>
+<p><strong>What runs where:</strong></p>
+<p><strong>Content Script</strong> (<code>content.js</code>):</p>
+<ul>
+<li>Injected into curriculum page</li>
+<li>Has access to page DOM</li>
+<li>Can read page content, extract links</li>
+<li>Shares page's security context (cookies, origin)</li>
+</ul>
+<p><strong>Service Worker</strong> (<code>background.js</code>):</p>
+<ul>
+<li>Runs in extension context (isolated)</li>
+<li>No DOM access</li>
+<li>Orchestrates downloads</li>
+<li>Creates zip file</li>
+<li>Triggers browser downloads</li>
+</ul>
+<p><strong>Communication:</strong> Use <code>chrome.runtime.sendMessage()</code> for content → background messages.</p>
+<hr>
+<h3 id="download-api-behavior">Download API Behavior</h3>
+<p><code>chrome.downloads.download()</code> triggers browser's native download manager:</p>
+<ul>
+<li>File goes to user's default Downloads folder</li>
+<li>User sees browser download progress indicator</li>
+<li>Can be interrupted/cancelled by user</li>
+</ul>
+<p><strong>Alternatives considered:</strong></p>
+<ul>
+<li>Generate blob URL and use <code>&lt;a download&gt;</code> - less reliable, no progress</li>
+<li>File System API - requires user permission, more complex</li>
+</ul>
+<p><strong>Chosen approach:</strong> Use native download API for simplicity and user familiarity.</p>
+<hr>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<h3 id="pitfall-1-service-worker-lifecycle">Pitfall 1: Service Worker Lifecycle</h3>
+<p>Service workers can be terminated by browser after ~30 seconds of inactivity.</p>
+<p><strong>Solution:</strong> Keep download process active by continuously sending messages or use <code>chrome.runtime.onMessage</code> with long-lived connections.</p>
+<p><strong>Alternatively:</strong> Complete entire download in one invocation (reasonable for &lt;50 files).</p>
+<hr>
+<h3 id="pitfall-2-cors-amp-cross-origin-resources">Pitfall 2: CORS &amp; Cross-Origin Resources</h3>
+<p>If resources are hosted on different domain than curriculum page, CORS may block fetch.</p>
+<p><strong>Check:</strong> Look at actual resource URLs in sample markup.</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Request <code>host_permissions</code> for resource domains in manifest</li>
+<li>Use <code>mode: 'no-cors'</code> (but can't read response then - not viable)</li>
+<li>If unfixable: Document limitation and skip cross-origin resources</li>
+</ul>
+<hr>
+<h3 id="pitfall-3-file-name-sanitization">Pitfall 3: File Name Sanitization</h3>
+<p>Filesystem-illegal characters in extracted names: <code>/ \ : * ? &quot; &lt; &gt; |</code></p>
+<p><strong>Solution:</strong> Sanitize with regex, replace with underscores or hyphens.</p>
+<p><strong>Also watch for:</strong></p>
+<ul>
+<li>Extremely long names (&gt;255 chars) - truncate</li>
+<li>Names starting with dots (hidden files on Unix) - prepend underscore</li>
+<li>Reserved names on Windows (CON, PRN, AUX) - handle specially</li>
+</ul>
+<hr>
+<h3 id="pitfall-4-zip-file-size">Pitfall 4: Zip File Size</h3>
+<p>If curriculum has many large resources, zip file can be huge (100+ MB).</p>
+<p><strong>Considerations:</strong></p>
+<ul>
+<li>JSZip works in-memory (browser RAM limit)</li>
+<li>Large downloads take time</li>
+<li>User may not expect giant file</li>
+</ul>
+<p><strong>Mitigation:</strong></p>
+<ul>
+<li>For MVP, document limitation (works best for &lt;50MB total)</li>
+<li>Future: Stream zip creation, add progress bar for zip generation</li>
+</ul>
+<hr>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<h3 id="unit-testing-manual-for-mvp">Unit Testing (Manual for MVP)</h3>
+<p>Test each function in isolation using browser console:</p>
+<ul>
+<li>Resource extraction with various markup patterns</li>
+<li>Name sanitization with edge case strings</li>
+<li>URL filtering with different domain patterns</li>
+</ul>
+<h3 id="integration-testing">Integration Testing</h3>
+<p>Test complete flow on real curriculum pages:</p>
+<ul>
+<li>Simple page (few resources, clean markup)</li>
+<li>Complex page (many resources, nested structure)</li>
+<li>Edge case page (no resources, all external links)</li>
+</ul>
+<h3 id="browser-compatibility">Browser Compatibility</h3>
+<p>Primary: Chrome/Edge (Manifest V3 support)<br>
+Secondary: Firefox (requires minor manifest tweaks)</p>
+<p><strong>Don't support:</strong> Safari (extension model too different), older browsers</p>
+<hr>
+<h2 id="performance-expectations">Performance Expectations</h2>
+<h3 id="baseline-performance-rough-estimates">Baseline Performance (Rough Estimates)</h3>
+<ul>
+<li>Content extraction: &lt;100ms</li>
+<li>Resource detection: &lt;200ms</li>
+<li>PDF generation: 1-3 seconds (depends on page complexity)</li>
+<li>Download per file: 0.5-5 seconds (depends on size, network)</li>
+<li>Zip creation: 0.5-2 seconds (depends on file count/size)</li>
+</ul>
+<p><strong>Total time for typical page (10 resources):</strong> 10-30 seconds</p>
+<p><strong>Acceptable:</strong> &lt;1 minute for most curriculum pages<br>
+<strong>Needs optimization:</strong> &gt;2 minutes</p>
+<hr>
+<h2 id="future-optimization-opportunities">Future Optimization Opportunities</h2>
+<h3 id="if-performance-becomes-issue">If Performance Becomes Issue</h3>
+<ol>
+<li><strong>Parallel downloads</strong> - download 3-5 files concurrently</li>
+<li><strong>Worker threads</strong> - offload zip creation to worker</li>
+<li><strong>Incremental zip</strong> - stream files into zip as downloaded</li>
+<li><strong>Caching</strong> - remember already-downloaded resources across sessions</li>
+</ol>
+<h3 id="if-complexity-grows">If Complexity Grows</h3>
+<ol>
+<li><strong>TypeScript</strong> - type safety for message passing, data structures</li>
+<li><strong>Build step</strong> - Webpack/Rollup for code splitting, tree shaking</li>
+<li><strong>State management</strong> - Redux-like pattern for service worker state</li>
+<li><strong>Testing framework</strong> - Jest/Vitest for automated tests</li>
+</ol>
+<p><strong>Rule of thumb:</strong> Only add complexity when pain of not having it exceeds pain of adding it.</p>
+<hr>
+<h2 id="handoff-context-for-cli-tools">Handoff Context for CLI Tools</h2>
+<p>When handing steps to Claude Code or Gemini CLI, provide:</p>
+<ol>
+<li><strong>Current file state</strong> - all relevant code files</li>
+<li><strong>Step goal</strong> - from <a href="http://IMPLEMENTATION.md">IMPLEMENTATION.md</a></li>
+<li><strong>Context</strong> - sample markup, known edge cases</li>
+<li><strong>Success criteria</strong> - how to verify step is complete</li>
+<li><strong>Constraints</strong> - must use vanilla JS, no npm packages except JSZip</li>
+</ol>
+<p>After each step:</p>
+<ul>
+<li>Review generated code</li>
+<li>Test in browser</li>
+<li>Check this document's &quot;Watch for&quot; sections</li>
+<li>Decide if current approach still makes sense</li>
+<li>Adjust plan if needed before next step</li>
+</ul>
