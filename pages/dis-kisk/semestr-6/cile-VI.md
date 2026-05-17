@@ -61,7 +61,9 @@ A jednu věc bych z toho posunu vypíchl zvlášť - **brain dump method**. Vezm
 
 A pořád samozřejmě generuju slop, když do toho slop hodím. Staré "garbage in, garbage out" platí čím dál víc - rozdíl mezi promyšleným vstupem a YOLO promptem se s každou novou verzí modelu rozevírá. Hlídat výstup je práce, která nezmizí.
 
-### Vibe coding na vlastním side projektu
+### ~~Vibe coding~~ Agentic engineering na vlastním side projektu
+
+Označení *vibe coding* nikdo nezakázal, ale postupně víc inklinuju k termínu *agentic engineering* - trefněji popisuje, co se reálně děje, když to děláte pořádně. Žádná magie, žádné YOLO promptování, ale skutečná inženýrská práce s agentem a okolními tooly. Addy Osmani to [pěkně shrnuje na svém blogu](https://addyosmani.com/blog/agentic-engineering/) 📖.
 
 <figure>
   <img src="/dis-kisk/img/teo.png" alt="Whippet zírá do kamery" />
@@ -70,7 +72,7 @@ A pořád samozřejmě generuju slop, když do toho slop hodím. Staré "garbage
 
 Větší část toho posunu jsem si vyzkoušel mimo klientskou práci, na vlastním projektu s názvem Flatter – bere inzeráty z realitních portálů a hodnotí je podle tvrdých atributů (plocha, cena, lokalita) i měkkých vlastností vytažených z popisů (např. zda pronajímatel toleruje psa, což jinak vyřazuje třetinu až polovinu inzerátů). Když dva inzeráty proklouznou sítem, oba uživatelé je nezávisle ohodnotí stylem *hot or not*, a teprve když je shoda, jde se na prohlídku. Tinder na byty, pokud chcete.
 
-Workflow je centrovaný kolem Claude Code: popíšu chování, většinou rovnou slovy přes mikrofon, na vyladění UX zapojím paper.design přes MCP, vznikne pull request s preview deployem, kouknu, jestli se mi to líbí, mergne se. Source of truth zůstává v kódu, ne ve Figmě. Pro mě osobně byl tohle moment, kdy se vibe coding přestal cítit jako experiment a začal se chovat jako pracovní nástroj.
+Workflow je centrovaný kolem Claude Code: popíšu chování, většinou rovnou slovy přes mikrofon, na vyladění UX zapojím paper.design přes MCP, vznikne pull request s preview deployem, kouknu, jestli se mi to líbí, mergne se. Source of truth zůstává v kódu, ne ve Figmě. Pro mě osobně byl tohle moment, kdy se *agentic engineering* přestal cítit jako experiment a začal se chovat jako pracovní nástroj.
 
 ### UX Monday Praha - test toho všeho najednou
 
