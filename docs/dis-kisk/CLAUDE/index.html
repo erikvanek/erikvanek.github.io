@@ -1,0 +1,303 @@
+<h1 id="a-hrefhttpclaudemdclaudemda-dis-kisk-portfolio"><a href="http://CLAUDE.md">CLAUDE.md</a> — DIS KISK Portfolio</h1>
+<p>Working guide for Claude sessions on Erik's DIS KISK study portfolio (<code>pages/dis-kisk/</code>).<br>
+Inherits the repo-root <a href="../../CLAUDE.md">CLAUDE.md</a>. This file overrides where it conflicts.</p>
+<hr>
+<h2 id="1-what-this-is">1. What this is</h2>
+<p>Erik's study portfolio for the <strong>DIS KISK</strong> bachelor's program (Design informačních služeb, KISK FF MUNI).<br>
+Output of three years of study; this is his second attempt at the program (the first ended in dropout).</p>
+<p><strong>Two deliverables:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Audience</th>
+<th>Format</th>
+<th>Source of truth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Archiv IS MUNI</strong></td>
+<td>examiners, public</td>
+<td>single merged <strong>PDF/A</strong> with cover sheet, uploaded as <em>Příloha</em></td>
+<td>snapshot of online version</td>
+</tr>
+<tr>
+<td><strong>Online portfolio</strong></td>
+<td>clients, peers, future use</td>
+<td>live Eleventy site at this path</td>
+<td>this directory</td>
+</tr>
+</tbody>
+</table>
+<p>The online version is the <strong>primary artifact</strong> and will outlive the submission — Erik plans to use it professionally (LinkedIn link, client pitches). The PDF is generated from the online version on submission day.</p>
+<hr>
+<h2 id="2-hard-deadlines">2. Hard deadlines</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2026-05-20</strong></td>
+<td>Final upload to IS archive — portfolio + závěrečný projekt — for the <strong>June 2026</strong> state exam (Erik's target)</td>
+</tr>
+<tr>
+<td>2026-06-15 → -17</td>
+<td>June state exam (presentation + oral)</td>
+</tr>
+<tr>
+<td>2026-07-10</td>
+<td>Fallback upload deadline for the September term</td>
+</tr>
+<tr>
+<td>2026-09-02 → -04</td>
+<td>September state exam</td>
+</tr>
+<tr>
+<td><s>2026-03-31</s></td>
+<td>CZ + EN thesis title (already past — verify status)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Today is 2026-05-13</strong> → 7 days to upload. Treat everything in this folder as time-critical.</p>
+<hr>
+<h2 id="3-required-portfolio-components-from-codeportfolio-speccode">3. Required portfolio components (from <code>portfolio-spec/</code>)</h2>
+<p>From <code>portfolio-archiv.md</code> and <code>instructions.md</code>. The spec is the source of truth — if anything below contradicts the spec, the spec wins.</p>
+<p><strong>Mandatory in both online + archive PDF:</strong></p>
+<ul>
+<li>[ ] Homepage / domovská stránka</li>
+<li>[ ] Author intro (~150 words, can live on homepage)</li>
+<li>[ ] <strong>Projekt I–V</strong> (one per Praxe/Studijní seminář, semesters 1–5)</li>
+<li>[ ] Závěrečný projekt — uploaded <strong>separately</strong> to archive as <em>Plný text práce</em> in PDF/A</li>
+</ul>
+<p><strong>Optional but expected:</strong></p>
+<ul>
+<li>[ ] Reflexe studijních cílů I–VI (<code>cile-*.md</code> — five exist; VI missing)</li>
+<li>[ ] Other outputs (articles, conference talks, course outputs, prototypes)</li>
+</ul>
+<p><strong>Archive PDF formatting:</strong></p>
+<ul>
+<li>Cover page per <code>portfolio-spec/portfolio-archiv.md</code> Příloha 1 (jméno, KISK, Design informačních služeb, online URL, anotace, &quot;Brno, 2026&quot;, FF logo)</li>
+<li>Single merged PDF — use Awesome Screenshot to capture web pages + ILovePDF to merge</li>
+<li>Watch for grammatical errors (publicly searchable on <a href="http://archiv.muni.cz">archiv.muni.cz</a>)</li>
+<li>Annotation must exist in <strong>CZ + EN</strong></li>
+</ul>
+<hr>
+<h2 id="4-current-inventory-amp-gaps">4. Current inventory &amp; gaps</h2>
+<h3 id="what-exists">What exists</h3>
+<pre><code>semestr-1/  cile-I, hackaton-I, motivacni-rozhovory, psychologie-pro-designery,
+            infoveda, VR-I, design-is-a-job, stenatko
+semestr-2/  cile-II, ostrovy-pozitivni-inovace (research project),
+            the-ministry-of-the-cloud, tematicka-analyza, jbm-…(EXCLUDE), random
+semestr-3/  cile-III, praxe-III (ideační workshopy),
+            sxd/ (service design case study — Jarmilka)
+semestr-4/  cile-IV, praxe-IV (tajemnický workshop), ucast-na-konferencich (ZDW)
+semestr-5/  cile-V, praxe-V (KISKED19 course),
+            BAU/ (Jarmilka presentation — likely the závěrečný projekt),
+            DIS-public-design/ (public-design talk),
+            jak-jit-spravne-sedet/ (VTOS guide — likely Praxe VI in progress),
+            vtos-pruvodce.html, vibin/
+semestr-6/  EMPTY
+prilohy/    vhledy-jinag-workshop.pdf
+</code></pre>
+<h3 id="gaps-to-close-before-2026-05-20">Gaps to close before 2026-05-20</h3>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Severity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Praxe I</strong> has no standalone artifact</td>
+<td>high</td>
+<td>Either rename <code>hackaton-I.md</code> to function as Projekt I + add framing, or write a short Projekt I summary that links to it.</td>
+</tr>
+<tr>
+<td><strong>Praxe II</strong> has no standalone artifact</td>
+<td>high</td>
+<td><code>ostrovy-pozitivni-inovace.md</code> is a stub; the kvali výzkum project was the substance. Needs a Projekt II writeup that ties research + Praxe II together.</td>
+</tr>
+<tr>
+<td><strong>Praxe VI / Projekt VI</strong> missing</td>
+<td>high</td>
+<td><code>jak-jit-spravne-sedet/</code> looks like the practice, but no reflection write-up exists.</td>
+</tr>
+<tr>
+<td><strong>Sem-6 reflexe</strong> (cile-VI) missing</td>
+<td>medium</td>
+<td>Optional per spec, but Erik wrote one for every other semester.</td>
+</tr>
+<tr>
+<td><strong>Závěrečný projekt</strong> (bachelor thesis) status</td>
+<td>high</td>
+<td>Jarmilka presentation exists in <code>BAU/</code>; the thesis document itself (PDF/A) status unknown — verify with Erik.</td>
+</tr>
+<tr>
+<td><strong>Author intro on homepage</strong></td>
+<td>low</td>
+<td>Bio exists in <code>index.html</code> but needs a tightened EN+CZ version per spec.</td>
+</tr>
+<tr>
+<td><strong>CZ + EN annotation for archive</strong></td>
+<td>medium</td>
+<td>Not yet written. Deadline for <em>titles</em> already past — confirm submitted.</td>
+</tr>
+<tr>
+<td><strong><code>semestr-2/jbm-semestr-znovu-a-lepe.md</code></strong></td>
+<td>exclude</td>
+<td>Erik wrote this when frustrated with the program. Drop from final submission (file can stay in repo, must not link from index). Also: ensure <code>index.html</code> no longer references it.</td>
+</tr>
+<tr>
+<td><strong>Polish pass on language</strong></td>
+<td>medium</td>
+<td>A few semesters (esp. 4, 5) read raw / draft-y in places. Audit for grammar; submission is public.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="open-questions-for-erik">Open questions for Erik</h3>
+<ol>
+<li><strong>Závěrečný projekt</strong> — what's the thesis title in CZ + EN? Is the thesis document drafted already, or is <code>BAU/index.html</code> (Jarmilka deck) standing in for it for now?</li>
+<li><strong>Praxe I / Praxe II</strong> — was there official &quot;Praxe I&quot; / &quot;Praxe II&quot; content separate from what's in S1 (Hackaton) and S2 (Ostrovy/kvali výzkum)? Or do those activities count as the Praxe outputs and just need clearer labeling?</li>
+<li>Was the <strong>CZ + EN thesis title</strong> submitted by the 2026-03-31 deadline?</li>
+<li>For Sem 6 — what counts as the work to reflect on? (Bachelor thesis + Praxe VI = <code>jak-jit-spravne-sedet</code>?)</li>
+</ol>
+<hr>
+<h2 id="5-voice-amp-sentiment-how-erik-writes">5. Voice &amp; sentiment — how Erik writes</h2>
+<p>Erik's voice is consistent across all five semesters. Match it when generating or rewriting content.</p>
+<p><strong>Core traits:</strong></p>
+<ul>
+<li><strong>Critical optimist.</strong> Names problems, then offers a path or wraps in gratitude. Self-coined: &quot;kritickej optimista&quot; (index.html bio).</li>
+<li><strong>Sandwich critique.</strong> When negative feedback appears, it's bookended with appreciation. Example: <code>jbm-…</code> ends &quot;Hezký léto všem&quot;. Don't strip the bookends.</li>
+<li><strong>Process over results.</strong> Explicit in <code>praxe-V.md</code> ending (Tao te ťing, &quot;results oriented&quot; from poker). Pervasive in earlier semesters too.</li>
+<li><strong>Self-deprecating but confident.</strong> &quot;Možná až otravně mlátím agilním manifestem&quot;, &quot;kverulování&quot;, &quot;trošku přechytralej&quot; — coexists with &quot;umím číst skupinu&quot;.</li>
+<li><strong>People are named, not referenced.</strong> Petra Petráková, Josef Šlerka, Honza Soukup, Josef Kocurek, Jitka Bartošová, Matěj Káninský, Roman Hřebecký, Baru, Veru, Anežka, Petra, Franta, Johanka, Lukáš, Dana, Veronika. Preserve this.</li>
+<li><strong>Living language.</strong> Czech with embedded English techspeak (<em>clumsy, pivot, multi-win, framing, wicked problem, results-oriented</em>). Don't sterilize either side.</li>
+<li><strong>Metaphors do real work.</strong> mycelium, kreativní kohoutek, maják, regenerativní vs. extraktivní systémy, sendvič, klíčenka. Recurring; cross-referenced across texts.</li>
+<li><strong>External links are part of the voice.</strong> Music (Midi Lidi, Schwarzprior, Prigl), articles, videos. Keep these; they're not decoration.</li>
+<li><strong>Emojis appear sparingly</strong> (🔥, ❤️, 🙌, 🥲) — usually at section ends or for warmth. Keep when present; don't add new ones unless Erik asks.</li>
+</ul>
+<p><strong>Anti-patterns to avoid when editing:</strong></p>
+<ul>
+<li>Don't make it more formal — it'll read fake.</li>
+<li>Don't strip personal asides (kombucha, hroch, hroznové buchty) — they're the texture.</li>
+<li>Don't generalize names (&quot;díky všem v týmu&quot;) — name people.</li>
+<li>Don't pad with corporate-speak (&quot;synergie&quot;, &quot;leveraging&quot;, &quot;stakeholder alignment&quot; without irony).</li>
+<li>Don't soften the sandwiches — the critique-with-grace pattern is the point.</li>
+</ul>
+<hr>
+<h2 id="6-content-principles">6. Content principles</h2>
+<p><strong>Confidence arc:</strong> S1 (&quot;škrábání po povrchu&quot;) → S5 (&quot;Designerská praxe v 2026 vypadá jinak&quot;). The arc is visible in his own words across <code>cile-*</code> files. No need to manufacture growth; just don't flatten it.</p>
+<p><strong>People thread:</strong> Erik considers &quot;people I met&quot; the biggest takeaway from the program. Acknowledge this somewhere visible but <strong>don't overdo it</strong> (Erik's own caution). One framing sentence + named dedications under projects is usually enough; a network/mycelium visualization is on the table but not committed.</p>
+<p><strong>Starting point of the arc:</strong> Solo practitioner with methodology gaps (per Erik's choice). Frame the opening accordingly.</p>
+<p><strong>The story arc itself is not locked.</strong> Three working candidates:</p>
+<ol>
+<li>From learner to network orchestrator (mycelium motif)</li>
+<li>From tools to systemic intervention</li>
+<li>From methodology to own voice</li>
+</ol>
+<p>Don't force one of these into copy yet. Pick the spine when Erik decides.</p>
+<hr>
+<h2 id="7-visual-amp-design-direction">7. Visual &amp; design direction</h2>
+<p><strong>Source of truth for the visual system:</strong> <a href="./portfolio-shaping/design-system.md"><code>portfolio-shaping/design-system.md</code></a> — palette, type scale, accent rules, format decisions, Paper artboard inventory. Read this before generating any new design work.</p>
+<p><strong>Format locked:</strong> A4 portrait, <strong>light theme</strong> (cream <code>#F4EFE5</code> ground, ink <code>#1C1812</code>, deepened amber accent <code>#C26818</code>). The earlier A5 dark-theme exploration is archived but not the primary direction.</p>
+<p><strong>Type pair finalists under evaluation:</strong></p>
+<ul>
+<li>02 — DM Sans + DM Sans (humanist sans single-family)</li>
+<li>08 — DM Serif Display + DM Sans (editorial magazine register)</li>
+<li>10 — Newsreader + Newsreader (newspaper serif)</li>
+<li>12 — EB Garamond + EB Garamond (classical book)</li>
+</ul>
+<p>Comparison artboards live in the Paper file. Two articles (Praxe IV, Hackaton I) are being typeset in all four pairings for direct readability comparison.</p>
+<p><strong>Tools and rules:</strong></p>
+<ul>
+<li><strong>Prototyping tool:</strong> <code>paper.design</code> via its MCP server. <strong>Has a weekly MCP rate limit (2-day reset).</strong> Plan accordingly — batch operations (<code>update_styles</code> with many updates, <code>duplicate_nodes</code> with many sources, <code>set_text_content</code> batches) to minimize API calls.</li>
+<li><strong>Paper power moves</strong> documented in <a href="./portfolio-shaping/design-system.md"><code>portfolio-shaping/design-system.md</code></a> section &quot;Paper.design power moves used&quot;.</li>
+<li><strong>Paper session continuity:</strong> <a href="./portfolio-shaping/paper-session-state.md"><code>portfolio-shaping/paper-session-state.md</code></a> tracks pause points and resume instructions when the rate limit blocks mid-build.</li>
+<li><strong>Multilingual-ready design:</strong> content stays Czech-first; layouts must accommodate translation. Practical implications:
+<ul>
+<li>Separate content from templates (don't hardcode CZ strings in <code>.njk</code> chrome).</li>
+<li>Generous whitespace — EN equivalents often run shorter; DE runs longer.</li>
+<li>Avoid layouts that depend on fixed Czech word lengths.</li>
+</ul>
+</li>
+<li><strong>Existing templates</strong> live in <code>_includes/</code> at repo root; the current portfolio uses <code>dis-kisk.njk</code> layout. Extend or fork rather than replacing wholesale.</li>
+<li><strong>PDF generation</strong> for archive: capture online pages with Awesome Screenshot per spec, then merge in ILovePDF. A <strong>print stylesheet</strong> (<code>@media print</code>) is on the roadmap — once a type pair is chosen, print CSS becomes the next deliverable.</li>
+</ul>
+<hr>
+<h2 id="8-working-norms-for-this-directory">8. Working norms for this directory</h2>
+<ul>
+<li><strong>Conversation language:</strong> English (Erik's explicit pref for this project, overrides the personal-account Czech default).</li>
+<li><strong>Content language in files:</strong> Czech, as-is. Don't translate existing content unless asked.</li>
+<li><strong>Cadence:</strong> bit by bit. Don't refactor the whole portfolio in one go; touch one section at a time and confirm.</li>
+<li><strong>The angry doc:</strong> <code>semestr-2/jbm-semestr-znovu-a-lepe.md</code> is <strong>excluded</strong> from the final submission. File may stay in repo (history), but:
+<ul>
+<li>Remove its link from <code>index.html</code> (currently lines 113-115 reference it).</li>
+<li>Don't include it in PDF assembly.</li>
+</ul>
+</li>
+<li><strong>Story arc:</strong> not yet decided — don't bake one into copy without checking.</li>
+</ul>
+<hr>
+<h2 id="9-layout-reference">9. Layout reference</h2>
+<pre><code>pages/dis-kisk/
+├── CLAUDE.md                  # this file
+├── index.html                 # portfolio homepage (Nunjucks front-matter)
+├── img/                       # all portfolio images
+├── prilohy/                   # static attachments (PDFs)
+├── portfolio-spec/            # official KISK requirements — source of truth
+│   ├── instructions.md        # IS MUNI submission instructions
+│   ├── portfolio-archiv.md    # archive format + cover page template
+│   └── titulni-list.md        # state-exam logistics
+├── semestr-1..6/              # per-semester content
+└── video/                     # video assets
+</code></pre>
+<p>Built output goes to <code>docs/dis-kisk/</code> (Eleventy → GitHub Pages). Don't edit <code>docs/</code> directly.</p>
+<hr>
+<h2 id="10-build-amp-run">10. Build &amp; run</h2>
+<p>From the repo root (<code>/Users/erik/dev/erikvanek.github.io</code>):</p>
+<ul>
+<li><code>yarn start</code> — Eleventy dev server with live reload</li>
+<li><code>yarn build</code> — produce <code>docs/</code> for GitHub Pages</li>
+<li><code>yarn format:fix</code> — Prettier on Markdown</li>
+</ul>
+<p><strong>Do not</strong> run global Vercel / Next.js skills against this project. It's an <strong>Eleventy</strong> site that publishes to GitHub Pages. The <code>pages/</code> path is Eleventy's source dir, not Next.js Pages Router — automated skill suggestions that match on <code>pages/**</code> are false positives here.</p>
+<hr>
+<h2 id="11-out-of-scope-tbd">11. Out of scope / TBD</h2>
+<ul>
+<li><strong>Type pair final pick</strong> — narrowed to 4 (02, 08, 10, 12); awaiting Erik's decision after reading the article matrix.</li>
+<li><strong>Print CSS</strong> — once type pair is chosen, write <code>@media print</code> stylesheet for the Eleventy site so the archive PDF can be generated directly from the live site.</li>
+<li><strong>Story arc</strong> — three working candidates documented in <a href="./portfolio-shaping/"><code>portfolio-shaping/</code></a>; Erik deferred the decision while we worked on form. Revisit once visual system is locked.</li>
+<li><strong>Network/mycelium visualization</strong> — proposed but not committed.</li>
+<li><strong><code>index.html</code> accordion</strong> — whether to keep the per-semester expandable model or move to a sequential/chronological reader.</li>
+</ul>
+<h2 id="12-pointers-codeportfolio-shapingcode">12. Pointers — <code>portfolio-shaping/</code></h2>
+<p>Working notebook for shaping the portfolio. Read these when relevant:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./portfolio-shaping/design-system.md"><code>design-system.md</code></a></td>
+<td>Locked palette, type scale, accent rules, Paper artboard inventory, paper.design power moves</td>
+</tr>
+<tr>
+<td><a href="./portfolio-shaping/paper-session-state.md"><code>paper-session-state.md</code></a></td>
+<td>Resume instructions when paper.design rate limit pauses work mid-build</td>
+</tr>
+<tr>
+<td><a href="./portfolio-shaping/demo-story.md"><code>demo-story.md</code></a></td>
+<td>Draft narrative for an A5 booklet (archived direction — kept for content reference)</td>
+</tr>
+</tbody>
+</table>
