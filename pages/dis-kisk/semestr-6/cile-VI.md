@@ -7,7 +7,7 @@ tags: ['dis', 'semestr6']
 permalink: /{{page.fileSlug}}/
 ---
 
-Cíle cíle cíle — naposledy. Jak to bylo v [1.](/cile-I), [2.](/cile-II), [3.](/cile-III), [4.](/cile-IV) a [5.](/cile-V) semestru? Po šesti reflexích už ten oblouk konečně začíná být vidět.
+Cíle cíle cíle - naposledy. Jak to bylo v [1.](/cile-I), [2.](/cile-II), [3.](/cile-III), [4.](/cile-IV) a [5.](/cile-V) semestru? Po šesti reflexích už ten oblouk konečně začíná být vidět.
 
 ## Co jsem si stanovil pro celé studium?
 - Načerpat kvalitní metodologický základ
@@ -18,7 +18,7 @@ Cíle cíle cíle — naposledy. Jak to bylo v [1.](/cile-I), [2.](/cile-II), [3
 - Pomáhat organizacím stoupat v design maturity
 
 ## Co jsem si stanovil na 6. semestr?
-- Posunout AI-first workflow z [minulého semestru](/cile-V) do agentnější podoby — místo mluvení ho používat: MCP, second brain, kód jako source of truth
+- Posunout AI-first workflow z [minulého semestru](/cile-V) do agentnější podoby - místo aby zůstal v rovině slov, ho fakt používat: MCP, second brain, kód jako source of truth
 - Vytáhnout to ven z prostředí, kde mám domácí výhodu (klienti, studenti, účastníci workshopů), do místnosti, kde nemám předem nic
 
 ## Jak jsem s tím naložil?
@@ -55,9 +55,11 @@ Minule jsem psal, že můj workflow je "výrazně více agentní". Pravda, ale j
   <figcaption>Topologie agentního workflow: druhý mozek a další nástroje napojené přes MCP servery na jeden orchestrující LLM. Použito v prezentaci na UX Monday.</figcaption>
 </figure>
 
-Posun je nenápadný, ale podstatný. Před půl rokem jsem sahal po LLM na izolované úkoly. Teď je jeden LLM, který orchestruju, a všechno ostatní jsou tooly, které si k sobě zatahuje, když je potřebuje. Není to o rychlosti pro rychlost — ten ušetřený čas se vrací zpátky do těch částí řemesla, na kterých mi reálně záleží. Lepší výzkumné scénáře. Pozornější čtení transkriptů. Víc iterací na prototypu, než ho někomu ukážu. Víc procházek.
+Posun je nenápadný, ale podstatný. Před půl rokem jsem sahal po LLM na izolované úkoly. Teď je jeden LLM, který orchestruju, a všechno ostatní jsou tooly, které si k sobě zatahuje, když je potřebuje. Není to o rychlosti pro rychlost - ten ušetřený čas se vrací zpátky do těch částí řemesla, na kterých mi reálně záleží. Lepší výzkumné scénáře. Pozornější čtení transkriptů. Víc iterací na prototypu, než ho někomu ukážu. Víc procházek.
 
-A pořád samozřejmě generuju slop, když do toho slop hodím. Staré "garbage in, garbage out" platí čím dál víc — rozdíl mezi promyšleným vstupem a YOLO promptem se s každou novou verzí modelu rozevírá. Hlídat výstup je práce, která nezmizí.
+A jednu věc bych z toho posunu vypíchl zvlášť - **brain dump method**. Vezmu telefon, jdu ven, mluvím nahlas o tom, na čem zrovna dělám - výzkumný rámec, koncept, problém, který si potřebuju rozmyslet. LLM mě poslouchá celou dobu, nepřerušuje, neztrácí trpělivost, nevnucuje mi předem strukturu. Když se vrátím, mám zpátky utříděný materiál, ze kterého se dá rovnou pracovat. Klíčová část mojí pracovní doby se přesunula z židle ven a já z toho mám fakt velkou radost. 🌳
+
+A pořád samozřejmě generuju slop, když do toho slop hodím. Staré "garbage in, garbage out" platí čím dál víc - rozdíl mezi promyšleným vstupem a YOLO promptem se s každou novou verzí modelu rozevírá. Hlídat výstup je práce, která nezmizí.
 
 ### Vibe coding na vlastním side projektu
 
@@ -66,29 +68,29 @@ A pořád samozřejmě generuju slop, když do toho slop hodím. Staré "garbage
   <figcaption>Pejsek, kterého český realitní portál neumí vyfiltrovat. Důvod, proč nakonec existuje vlastní scraper.</figcaption>
 </figure>
 
-Větší část toho posunu jsem si vyzkoušel mimo klienty, na vlastním projektu — rent scraper, který bere inzeráty z realitních portálů a hoduje je podle tvrdých atributů (plocha, cena, lokalita) i měkkých vlastností vytažených z popisů (např. zda pronajímatel toleruje psa, což jinak vyřazuje třetinu až polovinu inzerátů). Když dva inzeráty proklouznou prahem, oba uživatelé je nezávisle ohodnotí stylem *hot or not*, a teprve když je shoda, jde se na prohlídku. Tinder na byty, pokud chcete.
+Větší část toho posunu jsem si vyzkoušel mimo klientskou práci, na vlastním projektu s názvem Flatter – bere inzeráty z realitních portálů a hodnotí je podle tvrdých atributů (plocha, cena, lokalita) i měkkých vlastností vytažených z popisů (např. zda pronajímatel toleruje psa, což jinak vyřazuje třetinu až polovinu inzerátů). Když dva inzeráty proklouznou sítem, oba uživatelé je nezávisle ohodnotí stylem *hot or not*, a teprve když je shoda, jde se na prohlídku. Tinder na byty, pokud chcete.
 
-Workflow je celý postavený na Claude Code: popíšu chování v textu, vznikne pull request s preview deployem, koukenem jestli se mi to líbí, mergne se. Source of truth zůstává v kódu, ne ve Figmě. Pro mě osobně byl tohle moment, kdy se vibe coding přestal cítit jako experiment a začal se chovat jako pracovní nástroj.
+Workflow je centrovaný kolem Claude Code: popíšu chování, většinou rovnou slovy přes mikrofon, na vyladění UX zapojím paper.design přes MCP, vznikne pull request s preview deployem, kouknu, jestli se mi to líbí, mergne se. Source of truth zůstává v kódu, ne ve Figmě. Pro mě osobně byl tohle moment, kdy se vibe coding přestal cítit jako experiment a začal se chovat jako pracovní nástroj.
 
-### UX Monday Praha — test toho všeho najednou
+### UX Monday Praha - test toho všeho najednou
 
 V květnu 2026 jsem dostal zhruba 45 minut na UX Monday v Praze. *"The process isn't dead. It's just different."* Talk procházel přesně tím, co jsem v semestru postavil: brain dump method, AI-asistované kódování rozhovorů (živý demo na transkriptech ze side projektu pro architekty a interiérové designéry), Claude Code prototyping na rent scraperu a krátký closing o sociální inovaci jako protiváze hlavní AI linky.
 
-Bylo to poprvé, co jsem ten materiál vzal do místnosti, kde nemám domácí výhodu. Žádní účastníci workshopů, co mi už věří, žádní studenti, kteří znají můj rejstřík, žádní klienti, se kterými jsem si roky budoval společný jazyk. UX komunita, Praha, veřejný meetup. Předem vyslovené pozice (design = výzkum + design; designéři by měli mít mentální model GitHubu; tool-agnostic; přestaňte říkat "AI", jako by to ještě bylo něco oddělitelného), pak dva live demos.
+📜 [**Surový brain dump z procházky**](/ux-monday-braindump) → ⚡ agentní mód (popsaný výše) → 🎙️ [**hotová prezentace na UX Monday**](/ux-monday-26){target="_blank"}
+
+Bylo to poprvé, co jsem ten materiál vzal do prostředí, které nemám tolik pod kontrolou. Žádní účastníci workshopů, co mi už věří, žádní studenti, kteří znají můj rejstřík, žádní klienti, se kterými jsem si roky budoval společný jazyk. UX komunita, Praha, veřejný meetup. Snažil jsem se v přednášce narovinu pojmenovat pár názorů, na kterých mi v designu záleží - že designéři by se měli umět dívat do kódu a znát (a ideálně umět opužívat) mentální model GitHubu, že u mě se výzkum a design neoddělují, a že by se mělo přestat říkat "AI", jako by to ještě bylo něco oddělitelného od běžné práce. A snažil jsem se být sám sebou, nic nehrát - žádná stage verze sebe, prostě *real me*. Plus dvě live dema.
 
 <figure>
-  <img src="/dis-kisk/img/labor-market-impacts.png" alt="Spider chart Anthropic – occupational exposure to AI napříč povoláními" />
-  <figcaption>Anthropic, <em>Labor Market Impacts</em>. Designerská a knowledge work povolání patří mezi nejvíc vystavená — slide, na který jsem v talku odkazoval, když jsem říkal "tohle není další automatizační vlna jako ty předchozí, tahle jde rovnou po white-collar práci".</figcaption>
+  <img src="/dis-kisk/img/labor-market-impacts.png" alt="Spider chart Anthropic - occupational exposure to AI napříč povoláními" />
+  <figcaption>Anthropic, <em>Labor Market Impacts</em>. Designerská a knowledge work povolání patří mezi nejvíc vystavená - slide, na který jsem v talku odkazoval, když jsem říkal "tohle není další automatizační vlna jako ty předchozí, tahle jde rovnou po white-collar práci".</figcaption>
 </figure>
 
-Co jsem se naučil v přípravě: talk mě donutil artikulovat workflow rozhodnutí, která jsem dělal intuitivně. Proč markdown a ne Dovetail? Proč Claude Code a ne Figma? Proč je dneska "AI" špatné slovo? Vysvětlit to cizím lidem mě dotlačilo dál než další čtvrtletí klientské práce.
-
-Co jsem se naučil v doručení: sál byl vlídnější, než jsem čekal, otázky ostřejší, než jsem čekal, a freelance "najměte si mě" podtón zafungoval, aniž by působil cynicky.
+Co jsem se naučil v přípravě: talk mě donutil artikulovat workflow rozhodnutí, která jsem dělal intuitivně. Proč markdown a ne Dovetail? Proč Claude Code a ne Figma? Proč je dneska "AI" už zbytečné slovo? Vysvětlit to cizím lidem mě dotlačilo dál než další čtvrtletí klientské práce. A jako menší dogfooding bonus - celý obsah jsem si sám prošel brain dump metodou: dvě hodiny chození po městě, diktování myšlenek do telefonu, jedna přes druhou, a z toho pak vznikl základ celé prezentace. Nekážu něco, co sám nedělám.
 
 ## Co si odnáším?
 
-Před třemi lety jsem do programu vstupoval jako dost surový praktik — inženýrský základ, vyhraněné názory, díry v metodologii. V květnu 2026 jsem mluvil na největším designérském meetupu v zemi o tom, jak pracuju. Nepíšu to, abych se chválil — píšu to proto, že ten oblouk pro mě sám nebyl viditelný, dokud jsem si k téhle reflexi nesedl. Program ze mě nedělal řečníka. Dal mi dost metodologické půdy pod nohama na to, abych měl co říct, když ta příležitost přišla.
+Před třemi lety jsem do programu vstupoval jako dost neohrabaný praktik - inženýrský základ, vyhraněné názory, díry v metodologii. V květnu 2026 jsem mluvil na největším designérském meetupu v zemi o tom, jak pracuju. Program mi reálně pomohl dotáhnout to, kam jsem chtěl, a vypilovat dovednosti, na kterých mi záleží. A když se na ty tři roky dívám zpětně, líbí se mi, jak se to celé poskládalo. K tomu všemu jsem cestou potkal spoustu super lidí, se kterými věřím, že budu v kontaktu i až to všechno skončí a závěrečný večírek bude ve zpětným zrcátku. Za ty poslední tři jsem upřímně vděčný i přes spoustu bolesti, která se nim pojí. ❤️
 
 ## Co dál?
 
-Bakalářka. A po ní — chci tenhle orchestrátorský způsob práce vzít do větších problémů. Méně obrazovek, víc služeb. Veřejný sektor, neziskovky, sociální inovace, místa, kde je dobrý proces pořád vzácný. Closing UX Monday talku byl veřejná verze toho záměru. Teď to udělat.
+Bakalářka. A po ní - chci tenhle orchestrátorský způsob práce vzít do větších problémů. Není to buď/anebo: digitální produkty (jednu agenturu mám teď jako stálého klienta), sociální inovace, veřejná sféra, výuka, a možná i nějaké vlastní spin-off projekty, do kterých bych se rád pustil. 
