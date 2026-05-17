@@ -84,7 +84,7 @@ Bylo to poprvé, co jsem ten materiál vzal do prostředí, které nemám tolik 
 
 <figure>
   <img src="/dis-kisk/img/labor-market-impacts.png" alt="Spider chart Anthropic - occupational exposure to AI napříč povoláními" />
-  <figcaption>Anthropic, <em>Labor Market Impacts</em>. Designerská a knowledge work povolání patří mezi nejvíc vystavená - slide, na který jsem v talku odkazoval, když jsem říkal "tohle není další automatizační vlna jako ty předchozí, tahle jde rovnou po white-collar práci".</figcaption>
+  <figcaption>Anthropic, <em>Labor Market Impacts</em>. Designerská a knowledge work povolání patří mezi nejvíc vystavená - slide, na který jsem v talku odkazoval, když jsem říkal "tohle není další automatizační vlna jako ty předchozí, tahle jde rovnou po white-collar práci".<br/>Originální studie: <a href="https://www.anthropic.com/research/labor-market-impacts" target="_blank" rel="noopener">anthropic.com/research/labor-market-impacts</a></figcaption>
 </figure>
 
 Co jsem se naučil v přípravě: talk mě donutil artikulovat workflow rozhodnutí, která jsem dělal intuitivně. Proč markdown a ne Dovetail? Proč Claude Code a ne Figma? Proč je dneska "AI" už zbytečné slovo? Vysvětlit to cizím lidem mě dotlačilo dál než další čtvrtletí klientské práce. A jako menší dogfooding bonus - celý obsah jsem si sám prošel brain dump metodou: dvě hodiny chození po městě, diktování myšlenek do telefonu, jedna přes druhou, a z toho pak vznikl základ celé prezentace. Nekážu něco, co sám nedělám.
