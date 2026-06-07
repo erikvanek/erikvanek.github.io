@@ -1,0 +1,1 @@
+The Design portfolio is erikvanek.com/dis-kisk and actually whole content of my site is availabe in this repo https://github.com/erikvanek/erikvanek.github.io so you can crawl it from there - both parts and in the meantime I can answer those questins
