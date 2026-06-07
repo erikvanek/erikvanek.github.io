@@ -109,12 +109,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/The Story Is Everything.md",
+                "file": "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Principles/Design Principles & Tenets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Story Is Everything"
+              "title": "Design Principles & Tenets"
             }
           }
         ],
@@ -150,7 +150,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "datamole",
+                "query": "tag:business-communication",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -186,7 +186,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.5
+    "width": 444.5,
+    "collapsed": true
   },
   "right": {
     "id": "5bde52dce7d98592",
@@ -286,6 +287,7 @@
   },
   "active": "a30563e745293699",
   "lastOpenFiles": [
+    "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/The Story Is Everything.md",
     "10 - 🧠 Knowledge/3 - 📚 Resources/Design/Tools/Journey maps.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Bachelor's thesis/Thesis/content/00-2-po-rozbití-metodologie.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Bachelor's thesis/Thesis/content/00-1-critique-před-rozbitím-metodologie.md",
@@ -311,7 +313,6 @@
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/7.4 prototyping tools.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/7.3 prototyping fidelity.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/7.2 prototyping principles.md",
-    "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/7.1 prototyping motivation.md",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/5 - problem framing",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/Untitled",
     "10 - 🧠 Knowledge/1 - 🚀 Projects/Service design workshop class/dump/4 - class intro",

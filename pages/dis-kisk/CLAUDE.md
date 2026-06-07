@@ -31,7 +31,7 @@ The online version is the **primary artifact** and will outlive the submission �
 | 2026-09-02 → -04 | September state exam |
 | ~~2026-03-31~~ | CZ + EN thesis title (already past — verify status) |
 
-**Today is 2026-05-13** → 7 days to upload. Treat everything in this folder as time-critical.
+**Status 2026-06-07:** the 2026-05-20 upload **happened** — Erik is on the June track. Archive content is locked-as-submitted; all remaining work serves the exam presentation and the live site. **Single source of truth for current status and next steps: [`portfolio-shaping/plan.md`](./portfolio-shaping/plan.md)** — read it before anything else in this file's status sections.
 
 ---
 
@@ -138,12 +138,7 @@ Erik's voice is consistent across all five semesters. Match it when generating o
 
 **Starting point of the arc:** Solo practitioner with methodology gaps (per Erik's choice). Frame the opening accordingly.
 
-**The story arc itself is not locked.** Three working candidates:
-1. From learner to network orchestrator (mycelium motif)
-2. From tools to systemic intervention
-3. From methodology to own voice
-
-Don't force one of these into copy yet. Pick the spine when Erik decides.
+**The story arc is LOCKED (2026-06, supersedes the three older candidates):** the cile-VI journey — *clumsy practitioner with engineering foundation and methodology gaps (2023) → confident designer-orchestrator who teaches, works publicly, and dictates work from a bike (2026)*. Deck structure and beats: see [`portfolio-shaping/plan.md`](./portfolio-shaping/plan.md) §1.
 
 ---
 
@@ -163,8 +158,20 @@ Comparison artboards live in the Paper file. Two articles (Praxe IV, Hackaton I)
 
 **Tools and rules:**
 - **Prototyping tool:** `paper.design` via its MCP server. **Has a weekly MCP rate limit (2-day reset).** Plan accordingly — batch operations (`update_styles` with many updates, `duplicate_nodes` with many sources, `set_text_content` batches) to minimize API calls.
-- **Paper power moves** documented in [`portfolio-shaping/design-system.md`](./portfolio-shaping/design-system.md) section "Paper.design power moves used".
-- **Paper session continuity:** [`portfolio-shaping/paper-session-state.md`](./portfolio-shaping/paper-session-state.md) tracks pause points and resume instructions when the rate limit blocks mid-build.
+- **Paper MCP from Claude Code — session learnings (2026-06-07, de-risked end to end):**
+  - Connection is a **local server from the Paper desktop app**: `claude mcp add paper --transport http http://127.0.0.1:29979/mcp --scope user`, then Erik runs `/mcp` to (re)connect. Paper app must be running.
+  - The working file is **"DIS KISK portfolio"** — artboards so far: base-variant sheet, Sprout skins, pixel rework, terrain-map models.
+  - `write_html` with an inline `<svg>` **decomposes into individually pen-editable vector nodes** (Paper's SVG feature works via MCP). This is the draft→Erik-sculpts division of labor.
+  - **NEVER `insert-children` into an existing SVG node** — raw `<path>` elements come back as broken `Rectangle` frames (black fills). Always **replace the entire `<svg>`** via `mode: "replace"` on the SVG node.
+  - **Erik hand-tweaks nodes between turns.** Before deriving any variant from "his" version, `get_jsx` the current canvas state — never rebuild from your own last-written geometry.
+  - SVG writes spawn harmless empty `Text` side-nodes; ignore them.
+  - **`duplicate_nodes` is the way to "branch" an artboard** (Erik's iteration model: keep vN, fork vN+1). It returns a `descendantIdMap` (old ID → clone ID) — use it to target cloned nodes directly, no lookup needed.
+  - **Duplication gotcha (cost a debug cycle 2026-06-07):** a cloned image card can render correctly *in isolation* (`get_screenshot` on the node) but show **nothing** when the whole artboard is composited — the image fill comes through half-broken. Fix: **delete the cloned card and re-`write_html` it fresh** with the `paper-asset://` path. Don't waste time on z-order theories first; recreating the image node is the reliable fix.
+  - **`childIds[0]` is the BOTTOM of the z-stack** (paint order, first = back). Artboard backgrounds/maps should be the first child; collages/overlays later.
+  - **Local images need `paper-asset:///abs/path`**; remote URLs must be `curl`-ed into the repo's `img/` first. `object-fit: cover` on the `<img>` crops cleanly inside a polaroid-style card (`#FFFDF6` bg + padding + box-shadow + slight `rotate()`).
+  - **Inline `<defs><linearGradient gradientUnits="userSpaceOnUse">` survives the `write_html` import** (confirmed 2026-06-07 — the terrain river ribbon uses it). So gradient *fills* are available in Paper SVGs. For a **variable-width line** (SVG stroke-width is constant), build a **filled outline ribbon** (offset the centerline ±half-width into a closed path) and fill it with the gradient — that's how the tapering 30%→100% river was done.
+  - ~40–60 calls across sessions did not hit the rate limit; still batch styles/text updates.
+- **SVG is the prototyping medium, not a commitment** — the web build may be CSS/canvas/raster if it serves the look (see metaphor constraint in §8).
 - **Multilingual-ready design:** content stays Czech-first; layouts must accommodate translation. Practical implications:
   - Separate content from templates (don't hardcode CZ strings in `.njk` chrome).
   - Generous whitespace — EN equivalents often run shorter; DE runs longer.
@@ -176,13 +183,21 @@ Comparison artboards live in the Paper file. Two articles (Praxe IV, Hackaton I)
 
 ## 8. Working norms for this directory
 
+- **⚠️ MAINTENANCE NORM (Erik, 2026-06-07): persist thinking in the same session it changes.** Any substantial change, addition, or adjustment to how Erik thinks about this portfolio MUST be written into the relevant doc before the session moves on — `portfolio-shaping/plan.md` for status/decisions, `portfolio-shaping/site-design-direction.md` for design thinking, and **this CLAUDE.md whenever norms or thinking principles themselves change**. This is not housekeeping; it is how continuity across sessions works. Erik builds on top of these records next time he touches the portfolio.
+- **Erik's working principles** (captured 2026-06-07; full detail in `plan.md` §7 + `site-design-direction.md`):
+  - **Content → structure → fidelity.** Show output in the actual artifact first; visual/design decisions are made while moving UP in fidelity, never front-loaded.
+  - **All design decisions are revocable first steps.** Re-open freely when they stop working; log the change.
+  - **Bottom-up, opt-in.** New work happens under a new URL; content is curated IN, never trimmed down from the legacy site. Legacy `/dis-kisk/` = frozen archive mirror.
+  - **The site IS the exam presentation** — no separate deck; fallback = stage pages in plain succession; build fallback-first.
+  - **Metaphor constraint:** anything visual must be easy to depict with web tech & code (CSS/SVG/canvas/generative) — Erik does no pixel-perfect drawing in design tools.
+  - **Color semantics:** amber = earned (swag only); wardrobe colors stay low-chroma; ink+cream is the figure/ground constant.
 - **Conversation language:** English (Erik's explicit pref for this project, overrides the personal-account Czech default).
 - **Content language in files:** Czech, as-is. Don't translate existing content unless asked.
 - **Cadence:** bit by bit. Don't refactor the whole portfolio in one go; touch one section at a time and confirm.
 - **The angry doc:** `semestr-2/jbm-semestr-znovu-a-lepe.md` is **excluded** from the final submission. File may stay in repo (history), but:
   - Remove its link from `index.html` (currently lines 113-115 reference it).
   - Don't include it in PDF assembly.
-- **Story arc:** not yet decided — don't bake one into copy without checking.
+- **Story arc:** locked — the cile-VI journey (see §6 and `portfolio-shaping/plan.md`).
 
 ---
 
@@ -232,6 +247,9 @@ Working notebook for shaping the portfolio. Read these when relevant:
 
 | File | Purpose |
 |---|---|
-| [`design-system.md`](./portfolio-shaping/design-system.md) | Locked palette, type scale, accent rules, Paper artboard inventory, paper.design power moves |
-| [`paper-session-state.md`](./portfolio-shaping/paper-session-state.md) | Resume instructions when paper.design rate limit pauses work mid-build |
-| [`demo-story.md`](./portfolio-shaping/demo-story.md) | Draft narrative for an A5 booklet (archived direction — kept for content reference) |
+| [`plan.md`](./portfolio-shaping/plan.md) | **ACTIVE master plan to the state exam** — locked decisions, decision queue, schedule, parking lot. Read first. |
+| [`coherent-brief.md`](./portfolio-shaping/coherent-brief.md) | Spec synthesis: mandatory content, archive format, exam structure, voice rules |
+| [`site-design-direction.md`](./portfolio-shaping/site-design-direction.md) | Lego-figure / maturity-curve site concept (v0.2, post-exam build) |
+| [`braindumps/`](./portfolio-shaping/braindumps/) | Raw desktop-chat history (ctx/qs/crx, ordered by number) — source material behind the plan |
+
+> Note: `design-system.md`, `paper-session-state.md`, `demo-story.md` referenced in earlier versions of this file are **not present** in the folder — don't go looking. Palette/format facts live in `coherent-brief.md` §7 and `site-design-direction.md`.

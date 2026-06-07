@@ -141,6 +141,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.watchIgnores.add("**/10 - 🧠 Knowledge/1 - 🚀 Projects/**");
     eleventyConfig.watchIgnores.add("**/10 - 🧠 Knowledge/4 - 🏛️ Archives/**");
 
+    // Working notebook for the dis-kisk portfolio — private process docs
+    // (braindumps, plans, previews). Never publish to the built site.
+    eleventyConfig.ignores.add("pages/dis-kisk/portfolio-shaping/**");
+    eleventyConfig.watchIgnores.add("pages/dis-kisk/portfolio-shaping/**");
+
     eleventyConfig.setTemplateFormats([
         'css',
         'pdf',
