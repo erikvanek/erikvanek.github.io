@@ -1,3 +1,12 @@
+---
+title: 'Přihláška na KISK (2023)'
+date: 2023-06-01
+layout: dis-kisk.njk
+hideNavigation: true
+tags: ['dis']
+permalink: /dis-kisk/prihlaska/
+---
+
 Dobrý den,
 moje jméno je Erik Vaněk a velice rád bych se touto formou zúčastnil přijímacího řízení do
 studia Designu informačních služeb. Velice mi konvenuje struktura oboru, který dává příležitost

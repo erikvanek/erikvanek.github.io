@@ -5,7 +5,7 @@ date: 2024-04-15
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ["dis", "semestr2"]
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 ## Questions

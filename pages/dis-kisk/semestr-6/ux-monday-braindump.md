@@ -4,14 +4,14 @@ date: 2026-04-12
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr6', 'brain-dump']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 # UX Monday brain dump
 
 > **AI-assisted summary**
 >
-> Surový brain dump z 12. dubna 2026, ze kterého vzešla [prezentace na UX Monday](/ux-monday-26). Diktováno do telefonu při zhruba dvouhodinové procházce po městě - myšlenky vrstvené přes sebe, překlepy z hlasového zápisu, přerušení od psa, mluvení mezi nákupem v obchodě, nedokončené věty. Pokud vás zajímá, jak vypadá *vstup* brain dump metody, kterou popisuju v [reflexi 6. semestru](/cile-VI), tady je. Strukturovaný *výstup* je [v prezentaci](/ux-monday-26). Mezi vstupem a výstupem byl agentní workflow popsaný v reflexi.
+> Surový brain dump z 12. dubna 2026, ze kterého vzešla [prezentace na UX Monday](/ux-monday-26). Diktováno do telefonu při zhruba dvouhodinové procházce po městě - myšlenky vrstvené přes sebe, překlepy z hlasového zápisu, přerušení od psa, mluvení mezi nákupem v obchodě, nedokončené věty. Pokud vás zajímá, jak vypadá *vstup* brain dump metody, kterou popisuju v [reflexi 6. semestru](/dis-kisk/cile-VI/), tady je. Strukturovaný *výstup* je [v prezentaci](/ux-monday-26). Mezi vstupem a výstupem byl agentní workflow popsaný v reflexi.
 >
 > Tělo dokumentu níže je raw konverzace s Claudem - dashy a překlepy jsou součástí materiálu, ne chyba.
 >

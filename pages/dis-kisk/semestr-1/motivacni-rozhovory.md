@@ -5,7 +5,7 @@ date: 2024-01-14
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ["dis", "semestr1"]
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 Krátké zhodnocení toho, co jsem si odnesl z prvního setkání kurzu [Motivačních rozhovorů](http://motivacnirozhovory.cz/){target="_blank"}. Pár lidí si psalo o sdílení zkušeností z kurzu takže here-we-go!

@@ -4,10 +4,10 @@ date: 2025-06-15
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr4']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
-Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1.](/cile-I), v [2.](/cile-II) a [3.](/cile-III) semestru?
+Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1.](/dis-kisk/cile-I/), v [2.](/dis-kisk/cile-II/) a [3.](/dis-kisk/cile-III/) semestru?
 
 Na začátku semestru jsem si stanovil dva konkrétní vzdělávací cíle: **prohloubit facilitační dovednosti** a **zlepšit schopnost "prodávat design"**. Retrospektivně můžu říct, že se oba podařilo naplnit způsobem, který jsem na začátku nečekal.
 
@@ -17,7 +17,7 @@ Největším testem facilitačních schopností bylo **vedení kurzu [Service de
 
 Osvědčil se **P2P formát** – peer-to-peer sdílení zkušeností, kde se týmy učily i od sebe navzájem. Z retrospektivní zpětné vazby od studentů vyplynulo, že oceňovali praktičnost kurzu a prostor pro experimentování. Několik z nich mi psalo, že si nástroje začali používat i v práci.
 
-Druhým klíčovým projektem byl [workshop pro tajemnictvo ministerstev](/praxe-IV) na základě našeho výzkumu inovativních týmů ve státní správě. Příprava byla nejdetailnější, kterou jsem kdy dělal. Každá minuta naplánovaná, každý přechod nacvičený. Největší zjištění? **Mezirerzortní spolupráce je možná, když se přípravě setkání věnuje dostatek v kombinaci s kvalitní facilitací.** Sledoval jsem, jak lidé z různých ministerstev začali aktivně spolupracovat a inspirovat se navzájem.
+Druhým klíčovým projektem byl [workshop pro tajemnictvo ministerstev](/dis-kisk/praxe-IV/) na základě našeho výzkumu inovativních týmů ve státní správě. Příprava byla nejdetailnější, kterou jsem kdy dělal. Každá minuta naplánovaná, každý přechod nacvičený. Největší zjištění? **Mezirerzortní spolupráce je možná, když se přípravě setkání věnuje dostatek v kombinaci s kvalitní facilitací.** Sledoval jsem, jak lidé z různých ministerstev začali aktivně spolupracovat a inspirovat se navzájem.
 
 Z facilitační perspektivy to pro mě bylo potvrzení, že **umím číst skupinu a vytvářet bezpečný prostor i v náročném prostředí**. Facilitace není jen o technikách, ale hodně o empatii a schopnosti dát prostor každému hlasu.
 ## Prodávání designu

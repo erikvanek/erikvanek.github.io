@@ -4,12 +4,12 @@ date: 2024-02-04
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr2']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 
 
-Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1. semestru](/cile-I)?
+Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1. semestru](/dis-kisk/cile-I/)?
 
 
 ## Co jsem si stanovil pro celé studium?
@@ -24,9 +24,9 @@ Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem]
 - Seznámit se s metodologiemi uživatelského výzkumu, které mi umožní v praxi hlouběji porozumět zkoumaným prostředím a problémům
 
 ## Jak jsem s tím naložil?
-- dokončoval jsem [motivační rozhovory](/motivacni-rozhovory)
+- dokončoval jsem [motivační rozhovory](/dis-kisk/motivacni-rozhovory/)
 - dělám etnografické studie v rámci [sousedských dětských skupin](/piloting-a-new-childcare-service)
-- dělal jsem na skvělém projektu s Drýmtýmem, který zkoumá lidi zabývající se [inovacemi ve státní správě](/ostrovy-pozitivni-inovace)
+- dělal jsem na skvělém projektu s Drýmtýmem, který zkoumá lidi zabývající se [inovacemi ve státní správě](/dis-kisk/ostrovy-pozitivni-inovace/)
 - vedl jsem a účastnil jsem se velkého množství workshopů, facilitačně např. na [Fóru rodinné politiky](https://www.subscribepage.com/forumrodina2024){target="_blank"}, [Festivalu kreativní byrokracie](https://creativebureaucracy.cz/){target="_blank"}. Pasivně se zúčastnil workshopu o participaci pod vedením [Petra Návrata](https://www.linkedin.com/in/petr-n%C3%A1vrat-14a2261a/){target="_blank"} v rámci konference [Pojďme dělat město](https://www.pojdmedelatmesto.cz/){target="_blank"}
 - v průběhu semestru mi hodně pomohly průběžné konzultace nad výzkumnými aktivitami s mentorkou [Jitkou Bartošovou](https://www.linkedin.com/in/jbartosova/){target="_blank"}
 

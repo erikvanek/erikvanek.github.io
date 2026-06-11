@@ -4,7 +4,7 @@ date: 2024-01-28
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 Díky studiu na DIS KISK jsem si mohl poprvé pořádně sáhnout na VR a zároveň s dobrou metodickou oporou při tak disruptivní technologiích přijde vhod. Během semestru jsme vyzkoušeli několik volně dostupných aplikací s různou mírou interaktivity.
 

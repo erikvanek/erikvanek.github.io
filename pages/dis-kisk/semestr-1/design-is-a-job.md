@@ -5,7 +5,7 @@ date: 2024-01-28
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 Mark Monteiro je král. Mark Monteiro je král. Mark Monteiro je král. (stejně tak jako [Rey Koranteng](https://www.youtube.com/watch?v=tMWqs63N_K8){target="_blank"})
 
