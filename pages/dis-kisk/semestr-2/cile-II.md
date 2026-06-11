@@ -37,4 +37,4 @@ Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem]
 - je to pro mě obzvlášť cenný protože jsem nikdy neměl nějaký rigoróznější metodologický základ a a tímto se mi podařilo jej položit velice úspěšně
 
 ## Co dál?
-No jdu s tím nakládat dál! Jeden z důležitých projektů, na kterých teď pracuju, je cca z poloviny výzkumný. Zároveň postupně prozkoumám možnosti spolupráce s dalšími klienty, kde se mi daří znalosti, které jsem si odnesl, využívat.
+No jdu s tím nakládat dál! Jeden z důležitých projektů, na kterých teď pracuju, je cca z poloviny výzkumný. Zároveň postupně zkoumám možnosti spolupráce s dalšími klienty, kde se mi daří znalosti, které jsem si odnesl, využívat.

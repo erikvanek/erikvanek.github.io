@@ -8,9 +8,9 @@ permalink: /{{page.fileSlug}}/
 ---
 
 
-Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}.
+Cíle cíle cíle! Ty prostě pro měřitelný posun potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}.
 
-Zároveň mi to s nima dlouhodobě zatraceně nejde a je pro mě těžký si je realisticky vytyčovat a pak to všechno svádím na [agile](https://agilemanifesto.org/){target="_blank"}. Beru DIS KISK jako takové bezpečné pískoviště pro to s tím něco dělat. A vlastně si až říkám že by pro mě bylo zajímavý si stanovit nějaký _metacíl_, který by se zabýval prací s cíli.
+Zároveň mi to s nima dlouhodobě zatraceně nejde a je pro mě těžký si je realisticky vytyčovat a pak svou laxnost svádím na [agile](https://agilemanifesto.org/){target="_blank"}. Beru studium DIS KISK jako takové bezpečné pískoviště pro to s tím něco dělat. A vlastně si až říkám že by pro mě bylo zajímavý si stanovit nějaký _metacíl_, který by se zabýval prací s cíli.
 
 No nic. Zpátky na zem.
 
