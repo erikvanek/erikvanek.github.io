@@ -4,7 +4,7 @@ date: 2024-02-04
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 V rámci Praxe III jsem se tento semestr zaměřil zejména na organizaci ideačních workshopů, zčásti otevřených i veřejnosti.

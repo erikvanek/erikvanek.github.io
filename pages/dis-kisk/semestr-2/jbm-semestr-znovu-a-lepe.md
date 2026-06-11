@@ -4,7 +4,7 @@ date: 2024-06-29
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr2']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 ## KISK je super!
 Jo, za tím si stojím. KISK je super. Ale občas se objeví nějaký _ale_, kterých bylo tento semestr trošku víc, než by pro mě bylo komfortní. Jeden z hlavních důvodů, proč jsem se na KISK minulý rok vrátil bylo očekávání, že díky němu opět poznám super lidi. A to očekávání se mi potvrdilo a jsem za to hodně vděčnej. Jsem ale trošku smutnej z toho, že se když se potkáme, tak mám pocit, že je všechno vlastně strašně na rychlo, pod tlakem a tak nějak podivně neutěšený.

@@ -5,7 +5,7 @@ date: 2024-01-18
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ["dis", "semestr1"]
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 Nejvíc teorie a nerdství jsem si užil v díky Josefu Šlerkovi v Informační vědě. Hodně jsme řešili téma LLM a teoretických základů na kterých podobné technologie stojí. Podobné nástroje jsem doposud vnímal dost na intuitivní bázi a dost na základě doměnek a ne nutně hlubšího vhledu. Přednášky a diskuze mi pomohly se nad vnitřní architekturou a následných možnostech (a omezeních) využití zamyslet a podívat se na problematiku trochu víc do hloubky.
 

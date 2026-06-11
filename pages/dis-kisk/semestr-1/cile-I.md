@@ -4,7 +4,7 @@ date: 2024-02-04
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 
@@ -26,7 +26,7 @@ No nic. Zpátky na zem.
 - Seznámit se s metodologiemi uživatelského výzkumu, které mi umožní v praxi hlouběji porozumět zkoumaným prostředím a problémům
 
 ## Jak jsem s tím naložil?
-Když se podívám na ten konkrétní cíl pro 1. semestr tak jsem si nějaké nové nástroje vyzkoušel a v již známých se zdokonalil. Asi největší pecka pro mě byla účast na výcviku [motivačních rozhovorů](/motivacni-rozhovory). Jednak protože samotný ten kurz je vynikající. Druhak protože spousta projektů, na kterých teď pracuju a v budoucnosti bych pracovat chtěl, začínají krokem, který bývá zadán zhruba jako _mapování potřeb aktérů_. A motivační rozhovory a nástroje a techniky, které přinášejí, jsou pro tuhle aktivitu skvělou průpravou.
+Když se podívám na ten konkrétní cíl pro 1. semestr tak jsem si nějaké nové nástroje vyzkoušel a v již známých se zdokonalil. Asi největší pecka pro mě byla účast na výcviku [motivačních rozhovorů](/dis-kisk/motivacni-rozhovory/). Jednak protože samotný ten kurz je vynikající. Druhak protože spousta projektů, na kterých teď pracuju a v budoucnosti bych pracovat chtěl, začínají krokem, který bývá zadán zhruba jako _mapování potřeb aktérů_. A motivační rozhovory a nástroje a techniky, které přinášejí, jsou pro tuhle aktivitu skvělou průpravou.
 
 K cíli prvního semestru mě ještě napadá, že je to vlastně super cíl i pro semestr druhý, který se bude týkat uživatelského výzkumu.
 

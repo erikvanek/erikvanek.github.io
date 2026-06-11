@@ -4,10 +4,10 @@ date: 2026-05-17
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr6']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
-Cíle cíle cíle - naposledy. Jak to bylo v [1.](/cile-I), [2.](/cile-II), [3.](/cile-III), [4.](/cile-IV) a [5.](/cile-V) semestru? Při psaní této šesté reflexe už ten oblouk konečně začíná být vidět.
+Cíle cíle cíle - naposledy. Jak to bylo v [1.](/dis-kisk/cile-I/), [2.](/dis-kisk/cile-II/), [3.](/dis-kisk/cile-III/), [4.](/dis-kisk/cile-IV/) a [5.](/dis-kisk/cile-V/) semestru? Při psaní této šesté reflexe už ten oblouk konečně začíná být vidět.
 ## Co jsem si stanovil pro celé studium?
 - Načerpat kvalitní metodologický základ
 - Umět kvalitně zadat uživatelský výzkum
@@ -17,7 +17,7 @@ Cíle cíle cíle - naposledy. Jak to bylo v [1.](/cile-I), [2.](/cile-II), [3.]
 - Pomáhat organizacím stoupat v design maturity
 
 ## Co jsem si stanovil na 6. semestr?
-- Posunout AI-first workflow z [minulého semestru](/cile-V) do agentnější podoby - místo aby zůstal v rovině slov, ho fakt používat: MCP, second brain, kód jako source of truth
+- Posunout AI-first workflow z [minulého semestru](/dis-kisk/cile-V/) do agentnější podoby - místo aby zůstal v rovině slov, ho fakt používat: MCP, second brain, kód jako source of truth
 - Představit jej i v prostředí, kde nemám "domácí výhodu" (klienti, studenti, účastníci workshopů), před veřejnost
 ## Jak jsem s tím naložil?
 
@@ -77,7 +77,7 @@ V květnu 2026 jsem dostal zhruba 45 minut prostor na meetupu UX Monday v Praze.
 
 Přednáška popisovala workflow, které jsem si v semestru postavil – brain dump method, AI-asistované kódování rozhovorů (živé demo na přepisech z dalšího bočního projektu), prototypování s využitím Claude Code a Paper.design. Na závěr jsem lehce představil i projekty, které se věnují sociálním inovacím jako osvěžení od čistě digitálního obsahu.
 
-📜 [**Surový brain dump z procházky**](/ux-monday-braindump) → ⚡ agentní mód (popsaný výše) → 🎙️ [**hotová prezentace na UX Monday**](/ux-monday-26){target="_blank"}
+📜 [**Surový brain dump z procházky**](/dis-kisk/ux-monday-braindump/) → ⚡ agentní mód (popsaný výše) → 🎙️ [**hotová prezentace na UX Monday**](/ux-monday-26){target="_blank"}
 
 Bylo to poprvé, co jsem takový materiál vzal do prostředí, které nemám tolik pod kontrolou. Žádní účastníci workshopů, co mi už věří. Žádní studenti, kteří znají můj rejstřík. Žádní klienti, se kterými jsem si roky budoval společný jazyk. Snažil jsem se v přednášce narovinu pojmenovat pár názorů, na kterých mi v designu záleží - že designéři by se měli umět dívat do kódu a znát (a ideálně umět používat) mentální model GitHubu. Že já osobně výzkum a design neodděluju. Že by se mělo přestat říkat "AI", jako by to ještě bylo něco oddělitelného od běžné práce. A snažil jsem se být sám sebou, nic nehrát - žádná stage verze sebe, prostě *real me*.
 

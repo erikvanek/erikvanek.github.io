@@ -4,9 +4,9 @@ date: 2024-02-04
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
-Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [2. semestru](/cile-II)?
+Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [2. semestru](/dis-kisk/cile-II/)?
 ## Co jsem si stanovil pro celé studium?
 - Načerpat kvalitní metodologický základ
 - Umět kvalitně zadat uživatelský výzkum

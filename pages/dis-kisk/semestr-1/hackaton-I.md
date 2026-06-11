@@ -5,7 +5,7 @@ date: 2024-01-28
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr1']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 Jedna z posledních aktivit, která mě v 1. semestru čekala, byla účast na společném hackatonu, do kterého jsme s týmem šli s [výzvou](https://kisk.phil.muni.cz/100metod/designova-vyzva){target="_blank"}, která se týkala zkompetentňování dospělých ve vztahu k duševnímu zdraví dětí ve věku cca 2. stupně základní školy.
 
@@ -20,7 +20,7 @@ Někdy nebyl úplně snadný úkol se v týmu o osmi lidech dohodnout na tom, ja
 Nakonec jsme během naší spolupráce vytvořili dva hlavní, otestované, výstupy. Jedním z nich byl klikatelný prototyp pro mobilní aplikaci, která dospělým přibližuje svět mladší generace. Naše hypotéza je, že existuje část dospělých, pro které je náročné držet tempo s tématy, která jsou relevantní pro mladší generaci. Může to být jazyk, kulturní reference, sociální preference apod. Pomocí gamifikovaného nástroje jsme chtěli nastínit jednu možností, jak tuto propast postupně zacelovat.
 
 
-{% assign path = '../dis-kisk/img/testing-pavucina-rotated.jpg' %}
+{% assign path = '/dis-kisk/img/testing-pavucina-rotated.jpg' %}
 {% assign title = 'Testování návrhu systémové změny' %}
 {% render 'figure.njk', path: path, title: title %}
 

@@ -5,7 +5,7 @@ date: 2024-04-15
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ["dis", "semestr2"]
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 Je rok 2030. Procházíte automatickými dveřmi do impozantní budovy Ministerstva práce a sociálních věcí. Nad hlavou se vznáší holografické logo MPSV. Míjíte kavárnu "Mezi řádky", chráněnou dílnu, kde si právě dává kávu zaměstnankyně se svým virtuálním asistentem. Připomíná jí blížící se hovor s kolegy, kteří vyvíjejí novou aplikaci pro péči o seniory. Žena se usmívá, dopíjí kávu a přesouvá se do relaxační zóny, aby se připojila ke společné virtuální realitě.
 

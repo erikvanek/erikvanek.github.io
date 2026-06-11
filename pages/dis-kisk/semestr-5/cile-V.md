@@ -4,10 +4,10 @@ date: 2026-01-26
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr5']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
-Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1.](/cile-I), [2.](/cile-II), [3.](/cile-III) a [4.](/cile-IV) semestru?
+Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem](https://www.youtube.com/watch?v=_2o2nXO5PIQ&ab_channel=elaq23net){target="_blank"}. Jak mi je šlo plnit v [1.](/dis-kisk/cile-I/), [2.](/dis-kisk/cile-II/), [3.](/dis-kisk/cile-III/) a [4.](/dis-kisk/cile-IV/) semestru?
 
 ## Co jsem si stanovil pro celé studium?
 - Načerpat kvalitní metodologický základ
@@ -24,7 +24,7 @@ Cíle cíle cíle! Ty prostě potřebujem. Ať víme kam jdem a [kam směřujem]
 
 ### Leadership a prodávání designu
 
-Největším testem pro mě byl [kurz KISKED19](/praxe-V) – designové myšlení pro úřednictvo. Poprvé jsem koordinoval větší mentorsko-lektorský tým v remote prostředí a zároveň cílil na specifickou cílovou skupinu. Byla to rozhodně nejnáročnější příprava kurzu ze všech tří dosavadních zkušeností.
+Největším testem pro mě byl [kurz KISKED19](/dis-kisk/praxe-V/) – designové myšlení pro úřednictvo. Poprvé jsem koordinoval větší mentorsko-lektorský tým v remote prostředí a zároveň cílil na specifickou cílovou skupinu. Byla to rozhodně nejnáročnější příprava kurzu ze všech tří dosavadních zkušeností.
 
 Klíčový moment přišel v polovině kurzu, kdy po parlamentních volbách klesla energie skupiny k bodu mrazu a zároveň jsme zjistili, že studující zahlcujeme obsahem, který je pro ně těžko stravitelný. Museli jsme rychle přehodnotit přístup – méně projektové práce, více kreativních workshopů. Tahle schopnost přečíst skupinu a adaptovat se za běhu byla pro mě důležitým učícím se prvkem.
 

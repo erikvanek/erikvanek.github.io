@@ -4,7 +4,7 @@ date: 2026-01-18
 layout: dis-kisk.njk
 hideNavigation: true
 tags: ['dis', 'semestr5']
-permalink: /{{page.fileSlug}}/
+permalink: /dis-kisk/{{page.fileSlug}}/
 ---
 
 
@@ -30,7 +30,7 @@ permalink: /{{page.fileSlug}}/
 </style>
 
 
-V roce 2024 jsem s Drýmtýmem zkoumal [inovační týmy státní správy](https://www.inovacnitymystatnispravy.cz/){target="_blank"}. V první půlce 2025 jsme si domluvili, zorganizovali a odvedli [ideační workshop](/praxe-IV) se státními tajemníky a tajemnicemi. 
+V roce 2024 jsem s Drýmtýmem zkoumal [inovační týmy státní správy](https://www.inovacnitymystatnispravy.cz/){target="_blank"}. V první půlce 2025 jsme si domluvili, zorganizovali a odvedli [ideační workshop](/dis-kisk/praxe-IV/) se státními tajemníky a tajemnicemi. 
 
 V průběhu podzimního semestru 2025 jsme na to navázali kurzem [KISKED19 – Inovace ve veřejných službách: Designové myšlení pro úřednictvo](https://www.inovacnitymystatnispravy.cz/){target="_blank"}.
 
@@ -60,7 +60,7 @@ Následná setkání měla úplně jiný spád. Během prvního workshopu jsme p
 
 Během tohoto _pivotálního momentu_ bylo důležité, abychom studující v kurzu nepoztráceli. Přesněji řečeno – abychom neztratili jejich důvěru, pozornost a chuť se designem dál zabývat. Jsem rád, že jsme tu situaci dokázali dobře přečíst, vyhodnotit a vhodně zareagovat. Pozitivní ohlas na tuto změnu jsem vnímal i v rámci závěrečného hackatonu.
 
-{% assign path = '../dis-kisk/img/workshop-s-uredniky.png' %}
+{% assign path = '/dis-kisk/img/workshop-s-uredniky.png' %}
 {% assign title = 'Spoiler alert: dobrou energii se nám podařilo udržet i při závěrečném hackatonu' %}
 {% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
 # Ups, downs, learnings
@@ -74,9 +74,9 @@ Tady mám zatím nejméně jasno a dost možná se to v čase může ještě pro
 
 Asi bych si půjčil repliku od Romana – "udělat dobrej kurz je vážně těžký". Pro mě to byla rozhodně nejnáročnější příprava kurzu z těch tří dosavadních zkušeností. Možná proto, že byl subjektivně ten nejvíce důležitý a tak jsem měl i vysoká očekávání z výsledku? Těžko říct. Ale těžký to bylo rozhodně.
 # Konec dobrý, všechno dobré?
-To zdaleka nejlepší se stalo na samotném závěru kurzu. Zakončení formou závěrečného hackatonu, podobně jako v DISu [v průběhu 1. semestru](/hackaton-I). Den a půl plný intenzivní (spolu)práce. Osobně. Na FF MUNI. Prostor pro zkoušení, experimentování a taky pro maximální soustředění.
+To zdaleka nejlepší se stalo na samotném závěru kurzu. Zakončení formou závěrečného hackatonu, podobně jako v DISu [v průběhu 1. semestru](/dis-kisk/hackaton-I/). Den a půl plný intenzivní (spolu)práce. Osobně. Na FF MUNI. Prostor pro zkoušení, experimentování a taky pro maximální soustředění.
 
-V něčem mi to vážně hodně připomnělo ten [závěrečný hackaton z 1. semestru](/hackaton-I). Strašně příjemná atmosféra a energie. Studující vypadali od prvního až do posledního momentu neskutečně zapálení. Ti, kteří říkali, že neví jestli přijdou i druhý den zůstali na celý druhý den atp. Bylo to opět intenzivní, ale záživné, akční, zábavné, náročné (např. v momentech časové tísně).
+V něčem mi to vážně hodně připomnělo ten [závěrečný hackaton z 1. semestru](/dis-kisk/hackaton-I/). Strašně příjemná atmosféra a energie. Studující vypadali od prvního až do posledního momentu neskutečně zapálení. Ti, kteří říkali, že neví jestli přijdou i druhý den zůstali na celý druhý den atp. Bylo to opět intenzivní, ale záživné, akční, zábavné, náročné (např. v momentech časové tísně).
 
 Úplně největším highlightem celého víkendu pro mě byl čtyřhodinový HCD workshop (v programu lapidárně pojmenovaný jako "proces v kostce"). Ze zpětných vazeb jsme občas dostávali indicie, že onen mytický _designový proces_ možná není tak srozumitelný jak bychom si mohli myslet. A tak jsme během hackatonu chtěli sjednat nápravu.
 
@@ -84,7 +84,7 @@ Roman přinesl variaci na legendární [Wallet project](https://www.ideo.com/jou
 
 Peněženka to nebyla jen tak ledajaká, byla doplněná o prvek kontroly finančních toků obyvatel. A poptávku přinesl v rámci workshopu sám pan ministr.
 
-{% assign path = '../dis-kisk/img/ministr-penez.png' %}
+{% assign path = '/dis-kisk/img/ministr-penez.png' %}
 {% assign title = 'Ministr peněz a vedoucí oddělení jeho ministerstva' %}
 {% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
 
