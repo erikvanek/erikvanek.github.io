@@ -8,94 +8,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* Content = INITIATIVES (single source of truth), not semesters.
-     Semester is metadata only: a small colour-coded tag per tile.
-     Mapa   = greyscale terrain (structure pass), initiative photos/chips on territories.
-     Mřížka = initiative wall — one tile per initiative (photo or text tile); overflow scrolls.
-     Mřížka rozšířená = branched-off variant of the wall: each initiative becomes a richer card
-       (photo + thematic tags + pull-quote + keyword chips). Same data, same ordering, more content. */
-  :root{ --ink:#1c1812; --quiet:#7a7060; --line:rgba(28,24,18,.30); --card:#ffffff; --cream:#f4efe5; --cell:clamp(105px,9.3vw,140px); --gap:18px; --big:calc(2 * var(--cell) + var(--gap)); }
+  /* Initiative wall (single mode). Content lives in cards.js (window.INITIATIVES); this file
+     only renders + styles. Each initiative = one tile (photo or text); research voices (it.quotes)
+     become their own quote tiles; overflow scrolls. Semester is metadata only — a colour-coded tag. */
+  :root{ --ink:#1c1812; --quiet:#7a7060; --line:rgba(28,24,18,.30); --card:#ffffff; --cream:#f4efe5;
+         --cell:clamp(120px,12.5vw,180px); --gap:18px; --big:calc(2 * var(--cell) + var(--gap)); }
   *{ box-sizing:border-box; }
-  html,body{ margin:0; height:100%; }
-  body{ background:#f6f5f3; font-family:Inter, system-ui, sans-serif; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  html,body{ margin:0; }
+  body{ min-height:100%; background:#eeebe4; font-family:Inter, system-ui, sans-serif;
+        overflow-y:auto; -webkit-font-smoothing:antialiased; }
 
-  #stage{ position:fixed; inset:0; width:100vw; height:100vh; }
-  .mode{ position:absolute; inset:0; }
-  .mode[hidden]{ display:none; }
-
-  /* ---------- shared content atoms (mapa) ---------- */
-  .num{ position:absolute; font-weight:800; font-size:clamp(28px,3vw,52px); color:var(--quiet); opacity:.16; user-select:none; transform:translate(-50%,-50%); }
-  .year{ position:absolute; font-weight:700; font-size:clamp(11px,1vw,15px); letter-spacing:.06em; color:var(--ink); opacity:.55; }
-  .card{ position:absolute; background:var(--card); box-shadow:0 6px 16px rgba(28,24,18,.18); }
-  .card img{ display:block; width:100%; height:100%; object-fit:cover; }
-  .card .incap{ position:absolute; left:10px; bottom:5px; font-size:11px; font-weight:500; color:var(--ink); }
-  .cap{ position:absolute; font-size:clamp(10px,.9vw,13px); font-weight:500; color:var(--ink); white-space:nowrap; }
-  .chip{ position:absolute; padding:7px 12px; background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:2px; white-space:nowrap; font-size:clamp(11px,1vw,14px); font-weight:600; color:var(--ink); box-shadow:0 1px 2px rgba(0,0,0,.04); }
-  .chip.dashed{ border-style:dashed; color:var(--quiet); }
-  .chip.mark{ border-width:1.5px; border-color:var(--ink); }
-  .chip.stamp{ border-style:double; }
-
-  /* ---------- shared panel/stamp inner ---------- */
-  .p-title-row{ display:flex; align-items:center; justify-content:center; padding:5% 6% 1%; }
-  .p-title{ margin:0; text-align:center; font-weight:800; font-size:clamp(26px,3.2vw,50px); line-height:1.16; letter-spacing:-.02em; }
-  .p-sub-row{ display:flex; justify-content:center; padding:0 9% 4%; }
-  .p-sub{ margin:0; max-width:600px; text-align:center; font-weight:400; font-size:clamp(13px,1.25vw,19px); line-height:1.45; }
-  .p-meta{ display:flex; min-height:70px; border-top:1px solid; }
-  .p-cell{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:12px 8px; }
-  .p-cell + .p-cell{ border-left:1px solid; }
-  .p-k{ font-weight:600; font-size:10px; letter-spacing:.10em; }
-  .p-v{ font-weight:500; font-size:clamp(12px,1.1vw,15px); }
-  .p-link{ text-decoration:none; border-bottom:1.5px solid; padding-bottom:1px; }
-
-  /* ---------- MODE: mapa ---------- */
-  .map{ position:absolute; inset:0; width:100%; height:100%; }
-  @keyframes riverPulse{ 0%,100%{opacity:.82} 50%{opacity:1} }
-  .river-grp{ animation:riverPulse 5s ease-in-out infinite; }
-
-  .panel{
-    position:absolute; left:25%; top:25%; width:50%; height:50%; z-index:20;
-    display:flex; flex-direction:column; color:var(--ink);
-    background:rgba(255,255,255,.6); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-    border:1px solid rgba(28,24,18,.22); border-radius:6px;
-    box-shadow:0 24px 60px rgba(28,24,18,.10), 0 2px 8px rgba(28,24,18,.06); overflow:hidden;
-    opacity:0; transform:translateY(22px) scale(.96); filter:blur(8px);
-    transition:opacity 1.15s cubic-bezier(.16,1,.3,1), transform 1.15s cubic-bezier(.16,1,.3,1), filter .9s ease;
-    will-change:opacity, transform, filter;
-  }
-  .panel.show{ opacity:1; transform:none; filter:none; }
-  .panel .p-title-row{ flex:1; }
-  .panel .p-sub{ color:#5d5546; }
-  .panel .p-meta, .panel .p-cell + .p-cell{ border-color:rgba(28,24,18,.18); }
-  .panel .p-k{ color:var(--quiet); }
-  .panel .p-v{ color:var(--ink); }
-  .panel .p-link{ border-color:var(--ink); }
-
-  /* ---------- MODE: mřížka (initiative wall; overflow scrolls) ----------
-     Layout = centred flex BANDS (one .band per row). Tiles use 4 fixed footprints off --cell:
-     1×1 (default), 2×2 (.f-big = standard card), 1×2 (.f-portrait = tall), 2×1 (.f-landscape = wide),
-     plus 2.5×2 (.f-profile). 1-unit-tall tiles pair into a .stack so each column is a full card tall.
-     Rows have intrinsic width and centre (no left-alignment). Reading order = semester/hotness. */
-  #mode-bau{ background:#eeebe4; overflow-y:auto; }
-  /* Centred flex bands: each row is its own flex row of intrinsic width, so .wall align-items:center
-     centres every row (no left-alignment). 1-unit-tall tiles (2×1 / 1×1) pair into a .stack so each
-     column in a band is a full card tall. Standard card edge = --big (2 cells + gap). */
-  .wall{ position:relative; min-height:100%; display:flex; flex-direction:column; align-items:center;
+  /* ---------- the wall: centred flex BANDS (one .band per row) ----------
+     Tiles use 4 fixed footprints off --cell: 1×1 (default), 2×2 (.f-big = standard card),
+     1×2 (.f-portrait = tall), 2×1 (.f-landscape = wide), plus 2.5×2 (.f-profile = the inverted
+     profile box). 1-unit-tall tiles pair into a .stack so each column is a full card tall.
+     Rows have intrinsic width and centre (no left-alignment). Standard card edge = --big. */
+  .wall{ position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center;
          gap:var(--gap); padding:16px; }
   .band { display:flex; flex-direction:row; align-items:flex-start; gap:var(--gap); }
   .stack{ display:flex; flex-direction:column; gap:var(--gap); flex:none; }
-  .tile{ position:relative; flex:none; width:var(--cell); height:var(--cell); border-radius:8px; overflow:hidden; background:#ddd; box-shadow:0 6px 18px rgba(28,24,18,.16); }
+  .tile{ position:relative; flex:none; width:var(--cell); height:var(--cell); border-radius:8px;
+         overflow:hidden; background:#ddd; box-shadow:0 6px 18px rgba(28,24,18,.16); }
   .tile.f-portrait { width:var(--cell); height:var(--big); }                            /* 1×2 — tall */
   .tile.f-landscape{ width:var(--big);  height:var(--cell); }                           /* 2×1 — wide */
   .tile.f-big      { width:var(--big);  height:var(--big); }                            /* 2×2 — standard card */
-  .tile.f-profile  { width:calc(5 * var(--cell) + 4 * var(--gap)); height:var(--big); } /* 2.5×2 — profile: the ONE non-standard footprint */
+  .tile.f-square   { width:var(--cell); height:var(--cell); }                           /* 1×1 — force square (overrides photo ratio) */
+  .tile.f-profile  { width:calc(2.5 * var(--cell) + var(--gap)); height:var(--big); }   /* 2.5×2 — profile: half a cell wider than a standard 2×2 card */
   .tile img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .tile-stamp{ position:absolute; left:0; right:0; bottom:0; padding:21px 12px 11px; display:flex; flex-direction:column; gap:6px; background:linear-gradient(to top, rgba(20,18,14,.55), rgba(20,18,14,0)); }
+  .tile-stamp{ position:absolute; left:0; right:0; bottom:0; padding:21px 12px 11px; display:flex;
+               flex-direction:column; gap:6px; background:linear-gradient(to top, rgba(20,18,14,.55), rgba(20,18,14,0)); }
   .tile-title{ font-weight:700; font-size:18px; color:var(--cream); line-height:1.25; }
-  .sem-tag{ position:absolute; top:10px; right:10px; z-index:2; padding:4px 10px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; box-shadow:0 1px 6px rgba(0,0,0,.35); }
-  .tile-chips{ display:flex; flex-wrap:wrap; gap:5px; }
-  .tile-chips .tc{ padding:3px 8px; border:1px solid rgba(244,239,229,.40); border-radius:3px; font-size:11px; font-weight:600; color:var(--cream); background:rgba(255,255,255,.08); }
-  .tile-chips .tc.mark{ border-color:var(--cream); }
-  .tile-chips .tc.dashed{ border-style:dashed; opacity:.75; }
+  .tile-ext{ font-size:.8em; font-weight:500; }   /* 🔗 marker on cards that lead off-site */
+  .sem-tag{ position:absolute; top:10px; right:10px; z-index:2; padding:4px 10px; border-radius:4px;
+            font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff;
+            box-shadow:0 1px 6px rgba(0,0,0,.35); }
+
+  /* clickable tile (has it.link → rendered as <a>) */
+  a.tile{ text-decoration:none; color:inherit; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease; }
+  a.tile:hover{ transform:translateY(-3px); box-shadow:0 12px 28px rgba(28,24,18,.24); }
+  a.tile:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
 
   /* text tile — initiative without a photo */
   .tile.text{ background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; justify-content:flex-end; }
@@ -103,31 +54,22 @@
   .tile.text .tile-stamp{ position:static; background:none; padding:14px; }
   .tile.text .tile-title{ color:var(--ink); font-size:20px; }
   .tile.text.missing .tile-title{ color:var(--quiet); }
-  .tile.text .tile-chips .tc{ border-color:var(--line); color:var(--ink); background:rgba(255,255,255,.9); }
-  .tile.text .tile-chips .tc.mark{ border-color:var(--ink); border-width:1.5px; }
-  .tile.text .tile-chips .tc.dashed{ border-style:dashed; color:var(--quiet); }
 
-  /* profile "tile" — the inverted (dark) box: the ONE non-standard tile (2.5×2), the headline/identity.
-     2026-06-11: was a chrome-less text block; now an inverted box (ink ground, cream type) so it reads as
-     a deliberate element between two cards, matching the paper "inverted profile tile". */
-  .tile.hero{ background:var(--ink); box-shadow:0 6px 18px rgba(28,24,18,.16); border:none; backdrop-filter:none; -webkit-backdrop-filter:none;
-              border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center;
-              text-align:center; padding:20px 34px; gap:12px; }
+  /* profile "tile" — the inverted (dark) box: the ONE non-standard tile (2.5×2), the headline/identity. */
+  .tile.hero{ background:var(--ink); box-shadow:0 6px 18px rgba(28,24,18,.16); border:none;
+              border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:center;
+              justify-content:center; text-align:center; padding:20px 34px; gap:12px; }
   .tile.hero .h-title{ margin:0; font-weight:800; font-size:clamp(22px,2.3vw,36px); line-height:1.16; letter-spacing:-.02em; color:var(--cream); }
   .tile.hero .h-sub{ margin:0; font-size:clamp(12px,1vw,15px); line-height:1.45; color:rgba(244,239,229,.72); max-width:460px; }
 
-  /* ---------- MODE: mřížka rozšířená (branched wall: thematic tags + standalone research-voice quotes) ----------
-     Same square-grid tiles as Mřížka. Project cards add a thematic tags row to a solid stamp.
-     Each research quote is its OWN tile (no tags), sized 1×1 / 1×2 by length, referencing its project. */
+  /* thematic tags row (rozšířená) + extended stamp */
   .tile-tags{ display:flex; flex-wrap:wrap; gap:5px; }
   .tile-tags .tt{ padding:2px 8px; border-radius:999px; font-size:9.5px; font-weight:700;
                   letter-spacing:.04em; text-transform:uppercase; color:var(--cream);
                   background:rgba(255,255,255,.15); border:1px solid rgba(244,239,229,.5); }
   .tile-stamp.ext{ gap:7px; }
-  /* extended stamp over a photo (project / feature cards) → short, lighter gradient (Erik 2026-06-08) */
   .tile:not(.text) .tile-stamp.ext{ padding:14px 12px 12px;
         background:linear-gradient(to top, rgba(18,16,12,.6) 62%, rgba(18,16,12,0)); }
-  /* extended stamp on a text tile → light (ink on cream) */
   .tile.text .tile-tags .tt{ color:var(--quiet); background:rgba(28,24,18,.05); border-color:var(--line); }
 
   /* quote tile — a standalone research voice; quote on top, project reference at the bottom */
@@ -139,220 +81,19 @@
   .tile.quote-tile .qt-text{ margin:0; font-style:italic; font-size:clamp(12px,.95vw,15px); line-height:1.45; color:var(--ink); }
   .tile.quote-tile .qt-ref{ font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--quiet); }
 
-  /* structure pass (Erik 2026-06-11): cards in the wall show ONLY the semester badge + title.
-     Chips + thematic tags are hidden until the portfolio rework re-introduces them — see plan.md. */
+  /* structure pass (Erik 2026-06-11): tiles show ONLY the semester badge + title.
+     chips + thematic tags are hidden (data kept) until the portfolio rework re-introduces them — see plan.md. */
   .tile-chips, .tile-tags{ display:none !important; }
-
-  /* ---------- switcher ---------- */
-  .switch{ position:fixed; top:14px; right:14px; z-index:60; display:flex; align-items:center; gap:8px;
-           background:rgba(255,255,255,.72); backdrop-filter:blur(6px); padding:6px 10px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,.12); }
-  .switch label{ font-size:10px; font-weight:700; letter-spacing:.12em; color:var(--quiet); text-transform:uppercase; }
-  .switch select{
-    font-family:inherit; font-size:13px; font-weight:600; color:var(--ink);
-    background:#fff; border:1px solid var(--line); border-radius:4px; padding:7px 30px 7px 12px; cursor:pointer;
-    -webkit-appearance:none; appearance:none;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%231c1812' stroke-width='1.5' fill='none'/></svg>");
-    background-repeat:no-repeat; background-position:right 11px center;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .river-grp{ animation:none; }
-    .panel{ transition:none; }
-  }
 </style>
 </head>
 <body>
-  <div id="stage">
+  <div id="bau-grid" class="wall"></div>
 
-    <!-- ===================== MODE: MAPA ===================== -->
-    <div class="mode" id="mode-map">
-      <svg class="map" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="riverBase" gradientUnits="userSpaceOnUse" x1="0" y1="640" x2="1398" y2="0">
-            <stop offset="0" stop-color="#1c1812" stop-opacity=".20"/>
-            <stop offset=".55" stop-color="#1c1812" stop-opacity=".48"/>
-            <stop offset="1" stop-color="#1c1812" stop-opacity=".85"/>
-          </linearGradient>
-          <linearGradient id="riverFlow" gradientUnits="userSpaceOnUse" x1="0" y1="640" x2="640" y2="347">
-            <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-            <stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/>
-            <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-            <animateTransform attributeName="gradientTransform" type="translate" from="-700 320" to="1500 -687" dur="3.6s" repeatCount="indefinite"/>
-          </linearGradient>
-          <clipPath id="riverClip">
-            <path d="M-120.3 649 C-80.3 646 -40.3 642 -0.3 637 C159.5 621.8 309 608.5 433.8 596.3 C558.7 524.1 858.7 460.5 1064.5 399.1 C1237.6 345.4 1315.6 176.5 1392.5 -2.4 C1424.5 -62.6 1450.4 -122.5 1474.3 -182.6 L1485.7 -177.4 C1461.6 -117.5 1435.5 -57.4 1403.5 2.4 C1324.4 183.5 1242.4 354.6 1067.5 408.9 C861.3 469.5 561.3 531.9 436.2 603.7 C311 615.5 160.5 628.2 0.28 643 C-39.7 648 -79.7 652 -119.7 655 Z"/>
-          </clipPath>
-        </defs>
-        <path d="M0 0 L110 0 C150 210 330 430 435 600 C310 612 160 625 0 640 Z" fill="#efeeec"/>
-        <path d="M0 640 C160 625 310 612 435 600 C455 690 505 800 597 900 L0 900 Z" fill="#e6e5e3"/>
-        <path d="M110 0 L846 0 C940 140 980 290 1066 404 C860 465 540 505 435 600 C330 430 150 210 110 0 Z" fill="#f2f1ef"/>
-        <path d="M435 600 C540 505 860 465 1066 404 C1140 560 1230 740 1332 900 L597 900 C505 800 455 690 435 600 Z" fill="#eae9e7"/>
-        <path d="M846 0 L1398 0 C1320 180 1240 350 1066 404 C980 290 940 140 846 0 Z" fill="#f4f3f1"/>
-        <path d="M1398 0 L1440 0 L1440 900 L1332 900 C1230 740 1140 560 1066 404 C1240 350 1320 180 1398 0 Z" fill="#f8f7f5"/>
-        <g stroke="rgba(28,24,18,.26)" stroke-width="2.5" fill="none">
-          <path d="M110 0 C150 210 330 430 435 600 C455 690 505 800 597 900"/>
-          <path d="M846 0 C940 140 980 290 1066 404 C1140 560 1230 740 1332 900"/>
-        </g>
-        <g class="river-grp">
-          <path d="M-120.3 649 C-80.3 646 -40.3 642 -0.3 637 C159.5 621.8 309 608.5 433.8 596.3 C558.7 524.1 858.7 460.5 1064.5 399.1 C1237.6 345.4 1315.6 176.5 1392.5 -2.4 C1424.5 -62.6 1450.4 -122.5 1474.3 -182.6 L1485.7 -177.4 C1461.6 -117.5 1435.5 -57.4 1403.5 2.4 C1324.4 183.5 1242.4 354.6 1067.5 408.9 C861.3 469.5 561.3 531.9 436.2 603.7 C311 615.5 160.5 628.2 0.28 643 C-39.7 648 -79.7 652 -119.7 655 Z" fill="url(#riverBase)"/>
-          <rect x="-160" y="-260" width="1760" height="1280" fill="url(#riverFlow)" clip-path="url(#riverClip)"/>
-        </g>
-        <g fill="#1c1812" fill-opacity=".55" stroke="#f6f5f3" stroke-width="2.5">
-          <circle cx="435" cy="600" r="6"/>
-          <circle cx="1066" cy="404" r="6"/>
-        </g>
-      </svg>
-      <svg style="position:absolute; left:73.6%; top:7.8%; width:20.8%; height:21%;" viewBox="0 0 300 190" preserveAspectRatio="none" fill="none">
-        <path d="M40 30 C120 10 200 40 250 90 C270 120 230 160 170 170" stroke="rgba(28,24,18,.35)" stroke-width="1.5"/>
-      </svg>
-      <div id="map-layer"></div>
-    </div>
-
-    <!-- ===================== MODE: MŘÍŽKA (initiative wall) ===================== -->
-    <div class="mode" id="mode-bau" hidden>
-      <div id="bau-grid" class="wall"></div>
-    </div>
-
-    <!-- ===================== floating banner (mapa) ===================== -->
-    <div class="panel" id="panel"></div>
-
-    <!-- ===================== switcher ===================== -->
-    <div class="switch">
-      <label for="mode-select">Režim</label>
-      <select id="mode-select" aria-label="Režim prezentace">
-        <option value="map">Mapa</option>
-        <option value="bau">Mřížka</option>
-        <option value="ext">Mřížka rozšířená</option>
-      </select>
-      <label for="order-select" id="order-label">Řazení</label>
-      <select id="order-select" aria-label="Řazení iniciativ">
-        <option value="sem">Semestry</option>
-        <option value="hot">Hotness</option>
-      </select>
-    </div>
-
-  </div>
-
+  <script src="cards.js"></script>
   <script>
   (function () {
-    // ---------- semester = metadata only: colour + tag, never a heading ----------
+    // semester = metadata only: colour + tag, never a heading
     var SEM_COLOR = { 'I':'#6B7A45','II':'#3E5A6E','III':'#B0552E','IV':'#6F2430','V':'#C26818','VI':'#9a7a23','?':'#7a7060' };
-
-    // map decor (territory watermarks + timeline years)
-    var NUMERALS = [ {n:'I',l:3.3,t:9.4},{n:'II',l:4.6,t:75.8},{n:'III',l:17.5,t:6.9},{n:'IV',l:46.8,t:95.1},{n:'V',l:71.1,t:7.6},{n:'VI',l:94,t:50.7} ];
-    var YEARS = [ {t:'2023', l:2.6, top:66.7}, {t:'2026', l:92.4, top:3.8} ];
-
-    // ---------- CONTENT: initiatives (single source of truth) ----------
-    // {sem, tag?, color?, pin?, feature?, title, tags?:[…thematic, ≥3 cards each…],
-    //  quotes?:[…verbatim research voices…], photo?{src,alt,ratio,w,h,map{l,t,r},cap?,capInside?,capMap?},
-    //  chips:[{text,variant?,map?}], missing?}    ← tags + quotes feed MŘÍŽKA ROZŠÍŘENÁ only.
-    var INITIATIVES = [
-      { sem:'I', tag:'2023', color:'#7a7060', pin:'start', fp:'f-big', title:'Erik 2023 — neohrabaný praktik',
-        photo:{src:'img/i-me-melon.jpeg', alt:'Erik v roce 2023', ratio:0.75, w:135,h:180},
-        chips:[ {text:'inženýrský základ, díry v metodologii'},
-                {text:'čerstvě po vyhazovu z Infarmu 🌱'},
-                {text:'motivák za mě napsal GPT-3 ✍️'} ] },
-
-      { sem:'VI', tag:'2026', color:'#C26818', pin:'end', fp:'f-landscape', title:'Erik 2026 — designér, který učí',
-        tags:['AI workflow'],
-        quotes:[ '„Tohle jsem fakt nečekal — tlačím kolo přes bažinu, paráda. To je asi cena za to, že rád mluvím do diktafonu. No nic, zpátky k tomu.“' ],
-        chips:[ {text:'designér-orchestrátor'},
-                {text:'učím tři kurzy 🧑‍🏫'},
-                {text:'práci diktuju z kola 🚲'},
-                {text:'UX Monday — největší meetup v zemi 🎤'} ] },
-
-      { sem:'I', lead:1, title:'Hackathon — testování s Adamem 🎯',
-        tags:['výzkum'],
-        photo:{src:'img/i-hackathon-adam.jpg', alt:'Testování s Adamem na hackathonu', ratio:1.49, w:230,h:168, map:{l:3.6,t:14.4,r:-4}, cap:'testování na hackathonu — Adam 🎯', capMap:{l:4.4,t:34,r:-4}},
-        chips:[ {text:'„mačkám tlačítka a koukám, co zabere“ 🔘', map:{l:6.2,t:40,r:2.5}} ] },
-
-      { sem:'I', fp:'f-landscape', title:'Přihláška na KISK ✍️',
-        tags:['AI workflow'],
-        chips:[ {text:'Infarm → KISK 🌱', map:{l:4.2,t:46.1,r:-2}},
-                {text:'motivák za mě napsal GPT-3 ✍️', map:{l:8.3,t:52.2,r:3}} ] },
-
-      { sem:'II', fp:'f-big', title:'Studie inovativních týmů ve státní správě 📊',
-        tags:['výzkum','veřejná správa'],
-        quotes:[ '„Lidé v mém týmu chápou svoji roli a jsou proaktivní. Manažersky si svou práci uhlídají, není potřeba je každodenně úkolovat a hlídat, zda své úkoly splnili.“',
-                 '„Nebojím se v týmu říct, co mě napadne, i kdyby to měla být blbost, vím, že se nic nestane.“',
-                 '„Snažím se objevovat svou schopnost vykonávat různé úkoly, ať už ve vedoucí pozici nebo na jiných úrovních, abych neustále přinášel nový pohled a nedovolil, aby mě to semlelo.“' ],
-        photo:{src:'img/ii-report-tymy.png', alt:'Studie inovativních týmů ve státní správě', ratio:0.71, w:162,h:226, map:{l:8.2,t:72.2,r:-2}, cap:'studie inovativních týmů ve státní správě 📊', capMap:{l:8.7,t:97.6}},
-        chips:[ {text:'jak fungují týmy, co mění stát 🔬', map:{l:20.8,t:73.8}},
-                {text:'co dělá tým úspěšným? 🧩', map:{l:20.8,t:84.4}} ] },
-
-      { sem:'III', title:'Fléda — service design 🛠️',
-        tags:['service design','výzkum'],
-        quotes:[ '„Jsem rad, ze se starate o zakazniky i touhle formou. Jen tak dal!“',
-                 '„na Flédě mám rada její atmosféru a duši, klub je tak akorát velký a snad každý měsíc je tam nějaká pro mě super akce“',
-                 '„páči sa mi ako je priestorovo usporiadané - človek má čo objavovať a kde sa pohybovať aj mimo koncertu + kurárna na vzduchu. tiež že tam sú dva bary a nemusíme sa tlačiť v jednej miestnosti iba“' ],
-        photo:{src:'img/iii-fleda.png', alt:'Cedule Fléda – flákání, nicnedělání', ratio:1.55, w:224,h:150, map:{l:38.1,t:4.4,r:-2.5}},
-        chips:[ {text:'studený e-mail → CEO volá zpět 📞', map:{l:56.4,t:8.4,r:1.5}} ] },
-
-      { sem:'III', title:'Papírové prototypy — IxD ✏️',
-        tags:['service design'],
-        photo:{src:'img/iii-ixd-prototyp.jpg', alt:'Papírový prototyp z IxD', ratio:1.5, w:196,h:150, map:{l:22.9,t:5.8,r:-3}, cap:'papírový prototyp — IxD ✏️', capInside:true},
-        chips:[] },
-
-      { sem:'III', fp:'f-landscape', title:'JINAG → bakalářka 📕',
-        tags:['výzkum','service design'],
-        chips:[ {text:'JINAG → bakalářka 📕', map:{l:57.6,t:13.6,r:-1}} ] },
-
-      { sem:'III', lead:2, fp:'f-landscape', title:'Retrospektiva workshopu 🛠️',
-        tags:['facilitace'],
-        photo:{src:'img/retro.jpg', alt:'Retrospektiva studijního workshopu'},
-        chips:[ {text:'retrospektiva workshopu 🛠️', map:{l:23.9,t:21.8,r:1}},
-                {text:'pokračuje → Design cirkus 🎪'} ] },
-
-      { sem:'IV', feature:true, title:'Workshop s panem nejvyšším 🏛️',
-        tags:['facilitace','veřejná správa'],
-        photo:{src:'img/iv-tajemnicky.jpg', alt:'Workshop s tajemníky ministerstev', ratio:0.75, w:150,h:180, map:{l:51.4,t:72.9,r:2}},
-        chips:[ {text:'workshop s panem nejvyšším 🏛️', map:{l:63.2,t:76.7}},
-                {text:'5. 5. 2025', variant:'stamp', map:{l:73.3,t:85.1,r:-7}} ] },
-
-      { sem:'IV', title:'Podcast Design KANTÝNA — ZDW 🎙️',
-        tags:['veřejná správa'],
-        photo:{src:'img/iv-design-kantyna.jpg', alt:'Design kantýna podcast na Zlin Design Weeku', ratio:1.5, w:190,h:140, map:{l:42.5,t:74.5,r:-2}, cap:'Design KANTÝNA — ZDW 🎙️', capInside:true},
-        chips:[] },
-
-      { sem:'IV', fp:'f-landscape', title:'🎖️ Medaile Ministerstva vnitra',
-        tags:['veřejná správa'],
-        chips:[ {text:'🎖️ medaile Ministerstva vnitra', variant:'mark', map:{l:63.2,t:81.8}} ] },
-
-      { sem:'V', tag:'II–V', feature:true, title:'Učím — tři kurzy 🧑‍🏫',
-        tags:['facilitace','veřejná správa'],
-        photo:{src:'img/v-urednici.jpg', alt:'Workshop s úředníky veřejné správy', ratio:1.31, w:196,h:144, map:{l:75,t:6.2,r:-1.5}, cap:'učím úředníky veřejné správy 🧑‍🏫', capMap:{l:75.7,t:22.7}},
-        chips:[ {text:'poprvé učím — DM&L 👥', map:{l:20.8,t:79.1}},
-                {text:'poprvé učím sólo — Service Design Workshop 🧑‍🏫', map:{l:63.2,t:87.1}},
-                {text:'učím úředníky veřejné správy 🏛️'},
-                {text:'od facilitace lídrů k učení terénu 🎼', map:{l:76.9,t:32.9,r:-1}} ] },
-
-      { sem:'VI', fp:'f-landscape', title:'Design cirkus 🎪 — srpen 2026',
-        tags:['facilitace'],
-        photo:{src:'img/cerych.jpg', alt:'Design cirkus — srpen 2026'},
-        chips:[ {text:'Design cirkus — srpen 2026 🎪', map:{l:84.6,t:83.2,r:1}},
-                {text:'follow-up retrospektivy ze 3. semestru'} ] },
-
-      { sem:'?', fp:'f-landscape', title:'Etika v designu — výstupy 🧭', missing:true,
-        chips:[ {text:'doplnit: semestr + konkrétní výstup', variant:'dashed'} ] },
-
-      { sem:'VI', feature:true, title:'UX Monday — mluvím o tom, jak pracuju 🎤',
-        tags:['AI workflow'],
-        photo:{src:'img/vi-ux-monday.jpg', alt:'UX Monday talk', ratio:0.75, w:132,h:188, map:{l:89.2,t:27.8,r:2.5}, cap:'UX Monday 🎤', capInside:true},
-        chips:[ {text:'práci diktuju z kola 🚲', map:{l:83.9,t:67.1,r:-1.5}} ] }
-    ];
-
-    function panelHTML(includeMeta){
-      var html = ''
-      + '<div class="p-title-row"><h1 class="p-title">Naučil jsem se řemeslo.<br>Teď ho učím.</h1></div>'
-      + '<div class="p-sub-row"><p class="p-sub">Šest semestrů, šest území.<br>Cesta studiem Designu informačních služeb, 2023–2026.</p></div>';
-      if (includeMeta) html += ''
-      + '<div class="p-meta">'
-      +   '<div class="p-cell"><span class="p-k">AKTUALIZOVÁNO</span><span class="p-v">červen 2026</span></div>'
-      +   '<div class="p-cell"><span class="p-k">STUDIJNÍ PROGRAM</span><a class="p-v p-link" href="https://kisk.phil.muni.cz/" target="_blank" rel="noopener">DIS KISK portfolio ↗</a></div>'
-      +   '<div class="p-cell"><span class="p-k">AUTOR</span><span class="p-v">Erik Vaněk</span></div>'
-      + '</div>';
-      return html;
-    }
 
     // ---------- helpers ----------
     function el(tag, cls, text, styles){
@@ -362,53 +103,15 @@
       if (styles) for (var k in styles) n.style[k] = styles[k];
       return n;
     }
-    function pct(v){ return v + '%'; }
-    function rot(r){ return r ? ('rotate(' + r + 'deg)') : ''; }
+    // function stripEmoji(s){ return s.replace(/[^\w\sáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ&×—-]/g,'').trim().toLowerCase(); }
+    function stripEmoji(s){ return s }
+    function noEmoji(s){ return s}
+    // function noEmoji(s){ return s.replace(/[^\p{L}\p{N}\s.,:–—&()'→↗←-]/gu,'').replace(/\s+/g,' ').trim(); }
 
-    // ---------- renderer: MAPA (placements unchanged; initiatives drive content) ----------
-    function renderMap(){
-      var layer = document.getElementById('map-layer');
-      NUMERALS.forEach(function(d){ layer.appendChild(el('div','num',d.n,{left:pct(d.l),top:pct(d.t)})); });
-      YEARS.forEach(function(y){ layer.appendChild(el('div','year',y.t,{left:pct(y.l),top:pct(y.top)})); });
-      INITIATIVES.forEach(function(it){
-        var p = it.photo;
-        if (p && p.map){
-          var card = el('div','card','',{ left:pct(p.map.l), top:pct(p.map.t), width:p.w+'px', height:p.h+'px', transform:rot(p.map.r), padding:p.capInside?'7px 7px 22px':'7px' });
-          var img = document.createElement('img'); img.src=p.src; img.alt=p.alt||''; card.appendChild(img);
-          if (p.capInside && p.cap) card.appendChild(el('span','incap',p.cap));
-          layer.appendChild(card);
-          if (p.cap && !p.capInside && p.capMap) layer.appendChild(el('div','cap',p.cap,{left:pct(p.capMap.l),top:pct(p.capMap.t),transform:rot(p.capMap.r)}));
-        }
-        it.chips.forEach(function(c){
-          if (!c.map) return;
-          layer.appendChild(el('div','chip'+(c.variant?(' '+c.variant):''),c.text,{left:pct(c.map.l),top:pct(c.map.t),transform:rot(c.map.r)}));
-        });
-      });
-    }
-
-    // ---------- renderer: MŘÍŽKA — one tile per initiative ----------
-    // "hotness" = Erik's impact ranking, provisional order below — reorder freely
-    var HOT = [
-      'UX Monday — mluvím o tom, jak pracuju 🎤',
-      '🎖️ Medaile Ministerstva vnitra',
-      'Workshop s panem nejvyšším 🏛️',
-      'Učím — tři kurzy 🧑‍🏫',
-      'Fléda — service design 🛠️',
-      'Podcast Design KANTÝNA — ZDW 🎙️',
-      'Hackathon — testování s Adamem 🎯',
-      'Studie inovativních týmů ve státní správě 📊',
-      'Design cirkus 🎪 — srpen 2026',
-      'Přihláška na KISK ✍️',
-      'JINAG → bakalářka 📕',
-      'Papírové prototypy — IxD ✏️',
-      'Etika v designu — výstupy 🧭',
-      'Retrospektiva workshopu 🛠️'
-    ];
-    function stripEmoji(s){ return s.replace(/[^\w\sáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ&×—-]/g,'').trim().toLowerCase(); }
-    // snap each tile to one of 4 grid footprints (see .tile CSS): feature → 2×2,
+    // snap each tile to one of 4 grid footprints: explicit fp wins, feature → 2×2,
     // tall photo → 1×2, wide photo → 2×1, otherwise (text + near-square) → 1×1
     function footprint(it){
-      if (it.fp)      return ' ' + it.fp;   // explicit override (hand-authored opening block)
+      if (it.fp)      return ' ' + it.fp;
       if (it.feature) return ' f-big';
       if (!it.photo)  return '';
       var r = it.photo.ratio || 1;
@@ -416,19 +119,36 @@
       if (r > 1.25) return ' f-landscape';
       return '';
     }
+
+    // one initiative → one tile (thematic tags + emoji-stripped title on a stamp; chips kept but hidden).
+    // A tile with it.link becomes an <a> so the whole card is clickable.
     function makeTile(it, fpOverride){
-      var tile, fp = (fpOverride != null) ? (' ' + fpOverride) : footprint(it);
+      var fp = (fpOverride != null) ? (' ' + fpOverride) : footprint(it);
+      var tag = it.link ? 'a' : 'div';
+      var tile;
       if (it.photo){
-        tile = el('div','tile'+fp);
+        tile = el(tag,'tile'+fp);
         var img = document.createElement('img'); img.src=it.photo.src; img.alt=it.photo.alt||''; tile.appendChild(img);
       } else {
-        tile = el('div','tile text'+(it.missing?' missing':'')+fp);
+        tile = el(tag,'tile text'+(it.missing?' missing':'')+fp);
+      }
+      var isExt = it.link && /^https?:\/\//.test(it.link);   // external URL → opens in a new tab
+      if (it.link){
+        tile.setAttribute('href', it.link);
+        if (isExt){ tile.setAttribute('target','_blank'); tile.setAttribute('rel','noopener'); }
       }
       var tagText = it.tag ? (/^\d/.test(it.tag) ? it.tag : 'semestr '+it.tag) : 'semestr '+it.sem;
       tile.appendChild(el('span','sem-tag', tagText, {background: it.color || SEM_COLOR[it.sem]}));
-      var stamp = el('div','tile-stamp');
-      stamp.appendChild(el('div','tile-title', noEmoji(it.title)));
-      var chips = it.chips.filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
+      var stamp = el('div','tile-stamp ext');
+      if (it.tags && it.tags.length){
+        var tg = el('div','tile-tags');
+        it.tags.forEach(function(t){ tg.appendChild(el('span','tt', t)); });
+        stamp.appendChild(tg);
+      }
+      var titleEl = el('div','tile-title', noEmoji(it.title));
+      if (isExt) titleEl.appendChild(el('span','tile-ext', ' 🔗'));   // signals the card leads off-site
+      stamp.appendChild(titleEl);
+      var chips = (it.chips || []).filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
       if (chips.length){
         var box = el('div','tile-chips');
         chips.forEach(function(c){ box.appendChild(el('span','tc'+(c.variant?(' '+c.variant):''), c.text)); });
@@ -437,32 +157,38 @@
       tile.appendChild(stamp);
       return tile;
     }
-    // shared ordering for both wall modes (semestr default; "hot" = impact ranking)
-    function orderedSeq(order){
-      var start = INITIATIVES.filter(function(i){ return i.pin === 'start'; });
-      var end   = INITIATIVES.filter(function(i){ return i.pin === 'end'; });
-      var lead  = INITIATIVES.filter(function(i){ return i.lead; }).sort(function(a,b){ return a.lead - b.lead; });
-      var mid   = INITIATIVES.filter(function(i){ return !i.pin && !i.lead; });
-      if (order === 'hot'){
-        mid.sort(function(a,b){
-          var ia = HOT.indexOf(a.title), ib = HOT.indexOf(b.title);
-          return (ia<0?HOT.length:ia) - (ib<0?HOT.length:ib);
-        });
-      }
-      return start.concat(lead).concat(mid).concat(end);
-    }
     function makeHero(){
-      var hero = el('div','tile hero f-profile');     // profile · 2.5×2 — the ONE non-standard tile
+      // profile · 2.5×2 — the ONE non-standard tile; entry point into the reveal.js study deck.
+      // NOTE: /dis-kisk/portfolio/ is not built yet (see plan.md D12) — this link 404s until it is.
+      var hero = el('a','tile hero f-profile');
+      hero.setAttribute('href', '/dis-kisk/portfolio/');
       hero.appendChild(el('h1','h-title','Naučil jsem se řemeslo. Teď ho učím.'));
       hero.appendChild(el('p','h-sub','Šest semestrů, šest území. Cesta studiem Designu informačních služeb, 2023–2026.'));
       return hero;
     }
+    function makeQuoteTile(text, ref){
+      var tile = el('div','tile quote-tile f-landscape');   // research voices are 2:1
+      tile.appendChild(el('p','qt-text', text));
+      tile.appendChild(el('div','qt-ref', '— ' + ref));
+      return tile;
+    }
 
-    // ---- band packing helpers ----
+    // reading order: pinned start → lead tiles (opening) → middle (array order) → pinned end
+    function orderedSeq(){
+      var start = INITIATIVES.filter(function(i){ return i.pin === 'start'; });
+      var end   = INITIATIVES.filter(function(i){ return i.pin === 'end'; });
+      var lead  = INITIATIVES.filter(function(i){ return i.lead; }).sort(function(a,b){ return a.lead - b.lead; });
+      var mid   = INITIATIVES.filter(function(i){ return !i.pin && !i.lead; });
+      return start.concat(lead).concat(mid).concat(end);
+    }
+
+    // ---- entry kinds + band packing ----
+    function isQuote(it){ return it.quote != null; }                           // standalone research-voice card
+    function makeAny(it){ return isQuote(it) ? makeQuoteTile(it.quote, it.ref) : makeTile(it); }
+    function tallOf(it){ return isQuote(it) ? false : isTallFp(footprint(it)); } // quote tiles are 2×1 (1 unit tall)
     function pick(arr, pred){ for (var i=0;i<arr.length;i++){ if (pred(arr[i])) return arr.splice(i,1)[0]; } return null; }
     function isTallFp(fp){ return fp === ' f-big' || fp === ' f-portrait'; }   // 2 units tall
-    // group an ordered list of {el, tall} into card-tall columns: tall tiles stand alone;
-    // 1-unit tiles pair up into a vertical .stack (a lone trailing short keeps its own short column)
+    // group {el, tall} into card-tall columns: tall tiles stand alone; 1-unit tiles pair into a .stack
     function packColumns(descs){
       var cols = [], pend = null;
       function flush(){ if (pend){ var s = el('div','stack'); s.appendChild(pend); cols.push(s); pend = null; } }
@@ -483,150 +209,45 @@
     }
 
     // Opening composition — centred flex bands:
-    //   row 1 — [Erik 2023 · 2×2] [profile · 2.5×2, centre] [Hackathon / Retro · 2×1 stacked]
-    //   row 2 — three standard cards
-    //   rest  — natural footprints, paired into card-tall columns, 3 per band
-    function renderWall(order){
+    //   row 1 — [Erik 2023 · 2×2] [profile · 2.5×2, centre] [Hackathon / Když nevíš · 2×1 stacked]
+    //   row 2 — three standard project cards (quotes are skipped here — they can't be 2×2)
+    //   rest  — projects + standalone research-voice quote cards, in data order, paired into columns, 3 per band
+    function renderWall(){
       var wall = document.getElementById('bau-grid');
       wall.innerHTML = '';
-      var seq  = orderedSeq(order);
+      var seq  = orderedSeq();
       var erik = pick(seq, function(i){ return i.pin === 'start'; });
-      var hack = pick(seq, function(i){ return /Hackathon/.test(i.title); });
-      var retro= pick(seq, function(i){ return /Retrospektiva/.test(i.title); });
+      var hack = pick(seq, function(i){ return i.title && /Hackathon/.test(i.title); });
+      var second = pick(seq, function(i){ return i.title && /zeptej/.test(i.title); });  // "Když nevíš, tak se zeptej" — second tile in the opening stack
 
       var b1 = el('div','band');
       if (erik) b1.appendChild(makeTile(erik, 'f-big'));
       b1.appendChild(makeHero());
       var stack = el('div','stack');
-      if (hack)  stack.appendChild(makeTile(hack,  'f-landscape'));
-      if (retro) stack.appendChild(makeTile(retro, 'f-landscape'));
+      if (hack)   stack.appendChild(makeTile(hack,   'f-landscape'));
+      if (second) stack.appendChild(makeTile(second, 'f-landscape'));
       b1.appendChild(stack);
       wall.appendChild(b1);
 
-      var row2 = seq.splice(0, 3);
+      // row 2 — first three PROJECT cards (skip quote entries so none renders as a 2×2)
+      var row2 = [];
+      while (row2.length < 3){
+        var p = pick(seq, function(i){ return !isQuote(i); });
+        if (!p) break;
+        row2.push(p);
+      }
       var b2 = el('div','band');
       row2.forEach(function(it){ b2.appendChild(makeTile(it, 'f-big')); });
       wall.appendChild(b2);
 
+      // rest — every remaining entry (projects + standalone quotes) rendered by kind, in order
       emitBands(wall, packColumns(seq.map(function(it){
-        return { el: makeTile(it), tall: isTallFp(footprint(it)) };
+        return { el: makeAny(it), tall: tallOf(it) };
       })), 3);
     }
 
-    // ---------- renderer: MŘÍŽKA ROZŠÍŘENÁ — branch of makeTile (thematic tags + research voices) ----------
-    // Project cards: makeTile + a thematic tags row on a solid stamp. Each research quote (it.quotes)
-    // becomes its OWN tile via makeQuoteTile — quote on top, project reference below, sized 1×1/1×2 by
-    // length, no tags. renderWallExt mirrors renderWall's composition (start → headline → lead+mid+end).
-    function makeTileExt(it, fpOverride){
-      var fp = (fpOverride != null) ? (' ' + fpOverride) : footprint(it);
-      var tile;
-      if (it.photo){
-        tile = el('div','tile'+fp);
-        var img = document.createElement('img'); img.src=it.photo.src; img.alt=it.photo.alt||''; tile.appendChild(img);
-      } else {
-        tile = el('div','tile text'+(it.missing?' missing':'')+fp);
-      }
-      var tagText = it.tag ? (/^\d/.test(it.tag) ? it.tag : 'semestr '+it.tag) : 'semestr '+it.sem;
-      tile.appendChild(el('span','sem-tag', tagText, {background: it.color || SEM_COLOR[it.sem]}));
-      var stamp = el('div','tile-stamp ext');
-      if (it.tags && it.tags.length){
-        var tg = el('div','tile-tags');
-        it.tags.forEach(function(t){ tg.appendChild(el('span','tt', t)); });
-        stamp.appendChild(tg);
-      }
-      stamp.appendChild(el('div','tile-title', noEmoji(it.title)));
-      var chips = it.chips.filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
-      if (chips.length){
-        var box = el('div','tile-chips');
-        chips.forEach(function(c){ box.appendChild(el('span','tc'+(c.variant?(' '+c.variant):''), c.text)); });
-        stamp.appendChild(box);
-      }
-      tile.appendChild(stamp);
-      return tile;
-    }
-    function noEmoji(s){ return s.replace(/[^\p{L}\p{N}\s.,:–—&()'→↗←-]/gu,'').replace(/\s+/g,' ').trim(); }
-    function makeQuoteTile(text, ref){
-      var tile = el('div','tile quote-tile f-landscape');   // quotes are 2:1 (Erik 2026-06-08: no 1×1, prefer 2:1)
-      tile.appendChild(el('p','qt-text', text));
-      tile.appendChild(el('div','qt-ref', '— ' + ref));
-      return tile;
-    }
-    function renderWallExt(order){
-      var wall = document.getElementById('bau-grid');
-      wall.innerHTML = '';
-      var seq  = orderedSeq(order);
-      var erik = pick(seq, function(i){ return i.pin === 'start'; });
-      var hack = pick(seq, function(i){ return /Hackathon/.test(i.title); });
-      var retro= pick(seq, function(i){ return /Retrospektiva/.test(i.title); });
-
-      var b1 = el('div','band');
-      if (erik) b1.appendChild(makeTileExt(erik, 'f-big'));
-      b1.appendChild(makeHero());
-      var stack = el('div','stack');
-      if (hack)  stack.appendChild(makeTileExt(hack,  'f-landscape'));
-      if (retro) stack.appendChild(makeTileExt(retro, 'f-landscape'));
-      b1.appendChild(stack);
-      wall.appendChild(b1);
-
-      var row2 = seq.splice(0, 3);
-      var b2 = el('div','band');
-      row2.forEach(function(it){ b2.appendChild(makeTileExt(it, 'f-big')); });
-      wall.appendChild(b2);
-
-      // rest — project tiles with their research-voice quote tiles interleaved (quotes are short 2×1)
-      var descs = [];
-      seq.forEach(function(it){
-        descs.push({ el: makeTileExt(it), tall: isTallFp(footprint(it)) });
-        if (it.quotes && it.quotes.length){
-          var ref = noEmoji(it.title);
-          it.quotes.forEach(function(q){ descs.push({ el: makeQuoteTile(q, ref), tall: false }); });
-        }
-      });
-      emitBands(wall, packColumns(descs), 3);
-    }
-
-    // ---------- mode + ordering switching, both persisted ----------
-    var KEY = 'disKiskCestaMode', KEY_ORDER = 'disKiskCestaOrder';
-    var sel = document.getElementById('mode-select');
-    var selOrder = document.getElementById('order-select');
-    var orderLabel = document.getElementById('order-label');
-    var floatPanel = document.getElementById('panel');
-    var currentMode = 'map', curOrder = 'sem';
-    function isWall(m){ return m === 'bau' || m === 'ext'; }                       // both wall modes share #mode-bau
-    function paintWall(){ (currentMode === 'ext' ? renderWallExt : renderWall)(curOrder); }
-    function setMode(m){
-      if (m !== 'map' && !isWall(m)) m = 'map';
-      currentMode = m;
-      document.getElementById('mode-map').hidden = (m !== 'map');
-      document.getElementById('mode-bau').hidden = !isWall(m);
-      floatPanel.style.display = (m === 'map') ? '' : 'none';
-      // ordering only applies to the wall modes
-      selOrder.style.display = orderLabel.style.display = isWall(m) ? '' : 'none';
-      sel.value = m;
-      if (isWall(m)) paintWall();
-      try { localStorage.setItem(KEY, m); } catch(e){}
-    }
-    function setOrder(o){
-      if (o !== 'sem' && o !== 'hot') o = 'sem';
-      curOrder = o;
-      selOrder.value = o;
-      if (isWall(currentMode)) paintWall();
-      try { localStorage.setItem(KEY_ORDER, o); } catch(e){}
-    }
-    sel.addEventListener('change', function(e){ setMode(e.target.value); });
-    selOrder.addEventListener('change', function(e){ setOrder(e.target.value); });
-
     // ---------- boot ----------
-    floatPanel.innerHTML = panelHTML(true);
-    renderMap();
-    var savedOrder = 'sem', saved = 'map';
-    try { savedOrder = localStorage.getItem(KEY_ORDER) || 'sem'; saved = localStorage.getItem(KEY) || 'map'; } catch(e){}
-    setOrder(savedOrder);
-    setMode(saved);
-
-    function reveal(){ setTimeout(function(){ floatPanel.classList.add('show'); }, 1500); }
-    if (document.readyState === 'complete') reveal();
-    else window.addEventListener('load', reveal);
+    renderWall();
   })();
   </script>
 </body>
