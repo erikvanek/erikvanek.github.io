@@ -140,6 +140,15 @@ Erik's voice is consistent across all five semesters. Match it when generating o
 
 **The story arc is LOCKED (2026-06, supersedes the three older candidates):** the cile-VI journey — *clumsy practitioner with engineering foundation and methodology gaps (2023) → confident designer-orchestrator who teaches, works publicly, and dictates work from a bike (2026)*. Deck structure and beats: see [`portfolio-shaping/plan.md`](./portfolio-shaping/plan.md) §1.
 
+**Portfolio-craft principles (from Dive.club/Ridd — full reasoning + sources in [`portfolio-shaping/portfolio-inspiration.md`](./portfolio-shaping/portfolio-inspiration.md)). Apply these whenever writing copy or structuring the experience:**
+
+- **Single narrative; legacy site is the appendix.** The journey walkthrough is the hero; project/legacy pages are opt-in depth, never the primary way work is consumed. *"Project pages fragment your story."* (Reinforces §6 confidence-arc + the new-URL strategy.)
+- **Hook, not a label.** Every title and caption opens a curiosity gap — never names a category. Test each one: would it make someone want to click?
+- **Recipe-video order.** Lead with the strongest *outcome* (Adam won the directorship; the MoI medal; ministry secretaries in the room); reveal process on the depth link. Never open on sticky notes / methodology.
+- **Outcome-first blurbs.** Each beat leads with a concrete third-party result (a win, a number, a callback), not aesthetic description.
+- **Selectivity reads as seniority.** Curate hard — this is the same instinct as the bottom-up/opt-in rule; fewer, stronger beats beat a complete grid.
+- **Generalist = prism, not unfocused.** The teaches + designs + public-services range is presented as coherence (the rebuttal if anyone reads it as scattered).
+
 ---
 
 ## 7. Visual & design direction
@@ -250,6 +259,7 @@ Working notebook for shaping the portfolio. Read these when relevant:
 | [`plan.md`](./portfolio-shaping/plan.md) | **ACTIVE master plan to the state exam** — locked decisions, decision queue, schedule, parking lot. Read first. |
 | [`coherent-brief.md`](./portfolio-shaping/coherent-brief.md) | Spec synthesis: mandatory content, archive format, exam structure, voice rules |
 | [`site-design-direction.md`](./portfolio-shaping/site-design-direction.md) | Lego-figure / maturity-curve site concept (v0.2, post-exam build) |
+| [`portfolio-inspiration.md`](./portfolio-shaping/portfolio-inspiration.md) | External portfolio wisdom (Dive.club/Ridd + saved refs) aimed at this journey. Source of the §6 portfolio-craft principles; its §5 is a working checklist. |
 | [`braindumps/`](./portfolio-shaping/braindumps/) | Raw desktop-chat history (ctx/qs/crx, ordered by number) — source material behind the plan |
 
 > Note: `design-system.md`, `paper-session-state.md`, `demo-story.md` referenced in earlier versions of this file are **not present** in the folder — don't go looking. Palette/format facts live in `coherent-brief.md` §7 and `site-design-direction.md`.

@@ -7,7 +7,6 @@ hideNavigation: true
 tags: ["dis", "semestr2"]
 permalink: /{{page.fileSlug}}/
 ---
-
 Je rok 2030. Procházíte automatickými dveřmi do impozantní budovy Ministerstva práce a sociálních věcí. Nad hlavou se vznáší holografické logo MPSV. Míjíte kavárnu "Mezi řádky", chráněnou dílnu, kde si právě dává kávu zaměstnankyně se svým virtuálním asistentem. Připomíná jí blížící se hovor s kolegy, kteří vyvíjejí novou aplikaci pro péči o seniory. Žena se usmívá, dopíjí kávu a přesouvá se do relaxační zóny, aby se připojila ke společné virtuální realitě.
 
 Vcházíte do své kanceláře. Chytrá stěna vás vítá a automaticky přepíná na rozpracovaný projekt. Gestem rozhýbete myšlenkovou mapu shrnující včerejší brainstorming vašeho globálně rozmístěného týmu. Zapracováváte postřehy kolegů, zatímco umělá inteligence analyzuje dopad vašich návrhů na cílovou skupinu. Schvalujete její doporučení.

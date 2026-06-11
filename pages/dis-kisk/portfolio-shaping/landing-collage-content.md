@@ -37,6 +37,7 @@ Legend: `[foto]` image asset · `[citát]` quote/claim · `[klíč]` keyword/top
 2. ⭐🔍 `[foto/citát]` **„Workshop s panem nejvyšším"** — Erikova vlastní nálepka; tajemnický workshop s tajemníky poloviny českých ministerstev, 5. 5. 2025. ⚠️ ověřit, kdo přesně je „pan nejvyšší" (nejvyšší státní tajemník?).
 3. `[klíč]` **Poprvé učím sólo** — Service Design Workshop na KISKu.
 4. `[artefakt]` **Razítko data 5. 5. 2025** — nejvyšší stakes dne; datum jako grafický artefakt.
+5. ⭐ `[foto/klíč]` **Podcast Design KANTÝNA (Erik, 2026-06-07: „should definitely be part of the content")** — host panelu o designu inovací ve veřejném sektoru na ZDW (květen 2025, s Lukášem Janem Němcem, moderoval David Severa); nahráno a publikováno jako epizoda podcastu. Třetí strana zve Erika mluvit o jeho specializaci — **začíná public-voice vlákno, které vyplatí UX Monday přesně o rok později (květen 2025 → květen 2026)**. Asset ✅ v repu: `img/zdw-25/rozprava.png` (rozprava s Lukášem). Zdroj: `semestr-4/ucast-na-konferencich.md`. 🔍 přímý link na epizodu (Spotify/Apple) — Erik dodá. Pozn.: IV má teď 5 kandidátů na 3–4 místa — Erik škrtá.
 
 ## V — podzim 2025 (dirigent / integrace)
 
@@ -52,6 +53,14 @@ Legend: `[foto]` image asset · `[citát]` quote/claim · `[klíč]` keyword/top
 3. `[artefakt]` **Topologie LLM workflow** — existující SVG diagram z `cile-VI.md` — JEDINÝ asset, který už v repu je; web-native, rovnou použitelný.
 4. `[artefakt]` **Odevzdaná bakalářka (JINAG)** — moment uploadu do IS MUNI / obálka práce. Picto: káva v ruce.
 5. ⭐ `[artefakt]` **Návrat motiváku — full circle (Erik, 2026-06-07).** Stejný výřez GPT-3 dopisu jako v území I se objeví znovu na úplném konci příběhu: poprvé jako přiznání (model to napsal za mě), podruhé jako důkaz (modely řídím jako nástroj řemesla). Pozn.: VI má teď 5 kandidátů na 3–4 místa — full circle je zamčený, Erik škrtá jinde.
+6. 🔜 `[initiativa]` **Design cirkus (Erik, 2026-06-07)** — session, kterou Erik chystá na **srpen 2026**; follow-up po retrospektivě, kterou vedl po 3. semestru. Vlákno facilitace/komunity, které pokračuje i po studiu. Patří do VI jako "co dál".
+
+## Iniciativy bez semestru / napříč (Erik, 2026-06-07)
+
+- ⭐ **Erik 2023 (pre-study)** — vstupní stav: inženýrský základ, díry v metodologii, čerstvě po vyhazovu z Infarmu, motivák psaný GPT-3. Bookend "start".
+- ⭐ **Erik 2026 (post-study)** — výstupní stav: designér-orchestrátor, učí tři kurzy, diktuje z kola, mluví na UX Monday. Bookend "end". (Ty dva rámují celou zeď/cestu.)
+- ⭐ **Učení — kompilace tří kurzů (Erik, 2026-06-07: "compile teaching into one card")** — DM&L (S2, s Matějem Kalinským) + Service Design Workshop sólo (S4) + výuka úředníků veřejné správy (S5). Jedna karta, ne tři. Teaching thread je load-bearing (plan §1.9).
+- ⚠️🔍 **Etika v designu — výstupy (Erik, 2026-06-07: "add results from the class on ethics in design")** — výstupy z předmětu o etice v designu. ⚠️ doplnit semestr + konkrétní výstup; napojení na "No křoví. Ever." mindset (braindumps ctx-16/qs-17) = concrete refusal, ne abstraktní integrita. Zatím dashed placeholder na zdi.
 
 ---
 
@@ -71,8 +80,8 @@ Erik dodal 5 obrázků (2026-06-07), staženo do `img/`:
 
 | Status | Items |
 |---|---|
-| ✅ v repu | topologie LLM workflow (`cile-VI.md` SVG) + 7 fotek výše |
-| 🔍 asset hunt (Erik) | **motivák GPT-3 (load-bearing — otvírá I a zavírá VI; IS MUNI přihláška / vlastní archiv?)**, retrospektiva workshopu (S3, stále chybí — placeholder na canvasu), medaile (foto/sken) |
+| ✅ v repu | topologie LLM workflow (`cile-VI.md` SVG) + 7 fotek výše + **`img/zdw-25/rozprava.png`** (panel Design KANTÝNA s Lukášem, S4) |
+| 🔍 asset hunt (Erik) | **motivák GPT-3 (load-bearing — otvírá I a zavírá VI; IS MUNI přihláška / vlastní archiv?)**, retrospektiva workshopu (S3, stále chybí — placeholder na canvasu), medaile (foto/sken), přímý link na epizodu Design KANTÝNA |
 | ⚠️ verify | název+datum medaile · „pan nejvyšší" identita · semestr prepenitenciárního projektu · znění citátů S2/S5 (drafty, ne Erikova slova) · datum report-cover (listopad 2024 = spíš S3 timeframe, ale Erik chce v S2 — potvrdit) |
 
 ## Working notes

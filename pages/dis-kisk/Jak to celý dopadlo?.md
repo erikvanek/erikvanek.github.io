@@ -1,0 +1,2 @@
+> A vlastně si až říkám že by pro mě bylo zajímavý si stanovit nějaký _metacíl_, který by se zabýval prací s cíli.
+- tak to se mi úplně nepovedlo – rozhodně jsem se hodně zlepšil v tom jak třeba vypadá nějaký úvodní brief projektu, do kterého se pouštím apod. ale dlouhodobě sledovat a případně upravovat nějaký konkrétní, ideálně měřitelný, cíle se mi zatím stále nedaří

@@ -6,7 +6,7 @@ hideNavigation: true
 tags: ["dis", "semestr1"]
 permalink: /{{page.fileSlug}}/
 ---
-Tohle bylo prostě a jednoduše skvělý. Petra Petráková zaslouží neskutečný kudos za poskládání obsahu, který byl krásně a vstřícně napsaný, obsahově nacpaný a zároveň člověk mohl jít jak po povrchu tak i do hloubky dle vlastních potřeb.
+Tohle byl prostě a jednoduše skvělý kurz. Petra Petráková zaslouží neskutečný kudos za poskládání obsahu, který byl krásně a vstřícně napsaný, obsahově nesmírně bohatý a zároveň člověk mohl jít jak po povrchu tak i do hloubky dle vlastních potřeb.
 
 Spousta témat pro mě vlastně už byla nějakým způsobem známá a nějak jsem je měl ošahané. Když si je ale člověk procházel v kondenzovanější a ucelenější podobě tak tam šly nacházet velice zajímavé provazby mezi jednotlivými koncepty, nástroji nebo technikami. Napadá mě třeba nenásilná komunikace vs. vyjednávání vs. psychologické bezpečí. Každý koncept je sám o sobě dobře definovaný a sám o sobě obstojí. Zároveň se vzájemně rozvíjí, ovlivňují a hlubší znalost jednoho pomůže při uchopování druhého.
 
