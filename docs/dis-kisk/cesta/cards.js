@@ -32,8 +32,7 @@ window.INITIATIVES = [
     link: '/dis-kisk/erik-2023/',
     photo: { src: 'img/i-me-melon.jpeg', alt: 'Erik v roce 2023', ratio: 0.75 },
     chips: [{ text: 'inženýrský základ, díry v metodologii' },
-    { text: 'čerstvě po vyhazovu z Infarmu 🌱' },
-    { text: 'motivák za mě napsal GPT-3 ✍️' }]
+    { text: 'čerstvě po vyhazovu z Infarmu 🌱' }]
   },
 
   {

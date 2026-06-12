@@ -1,0 +1,248 @@
+presentation:
+  title: &title "Naučil jsem se řemeslo. Teď ho učím."
+  date: &date 2026-06-15
+  event: &event Státní závěrečná zkouška DIS KISK
+  venue: FF MUNI, Brno
+  speaker: &speaker Erik Vaněk
+  duration: 20
+  language: cs
+  layout: presentation-wizard.njk
+  permalink: /dis-kisk/portfolio/
+  eleventyExcludeFromCollections: true
+  description: &description "Cesta studiem Designu informačních služeb, 2023-2026."
+
+# ============================================================================
+# QUIRK OF THIS DECK (vs. UX Monday): this is NOT a bullet-point presentation.
+# The exam instruction is "walk the commission through the web portfolio" -
+# so each slide is a CONTEXTUAL WINDOW + REDIRECTOR: a short claim that frames
+# where we are in the story, plus big outbound links (portals) to the live
+# site entries. Erik jumps out (target=_blank), shows the real page, comes
+# back. Speaker notes carry the spoken narrative (source: story.md).
+#
+# Layout types used in this file:
+#   title        - opening slide, big title + subtitle + presenter info
+#   portal       - THE workhorse here: kicker (krůček label) + heading +
+#                  1-2 sentence claim + links: [{label, href}] rendered as
+#                  big outbound links opening in a new tab
+#   stats        - row of big numbers: stats: [{num, label}] (placeholders XY
+#                  until Erik supplies real counts)
+#   statement    - single big emphasis statement
+#   section-break - major section divider
+#
+# No styling pass yet - classes (.layout-portal, .portals, .layout-stats,
+# .stats) are unstyled hooks for later.
+# ============================================================================
+
+slides:
+  # ─── TITLE ───────────────────────────────────────────────────────────────
+
+  - heading: *title
+    subtitle: "Cesta studiem Designu informačních služeb, 2023-2026"
+    layout: title
+    speaker: *speaker
+    event: *event
+    date: *date
+    speaker_notes: |
+      Nadechnout. Poděkovat komisi. Jedna věta o formátu: "Moje portfolio je
+      web - tahle prezentace je jen mapa, kterou vás jím provedu. Většinu času
+      strávíme přímo na stránkách."
+
+  # ─── COLD OPEN - TEĎ (květen 2026) ──────────────────────────────────────
+
+  - heading: "Květen 2026"
+    layout: portal
+    kicker: "Teď"
+    claim: |
+      UX Monday v Praze - největší designérský meetup v zemi. 45 minut o tom,
+      jak pracuju. Připravené diktováním do telefonu při chůzi po městě.
+    links:
+      - label: "Přednáška: The process isn't dead. It's just different."
+        href: /ux-monday-26
+      - label: "Reflexe 6. semestru - jak ten workflow vypadá"
+        href: /dis-kisk/cile-VI/
+    speaker_notes: |
+      Cold open - do 8 vteřin musí být jasné, kde příběh KONČÍ. "Aby bylo
+      jasné, jak nesamozřejmá ta věta je, musím to přetočit o tři roky
+      zpátky." Tady ještě neodbíhat na web - jen ukázat, že odkazy existují.
+
+  # ─── INTRO - ČÍSLA ──────────────────────────────────────────────────────
+
+  - heading: "Tři roky v číslech"
+    layout: stats
+    stats:
+      - num: "XY"
+        label: "absolvovaných předmětů"
+      - num: "3"
+        label: "odučené kurzy"
+      - num: "XY"
+        label: "klientských projektů"
+    speaker_notes: |
+      PLACEHOLDERY - Erik doplní reálná čísla (XY předmětů, XY klientských
+      projektů; 3 kurzy jsou jisté). Rychlý slide, neumělecký - jen rozsah.
+
+  # ─── REWIND - ERIK 2023 ─────────────────────────────────────────────────
+
+  - heading: "Rewind: Erik 2023"
+    layout: portal
+    kicker: "O tři roky dřív"
+    claim: |
+      Spíš inženýr než designér. Skoro deset let v softwaru, čerstvý vyhazov
+      z Infarmu, praxe po citu - mačkám tlačítka a koukám, co zabere.
+    links:
+      - label: "Erik 2023 - neohrabaný praktik"
+        href: /dis-kisk/erik-2023/
+      - label: "Přihláška - neredigovaná, i s překlepy"
+        href: /dis-kisk/prihlaska/
+    speaker_notes: |
+      Inciting incident: konec v Infarmu = strčení z komfortní zóny.Otázka, kterou deck
+      odpovídá: jak se z tohohle člověka stane ten z prvního slidu?
+      Po krůčcích.
+
+  # ─── HUB - CELÁ MAPA ────────────────────────────────────────────────────
+
+  - heading: "Šest semestrů na jedné zdi"
+    layout: portal
+    kicker: "Mapa cesty"
+    claim: |
+      Všechno, co dnes ukážu, žije na jedné stránce - zdi z dlaždic.
+      Sem se budeme vracet.
+    links:
+      - label: "Cesta studiem - celá zeď"
+        href: /dis-kisk/cesta/
+    speaker_notes: |
+      Otevřít zeď NAŽIVO a nechat ji chvíli mluvit - tohle je domovská
+      obrazovka celé prezentace. Vysvětlit mechaniku: dlaždice = projekt,
+      proklik = celý článek. Pak zpátky do decku pro první krůček.
+
+  # ─── KRŮČEK 1 - PRAKTIK (S1) ────────────────────────────────────────────
+
+  - heading: "Malá intervence, otevřené dveře"
+    layout: portal
+    kicker: "Krůček 1 · 1. semestr"
+    claim: |
+      Na usability testování při hackathonu jsem si přizval kamaráda Adama -
+      učitele. O pár měsíců později kandidoval na ředitele školy. A vyhrál.
+    links:
+      - label: "Hackathon a testování s Adamem"
+        href: /dis-kisk/hackaton-I/
+    speaker_notes: |
+      Outcome first, proces až na webu. "Nepřivlastňuju si to. Ale byla to
+      první ochutnávka toho, co na designu miluju: malá intervence, kterou
+      někomu otevřete dveře - a ty dveře zůstávají otevřené dávno po konci
+      projektu." Role: Praktik.
+
+  # ─── KRŮČEK 2 - ŘEMESLNÍK (S3) ──────────────────────────────────────────
+
+  - heading: "Studený e-mail → CEO volá zpět"
+    layout: portal
+    kicker: "Krůček 2 · 3. semestr"
+    claim: |
+      Chtěl jsem dělat service design pro Flédu, tak jsem odhadl formát
+      firemního e-mailu a napsal. Audit přívětivosti se stovkami odpovědí -
+      a změny, které v klubu bit by bit reálně přibývají.
+    links:
+      - label: "Fléda - audit přívětivosti"
+        href: /dis-kisk/fleda-audit/
+      - label: "Studie použitelnosti průvodkyně Jarmilky"
+        href: /dis-kisk/aby-to-mamka-nechtela-vypnout/
+    speaker_notes: |
+      Fléda nese živou váhu (hustle + výsledky + citace návštěvníků - čísla
+      z dotazníku jsou OK, interní problémy klubu nikdy). Jarmilka jen jako
+      pointer: "souběžně usability studie, ze které se stala bakalářka -
+      tu tady jen ukazuju, je to samostatná kapitola." Role: Řemeslník.
+
+  # ─── KRŮČEK 3 - VEŘEJNÁ SPRÁVA (S2→S4) ─────────────────────────────────
+
+  - heading: "Výzkum, který nezůstal v šuplíku"
+    layout: portal
+    kicker: "Krůček 3 · od 2. semestru"
+    claim: |
+      Studie inovativních týmů ve státní správě se mnou putovala dva roky
+      a otevírala dveře: workshop s tajemníky poloviny českých ministerstev,
+      medaile Ministerstva vnitra, podcast na Zlín Design Weeku.
+    links:
+      - label: "Studie inovativních týmů ve státní správě"
+        href: /dis-kisk/ostrovy-pozitivni-inovace/
+      - label: "Workshop s panem nejvyšším"
+        href: /dis-kisk/praxe-IV/
+      - label: "Medaile MV - Sousedské dětské skupiny"
+        href: /dis-kisk/sousedske-detske-skupiny/
+      - label: "Podcast Design KANTÝNA - ZDW"
+        href: /dis-kisk/ucast-na-konferencich/
+    speaker_notes: |
+      Nejdelší oblouk - držet tempo, vybrat NAŽIVO max 2 z těch 4 odkazů
+      (tajemnický workshop + medaile), zbytek jen pojmenovat. Medaile =
+      "Úřednický čin roku 2024" (znění ověřit). KANTÝNA = první veřejný
+      hlas, rok před UX Monday. Role: Výzkumník → Distingovaný.
+
+  # ─── KRŮČEK 3b - UČENÍ (S2→S5) ──────────────────────────────────────────
+
+  - heading: "Od facilitace lídrů k učení terénu"
+    layout: portal
+    kicker: "Krůček 3 · pokračování"
+    claim: |
+      A celý ten oblouk vyústil v učení - taky po krůčcích: nejdřív tutor,
+      pak sólo kurz pro studenty KISKu, nakonec to nejtěžší - designové
+      myšlení pro úředníky a úřednice přímo v terénu.
+    links:
+      - label: "Jak sem se učil učit - tři kurzy"
+        href: /dis-kisk/vyuka/
+      - label: "KISKED19 - nejtěžší z nich"
+        href: /dis-kisk/praxe-V/
+    speaker_notes: |
+      "Od výzkumu těch, kdo veřejné služby vedou, k učení těch, kdo je
+      dělají. Pro mě nejcennější oblouk celého studia." Vyuka článek je
+      souhrn - když bude čas, otevřít; KISKED19 jen pojmenovat (pivot
+      v půlce kurzu, závěrečný hackaton). Role: Dirigent.
+
+  # ─── KRŮČEK 4 - POSLEDNÍ MÍLE (S6) ──────────────────────────────────────
+
+  - heading: "Poslední míle"
+    layout: portal
+    kicker: "Krůček 4 · 6. semestr"
+    claim: |
+      Žádné nové kostýmy - jen se všechno složilo. Agentní workflow, braindump
+      method, klíčová část práce přesunutá z židle ven. Tímhle způsobem vznikla
+      bakalářka i přednáška na UX Monday, kterou jsme začínali.
+    links:
+      - label: "Reflexe 6. semestru - workflow v detailu"
+        href: /dis-kisk/cile-VI/
+      - label: "Surový braindump z procházky → hotová přednáška"
+        href: /dis-kisk/ux-monday-braindump/
+      - label: "Jarmilka - bakalářská práce"
+        href: /dis-kisk/thesis/
+    speaker_notes: |
+      Tichý konec - figurka už neleveluje, jen vyjde ze dveří a shipne.
+      No-sugarcoat věta: "garbage in, garbage out platí čím dál víc - hlídat
+      výstup je práce, která nezmizí." Kruh se uzavírá k cold openu.
+      Role: Poslední míle.
+
+  # ─── FULL CIRCLE ────────────────────────────────────────────────────────
+
+  - heading: "Stejný artefakt, dvě čtení"
+    layout: statement
+    statement: |
+      2023: jazykový model za mě napsal motivační dopis, protože jsem to
+      o sobě neuměl říct sám. 2026: ty modely řídím jako pracovní nástroj.
+    speaker_notes: |
+      Minimální slide, žádné odkazy - jediný bez portálů. Nechat to chvíli
+      viset. "To je celý ten příběh."
+
+  # ─── LIDI + CO DÁL ──────────────────────────────────────────────────────
+
+  - heading: "Lidi a co dál"
+    layout: portal
+    kicker: "Závěr"
+    claim: |
+      Nejcennější, co si odnáším, nejsou metody - jsou to lidi. A dál? Vzít
+      tenhle orchestrátorský způsob práce do větších problémů: produkty,
+      sociální inovace, veřejná sféra, učení.
+    links:
+      - label: "Celá cesta na jedné zdi"
+        href: /dis-kisk/cesta/
+    speaker_notes: |
+      Jmenovat: Laďka, Matěj, Roman, Petra, Adam a spousta dalších. Jedna
+      rámující věta, nepřehánět. Closer kandidát (rozhodnout při rehearsalu):
+      "dejte mi něco, co můžu nenávidět" - Matějova hláška, s kreditem,
+      jen pokud zazní jako vřelost. Otevřená zeď = poslední obrazovka,
+      přechod do diskuze.
