@@ -1,0 +1,249 @@
+/* ============================================================
+   Cesta — styles.
+   Pico classless provides the CSS reset and typographic base;
+   this file overrides Pico variables to match the cesta palette,
+   then builds the tile grid on top.
+   ============================================================ */
+
+/* --- Pico variable overrides: palette + font --- */
+:root {
+  --pico-font-family-sans-serif: "Inter", system-ui, sans-serif;
+  --pico-font-family: var(--pico-font-family-sans-serif);
+  --pico-background-color: #eeebe4;
+  --pico-color: #1c1812;
+  --pico-muted-color: #7a7060;
+  --pico-primary: #3E5A6E;
+  --pico-border-color: rgba(28, 24, 18, .30);
+}
+
+/* --- Cesta palette tokens --- */
+:root {
+  --ink:   #1c1812;
+  --quiet: #7a7060;
+  --line:  rgba(28, 24, 18, .30);
+  --card:  #ffffff;
+  --cream: #f4efe5;
+
+  --cell: clamp(135px, 14vw, 202px);
+  --gap:  27px;
+  --big:  calc(2 * var(--cell) + var(--gap));
+}
+
+body {
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   The wall: centred flex bands (one .band per row).
+   Tiles use 4 fixed footprints off --cell:
+     1×1 default, 2×2 .f-big, 1×2 .f-portrait, 2×1 .f-landscape.
+   Short tiles pair into a .stack so each column is card-tall.
+   ============================================================ */
+
+.wall {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+  padding: 16px;
+}
+
+.band {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  flex: none;
+}
+
+/* --- Tile base --- */
+.tile {
+  position: relative;
+  flex: none;
+  width: var(--cell);
+  height: var(--cell);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+  box-shadow: 0 6px 18px rgba(28, 24, 18, .16);
+}
+
+.tile.f-portrait  { width: var(--cell); height: var(--big); }   /* 1×2 tall  */
+.tile.f-landscape { width: var(--big);  height: var(--cell); }  /* 2×1 wide  */
+.tile.f-big       { width: var(--big);  height: var(--big); }   /* 2×2 card  */
+.tile.f-square    { width: var(--cell); height: var(--cell); }  /* 1×1 force */
+.tile.f-profile   { width: calc(2.5 * var(--cell) + var(--gap)); height: var(--big); } /* 2.5×2 */
+
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Stamp (title overlay at the bottom of photo tiles) --- */
+.tile-stamp {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 21px 12px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(to top, rgba(20, 18, 14, .55), rgba(20, 18, 14, 0));
+}
+
+.tile-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--cream);
+  line-height: 1.25;
+}
+
+.tile-ext { font-size: .8em; font-weight: 500; } /* 🔗 marker on external cards */
+
+.sem-tag {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .35);
+}
+
+/* --- Clickable tile --- */
+a.tile {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+a.tile:hover  { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(28, 24, 18, .24); }
+a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+/* --- Text tile (no photo) --- */
+.tile.text {
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.tile.text.missing { border-style: dashed; background: rgba(255, 255, 255, .55); }
+.tile.text .tile-stamp { position: static; background: none; padding: 14px; }
+.tile.text .tile-title { color: var(--ink); font-size: 20px; }
+.tile.text.missing .tile-title { color: var(--quiet); }
+
+/* --- Hero tile (inverted dark, opening + closing) --- */
+.tile.hero {
+  background: var(--ink);
+  box-shadow: 0 6px 18px rgba(28, 24, 18, .16);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 34px;
+  gap: 12px;
+}
+.tile.hero .h-title {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(22px, 2.3vw, 36px);
+  line-height: 1.16;
+  letter-spacing: -.02em;
+  color: var(--cream);
+}
+.tile.hero .h-sub {
+  margin: 0;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.45;
+  color: rgba(244, 239, 229, .72);
+  max-width: 460px;
+}
+
+/* --- Thematic tags (hidden until portfolio rework) --- */
+.tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tile-tags .tt {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(244, 239, 229, .5);
+}
+.tile-stamp.ext { gap: 7px; }
+.tile:not(.text) .tile-stamp.ext {
+  padding: 14px 12px 12px;
+  background: linear-gradient(to top, rgba(18, 16, 12, .6) 62%, rgba(18, 16, 12, 0));
+}
+.tile.text .tile-tags .tt {
+  color: var(--quiet);
+  background: rgba(28, 24, 18, .05);
+  border-color: var(--line);
+}
+
+/* --- Quote tile (standalone research voice) --- */
+.tile.quote-tile {
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 15px 13px;
+  overflow: hidden;
+}
+.tile.quote-tile::before {
+  content: '„';
+  position: absolute;
+  top: -4px; right: 11px;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(28, 24, 18, .07);
+  pointer-events: none;
+}
+.tile.quote-tile > * { position: relative; }
+.tile.quote-tile .qt-text {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(12px, .95vw, 15px);
+  line-height: 1.45;
+  color: var(--ink);
+}
+.tile.quote-tile .qt-ref {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+/* chips + thematic tags hidden until portfolio rework */
+.tile-chips,
+.tile-tags { display: none !important; }

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "semestr-3/fleda-audit.md",
+                "file": "semestr-5/vyuka.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "fleda-audit"
+              "title": "vyuka"
             }
           }
         ]
@@ -185,9 +185,14 @@
   },
   "active": "da4f5199e7d5232c",
   "lastOpenFiles": [
+    "cesta/cesta.css",
+    "semestr-3/fleda-audit.md",
+    "semestr-5/vyuka.md",
+    "dummy/index.html",
+    "dummy",
+    "semestr-6/design-cirkus.md",
     "semestr-4/sousedske-detske-skupiny.md",
     "semestr-3/aby-to-mamka-nechtela-vypnout.md",
-    "semestr-3/fleda-audit.md",
     "semestr-2/ostrovy-pozitivni-inovace.md",
     "cesta/img/vi-jarmilka-bp.png",
     "img/jarmilka-testing-paper.png",
@@ -225,9 +230,6 @@
     "semestr-2/jbm-semestr-znovu-a-lepe.md",
     "semestr-2/cile-II.md",
     "ta-24.md",
-    "semestr-1/VR-I.md",
-    "semestr-1/stenatko.md",
-    "semestr-1/psychologie-pro-designery.md",
     "prilohy/vhledy-jinag-workshop.pdf"
   ]
 }

@@ -1,0 +1,51 @@
+---
+title: 'Jak sem se učil učit'
+date: 2026-06-10
+layout: dis-kisk.njk
+hideNavigation: true
+tags: ['dis', 'semestr6']
+permalink: /dis-kisk/{{page.fileSlug}}/
+---
+
+<style>
+  .narrow img { max-width: 600px; }
+</style>
+
+Do DISu jsem v roce 2023 nastupoval [spíš jako inženýr než jako designér](/dis-kisk/erik-2023/) - k designu jsem do té doby okukoval přes plot. Že bych někoho učil design, by mě tehdy nenapadlo ani ve snu. Sám jsem se ho teprve učil dělat.
+
+O tři roky později mám za sebou tři univerzitní kurzy a zjišťuju, že učení se stalo jednou z věcí, které mě na designu baví nejvíc. Nestalo se to ale naráz. Šlo to po malých krůčcích - a každá z těch zkušeností mě naučila něco jiného.
+
+# Schod první: tutor (jaro 2024)
+
+První šanci jsem dostal od Laďky po konci mého prvního semestru. Nabídla mi, ať jako tutor naskočím do předmětu [Design Management & Leadership MasterClass](https://is.muni.cz/predmet/phil/jaro2024/DESB43){target="_blank"}, jehož garantem byl Matěj Káninský.
+
+Moje role byla spíš organizační - termíny, logistika, domlouvání záměrů s hosty, technika hodnocení studentských úkolů. Nebylo to moc o mě, ale spíš o tom, aby všechno fungovalo tak, jak má. Zároveň jsem ale rovným dílem podílel na stavbu kurzu zevnitř a z první ruky viděl, kolik práce a rozhodnutí se skrývá pod povrchem něčeho, co student vnímá jako "hodinu".
+
+Zajímavý moment byl když jsme s Matějem spolu promýšleli, jak předmět vlastně ukončit. Psaní esejů v době LLM je poměrně problematické. Pomohlo mi to proměnit celé přemýšlení o tom, co a jak vůbec má smysl v dnešní době hodnotit a pro učení jsme zvolili kombinaci průběžných úklolů, drobných reflexí a jedné závěrečné, která na ně navazovala.
+
+Z kurzu jsem měl super pocit a hezky dopadla i [předmětová anketa](https://is.muni.cz/auth/pruzkumy/odpovedi?id=35082;predmet_id=1555160){target="_blank"}. Pro mě osobně byla účast v tomto kurzu přínosem na dvou frontách. Primárně spolupracovat s Matějem bylo velice příjemné a dost jsem si z té zkušenosti odnesl i pro svou praxi. Druhak byla zajímavá role při spolupráci s přednášejícími, kterým jsem pomáhal formovat jejich sdělení tak, aby co nejlépe sedělo studujícím. Jednak jsem jim nahlédl trochu "pod pokličku", druhak jsem měl taky trošku možnost formovat obsah s nímž pak za studujícími přicházeli.
+# Schod druhý: sólo (jaro 2025)
+
+O rok později přišel [Service design workshop](https://is.muni.cz/predmet/phil/jaro2025/ISKM48){target="_blank"} - a tentokrát celý jen na mně. Od koncepce po realizaci jsem za semestr poprvé odpovídal sám. Z pomocníka, který stavbu kurzu pozoroval, se stal člověk, který ji navrhuje a exekuuje.
+
+Hned první rozhodnutí bylo zásadní: celý kurz jsem postavil na reálných projektech místo frontální výuky. Studenti pracovali v týmech na svých tématech a někteří na tématech, která jsem jim předchystal. Reálně jsem byl napůl v roli kouče a napůl učitele. Osvědčil se mi P2P formát, kdy se týmy učily i navzájem od sebe, vzájemnou reflexí, hledáním slepých míst apod.
+
+Z [výsledků studentských projektů](https://www.linkedin.com/posts/erikvanek_service-design-workshop-2025-studentsk%C3%A9-activity-7343239400803188736-S7uX?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAyJBDEBZomIpb8LSNwSjoEjDf4xk56P-zY){target="_blank"} jsem měl vážně velkou radost. Bylo na nich vidět hmatatelný kompetenční posun a několik studujících mi psalo, že si nástroje začali používat i v práci. To je přesně ten moment, kdy učení dává smysl - místo jednoho odvedeného projektu pošlete dál kus kompetence, který žije i potom.
+
+# Schod třetí: nejtěžší (podzim 2025)
+
+Třetí kurz byl ze všech zdaleka nejnáročnější. V [KISKED19 - Inovace ve veřejných službách](/dis-kisk/praxe-V/) jsme učili designové myšlení úředníky a úřednice veřejné správy. Hezké vyústění mé práce s veřejným sektorem za poslední roky - od jednotlivých projektů přes výzkum a facilitaci až k učení lidí přímo v terénu.
+
+Tentokrát bylo skoro všechno jinak. Poprvé jsem kurz připravoval ve větší lektorské skupině (Veronika Dufek, Roman Hřebecký, Dana Salač), do online formátu a pro cílovku, pro kterou designové myšlení není denním chlebem. V polovině kurzu jsme museli trochu otočit kormidlem a proměnit způsob, jakým kurz vedeme. Snížili jsme hutnost obsahu, který jsme předávali dál. Přiklonili jsme se víc k interaktivním workshopům víc praktickým technikám. Závěrečný hackaton se nesl ve velice pozitivní energii
+
+{% assign path = '/dis-kisk/img/workshop-s-uredniky.png' %}
+{% assign title = 'Závěrečný hackaton KISKED19 - dobrou energii se nám povedlo udržet až do konce' %}
+{% render 'figure.njk', path: path, title: title, class: 'narrow' %}
+
+O tom, jak jsme to celé ustáli a jak to nakonec dopadlo, jsem napsal [zvlášť](/dis-kisk/praxe-V/) - zaslouží si to vlastní kapitolu.
+
+# Co mi to přináší do praxe
+
+Když se na ty tři kurzy dívám zpátky, je v nich vidět docela přesně ta samá křivka jako ve zbytku studia. Nejdřív si ozkoušet něco trošku v menším měřítku(tutorská role, která pomáhá zejména kurz držet pohromadě), pak navrhovat a vést věc po svém a nakonec kurz vést společně v týmu a přizpůsobovat se za běhu potřebám studujících.
+
+Učení mi navíc zpětně proměnilo i vlastní designovou praxi. Je to vlastně facilitace na druhou - hodně o čtení skupiny, vytváření bezpečného prostoru a o trpělivosti. Zároveň na to navazuju i teď ve své privátní praxi, kde zrovna školím desítky kolegů u svého hlavního klienta jak být lepší v discovery aktivitách. Možnost se podílet na stavbě tří předchozích kurzů mi v tomto nesmírně pomháhá.
