@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Přihláška na KISK (2023)</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,14 +28,19 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="pihlka-na-kisk-2023">Přihláška na KISK (2023)</h1>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="pihlka-na-kisk-2023">Přihláška na KISK (2023)</h1>
+                    
+                </header>
             
 
-            <p>Dobrý den,<br>
+            <article>
+                <p>Dobrý den,<br>
 moje jméno je Erik Vaněk a velice rád bych se touto formou zúčastnil přijímacího řízení do<br>
 studia Designu informačních služeb. Velice mi konvenuje struktura oboru, který dává příležitost<br>
 studium kombinovat i s jinými aktivitami. Myslím si, že to je cesta jak získat zajímavé uchazeče<br>
@@ -74,8 +80,10 @@ vazbu a případné osobní setkání v příštím kole řízení.<br>
 S přáním pěkného zbytku dne,<br>
 Erik Vaněk</p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

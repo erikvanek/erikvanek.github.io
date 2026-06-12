@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Jak sem se učil učit</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,14 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="jak-sem-se-uil-uit">Jak sem se učil učit</h1>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="jak-sem-se-uil-uit">Jak sem se učil učit</h1>
+                    
+                        <p class="subtitle">Tři kurzy za tři roky - od tutora přes vlastní kurz až k učení úředníků přímo v terénu</p>
+                    
+                </header>
             
 
-            <style>
+            <article>
+                <style>
   .narrow img { max-width: 600px; }
 </style>
 <p>Do DISu jsem v roce 2023 nastupoval <a href="/dis-kisk/erik-2023/">spíš jako inženýr než jako designér</a> - k designu jsem do té doby okukoval přes plot. Že bych někoho učil design, by mě tehdy nenapadlo ani ve snu. Sám jsem se ho teprve učil dělat.</p>
@@ -62,8 +70,10 @@
 <p>Když se na ty tři kurzy dívám zpátky, je v nich vidět docela přesně ta samá křivka jako ve zbytku studia. Nejdřív si ozkoušet něco trošku v menším měřítku(tutorská role, která pomáhá zejména kurz držet pohromadě), pak navrhovat a vést věc po svém a nakonec kurz vést společně v týmu a přizpůsobovat se za běhu potřebám studujících.</p>
 <p>Učení mi navíc zpětně proměnilo i vlastní designovou praxi. Je to vlastně facilitace na druhou - hodně o čtení skupiny, vytváření bezpečného prostoru a o trpělivosti. Zároveň na to navazuju i teď ve své privátní praxi, kde zrovna školím desítky kolegů u svého hlavního klienta jak být lepší v discovery aktivitách. Možnost se podílet na stavbě tří předchozích kurzů mi v tomto nesmírně pomháhá.</p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

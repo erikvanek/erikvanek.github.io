@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Ostrovy pozitivní inovace</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,16 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="ostrovy-pozitivn-inovace">Ostrovy pozitivní inovace</h1>
-                
-                    <p class="subtitle">Jak fungují týmy, které úspěšně transformují státní správu?</p>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="ostrovy-pozitivn-inovace">Ostrovy pozitivní inovace</h1>
+                    
+                        <p class="subtitle">Jak fungují týmy, které úspěšně transformují státní správu?</p>
+                    
+                </header>
             
 
-            <style>
+            <article>
+                <style>
     #wrapper { align-items: baseline; }
 
     /* block context so float:right works (the flex #wrapper ignores float on its items) */
@@ -104,8 +110,10 @@
 <p>A pak se stala věc, kterou lze jen těžko předem naplánovat – výzkum se dostal až k nejvyššímu tajemníkovi pro státní službu. Z toho vznikl <strong><a href="/dis-kisk/praxe-IV/">workshop pro tajemnictvo ministerstev</a></strong> - úplně organické pokračování, kde jsme zjištění ze studie přetavili do praktického formátu přímo pro lidi, kteří českou státní správu vedou. Ale to už je jiný příběh.</p>
 <p><em>Díky Frantovi, Johance a Veru za parťáctví, Josefovi Kocurkovi za rigorózní základ kvalitativního výzkumu a Jitce Bartošové za průběžné mentorování. A díky všem inovátorkám a inovátorům ze státní správy, kteří si na nás udělali čas a pustili nás k sobě.</em></p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>
