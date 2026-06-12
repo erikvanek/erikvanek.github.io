@@ -2,7 +2,7 @@
 title: 'Fléda - audit přívětivosti'
 subtitle: 'Jak systematicky zmapovat zákaznický zážitek hudebního klubu od první myšlenky po odchod z šatny'
 date: 2025-02-14
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
 permalink: /dis-kisk/{{page.fileSlug}}/

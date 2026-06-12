@@ -2,7 +2,7 @@
 title: 'Medaile Ministerstva vnitra za inovace'
 subtitle: 'Jak se stal oceňovaným inovativním úředníkem'
 date: 2024-11-15
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr4']
 permalink: /dis-kisk/sousedske-detske-skupiny/

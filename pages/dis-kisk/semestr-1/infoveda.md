@@ -2,7 +2,7 @@
 title: "Informační věda"
 subtitle: "aneb nerdění o LLM a algoritmizaci kvasících procesů"
 date: 2024-01-18
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ["dis", "semestr1"]
 permalink: /dis-kisk/{{page.fileSlug}}/

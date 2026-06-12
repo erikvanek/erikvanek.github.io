@@ -1,7 +1,7 @@
 ---
 title: 'Přihláška na KISK (2023)'
 date: 2023-06-01
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis']
 permalink: /dis-kisk/prihlaska/

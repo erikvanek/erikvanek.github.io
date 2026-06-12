@@ -2,7 +2,7 @@
 title: "The Ministry of the Cloud"
 subtitle: "Jak by mohl fungovat moderní úřad v 21. století?"
 date: 2024-04-15
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ["dis", "semestr2"]
 permalink: /dis-kisk/{{page.fileSlug}}/

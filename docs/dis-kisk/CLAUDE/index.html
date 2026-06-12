@@ -2,6 +2,66 @@
 <p>Working guide for Claude sessions on Erik's DIS KISK study portfolio (<code>pages/dis-kisk/</code>).<br>
 Inherits the repo-root <a href="../../CLAUDE.md">CLAUDE.md</a>. This file overrides where it conflicts.</p>
 <hr>
+<h2 id="0-cold-start-cheat-sheet-quottweak-x-in-my-portfolioquot-mobile-sessions">0. Cold-start cheat sheet — &quot;tweak X in my portfolio&quot; (mobile sessions)</h2>
+<p>Erik often dictates quick tweaks from his phone. Don't re-derive context — use this map, make the change, build, verify, report. Status of record: <a href="./portfolio-shaping/plan.md"><code>portfolio-shaping/plan.md</code></a>.</p>
+<p><strong>Where things live (tweak X → edit Y):</strong></p>
+<table>
+<thead>
+<tr>
+<th>&quot;I want to change…&quot;</th>
+<th>Edit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid content: add/remove/repoint a card, titles, links, photos</td>
+<td><code>cesta/cards.js</code> (data)</td>
+</tr>
+<tr>
+<td>Grid look: tiles, hover, shadows, entrance, mesh background</td>
+<td><code>cesta/cesta.css</code></td>
+</tr>
+<tr>
+<td>Grid composition / rendering logic / rough quote borders</td>
+<td><code>cesta/index.html</code> (inline script)</td>
+</tr>
+<tr>
+<td>Article look: typography, colors, links, figures, progress line</td>
+<td><code>../css/dis-article.css</code></td>
+</tr>
+<tr>
+<td>Article chrome: back-link, head, scripts</td>
+<td><code>../_includes/dis-article.njk</code></td>
+</tr>
+<tr>
+<td>Article content</td>
+<td>the <code>.md</code> file in <code>semestr-*/</code> (Czech, Erik's voice — see §5)</td>
+</tr>
+<tr>
+<td>Exam deck slides</td>
+<td><code>portfolio/index.html</code>; <strong>source of truth first:</strong> <code>portfolio-shaping/slides.yaml</code></td>
+</tr>
+<tr>
+<td>rough.js easter eggs on articles</td>
+<td><code>../js/dis-flourish.js</code></td>
+</tr>
+<tr>
+<td>Fonts (DM Serif Display + DM Sans, self-hosted)</td>
+<td><code>../fonts/fonts.css</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiables (break these and the session failed):</strong></p>
+<ul>
+<li><strong>Never edit <code>docs/</code></strong> — build output. <code>yarn build</code> from repo root regenerates it.</li>
+<li><strong>Legacy is frozen:</strong> <code>index.html</code> (this dir) + <code>../css/dis.css</code> + layout <code>dis-kisk.njk</code> stay untouched. Articles use <code>dis-article.njk</code>.</li>
+<li><strong>Amber <code>#C26818</code> = earned only</strong> (medal, progress line) — never decoration. Palette: cream <code>#F4EFE5</code>, ink <code>#1C1812</code>, quiet <code>#7a7060</code>, links slate <code>#3E5A6E</code>.</li>
+<li>Plain hyphen &quot; - &quot;, never em-dash. Czech content, English conversation.</li>
+<li>Image paths absolute <code>/dis-kisk/img/…</code>, never relative.</li>
+<li>New motion goes behind <code>@media (prefers-reduced-motion: no-preference)</code>.</li>
+</ul>
+<p><strong>Verify loop:</strong> <code>yarn build</code> → grep the change in <code>docs/</code> → done. (Optional visual check: serve <code>docs/</code> and screenshot with headless Chrome.) Update <code>plan.md</code> if the change is a decision, not just execution.</p>
+<hr>
 <h2 id="1-what-this-is">1. What this is</h2>
 <p>Erik's study portfolio for the <strong>DIS KISK</strong> bachelor's program (Design informačních služeb, KISK FF MUNI).<br>
 Output of three years of study; this is his second attempt at the program (the first ended in dropout).</p>

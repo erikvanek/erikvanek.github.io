@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Design cirkus</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,16 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="design-cirkus">Design cirkus</h1>
-                
-                    <p class="subtitle">Letní škola, barcamp a tři dny na zahradě vily Čerych</p>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="design-cirkus">Design cirkus</h1>
+                    
+                        <p class="subtitle">Letní škola, barcamp a tři dny na zahradě vily Čerych</p>
+                    
+                </header>
             
 
-            <figure class="hero-figure">
+            <article>
+                <figure class="hero-figure">
 <a href="/dis-kisk/cesta/img/cerych.jpg" target="_blank" rel="noopener">
 <img src="/dis-kisk/cesta/img/cerych.jpg" alt="Vila Čerych, Kaplicky Creative Centre, Česká Skalice" />
 </a>
@@ -51,8 +57,10 @@
 <p>Česká Skalice je zhruba dvě hodiny od Prahy a tři od Brna - tedy symetricky cca na půl cesty. Vila je čerstvě po rekonstrukci, má zahradu, je to vážně krásné místo.</p>
 <p>Setkání nemá být jen o DIS - zajímavé by bylo vtáhnout do sobotního programu lidi z okolí kreativního centra nebo z České Skalice samotné. Participativní design v praxi, tentokrát doslova v terénu. Tak uvidíme jak se nám první ročník 21.-23. srpna povede.</p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

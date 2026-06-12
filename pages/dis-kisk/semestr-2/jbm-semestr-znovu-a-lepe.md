@@ -1,7 +1,7 @@
 ---
 title: 'Jak uvolnit pnutí v průběhu semestru?'
 date: 2024-06-29
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr2']
 permalink: /dis-kisk/{{page.fileSlug}}/

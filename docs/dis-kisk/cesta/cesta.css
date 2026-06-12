@@ -7,8 +7,9 @@
 
 /* --- Pico variable overrides: palette + font --- */
 :root {
-  --pico-font-family-sans-serif: "Inter", system-ui, sans-serif;
+  --pico-font-family-sans-serif: "DM Sans", system-ui, sans-serif;
   --pico-font-family: var(--pico-font-family-sans-serif);
+  --serif: "DM Serif Display", Georgia, serif;
   --pico-background-color: #eeebe4;
   --pico-color: #1c1812;
   --pico-muted-color: #7a7060;
@@ -24,14 +25,95 @@
   --card:  #ffffff;
   --cream: #f4efe5;
 
-  --cell: clamp(135px, 14vw, 202px);
-  --gap:  27px;
+  --cell: clamp(135px, 13.5vw, 198px);
+  --gap:  clamp(28px, 3vw, 44px);      /* airy: gap scales with viewport */
   --big:  calc(2 * var(--cell) + var(--gap));
+
+  /* layered card shadows — soft ink-tinted ambient + key light */
+  --shadow-rest:
+    0 1px 2px rgba(28, 24, 18, .08),
+    0 4px 10px rgba(28, 24, 18, .09),
+    0 14px 28px rgba(28, 24, 18, .07);
+  --shadow-hover:
+    0 2px 3px rgba(28, 24, 18, .09),
+    0 10px 22px rgba(28, 24, 18, .12),
+    0 30px 60px rgba(28, 24, 18, .16);
 }
 
 body {
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Cross-document view transition: wall → article cross-fade
+   (Chromium + Safari 18.2; elsewhere navigation is just instant). */
+@view-transition {
+  navigation: auto;
+}
+
+::selection {
+  background: rgba(214, 178, 123, .45);
+}
+
+/* --- Lava-lamp background: three blobs on independent slow clocks.
+       Warm sand + rust carry the mood, one low-chroma slate blob is the
+       counterpoint that keeps the mesh from going muddy. Edge tint rides
+       on the first layer. Transform-only; still under reduced motion. --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(34% 30% at 22% 24%, rgba(214, 165, 92, .50), transparent 68%),
+    linear-gradient(90deg,
+      rgba(202, 164, 110, .30) 0%, rgba(202, 164, 110, 0) 15%,
+      rgba(189, 138, 110, 0) 85%, rgba(189, 138, 110, .28) 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(30% 34% at 78% 32%, rgba(196, 116, 78, .34), transparent 70%);
+}
+.wall::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(38% 32% at 50% 88%, rgba(62, 90, 110, .22), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  body::before  { animation: blob-a 36s ease-in-out infinite alternate; }
+  body::after   { animation: blob-b 47s ease-in-out infinite alternate; }
+  .wall::before { animation: blob-c 59s ease-in-out infinite alternate; }
+}
+@keyframes blob-a {
+  from { transform: translate3d(-4%, -5%, 0) scale(1); }
+  to   { transform: translate3d(5%, 8%, 0) scale(1.2); }
+}
+@keyframes blob-b {
+  from { transform: translate3d(3%, 7%, 0) scale(1.15); }
+  to   { transform: translate3d(-6%, -6%, 0) scale(.92); }
+}
+@keyframes blob-c {
+  from { transform: translate3d(-6%, 3%, 0) scale(1); }
+  to   { transform: translate3d(6%, -7%, 0) scale(1.25); }
+}
+
+/* --- Staggered band entrance (JS sets --i per band) --- */
+@media (prefers-reduced-motion: no-preference) {
+  .band {
+    animation: band-rise .55s cubic-bezier(.2, .7, .3, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+}
+@keyframes band-rise {
+  from { opacity: 0; transform: translateY(14px); }
 }
 
 /* ============================================================
@@ -48,7 +130,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: var(--gap);
-  padding: 16px;
+  padding: clamp(40px, 7vh, 110px) clamp(16px, 3vw, 56px) clamp(56px, 10vh, 140px);
 }
 
 .band {
@@ -74,7 +156,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   background: #ddd;
-  box-shadow: 0 6px 18px rgba(28, 24, 18, .16);
+  box-shadow: var(--shadow-rest);
 }
 
 .tile.f-portrait  { width: var(--cell); height: var(--big); }   /* 1×2 tall  */
@@ -90,10 +172,28 @@ body {
   height: 100%;
   object-fit: cover;
 }
+a.tile img {
+  transition: transform .9s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* hover scrim: deepens the photo behind the stamp so the title pops */
+a.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to top, rgba(20, 18, 14, .38), rgba(20, 18, 14, 0) 55%);
+  opacity: 0;
+  transition: opacity .6s ease;
+  pointer-events: none;
+}
+a.tile.text::after,
+a.tile.hero::after { content: none; }
 
 /* --- Stamp (title overlay at the bottom of photo tiles) --- */
 .tile-stamp {
   position: absolute;
+  z-index: 1;
   left: 0; right: 0; bottom: 0;
   padding: 21px 12px 11px;
   display: flex;
@@ -130,9 +230,66 @@ a.tile {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: transform .15s ease, box-shadow .15s ease;
+  /* growth-only hover: scale moves every edge outward, so the card can
+     never move away from the cursor and un-hover itself (no flicker);
+     the deepening shadow carries the "lift" */
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1), box-shadow .6s cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
 }
-a.tile:hover  { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(28, 24, 18, .24); }
+a.tile:hover,
+a.tile:focus-visible {
+  transform: scale(1.022);
+  box-shadow: var(--shadow-hover);
+}
+a.tile:active {
+  transform: scale(1.008);
+  transition-duration: .15s;
+}
+
+/* --- Easter egg: a soft light slowly circling the card border on hover.
+       Conic gradient ring masked to a 2px band; @property animates the
+       angle. Browsers without @property just get a still glint. --- */
+@property --spin {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+a.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: 8px;
+  padding: 2px;
+  background: conic-gradient(from var(--spin),
+    transparent 0%, transparent 70%,
+    rgba(244, 239, 229, .95) 86%,
+    transparent 98%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .8s ease;
+  pointer-events: none;
+}
+a.tile:hover::before,
+a.tile:focus-visible::before {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  a.tile:hover::before,
+  a.tile:focus-visible::before {
+    animation: ring-spin 5s linear infinite;
+  }
+}
+@keyframes ring-spin {
+  to { --spin: 360deg; }
+}
+a.tile:hover img,
+a.tile:focus-visible img { transform: scale(1.045); }
+a.tile:hover::after,
+a.tile:focus-visible::after { opacity: 1; }
 a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
 /* --- Text tile (no photo) --- */
@@ -151,7 +308,7 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 /* --- Hero tile (inverted dark, opening + closing) --- */
 .tile.hero {
   background: var(--ink);
-  box-shadow: 0 6px 18px rgba(28, 24, 18, .16);
+  box-shadow: var(--shadow-rest);
   border: none;
   border-radius: 8px;
   overflow: hidden;
@@ -165,10 +322,11 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 }
 .tile.hero .h-title {
   margin: 0;
-  font-weight: 800;
-  font-size: clamp(22px, 2.3vw, 36px);
-  line-height: 1.16;
-  letter-spacing: -.02em;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 40px);
+  line-height: 1.14;
+  letter-spacing: 0;
   color: var(--cream);
 }
 .tile.hero .h-sub {
@@ -221,20 +379,32 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .tile.quote-tile::before {
   content: '„';
   position: absolute;
-  top: -4px; right: 11px;
-  font-size: 44px;
+  top: -6px; right: 11px;
+  font-family: var(--serif);
+  font-size: 54px;
   line-height: 1;
-  font-weight: 800;
-  color: rgba(28, 24, 18, .07);
+  font-weight: 400;
+  color: rgba(28, 24, 18, .10);
   pointer-events: none;
 }
 .tile.quote-tile > * { position: relative; }
 .tile.quote-tile .qt-text {
   margin: 0;
+  font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(12px, .95vw, 15px);
-  line-height: 1.45;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.4;
   color: var(--ink);
+}
+/* rough.js sharpie border overlay (drawn by inline script, progressive);
+   the crisp border yields to the hand-drawn one once it exists */
+.tile.quote-tile.has-rough { border-color: transparent; }
+.tile.quote-tile svg.rough-note {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 .tile.quote-tile .qt-ref {
   font-size: 10px;

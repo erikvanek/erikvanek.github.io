@@ -55,7 +55,7 @@
 
 | # | Decision | Status | Notes |
 |---|---|---|---|
-| D1 | **Type pair** | **DEFERRED by design** — decide during the fidelity pass (Phase 2/3), not before. Content work proceeds with existing site styles. | Candidates stay: DM Serif Display + DM Sans (desktop rec) / DM Sans solo / Newsreader / EB Garamond. ⚠️ Numbering inconsistency between desktop chat ("02") and `coherent-brief.md` ("08") — **refer by name, never number**. |
+| D1 | ~~Type pair~~ | **RESOLVED (2026-06-12, Erik)** → **DM Serif Display (headings) + DM Sans (body/UI)** — editorial magazine register. Self-host woff2, **latin-ext subset** (Czech diacritics), offline-safe for the exam venue. | Picked at the fidelity moment as designed. Other candidates retired. |
 | D2 | ~~Opening claim~~ | **RESOLVED** → locked §1.2 | cile-VI line only. |
 | D3 | ~~Game scope~~ | **RESOLVED** → locked §1.7 | Full game experience as goal, static-pages-in-succession as built-in fallback. |
 | D4 | ~~Sharp opinions~~ | **DROPPED** | Not the room for it. Q&A prep still covers predictable questions (§3 Phase 3). |
@@ -124,6 +124,38 @@ The playful experience on top of secured content.
 - [ ] **Fidelity gate:** as the game layer firms up, D1 (type pair) gets decided — this is the moment for it, per Erik's content-first principle.
 - [ ] **Visual-polish research is parked in two context-capsule issues (2026-06-07):** GH #29 (sports-play-diagram ambient background) + GH #30 (micro-interactions & ambient polish — film grain, photo-wall duotone-hover, mode-switch View Transition, hero line-rise). Both re-scoped to this portfolio, 2026-current tech, pure-CSS/native-first (zero libs for the exam build). #30 items 1–4 are exam-safe; the rest wait for stage pages / post-exam. Pull from these when riding the fidelity curve — don't front-load. Each issue carries an "Open decisions for Erik" block.
 - [ ] Scope valve: any game element not working by **Jun 13 noon** gets cut to the fallback for that stage. The experience can be partially gamed — stages degrade gracefully to pages.
+
+### Phase 2.5 — DESIGN PASS (approved by Erik 2026-06-12, EXECUTED 2026-06-12 — deviations logged below)
+
+Visual fine-tune of (a) the cesta grid and (b) the detail pages the grid/deck route to. Erik's brief: modern but warm, portfolio-worthy, micro-interactions + small animations + creative CSS, **skip the boxes-and-arrows background for now** (dummy prototype stays parked §6), but non-bland backgrounds on both surfaces. Detail-page typography "kinda sucks" — biggest win there.
+
+Approved decisions:
+1. **Type pair = D1 resolved:** DM Serif Display + DM Sans, self-hosted woff2, latin-ext subset.
+2. **Background = soft gradient mesh:** 2–3 large overlapping low-chroma warm radial gradients (cream/sand/blush) slowly breathing via CSS `@property` animation; quieter variant on articles. (Grain and amber-river options rejected.)
+3. **rough.js easter eggs (vendor locally), three spots:** article `hr` dividers + figure frames as hand-sketched rough lines/boxes; hover annotations (back-link / h2 gets a rough ellipse/underline like a marker on paper); grid quote tiles get rough sharpie borders (ties to sense-making metaphor). The hidden press-R egg was NOT picked.
+
+Build order + key implementation notes:
+- [x] **Detail pages first** — new `dis-article.css`; articles flipped dark → light cream. Czech typography: `hyphens: auto` + `hyphenate-limit-chars: 6 3 3`, line-height 1.65, 44rem (~65ch) measure, serif headings, styled blockquote/figure+caption, underlines that thicken on hover (slate-blue `#3E5A6E`), amber reading-progress line via `animation-timeline: scroll(root)` (hidden where unsupported).
+- [x] **Grid polish** — hover: image `scale(1.045)` + bottom scrim deepen (`a.tile::after` opacity) + existing lift; staggered band entrance (CSS `band-rise`, `--i` set per band in render JS); quote-tile + hero now DM Serif Display; sem-tags left as-is (already low-chroma enough).
+- [x] **Gradient-mesh background** both surfaces — `body::before` fixed, 3 warm radial gradients, 70 s `transform`-only drift, stronger on cesta, quieter on articles; gated behind `prefers-reduced-motion: no-preference`.
+- [x] **rough.js** vendored to `pages/js/rough.js` (27 KB, offline), three spots live: article `hr` → sketched divider + figure frames (`pages/js/dis-flourish.js`), hover annotations (back-link ellipse, section-heading underline, drawn once with a dash-in animation), quote-tile sharpie borders (inline in cesta `index.html`; crisp border yields via `.has-rough`). All progressive enhancement.
+- [ ] Optional cherry if time: **Vlna transform** in `.eleventy.js` (NBSP after k/s/v/z/o/u/a/i) — per CSS-research memory. NOT done (kept the pass lean per Erik).
+- Shared token sheet (palette/type-scale/spacing via `clamp()`) feeding both surfaces; Pico classless stays the base on cesta, articles get Pico + tokens.
+
+**Execution deviations / facts (2026-06-12):**
+- **`dis-kisk.njk` was NOT reworked** — the frozen legacy `index.html` itself uses that layout, so reworking it would have broken the freeze. Instead: new layout **`pages/_includes/dis-article.njk`** (`lang="cs"`, fonts + Pico + dis-article.css, progress bar, rough.js hooks); all **30 article .md files** switched `layout: dis-kisk.njk` → `dis-article.njk`. Legacy index keeps `dis-kisk.njk` + `dis.css`, byte-identical look (verified by screenshot).
+- **Article back-link now points to `/dis-kisk/cesta/`** ("← Cesta studiem"), previously `/dis-kisk` (legacy index). Deliberate: funnels readers into the new experience; also neutralizes the "commission lands on legacy" risk for article readers. Revert = one line in `dis-article.njk`.
+- **Fonts self-hosted** at `pages/fonts/` (8 woff2: DM Sans variable + DM Serif Display, normal+italic, latin+latin-ext, ~260 KB total) + `fonts.css`; passthrough added in `.eleventy.js` (woff2 isn't a template format).
+- **Pico v2 classless vendored** to `pages/css/pico.classless.min.css` — cesta no longer hits jsDelivr/Google Fonts CDNs (venue-wifi de-risk); cesta switched Inter → DM Sans, hero/quote tiles → serif.
+- **Bonus from GH #30 (exam-safe list):** `@view-transition { navigation: auto; }` in both stylesheets — wall ↔ article navigation cross-fades in Chromium/Safari 18.2+, instant elsewhere. Rest of #30 stays parked (§6).
+- Verified: `yarn build` clean; headless-Chrome screenshots of cesta, article (vyuka incl. figure frame + caption), and legacy index.
+
+**Post-pass iteration on Erik's live feedback (2026-06-12, same day):**
+- Layered card shadows (`--shadow-rest/--shadow-hover`), growth-only hover `scale(1.022)` (translateY lift removed — it caused edge flicker), press-down `:active`, slow conic-gradient light ring circling the card border on hover (5 s lap, `@property --spin`).
+- Wall made airier: `--gap: clamp(28px, 3vw, 44px)`, generous wall padding; cell max trimmed to 198px.
+- Background upgraded mesh → **lava lamp**: 3 independent fixed blob layers (sand .50 / rust .34 / slate .22 counterpoint) on 36/47/59 s alternate clocks + warm edge tint; articles keep the quiet mesh.
+- **Dive Club research done** (GH-issue-30 spirit): 5 recent guest portfolios read; findings + ranked takeaways appended to `portfolio-inspiration.md` §6. Applied takeaway #2 (Madrick): role/context **subtitles added** to praxe-IV, praxe-V, vyuka, cile-VI, erik-2023.
+- **Cold-start cheat sheet** added as §0 of `pages/dis-kisk/CLAUDE.md` ("tweak X → edit Y" map + non-negotiables) so mobile dictated sessions can execute without re-orienting.
 
 ### Phase 3 — Rehearsal (Jun 13–14)
 - [ ] Two timed run-throughs of the walkthrough; 20 min hard ceiling. One run in fallback mode (plain page succession) — the degraded path must also be rehearsed.

@@ -1,7 +1,7 @@
 ---
 title: 'Design jako most mezi veřejnou správou a inovacemi: pozorování ze Zlín Design Weeku'
 date: 2025-06-20
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr4']
 permalink: /dis-kisk/{{page.fileSlug}}/

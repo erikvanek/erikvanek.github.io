@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "semestr-5/vyuka.md",
+                "file": "portfolio-shaping/portfolio-inspiration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vyuka"
+              "title": "portfolio-inspiration"
             }
           }
         ]
@@ -185,13 +185,13 @@
   },
   "active": "da4f5199e7d5232c",
   "lastOpenFiles": [
+    "semestr-5/vyuka.md",
     "portfolio/index.html",
     "portfolio",
     "portfolio-shaping/slides.yaml",
     "portfolio-shaping/story.md",
     "cesta/cesta.css",
     "semestr-3/fleda-audit.md",
-    "semestr-5/vyuka.md",
     "dummy/index.html",
     "dummy",
     "semestr-6/design-cirkus.md",
@@ -224,7 +224,6 @@
     "praxe-IV.md",
     "semestr-3/cile-III.md",
     "semestr-3/sxd/Tereza.pdf",
-    "semestr-3/sxd/sxd-25.pdf",
     "semestr-3/sxd/_readme.md",
     "semestr-2/the-ministry-of-the-cloud.md",
     "semestr-2/tematicka-analyza.md",

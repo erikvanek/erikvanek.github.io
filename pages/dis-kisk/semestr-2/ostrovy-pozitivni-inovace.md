@@ -2,7 +2,7 @@
 title: 'Ostrovy pozitivní inovace'
 subtitle: 'Jak fungují týmy, které úspěšně transformují státní správu?'
 date: 2024-05-31
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr2']
 permalink: /dis-kisk/{{page.fileSlug}}/

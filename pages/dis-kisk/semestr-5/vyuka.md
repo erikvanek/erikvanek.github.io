@@ -1,7 +1,8 @@
 ---
 title: 'Jak sem se učil učit'
+subtitle: 'Tři kurzy za tři roky - od tutora přes vlastní kurz až k učení úředníků přímo v terénu'
 date: 2026-06-10
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr6']
 permalink: /dis-kisk/{{page.fileSlug}}/

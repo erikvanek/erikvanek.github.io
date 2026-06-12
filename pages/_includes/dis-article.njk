@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+    </head>
+
+    {% include "_analytics.html" %}
+
+    <body>
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
+            {% if hideTitle !== true %}
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1>{{ title }}</h1>
+                    {% if subtitle %}
+                        <p class="subtitle">{{ subtitle }}</p>
+                    {% endif %}
+                </header>
+            {% endif %}
+
+            <article>
+                {{ content | safe }}
+            </article>
+        </main>
+
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

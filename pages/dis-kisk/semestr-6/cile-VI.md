@@ -1,7 +1,8 @@
 ---
 title: 'Reflexe studijních cílů 6. semestru'
+subtitle: 'Poslední semestr: agentní workflow, braindumpy z procházek a poslední míle studia'
 date: 2026-05-17
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr6']
 permalink: /dis-kisk/{{page.fileSlug}}/

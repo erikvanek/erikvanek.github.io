@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Erik 2023 – neohrabaný praktik</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,14 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="erik-2023-neohraban-praktik">Erik 2023 – neohrabaný praktik</h1>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="erik-2023-neohraban-praktik">Erik 2023 – neohrabaný praktik</h1>
+                    
+                        <p class="subtitle">Kdo jsem byl, když jsem do studia nastupoval - spíš inženýr než designér</p>
+                    
+                </header>
             
 
-            <style>
+            <article>
+                <style>
   .profile-aside{ float:right; width:clamp(150px,24vw,210px); margin:.2rem 0 1rem 1.6rem;
                   shape-outside:circle(48%); -webkit-shape-outside:circle(48%); }
   .profile-aside img{ display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:50%;
@@ -66,8 +74,10 @@
 <p>Tohle byl výchozí stav. Kam jsem se za tři roky studia dostal?</p>
 <p class="cta-wrap"><a href="/dis-kisk/portfolio/" class="story-cta">Moje cesta studiem →</a></p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

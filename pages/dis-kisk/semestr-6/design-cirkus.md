@@ -2,7 +2,7 @@
 title: 'Design cirkus'
 subtitle: 'Letní škola, barcamp a tři dny na zahradě vily Čerych'
 date: 2026-08-01
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr6']
 permalink: /dis-kisk/design-cirkus/

@@ -4,16 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cesta studiem DIS KISK — Erik Vaněk</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+<link rel="stylesheet" href="/fonts/fonts.css"/>
+<link rel="stylesheet" href="/css/pico.classless.min.css"/>
 <link rel="stylesheet" href="cesta.css"/>
 </head>
 <body>
   <div id="bau-grid" class="wall"></div>
 
   <script src="cards.js"></script>
+  <script src="/js/rough.js"></script>
   <script>
   (function () {
     // semester = metadata only: colour + tag, never a heading
@@ -83,7 +82,6 @@
     }
     function makeHero(){
       // hero · 2×2 — same footprint as all other cards; entry point into the reveal.js study deck.
-      // NOTE: /dis-kisk/portfolio/ is not built yet (see plan.md D12) — this link 404s until it is.
       var hero = el('a','tile hero f-big');
       hero.setAttribute('href', '/dis-kisk/portfolio/');
       hero.appendChild(el('h1','h-title','Naučil jsem se řemeslo. Teď ho učím.'));
@@ -174,10 +172,33 @@
       emitBands(wall, packColumns(seq.map(function(it){
         return { el: makeAny(it), tall: tallOf(it) };
       })), 3);
+
+      // staggered entrance: CSS animation keyed off --i per band
+      Array.prototype.forEach.call(wall.children, function(b, i){ b.style.setProperty('--i', i); });
+    }
+
+    // rough.js easter egg: quote tiles get a hand-drawn sharpie border (progressive)
+    function sketchQuoteBorders(){
+      if (typeof rough === 'undefined') return;
+      var NS = 'http://www.w3.org/2000/svg';
+      document.querySelectorAll('.tile.quote-tile').forEach(function(tile){
+        var w = tile.offsetWidth, h = tile.offsetHeight;
+        if (!w || !h) return;
+        var svg = document.createElementNS(NS, 'svg');
+        svg.setAttribute('class', 'rough-note');
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        svg.setAttribute('aria-hidden', 'true');
+        svg.appendChild(rough.svg(svg).rectangle(3, 3, w - 6, h - 6, {
+          roughness: 1.7, bowing: 1.5, strokeWidth: 1.2, stroke: 'rgba(122, 112, 96, .65)'
+        }));
+        tile.appendChild(svg);
+        tile.classList.add('has-rough');
+      });
     }
 
     // ---------- boot ----------
     renderWall();
+    sketchQuoteBorders();
   })();
   </script>
 </body>

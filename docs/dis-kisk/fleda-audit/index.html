@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Fléda - audit přívětivosti</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,16 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="flda-audit-pvtivosti">Fléda - audit přívětivosti</h1>
-                
-                    <p class="subtitle">Jak systematicky zmapovat zákaznický zážitek hudebního klubu od první myšlenky po odchod z šatny</p>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="flda-audit-pvtivosti">Fléda - audit přívětivosti</h1>
+                    
+                        <p class="subtitle">Jak systematicky zmapovat zákaznický zážitek hudebního klubu od první myšlenky po odchod z šatny</p>
+                    
+                </header>
             
 
-            <style>
+            <article>
+                <style>
     .hero-figure a { border: none; border-radius: 0; padding: 0; }
     .hero-figure img { border-radius: 4px; box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
                        transition: transform .15s ease, box-shadow .15s ease; }
@@ -82,8 +88,10 @@
 <p>Tohle byl můj první projekt, kde jsem metodologicky prošel celý service design cyklus sám - od vstupu do terénu přes výzkum a tvorbu artefaktů až po formulaci doporučení pro skutečného klienta. Předtím jsem metody service designu používal spíš fragmentárně v rámci větších týmů a v menších iniciativách.</p>
 <p>Uvědomil jsem si, jak moc záleží na vymezení rozsahu. Zákaznická cesta hudebního klubu může být úzká (jen samotný večer) nebo velmi široká (od prvního impulzu k návštěvě po dlouhodobou loajalitu). Obě jsou legitimní - ale musíte vědět, pro co se rozhodujete, jinak vám artefakty nedrží pohromadě.</p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

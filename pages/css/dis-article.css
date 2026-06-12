@@ -1,0 +1,289 @@
+/* ============================================================
+   DIS KISK article pages — light editorial theme.
+   Loads after Pico classless (reset + base) and fonts.css
+   (self-hosted DM Serif Display + DM Sans). The legacy
+   /dis-kisk/ index keeps dis.css; this sheet styles only the
+   article pages routed to from the cesta wall and the deck.
+   ============================================================ */
+
+/* --- Tokens + Pico overrides --- */
+:root {
+  --ink:   #1c1812;
+  --quiet: #7a7060;
+  --cream: #f4efe5;
+  --amber: #c26818;          /* earned only — progress line is its one decorative home */
+  --link:  #3e5a6e;
+  --line:  rgba(28, 24, 18, .18);
+
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans:  "DM Sans", system-ui, sans-serif;
+
+  --pico-font-family-sans-serif: var(--sans);
+  --pico-font-family: var(--sans);
+  --pico-background-color: var(--cream);
+  --pico-color: var(--ink);
+  --pico-muted-color: var(--quiet);
+  --pico-primary: var(--link);
+  --pico-border-color: var(--line);
+}
+
+/* Cross-document view transition: grid → article cross-fade
+   (Chromium + Safari 18.2; elsewhere navigation is just instant). */
+@view-transition {
+  navigation: auto;
+}
+
+::selection {
+  background: rgba(214, 178, 123, .45);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Soft gradient mesh, quiet article variant --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -22%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 38% at 16% 10%, rgba(214, 178, 123, .22), transparent 70%),
+    radial-gradient(50% 44% at 86% 18%, rgba(199, 148, 124, .13), transparent 70%),
+    radial-gradient(58% 52% at 58% 94%, rgba(228, 211, 182, .38), transparent 72%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation: mesh-drift 70s ease-in-out infinite alternate;
+  }
+}
+@keyframes mesh-drift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to   { transform: translate3d(1.5%, 2%, 0) scale(1.05); }
+}
+
+/* --- Amber reading-progress line (scroll-driven, pure CSS) --- */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 10;
+  background: var(--amber);
+  transform-origin: 0 50%;
+  transform: scaleX(0);   /* hidden where scroll timelines are unsupported */
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .progress {
+      animation: grow-progress linear;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+@keyframes grow-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* --- Measure + page frame --- */
+main#wrapper {
+  max-width: 44rem;       /* ~65ch at this size */
+  margin-inline: auto;
+  padding: clamp(1.75rem, 5vw, 4rem) clamp(1.25rem, 4vw, 2rem) 6rem;
+}
+
+/* --- Back link --- */
+.back {
+  position: relative;
+  display: inline-block;
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.back:hover,
+.back:focus-visible {
+  color: var(--ink);
+}
+.back svg.rough-note {
+  position: absolute;
+  inset: -9px -14px;
+  width: calc(100% + 28px);
+  height: calc(100% + 18px);
+  pointer-events: none;
+}
+
+/* --- Headings: DM Serif Display --- */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.article-head {
+  margin-bottom: clamp(2rem, 5vw, 3.25rem);
+}
+.article-head h1 {
+  font-size: clamp(2.3rem, 6vw, 3.4rem);
+  line-height: 1.08;
+  margin-bottom: .35em;
+  text-wrap: balance;
+}
+.article-head .subtitle {
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--quiet);
+  margin: 0;
+}
+
+/* In-article headings: markdown `#` renders as h1 — scale it as a
+   section heading, one step under the page title. */
+article h1,
+article h2 {
+  font-size: clamp(1.55rem, 3.4vw, 1.95rem);
+  margin-top: 2.4em;
+  margin-bottom: .65em;
+  scroll-margin-top: 2rem;
+  position: relative;
+}
+article h3 {
+  font-size: 1.25rem;
+  margin-top: 2em;
+  margin-bottom: .6em;
+}
+article h1 svg.rough-note,
+article h2 svg.rough-note {
+  position: absolute;
+  left: -2px;
+  bottom: -10px;
+  pointer-events: none;
+}
+
+/* --- Body copy: Czech typography --- */
+article {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+}
+article p {
+  margin-bottom: 1.25em;
+}
+
+/* --- Links: quiet underline that thickens on hover --- */
+article a,
+article a:visited {
+  color: var(--link);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .2s ease, color .2s ease;
+}
+article a:hover,
+article a:focus-visible {
+  background-size: 100% 2px;
+  color: #2e4555;
+}
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --- Blockquote: serif italic, hairline rule --- */
+article blockquote {
+  margin: 2em 0;
+  padding: .25em 0 .25em 1.4em;
+  border-left: 2px solid var(--line);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.12em;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* --- Figures + images --- */
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  border-radius: 4px;
+}
+article figure {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 0;
+  text-align: center;
+}
+article figure .rough-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+article figure svg.rough-note {
+  position: absolute;
+  inset: -7px;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  pointer-events: none;
+}
+article figcaption {
+  margin-top: .8rem;
+  font-size: .88rem;
+  line-height: 1.5;
+  color: var(--quiet);
+}
+
+/* --- Divider: thin rule; rough.js redraws it as a sketched line --- */
+article hr {
+  border: none;
+  height: 1px;
+  width: 38%;
+  margin: 3rem auto;
+  background: var(--line);
+}
+.rough-divider {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+/* --- Rough.js draw-on animation (paths get their length dashed in) --- */
+@media (prefers-reduced-motion: no-preference) {
+  svg.rough-note path {
+    stroke-dasharray: var(--len, 0);
+    stroke-dashoffset: var(--len, 0);
+    animation: rough-draw .5s ease-out forwards;
+  }
+}
+@keyframes rough-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* --- Misc --- */
+article ul,
+article ol {
+  padding-left: 1.4em;
+  margin-bottom: 1.25em;
+}
+article li {
+  margin-bottom: .35em;
+}

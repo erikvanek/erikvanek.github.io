@@ -2,7 +2,7 @@
 title: 'Retrospektiva studia: design na vlastní program'
 subtitle: 'Jak bychom mohli posunout DIS KISK zase o kus dál?'
 date: 2025-01-24
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
 permalink: /dis-kisk/{{page.fileSlug}}/

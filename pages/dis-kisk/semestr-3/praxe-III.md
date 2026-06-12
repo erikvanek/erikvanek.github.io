@@ -1,7 +1,7 @@
 ---
 title: 'Praxe III'
 date: 2024-02-04
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
 permalink: /dis-kisk/{{page.fileSlug}}/
