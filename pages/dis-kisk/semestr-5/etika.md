@@ -2,7 +2,7 @@
 title: 'Etika v designu: rozvaha nad Jarmilkou'
 subtitle: 'Co se stane, když se nástroj, který radí lidem v nouzi, splete?'
 date: 2026-01-20
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr5']
 permalink: /dis-kisk/{{page.fileSlug}}/

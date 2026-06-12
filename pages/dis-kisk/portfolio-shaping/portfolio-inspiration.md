@@ -98,3 +98,29 @@ Wired into `plan.md` at the points where each applies — pull it up at these mo
 - [Dive Club](https://www.dive.club/) · [all episodes](https://www.dive.club/episodes) · [Rethink your portfolio structure](https://www.dive.club/ideas/is-it-time-to-rethink-your-portfolio-structure) · [Showcasing work like a content creator](https://www.dive.club/ideas/showcasing-work) · [Video-first portfolio](https://www.dive.club/ideas/why-i-went-video-first-with-my-design-portfolio) · [Season 2 takeaways](https://www.dive.club/deep-dives/s2-takeaways) · [Ridd on X](https://x.com/ridd_design)
 - Portfolio episodes: [Tommy Smith — side projects → dream job](https://www.youtube.com/watch?v=TYUC5Bs5HvQ) ([tommysmith.co](https://tommysmith.co/)) · [Matt Sellers — top 1% portfolio](https://www.dive.club/deep-dives/matt-sellers) ([YouTube](https://www.youtube.com/watch?v=hI1vsPhHAFs))
 - [Rik Williams](https://rikwilliams.net/) · [Mehdi Bouakkadia](https://mehdib.me/projects) · [Zach Klein — Specialization is for insects](https://substack.zachklein.com/p/specialization-is-for-insects)
+
+---
+
+## §6 — Dive Club guest portfolios (researched 2026-06-12, last 5 relevant guests with live public portfolios)
+
+Verified from the show RSS (E159–E168, Apr–Jun 2026). Excluded: Batina (site private), Geoco (dead redirect), D'Arcy/Choi (no portfolio), Shipper (founder/writer). The five read end-to-end:
+
+| Guest (ep) | Site | What to steal |
+|---|---|---|
+| Ron Goldin (E168) | rongoldin.com | Project formula: bold name + impact subtitle + role sentence + outcome; "How I use AI" page as positioning device |
+| Andy Madrick (E166) | madrick.design | Case pages open with title + ONE role sentence before any narrative; flat descriptive card titles; small experiments beside big work with casual captions |
+| Rafa Conde (E163) | rafa.design | Origin-story blurbs (function + human spark); social proof as a sentence ("featured by…"), not logos; personality footer with buried easter eggs |
+| Brandon Jacoby (E161) | bravojuliett.com | One thesis tagline carries positioning ("Craft meets consequence"); live availability line; three-word nav |
+| Brian Lovin (E160) | brianlovin.com | List grammar: proper-noun title + one functional clause, two-tone text hierarchy (primary/secondary color, no size games); everything is a peer |
+
+Ranked takeaways for the cream/ink/amber wall + Czech articles (full report in session 2026-06-12):
+1. Tile grammar = title + one muted functional clause (Lovin) — ties to the parked chips revival (plan §6).
+2. **APPLIED 2026-06-12:** every key article opens with title + single role/context subtitle (Madrick) — added to praxe-IV, praxe-V, vyuka, cile-VI, erik-2023 (others already had one).
+3. Origin-story first lines in article intros (Rafa) — strongest voice fit; content-by-content, not a mass edit.
+4. Mixed tile weights: small experiments as equal citizens with casual captions (Madrick+Lovin) — post-exam.
+5. Status/thesis microline + availability line above the wall (Jacoby) — candidate for the commercial reuse.
+6. Outcome phrasing: role verb + consequence + year (Goldin) — for tile metadata and article closings.
+7. Social proof as inline sentence, not badges (Rafa) — already mostly Erik's style; keep.
+8. Per-project accent tint via data-attribute (Rafa) — would need care vs. the amber-discipline rule; parked.
+
+Meta-note: none of the five use heavy JS effects — hover = color/underline shifts. The warm-editorial register (cream/amber + DM Serif) is genuinely differentiated from what current Dive Club guests do; steal their copy discipline and structure, not their palettes.

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Hackaton</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,16 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="hackaton">Hackaton</h1>
-                
-                    <p class="subtitle">jako hutný zakončení prvního semestru</p>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="hackaton">Hackaton</h1>
+                    
+                        <p class="subtitle">jako hutný zakončení prvního semestru</p>
+                    
+                </header>
             
 
-            <p>Jedna z posledních aktivit, která mě v 1. semestru čekala, byla účast na společném hackatonu, do kterého jsme s týmem šli s <a href="https://kisk.phil.muni.cz/100metod/designova-vyzva" target="_blank">výzvou</a>, která se týkala zkompetentňování dospělých ve vztahu k duševnímu zdraví dětí ve věku cca 2. stupně základní školy.</p>
+            <article>
+                <p>Jedna z posledních aktivit, která mě v 1. semestru čekala, byla účast na společném hackatonu, do kterého jsme s týmem šli s <a href="https://kisk.phil.muni.cz/100metod/designova-vyzva" target="_blank">výzvou</a>, která se týkala zkompetentňování dospělých ve vztahu k duševnímu zdraví dětí ve věku cca 2. stupně základní školy.</p>
 <p>Vycházeli jsme <a href="https://nevypustdusi.cz/2023/10/20/dusevni-zdravi-zajima-dve-tretiny-deti-vysledky-noveho-pruzkumu-spolecnosti-t-mobile-organizace-nevypust-dusi-a-agentury-g82-ukazuji-ze-mladi-lide-hledaji-pomoc-hlavne-ve-svem-okoli/" target="_blank">ze</a> <a href="https://open.spotify.com/episode/30d7thGp3MoTEudV552wfM?si=84e5fcd5756b4096&amp;nd=1&amp;dlsi=b76848c375104871" target="_blank">spousty</a> <a href="https://www.nudz.cz/pro-media/tiskove-zpravy/narodni-monitoring-dusevniho-zdravi-deti-40-vykazuje-znamky-stredni-az-tezke-deprese-30-uzkosti-odbornici-pripravuji-preventivni-opatreni" target="_blank">dat</a>, která popisují špatný a postupně se zhoršující stav duševního zdraví u starších žáků základních škol. Zároveň jsme věděli, že se jedná o <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank">zašmodrchaný problém</a>, který bude náročný rozseknout v průběhu den a půl dlouhého setkání. V týmu lidí, kteří spolu nikdy pořádně nepracovali, s hodně narychlo spíchnutým výzkumem a taky možná s chutí se během těch dvou společných dní trošku spolu seznámit když už spolu studujeme a ještě víc než dva roky v tom chceme pokračovat.</p>
 <h2 id="jak-to-lo">Jak to šlo?</h2>
 <p>Když jsme si procházeli nasbíraná data - ať už ta získaná od stolu nebo v rámci rozhovorů provedených pár dní před hackatonem - dařilo se nám nacházet hodnotné tématické překryvy a potvrzovat dílčí hypotézy z různých zdrojů dat.</p>
@@ -62,8 +68,10 @@
 <li>Čím dál tím víc zjišťuju že je strašně důležité už i dílčí prototypy správně pojmenovávat. Nakolik může název <em>Školní pavučina vyspělosti</em> může působit na první pohled zajímavě a během hackatonového rauše to může působit jako dobrý nápad takhle prototyp pojmenovat, ve výsledku je to vlastně kontraproduktivní. Protože pokud se závěrečná prezentace nemá zvrhnout v nějakou bizarní frašku tak ten název prostě pro obecenstvo nezní přívětivě.</li>
 </ul>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

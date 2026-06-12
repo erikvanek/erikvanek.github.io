@@ -1,7 +1,8 @@
 ---
 title: 'Od výzkumu k workshopu s ministerským tajemnictvem'
+subtitle: 'Facilitoval jsem workshop pro tajemníky poloviny českých ministerstev - vyústění dvouleté výzkumné cesty'
 date: 2025-06-15
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr4']
 permalink: /dis-kisk/{{page.fileSlug}}/

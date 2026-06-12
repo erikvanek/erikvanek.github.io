@@ -1,7 +1,7 @@
 ---
 title: 'Reflexe studijních cílů 5. semestru'
 date: 2026-01-26
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr5']
 permalink: /dis-kisk/{{page.fileSlug}}/

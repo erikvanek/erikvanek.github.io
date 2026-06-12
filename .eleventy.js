@@ -112,6 +112,11 @@ module.exports = function (eleventyConfig) {
         "pages/assets/images": "assets/images"
     });
 
+    // Self-hosted webfonts (woff2 is not a template format)
+    eleventyConfig.addPassthroughCopy({
+        "pages/fonts": "fonts"
+    });
+
     let options = {
         html: true,
         breaks: true,

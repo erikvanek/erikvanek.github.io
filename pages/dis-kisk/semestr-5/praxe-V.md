@@ -1,7 +1,8 @@
 ---
 title: 'KISKED19 aneb Jak jsme inovovali s úřednictvem'
+subtitle: 'S Veronikou, Romanem a Danou jsme učili designové myšlení úředníky a úřednice - nejtěžší kurz, jaký jsem zatím vedl'
 date: 2026-01-18
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr5']
 permalink: /dis-kisk/{{page.fileSlug}}/

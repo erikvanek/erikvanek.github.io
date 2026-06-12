@@ -5,6 +5,37 @@ Inherits the repo-root [CLAUDE.md](../../CLAUDE.md). This file overrides where i
 
 ---
 
+## 0. Cold-start cheat sheet — "tweak X in my portfolio" (mobile sessions)
+
+Erik often dictates quick tweaks from his phone. Don't re-derive context — use this map, make the change, build, verify, report. Status of record: [`portfolio-shaping/plan.md`](./portfolio-shaping/plan.md).
+
+**Where things live (tweak X → edit Y):**
+
+| "I want to change…" | Edit |
+|---|---|
+| Grid content: add/remove/repoint a card, titles, links, photos | `cesta/cards.js` (data) |
+| Grid look: tiles, hover, shadows, entrance, mesh background | `cesta/cesta.css` |
+| Grid composition / rendering logic / rough quote borders | `cesta/index.html` (inline script) |
+| Article look: typography, colors, links, figures, progress line | `../css/dis-article.css` |
+| Article chrome: back-link, head, scripts | `../_includes/dis-article.njk` |
+| Article content | the `.md` file in `semestr-*/` (Czech, Erik's voice — see §5) |
+| Exam deck slides | `portfolio/index.html`; **source of truth first:** `portfolio-shaping/slides.yaml` |
+| rough.js easter eggs on articles | `../js/dis-flourish.js` |
+| Fonts (DM Serif Display + DM Sans, self-hosted) | `../fonts/fonts.css` |
+
+**Non-negotiables (break these and the session failed):**
+
+- **Never edit `docs/`** — build output. `yarn build` from repo root regenerates it.
+- **Legacy is frozen:** `index.html` (this dir) + `../css/dis.css` + layout `dis-kisk.njk` stay untouched. Articles use `dis-article.njk`.
+- **Amber `#C26818` = earned only** (medal, progress line) — never decoration. Palette: cream `#F4EFE5`, ink `#1C1812`, quiet `#7a7060`, links slate `#3E5A6E`.
+- Plain hyphen " - ", never em-dash. Czech content, English conversation.
+- Image paths absolute `/dis-kisk/img/…`, never relative.
+- New motion goes behind `@media (prefers-reduced-motion: no-preference)`.
+
+**Verify loop:** `yarn build` → grep the change in `docs/` → done. (Optional visual check: serve `docs/` and screenshot with headless Chrome.) Update `plan.md` if the change is a decision, not just execution.
+
+---
+
 ## 1. What this is
 
 Erik's study portfolio for the **DIS KISK** bachelor's program (Design informačních služeb, KISK FF MUNI).

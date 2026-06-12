@@ -2,7 +2,7 @@
 title: 'Aby to mamka nechtěla vypnout'
 subtitle: 'Jak by mohl vypadat digitální asistent pro orientaci v síti sociálních a zdravotních služeb?'
 date: 2025-01-31
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr3']
 permalink: /dis-kisk/{{page.fileSlug}}/

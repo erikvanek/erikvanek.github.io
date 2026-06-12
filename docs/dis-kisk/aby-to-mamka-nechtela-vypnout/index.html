@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs" data-theme="light">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Aby to mamka nechtěla vypnout</title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
     </head>
 
@@ -27,16 +28,21 @@
 
 
     <body>
-        <div id="wrapper">
+        <div class="progress" aria-hidden="true"></div>
+
+        <main id="wrapper">
             
-                <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
-                <h1 id="aby-to-mamka-nechtla-vypnout">Aby to mamka nechtěla vypnout</h1>
-                
-                    <p class="subtitle">Jak by mohl vypadat digitální asistent pro orientaci v síti sociálních a zdravotních služeb?</p>
-                
+                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="aby-to-mamka-nechtla-vypnout">Aby to mamka nechtěla vypnout</h1>
+                    
+                        <p class="subtitle">Jak by mohl vypadat digitální asistent pro orientaci v síti sociálních a zdravotních služeb?</p>
+                    
+                </header>
             
 
-            <style>
+            <article>
+                <style>
     /* full-width body figures opt out of the global dotted link border */
     .hero-figure a { border: none; border-radius: 0; padding: 0; }
     .hero-figure img { border-radius: 4px; box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
@@ -114,8 +120,10 @@
 <p><em>A taky díky Veronu, Baru i Andreo za interní design critique, která byla jedním z highlightů semestru, který můj návrh pomohl posunout o kus dál. Taky díky agentuře JINAG za možnost na projektu pracovat a všem, kdo si sedli k papírovému prototypu a poctivě nahlas přemýšleli - bez vás by Jarmilka zůstala jenom hezkým nápadem.</em></p>
 <p><strong><a href="/dis-kisk/thesis/">Detailněji popisuji průbeh projektu ve své bakalářské práci</a></strong></p>
 
-        </div>
+            </article>
+        </main>
 
-        <script src="" async defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

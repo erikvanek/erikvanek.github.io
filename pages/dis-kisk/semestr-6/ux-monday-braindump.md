@@ -1,7 +1,7 @@
 ---
 title: 'UX Monday brain dump (vstup)'
 date: 2026-04-12
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr6', 'brain-dump']
 permalink: /dis-kisk/{{page.fileSlug}}/

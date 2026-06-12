@@ -1,7 +1,7 @@
 ---
 title: 'Reflexe studijních cílů 4. semestru'
 date: 2025-06-15
-layout: dis-kisk.njk
+layout: dis-article.njk
 hideNavigation: true
 tags: ['dis', 'semestr4']
 permalink: /dis-kisk/{{page.fileSlug}}/
