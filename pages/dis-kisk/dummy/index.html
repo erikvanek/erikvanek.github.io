@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dummy — generativní pozadí (sense-making board)</title>
+<style>
+  /* /dis-kisk/dummy/ — EXPLORATION surface for a generative "sense-making board" background.
+     Black & white for now. Procedurally each load: 8–12 CLUSTERS of 4–10 opaque, slightly
+     overlapping post-its, each lassoed by a hand-drawn sharpie loop; clusters joined by
+     arrows / dashed lines. Brush/variable-width look (filled outline ribbons). Later: colour,
+     opacity layering, animation. All logic in window.PlayBG so it can become a module. */
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; height:100%; }
+  body{ background:#ffffff; overflow:hidden; font-family:Inter, system-ui, sans-serif; }
+  #bg{ position:fixed; inset:0; display:block; }
+  .hint{ position:fixed; left:14px; bottom:12px; z-index:10; font-size:12px; letter-spacing:.02em;
+         color:#9a948a; user-select:none; pointer-events:none; }
+  .hint b{ color:#1c1812; font-weight:600; }
+  .count{ position:fixed; right:14px; bottom:12px; z-index:10; font-size:12px;
+          color:#c9c3b8; user-select:none; pointer-events:none; }
+</style>
+</head>
+<body>
+<svg id="bg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+<div class="hint">sense-making board · klikni nebo zmáčkni <b>R</b> pro nové rozvržení</div>
+<div class="count" id="count"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var INK  = '#141414';
+  var PAGE = '#ffffff';
+  var GRAYS = ['#e6e6e6','#ebebeb','#f0f0f0','#e9e9e9','#ededed'];  // opaque card tones (B&W)
+
+  /* ---------- random helpers ---------- */
+  var rnd = function(a,b){ return a + Math.random()*(b-a); };
+  var pick = function(a){ return a[(Math.random()*a.length)|0]; };
+  var chance = function(p){ return Math.random() < p; };
+  var lerp = function(p,q,t){ return [p[0]+(q[0]-p[0])*t, p[1]+(q[1]-p[1])*t]; };
+  var f2 = function(p){ return p[0].toFixed(1)+' '+p[1].toFixed(1); };
+
+  /* ---------- geometry: bezier sampling + variable-width "brush" ribbon ----------
+     SVG stroke-width is constant, so a brush stroke is faked as a FILLED outline:
+     sample a centerline, offset it left/right by a width profile, close the ring. */
+  function bez(p0,p1,p2,p3,t){
+    var u = 1-t;
+    return [ u*u*u*p0[0] + 3*u*u*t*p1[0] + 3*u*t*t*p2[0] + t*t*t*p3[0],
+             u*u*u*p0[1] + 3*u*u*t*p1[1] + 3*u*t*t*p2[1] + t*t*t*p3[1] ];
+  }
+  function sampleBeziers(segs, per){
+    var pts = [];
+    for(var si=0; si<segs.length; si++){
+      var s = segs[si], start = si===0 ? 0 : 1;
+      for(var i=start; i<=per; i++) pts.push(bez(s[0],s[1],s[2],s[3], i/per));
+    }
+    return pts;
+  }
+  function ss(e0,e1,x){ var t=Math.max(0,Math.min(1,(x-e0)/(e1-e0))); return t*t*(3-2*t); }
+
+  function ribbon(pts, hwFn){
+    var n=pts.length, left=[], right=[];
+    for(var i=0;i<n;i++){
+      var t = i/(n-1);
+      var a = pts[Math.max(0,i-1)], b = pts[Math.min(n-1,i+1)];
+      var tx=b[0]-a[0], ty=b[1]-a[1], len=Math.hypot(tx,ty)||1; tx/=len; ty/=len;
+      var nx=-ty, ny=tx, hw=hwFn(t);
+      left.push([pts[i][0]+nx*hw, pts[i][1]+ny*hw]);
+      right.push([pts[i][0]-nx*hw, pts[i][1]-ny*hw]);
+    }
+    var ring = left.concat(right.reverse()), d='M'+f2(ring[0]);
+    for(var j=1;j<ring.length;j++) d += 'L'+f2(ring[j]);
+    return d+'Z';
+  }
+
+  /* width profiles */
+  var taperBoth = function(max,end,tip){ end=end||0.18; tip=tip||0.3;
+    return function(t){ return max*(tip+(1-tip)*Math.min(ss(0,end,t), ss(1,1-end,t))); }; };
+  var taperTip = function(max,minEnd){ minEnd=minEnd||0.14;
+    return function(t){ return max*(1-(1-minEnd)*ss(0.45,1,t))*(0.4+0.6*ss(0,0.08,t)); }; };
+
+  /* straight brush stroke between two points */
+  function stroke(p,q,hw,prof){
+    var dx=q[0]-p[0], dy=q[1]-p[1];
+    return ribbon(sampleBeziers([[p,[p[0]+dx*0.33,p[1]+dy*0.33],[p[0]+dx*0.66,p[1]+dy*0.66],q]],14), prof||taperBoth(hw));
+  }
+
+  /* ---------- post-it: an OPAQUE card (varied gray) + hand-drawn ink border ---------- */
+  function mkPostit(cx,cy,s,rot){
+    var out=[], c=Math.cos(rot), sn=Math.sin(rot);
+    var R=function(dx,dy){ return [cx+dx*c-dy*sn, cy+dx*sn+dy*c]; };
+    var w=s, h=s*rnd(0.9,1.08);
+    var TL=R(-w,-h), TR=R(w,-h), BR=R(w,h), BL=R(-w,h);
+    out.push({ d:'M'+f2(TL)+'L'+f2(TR)+'L'+f2(BR)+'L'+f2(BL)+'Z', fill:pick(GRAYS) });   // opaque fill
+    var hw=Math.max(1.0, s*0.045);   // thinner ink border
+    var edges=[[TL,TR],[TR,BR],[BR,BL],[BL,TL]];
+    for(var i=0;i<4;i++){
+      var p=edges[i][0], q=edges[i][1], dx=q[0]-p[0], dy=q[1]-p[1];
+      var p2=[p[0]-dx*0.03,p[1]-dy*0.03], q2=[q[0]+dx*0.04,q[1]+dy*0.04];
+      out.push({ d:ribbon(sampleBeziers([[p2,lerp(p2,q2,0.33),lerp(p2,q2,0.66),q2]],12), taperBoth(hw,0.12,0.6)), fill:INK });
+    }
+    return out;
+  }
+
+  /* ---------- sharpie lasso: an ORGANIC blob (lobed / cloud-like), not a circle ----------
+     radius varies by angle via a few harmonics; thin line with hand-written pressure
+     (smooth low-freq width variation) + loose ends that overshoot and cross. */
+  function blobLoop(cx,cy,baseR,aspect){
+    var hw=rnd(1.8,2.6);                                   // thinner than a marker circle
+    var lobes=3+((Math.random()*4)|0);                     // 3..6 bulges
+    var amp=rnd(0.08,0.22);                                // how organic / cloud-like
+    var k2=lobes+1+((Math.random()*2)|0), a2=amp*rnd(0.35,0.65), p1=rnd(0,6.28), p2=rnd(0,6.28);
+    var ea=rnd(0.03,0.10), ep=rnd(0,6.28);                 // gentle ellipticity (2 lobes)
+    var start=rnd(-Math.PI,Math.PI), sweep=Math.PI*2+rnd(0.18,0.55);
+    // hand-written pressure wave — smooth, low frequency, precomputed coefficients
+    var A=rnd(0.20,0.34), B=rnd(0.08,0.18), pf1=rnd(2,4), pf2=rnd(5,8), pp1=rnd(0,6.28), pp2=rnd(0,6.28);
+    var n=170, pts=[];
+    for(var i=0;i<=n;i++){
+      var t=i/n, a=start+sweep*t;
+      var rr=baseR*(1 + amp*Math.sin(lobes*a+p1) + a2*Math.sin(k2*a+p2) + ea*Math.sin(2*a+ep));
+      pts.push([cx+Math.cos(a)*rr*aspect, cy+Math.sin(a)*rr/aspect]);
+    }
+    return { d:ribbon(pts, function(t){
+      var e=Math.min(ss(0,0.05,t), ss(1,0.95,t));          // taper the loose ends
+      var pr=0.7 + A*Math.sin(t*Math.PI*2*pf1+pp1) + B*Math.sin(t*Math.PI*2*pf2+pp2);
+      if(pr<0.3) pr=0.3;
+      return hw*(0.45+0.55*e)*pr;
+    }), fill:INK };
+  }
+
+  /* ---------- arrowhead (returns {d,fill} parts) ---------- */
+  function arrowhead(tip,dirRad,size,spreadDeg,hw){
+    var sp=spreadDeg*Math.PI/180, out=[], offs=[sp,-sp];
+    for(var i=0;i<2;i++){
+      var a=dirRad+offs[i], base=[tip[0]-Math.cos(a)*size, tip[1]-Math.sin(a)*size];
+      out.push({ d:ribbon(sampleBeziers([[base,lerp(base,tip,0.5),tip,tip]],16), taperBoth(hw,0.25,0.3)), fill:INK });
+    }
+    return out;
+  }
+
+  /* ---------- connector between clusters: arrow / dashed-arrow / plain dashed line ---------- */
+  function mkConnector(x0,y0,x1,y1,kind,tcx,tcy){
+    var out=[], hw=rnd(2.8,4.2);
+    var dx=x1-x0, dy=y1-y0, len=Math.hypot(dx,dy)||1, nx=-dy/len, ny=dx/len, pts;
+    if(kind==='curve'){
+      var bow=rnd(0.10,0.22)*len*(chance(0.5)?1:-1);
+      pts=sampleBeziers([[[x0,y0],[x0+dx*0.33+nx*bow,y0+dy*0.33+ny*bow],[x0+dx*0.66+nx*bow,y0+dy*0.66+ny*bow],[x1,y1]]],56);
+    } else {
+      pts=sampleBeziers([[[x0,y0],[x0+dx*0.33,y0+dy*0.33],[x0+dx*0.66,y0+dy*0.66],[x1,y1]]],44);
+    }
+    var B=pts[pts.length-1], P=pts[pts.length-2];
+    // head aims at the target CENTRE (tcx,tcy) so it points INTO the cluster, never glances off.
+    var dirRad=(tcx!==undefined) ? Math.atan2(tcy-B[1], tcx-B[0]) : Math.atan2(B[1]-P[1], B[0]-P[0]);
+    if(kind==='dashed' || kind==='plaindash'){
+      var per=3;
+      for(var i=0; i+per < pts.length-2; i+=per+2)
+        out.push({ d:ribbon(pts.slice(i,i+per+1), taperBoth(hw*0.9,0.2,0.6)), fill:INK });
+    } else {
+      out.push({ d:ribbon(pts, taperTip(hw)), fill:INK });
+    }
+    if(kind!=='plaindash') out.push.apply(out, arrowhead(B, dirRad, rnd(15,22), rnd(24,30), hw*0.95));
+    return out;
+  }
+
+  /* ---------- one cluster: 4–10 overlapping opaque post-its + a sharpie lasso ---------- */
+  function mkCluster(cx,cy,rTarget){
+    var out=[], n=4+((Math.random()*7)|0);                 // 4..10
+    var sBase=rnd(20,27);                                  // post-its a touch bigger
+    var spreadX=rTarget*0.58, spreadY=spreadX*rnd(0.80,0.92);
+    // place loosely with anti-overlap so ≥~85% of each post-it stays visible
+    var placed=[], attempts=0;
+    while(placed.length<n && attempts<n*45){
+      attempts++;
+      var ang=rnd(0,Math.PI*2), rr=Math.sqrt(Math.random());
+      var px=cx+Math.cos(ang)*spreadX*rr, py=cy+Math.sin(ang)*spreadY*rr;
+      var s=sBase*rnd(0.9,1.1), bad=false;
+      for(var q=0;q<placed.length;q++){
+        if(Math.hypot(placed[q].px-px, placed[q].py-py) < (placed[q].s+s)*0.92){ bad=true; break; }
+      }
+      if(!bad) placed.push({ px:px, py:py, s:s, rot:rnd(-0.22,0.22) });
+    }
+    placed.sort(function(a,b){ return a.py-b.py; });        // lower cards painted later -> on top
+    var ext=0;
+    for(var j=0;j<placed.length;j++){
+      var it=placed[j];
+      out.push.apply(out, mkPostit(it.px,it.py,it.s,it.rot));
+      ext=Math.max(ext, Math.hypot(it.px-cx, it.py-cy) + it.s*1.45);
+    }
+    var baseR=Math.max(ext+rnd(14,26), rTarget*0.78);       // blob hugs the post-it extent
+    out.push(blobLoop(cx,cy, baseR, rnd(0.9,1.15)));
+    return { marks:out, count:placed.length };
+  }
+
+  /* ---------- generator ---------- */
+  function generate(W,H){
+    var nodes=[], clusterMarks=[], conn=[], postits=0;
+    var target=8+((Math.random()*5)|0), tries=0;           // 8..12 clusters
+    // size clusters so they collectively cover ~60% of the screen (board-screenshot feel)
+    var rTarget=Math.sqrt(0.60 * W*H / target / Math.PI);
+
+    while(nodes.length<target && tries<target*120){
+      tries++;
+      var r=rTarget*rnd(0.9,1.08);
+      var cx=rnd(r*0.7, W-r*0.7), cy=rnd(r*0.7, H-r*0.7);   // centres can sit near edges -> blobs bleed off, like a crop
+      var ok=true;
+      for(var j=0;j<nodes.length;j++){
+        if(Math.hypot(nodes[j].x-cx, nodes[j].y-cy) < (nodes[j].r+r)*0.86){ ok=false; break; }  // lassos may kiss/cross slightly
+      }
+      if(ok) nodes.push({ x:cx, y:cy, r:r, deg:0 });
+    }
+
+    for(var k=0;k<nodes.length;k++){
+      var res=mkCluster(nodes[k].x, nodes[k].y, nodes[k].r);
+      clusterMarks=clusterMarks.concat(res.marks); postits+=res.count;
+    }
+
+    // does the straight a→b path pass through some OTHER cluster?
+    function segHits(ax,ay,bx,by,iA,iB){
+      var vx=bx-ax, vy=by-ay, L2=vx*vx+vy*vy||1;
+      for(var i=0;i<nodes.length;i++){
+        if(i===iA||i===iB) continue;
+        var nn=nodes[i], tt=((nn.x-ax)*vx+(nn.y-ay)*vy)/L2; tt=Math.max(0,Math.min(1,tt));
+        if(Math.hypot(nn.x-(ax+vx*tt), nn.y-(ay+vy*tt)) < nn.r) return true;
+      }
+      return false;
+    }
+
+    // connect near clusters: shortest pairs first, ≤2 per cluster, no routing through a third
+    var pairs=[];
+    for(var a=0;a<nodes.length;a++) for(var b=a+1;b<nodes.length;b++){
+      var d=Math.hypot(nodes[a].x-nodes[b].x, nodes[a].y-nodes[b].y), rr=nodes[a].r+nodes[b].r;
+      if(d > rr*0.96 && d < rr+200) pairs.push({a:a,b:b,d:d});   // only link clusters that are actually apart
+    }
+    pairs.sort(function(p,q){ return p.d-q.d; });
+    for(var pi=0; pi<pairs.length; pi++){
+      var A=nodes[pairs[pi].a], B=nodes[pairs[pi].b];
+      if(A.deg>=2 || B.deg>=2) continue;
+      if(segHits(A.x,A.y,B.x,B.y, pairs[pi].a, pairs[pi].b)) continue;
+      var dx=B.x-A.x, dy=B.y-A.y, dd=Math.hypot(dx,dy)||1, ux=dx/dd, uy=dy/dd;
+      var sx=A.x+ux*A.r, sy=A.y+uy*A.r, ex=B.x-ux*B.r, ey=B.y-uy*B.r;
+      conn=conn.concat(mkConnector(sx,sy,ex,ey, pick(['straight','curve','curve','dashed','plaindash']), B.x, B.y));
+      A.deg++; B.deg++;
+    }
+
+    window.__counts={ clusters:nodes.length, postits:postits };
+    return conn.concat(clusterMarks);    // arrows behind, clusters on top (arrows tuck under loops)
+  }
+
+  /* ---------- render into the fixed full-bleed SVG ---------- */
+  function render(){
+    var svg=document.getElementById('bg');
+    var W=window.innerWidth, H=window.innerHeight;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.setAttribute('width',W); svg.setAttribute('height',H);
+    var ds=generate(W,H), s='';
+    for(var i=0;i<ds.length;i++) s+='<path d="'+ds[i].d+'" fill="'+ds[i].fill+'"/>';
+    svg.innerHTML=s;
+    var cEl=document.getElementById('count');
+    if(cEl && window.__counts) cEl.textContent=window.__counts.clusters+' clusters · '+window.__counts.postits+' post-its';
+  }
+
+  var dbT;
+  function debounced(){ clearTimeout(dbT); dbT=setTimeout(render,200); }
+
+  window.PlayBG = { generate: generate, render: render };
+  render();
+  window.addEventListener('resize', debounced);
+  document.addEventListener('click', render);
+  document.addEventListener('keydown', function(e){ if(e.key==='r'||e.key==='R') render(); });
+})();
+</script>
+</body>
+</html>
