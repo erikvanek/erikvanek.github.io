@@ -12,7 +12,7 @@ V lednu 2025 jsme se na závěrečném setkání všech tří ročníků v Brně
 
 Připravoval a vedl jsem ho společně s Veronikou Dufek a Barborou Obračajovou.
 
-<figure>
+<figure class="hero-figure">
   <a href="/dis-kisk/img/retro.png" target="_blank" rel="noopener">
     <img src="/dis-kisk/img/retro.png" alt="Účastníci a účastnice retrospektivního workshopu před stěnou polepenou lepíky, Brno, leden 2025" />
   </a>
@@ -27,6 +27,14 @@ Cíle jsme si dali čtyři: vytvořit prostor pro meziroční sdílení a síťo
 
 ## Jak jsme to pojali
 
+<div class="float-wrap">
+<figure class="float-figure">
+<a href="/dis-kisk/cesta/img/retro-2.jpg" target="_blank" rel="noopener">
+<img src="/dis-kisk/cesta/img/retro-2.jpg" alt="Účastníci a účastnice workshopu uprostřed sdílecí aktivity, Brno, leden 2025" />
+</a>
+<figcaption>Workshop v plném proudu. (Klikni pro plné rozlišení.)</figcaption>
+</figure>
+
 Postavili jsme zhruba tříhodinový workshop pro dvacet až třicet lidí namíchaných napříč ročníky. Dramaturgie šla ve třech vlnách:
 
 - **Retrospektiva.** Nejdřív jsme zmapovali, co koho během studia pálí - lepíky na stěnu a sdílecí aktivita ve stylu „ano, a…“, kdy si lidi navzájem rozvíjeli nápady místo aby je shazovali.
@@ -35,7 +43,17 @@ Postavili jsme zhruba tříhodinový workshop pro dvacet až třicet lidí namí
 
 Vlastnictví bloků jsme si rozdělili - já vzal úvod a futuring, Veru a Baru zbytek. Sáhli jsme po nástrojích z vlastního arzenálu (design studio, futuring, lepíkové mapování), což byla zároveň hezká ukázka toho, že ty metody fakt umíme použít, ne o nich jen mluvit.
 
+</div>
+
 ## Co z toho vzešlo
+
+<div class="float-wrap">
+<figure class="float-figure">
+<a href="/dis-kisk/cesta/img/retro-3.jpg" target="_blank" rel="noopener">
+<img src="/dis-kisk/cesta/img/retro-3.jpg" alt="Stěna polepená barevnými lepíky se scénáři budoucnosti studia, Brno, leden 2025" />
+</a>
+<figcaption>Burza budoucností - stěna plná scénářů, jak by mohlo studium vypadat.</figcaption>
+</figure>
 
 Z retrospektivy a sdílení vykrystalizovalo pět stěžejních témat, z nichž každé jsme rozpracovali do prvních nápadů:
 
@@ -46,3 +64,5 @@ Z retrospektivy a sdílení vykrystalizovalo pět stěžejních témat, z nichž
 5. **Týmovost a vizibilita** - průběžně dotvářené textové medailonky a „pavouci“ kompetencí, abychom věděli, kdo co umí, a víc se učili jeden od druhého.
 
 Nešlo o to všechno na místě vyřešit, ale pojmenovat to, setřídit a dát tomu první akční obrysy. Hmatatelným výstupem byla sada konkrétních návrhů s kroky, znatelně silnější vazby napříč ročníky a podklady, se kterými může program dál pracovat - a hlavně parta studujících, která se k vlastnímu programu postavila jako spolutvůrci, ne jen jako konzumenti.
+
+</div>

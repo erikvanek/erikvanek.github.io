@@ -32,14 +32,77 @@
                 <a href="/dis-kisk" style="margin-top: 1rem; background-color: rgba(255, 255, 255, 0.8)" class="expandable">← DIS portfolio</a>
                 <h1 id="ostrovy-pozitivn-inovace">Ostrovy pozitivní inovace</h1>
                 
+                    <p class="subtitle">Jak fungují týmy, které úspěšně transformují státní správu?</p>
+                
             
 
-            <p><marquee behavior="alternate">🔥 🔥 🔥 BANGER ALERT 🔥 🔥 🔥</marquee></p>
+            <style>
+    #wrapper { align-items: baseline; }
+
+    /* block context so float:right works (the flex #wrapper ignores float on its items) */
+    .intro-wrap { width: 100%; overflow: hidden; }
+
+    .cover-aside { float: right; width: clamp(220px, 32vw, 300px); margin: .3rem 0 1.2rem 1.8rem; }
+    .cover-aside img { display: block; width: 100%; height: auto; border-radius: 4px;
+                       box-shadow: 0 8px 28px rgba(0, 0, 0, .28); transition: transform .15s ease, box-shadow .15s ease; }
+    /* the cover's links opt out of the global dotted link border */
+    .cover-aside a { border: none; border-radius: 0; padding: 0; }
+    .cover-aside a:hover img { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(0, 0, 0, .34); }
+    .cover-aside figcaption a { color: var(--gray-color); font-weight: 600; }
+    .cover-aside figcaption a:hover { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+        .cover-aside { float: none; width: min(280px, 70%); margin: 0 auto 1.4rem; }
+    }
+</style>
+<div class="intro-wrap">
+<figure class="cover-aside">
+<a href="https://www.inovacnitymystatnispravy.cz/" target="_blank" rel="noopener" aria-label="Otevřít studii na inovacnitymystatnispravy.cz">
+<img src="/dis-kisk/img/inovativni-tymy-cover.png" alt="Obálka studie Jak fungují týmy, které úspěšně transformují státní správu ČR" />
+</a>
+<figcaption>
+<a href="https://www.inovacnitymystatnispravy.cz/" target="_blank" rel="noopener">Celá studie online na inovacnitymystatnispravy.cz</a>
+</figcaption>
+</figure>
+<p>Česká státní správa může působit jako těžkopádné a byrokratické místo, kde se změny prosazují jen ztěžka. Část té setrvačnosti dává smysl - dobře nastavené, byť zdlouhavé, procesy drží stát stabilní. Jenže ve chvíli, kdy je potřeba rychlá reakce nebo zavádění inovací, se ta samá těžkopádnost stává přítěží.</p>
+<p>A přesto lze ve veřejné správě narazit na týmy a jednotlivce, které pracují jinak. Neřídí se zažitými pravidly, volí ambicióznější cíle a mění systém zevnitř. Je jich málo - jsou to takové <strong>ostrůvky pozitivní deviace</strong> uprostřed moře zaběhaných postupů. A přesně ty nás s našim výzkumným týmem zajímaly.</p>
+<p>Ve 2. semestru na KISKu jsem se s <strong>Drýmtýmem</strong> - Františkem Pfannem, Johanou Šperlovou a Veronikou Dufek - rozhodl tyhle ostrůvky zmapovat. Z našeho zájmu vznikla <a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">studie popisující jak takové týmy ve veřejné správě fungují</a>, která se postupně proměnil v páteř celého druhého semestru. Cílem studie bylo nalézt odpověď na otázku <strong>Jak fungují týmy, které úspěšně transformují státní správu?</strong></p>
+</div>
+<h1 id="pro-zrovna-tohle">Proč zrovna tohle?</h1>
+<p>Naším cílem nebylo říkat státu, jak má pracovat. Chtěli jsme nejdřív pochopit a popsat, <strong>jak tyto specifické týmy a jednotlivci dnes fungují</strong> - co jim umožňuje měnit své okolí a co k tomu reálně potřebují. Bavili jsme se o náboru nových lidí do týmu, vedení, důvěře, vzdělávání, vztazích i o podpoře shora. Zkrátka o tom, co dělá z party úředníků a úřednic tým, který dokáže pohnout systémem.</p>
+<p>Na začátku jsme málem utonuli v šíři tématu. Náš mentor Josef Kocurek nám tehdy napsal poznámku, na kterou jsem od té doby vzpomněl mockrát: <em>&quot;Vykašlete se na řešení a zaměřte se na potřeby, chování a očekávání lidí. Dejte do toho víc zvědavosti.&quot;</em> Bylo to přesně to nasměrování, které jsme potřebovali - z přechodu od &quot;jak to opravit&quot; na &quot;jak to doopravdy je&quot;.</p>
+<h1 id="jak-jsme-na-to-li">Jak jsme na to šli</h1>
+<p>Začali jsme tím, že jsme si ujasnili, <strong>co nás vlastně zajímá</strong>. Téma inovací ve státní správě je obrovské a snadno se v něm utopíte, takže jsme dost času věnovali zúžení a definici zadání. Pomohl nám k tomu <strong>výzkum od stolu</strong> (inspirovali jsme se mimo jiné knihou Christiana Basona <em>Leading public sector innovation</em>, McKinsey reportem <em>Delivering for citizens</em> a frameworkem <em>Human learning systems</em>) a <strong>pět rozhovorů se stakeholdery</strong> se zástupci organizací, které se transformací státu dlouhodobě zabývají - Byro, GovLab, České priority.</p>
+<p>Z toho jsme s pomocí UX research canvasu vydestilovali <strong>výzkumný brief</strong> a tři otázky, které nás odsud vedly:</p>
+<ol>
+<li>Jak fungují týmy, které úspěšně transformují státní správu?</li>
+<li>Za jakých okolností tyto týmy vznikají?</li>
+<li>Co jim transformaci umožňuje?</li>
+</ol>
+<p>S jasným zadáním jsme začali <strong>shánět respondenty a vést rozhovory</strong>. Dohromady jsme udělali <strong>14 polostrukturovaných hloubkových rozhovorů</strong> napříč ministerstvy i jimi zřízenými organizacemi (jaro 2024, většinou online, 60-120 minut na rozhovor). Participantstvo pro výzkum jsme nabírali organicky pomocí tzv. snowball sampling. Z původních doporučení se nám nasbíralo 30 jmen ze 14 institucí, z nichž jsme vyzpovídali 14 lidí ze 13 různých týmů.</p>
+<p>Když jsme měli rozhovory za sebou, přišlo to nejnáročnější: <strong>sense-making a tvorba výsledné studie</strong>. Okódovali jsme 525 segmentů textu, rozdělili je podle četnosti a příbuznosti do čtyř kategorií (Interní procesy a rozvoj, Lidské zdroje a vedení, Komunikace a vztahy, Strategie a podpora) a přes několik kol shlukování, přepisování a připomínkování dospěli k sadě <strong>12 zjištění</strong>.</p>
+<p>Největší lekcí z celého procesu pro mě bylo zjištění, že nalézt smysl v objmném balíku kvalitativních dat je <strong>časově nesmírně náročná práce</strong>. Zároveň pro nás bylo v průběhu semestru náročné dělat v procesu potřebné iterace a získat větší odstup nad zkoumanými daty. Zároveň věřím, že zrovna taková &quot;kreativní omezení&quot; simulují běžnou realitu takové práce na mimo-školních projektech. V navazující <a href="/ta-24">přednášce</a>{target=&quot;<em>blank&quot;}</em>, kterou jsem v naší semestrální konferenci popisoval detaily toho, jak jsme uchopili téma tématické analýzy v této práci.</p>
+<h1 id="co-z-toho-vylo">Co z toho vyšlo</h1>
+<p>Když to mám shrnout do jedné věty: <strong>úspěšná transformace státu stojí na odolných, dobře vedených týmech s jasnou vizí, vzájemnou důvěrou a podporou shora.</strong> Pod tou větou se ale skrývá dvanáct konkrétnějších zjištění:</p>
 <ul>
-<li>projekt do <a href="https://is.muni.cz/predmet/1421/DESB23?lang=cs&amp;obdobi=9124" target="_blank">kvalitativního výzkumu</a></li>
-<li>Detaily <strong>TBD</strong> protože potřebujeme nějaké věci ještě zautorizovat</li>
-<li>Hledali jsme odpověď na otázku Jak fungují týmy, které <strong>úspěšně transformují</strong> státní správu?</li>
+<li><strong>Nábor stojí na síťování a silné vizi.</strong> Tabulkové platy nikoho nepřetáhnou - inovativní týmy lákají lidi na smysl, unikátní projekty a partu, ke které se chcete přidat. <em>&quot;Je to taková sněhová koule. Když už sem někdo přijde a vidí, že to tady dává nějaký smysl, tak přivede někoho dalšího, koho zná.&quot;</em></li>
+<li><strong>Aktivní práce s cíli tým utužuje.</strong> Velkým abstraktním vizím chybí &quot;střední článek&quot; - rozpad na konkrétní kroky. Týmy si ho doplňují samy a posiluje to jejich tah na branku.</li>
+<li><strong>Motivace = dopad, zajímavá práce, atmosféra.</strong> Ne peníze. Smysluplnost a dobrý kolektiv drží lidi na místě víc než cokoliv jiného.</li>
+<li><strong>Důvěra a prostor pro chyby jsou podhoubí inovací.</strong> <em>&quot;Nebojím se v týmu říct, co mě napadne, i kdyby to měla být blbost, vím, že se nic nestane.&quot;</em> Vedení tu funguje jako ochranný štít, ne jako kontrolor.</li>
+<li><strong>Vedou je odolní a odvážní manažeři a manažerky.</strong> Často se zkušeností ze zahraničí nebo mimo stát, kteří aktivně nahrazují kontrolu důvěrou.</li>
+<li><strong>Sebeřízení a vnitřní znalost systému pomáhají při efektivním řízení týmů.</strong> Ploché struktury, krátké připravené porady, agenda vlastněná jednotlivci a mikrotýmy.</li>
+<li><strong>Využívání principů učící se organizace.</strong> Vzájemné vzdělávání a samostudium nahrazují neefektivní &quot;kampaňovitá školení&quot; personálních oddělení.</li>
+<li><strong>Silné mezilidské vztahy zvyšují výkon.</strong> Dobrá &quot;chemie&quot; uvnitř a laskavá, pokorná komunikace napříč odděleními.</li>
+<li><strong>Filtrování informací dává týmu svobodu.</strong> Manažerky tlumí byrokratický šum - ale opatrně, aby tým neizolovaly od zbytku instituce.</li>
+<li><strong>Vztahy napříč institucemi pomáhají dvakrát.</strong> K vlastním cílům i jako sebepéče - sdílení frustrace s podobně smýšlejícími je podle respondentů &quot;téměř doslova terapeutické&quot;.</li>
+<li><strong>Bez podpory shora to nejde.</strong> <em>&quot;Tvářit se, že něco změníme zdola, je definice revoluce.&quot;</em> Někdy ale stačí, když ti nahoře naslouchají a mají vůli.</li>
+<li><strong>Týmy na zelené louce mají největší volnost.</strong> Vznikají ze systémových, politických nebo vnějších impulzů a jako nezatížené zvyky si můžou nastavit fungování po svém.</li>
 </ul>
+<p>Vědomě jsme snažili naše zjištění nezobecňovali - 14 lidí není reprezentativní vzorek a my to v textu přiznáváme. Bereme studii jako <strong>sondu do žité zkušenosti</strong> těchto týmů, ne jako zákon, který nutně platí všude. I tak ale věřím, že text může být inspirací pro každého, kdo chce ve státní správě vytvářet prostředí víc nakloněné inovacím.</p>
+<h1 id="co-se-dlo-pot">Co se dělo poté?</h1>
+<p>Studii jsme koncem roku 2024 finalizovali a začátkem roku 2025 <strong>digitálně publikovali</strong> - celá je k přečtení na <a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">inovacnitymystatnispravy.cz</a>.</p>
+<p>A pak se stala věc, kterou lze jen těžko předem naplánovat – výzkum se dostal až k nejvyššímu tajemníkovi pro státní službu. Z toho vznikl <strong><a href="/dis-kisk/praxe-IV/">workshop pro tajemnictvo ministerstev</a></strong> - úplně organické pokračování, kde jsme zjištění ze studie přetavili do praktického formátu přímo pro lidi, kteří českou státní správu vedou. Ale to už je jiný příběh.</p>
+<p><em>Díky Frantovi, Johance a Veru za parťáctví, Josefovi Kocurkovi za rigorózní základ kvalitativního výzkumu a Jitce Bartošové za průběžné mentorování. A díky všem inovátorkám a inovátorům ze státní správy, kteří si na nás udělali čas a pustili nás k sobě.</em></p>
 
         </div>
 
