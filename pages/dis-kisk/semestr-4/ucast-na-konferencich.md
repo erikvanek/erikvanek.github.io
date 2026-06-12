@@ -25,7 +25,7 @@ ZDW pro mě nebyl jen o získávání nových poznatků – stal se prostorem, k
 {% assign title = 'Plakát lákající návštěvnictvo Zlína na ZDW' %}
 {% render 'figure.njk', path: path, title: title, class: 'narrow' %} 
 
-# Design Kantýna: Proč je důležité mluvit o veřejné správě
+# Design Kantýna: Proč je důležité mluvit o veřejné správě {#design-kantyna}
 
 Jedním z hlavních důvodů, proč jsem se na ZDW těšil, byla možnost aktivní participace v panelové diskuzi v rámci **Design Kantýny** jako host [panelu o designu inovací ve veřejném sektoru](https://zlindesignweek.com/2025/design-kantyna/){target="_blank"}. Po tom, co jsme začátkem roku s týmem [publikovali výzkum inovativních týmů ve státní správě](https://www.inovacnitymystatnispravy.cz/){target="_blank"} a následně v květnu organizovali [workshop pro tajemnictvo ministerstev](/dis-kisk/praxe-IV/){target="_blank"}, jsem měl o čem povídat.
 

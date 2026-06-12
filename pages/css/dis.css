@@ -23,6 +23,10 @@
     --s6-color: #4b2;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--dark-color);
     font-size: 20px;
