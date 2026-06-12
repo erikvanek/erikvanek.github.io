@@ -86,7 +86,7 @@ window.INITIATIVES = [
 
   {
     sem: 'III', title: 'Fléda - audit přívětivosti', fp: 'f-landscape',
-    link: '',  /* kandidát: /dis-kisk/praxe-III/ */
+    link: '/dis-kisk/fleda-audit/',
     tags: ['service design', 'výzkum'],
     photo: { src: 'img/iii-fleda.png', alt: 'Cedule Fléda – flákání, nicnedělání' },
     chips: [{ text: 'studený e-mail → CEO volá zpět 📞' }]
@@ -108,7 +108,7 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', title: 'Podcast Design KANTÝNA - ZDW 2024',
-    link: '/dis-kisk/ucast-na-konferencich/',
+    link: '/dis-kisk/ucast-na-konferencich/#design-kantyna',
     tags: ['veřejná správa'],
     photo: { src: 'img/iv-design-kantyna.jpg', alt: 'Design kantýna podcast na Zlin Design Weeku', ratio: 1.5 },
     chips: []
@@ -116,8 +116,9 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', title: 'Medaile Ministerstva vnitra za inovace', fp: 'f-big',
+    link: '/dis-kisk/sousedske-detske-skupiny/',
     tags: ['veřejná správa'],
-    photo: { src: 'img/sds.webp', alt: 'Design kantýna podcast na Zlin Design Weeku', ratio: 1.5 },
+    photo: { src: 'img/sds.webp', alt: 'Sousedské dětské skupiny - Úřednický čin roku 2024', ratio: 1.5 },
     chips: [{ text: '🎖️ medaile Ministerstva vnitra', variant: 'mark' }]
   },
 

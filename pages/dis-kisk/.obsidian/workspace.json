@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "semestr-3/aby-to-mamka-nechtela-vypnout.md",
+                "file": "semestr-3/fleda-audit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aby-to-mamka-nechtela-vypnout"
+              "title": "fleda-audit"
             }
           }
         ]
@@ -185,9 +185,11 @@
   },
   "active": "da4f5199e7d5232c",
   "lastOpenFiles": [
+    "semestr-4/sousedske-detske-skupiny.md",
+    "semestr-3/aby-to-mamka-nechtela-vypnout.md",
+    "semestr-3/fleda-audit.md",
     "semestr-2/ostrovy-pozitivni-inovace.md",
     "cesta/img/vi-jarmilka-bp.png",
-    "semestr-3/aby-to-mamka-nechtela-vypnout.md",
     "img/jarmilka-testing-paper.png",
     "img/jarmilka-double-diamond.png",
     "dis-kisk/tematicka-analyza.md",
@@ -226,7 +228,6 @@
     "semestr-1/VR-I.md",
     "semestr-1/stenatko.md",
     "semestr-1/psychologie-pro-designery.md",
-    "semestr-1/motivacni-rozhovory.md",
     "prilohy/vhledy-jinag-workshop.pdf"
   ]
 }
