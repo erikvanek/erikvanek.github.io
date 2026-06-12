@@ -55,7 +55,7 @@ window.INITIATIVES = [
 
   {
     sem: 'II', fp: 'f-landscape', title: 'Studie inovativních týmů ve státní správě',
-    link: '',  /* kandidáti: /dis-kisk/ostrovy-pozitivni-inovace/  nebo  /dis-kisk/tematicka-analyza/ */
+    link: '/dis-kisk/ostrovy-pozitivni-inovace/',
     tags: ['výzkum', 'veřejná správa'],
     photo: { src: 'img/ii-report-tymy.png', alt: 'Studie inovativních týmů ve státní správě', ratio: 0.71 },
     chips: [{ text: 'jak fungují týmy, co mění stát 🔬' },
@@ -78,7 +78,7 @@ window.INITIATIVES = [
 
   {
     sem: 'III', title: 'Studie použitelnosti digitálního průvodce Jarmilka', fp: 'f-big',
-    link: '/ixd-25/',
+    link: '/dis-kisk/aby-to-mamka-nechtela-vypnout/',
     photo: { src: '/img/2024/case-studies/jarmilka/jarmilka-case-thumb.png', alt: 'Papírový prototyp z IxD', ratio: 1.5 },
     chips: []
   },
@@ -86,7 +86,7 @@ window.INITIATIVES = [
 
   {
     sem: 'III', title: 'Fléda - audit přívětivosti', fp: 'f-landscape',
-    link: '',  /* kandidát: /dis-kisk/praxe-III/ */
+    link: '/dis-kisk/fleda-audit/',
     tags: ['service design', 'výzkum'],
     photo: { src: 'img/iii-fleda.png', alt: 'Cedule Fléda – flákání, nicnedělání' },
     chips: [{ text: 'studený e-mail → CEO volá zpět 📞' }]
@@ -108,7 +108,7 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', title: 'Podcast Design KANTÝNA - ZDW 2024',
-    link: '/dis-kisk/ucast-na-konferencich/',
+    link: '/dis-kisk/ucast-na-konferencich/#design-kantyna',
     tags: ['veřejná správa'],
     photo: { src: 'img/iv-design-kantyna.jpg', alt: 'Design kantýna podcast na Zlin Design Weeku', ratio: 1.5 },
     chips: []
@@ -116,8 +116,9 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', title: 'Medaile Ministerstva vnitra za inovace', fp: 'f-big',
+    link: '/dis-kisk/sousedske-detske-skupiny/',
     tags: ['veřejná správa'],
-    photo: { src: 'img/sds.webp', alt: 'Design kantýna podcast na Zlin Design Weeku', ratio: 1.5 },
+    photo: { src: 'img/sds.webp', alt: 'Sousedské dětské skupiny - Úřednický čin roku 2024', ratio: 1.5 },
     chips: [{ text: '🎖️ medaile Ministerstva vnitra', variant: 'mark' }]
   },
 
@@ -130,6 +131,13 @@ window.INITIATIVES = [
     { text: '5. 5. 2025', variant: 'stamp' }]
   },
 
+
+  {
+    sem: 'VI', fp: 'f-big', title: 'Jarmilka - bakalářská práce',
+    link: '/dis-kisk/thesis/',  /* reveal.js shrnutí bakalářské práce (Jarmilka) — NENÍ hotové, 404 dokud stránka nevznikne (viz plan.md D13) */
+    photo: { src: 'img/vi-jarmilka-bp.png', alt: 'Digitální prototyp průvodkyně Jarmilky - obrazovka pro popis životní situace', ratio: 1 },
+    chips: []
+  },
 
   {
     sem: 'V', tag: 'II–V', feature: true, title: 'Výuka a tutoring v rámci tří kurzů',
