@@ -157,6 +157,19 @@ Build order + key implementation notes:
 - **Dive Club research done** (GH-issue-30 spirit): 5 recent guest portfolios read; findings + ranked takeaways appended to `portfolio-inspiration.md` §6. Applied takeaway #2 (Madrick): role/context **subtitles added** to praxe-IV, praxe-V, vyuka, cile-VI, erik-2023.
 - **Cold-start cheat sheet** added as §0 of `pages/dis-kisk/CLAUDE.md` ("tweak X → edit Y" map + non-negotiables) so mobile dictated sessions can execute without re-orienting.
 
+**Taste round (2026-06-12, Erik delegated judgment — "experiment with what's worth doing"):**
+- **Tile grammar (Dive takeaway #1, Lovin):** new `sub` field in `cards.js` — one muted clause under the title, rendered only on 2×2+ tiles (`.tile-sub`). Populated on 8 big cards (erik-2023, retro, jarmilka-usability, medaile, praxe-IV, vyuka, ux-monday, thesis); deliberately NOT on the ostrovy tile (report-cover photo already carries text — three text layers is clutter). Field documented in the cards.js header.
+- **Wall chrome (takeaway #5, Jacoby + Rafa):** quiet microline header above the wall (ERIK VANĚK / Cesta studiem DIS · KISK FF MUNI) + personality footer ("2023-2026 · velká část téhle zdi vznikla diktováním při chůzi").
+- **Mobile fix:** wall previously overflowed horizontally on phones (fixed-width bands). Now `@media (max-width: 760px)`: bands wrap + recentre, `--cell` scales to 40vw, tighter gap. Matters for the post-exam LinkedIn→phone use; exam itself is desktop.
+- Czech copy in subs/chrome/subtitles is my draft in Erik's register — **Erik should skim** (cards.js subs, wall footer, 5 article subtitles from the Dive round).
+
+**Bold round (2026-06-12, Erik: "don't be afraid to be bold"):**
+- Microline header → **serif masthead**: "Erik Vaněk" in DM Serif Display clamp(44–76px) + spaced-caps program line + centered hairline.
+- Lava blobs turned up: sand .62 / rust .48 / slate .32, stronger edge tints (.42/.40).
+- **Paper grain** (static feTurbulence SVG data-URI, ~5% opacity) over the ground on both cesta (`.wall::after`) and articles (`body::after`) — the GH-#30 "highest delight-to-effort" item.
+- Card edges got an inset top sheen + hairline (folded into `--shadow-rest/hover`) — glossy-print feel.
+- Tile titles 19px/800, text-tile titles 22px, subs 13px.
+
 ### Phase 3 — Rehearsal (Jun 13–14)
 - [ ] Two timed run-throughs of the walkthrough; 20 min hard ceiling. One run in fallback mode (plain page succession) — the degraded path must also be rehearsed.
 - [ ] Offline resilience: local `yarn start` build on the laptop as backup against venue wifi.

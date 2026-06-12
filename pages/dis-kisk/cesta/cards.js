@@ -7,6 +7,7 @@
      tag?     text štítku          — přebije "semestr X" (např. '2023', 'II–V')
      color?   #hex                 — přebije barvu štítku
      title    text                 — nadpis dlaždice (emoji se při vykreslení strhnou)
+     sub?     text                 — jedna tlumená věta pod nadpisem (zobrazí se jen na 2×2+ kartách)
      link?    '/dis-kisk/slug/' — proklik na stránku portfolia
               POUZE vlastní portfolio (zdroj pod semestr-x/, URL /dis-kisk/slug/). Prázdné = bez prokliku.
      photo?   { src, alt, ratio }  — ratio řídí tvar dlaždice:
@@ -29,6 +30,7 @@
 window.INITIATIVES = [
   {
     sem: 'I', tag: '2023', color: '#7a7060', pin: 'start', fp: 'f-big', title: 'Erik 2023 - neohrabaný praktik',
+    sub: 'inženýrský základ, díry v metodologii - tady příběh začíná',
     link: '/dis-kisk/erik-2023/',
     photo: { src: 'img/i-me-melon.jpeg', alt: 'Erik v roce 2023', ratio: 0.75 },
     chips: [{ text: 'inženýrský základ, díry v metodologii' },
@@ -64,6 +66,7 @@ window.INITIATIVES = [
 
   {
     sem: 'III', title: 'Retrospektiva DIS v půlce studia',
+    sub: 'společná reflexe programu v půlce cesty',
     link: '/dis-kisk/retro-workshop/',
     tags: ['facilitace'],
     photo: { src: 'img/retro.png', alt: 'Účastníci retrospektivního workshopu, leden 2025' },
@@ -78,6 +81,7 @@ window.INITIATIVES = [
 
   {
     sem: 'III', title: 'Studie použitelnosti digitálního průvodce Jarmilka', fp: 'f-big',
+    sub: 'usability studie, ze které se stala bakalářka',
     link: '/dis-kisk/aby-to-mamka-nechtela-vypnout/',
     photo: { src: '/img/2024/case-studies/jarmilka/jarmilka-case-thumb.png', alt: 'Papírový prototyp z IxD', ratio: 1.5 },
     chips: []
@@ -107,6 +111,7 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', title: 'Medaile Ministerstva vnitra za inovace', fp: 'f-big',
+    sub: 'Sousedské dětské skupiny - služba, která dostala medaili',
     link: '/dis-kisk/sousedske-detske-skupiny/',
     tags: ['veřejná správa'],
     photo: { src: 'img/sds.webp', alt: 'Sousedské dětské skupiny - Úřednický čin roku 2024', ratio: 1.5 },
@@ -115,6 +120,7 @@ window.INITIATIVES = [
 
   {
     sem: 'IV', feature: true, title: 'Workshop s panem nejvyšším',
+    sub: 'facilitace pro tajemníky poloviny českých ministerstev',
     link: '/dis-kisk/praxe-IV/',
     tags: ['facilitace', 'veřejná správa'],
     photo: { src: 'img/iv-tajemnicky.jpg', alt: 'Workshop s tajemníky ministerstev', ratio: 0.75 },
@@ -124,6 +130,7 @@ window.INITIATIVES = [
 
   {
     sem: 'V', tag: 'II–V', feature: true, title: 'Výuka a tutoring v rámci tří kurzů',
+    sub: 'od tutora přes vlastní kurz k učení úředníků v terénu',
     link: '/dis-kisk/vyuka/',
     tags: ['facilitace', 'veřejná správa'],
     photo: { src: 'img/v-urednici.jpg', alt: 'Workshop s úředníky veřejné správy', ratio: 1.31 },
@@ -145,6 +152,7 @@ window.INITIATIVES = [
 
   {
     sem: 'VI', feature: true, title: 'UX Monday - veřejná přednáška o tom, jak pracuju',
+    sub: '45 minut před největším designérským meetupem v zemi',
     link: '/dis-kisk/cile-vi/',
     tags: ['AI workflow'],
     photo: { src: 'img/vi-ux-monday.jpg', alt: 'UX Monday talk', ratio: 0.75 },
@@ -172,6 +180,7 @@ window.INITIATIVES = [
 
   {
     sem: 'VI', fp: 'f-big', title: 'Jarmilka - bakalářská práce',
+    sub: 'průvodkyně sítí sociálních a zdravotních služeb',
     link: '/dis-kisk/thesis/',  /* reveal.js shrnutí bakalářské práce (Jarmilka) — NENÍ hotové, 404 dokud stránka nevznikne (viz plan.md D13) */
     photo: { src: 'img/vi-jarmilka-bp.png', alt: 'Digitální prototyp průvodkyně Jarmilky - obrazovka pro popis životní situace', ratio: 1 },
     chips: []
