@@ -9,7 +9,16 @@
 <link rel="stylesheet" href="cesta.css"/>
 </head>
 <body>
+  <header class="wall-head">
+    <p class="wh-name">Erik Vaněk</p>
+    <p class="wh-line">Cesta studiem Designu informačních služeb · KISK FF MUNI</p>
+  </header>
+
   <div id="bau-grid" class="wall"></div>
+
+  <footer class="wall-foot">
+    <p>2023-2026 · velká část téhle zdi vznikla diktováním při chůzi</p>
+  </footer>
 
   <script src="cards.js"></script>
   <script src="/js/rough.js"></script>
@@ -71,6 +80,8 @@
       var titleEl = el('div','tile-title', noEmoji(it.title));
       if (isExt) titleEl.appendChild(el('span','tile-ext', ' 🔗'));   // signals the card leads off-site
       stamp.appendChild(titleEl);
+      // one muted functional clause under the title — only where there's room (2×2+)
+      if (it.sub && /f-big|f-profile/.test(fp)) stamp.appendChild(el('div','tile-sub', it.sub));
       var chips = (it.chips || []).filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
       if (chips.length){
         var box = el('div','tile-chips');
