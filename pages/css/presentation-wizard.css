@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-/* ─── Design tokens — candlelit dark ─── */
+/* ─── Design tokens — forest green ─── */
 :root {
-  --bg:       #1c1812;
-  --surface:  #2c2820;
+  --bg:       #1c3a1c;
+  --surface:  #2c4a2c;
   --text:     #f0ece4;
   --muted:    #ddd8d0;
-  --dim:      #968878;
+  --dim:      #96a878;
   --accent:   #e8a030;
-  --border:   #2c2820;
+  --border:   #2c4a2c;
 }
 
 /* ─── Base ─── */
