@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs">
+<html lang="cs" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,84 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  /* Initiative wall (single mode). Content lives in cards.js (window.INITIATIVES); this file
-     only renders + styles. Each initiative = one tile (photo or text); research voices (it.quotes)
-     become their own quote tiles; overflow scrolls. Semester is metadata only — a colour-coded tag. */
-  :root{ --ink:#1c1812; --quiet:#7a7060; --line:rgba(28,24,18,.30); --card:#ffffff; --cream:#f4efe5;
-         --cell:clamp(120px,12.5vw,180px); --gap:18px; --big:calc(2 * var(--cell) + var(--gap)); }
-  *{ box-sizing:border-box; }
-  html,body{ margin:0; }
-  body{ min-height:100%; background:#eeebe4; font-family:Inter, system-ui, sans-serif;
-        overflow-y:auto; -webkit-font-smoothing:antialiased; }
-
-  /* ---------- the wall: centred flex BANDS (one .band per row) ----------
-     Tiles use 4 fixed footprints off --cell: 1×1 (default), 2×2 (.f-big = standard card),
-     1×2 (.f-portrait = tall), 2×1 (.f-landscape = wide), plus 2.5×2 (.f-profile = the inverted
-     profile box). 1-unit-tall tiles pair into a .stack so each column is a full card tall.
-     Rows have intrinsic width and centre (no left-alignment). Standard card edge = --big. */
-  .wall{ position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center;
-         gap:var(--gap); padding:16px; }
-  .band { display:flex; flex-direction:row; align-items:flex-start; gap:var(--gap); }
-  .stack{ display:flex; flex-direction:column; gap:var(--gap); flex:none; }
-  .tile{ position:relative; flex:none; width:var(--cell); height:var(--cell); border-radius:8px;
-         overflow:hidden; background:#ddd; box-shadow:0 6px 18px rgba(28,24,18,.16); }
-  .tile.f-portrait { width:var(--cell); height:var(--big); }                            /* 1×2 — tall */
-  .tile.f-landscape{ width:var(--big);  height:var(--cell); }                           /* 2×1 — wide */
-  .tile.f-big      { width:var(--big);  height:var(--big); }                            /* 2×2 — standard card */
-  .tile.f-square   { width:var(--cell); height:var(--cell); }                           /* 1×1 — force square (overrides photo ratio) */
-  .tile.f-profile  { width:calc(2.5 * var(--cell) + var(--gap)); height:var(--big); }   /* 2.5×2 — profile: half a cell wider than a standard 2×2 card */
-  .tile img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .tile-stamp{ position:absolute; left:0; right:0; bottom:0; padding:21px 12px 11px; display:flex;
-               flex-direction:column; gap:6px; background:linear-gradient(to top, rgba(20,18,14,.55), rgba(20,18,14,0)); }
-  .tile-title{ font-weight:700; font-size:18px; color:var(--cream); line-height:1.25; }
-  .tile-ext{ font-size:.8em; font-weight:500; }   /* 🔗 marker on cards that lead off-site */
-  .sem-tag{ position:absolute; top:10px; right:10px; z-index:2; padding:4px 10px; border-radius:4px;
-            font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff;
-            box-shadow:0 1px 6px rgba(0,0,0,.35); }
-
-  /* clickable tile (has it.link → rendered as <a>) */
-  a.tile{ text-decoration:none; color:inherit; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease; }
-  a.tile:hover{ transform:translateY(-3px); box-shadow:0 12px 28px rgba(28,24,18,.24); }
-  a.tile:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
-
-  /* text tile — initiative without a photo */
-  .tile.text{ background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; justify-content:flex-end; }
-  .tile.text.missing{ border-style:dashed; background:rgba(255,255,255,.55); }
-  .tile.text .tile-stamp{ position:static; background:none; padding:14px; }
-  .tile.text .tile-title{ color:var(--ink); font-size:20px; }
-  .tile.text.missing .tile-title{ color:var(--quiet); }
-
-  /* profile "tile" — the inverted (dark) box: the ONE non-standard tile (2.5×2), the headline/identity. */
-  .tile.hero{ background:var(--ink); box-shadow:0 6px 18px rgba(28,24,18,.16); border:none;
-              border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:center;
-              justify-content:center; text-align:center; padding:20px 34px; gap:12px; }
-  .tile.hero .h-title{ margin:0; font-weight:800; font-size:clamp(22px,2.3vw,36px); line-height:1.16; letter-spacing:-.02em; color:var(--cream); }
-  .tile.hero .h-sub{ margin:0; font-size:clamp(12px,1vw,15px); line-height:1.45; color:rgba(244,239,229,.72); max-width:460px; }
-
-  /* thematic tags row (rozšířená) + extended stamp */
-  .tile-tags{ display:flex; flex-wrap:wrap; gap:5px; }
-  .tile-tags .tt{ padding:2px 8px; border-radius:999px; font-size:9.5px; font-weight:700;
-                  letter-spacing:.04em; text-transform:uppercase; color:var(--cream);
-                  background:rgba(255,255,255,.15); border:1px solid rgba(244,239,229,.5); }
-  .tile-stamp.ext{ gap:7px; }
-  .tile:not(.text) .tile-stamp.ext{ padding:14px 12px 12px;
-        background:linear-gradient(to top, rgba(18,16,12,.6) 62%, rgba(18,16,12,0)); }
-  .tile.text .tile-tags .tt{ color:var(--quiet); background:rgba(28,24,18,.05); border-color:var(--line); }
-
-  /* quote tile — a standalone research voice; quote on top, project reference at the bottom */
-  .tile.quote-tile{ background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column;
-                    justify-content:space-between; gap:10px; padding:16px 15px 13px; overflow:hidden; }
-  .tile.quote-tile::before{ content:'„'; position:absolute; top:-4px; right:11px; font-size:44px; line-height:1;
-                            font-weight:800; color:rgba(28,24,18,.07); pointer-events:none; }
-  .tile.quote-tile > *{ position:relative; }
-  .tile.quote-tile .qt-text{ margin:0; font-style:italic; font-size:clamp(12px,.95vw,15px); line-height:1.45; color:var(--ink); }
-  .tile.quote-tile .qt-ref{ font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--quiet); }
-
-  /* structure pass (Erik 2026-06-11): tiles show ONLY the semester badge + title.
-     chips + thematic tags are hidden (data kept) until the portfolio rework re-introduces them — see plan.md. */
-  .tile-chips, .tile-tags{ display:none !important; }
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+<link rel="stylesheet" href="cesta.css"/>
 </head>
 <body>
   <div id="bau-grid" class="wall"></div>
@@ -158,9 +82,9 @@
       return tile;
     }
     function makeHero(){
-      // profile · 2.5×2 — the ONE non-standard tile; entry point into the reveal.js study deck.
+      // hero · 2×2 — same footprint as all other cards; entry point into the reveal.js study deck.
       // NOTE: /dis-kisk/portfolio/ is not built yet (see plan.md D12) — this link 404s until it is.
-      var hero = el('a','tile hero f-profile');
+      var hero = el('a','tile hero f-big');
       hero.setAttribute('href', '/dis-kisk/portfolio/');
       hero.appendChild(el('h1','h-title','Naučil jsem se řemeslo. Teď ho učím.'));
       hero.appendChild(el('p','h-sub','Šest semestrů, šest území. Cesta studiem Designu informačních služeb, 2023–2026.'));
@@ -184,8 +108,14 @@
 
     // ---- entry kinds + band packing ----
     function isQuote(it){ return it.quote != null; }                           // standalone research-voice card
-    function makeAny(it){ return isQuote(it) ? makeQuoteTile(it.quote, it.ref) : makeTile(it); }
-    function tallOf(it){ return isQuote(it) ? false : isTallFp(footprint(it)); } // quote tiles are 2×1 (1 unit tall)
+    function isClosing(it){ return it.closing === true; }                      // inverted outro tile
+    function makeClosingTile(it){
+      var tile = el('div','tile hero f-big');
+      tile.appendChild(el('p','h-title', it.title));
+      return tile;
+    }
+    function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref) : makeTile(it); }
+    function tallOf(it){ return isClosing(it) ? true : isQuote(it) ? false : isTallFp(footprint(it)); }
     function pick(arr, pred){ for (var i=0;i<arr.length;i++){ if (pred(arr[i])) return arr.splice(i,1)[0]; } return null; }
     function isTallFp(fp){ return fp === ' f-big' || fp === ' f-portrait'; }   // 2 units tall
     // group {el, tall} into card-tall columns: tall tiles stand alone; 1-unit tiles pair into a .stack
@@ -209,7 +139,7 @@
     }
 
     // Opening composition — centred flex bands:
-    //   row 1 — [Erik 2023 · 2×2] [profile · 2.5×2, centre] [Hackathon / Když nevíš · 2×1 stacked]
+    //   row 1 — [Erik 2023 · 2×2] [hero · 2×2, centre] [Hackathon / Když nevíš · 2×1 stacked]
     //   row 2 — three standard project cards (quotes are skipped here — they can't be 2×2)
     //   rest  — projects + standalone research-voice quote cards, in data order, paired into columns, 3 per band
     function renderWall(){
