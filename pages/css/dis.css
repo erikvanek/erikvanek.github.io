@@ -240,3 +240,41 @@ ul {
 .s6 {
     --angle: 300deg;
 } */
+
+/* ============================================================
+   Reusable floated article figures
+   Used by: ostrovy-pozitivni-inovace, retro-workshop (+ future articles).
+   Wrap a <figure class="float-figure"> together with the paragraph(s)
+   it should sit beside inside a <div class="float-wrap">.
+   Modifiers: .left floats left, .narrow shrinks it (e.g. portrait shots).
+   ============================================================ */
+
+/* On any page with a floated figure, left-align the column so wrapped text
+   and the rest of the body share a single left edge. */
+#wrapper:has(.float-figure) { align-items: baseline; }
+/* ...but a hero image opts back into centering. */
+#wrapper:has(.float-figure) .hero-figure { align-self: center; }
+
+/* Block formatting context: contains the float within its own section. */
+.float-wrap { width: 100%; overflow: hidden; }
+/* tame the site's deep list indents when a list sits beside a float */
+.float-wrap ul,
+.float-wrap ol { margin-left: 1.5rem; }
+
+.float-figure { float: right; width: clamp(220px, 32vw, 300px); margin: .3rem 0 1.2rem 1.8rem; }
+.float-figure.left { float: left; margin: .3rem 1.8rem 1.2rem 0; }
+.float-figure.narrow { width: clamp(160px, 22vw, 215px); }
+.float-figure img { display: block; width: 100%; height: auto; border-radius: 4px;
+                    box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
+                    transition: transform .15s ease, box-shadow .15s ease; }
+/* figure links opt out of the global dotted link border */
+.float-figure a { border: none; border-radius: 0; padding: 0; }
+.float-figure a:hover img { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(0, 0, 0, .34); }
+.float-figure figcaption a { color: var(--gray-color); font-weight: 600; }
+.float-figure figcaption a:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+    .float-figure,
+    .float-figure.left,
+    .float-figure.narrow { float: none; width: min(280px, 70%); margin: 0 auto 1.4rem; }
+}
