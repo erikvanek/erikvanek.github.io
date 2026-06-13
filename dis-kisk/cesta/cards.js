@@ -186,7 +186,7 @@ window.INITIATIVES = [
     chips: []
   },
 
-  { closing: true, title: 'Na designu je nejlepší to, že člověk může každý den zjišťovat nové věci o světě v němž se pohybuje.' },
+  { closing: true, title: 'Na designu je nejlepší to, že člověk může každý den zjišťovat nové věci o světě v němž se pohybuje.', sig: '— Erik, červen 2026' },
 
   // {
   //   sem: 'VI', tag: '2026', color: '#C26818', pin: 'end', fp: 'f-landscape', title: 'Erik 2026 - designér, který učí',

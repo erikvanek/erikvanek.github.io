@@ -60,7 +60,9 @@
     wrap.appendChild(svg);
     primePaths(svg);
   }
-  document.querySelectorAll('article figure img').forEach(function (img) {
+  // full-width figures get the hand-drawn frame; floated story images don't
+  // (too busy when several share a page — they keep a soft shadow instead)
+  document.querySelectorAll('article figure:not(.float-figure) img').forEach(function (img) {
     if (img.complete && img.offsetWidth) frameFigure(img);
     else img.addEventListener('load', function () { frameFigure(img); }, { once: true });
   });
@@ -75,21 +77,6 @@
     }
     el.addEventListener('mouseenter', go, { once: true });
     el.addEventListener('focus', go, { once: true });
-  }
-
-  // back link: a loose ellipse around it, like a marker on paper
-  var back = document.querySelector('.back');
-  if (back) {
-    annotateOnce(back, function () {
-      var w = back.offsetWidth + 28, h = back.offsetHeight + 18;
-      var svg = makeSvg(w, h);
-      var rc = rough.svg(svg);
-      svg.appendChild(rc.ellipse(w / 2, h / 2, w - 6, h - 4, {
-        roughness: 1.8, strokeWidth: 1.2, stroke: QUIET
-      }));
-      back.appendChild(svg);
-      primePaths(svg);
-    });
   }
 
   // section headings: rough underline under the text on first hover
