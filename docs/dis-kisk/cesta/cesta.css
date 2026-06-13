@@ -370,11 +370,11 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .tile.text .tile-title { color: var(--ink); font-size: 22px; }
 .tile.text.missing .tile-title { color: var(--quiet); }
 
-/* --- Hero tile (inverted dark, opening + closing) --- */
+/* --- Hero tile (text-on-paper door into the story) + closing statement --- */
 .tile.hero {
-  background: var(--ink);
-  box-shadow: var(--shadow-rest);
+  background: var(--card);
   border: none;
+  box-shadow: var(--shadow-rest);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -382,24 +382,85 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px 34px;
-  gap: 12px;
+  padding: 24px 30px;
+  gap: 14px;
 }
 .tile.hero .h-title {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(24px, 2.6vw, 40px);
-  line-height: 1.14;
-  letter-spacing: 0;
-  color: var(--cream);
+  font-size: clamp(30px, 3.3vw, 54px);
+  line-height: 1.07;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  text-wrap: balance;
 }
 .tile.hero .h-sub {
   margin: 0;
   font-size: clamp(12px, 1vw, 15px);
   line-height: 1.45;
-  color: rgba(244, 239, 229, .72);
+  color: var(--quiet);
   max-width: 460px;
+}
+
+/* the "start here" nudge — rough.js circles it shortly after load */
+.h-cta {
+  position: relative;
+  /* the circle overflows ~19px above the text box; this gap is measured to
+     the text, so it must clear the circle, not just the words */
+  margin-top: 26px;
+  padding: 9px 22px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: .01em;
+  color: var(--ink);
+}
+.h-cta svg.rough-note {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;            /* never clip the hand-drawn overshoot */
+  pointer-events: none;
+}
+/* soft pencil-like ends; the draw is driven by WAAPI (see circleCta), so the
+   shared CSS rough-draw animation is disabled here to avoid a double-fire */
+.h-cta svg.rough-note path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: none;
+}
+
+/* closing statement card — not clickable, Erik's voice */
+.tile.hero.closing { gap: 16px; }
+.tile.hero.closing .h-statement {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.7vw, 26px);
+  line-height: 1.38;
+  color: var(--ink);
+  max-width: 440px;
+  text-wrap: balance;
+}
+.tile.hero.closing .h-sig {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+/* rough.js draw-on animation (shared by CTA circle + quote borders) */
+@media (prefers-reduced-motion: no-preference) {
+  svg.rough-note path {
+    stroke-dasharray: var(--len, 0);
+    stroke-dashoffset: var(--len, 0);
+    animation: rough-draw .8s ease-out forwards;
+  }
+}
+@keyframes rough-draw {
+  to { stroke-dashoffset: 0; }
 }
 
 /* --- Thematic tags (hidden until portfolio rework) --- */

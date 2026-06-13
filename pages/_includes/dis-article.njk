@@ -14,7 +14,7 @@
     {% include "_analytics.html" %}
 
     <body>
-        <div class="progress" aria-hidden="true"></div>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
 
         <main id="wrapper">
             {% if hideTitle !== true %}
@@ -24,6 +24,16 @@
                     {% if subtitle %}
                         <p class="subtitle">{{ subtitle }}</p>
                     {% endif %}
+                    {% set sem = tags | semNum %}
+                    {% if sem %}
+                        <div class="article-meta">
+                            <span class="am-date">{{ date | czDate }}</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">{{ sem }}. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">{% if praxe %}Praxe{% else %}{{ page.fileSlug | artType }}{% endif %}</span>
+                        </div>
+                    {% endif %}
                 </header>
             {% endif %}
 
@@ -32,7 +42,9 @@
             </article>
         </main>
 
+        <script src="/js/progress.js" defer></script>
         <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
         <script src="/js/dis-flourish.js" defer></script>
     </body>
 </html>

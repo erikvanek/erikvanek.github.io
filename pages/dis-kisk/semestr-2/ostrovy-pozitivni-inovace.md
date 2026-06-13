@@ -4,6 +4,7 @@ subtitle: 'Jak fungují týmy, které úspěšně transformují státní správu
 date: 2024-05-31
 layout: dis-article.njk
 hideNavigation: true
+praxe: true
 tags: ['dis', 'semestr2']
 permalink: /dis-kisk/{{page.fileSlug}}/
 ---

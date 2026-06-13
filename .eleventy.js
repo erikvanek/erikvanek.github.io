@@ -19,6 +19,31 @@ module.exports = function (eleventyConfig) {
         return str.split(separator);
     });
 
+    // --- dis-kisk article metadata band (D16) ---
+    // Czech date "D. M. YYYY" (UTC to avoid front-matter midnight off-by-one)
+    eleventyConfig.addNunjucksFilter("czDate", function (d) {
+        if (!d) return '';
+        const dt = (d instanceof Date) ? d : new Date(d);
+        if (isNaN(dt)) return '';
+        return dt.getUTCDate() + '. ' + (dt.getUTCMonth() + 1) + '. ' + dt.getUTCFullYear();
+    });
+    // semester number from a 'semestrN' tag, or null
+    eleventyConfig.addNunjucksFilter("semNum", function (tags) {
+        if (!tags) return null;
+        for (const t of tags) {
+            const m = /^semestr(\d)/.exec(t);
+            if (m) return m[1];
+        }
+        return null;
+    });
+    // article type from slug: cíl reflection / praxe output / project
+    eleventyConfig.addNunjucksFilter("artType", function (slug) {
+        if (!slug) return 'Projekt';
+        if (/^cile-/i.test(slug)) return 'Reflexe cílů';
+        if (/^praxe-/i.test(slug)) return 'Praxe';
+        return 'Projekt';
+    });
+
     // Add filter to check if note is top-level
     eleventyConfig.addNunjucksFilter("isTopLevelNote", function (path) {
         const remainingPath = path.replace('/notes/', '');

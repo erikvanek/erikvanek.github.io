@@ -4,6 +4,7 @@ subtitle: 'jako hutný zakončení prvního semestru'
 date: 2024-01-28
 layout: dis-article.njk
 hideNavigation: true
+praxe: true
 tags: ['dis', 'semestr1']
 permalink: /dis-kisk/{{page.fileSlug}}/
 ---

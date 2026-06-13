@@ -16,11 +16,12 @@ Erik often dictates quick tweaks from his phone. Don't re-derive context — use
 | Grid content: add/remove/repoint a card, titles, links, photos | `cesta/cards.js` (data) |
 | Grid look: tiles, hover, shadows, entrance, mesh background | `cesta/cesta.css` |
 | Grid composition / rendering logic / rough quote borders | `cesta/index.html` (inline script) |
-| Article look: typography, colors, links, figures, progress line | `../css/dis-article.css` |
+| Article look: typography, colors, links, figures, progress bar | `../css/dis-article.css` (`.progress*`) |
 | Article chrome: back-link, head, scripts | `../_includes/dis-article.njk` |
 | Article content | the `.md` file in `semestr-*/` (Czech, Erik's voice — see §5) |
 | Exam presentation = the SITE (no slide deck since 2026-06-13) | Story page at `/dis-kisk/portfolio/` + linear article journey — see `portfolio-shaping/plan.md` §"Phase 2.7 RE-ALIGNMENT" + D14–D17. (The old reveal.js deck `portfolio/index.html` + `slides.yaml` are retired.) |
 | rough.js easter eggs on articles | `../js/dis-flourish.js` |
+| Reading-progress bar (8px, bottom, sand fill, divided per section) | `../js/progress.js` + `.progress*` in `../css/dis-article.css`. **reveal.js** visual pattern (`revealjs/reveal.css`): faint track + `scaleX` fill gliding on reveal's cubic-bezier. Fill = true scroll fraction (mimics the scrollbar); a 2px page-coloured cut at each heading, positioned **proportionally** so each segment is as long as its section. Fill `rgba(214,178,123,.26)` sand, track `rgba(122,112,96,.16)`. JS-driven (rAF scroll handler) — **headless `scrollTo` doesn't drive the fill, so eyeball the live sweep in `yarn start`.** |
 | Fonts (DM Serif Display + DM Sans, self-hosted) | `../fonts/fonts.css` |
 
 **Non-negotiables (break these and the session failed):**
