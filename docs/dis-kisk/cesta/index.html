@@ -92,11 +92,13 @@
       return tile;
     }
     function makeHero(){
-      // hero · 2×2 — same footprint as all other cards; entry point into the reveal.js study deck.
+      // hero · 2×2 — text-on-paper door into the story; the rough circle
+      // around the CTA draws itself shortly after load (see circleCta)
       var hero = el('a','tile hero f-big');
       hero.setAttribute('href', '/dis-kisk/portfolio/');
-      hero.appendChild(el('h1','h-title','Naučil jsem se řemeslo. Teď ho učím.'));
-      hero.appendChild(el('p','h-sub','Šest semestrů, šest území. Cesta studiem Designu informačních služeb, 2023–2026.'));
+      hero.appendChild(el('h1','h-title','Tři roky studia DIS KISK'));
+      hero.appendChild(el('p','h-sub','Výběr z hroznů z mé cesty studiem. 2023–2026'));
+      hero.appendChild(el('span','h-cta','Začni tady →'));
       return hero;
     }
     function makeQuoteTile(text, ref){
@@ -119,8 +121,10 @@
     function isQuote(it){ return it.quote != null; }                           // standalone research-voice card
     function isClosing(it){ return it.closing === true; }                      // inverted outro tile
     function makeClosingTile(it){
-      var tile = el('div','tile hero f-big');
-      tile.appendChild(el('p','h-title', it.title));
+      // statement card — Erik's voice, deliberately not clickable
+      var tile = el('div','tile hero closing f-big');
+      tile.appendChild(el('p','h-statement', it.title));
+      if (it.sig) tile.appendChild(el('div','h-sig', it.sig));
       return tile;
     }
     function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref) : makeTile(it); }
@@ -199,17 +203,64 @@
         svg.setAttribute('class', 'rough-note');
         svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
         svg.setAttribute('aria-hidden', 'true');
-        svg.appendChild(rough.svg(svg).rectangle(3, 3, w - 6, h - 6, {
-          roughness: 1.7, bowing: 1.5, strokeWidth: 1.2, stroke: 'rgba(122, 112, 96, .65)'
+        // inset enough that rough's stroke jitter stays inside the tile's
+        // overflow:hidden clip (was 3px → outer wobble got chopped at edges)
+        svg.appendChild(rough.svg(svg).rectangle(7, 7, w - 14, h - 14, {
+          roughness: 1.4, bowing: 1.2, strokeWidth: 1.2, stroke: 'rgba(122, 112, 96, .65)'
         }));
         tile.appendChild(svg);
         tile.classList.add('has-rough');
       });
     }
 
+    // rough.js: a marker circle draws itself around the hero CTA after load
+    function circleCta(){
+      if (typeof rough === 'undefined') return;
+      var cta = document.querySelector('.h-cta');
+      if (!cta) return;
+      var NS = 'http://www.w3.org/2000/svg';
+      // generous box so the hand-drawn wobble + overshoot never clips
+      var padX = 30, padY = 24;
+      var w = cta.offsetWidth + padX * 2, h = cta.offsetHeight + padY * 2;
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'rough-note');
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.setAttribute('aria-hidden', 'true');
+      svg.style.width = w + 'px';
+      svg.style.height = h + 'px';
+      svg.appendChild(rough.svg(svg).ellipse(w / 2, h / 2, w - 26, h - 20, {
+        roughness: 1.3, bowing: 2.2, strokeWidth: 2.6, stroke: 'rgba(28, 24, 18, .82)',
+        disableMultiStroke: true   // one confident hand loop, not a scribble
+      }));
+      cta.appendChild(svg);
+
+      // Draw it like a hand circling once: reveal the single stroke from its
+      // start point to its end. Driven explicitly via WAAPI with the measured
+      // length — no CSS-var/implicit-from race (that caused it to pop in or
+      // sometimes not draw at all).
+      var reduce = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      svg.querySelectorAll('path').forEach(function(p){
+        var len = 0;
+        try { len = p.getTotalLength(); } catch (e) {}
+        if (!len || reduce || !p.animate) return; // leave it fully drawn
+        p.style.strokeDasharray = len;
+        p.style.strokeDashoffset = len;           // start hidden, then sweep
+        p.animate(
+          [{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+          { duration: 620, easing: 'cubic-bezier(.45, .02, .3, 1)', fill: 'forwards' }
+        );
+      });
+    }
+
     // ---------- boot ----------
     renderWall();
     sketchQuoteBorders();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function(){ setTimeout(circleCta, 500); });
+    } else {
+      setTimeout(circleCta, 900);
+    }
   })();
   </script>
 </body>

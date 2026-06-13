@@ -80,29 +80,52 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.66' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* --- Amber reading-progress line (scroll-driven, pure CSS) --- */
+/* --- Reading-progress line — reveal.js visual pattern (revealjs/reveal.css):
+   a faint full-length track + a fill that scaleX-glides with reveal's easing.
+   An 8px bar pinned to the bottom. progress.js drives the fill to the true
+   scroll fraction (so it mimics the scrollbar) and cuts the bar with a thin
+   divider at each heading — positioned proportionally, so each segment is as
+   long as the section it depicts. No JS → just the faint track (graceful;
+   JS already powers the journey nav). --- */
 .progress {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 8px;
   z-index: 10;
-  background: var(--amber);
-  transform-origin: 0 50%;
-  transform: scaleX(0);   /* hidden where scroll timelines are unsupported */
+  background: rgba(122, 112, 96, .16);   /* faint full-length track */
+  pointer-events: none;
 }
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .progress {
-      animation: grow-progress linear;
-      animation-timeline: scroll(root);
-    }
-  }
+.progress__fill,
+.progress__done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(.26, .86, .44, .985);  /* reveal's glide */
 }
-@keyframes grow-progress {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+.progress__fill { background: rgba(214, 178, 123, .26); }  /* reading edge: sand */
+/* fully-read sections — extends only to the last completed boundary, layered
+   over the sand so finished segments read a touch more orange (a sip of the
+   earned amber — the progress line is amber's sanctioned home) */
+.progress__done { background: rgba(194, 104, 24, .20); }
+@media (prefers-reduced-motion: reduce) {
+  .progress__fill,
+  .progress__done { transition: none; }
+}
+/* section dividers — a thin page-coloured cut at each heading boundary, placed
+   proportionally so the segment between two cuts is as long as its section */
+.progress__mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--cream);
 }
 
 /* --- Measure + page frame --- */
@@ -162,6 +185,29 @@ h1, h2, h3, h4 {
   color: var(--quiet);
   margin: 0;
 }
+
+/* metadata band (D16): date · semestr · type */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 1.25rem;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+.article-meta .am-sem { color: var(--ink); }
+.article-meta .am-type {
+  color: var(--ink);
+  background: rgba(122, 112, 96, .14);
+  padding: .15em .55em;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+.article-meta .am-sep { opacity: .45; font-weight: 400; }
 
 /* In-article headings: markdown `#` renders as h1 — scale it as a
    section heading, one step under the page title. */
@@ -297,4 +343,241 @@ article ol {
 }
 article li {
   margin-bottom: .35em;
+}
+
+/* ============================================================
+   STORY PAGE (/dis-kisk/portfolio/) — the master narrative.
+   Classes below appear only on that page; safe globally.
+   ============================================================ */
+
+/* Lead paragraph — sets the voice before the story starts */
+.story-lead {
+  font-size: 1.22rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.story-turn {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.18rem;
+  color: var(--ink);
+}
+
+/* Section headings clear floats so a tall image never collides with
+   the next beat (no other article floats anything, so this is inert
+   elsewhere). */
+article h2 { clear: both; }
+
+/* Supportive, alternating-side imagery — small, never dominant */
+.float-figure {
+  margin: .3rem 0 1.3rem;
+  max-width: 100%;
+  text-align: center;
+}
+.float-figure img {
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(28, 24, 18, .08), 0 10px 24px rgba(28, 24, 18, .12);
+}
+.float-figure figcaption {
+  margin-top: .5rem;
+  font-size: .8rem;
+  line-height: 1.45;
+}
+@media (min-width: 720px) {
+  .float-figure { max-width: 305px; }
+  .float-figure.float-right { float: right; margin: .4rem 0 1rem 2.2rem; }
+  .float-figure.float-left  { float: left;  margin: .4rem 2.2rem 1rem 0; }
+}
+
+/* Required-parts summary — re-asserts the mandated portfolio format */
+.parts-summary {
+  clear: both;
+  margin: 3.5rem 0 2.5rem;
+  padding: 1.9rem 1.7rem 1.6rem;
+  background: rgba(255, 255, 255, .5);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.parts-summary > h2 { margin-top: 0; }
+.parts-summary > p { margin-bottom: 0; }
+.parts-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+}
+.parts-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .35rem .9rem;
+  margin: 0;
+  padding: .7rem 0;
+  border-top: 1px solid var(--line);
+}
+.parts-list li:first-child { border-top: none; }
+.ps-sem {
+  flex: 0 0 5.5rem;
+  font-weight: 700;
+  font-size: .76rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+.ps-slot { font-size: .96rem; }
+.ps-todo { color: var(--quiet); font-style: italic; }
+.ps-note { color: var(--quiet); font-size: .86em; }
+
+/* the thesis itself is the one stand-out — a chip on the word only; the rest
+   of the row matches the others (sand is low-chroma wardrobe, not the amber
+   accent). Not clickable yet — its page is a dedicated future session (D13). */
+.ps-thesis {
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(214, 178, 123, .26);
+  padding: .1em .5em;
+  border-radius: 5px;
+}
+
+/* Final CTA into the linear journey (D15) */
+.journey-cta {
+  display: block;        /* override Pico's nav{display:flex} — stack, don't split */
+  clear: both;
+  margin: 3.5rem 0 1rem;
+  text-align: center;
+}
+.journey-cta p {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 1.1rem;
+  hyphens: none;         /* no mid-word break on this prominent lead-in line */
+  -webkit-hyphens: none;
+  text-wrap: balance;
+}
+a.journey-start,
+a.journey-start:visited {
+  display: inline-block;
+  padding: .85rem 1.7rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--cream);
+  background: var(--ink);
+  background-image: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform .3s cubic-bezier(.2, .7, .3, 1), box-shadow .3s ease;
+}
+a.journey-start:hover,
+a.journey-start:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(28, 24, 18, .22);
+  color: var(--cream);
+}
+
+/* ============================================================
+   THE JOURNEY (D15) — prev/next + rough.js dotted progress bar,
+   injected by journey.js at the bottom of milestone articles.
+   ============================================================ */
+.journey-nav {
+  clear: both;
+  margin-top: 4rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.4rem;
+  flex-wrap: wrap;
+}
+.jn-prev,
+.jn-next {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .15rem;
+  max-width: 42%;
+  text-decoration: none;
+  background-image: none;
+}
+.jn-next { text-align: right; margin-left: auto; }
+.jn-dir {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  transition: color .2s ease;
+}
+.jn-label {
+  font-weight: 600;
+  font-size: .95rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.jn-prev:hover .jn-dir,
+.jn-next:hover .jn-dir,
+.jn-prev:focus-visible .jn-dir,
+.jn-next:focus-visible .jn-dir { color: var(--link); }
+
+/* progress: rough dots + counter, centred */
+.jn-progress {
+  order: 3;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--line);
+}
+.jn-dots { display: flex; align-items: center; gap: 4px; }
+.jn-dot {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 3px;          /* roomy hit area; pip stays small */
+  line-height: 0;
+  text-decoration: none;
+  background-image: none;
+}
+.jn-pip {
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1.6px solid rgba(122, 112, 96, .5);   /* todo: quiet outline */
+  background: transparent;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.jn-dot.done .jn-pip {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.jn-dot.is-current .jn-pip {
+  background: var(--amber);
+  border-color: var(--amber);
+  transform: scale(1.45);
+  box-shadow: 0 0 0 3px rgba(194, 104, 24, .18);
+}
+.jn-dot:hover .jn-pip,
+.jn-dot:focus-visible .jn-pip { transform: scale(1.4); }
+.jn-dot.is-current:hover .jn-pip { transform: scale(1.55); }
+
+/* gentle "you are here" pulse on the active dot's halo */
+@media (prefers-reduced-motion: no-preference) {
+  .jn-dot.is-current .jn-pip { animation: jn-pulse 2.4s ease-in-out infinite; }
+}
+@keyframes jn-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(194, 104, 24, .20); }
+  50%      { box-shadow: 0 0 0 6px rgba(194, 104, 24, .06); }
+}
+.jn-count {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--quiet);
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .jn-prev, .jn-next { max-width: 46%; }
+  .jn-progress { order: 0; flex-basis: 100%; margin-top: 0; margin-bottom: 1.2rem; padding-top: 0; border-top: none; }
 }

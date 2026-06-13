@@ -26,8 +26,8 @@ Inherits the repo-root <a href="../../CLAUDE.md">CLAUDE.md</a>. This file overri
 <td><code>cesta/index.html</code> (inline script)</td>
 </tr>
 <tr>
-<td>Article look: typography, colors, links, figures, progress line</td>
-<td><code>../css/dis-article.css</code></td>
+<td>Article look: typography, colors, links, figures, progress bar</td>
+<td><code>../css/dis-article.css</code> (<code>.progress*</code>)</td>
 </tr>
 <tr>
 <td>Article chrome: back-link, head, scripts</td>
@@ -38,12 +38,16 @@ Inherits the repo-root <a href="../../CLAUDE.md">CLAUDE.md</a>. This file overri
 <td>the <code>.md</code> file in <code>semestr-*/</code> (Czech, Erik's voice — see §5)</td>
 </tr>
 <tr>
-<td>Exam deck slides</td>
-<td><code>portfolio/index.html</code>; <strong>source of truth first:</strong> <code>portfolio-shaping/slides.yaml</code></td>
+<td>Exam presentation = the SITE (no slide deck since 2026-06-13)</td>
+<td>Story page at <code>/dis-kisk/portfolio/</code> + linear article journey — see <code>portfolio-shaping/plan.md</code> §&quot;Phase 2.7 RE-ALIGNMENT&quot; + D14–D17. (The old reveal.js deck <code>portfolio/index.html</code> + <code>slides.yaml</code> are retired.)</td>
 </tr>
 <tr>
 <td>rough.js easter eggs on articles</td>
 <td><code>../js/dis-flourish.js</code></td>
+</tr>
+<tr>
+<td>Reading-progress bar (8px, bottom, sand fill, divided per section)</td>
+<td><code>../js/progress.js</code> + <code>.progress*</code> in <code>../css/dis-article.css</code>. <strong>reveal.js</strong> visual pattern (<code>revealjs/reveal.css</code>): faint track + <code>scaleX</code> fill gliding on reveal's cubic-bezier. Fill = true scroll fraction (mimics the scrollbar); a 2px page-coloured cut at each heading, positioned <strong>proportionally</strong> so each segment is as long as its section. Fill <code>rgba(214,178,123,.26)</code> sand, track <code>rgba(122,112,96,.16)</code>. JS-driven (rAF scroll handler) — <strong>headless <code>scrollTo</code> doesn't drive the fill, so eyeball the live sweep in <code>yarn start</code>.</strong></td>
 </tr>
 <tr>
 <td>Fonts (DM Serif Display + DM Sans, self-hosted)</td>
