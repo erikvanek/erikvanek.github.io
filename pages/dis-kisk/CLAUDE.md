@@ -19,7 +19,7 @@ Erik often dictates quick tweaks from his phone. Don't re-derive context — use
 | Article look: typography, colors, links, figures, progress line | `../css/dis-article.css` |
 | Article chrome: back-link, head, scripts | `../_includes/dis-article.njk` |
 | Article content | the `.md` file in `semestr-*/` (Czech, Erik's voice — see §5) |
-| Exam deck slides | `portfolio/index.html`; **source of truth first:** `portfolio-shaping/slides.yaml` |
+| Exam presentation = the SITE (no slide deck since 2026-06-13) | Story page at `/dis-kisk/portfolio/` + linear article journey — see `portfolio-shaping/plan.md` §"Phase 2.7 RE-ALIGNMENT" + D14–D17. (The old reveal.js deck `portfolio/index.html` + `slides.yaml` are retired.) |
 | rough.js easter eggs on articles | `../js/dis-flourish.js` |
 | Fonts (DM Serif Display + DM Sans, self-hosted) | `../fonts/fonts.css` |
 
