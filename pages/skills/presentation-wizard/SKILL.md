@@ -83,7 +83,7 @@ Follow the schema in [yaml-schema.md](yaml-schema.md) exactly. Rules:
 - **Use `-` not `—` in all slide content**: headings, bullets, prose, speaker notes, captions. Never write an em dash `—` anywhere in the `slides.yaml` content fields. This applies to both generated content and verbatim brain dump material.
 
 - Every slide has: `heading`, `layout`, `content`, `images`, `speaker_notes`
-- `speaker_notes` come from the brain dump's intent — never leave empty if the brain dump contains relevant context for that slide
+- `speaker_notes`: **leave as an empty string** (`speaker_notes: ""`). Do NOT auto-generate speaker notes — the user authors these manually. Keep the field present on every slide as an empty placeholder.
 - Assign layout types from the defined types — see [yaml-schema.md](yaml-schema.md)
 - Mark slides needing a visual with a YAML comment: `# VISUAL NEEDED — [reason]`
 - `images: []` by default — populated in Phase 5
@@ -157,8 +157,7 @@ Ask user to confirm output path before writing. Default: `pages/presentations/[e
 Before handing off the HTML file:
 
 - [ ] No slide has more than 6 bullet points
-- [ ] All `[DEMO]` slides have step-by-step speaker notes including a fallback if live demo fails
-- [ ] All section breaks have gear-shift speaker notes
+- [ ] `speaker_notes` left empty (`speaker_notes: ""`) on every slide for manual authoring — never auto-generated
 - [ ] Intro slide has date, place, speaker
 - [ ] Closing slide has contact info; if lead-gen intent was set, includes "currently available" line
 - [ ] Footer URL is visible only on the first and last slides — hidden on all other slides via the `slidechanged` / `ready` JS hook (see [layout-html.md](layout-html.md))

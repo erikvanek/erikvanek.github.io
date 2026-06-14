@@ -37,7 +37,7 @@
   ];
 
   var STORY = '/dis-kisk/portfolio/';
-  var WALL  = '/dis-kisk/cesta/';
+  var WALL  = '/dis-kisk/';
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);

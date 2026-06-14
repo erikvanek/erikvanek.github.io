@@ -1,3 +1,6 @@
+---
+permalink: /dis-kisk/
+---
 <!doctype html>
 <html lang="cs" data-theme="light">
 <head>
@@ -6,7 +9,7 @@
 <title>Cesta studiem DIS KISK — Erik Vaněk</title>
 <link rel="stylesheet" href="/fonts/fonts.css"/>
 <link rel="stylesheet" href="/css/pico.classless.min.css"/>
-<link rel="stylesheet" href="cesta.css"/>
+<link rel="stylesheet" href="/dis-kisk/cesta/cesta.css"/>
 </head>
 <body>
   <header class="wall-head">
@@ -17,10 +20,10 @@
   <div id="bau-grid" class="wall"></div>
 
   <footer class="wall-foot">
-    <p>2023-2026 · velká část téhle zdi vznikla diktováním při chůzi</p>
+    <p>2023–2026 · vybráno ze studijních hroznů, s ❤️</p>
   </footer>
 
-  <script src="cards.js"></script>
+  <script src="/dis-kisk/cesta/cards.js"></script>
   <script src="/js/rough.js"></script>
   <script>
   (function () {
@@ -60,7 +63,12 @@
       var tile;
       if (it.photo){
         tile = el(tag,'tile'+fp);
-        var img = document.createElement('img'); img.src=it.photo.src; img.alt=it.photo.alt||''; tile.appendChild(img);
+        var img = document.createElement('img');
+        // cards.js photo srcs stay relative to the cesta asset folder; this page
+        // now lives at /dis-kisk/, so resolve them against the assets' real path.
+        var ps = it.photo.src;
+        img.src = /^(\/|https?:)/.test(ps) ? ps : '/dis-kisk/cesta/' + ps;
+        img.alt = it.photo.alt||''; tile.appendChild(img);
       } else {
         tile = el(tag,'tile text'+(it.missing?' missing':'')+fp);
       }
@@ -101,10 +109,18 @@
       hero.appendChild(el('span','h-cta','Začni tady →'));
       return hero;
     }
-    function makeQuoteTile(text, ref){
+    function makeQuoteTile(text, ref, link){
       var tile = el('div','tile quote-tile f-landscape');   // research voices are 2:1
       tile.appendChild(el('p','qt-text', text));
       tile.appendChild(el('div','qt-ref', '— ' + ref));
+      // a stretched overlay link makes the whole card clickable without making
+      // the tile an <a> (which would collide with the „ glyph on ::before)
+      if (link){
+        var a = el('a','qt-link');
+        a.setAttribute('href', link);
+        a.setAttribute('aria-label', 'Otevřít: ' + ref);
+        tile.appendChild(a);
+      }
       return tile;
     }
 
@@ -127,7 +143,7 @@
       if (it.sig) tile.appendChild(el('div','h-sig', it.sig));
       return tile;
     }
-    function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref) : makeTile(it); }
+    function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref, it.link) : makeTile(it); }
     function tallOf(it){ return isClosing(it) ? true : isQuote(it) ? false : isTallFp(footprint(it)); }
     function pick(arr, pred){ for (var i=0;i<arr.length;i++){ if (pred(arr[i])) return arr.splice(i,1)[0]; } return null; }
     function isTallFp(fp){ return fp === ' f-big' || fp === ' f-portrait'; }   // 2 units tall

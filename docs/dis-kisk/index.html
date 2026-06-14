@@ -1,195 +1,280 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>Erik Vaněk | DIS KISK portfolio</title>
-        <meta name="description" content=""/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="/css/dis.css"/>
-        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
-    </head>
+<!doctype html>
+<html lang="cs" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cesta studiem DIS KISK — Erik Vaněk</title>
+<link rel="stylesheet" href="/fonts/fonts.css"/>
+<link rel="stylesheet" href="/css/pico.classless.min.css"/>
+<link rel="stylesheet" href="/dis-kisk/cesta/cesta.css"/>
+</head>
+<body>
+  <header class="wall-head">
+    <p class="wh-name">Erik Vaněk</p>
+    <p class="wh-line">Cesta studiem Designu informačních služeb · KISK FF MUNI</p>
+  </header>
 
-    <!-- Google tag (gtag.js) -->
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
-></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
+  <div id="bau-grid" class="wall"></div>
+
+  <footer class="wall-foot">
+    <p>2023–2026 · vybráno ze studijních hroznů, s ❤️</p>
+  </footer>
+
+  <script src="/dis-kisk/cesta/cards.js"></script>
+  <script src="/js/rough.js"></script>
+  <script>
+  (function () {
+    // semester = metadata only: colour + tag, never a heading
+    var SEM_COLOR = { 'I':'#6B7A45','II':'#3E5A6E','III':'#B0552E','IV':'#6F2430','V':'#C26818','VI':'#9a7a23','?':'#7a7060' };
+
+    // ---------- helpers ----------
+    function el(tag, cls, text, styles){
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      if (styles) for (var k in styles) n.style[k] = styles[k];
+      return n;
     }
-    gtag('js', new Date());
+    // function stripEmoji(s){ return s.replace(/[^\w\sáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ&×—-]/g,'').trim().toLowerCase(); }
+    function stripEmoji(s){ return s }
+    function noEmoji(s){ return s}
+    // function noEmoji(s){ return s.replace(/[^\p{L}\p{N}\s.,:–—&()'→↗←-]/gu,'').replace(/\s+/g,' ').trim(); }
 
-    gtag('config', 'G-6MSV4WTZ4N');
-</script>
+    // snap each tile to one of 4 grid footprints: explicit fp wins, feature → 2×2,
+    // tall photo → 1×2, wide photo → 2×1, otherwise (text + near-square) → 1×1
+    function footprint(it){
+      if (it.fp)      return ' ' + it.fp;
+      if (it.feature) return ' f-big';
+      if (!it.photo)  return '';
+      var r = it.photo.ratio || 1;
+      if (r < 0.85) return ' f-portrait';
+      if (r > 1.25) return ' f-landscape';
+      return '';
+    }
 
+    // one initiative → one tile (thematic tags + emoji-stripped title on a stamp; chips kept but hidden).
+    // A tile with it.link becomes an <a> so the whole card is clickable.
+    function makeTile(it, fpOverride){
+      var fp = (fpOverride != null) ? (' ' + fpOverride) : footprint(it);
+      var tag = it.link ? 'a' : 'div';
+      var tile;
+      if (it.photo){
+        tile = el(tag,'tile'+fp);
+        var img = document.createElement('img');
+        // cards.js photo srcs stay relative to the cesta asset folder; this page
+        // now lives at /dis-kisk/, so resolve them against the assets' real path.
+        var ps = it.photo.src;
+        img.src = /^(\/|https?:)/.test(ps) ? ps : '/dis-kisk/cesta/' + ps;
+        img.alt = it.photo.alt||''; tile.appendChild(img);
+      } else {
+        tile = el(tag,'tile text'+(it.missing?' missing':'')+fp);
+      }
+      var isExt = it.link && /^https?:\/\//.test(it.link);   // external URL → opens in a new tab
+      if (it.link){
+        tile.setAttribute('href', it.link);
+        if (isExt){ tile.setAttribute('target','_blank'); tile.setAttribute('rel','noopener'); }
+      }
+      var tagText = it.tag ? (/^\d/.test(it.tag) ? it.tag : 'semestr '+it.tag) : 'semestr '+it.sem;
+      tile.appendChild(el('span','sem-tag', tagText, {background: it.color || SEM_COLOR[it.sem]}));
+      var stamp = el('div','tile-stamp ext');
+      if (it.tags && it.tags.length){
+        var tg = el('div','tile-tags');
+        it.tags.forEach(function(t){ tg.appendChild(el('span','tt', t)); });
+        stamp.appendChild(tg);
+      }
+      var titleEl = el('div','tile-title', noEmoji(it.title));
+      if (isExt) titleEl.appendChild(el('span','tile-ext', ' 🔗'));   // signals the card leads off-site
+      stamp.appendChild(titleEl);
+      // one muted functional clause under the title — only where there's room (2×2+)
+      if (it.sub && /f-big|f-profile/.test(fp)) stamp.appendChild(el('div','tile-sub', it.sub));
+      var chips = (it.chips || []).filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
+      if (chips.length){
+        var box = el('div','tile-chips');
+        chips.forEach(function(c){ box.appendChild(el('span','tc'+(c.variant?(' '+c.variant):''), c.text)); });
+        stamp.appendChild(box);
+      }
+      tile.appendChild(stamp);
+      return tile;
+    }
+    function makeHero(){
+      // hero · 2×2 — text-on-paper door into the story; the rough circle
+      // around the CTA draws itself shortly after load (see circleCta)
+      var hero = el('a','tile hero f-big');
+      hero.setAttribute('href', '/dis-kisk/portfolio/');
+      hero.appendChild(el('h1','h-title','Tři roky studia DIS KISK'));
+      hero.appendChild(el('p','h-sub','Výběr z hroznů z mé cesty studiem. 2023–2026'));
+      hero.appendChild(el('span','h-cta','Začni tady →'));
+      return hero;
+    }
+    function makeQuoteTile(text, ref, link){
+      var tile = el('div','tile quote-tile f-landscape');   // research voices are 2:1
+      tile.appendChild(el('p','qt-text', text));
+      tile.appendChild(el('div','qt-ref', '— ' + ref));
+      // a stretched overlay link makes the whole card clickable without making
+      // the tile an <a> (which would collide with the „ glyph on ::before)
+      if (link){
+        var a = el('a','qt-link');
+        a.setAttribute('href', link);
+        a.setAttribute('aria-label', 'Otevřít: ' + ref);
+        tile.appendChild(a);
+      }
+      return tile;
+    }
 
-    <body>
-        <div id="wrapper">
-            
+    // reading order: pinned start → lead tiles (opening) → middle (array order) → pinned end
+    function orderedSeq(){
+      var start = INITIATIVES.filter(function(i){ return i.pin === 'start'; });
+      var end   = INITIATIVES.filter(function(i){ return i.pin === 'end'; });
+      var lead  = INITIATIVES.filter(function(i){ return i.lead; }).sort(function(a,b){ return a.lead - b.lead; });
+      var mid   = INITIATIVES.filter(function(i){ return !i.pin && !i.lead; });
+      return start.concat(lead).concat(mid).concat(end);
+    }
 
-            
-<div id="bio">
-    <img src="/img/me-melon.jpeg" alt="Já a meloun z tržnice v Temešváru" />
-    <div id="bio-text">
-        <h2 id="zdarec">Zdarec! 👋</h2>
-        <p>
-            Jsem Erik Vaněk a na KISKu už jsem podruhé. Poprvé jsem kvůli svý
-            laxnosti studium nedokončil a teď je čas to napravit.
-        </p>
-        <p>
-            Profesně se živím jako designer služeb pro různé klienty. Aktuálně spolupracuju zejména s <a
-                href="https://www.mpsv.cz/" target="_blank">MPSV</a> a agenturou <a href="https://jinag.eu/"
-                target="_blank">JINAG</a>. Předtím jsem se aktivně
-            věnoval
-            <a href="/aero">hydroponickému pěstování rostlin</a> ať už doma tak
-            komerčně pro
-            <a href="https://infarm.com/" target="_blank">infarm</a>.
-        </p>
-        <p>
-            Jsem rád venku a označil bych se za kritickýho optimistu. A jak
-            <a href="https://www.youtube.com/watch?v=rHoBDmD4ofU&ab_channel=MidiLidi" target="_blank">říká</a>
-            Petr Marek z Midi Lidi –
-            <i>„Rád vařim a vim že to umim”</i>. A taky rád kvasim. Třeba
-            <a href="/kombucha">kombuchu</a>.
-        </p>
-    </div>
-</div>
-<div id="intro">
-    <h1 id="zptky-na-kisku">Zpátky na KISKu ❤️</h1>
-    <p>Studijní portfolio z průběhu mojí cesty.</p>
-    <p>Postupně se rozvíjející deníček.</p>
-    <p>Netříděné poznámky.</p>
-    <p>Zásadní zjištění.</p>
-    <p>Reflexe.</p>
-    <p>Díky.</p>
-</div>
+    // ---- entry kinds + band packing ----
+    function isQuote(it){ return it.quote != null; }                           // standalone research-voice card
+    function isClosing(it){ return it.closing === true; }                      // inverted outro tile
+    function makeClosingTile(it){
+      // statement card — Erik's voice, deliberately not clickable
+      var tile = el('div','tile hero closing f-big');
+      tile.appendChild(el('p','h-statement', it.title));
+      if (it.sig) tile.appendChild(el('div','h-sig', it.sig));
+      return tile;
+    }
+    function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref, it.link) : makeTile(it); }
+    function tallOf(it){ return isClosing(it) ? true : isQuote(it) ? false : isTallFp(footprint(it)); }
+    function pick(arr, pred){ for (var i=0;i<arr.length;i++){ if (pred(arr[i])) return arr.splice(i,1)[0]; } return null; }
+    function isTallFp(fp){ return fp === ' f-big' || fp === ' f-portrait'; }   // 2 units tall
+    // group {el, tall} into card-tall columns: tall tiles stand alone; 1-unit tiles pair into a .stack
+    function packColumns(descs){
+      var cols = [], pend = null;
+      function flush(){ if (pend){ var s = el('div','stack'); s.appendChild(pend); cols.push(s); pend = null; } }
+      descs.forEach(function(d){
+        if (d.tall){ flush(); cols.push(d.el); }
+        else if (pend){ var s = el('div','stack'); s.appendChild(pend); s.appendChild(d.el); cols.push(s); pend = null; }
+        else pend = d.el;
+      });
+      flush();
+      return cols;
+    }
+    function emitBands(wall, cols, per){
+      for (var i=0;i<cols.length;i+=per){
+        var b = el('div','band');
+        cols.slice(i, i+per).forEach(function(c){ b.appendChild(c); });
+        wall.appendChild(b);
+      }
+    }
 
-<div class="expandable s1">
-    <h3 id="1-semestr">1. semestr</h3>
-    <p>
-        Trošku jako na horský dráze. Nejdřív jsem si říkal jaká to bude
-        pohodinda. Potom jsem rozbalil první systémovou nálož od Romana
-        Hřebeckýho a trošku se zděsil jak to celý budu stíhat. A pak už žádný
-        tak masivní nálože nepřišly. Uf! Intenzivně jsme to zakončili finálním
-        <a href="/dis-kisk/hackaton-I/">hackaton</a>em.
-    </p>
-    <p>
-        Konečně jsem si kvalitně zažil systémový myšlení a myslím, že právě
-        proto, že jsme ho přímo aplikovali na konkrétní problémy. Velký místo v
-        mým srdci si získal předmět
-        <a href="/dis-kisk/psychologie-pro-designery/">Psychologie pro designéry</a>
-        a už o něm slyšela většina mýho kámošstva. Rád bych sem nasdílel svou
-        případovou studii, ale přijde mi to moc nebezpečný. Informační teorie
-        kvalitně stimulovala moje nerdský já. Skvěle jsem se
-        <a href="https://medium.com/@vanek.erik/faae3273f6f9" target="_blank">pobavil s Dominikou Potužákovou</a>
-        o tvorbě wayfinding systému pro Prahu.
-    </p>
-    <p>
-        Kvalitní stimulace mýho nerdskýho já přišla v podobě
-        <a href="/dis-kisk/infoveda/">informační vědy</a> s Josefem Šlerkou. Je skvělý, že
-        i v takovým předmětu jsme se dokázali dostat k vaření. Kdečeho.
-    </p>
-    <p>
-        Taky jsem se poprvé kvalitněji dostal k <a href="/dis-kisk/VR-I/">VR</a>. Sám bych
-        se do toho asi nepustil a jsem rád, že jsem si to mohl osahat takhle z
-        první ruky s příjemným vedením. Pořád cítím, že má ta technologie kam
-        <a href="https://nerust.cz/" target="_blank">růst</a>
-        <i>(pun!)</i>
-        a je co vychytávat. A tak to je asi se spoustou technologií. Tak jsem
-        zvědavý kam se VR na spektru smartphone – Google glass v čase zařadí.
-    </p>
-    <p>
-        Krom spousty článků, knížek a videí ke kterým jsem se díky 1. semestru
-        dostal bych rád vypíchl knížku
-        <a href="/dis-kisk/design-is-a-job/">Design is a job</a> od Marka Monteira. Strašně
-        mi to sedlo a těším se až si to zase dám někdy znovu.
-    </p>
-    <p><a href="/dis-kisk/cile-I/">Cíle</a> a jejich zhodnocení doplním hnedle!</p>
-    <p>A na závěr <a href="/dis-kisk/stenatko/">štěňátko</a>!</p>
-</div>
-<div class="expandable s2 active">
-    <h3 id="2-semestr">2. semestr</h3>
-    <p>No tak to byla teda solidní nálož. Ale možná jsme si za to mohli sami? Těžko říct. Každopádně velkou část svého
-        času a
-        úsilí jsem poslal do kvalitativního výzkumu a konkrétně projektu, kde jsme se zabývali <a
-            href="/dis-kisk/ostrovy-pozitivni-inovace/">inovacemi v rámci české státní správy</a>. A bylo to výborný a náročný.
-    </p>
+    // Opening composition — centred flex bands:
+    //   row 1 — [Erik 2023 · 2×2] [hero · 2×2, centre] [Hackathon / Když nevíš · 2×1 stacked]
+    //   row 2 — three standard project cards (quotes are skipped here — they can't be 2×2)
+    //   rest  — projects + standalone research-voice quote cards, in data order, paired into columns, 3 per band
+    function renderWall(){
+      var wall = document.getElementById('bau-grid');
+      wall.innerHTML = '';
+      var seq  = orderedSeq();
+      var erik = pick(seq, function(i){ return i.pin === 'start'; });
+      var hack = pick(seq, function(i){ return i.title && /Hackathon/.test(i.title); });
+      var second = pick(seq, function(i){ return i.title && /zeptej/.test(i.title); });  // "Když nevíš, tak se zeptej" — second tile in the opening stack
 
-    <p>Zároveň jsem si v rámci tohoto projektu dost posunul své jak obecné, tak pro 2. semestr specifické, <a
-            href="/dis-kisk/cile-II/">studijní cíle</a>. Konečně mám pocit, že jsem dostal nějaký solidní metodologický základ, od
-        kterého se můžu dál odpíchnout.</p>
+      var b1 = el('div','band');
+      if (erik) b1.appendChild(makeTile(erik, 'f-big'));
+      b1.appendChild(makeHero());
+      var stack = el('div','stack');
+      if (hack)   stack.appendChild(makeTile(hack,   'f-landscape'));
+      if (second) stack.appendChild(makeTile(second, 'f-landscape'));
+      b1.appendChild(stack);
+      wall.appendChild(b1);
 
-    <p>Tím, že jsem většinu svých kapacit vložil do výzkumného projektu, tak jsem ostatním předmětům nedokázal věnovat
-        tolik pozornosti. Nakolik mě to mrzí 🥲 tak se člověk prostě nemůže rozkrájet. Rád bych se podíval víc do
-        hloubky na data i inkluzivní design a věřím, že se mi to v průběhu studia ještě podaří. Teď to byla hodně
-        škrábání po povrchu.</p>
+      // row 2 — first three PROJECT cards (skip quote entries so none renders as a 2×2)
+      var row2 = [];
+      while (row2.length < 3){
+        var p = pick(seq, function(i){ return !isQuote(i); });
+        if (!p) break;
+        row2.push(p);
+      }
+      var b2 = el('div','band');
+      row2.forEach(function(it){ b2.appendChild(makeTile(it, 'f-big')); });
+      wall.appendChild(b2);
 
-    <p>Docela jsem se v průběhu semestru zkámošil s <a href="https://claude.ai/">Claudem</a> (nebo Claudstvem?). Dle
-        nástroje jsou Claude oni – <em>As an artificial intelligence, I don't have a gender identity. I use "it"
-            pronouns
-            when referring to myself</em>. A tím díky moc za předmět <a
-            href="https://is.muni.cz/predmet/phil/jaro2024/DESB80" target="_blank">Úvod do prompt engineeringu</a>!</p>
+      // rest — every remaining entry (projects + standalone quotes) rendered by kind, in order
+      emitBands(wall, packColumns(seq.map(function(it){
+        return { el: makeAny(it), tall: tallOf(it) };
+      })), 3);
 
-    <p>Po semestru jsem ale z jeho průběhu trošku roztrpčenej. V průběhu semestru panovalo docela dost zmatku a
-        nejasností a ani závěrečné setkání mě pachuti nezbavilo. Zkusil jsem svoje <a
-            href="/dis-kisk/jbm-semestr-znovu-a-lepe/">aktuální pocity</a> sepsat a třeba se z
-        nich podaří do budoucna něco odnést.</p>
+      // staggered entrance: CSS animation keyed off --i per band
+      Array.prototype.forEach.call(wall.children, function(b, i){ b.style.setProperty('--i', i); });
+    }
 
-    <p>Dostal jsem taky super příležitost tutorovat předmět <a href="https://is.muni.cz/predmet/phil/jaro2025/DESB43"
-            target="_blank">Design management & Leadership
-            masterclass</a>. Skvělá
-        příležitost se potkat se super lidmi, kteří už toho mají spoustu za sebou a mají chuť to předávat dál
-        motivovanému studentstvu. Bylo to náročný, ale hodně přínosný z různých perspektiv. A musím studentům moc
-        poděkovat za množství energie, které tomu předmětu vložili. Udělalo mi to vážně radost.</p>
-    <p><em>Last but not least – kličové slovíčko tohoto semestru je pro mě <strong>framing</strong>.</em></p>
-</div>
-<div class="expandable s3 active">
-    <h3 id="3-semestr">3. semestr</h3>
-    <p>Tentokrát už trochu více stroze.</p>
-    <p>Jasně nejzásadnější předmět byl interakční design. Jsem rád, že si z něj odnáším detailní <a
-            href="/case-studies/Jarmilka/uzivatelska-studie-Jarmilka.pdf" target="_blank">case study</a>, se kterou můžu
-        dál profesně pracovat. Představení celého procesu ilustruje doplňková <a href="/ixd-25"
-            target="_blank">prezentace</a>.</p>
-    <p>Mimoto jsem si plnil vydefinované <a href="/dis-kisk/cile-III/">cíle</a> a behěm své <a href="/dis-kisk/praxe-III/">praxe</a> jsem se
-        zaměřoval na různé formáty a nuance ideačních workshopů.</p>
-    <p>Záznam k service designu coming soon. Prezentace bude ležet <a href="/sxd-25" target="_blank">zde</a>.</p>
-</div>
-<div class="expandable s4">
-    <h3 id="4-semestr">4. semestr</h3>
-    <p>Odpočinkovější semestr co se týče studovaných předmětů. Strašně jsem si mákl při přípravě ideačního workshopu pro
-        tajemnice a tajemníky českých ministerstev. Hezké vyústění mých spoluprací s veřejným sektorem v posledních dvou
-        letech. Ideální projekt v rámci <a href="/dis-kisk/praxe-IV/">Praxe IV</a>.</p>
-    <p>V rámci semestru jsem se taky aktivně zúčastnil dvou <a href="/dis-kisk/ucast-na-konferencich/">konferencí</a>. <a
-            href="https://zlindesignweek.com/2025/" target="_blank">Zlín design week</a>u a <a
-            href="https://www.creativebureaucracy.cz/" target="_blank">Festivalu kreativní byrokracie</a>. V rámci ZDW
-        jsem mluvil pro podcast Design kantýna. V
-        rámci FKB zase pořádal workshop zaměřený na nově vznikající HCD kurz pro úřednictvo při KISKu.</p>
-    <p>Největší množství času jsem v semestru věnoval učení kurzu <a
-            href="https://is.muni.cz/predmet/phil/jaro2025/ISKM48" target="_blank">Service design workshop</a> a byla to
-        skvělá, byť vyčerpávající, zkušenost. Mám obrovskou radost z toho, jak nakonec dopadly studentské projekty a z
-        viditelného kompetenčního posunu u studujících kurzu.</p>
+    // rough.js easter egg: quote tiles get a hand-drawn sharpie border (progressive)
+    function sketchQuoteBorders(){
+      if (typeof rough === 'undefined') return;
+      var NS = 'http://www.w3.org/2000/svg';
+      document.querySelectorAll('.tile.quote-tile').forEach(function(tile){
+        var w = tile.offsetWidth, h = tile.offsetHeight;
+        if (!w || !h) return;
+        var svg = document.createElementNS(NS, 'svg');
+        svg.setAttribute('class', 'rough-note');
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        svg.setAttribute('aria-hidden', 'true');
+        // inset enough that rough's stroke jitter stays inside the tile's
+        // overflow:hidden clip (was 3px → outer wobble got chopped at edges)
+        svg.appendChild(rough.svg(svg).rectangle(7, 7, w - 14, h - 14, {
+          roughness: 1.4, bowing: 1.2, strokeWidth: 1.2, stroke: 'rgba(122, 112, 96, .65)'
+        }));
+        tile.appendChild(svg);
+        tile.classList.add('has-rough');
+      });
+    }
 
-    <p>Během semestru jsem taky pracoval na plnění mých studijních <a href="/dis-kisk/cile-IV/">cílů pro 4. semestr</a>.</p>
+    // rough.js: a marker circle draws itself around the hero CTA after load
+    function circleCta(){
+      if (typeof rough === 'undefined') return;
+      var cta = document.querySelector('.h-cta');
+      if (!cta) return;
+      var NS = 'http://www.w3.org/2000/svg';
+      // generous box so the hand-drawn wobble + overshoot never clips
+      var padX = 30, padY = 24;
+      var w = cta.offsetWidth + padX * 2, h = cta.offsetHeight + padY * 2;
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'rough-note');
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.setAttribute('aria-hidden', 'true');
+      svg.style.width = w + 'px';
+      svg.style.height = h + 'px';
+      svg.appendChild(rough.svg(svg).ellipse(w / 2, h / 2, w - 26, h - 20, {
+        roughness: 1.3, bowing: 2.2, strokeWidth: 2.6, stroke: 'rgba(28, 24, 18, .82)',
+        disableMultiStroke: true   // one confident hand loop, not a scribble
+      }));
+      cta.appendChild(svg);
 
-</div>
-<div class="expandable s5">
-    <h3 id="5-semestr">5. semestr</h3>
-    <p>Konec se pomalu blíží. Pro mě asi nejvíc náročná část semestru byla výuka v kurzu <a href="/dis-kisk/praxe-V/">KISKED19:
-            Inovace ve veřejných službách: Designové myšlení pro úřednictvo</a>.</p>
-    <p>Přidávám alespoň krátkou reflexi plnění <a href="/dis-kisk/cile-V/">studijních cílů</a>.</p>
+      // Draw it like a hand circling once: reveal the single stroke from its
+      // start point to its end. Driven explicitly via WAAPI with the measured
+      // length — no CSS-var/implicit-from race (that caused it to pop in or
+      // sometimes not draw at all).
+      var reduce = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      svg.querySelectorAll('path').forEach(function(p){
+        var len = 0;
+        try { len = p.getTotalLength(); } catch (e) {}
+        if (!len || reduce || !p.animate) return; // leave it fully drawn
+        p.style.strokeDasharray = len;
+        p.style.strokeDashoffset = len;           // start hidden, then sweep
+        p.animate(
+          [{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+          { duration: 620, easing: 'cubic-bezier(.45, .02, .3, 1)', fill: 'forwards' }
+        );
+      });
+    }
 
-</div>
-<div class="expandable s6">
-    <h3 id="6-semestr">6. semestr</h3>
-    <p>A je tady konec. Hlavním tahounem semestru byl talk na <a href="/ux-monday-26" target="_blank">UX Monday v Praze</a> - <em>„The process isn't dead. It's just different.”</em> - kde jsem cca 45 minut procházel workflow, který jsem si během minulého roku stavěl: brain dump method, AI-asistované kódování rozhovorů a Claude Code jako prototypovací nástroj. Poprvé jsem ten materiál vzal do místnosti, kde jsem neměl domácí výhodu, a překvapivě to fungovalo.</p>
-    <p>Celé to bylo zarámované jedním velkým posunem ve workflow - z AI tu a tam na plně agentní mód s MCP servery, druhým mozkem v Obsidianu a kódem jako source of truth. Talk byl veřejná verze toho posunu.</p>
-    <p>Krátká <a href="/dis-kisk/cile-VI/">reflexe studijních cílů</a> uzavírá šestidílnou sérii.</p>
-</div>
-        </div>
-
-        <script src="" async defer></script>
-    </body>
+    // ---------- boot ----------
+    renderWall();
+    sketchQuoteBorders();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function(){ setTimeout(circleCta, 500); });
+    } else {
+      setTimeout(circleCta, 900);
+    }
+  })();
+  </script>
+</body>
 </html>

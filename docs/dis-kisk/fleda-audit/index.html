@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="/css/pico.classless.min.css"/>
         <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,7 +55,7 @@
 
         <main id="wrapper">
             
-                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
                 <header class="article-head">
                     <h1 id="flda-audit-pvtivosti">Fléda - audit přívětivosti</h1>
                     
@@ -60,28 +83,28 @@
     .hero-figure.diagram img { background: #fff; padding: 1.4rem; }
 </style>
 <div class="float-wrap">
-<figure class="float-figure narrow">
+<figure class="float-figure narrow float-right">
 <a href="/dis-kisk/img/sxd-25/fleda-gate.jpg" target="_blank" rel="noopener">
 <img src="/dis-kisk/img/sxd-25/fleda-gate.jpg" alt="Vstupní chodba Flédy vedoucí k hlavním dveřím - pohled zevnitř" />
 </a>
 <figcaption>Průchod ke vchodu. Místo, kde zákaznická cesta začíná i končí.</figcaption>
 </figure>
-<p>Když jsme si měli pro pro projekt v rámci kurzu service design měli vybírat kulturní instituci, napadly mě tři různé organizace, ke kterým jsem měl nějaký bližší vztah. Jednou z nich byla Fléda. V jejím provozu jsem měl pár kamarádů a známých. S CEO jsme se párkrát potkali na obědě, ale víc jsme se neznali.</p>
-<p>Spolupráce začala tak, že jsem zjistil, že emailový formát zaměstnanců flédy je <code>krestni-jmeno@fleda.cz</code> a tak jsem si za křestní jméno dosadil jméno CEO a poslal konkrétní nabídku – udělám pro klub bezplatný audit zákaznické přívětivosti v rámci našeho výzkumného projektu. Moc jsem od toho nečakal. Příjemně mě potěšilo, že hned druhý den jsme si domlouvali schůzku k nějakým větším detailům. To byl v tomto projektu první výborný signál.</p>
+<p>Když jsme si měli pro projekt v rámci kurzu service design vybírat kulturní instituci, napadly mě tři různé organizace, ke kterým jsem měl nějaký bližší vztah. Jednou z nich byla Fléda. V jejím provozu jsem měl pár kamarádů a známých. S CEO jsme se párkrát potkali na obědě, ale víc jsme se neznali.</p>
+<p>Spolupráce začala tak, že jsem zjistil, že emailový formát zaměstnanců flédy je <code>krestni-jmeno@fleda.cz</code> a tak jsem si za křestní jméno dosadil jméno CEO a poslal konkrétní nabídku - udělám pro klub bezplatný audit zákaznické přívětivosti v rámci našeho výzkumného projektu. Moc jsem od toho nečekal. Příjemně mě potěšilo, že hned druhý den jsme si domlouvali schůzku k nějakým větším detailům. To byl v tomto projektu první výborný signál.</p>
 <p>V rámci kurzu <strong>Service Experience Design</strong> jsem si jako terén vybral Flédu - jeden z nejrespektovanějších hudebních klubů v Brně, kde jsem jako návštěvník strávil desítky večerů. Právě proto, že ho znám jako zákazník, mi přišlo zajímavé ho zkoumat metodicky. Cílem nebylo potvrdit, co si o klubu myslím, ale projít celý zákaznický zážitek systematicky - od první myšlenky na večer po odchod z šatny - a vizualizovat ho v jazyce service designu.</p>
 </div>
 <h2 id="jak-jsem-vymezil-tern">Jak jsem vymezil terén</h2>
 <p>Zákaznická cesta návštěvníka hudebního klubu je překvapivě dlouhá. Začíná dávno před samotnou akcí: jak se o ní dozvím? Jak koupím lístek? Co si vezmu na sebe? Pokračuje přes příchod, šatnu, bar, samotný zážitek a nekončí odchodem - ale tím, co si z večera odnesu a jestli se vrátím.</p>
 <p>Rozhodl jsem se mapovat celou tuto cestu, ne jen to, co se děje přímo za dveřmi klubu. Abych ji měl za koho mapovat, vytvořil jsem na základě rozhovorů s personálem Flédy personu, na kterou se chceme zaměřit - <strong>Terezu, 27 let</strong> - entuziastickou návštěvnici progresivních kulturních akcí s konkrétními potřebami, vzorci chování a tím, co ji v kulturním životě baví i co ji odrazuje.</p>
 <div class="float-wrap">
-<figure class="float-figure narrow">
+<figure class="float-figure narrow float-left">
 <a href="/dis-kisk/semestr-3/sxd/cxj.png" target="_blank" rel="noopener">
 <img src="/dis-kisk/semestr-3/sxd/cxj.png" alt="Customer journey map návštěvnice Terezy - fáze, akce, emoce a touchpointy napříč celou zákaznickou cestou" />
 </a>
 <figcaption>Zákaznická cesta Terezy - vizualizace zkušenosti napříč celým večerem. (Klikni pro plné rozlišení.)</figcaption>
 </figure>
 <h2 id="vizualizace-jako-mylenkov-nstroj">Vizualizace jako myšlenkový nástroj</h2>
-<p>S využitím <strong>Customer journey map</strong> jsem zmapoval zkušenost Terezy krok po kroku: co dělá, co cítí, kde naráží na překážky, kde ji zážitek baví. Kroky v každé fázi byli postaveny na datech, které jsme získali z vyšších desítek odpovědí na dotazník, který jsme společně s týmem Flédy rozeslali. Tato data jsme chtěli doplnit i o kvalitativnější perspektivu pomocí hloubkových rozhovorů, čas ale nebyl na naší straně.</p>
+<p>S využitím <strong>Customer journey map</strong> jsem zmapoval zkušenost Terezy krok po kroku: co dělá, co cítí, kde naráží na překážky, kde ji zážitek baví. Kroky v každé fázi byly postaveny na datech, která jsme získali z vyšších desítek odpovědí na dotazník, který jsme společně s týmem Flédy rozeslali. Tato data jsme chtěli doplnit i o kvalitativnější perspektivu pomocí hloubkových rozhovorů, čas ale nebyl na naší straně.</p>
 <p>O vrstvu níž pak šel <strong>service blueprint</strong> - jeden z artefaktů, který mě v celém kurzu zaujal nejvíc. Za každou viditelnou akcí zákazníka mapuje, co se děje v zákulisí: frontstage akce personálu, backstage procesy, podpůrné systémy. Přesně v místě, kde se frontstage a backstage setkávají - na tzv. <em>line of visibility</em> - se odehrávají nejzajímavější momenty tření. Typicky v objednávání na baru, v obsluze šatny či při úvodní kontrole při vstupu do klubu.</p>
 <p>Bylo překvapivě těžké blueprint udělat dobře. Ne proto, že by byl metodologicky složitý, ale proto, že mě nutil k přesnosti a jasnosti v tom, co každý jednotlivý krok přesně znamená. Každé rozhodnutí o tom, co patří do které vrstvy, odhaluje, co o organizaci opravdu víte - a co si jen myslíte, že víte.</p>
 </div>

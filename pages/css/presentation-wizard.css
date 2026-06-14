@@ -130,6 +130,23 @@ body {
   display: none;
 }
 
+/* Sub-items nested inside an ORDERED list (ol > li > ul > li): same treatment as
+   ul-nested - no arrow, muted, aligned. Without this they wrongly inherit the
+   ul-arrow and it overlaps the text. */
+.reveal ol li ul {
+  margin-top: 0.4rem;
+  padding-left: 0;
+  gap: 0.4rem;
+}
+.reveal ol li ul li {
+  font-size: 1.5rem;
+  color: var(--dim);
+  padding-left: 0;
+}
+.reveal ol li ul li::before {
+  display: none;
+}
+
 .reveal ol {
   margin: 0;
   padding: 0 0 0 2rem;
@@ -484,7 +501,8 @@ body {
 .layout-two-col {
   flex-direction: column !important;
   justify-content: flex-start !important;
-  padding: 100px 3rem 2rem !important;
+  /* right padding trimmed (3rem -> 1rem) so right-column photos grow toward the edge */
+  padding: 100px 1rem 2rem 3rem !important;
 }
 
 .layout-two-col h2 {
@@ -515,6 +533,26 @@ body {
 .layout-two-col .cols.cols--60-40 > *:last-child  { flex: 0 0 38%; }
 .layout-two-col .cols.cols--40-60 > *:first-child { flex: 0 0 38%; }
 .layout-two-col .cols.cols--40-60 > *:last-child  { flex: 0 0 60%; }
+
+/* Text + photo two-col: widen the image column (>50%) so photos grow toward the
+   right edge. Targets <figure> only - text and SVG columns (e.g. iceberg) untouched. */
+.layout-two-col .cols > figure {
+  flex: 0 0 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.layout-two-col .cols > figure img {
+  width: 100%;
+  max-height: 27rem;
+  object-fit: contain;
+}
+
+/* compact heading-body: hustší slidy (víc odrážek + citát) - menší písmo proti přetečení dolů */
+.layout-heading-body.compact > ul > li,
+.layout-heading-body.compact > ol > li { font-size: 1.7rem; }
+.layout-heading-body.compact .quote-block { margin-top: 1rem; }
+.layout-heading-body.compact .quote-block blockquote { font-size: 1.5rem; }
 
 /* ─── Layout: demo ─── */
 .layout-demo {

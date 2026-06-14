@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="/css/pico.classless.min.css"/>
         <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,7 +55,7 @@
 
         <main id="wrapper">
             
-                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
                 <header class="article-head">
                     <h1 id="od-vzkumu-k-workshopu-s-ministerskm-tajemnictvem">Od výzkumu k workshopu s ministerským tajemnictvem</h1>
                     
@@ -61,7 +84,7 @@
         max-width: 600px;
     }
 </style>
-<p>V jarním semestru 2024 jsme s týmem dokončovali <strong>výzkum inovativních týmů ve státní správě</strong> – projekt, který byl páteří mého 2. semestru na KISKu. Koncem 2024 jsme ho finalizovali a začátkem letošního roku <a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">digitálně publikovali</a>. Bylo to hotový, uložený v šuplíku, a já jsem se těšil na to, že si konečně trochu oddechnu. Zároveň jsme s Drýmtýmem přemýšleli jak bychom na něj mohli nějak navázat když už jsme tomu věnovali tolik úsilí.</p>
+<p>V jarním semestru 2024 jsme s týmem dokončovali <strong>výzkum inovativních týmů ve státní správě</strong> - projekt, který byl páteří mého 2. semestru na KISKu. Koncem 2024 jsme ho finalizovali a začátkem letošního roku <a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">digitálně publikovali</a>. Bylo to hotové, uložené v šuplíku, a já jsem se těšil na to, že si konečně trochu oddechnu. Zároveň jsme s Drýmtýmem přemýšleli, jak bychom na něj mohli nějak navázat, když už jsme tomu věnovali tolik úsilí.</p>
 <figure class=narrow>
     <img src=/dis-kisk/img/tajemnicky-workshop/sense-making.jpg alt=Spoiler alert: Uspořádali jsme naprosto výbornej workshop ❤️/>
     <figcaption>
@@ -76,25 +99,25 @@
         title="Embedded post"></iframe>
 <figcaption><em>LinkedIn příspěvek o naší schůzce s panem nejvyšším</em></figcaption>
 <br>
-<p>Pana nejvyššího nápad zaujal a rychle jsme se dohodli, že v květnu uspořádáme workshop pro <strong>tajemnictvo ministerstev a jejich vybrané +1</strong>. Což je vlastně v něčem naprosto ideální scénář protože i z našeho výzkumu vyplývá, že <strong>pro změny ve veřejné sféře je potřeby podpora shora</strong>. A my budeme mít skvělou příležitost mít jeden den pod jednou střechou zástupce vedení většiny českých ministerstev.</p>
+<p>Pana nejvyššího nápad zaujal a rychle jsme se dohodli, že v květnu uspořádáme workshop pro <strong>tajemnictvo ministerstev a jejich vybrané +1</strong>. Což je vlastně v něčem naprosto ideální scénář, protože i z našeho výzkumu vyplývá, že <strong>pro změny ve veřejné sféře je potřeba podpora shora</strong>. A my budeme mít skvělou příležitost mít jeden den pod jednou střechou zástupce vedení většiny českých ministerstev.</p>
 <p>Ze schůzky vypadlo několik zásadních věcí:</p>
 <ul>
 <li>Workshop bude navazovat přímo na náš výzkum a jeho zjištění</li>
-<li>Účastníci budou z různých ministerstev – od financí přes zdravotnictví až po vnitro</li>
-<li>Cílem je vytvořit prostor pro <strong>mezirerzortní sdílení</strong> dobré praxe</li>
+<li>Účastníci budou z různých ministerstev - od financí přes zdravotnictví až po vnitro</li>
+<li>Cílem je vytvořit prostor pro <strong>meziresortní sdílení</strong> dobré praxe</li>
 <li>Formát: 3 hodiny, důraz na praktické výstupy, které si lidé odnesou</li>
 </ul>
 <h1 id="nejnronj-pprava-v-mm-ivot">Nejnáročnější příprava v mém životě</h1>
-<p>A pak začala příprava. A tady musím říct – <strong>tohle byla ta nejvíce detailní profesní věc, kterou jsem kdy připravoval</strong>. Každá minuta byla naplánovaná, každá otázka promyšlená a prošla několikerými iteracemi, každý přechod mezi aktivitami nacvičený. Všechno v duchu 5P – proper planning prevents poor performance.</p>
-<p>Spolupráce s týmem pana nejvyššího byla dle naší dobré designerské praxe <strong>iterativní</strong> – několik kol zpětné vazby, ladění obsahu aktivit, precizování každého detailu. Iniciativu jsme drželi převážně na naší straně a tým pana nejvyššího jsme naším procesem provázeli. Uvědomil jsem si, jak jiná je práce se stakeholdery z prostředí veřejné správy oproti komerční sféře nebo NGOs.</p>
-<p>Jedním z hezkých artefaktů, které při přípravě akce vznikly, byla <strong>tištěná brožurka</strong> se scénářem a podklady pro všechny účastníky – něco, co by si mohli odnést domů a případně použít ve svých týmech.</p>
+<p>A pak začala příprava. A tady musím říct - <strong>tohle byla ta nejvíce detailní profesní věc, kterou jsem kdy připravoval</strong>. Každá minuta byla naplánovaná, každá otázka promyšlená a prošla několikerými iteracemi, každý přechod mezi aktivitami nacvičený. Všechno v duchu 5P - proper planning prevents poor performance.</p>
+<p>Spolupráce s týmem pana nejvyššího byla dle naší dobré designerské praxe <strong>iterativní</strong> - několik kol zpětné vazby, ladění obsahu aktivit, precizování každého detailu. Iniciativu jsme drželi převážně na naší straně a tým pana nejvyššího jsme naším procesem provázeli. Uvědomil jsem si, jak jiná je práce se stakeholdery z prostředí veřejné správy oproti komerční sféře nebo NGOs.</p>
+<p>Jedním z hezkých artefaktů, které při přípravě akce vznikly, byla <strong>tištěná brožurka</strong> se scénářem a podklady pro všechny účastníky - něco, co by si mohli odnést domů a případně použít ve svých týmech.</p>
 <p>Pro samotný průběh workshopu jsme se rozhodli pro variaci na formát <strong>World café</strong> se třemi tématy vycházejícími z našeho výzkumu:</p>
 <ol>
-<li><strong>Nábor a udržení talentů</strong> – jak přilákat kvalitní lidi do státní správy</li>
-<li><strong>Síťování a vztahy</strong> – budování spolupráce uvnitř i mezi organizacemi</li>
-<li><strong>Učící se organizace</strong> – jak podporovat rozvoj a sdílení know-how</li>
+<li><strong>Nábor a udržení talentů</strong> - jak přilákat kvalitní lidi do státní správy</li>
+<li><strong>Síťování a vztahy</strong> - budování spolupráce uvnitř i mezi organizacemi</li>
+<li><strong>Učící se organizace</strong> - jak podporovat rozvoj a sdílení know-how</li>
 </ol>
-<p>Druhá polovina workshopu se zaměřila na <strong>&quot;malé kroky&quot;</strong> – aby si každý účastník odnesl konkrétní akci, kterou může začít realizovat už zítra.</p>
+<p>Druhá polovina workshopu se zaměřila na <strong>&quot;malé kroky&quot;</strong> - aby si každý účastník odnesl konkrétní akci, kterou může začít realizovat už zítra.</p>
 <h1 id="den-d">Den D</h1>
 <p>5.5.2025 (dobře se to datum pamatuje) byl náš den D. Hotel Spiritka, místnost bývalé konírny, sál plný státních tajemníků a tajemnic, <strong>pan nejvyšší aktivně participuje celé tři hodiny</strong>, atmosféra přátelská ale soustředěná.</p>
 <figure class=narrow>
@@ -112,29 +135,29 @@
     </figcaption>
 </figure> 
 # Co jsem si odnesl
-Největší zjištění pro mě? **Mezirerzortní spolupráce je nejen možná, ale když se jí věnuje dostatečná příprava a kvalitní facilitace, může přinést velice zajímavé nápady a atmosféru, kterou ocení i poměrně významní lidi.** Design skutečně může sloužit jako silný nástroj pro spojování lidí napříč rezorty.
+Největší zjištění pro mě? **Meziresortní spolupráce je nejen možná, ale když se jí věnuje dostatečná příprava a kvalitní facilitace, může přinést velice zajímavé nápady a atmosféru, kterou ocení i poměrně významní lidé.** Design skutečně může sloužit jako silný nástroj pro spojování lidí napříč rezorty.
 <figure class=narrow>
     <img src=/dis-kisk/img/tajemnicky-workshop/baru-mastery.jpg alt=Baru a její post-it mastery při průběžném zpracovávání výsledků/>
     <figcaption>
         <em>Baru a její post-it mastery při průběžném zpracovávání výsledků</em>
     </figcaption>
 </figure> 
-<p>Z moderátorské perspektivy to pro nás bylo <strong>důležité, aby všechno klapalo podle scénáře plánu</strong>. Moje role byla zajistit, že všechno funguje na čas, že účastnictvo chápe co se bude dít, že jsou spokojení a že všechno šlape jak má a celý den moderovat.</p>
+<p>Z moderátorské perspektivy to pro nás bylo <strong>důležité, aby všechno klapalo podle scénáře</strong>. Moje role byla zajistit, že všechno funguje na čas, že účastnictvo chápe, co se bude dít, že jsou spokojení a že všechno šlape jak má a celý den moderovat.</p>
 <p>Co se osvědčilo:</p>
 <ul>
-<li><strong>Perfektní příprava</strong> – každý detail byl důležitý</li>
-<li><strong>Flexibilita v rámci struktury</strong> – scénář držet, ale umět reagovat na dynamiku skupiny</li>
-<li><strong>Aktivní účast &quot;shora&quot;</strong> – účast pana nejvyššího pomohla zvýšit vážnost akce a dobře nastavila tón pro účastnictvo akce</li>
+<li><strong>Perfektní příprava</strong> - každý detail byl důležitý</li>
+<li><strong>Flexibilita v rámci struktury</strong> - scénář držet, ale umět reagovat na dynamiku skupiny</li>
+<li><strong>Aktivní účast &quot;shora&quot;</strong> - účast pana nejvyššího pomohla zvýšit vážnost akce a dobře nastavila tón pro účastnictvo akce</li>
 </ul>
 <p>Navíc jsem si potvrdil, že facilitace pro mě není jen o technikách a metodách, ale hodně o čtení skupiny, vytváření bezpečného prostoru a <strong>umění dát prostor každému hlasu</strong>. Byť jsem nebyl přímo ve facilitační roli, líbilo se mi, že jsem si během workshopu mohl také odnést to, jak k facilitaci přistupují kolegyně a kolegové, kteří měli jednotlivé stoly na starost.</p>
 <h1 id="co-dl">Co dál?</h1>
-<p>Tento workshop pro mě znamená především potvrzení toho, kam se chci facilitačně posouvat. Chci pracovat na projektech, které mají potenciál <strong>skutečně změnit to, jak organizace spolupracují</strong>. A příjemně mě, a věřím, že i celý náš tým, potěšilo jaké byly reakce účastnic a účastníků po akci a i zpětná vazba, kterou jsme dostali v navazujícím formuláři.</p>
+<p>Tento workshop pro mě znamená především potvrzení toho, kam se chci facilitačně posouvat. Chci pracovat na projektech, které mají potenciál <strong>skutečně změnit to, jak organizace spolupracují</strong>. A příjemně mě, a věřím, že i celý náš tým, potěšilo, jaké byly reakce účastnic a účastníků po akci a i zpětná vazba, kterou jsme dostali v navazujícím formuláři.</p>
 <p>Rád výsledky práce, které dělám ve spolupráci s veřejným sektorem, šířím dál. Můžeme to brát jako jistou formu open-sourcingu. Pro ty, kteří by se chtěli podívat na to, jak takový workshop vypadal zevnitř, jsou zde pro inspiraci <strong>všechny podklady, které s workshopem nějak souvisí</strong>:</p>
-<p>🎯 <a href="https://docs.google.com/document/d/1Hvg-xxvK_nFVv2hk2WkwJ8yyLVXgVxQaUdOrqzzEeDE/edit?usp=sharing" target="_blank">Koncept workshopu</a> – základní myšlenka a cíle<br>
-⏱️ <a href="https://docs.google.com/document/d/1xrHnw5n2vXEZcZSt-rMNVJxx_7xMhJZC9c6QQfXl8zc/edit?usp=sharing" target="_blank">Minutový scénář</a> – detailní časový plán celého dne<br>
-🗣️ <strong>Scénář pro jednotlivé stoly</strong> – <a href="https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing" target="_blank">zde</a>, <a href="https://docs.google.com/document/d/1xKdlXI8tEMG_SQe2VEYm95kyivZKLGG3h-y059-4k80/edit?usp=sharing" target="_blank">zde</a> a <a href="https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing" target="_blank">zde</a> – co přesně říkat u každého tématu<br>
+<p>🎯 <a href="https://docs.google.com/document/d/1Hvg-xxvK_nFVv2hk2WkwJ8yyLVXgVxQaUdOrqzzEeDE/edit?usp=sharing" target="_blank">Koncept workshopu</a> - základní myšlenka a cíle<br>
+⏱️ <a href="https://docs.google.com/document/d/1xrHnw5n2vXEZcZSt-rMNVJxx_7xMhJZC9c6QQfXl8zc/edit?usp=sharing" target="_blank">Minutový scénář</a> - detailní časový plán celého dne<br>
+🗣️ <strong>Scénář pro jednotlivé stoly</strong> - <a href="https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing" target="_blank">zde</a>, <a href="https://docs.google.com/document/d/1xKdlXI8tEMG_SQe2VEYm95kyivZKLGG3h-y059-4k80/edit?usp=sharing" target="_blank">zde</a> a <a href="https://docs.google.com/document/d/1NhC_WwT6X64LYquxxNORXKZ-bbIsPwIV-Y4U1pwn-0k/edit?usp=sharing" target="_blank">zde</a> - co přesně říkat u každého tématu<br>
 🖥️ <a href="/inovacni-tymy/">Prezentace</a> použitá v průběhu workshopu<br>
-📊 <a href="https://docs.google.com/document/d/1-TWI5ju9izoN9jLtTHwWItePwHXsvX8_wz6NaZiiYbw/edit?usp=sharing" target="_blank">Výsledky workshopu</a> – konkrétní nápady a návrhy účastníků</p>
+📊 <a href="https://docs.google.com/document/d/1-TWI5ju9izoN9jLtTHwWItePwHXsvX8_wz6NaZiiYbw/edit?usp=sharing" target="_blank">Výsledky workshopu</a> - konkrétní nápady a návrhy účastníků</p>
 <p>Možná vám to může být inspirací pro vlastní facilitaci v náročnějších prostředích.</p>
 <p>Dlouhodobě tvrdím, že největší inovativnost přichází v interdisciplinárních týmech a prostředích. Tenhle workshop mi to poměrně zásadně potvrdil. A jsem rád, že i naše designerské techniky v prostředí, kde třeba nejsou tolik běžné, velice dobře zafungovaly.</p>
 <p>A za to dík!🔥</p>

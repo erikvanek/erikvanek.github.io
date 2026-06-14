@@ -1,0 +1,346 @@
+presentation:
+  title: &title "Co mám dělat, když…?"
+  date: &date 2026-06-15
+  event: &event "Prezentace závěrečného projektu · DIS KISK"
+  venue: "FF MUNI, Brno"
+  speaker: &speaker "Erik Vaněk"
+  duration: 15
+  language: cs
+  layout: presentation-wizard.njk
+  permalink: /dis-kisk/thesis/
+  eleventyExcludeFromCollections: true
+  description: &description "Jak navrhnout navigaci sociálně-zdravotními službami v Jihomoravském kraji - a proč ten problém není pouze o informacích."
+  customizations:
+    colors: {}
+
+# =============================================================================
+# JARMILKA - obhajobová prezentace (pondělí 15. 6., 15 min, NEhodnoceno).
+# Žije na /dis-kisk/thesis/ (sem míří dlaždice "Jarmilka - bakalářská práce").
+# Tón uvolněný jako příspěvek na UX Monday. Obsah: PROČ · JAK · CO (Simona).
+#
+# STRUKTURA = PŘÍBĚH O CESTĚ:
+#   ČÁST 1 - Cesta: zadání -> reframe -> mapa (vlastní diamant) -> výzkum ->
+#            vhledy -> 4vrstvý model -- (break) -- 3 workshopy -> 4 příl. -> DNY AI
+#   ČÁST 2 - Jarmilka: co to je -> principy -> 5 kroků -> RITE -> v2
+#   Závěr: co Jarmilka neopraví -> díky (unicorns)
+#
+# SPEAKER NOTES: záměrně PRÁZDNÉ (speaker_notes: ""). Erik si je píše ručně.
+# Slidy drženy "lehké": ploché odrážky, žádné hluboké vnořování (méně velikostí písma).
+# TBD = obrázek, který dodá Erik (3 fotky: workshop, sense-making, business case).
+# =============================================================================
+
+slides:
+  # ─── TITUL (byline stackovaný + slide-rule, viz index.html) ────────────────
+  - heading: *title
+    subtitle: *description
+    layout: title
+    speaker: *speaker
+    event: *event
+    date: *date
+    images: []
+    speaker_notes: ""
+
+  # ─── ZADÁNÍ + REFRAME ────────────────────────────────────────────────────
+  - heading: "Reframe zadání a rozšíření tématu"
+    layout: heading-body
+    content: |
+      - V 2024 mě oslovila agentura JINAG s výzvou:
+        - "Postavte web se všemi kontakty na sociální a zdravotní služby v kraji."
+      - Po diskuzi jsme se shodli, že cílem není *další web*, ale **zlepšit informovanost obyvatel**
+      - V návaznosti na strategický cíl kraje
+      - Dohoda: nejdřív se zaměřit na **podstatu problému, až potom na řešení**
+    images: []
+    speaker_notes: ""
+
+  # ─── POMEZÍ + WICKED PROBLEM ───────────────────────────────────────────────
+  - heading: "Sociálně-zdravotní pomezí"
+    layout: heading-body
+    content: |
+      - Dva oddělené světy – zdravotní a sociální; klient potřebuje pomoc často z obou
+      - Jiné financování, profesní kultury i pojetí klienta
+      - Klasický *wicked problem* - nemá jedno správné řešení
+      - Skoro polovina dospělých má potíže se zdravotní gramotností
+    images: []
+    speaker_notes: ""
+
+  - heading: ""
+    layout: quote
+    content: ""
+    quote: "Někdy si jsem sama nejistá, jaký typ služby by ten člověk potřeboval. Velmi často nevím, na jakého odborníka se sama obrátit."
+    author: "sociální pracovnice na obci 2. typu"
+    images: []
+    speaker_notes: ""
+
+  # ─── MAPA CESTY = vlastní dvojitý diamant z bakalářky ──────────────────────
+  # Full-bleed bez textu - ať diagram "září" sám. V HTML renderováno na bílém pozadí s
+  # data-background-size="90%" + data-background-position="42% center"
+  # (zmenší na 90 % šířky a posune mírně vlevo, ať pravý cíp nepřetéká přes okraj slidu).
+  - heading: ""
+    layout: full-image
+    content: ""
+    images:
+      - src: /presentations/img/jarmilka-diamond.png
+        placement: background
+        opacity: 1.0
+        alt: "Vlastní dvojitý diamant projektu - (re)framing, discovery (15 rozhovorů, 11 vhledů, 4vrstvý model), delivery (3 workshopy, prototypování, Jarmilka)"
+    speaker_notes: ""
+
+  # ════════════════════ ČÁST 1 - CESTA ════════════════════════════════════
+  - heading: "Cesta k řešení"
+    layout: section-break
+    content: |
+      ## Část 1
+    images: []
+    speaker_notes: ""
+
+  - heading: "Nejdřív porozumět terénu"
+    layout: heading-body
+    content: |
+      - **6** polostrukturovaných rozhovorů s krajskými stakeholdery
+        - radní, vedoucí krajských odborů, vedení nemocnic, ...
+        - spolupráce s JINAG/krajem pomohla usnadnit přístup
+      - Cíl: pochopit problém **z jejich perspektivy**
+      - Použil jsem je k formování navazujícího strategického workshopu
+      - Paralelně **desk research**: doména + inspirace v akademii a zahraničí
+    images: []
+    speaker_notes: ""
+
+  - heading: "První strategický workshop"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - Se zástupci služeb v kraji
+          - Definice **cílových skupin**
+          - Upřesnění řešeného problému + slepých skvrn poznání
+      - type: image
+        src: /presentations/img/problem-framing.jpg
+        width: 460
+        height: 600
+        alt: "Pohled shora na workshop - ruce vyplňují arch Definice problému (Co/Kdo/Kde/Kdy/Proč) polepený růžovými a žlutými lístky"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  - heading: "Výzkumný plán a hloubkové rozhovory"
+    layout: heading-body
+    content: |
+      - Z dat z workshopu jsem postavil **výzkumný plán** a kritéria výběru participantů
+      - Vedl jsem **15 hloubkových rozhovorů** (3 cílové skupiny)
+      - **Průběžné vyhodnocování dat**, ne až na konci
+        - Díky tomu jsem mohl reagovat na nasycená témata už během rozhovorů
+    images: []
+    speaker_notes: ""
+
+  - heading: "Formulace výzkumných vhledů"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - Tematická analýza
+          - **514** citátů → **48** tagů
+          - **21** clusterů → **11** vhledů
+          - Každý vhled zpětně ověřen oproti datům
+      - type: image
+        src: /presentations/img/sense-making.jpg
+        width: 600
+        height: 450
+        alt: "Foto z vlastního sense-makingu - ruční tematická analýza výzkumných dat na stole"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  # bez nadpisu (přání Erika - víc místa pro obsah, nadpis nic nepřidává)
+  - heading: ""
+    layout: heading-body
+    content: |
+      1. Co zažívá člověk v nouzi
+        - Nezná nabídku služeb – chybí důvěra – hledá v krizi – rozhoduje důvěra
+      2. Jak (ne)funguje navigace sítí
+        - Potřeba průvodcovství – pestrá skladba aktérů – ti málo spolupracují
+      3. Kapacita systému a profesí
+        -  Přetížení aktérů – potřeba zvýšení gramotnosti – "drahá levná" prevence – demotivující byrokracie
+      - **Problém není jen o informacích - je navigační, vztahový a kompetenční.**
+    images: []
+    speaker_notes: ""
+
+  - heading: "Možnosti pro intervence"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          1. **Základní informační** - kvalitní data o službách
+          2. **Komunitní a podpůrná** - posílení kapacit sítě
+          3. **Odborná** - osobní průvodcovství
+          4. **Preventivní a vzdělávací** - zvyšování gramotnosti
+      - type: custom-svg
+        description: "Ledovcový model 4 vrstev navigace + šipka 'Rostoucí páka'. SVG je inline v index.html - při re-renderu zachovat verbatim, nenahrazovat Mermaidem."
+    images: []
+    speaker_notes: ""
+
+  # ─── BREAK: IDEACE ─────────────────────────────────────────────────────────
+  - heading: "Od vhledů k nápadům"
+    layout: section-break
+    content: |
+      ## Ideace
+    images: []
+    speaker_notes: ""
+
+  # ─── 3 IDEAČNÍ WORKSHOPY ───────────────────────────────────────────────────
+  - heading: "Tři ideační workshopy"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - **Interní v JINAG** - výuka HCD + pilot formátu
+          - **Velký strategický** - nad daty z výzkumu s krajskými aktéry
+          - **Dny AI** - smíšené publikum
+      - type: image
+        src: /presentations/img/jinag-workshop.jpg
+        width: 540
+        height: 360
+        alt: "Foto z workshopu shora - flipchart s barevnými post-ity, ruce účastníků třídí poznatky"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  - heading: "4 příležitosti z desítek nápadů"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - Z desítek jsme prioritizovali **4 příležitosti**
+          - Každou formou **business case**
+          - Jarmilka – Kompas podpory – Mosty k dospělosti – Vzdělávání lékařů
+      - type: image
+        src: /presentations/img/business-case.png
+        width: 480
+        height: 690
+        alt: "Jednostránkový business case Jarmilky od JINAG - ilustrace zeměkoule, název a popis konceptu"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  - heading: "Dny AI 2024"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - **Platforma** k oslovení jiného spektra lidí
+          - Publikum: **sociální + zdravotní + tech + veřejná správa**
+          - Rozpracování nejslibnějšího konceptu
+      - type: image
+        src: /img/2024/case-studies/jarmilka/proces/dny-ai.jpeg
+        width: 540
+        height: 360
+        alt: "Foto z workshopu na Dnech AI - účastníci u stolu pracují na návrhu řešení"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  # ════════════════════ ČÁST 2 - JARMILKA ═════════════════════════════════
+  - heading: "Jarmilka"
+    layout: section-break
+    content: |
+      ## Část 2
+    images: []
+    speaker_notes: ""
+
+  - heading: "Co je Jarmilka"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - Digitální **průvodkyně** sítí služeb
+          - Klient popíše situaci vlastními slovy
+            - Jarmilka poradí, "co dělat, když…"
+          - Bez odborná terminologie
+      - type: image
+        src: /img/2024/case-studies/jarmilka/jarmilka-laptop.png
+        width: 600
+        height: 380
+        alt: "Jarmilka v okně prohlížeče - avatar průvodkyně a uvítací chat"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  - heading: "Návrh začal u principů"
+    layout: heading-body
+    content: |
+      - Nezačal jsem obrazovkami, ale **kontextem užití**
+        - Ne-časté použití, citlivé téma, ne-tech uživatelé, budování důvěry
+      - Z toho jsem odvodil **návrhové principy**
+        - Progressive disclosure, explorability, learnability, indikace postupu
+      - Teprve potom vznikaly první papírové prototypy
+    images: []
+    speaker_notes: ""
+
+  - heading: "Pět kroků ke konkrétní službě"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          **Důvěra → Popis → Kontrola → Výběr → Kontakt**
+          - Buduje důvěru
+          - Ujišťuje se, že rozumí
+          - Doporučuje nejvhodnější služby
+      - type: image
+        src: /img/2024/case-studies/jarmilka/screens/Intro-prompt.png
+        width: 560
+        height: 380
+        alt: "Obrazovka Jarmilky - pole pro popis situace a spodní lišta s pěti kroky průchodu"
+        caption: "▶ Vyzkoušet interaktivní prototyp"
+        source_url: "https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka?node-id=9-3&starting-point-node-id=9%3A3"
+    images: []
+    speaker_notes: ""
+
+  - heading: "Průběh prototypování"
+    layout: two-column
+    content: ""
+    columns:
+      - type: text
+        content: |
+          - Papírový prototyp testován metodou **RITE** + indikace **SUS**
+          - Zjištění → konkrétní návrhy změn → tvorba **interaktivního prototypu**
+      - type: image
+        src: /img/2024/case-studies/jarmilka/proces/testing-I.jpg
+        width: 540
+        height: 380
+        alt: "Uživatelské testování papírového prototypu Jarmilky - respondent prochází obrazovky"
+        caption: ""
+    images: []
+    speaker_notes: ""
+
+  # ─── ZÁVĚR ─────────────────────────────────────────────────────────────────
+  - heading: "Co Jarmilka neopraví"
+    layout: heading-body
+    content: |
+      - **Není stříbrná kulka** - jen jeden nástroj, jedna vrstva v širším řešení
+      - **Není pro každého** - část cílovky AI chatbota nepřijme, a to je v pořádku
+      - Etika: může při chybě uškodit - riziko lze minimalizovat, ne eliminovat
+
+      > Jarmilka z povahy wicked problémů nemůže vyřešit všechny problémy. Může být ale hodnotnou součástí širšího řešení.
+    images: []
+    speaker_notes: ""
+
+  # HTML je ručně stylovaný (statement-inner, amber rule, odstavce + nudge na portfolio).
+  - heading: "Díky"
+    layout: statement
+    content: |
+      Tímto chci poděkovat všem, s nimiž jsem se mohl během práce na tomto projektu potkat.
+
+      Zejména těm, které nazývám jednorožci – lidé z praxe, kteří se nebojí přesahovat své role a hledat kreativní cesty pro řešení složitých problémů. Na některé rozhovory dodnes rád vzpomínám i přestože probíraná témata nebyla jednoduchá.
+
+      Kdyby vás zajímalo, na čem dalším jsem pracoval, mrkněte na erikvanek.com/dis-kisk.
+
+      🙏
+    images: []
+    speaker_notes: ""

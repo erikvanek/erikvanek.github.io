@@ -371,11 +371,15 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .tile.text.missing .tile-title { color: var(--quiet); }
 
 /* --- Hero tile (text-on-paper door into the story) + closing statement --- */
+/* Not a card: it almost blends into the page. Just a whisper of a warm veil
+   over the lava-lamp — no shadow, no border — so it nearly disappears and the
+   expressive typography (plus the hand-drawn CTA circle) does the inviting.
+   Shared by the start CTA and the closing statement. */
 .tile.hero {
-  background: var(--card);
+  background: rgba(244, 239, 229, .22);
   border: none;
-  box-shadow: var(--shadow-rest);
-  border-radius: 8px;
+  box-shadow: none;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -389,9 +393,9 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(30px, 3.3vw, 54px);
-  line-height: 1.07;
-  letter-spacing: -.01em;
+  font-size: clamp(33px, 3.6vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -.018em;
   color: var(--ink);
   text-wrap: balance;
 }
@@ -401,6 +405,24 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   line-height: 1.45;
   color: var(--quiet);
   max-width: 460px;
+}
+
+/* The blended hero has no hover effect of its own — just neutralize the raised
+   a.tile:hover lift; only the CTA reacts (see below). */
+a.tile.hero:hover,
+a.tile.hero:focus-visible {
+  transform: none;
+  box-shadow: none;
+}
+/* no spinning border ring on the blended hero — it would read as a surface */
+a.tile.hero::before { content: none; }
+
+/* the "Začni tady →" nudge: a tiny grow + playful tilt on hover (the rough.js
+   circle is its child, so it grows and tilts along with it). */
+@media (prefers-reduced-motion: no-preference) {
+  .h-cta { transition: transform .25s cubic-bezier(.22, .61, .36, 1); }
+  a.tile.hero:hover .h-cta,
+  a.tile.hero:focus-visible .h-cta { transform: scale(1.05) rotate(-2deg); }
 }
 
 /* the "start here" nudge — rough.js circles it shortly after load */
@@ -437,8 +459,9 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(18px, 1.7vw, 26px);
-  line-height: 1.38;
+  font-size: clamp(19px, 1.85vw, 28px);
+  line-height: 1.36;
+  letter-spacing: -.01em;
   color: var(--ink);
   max-width: 440px;
   text-wrap: balance;
@@ -499,7 +522,7 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  padding: 16px 15px 13px;
+  padding: 1rem 1.5rem;
   overflow: hidden;
 }
 .tile.quote-tile::before {
@@ -518,8 +541,8 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(13px, 1vw, 16px);
-  line-height: 1.4;
+  font-size: clamp(19.5px, 1.5vw, 24px);
+  line-height: 1.34;
   color: var(--ink);
 }
 /* rough.js sharpie border overlay (drawn by inline script, progressive);
@@ -538,6 +561,29 @@ a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   letter-spacing: .05em;
   text-transform: uppercase;
   color: var(--quiet);
+}
+
+/* Clickable quote cards: a stretched overlay link (the whole card opens the
+   detail page) + a subtle lift on hover. Overlay specificity beats the
+   `.tile.quote-tile > *` position:relative rule so it stays absolute. */
+.tile.quote-tile a.qt-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: inherit;
+}
+.tile.quote-tile a.qt-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.tile.quote-tile:has(a.qt-link) {
+  cursor: pointer;
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1), box-shadow .5s cubic-bezier(.22, .61, .36, 1);
+}
+.tile.quote-tile:has(a.qt-link:hover),
+.tile.quote-tile:has(a.qt-link:focus-visible) {
+  transform: scale(1.018);
+  box-shadow: var(--shadow-hover);
 }
 
 /* chips + thematic tags hidden until portfolio rework */

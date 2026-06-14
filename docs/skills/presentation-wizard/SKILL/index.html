@@ -71,7 +71,7 @@
 <p>Every slide has: <code>heading</code>, <code>layout</code>, <code>content</code>, <code>images</code>, <code>speaker_notes</code></p>
 </li>
 <li>
-<p><code>speaker_notes</code> come from the brain dump's intent — never leave empty if the brain dump contains relevant context for that slide</p>
+<p><code>speaker_notes</code>: <strong>leave as an empty string</strong> (<code>speaker_notes: &quot;&quot;</code>). Do NOT auto-generate speaker notes — the user authors these manually. Keep the field present on every slide as an empty placeholder.</p>
 </li>
 <li>
 <p>Assign layout types from the defined types — see <a href="yaml-schema.md">yaml-schema.md</a></p>
@@ -143,8 +143,7 @@ description: [presentation.description]
 <p>Before handing off the HTML file:</p>
 <ul>
 <li>[ ] No slide has more than 6 bullet points</li>
-<li>[ ] All <code>[DEMO]</code> slides have step-by-step speaker notes including a fallback if live demo fails</li>
-<li>[ ] All section breaks have gear-shift speaker notes</li>
+<li>[ ] <code>speaker_notes</code> left empty (<code>speaker_notes: &quot;&quot;</code>) on every slide for manual authoring — never auto-generated</li>
 <li>[ ] Intro slide has date, place, speaker</li>
 <li>[ ] Closing slide has contact info; if lead-gen intent was set, includes &quot;currently available&quot; line</li>
 <li>[ ] Footer URL is visible only on the first and last slides — hidden on all other slides via the <code>slidechanged</code> / <code>ready</code> JS hook (see <a href="layout-html.md">layout-html.md</a>)</li>

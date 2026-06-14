@@ -28,7 +28,7 @@ Cíle jsme si dali čtyři: vytvořit prostor pro meziroční sdílení a síťo
 ## Jak jsme to pojali
 
 <div class="float-wrap">
-<figure class="float-figure">
+<figure class="float-figure float-right">
 <a href="/dis-kisk/cesta/img/retro-2.jpg" target="_blank" rel="noopener">
 <img src="/dis-kisk/cesta/img/retro-2.jpg" alt="Účastníci a účastnice workshopu uprostřed sdílecí aktivity, Brno, leden 2025" />
 </a>
@@ -37,7 +37,7 @@ Cíle jsme si dali čtyři: vytvořit prostor pro meziroční sdílení a síťo
 
 Postavili jsme zhruba tříhodinový workshop pro dvacet až třicet lidí namíchaných napříč ročníky. Dramaturgie šla ve třech vlnách:
 
-- **Retrospektiva.** Nejdřív jsme zmapovali, co koho během studia pálí - lepíky na stěnu a sdílecí aktivita ve stylu „ano, a…“, kdy si lidi navzájem rozvíjeli nápady místo aby je shazovali.
+- **Retrospektiva.** Nejdřív jsme zmapovali, co koho během studia pálí - lepíky na stěnu a sdílecí aktivita ve stylu „ano, a…“, kdy si lidi navzájem rozvíjeli nápady, místo aby je shazovali.
 - **Futuring.** Pak jsme se odrazili od toho, co nejvíc rezonovalo, a navrhovali scénáře ideální budoucnosti. „Burza budoucností“ je pak roztřídila podle rytmů, událostí a rolí.
 - **Akční plány.** Nakonec se kolem nejlákavějších budoucností utvořily týmy a rozepsaly k nim konkrétní kroky. Zakončili jsme reflexí a přátelskou bitkou o nejlepší akční kroky.
 
@@ -48,7 +48,7 @@ Vlastnictví bloků jsme si rozdělili - já vzal úvod a futuring, Veru a Baru 
 ## Co z toho vzešlo
 
 <div class="float-wrap">
-<figure class="float-figure">
+<figure class="float-figure float-left">
 <a href="/dis-kisk/cesta/img/retro-3.jpg" target="_blank" rel="noopener">
 <img src="/dis-kisk/cesta/img/retro-3.jpg" alt="Stěna polepená barevnými lepíky se scénáři budoucnosti studia, Brno, leden 2025" />
 </a>

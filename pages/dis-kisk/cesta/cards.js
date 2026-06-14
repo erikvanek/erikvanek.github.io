@@ -96,7 +96,7 @@ window.INITIATIVES = [
     chips: [{ text: 'studený e-mail → CEO volá zpět 📞' }]
   },
 
-  { quote: '„na Flédě mám rada její atmosféru a duši, klub je tak akorát velký a snad každý měsíc je tam nějaká pro mě super akce”', ref: 'Fléda - service design' },
+  { quote: '„na Flédě mám rada její atmosféru a duši, klub je tak akorát velký a snad každý měsíc je tam nějaká pro mě super akce”', ref: 'Fléda - service design', link: '/dis-kisk/fleda-audit/' },
   // { quote: '„Jsem rad, ze se starate o zakazniky i touhle formou. Jen tak dal!”', ref: 'Fléda - service design' },
   // { quote: '„páči sa mi ako je priestorovo usporiadané - človek má čo objavovať a kde sa pohybovať aj mimo koncertu + kurárna na vzduchu. tiež že tam sú dva bary a nemusíme sa tlačiť v jednej miestnosti iba”', ref: 'Fléda - service design' },
 
@@ -148,12 +148,12 @@ window.INITIATIVES = [
     chips: []
   },
 
-  { quote: '„Nebojím se v týmu říct, co mě napadne, i kdyby to měla být blbost, vím, že se nic nestane."', ref: 'Studie inovativních týmů ve státní správě' },
+  { quote: '„Nebojím se v týmu říct, co mě napadne, i kdyby to měla být blbost, vím, že se nic nestane."', ref: 'Studie inovativních týmů ve státní správě', link: '/dis-kisk/ostrovy-pozitivni-inovace/' },
 
   {
     sem: 'VI', feature: true, title: 'UX Monday - veřejná přednáška o tom, jak pracuju',
     sub: '45 minut před největším designérským meetupem v zemi',
-    link: '/dis-kisk/cile-vi/',
+    link: '/dis-kisk/cile-VI/#ux-monday',
     tags: ['AI workflow'],
     photo: { src: 'img/vi-ux-monday.jpg', alt: 'UX Monday talk', ratio: 0.75 },
     chips: [{ text: 'práci diktuju z kola 🚲' }]

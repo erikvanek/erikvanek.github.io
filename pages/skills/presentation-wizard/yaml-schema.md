@@ -40,8 +40,7 @@ presentation:
   content: |              # Required. Markdown string. Empty string if layout handles content via dedicated fields.
     ...
   images: []              # Required. Array of image objects, or empty array.
-  speaker_notes: |        # Required. Plain prose. Never mixed with content. Never empty if brain dump has context.
-    ...
+  speaker_notes: ""       # Required field, but left EMPTY by default. The user authors notes manually; never auto-generate them.
 ```
 
 ---

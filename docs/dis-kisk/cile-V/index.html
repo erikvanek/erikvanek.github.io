@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="/css/pico.classless.min.css"/>
         <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,7 +55,7 @@
 
         <main id="wrapper">
             
-                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
                 <header class="article-head">
                     <h1 id="reflexe-studijnch-cl-5-semestru">Reflexe studijních cílů 5. semestru</h1>
                     

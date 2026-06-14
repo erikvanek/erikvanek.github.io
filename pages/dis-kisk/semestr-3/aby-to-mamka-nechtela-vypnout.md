@@ -18,7 +18,7 @@ permalink: /dis-kisk/{{page.fileSlug}}/
 </style>
 
 <div class="float-wrap">
-<figure class="float-figure">
+<figure class="float-figure float-right">
 <a href="/case-studies/jarmilka/uzivatelska-studie-Jarmilka.pdf" target="_blank" rel="noopener" aria-label="Otevřít studii Aby to mamka nechtěla vypnout (PDF)">
 <img src="/img/2024/case-studies/jarmilka/jarmilka-case-thumb.png" alt="Titulní strana studie Aby to mamka nechtěla vypnout" />
 </a>
@@ -27,11 +27,11 @@ permalink: /dis-kisk/{{page.fileSlug}}/
 </figcaption>
 </figure>
 
-Představte si paní v důchodovém věku, která se začíná starat o manžela s Alzheimerovou chorobou. Je vyčerpaná, neví, kam zavolat, a každý formulář i odborný termín ji od pomoci spíš odhání. Přesně pro ni - a pro lidi v podobně náročných situacích - jsem v rámci kurzu **Interakční design** navrhoval digitálního průvodce sítí sociálních a zdravotních služeb. Motivaci pro to, jak by takový nástroj měl vypadat dobře shrnoval jeden z citátů, který jsem zaznamenal během testování jednoho z prototypů – nástroj by měl být tak přívětivý, **aby to mamka nechtěla vypnout**.
+Představte si paní v důchodovém věku, která se začíná starat o manžela s Alzheimerovou chorobou. Je vyčerpaná, neví, kam zavolat, a každý formulář i odborný termín ji od pomoci spíš odhání. Přesně pro ni - a pro lidi v podobně náročných situacích - jsem v rámci kurzu **Interakční design** navrhoval digitálního průvodce sítí sociálních a zdravotních služeb. Motivaci pro to, jak by takový nástroj měl vypadat, dobře shrnoval jeden z citátů, který jsem zaznamenal během testování jednoho z prototypů - nástroj by měl být tak přívětivý, **aby to mamka nechtěla vypnout**.
 
-Sociálních a zdravotních služeb je u nás celá síť, ale zorientovat se v ní je těžké i pro profesionály pracující v samotných službách. Klienti služeb často netuší, kdo a co by jim reálně mohlo pomoct, a existující nástroje po nich chtějí, aby rozuměli jazyku této domény dřív, než vůbec začnou využívat jejich služby. Tato studia vznikla v návaznosti na projekt **Access 4 all** pod hlavičkou agentury JINAG, který naplňuje jeden ze strategických cílů Jihomoravského kraje - zvyšovat informovanost obyvatel o dostupných službách.
+Sociálních a zdravotních služeb je u nás celá síť, ale zorientovat se v ní je těžké i pro profesionály pracující v samotných službách. Klienti služeb často netuší, kdo a co by jim reálně mohlo pomoct, a existující nástroje po nich chtějí, aby rozuměli jazyku této domény dřív, než vůbec začnou využívat jejich služby. Tato studie vznikla v návaznosti na projekt **Access 4 all** pod hlavičkou agentury JINAG, který naplňuje jeden ze strategických cílů Jihomoravského kraje - zvyšovat informovanost obyvatel o dostupných službách.
 
-Mým cílem bylo najít nejvhodnější podobu nástroje, který by s využití nástroje na báze velkých jazykových modelů (LLM) uměl s lidmi mluvit přirozeným jazykem - aby stačilo popsat svůj problém vlastními slovy, bez znalosti odborných názvů. Nástroj dostal jméno **Jarmilka** a měl umět odpovědět na jednu zdánlivě banální otázku: *„Co mám dělat, když…?“*
+Mým cílem bylo najít nejvhodnější podobu nástroje, který by s využitím velkých jazykových modelů (LLM) uměl s lidmi mluvit přirozeným jazykem - aby stačilo popsat svůj problém vlastními slovy, bez znalosti odborných názvů. Nástroj dostal jméno **Jarmilka** a měl umět odpovědět na jednu zdánlivě banální otázku: *„Co mám dělat, když…?“*
 </div>
 
 # Proč zrovna tohle?
@@ -48,7 +48,7 @@ Potřeby uživatelů vycházející z předchozího kvalitativního výzkumu jse
 - předcházet zhoršování situace včasným jednáním.
 # Jak jsem na to šel
 
-Projektem jsem procházel v souladu s principy tzv. **dvojitého diamantu**. Výzkumná půlka - mapování potřeb klientů i aktérů - proběhla ještě dřív v rámci Access 4 all (15 hloubkových rozhovorů s klienty, službami i zástupci měst a obcí, která navazovala na širokou rešrši a rozhovory s klíčovými stakeholdery kraje). Moje studie z těch zjištění vychází a navazuje druhým diamantem: od explorace konceptu k otestované druhé verzi nástroje.
+Projektem jsem procházel v souladu s principy tzv. **dvojitého diamantu**. Výzkumná půlka - mapování potřeb klientů i aktérů - proběhla ještě dřív v rámci Access 4 all (15 hloubkových rozhovorů s klienty, službami i zástupci měst a obcí, která navazovala na širokou rešerši a rozhovory s klíčovými stakeholdery kraje). Moje studie z těch zjištění vychází a navazuje druhým diamantem: od explorace konceptu k otestované druhé verzi nástroje.
 
 <figure class="hero-figure diagram">
 <a href="/dis-kisk/img/jarmilka-double-diamond.png" target="_blank" rel="noopener">
@@ -59,14 +59,14 @@ Projektem jsem procházel v souladu s principy tzv. **dvojitého diamantu**. Vý
 
 Prvním krokem v navrhovací fázi byl **ideační workshop v rámci akce Dny AI**. Tři paralelní skupinky - mezi nimi zástupkyně reálných služeb i CTO jedné zavedené firmy a jednoho AI startupu - prozkoumaly, co nám dnes LLM pro takový nástroj umožňují, a co od něj vlastně čekat. Workshop otevřel témata, která se pak táhla celým projektem: eskalace na živého člověka v nouzi, důvěryhodnost digitálního nástroje u citlivých situací a klady i zápory antropomorfismu (tedy nakolik nástroj „polidštit“ a dát mu více "lidskou" identitu).
 
-Z rešerše existujících AI nástrojů a literatury jsem si vydefinoval **interakční principy**, o které jsem se při návrhu opíral - *learnability* (nástroj se používá zřídka, musí jít pochopit i po delší pauze), *progressive* a *staged disclosure* (neukázat všechno najednou a snížit tlak na kvalitu první interakce), *explorability* (bezpečně nástroj vyzkoušet bez strachu z chyby) a poctivé *indikátory průběhu* (ať uživatel ví, kde v procesu je a co jej v daný moment čeká). K nim sada návrhových vzorů pro tvorbu uživatelských rozhraní AI nástrojů: *re-stating* (systém převypráví, čemu rozuměl), *suggestions* a *open input*. I samotné jméno Jarmilka je vědomá **metafora** - nastavuje očekávání, že tu se mnou někdo je a systéme mě provází.
+Z rešerše existujících AI nástrojů a literatury jsem si vydefinoval **interakční principy**, o které jsem se při návrhu opíral - *learnability* (nástroj se používá zřídka, musí jít pochopit i po delší pauze), *progressive* a *staged disclosure* (neukázat všechno najednou a snížit tlak na kvalitu první interakce), *explorability* (bezpečně nástroj vyzkoušet bez strachu z chyby) a poctivé *indikátory průběhu* (ať uživatel ví, kde v procesu je a co jej v daný moment čeká). K nim sada návrhových vzorů pro tvorbu uživatelských rozhraní AI nástrojů: *re-stating* (systém převypráví, čemu rozuměl), *suggestions* a *open input*. I samotné jméno Jarmilka je vědomá **metafora** - nastavuje očekávání, že tu se mnou někdo je a systém mě provází.
 
 Pak přišlo skicování. Postupoval jsem od „high level“ pohledu ke konkrétním obrazovkám, vracel se ke starým nápadům a ty neperspektivní zahazoval. U papíru jsem si vytvořil modulární systém, abych mohl varianty obrazovek rychle skládat vedle sebe. Celou dobu jsem si opakoval jednu otázku: *„Jaká je nejštíhlejší verze, která uživatele dovede k cíli a neruší ho ničím navíc?“* Z toho se vyloupl proces o pěti krocích, kterým Jarmilka uživatele provází: **důvěra → popis → kontrola → výběr → kontakt**.
 
 # Test s lidmi
 
 <div class="float-wrap">
-<figure class="float-figure">
+<figure class="float-figure float-left">
 <a href="/dis-kisk/img/jarmilka-testing-paper.png" target="_blank" rel="noopener">
 <img src="/dis-kisk/img/jarmilka-testing-paper.png" alt="Ruka účastníka prochází papírovým prototypem Jarmilky na stole v kavárně, vedle káva a poznámky" />
 </a>
@@ -109,4 +109,4 @@ Z celého studia na DIS mě tenhle projekt posunul v „tvrdých“ design kompe
 
 _A taky díky Veronu, Baru i Andreo za interní design critique, která byla jedním z highlightů semestru, který můj návrh pomohl posunout o kus dál. Taky díky agentuře JINAG za možnost na projektu pracovat a všem, kdo si sedli k papírovému prototypu a poctivě nahlas přemýšleli - bez vás by Jarmilka zůstala jenom hezkým nápadem._
 
-**[Detailněji popisuji průbeh projektu ve své bakalářské práci](/dis-kisk/thesis/)**
+**[Detailněji popisuji průběh projektu ve své bakalářské práci](/dis-kisk/thesis/)**

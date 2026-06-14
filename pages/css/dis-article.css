@@ -214,15 +214,16 @@ h1, h2, h3, h4 {
 article h1,
 article h2 {
   font-size: clamp(1.55rem, 3.4vw, 1.95rem);
-  margin-top: 2.4em;
-  margin-bottom: .65em;
+  margin-top: 1.4em;
+  margin-bottom: .85em;
   scroll-margin-top: 2rem;
   position: relative;
 }
 article h3 {
   font-size: 1.25rem;
-  margin-top: 2em;
-  margin-bottom: .6em;
+  margin-top: 1.3em;
+  margin-bottom: .75em;
+  scroll-margin-top: 2rem;
 }
 article h1 svg.rough-note,
 article h2 svg.rough-note {
@@ -387,6 +388,18 @@ article h2 { clear: both; }
   .float-figure { max-width: 305px; }
   .float-figure.float-right { float: right; margin: .4rem 0 1rem 2.2rem; }
   .float-figure.float-left  { float: left;  margin: .4rem 2.2rem 1rem 0; }
+}
+/* Groups a .float-figure with the paragraph(s) it sits beside; the overflow
+   BFC contains the float so it never spills into the next section. */
+.float-wrap { overflow: hidden; }
+/* On article pages these figures wrap the image in a full-res link — strip the
+   link underline so they read like the plain story-page images, plus a gentle
+   lift on hover to signal they're clickable. */
+.float-figure > a { display: block; background-image: none; }
+.float-figure > a img { transition: transform .15s ease, box-shadow .15s ease; }
+.float-figure > a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(28, 24, 18, .12), 0 14px 30px rgba(28, 24, 18, .18);
 }
 
 /* Required-parts summary — re-asserts the mandated portfolio format */

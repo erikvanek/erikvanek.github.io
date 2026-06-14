@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="/css/pico.classless.min.css"/>
         <link rel="stylesheet" href="/css/dis-article.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,7 +55,7 @@
 
         <main id="wrapper">
             
-                <a href="/dis-kisk/cesta/" class="back">← Cesta studiem</a>
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
                 <header class="article-head">
                     <h1 id="erik-2023-neohraban-praktik">Erik 2023 – neohrabaný praktik</h1>
                     
@@ -45,15 +68,8 @@
 
             <article>
                 <style>
-  .profile-aside{ float:right; width:clamp(150px,24vw,210px); margin:.2rem 0 1rem 1.6rem;
-                  shape-outside:circle(48%); -webkit-shape-outside:circle(48%); }
-  .profile-aside img{ display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:50%;
-    -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 55%, transparent 74%);
-            mask-image:radial-gradient(circle at 50% 50%, #000 55%, transparent 74%); }
-  @media (max-width:560px){ .profile-aside{ float:none; margin:0 auto 1.2rem; } }
-
-  /* block context so float:right works (the flex #wrapper ignores float on its items) */
-  .intro-wrap{ width:100%; max-width:55ch; overflow:hidden; }
+  /* block context so the floated figure works (the flex #wrapper ignores float on its items) */
+  .intro-wrap{ width:100%; max-width:50ch; overflow:hidden; }
 
   .cta-wrap{ display:flex; clear:both; margin-top:.5rem; }
   .story-cta{ display:inline-flex; align-items:center; gap:.45rem; padding:.85rem 1.4rem;
@@ -63,12 +79,12 @@
   .story-cta:hover{ background:#fff; }
 </style>
 <div class="intro-wrap">
-<figure class="profile-aside" aria-hidden="false">
+<figure class="float-figure float-right">
   <img src="/img/me-melon.jpeg" alt="Já a meloun z tržnice v Temešváru, rok 2023" />
 </figure>
-<p>Když jsem se v roce 2023 hlásil na DIS KISK, vcházel jsem do studia spíš jako inženýr než jako designér. Za sebou jsem měl skoro deset let v softwaru a čerstvě i konec angažmá v <a href="https://infarm.com/" target="_blank">Infarmu</a>, kde jsem se věnoval komerční hydroponii. Byla to taková křižovatka - konec jedné kapitoly a impuls zkusit naplno něco, k čemu jsem do té doby jenom okukoval přes plot.</p>
+<p>Když jsem se v roce 2023 hlásil na DIS KISK, vcházel jsem do studia spíš jako inženýr než jako designér. Za sebou jsem měl skoro deset let v softwaru a čerstvě i konec angažmá v Infarmu, kde jsem se přes čtyři roky komerčně věnoval hydroponii v různých rolích. Byla to taková křižovatka - konec jedné kapitoly a impuls zkusit naplno něco, k čemu jsem do té doby jenom okukoval přes plot.</p>
 </div>
-<p>K designu jsem se přibližoval už předtím - zaváděl jsem principy human-centered designu v organizaci, která o nich do té doby neslyšela, pomáhal rozjíždět design sprinty a pracoval v týmech, kde vedle sebe seděli botanici, industriální designéři i šéfkuchaři. Praxe jsem měl docela dost, ale chyběl mi pod ní pořádný metodologický základ. Hodně věcí jsem dělal po citu - mačkal jsem tlačítka a koukal, co zabere, spíš než abych přesně věděl proč.</p>
+<p>K designu jsem se přibližoval už předtím - zaváděl jsem principy human-centered designu v organizacích, kde jsem působil, pomáhal rozjíždět design sprinty a pracoval v týmech, kde vedle sebe seděli botanici, industriální designéři i šéfkuchaři. Praxe jsem měl docela dost, ale byla spíše epizodická a chyběl mi pod ní pořádný metodologický základ. Hodně věcí jsem dělal pocitově a bez vedení někoho, kdo už si slepé cestičky prošlapal. Víceméně jsem zkoušel co zabere, spíš než abych přesně věděl proč.</p>
 <p>Na KISKu jsem navíc nebyl poprvé. Předchozí magisterské studium jsem kvůli vlastní laxnosti a souběhu s prací nedotáhl, takže tohle byl druhý pokus - tentokrát s online formou, která mi měla sednout líp, a snad i s trochou pokory navíc.</p>
 <p>Od studia jsem si sliboval hlavně to, co mi nejvíc chybělo: ucelený metodologický základ a širší rozhled. Lákaly mě progresivnější směry - regenerativní a tranzitivní design nebo non-human centered přístupy - a chtěl jsem se znovu napojit na komunitu kolem KISKu, kterou jsem si z prvního pokusu pamatoval jako to vůbec nejcennější.</p>
 <p>Jak vysoko jsem tehdy mířil, je asi nejlíp vidět na <a href="/dis-kisk/prihlaska/">samotné přihlášce</a> - neredigované, i s překlepy.</p>
