@@ -537,7 +537,7 @@ body {
 /* Text + photo two-col: widen the image column (>50%) so photos grow toward the
    right edge. Targets <figure> only - text and SVG columns (e.g. iceberg) untouched. */
 .layout-two-col .cols > figure {
-  flex: 0 0 58%;
+  flex: 0 0 60%;
   display: flex;
   flex-direction: column;
   align-items: center;

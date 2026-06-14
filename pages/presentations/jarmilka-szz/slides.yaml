@@ -41,13 +41,13 @@ slides:
     speaker_notes: ""
 
   # ─── ZADÁNÍ + REFRAME ────────────────────────────────────────────────────
-  - heading: "Reframe zadání a rozšíření tématu"
+  - heading: "Úvodní zadání a reframe"
     layout: heading-body
     content: |
       - V 2024 mě oslovila agentura JINAG s výzvou:
         - "Postavte web se všemi kontakty na sociální a zdravotní služby v kraji."
       - Po diskuzi jsme se shodli, že cílem není *další web*, ale **zlepšit informovanost obyvatel**
-      - V návaznosti na strategický cíl kraje
+        - zlepšení informovanosti je jeden z krajských strategických cílů
       - Dohoda: nejdřív se zaměřit na **podstatu problému, až potom na řešení**
     images: []
     speaker_notes: ""
@@ -56,18 +56,24 @@ slides:
   - heading: "Sociálně-zdravotní pomezí"
     layout: heading-body
     content: |
-      - Dva oddělené světy – zdravotní a sociální; klient potřebuje pomoc často z obou
+      - Dva oddělené světy – zdravotní a sociální – často si mezi sebou nerozumí
+        - V náročných situacích klienti potřebují pomoc napříč pilíři
       - Jiné financování, profesní kultury i pojetí klienta
-      - Klasický *wicked problem* - nemá jedno správné řešení
+      - Typický *wicked problem* - nemá jedno správné řešení, spíše kombinace dílčích intervencí
       - Skoro polovina dospělých má potíže se zdravotní gramotností
     images: []
     speaker_notes: ""
 
+  # DVA citáty na jednom slidu (HTML hardcoded: 2x .quote-block, font 1.8rem).
+  # 2. citát z výzkumu (insight "Nízká informovanost obyvatel") - klientská perspektiva.
+  # POZOR: atribuci 2. citátu ověřit; u 1. citátu opraven dvojitý zápor (nejsem nejistá -> nejsem jistá).
   - heading: ""
     layout: quote
     content: ""
-    quote: "Někdy si jsem sama nejistá, jaký typ služby by ten člověk potřeboval. Velmi často nevím, na jakého odborníka se sama obrátit."
+    quote: "Někdy si sama nejsem jistá, jaký typ služby by ten člověk potřeboval. Velmi často nevím, na jakého odborníka se sama obrátit."
     author: "sociální pracovnice na obci 2. typu"
+    quote2: "Reálně [klienti] nevědí ani, jakou službu by vlastně potřebovali, protože nevědí, co se nabízí."
+    author2: "poskytovatel sociální služby"
     images: []
     speaker_notes: ""
 
@@ -100,8 +106,8 @@ slides:
         - radní, vedoucí krajských odborů, vedení nemocnic, ...
         - spolupráce s JINAG/krajem pomohla usnadnit přístup
       - Cíl: pochopit problém **z jejich perspektivy**
-      - Použil jsem je k formování navazujícího strategického workshopu
-      - Paralelně **desk research**: doména + inspirace v akademii a zahraničí
+      - Data pomohla přípravě navazujícího strategického workshopu
+      - Paralelně k tomu **desk research** – existující projekty, zahraničí, akademie, ...
     images: []
     speaker_notes: ""
 
@@ -111,9 +117,10 @@ slides:
     columns:
       - type: text
         content: |
-          - Se zástupci služeb v kraji
-          - Definice **cílových skupin**
-          - Upřesnění řešeného problému + slepých skvrn poznání
+          - Se zástupci služeb klíčových služeb v kraji
+          - Shoda na povaze problému a doplnění nových optik
+          - Definice cílových skupin pro kvalitativní výzkum
+          - Popis slepých skvrn aktuálního poznání
       - type: image
         src: /presentations/img/problem-framing.jpg
         width: 460
@@ -127,7 +134,8 @@ slides:
     layout: heading-body
     content: |
       - Z dat z workshopu jsem postavil **výzkumný plán** a kritéria výběru participantů
-      - Vedl jsem **15 hloubkových rozhovorů** (3 cílové skupiny)
+      - Provedl jsem **15 hloubkových rozhovorů** (3 cílové skupiny) napříč Jihomoravským krajem
+        - vyrazit do regionu se ukázalo jako klíčové pro získání důvěry participujících
       - **Průběžné vyhodnocování dat**, ne až na konci
         - Díky tomu jsem mohl reagovat na nasycená témata už během rozhovorů
     images: []
@@ -139,10 +147,11 @@ slides:
     columns:
       - type: text
         content: |
-          - Tematická analýza
+          - Tematická analýza v několika iteracích
           - **514** citátů → **48** tagů
           - **21** clusterů → **11** vhledů
-          - Každý vhled zpětně ověřen oproti datům
+          - Dovetail a spousta analogového kreslení a hybridná práce na počítači, s velkou televizí
+          - Každý formulovaný vhled zpětně ověřen oproti nasbíraným datům
       - type: image
         src: /presentations/img/sense-making.jpg
         width: 600
@@ -153,7 +162,7 @@ slides:
     speaker_notes: ""
 
   # bez nadpisu (přání Erika - víc místa pro obsah, nadpis nic nepřidává)
-  - heading: ""
+  - heading: "11 hlavních vhledů z výzkumu"
     layout: heading-body
     content: |
       1. Co zažívá člověk v nouzi
@@ -163,6 +172,7 @@ slides:
       3. Kapacita systému a profesí
         -  Přetížení aktérů – potřeba zvýšení gramotnosti – "drahá levná" prevence – demotivující byrokracie
       - **Problém není jen o informacích - je navigační, vztahový a kompetenční.**
+      - Plné znění výzkumných vhledů je v příloze bakalářské práce
     images: []
     speaker_notes: ""
 
@@ -198,7 +208,7 @@ slides:
         content: |
           - **Interní v JINAG** - výuka HCD + pilot formátu
           - **Velký strategický** - nad daty z výzkumu s krajskými aktéry
-          - **Dny AI** - smíšené publikum
+          - **Dny AI** - veřejně přístupný a jiná audience
       - type: image
         src: /presentations/img/jinag-workshop.jpg
         width: 540
@@ -234,6 +244,7 @@ slides:
         content: |
           - **Platforma** k oslovení jiného spektra lidí
           - Publikum: **sociální + zdravotní + tech + veřejná správa**
+          - S propagací pomohla záštita LF MUNI a institutu SYRI
           - Rozpracování nejslibnějšího konceptu
       - type: image
         src: /img/2024/case-studies/jarmilka/proces/dny-ai.jpeg
@@ -261,7 +272,7 @@ slides:
           - Digitální **průvodkyně** sítí služeb
           - Klient popíše situaci vlastními slovy
             - Jarmilka poradí, "co dělat, když…"
-          - Bez odborná terminologie
+          - Bez odborná terminologie a nutnosti se orientovat v systému
       - type: image
         src: /img/2024/case-studies/jarmilka/jarmilka-laptop.png
         width: 600
@@ -332,6 +343,7 @@ slides:
     speaker_notes: ""
 
   # HTML je ručně stylovaný (statement-inner, amber rule, odstavce + nudge na portfolio).
+  # VPRAVO: QR na portfolio (/presentations/img/qrcode_portfolio.png, 190px, bílá karta) - hardcoded v HTML.
   - heading: "Díky"
     layout: statement
     content: |

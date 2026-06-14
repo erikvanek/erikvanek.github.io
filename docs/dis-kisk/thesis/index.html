@@ -6,7 +6,7 @@
   <meta name="description" content="Jak navrhnout navigaci sociálně-zdravotními službami v Jihomoravském kraji - a proč ten problém není pouze o informacích.">
   <title>Co mám dělat, když…? | Erik Vaněk</title>
   <link rel="stylesheet" href="../../css/revealjs/reveal.css">
-  <link rel="stylesheet" href="../../css/presentation-wizard.css">
+  <link rel="stylesheet" href="../../css/presentation-wizard.css?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -35,7 +35,8 @@
 <!-- ─── TITUL ─── -->
 <section class="layout-title">
   <h1 id="co-mm-dlat-kdy">Co mám dělat, když…?</h1>
-  <div class="slide-subtitle">Jak navrhnout navigaci sociálně-zdravotními službami v Jihomoravském kraji - a proč ten problém není pouze o informacích.</div>
+  <div class="slide-subtitle">Jak navrhnout navigaci sociálně-zdravotními službami v Jihomoravském kraji - a proč ten
+    problém není pouze o informacích.</div>
   <div class="slide-rule"></div>
   <div class="slide-byline" style="display:flex; flex-direction:column; gap:0.4rem; align-items:center;">
     <span style="font-size:1.5rem; color:var(--text); font-weight:600;">Erik Vaněk</span>
@@ -48,15 +49,18 @@
 
 <!-- ─── ZADÁNÍ + REFRAME ─── -->
 <section class="layout-heading-body">
-  <h2 id="reframe-zadn-a-rozen-tmatu">Reframe zadání a rozšíření tématu</h2>
+  <h2 id="vodn-zadn-a-reframe">Úvodní zadání a reframe</h2>
   <ul>
     <li>V 2024 mě oslovila agentura JINAG s výzvou:
       <ul>
         <li>„Postavte web se všemi kontakty na sociální a zdravotní služby v kraji."</li>
       </ul>
     </li>
-    <li>Po diskuzi jsme se shodli, že cílem není <em>další web</em>, ale <strong>zlepšit informovanost obyvatel</strong></li>
-    <li>V návaznosti na strategický cíl kraje</li>
+    <li>Po diskuzi jsme se shodli, že cílem není <em>další web</em>, ale <strong>zlepšit informovanost obyvatel</strong>
+      <ul>
+        <li>zlepšení informovanosti je jeden z krajských strategických cílů</li>
+      </ul>
+    </li>
     <li>Dohoda: nejdřív se zaměřit na <strong>podstatu problému, až potom na řešení</strong></li>
   </ul>
   <aside class="notes"></aside>
@@ -67,17 +71,47 @@
 <section class="layout-heading-body">
   <h2 id="sociln-zdravotn-pomez">Sociálně-zdravotní pomezí</h2>
   <ul>
-    <li>Dva oddělené světy – zdravotní a sociální; klient potřebuje pomoc často z obou</li>
+    <li>Dva oddělené světy – zdravotní a sociální – často si mezi sebou nerozumí
+      <ul>
+        <li>V náročných situacích klienti potřebují pomoc napříč pilíři</li>
+      </ul>
+    </li>
     <li>Jiné financování, profesní kultury i pojetí klienta</li>
-    <li>Klasický <em>wicked problem</em> - nemá jedno správné řešení</li>
+    <li>Typický <em>wicked problem</em> - nemá jedno správné řešení, spíše kombinace dílčích intervencí</li>
     <li>Skoro polovina dospělých má potíže se zdravotní gramotností</li>
   </ul>
   <aside class="notes"></aside>
 </section>
 
+<!-- DVA citáty (2x quote-block, 1.8rem) -->
 <section class="layout-quote">
-  <blockquote>Někdy si jsem sama nejistá, jaký typ služby by ten člověk potřeboval. Velmi často nevím, na jakého odborníka se sama obrátit.</blockquote>
-  <cite>— sociální pracovnice na obci 2. typu</cite>
+  <div class="quote-block">
+    <blockquote style="font-size:1.8rem;">Někdy si sama nejsem jistá, jaký typ služby by ten člověk potřeboval. Velmi
+      často nevím, na jakého odborníka se sama obrátit.</blockquote>
+    <cite>— sociální pracovnice na obci 2. typu</cite>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="quote-block">
+    <blockquote style="font-size:1.8rem;">Reálně [klienti] nevědí ani, jakou službu by vlastně potřebovali, protože
+      nevědí, co se nabízí.</blockquote>
+    <cite>— poskytovatel sociální služby</cite>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+  <div class="quote-block">
+    <blockquote style="font-size:1.8rem;">Já se [sociálními tématy] nechci zabývat ze dvou důvodů. Za prvý to
+      chce čas. <strong>Já ten čas nemám, já mám sedm minut na pacienta.</strong> A za druhý já tomu
+      vůbec nerozumím.</blockquote>
+    <cite>— praktický lékař</cite>
+  </div>
+
   <aside class="notes"></aside>
 </section>
 
@@ -86,11 +120,8 @@
 <!-- bílé pozadí: diagram je modro-černý na světlém podkladu, #fff splývá s jeho pozadím.
      size 90% + position 42% = zmenší na 90 % šířky a posune mírně vlevo, ať pravý cíp
      (endpoint za "Jarmilkou") nepřetéká přes pravý okraj slidu. -->
-<section class="layout-full-image"
-  data-background-image="/presentations/img/jarmilka-diamond.png"
-  data-background-size="90%"
-  data-background-position="42% center"
-  data-background-color="#ffffff">
+<section class="layout-full-image" data-background-image="/presentations/img/jarmilka-diamond.png"
+  data-background-size="90%" data-background-position="42% center" data-background-color="#ffffff">
   <aside class="notes"></aside>
 </section>
 
@@ -113,8 +144,8 @@
       </ul>
     </li>
     <li>Cíl: pochopit problém <strong>z jejich perspektivy</strong></li>
-    <li>Použil jsem je k formování navazujícího strategického workshopu</li>
-    <li>Paralelně <strong>desk research</strong>: doména + inspirace v akademii a zahraničí</li>
+    <li>Data pomohla přípravě navazujícího strategického workshopu</li>
+    <li>Paralelně k tomu <strong>desk research</strong> – existující projekty, zahraničí, akademie, ...</li>
   </ul>
   <aside class="notes"></aside>
 </section>
@@ -124,13 +155,15 @@
   <div class="cols">
     <div>
       <ul>
-        <li>Se zástupci služeb v kraji</li>
-        <li>Definice <strong>cílových skupin</strong></li>
-        <li>Upřesnění řešeného problému + slepých skvrn poznání</li>
+        <li>Se zástupci služeb klíčových služeb v kraji</li>
+        <li>Shoda na povaze problému a doplnění nových optik</li>
+        <li>Definice cílových skupin pro kvalitativní výzkum</li>
+        <li>Popis slepých skvrn aktuálního poznání</li>
       </ul>
     </div>
     <figure>
-      <img src="/presentations/img/problem-framing.jpg" alt="Pohled shora na workshop - ruce vyplňují arch Definice problému (Co/Kdo/Kde/Kdy/Proč) polepený růžovými a žlutými lístky">
+      <img src="/presentations/img/problem-framing.jpg"
+        alt="Pohled shora na workshop - ruce vyplňují arch Definice problému (Co/Kdo/Kde/Kdy/Proč) polepený růžovými a žlutými lístky">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -140,7 +173,11 @@
   <h2 id="vzkumn-pln-a-hloubkov-rozhovory">Výzkumný plán a hloubkové rozhovory</h2>
   <ul>
     <li>Z dat z workshopu jsem postavil <strong>výzkumný plán</strong> a kritéria výběru participantů</li>
-    <li>Vedl jsem <strong>15 hloubkových rozhovorů</strong> (3 cílové skupiny)</li>
+    <li>Provedl jsem <strong>15 hloubkových rozhovorů</strong> (3 cílové skupiny) napříč Jihomoravským krajem
+      <ul>
+        <li>vyrazit do regionu se ukázalo jako klíčové pro získání důvěry participujících</li>
+      </ul>
+    </li>
     <li><strong>Průběžné vyhodnocování dat</strong>, ne až na konci
       <ul>
         <li>Díky tomu jsem mohl reagovat na nasycená témata už během rozhovorů</li>
@@ -155,21 +192,22 @@
   <div class="cols">
     <div>
       <ul>
-        <li>Tematická analýza</li>
+        <li>Tematická analýza v několika iteracích</li>
         <li><strong>514</strong> citátů → <strong>48</strong> tagů</li>
         <li><strong>21</strong> clusterů → <strong>11</strong> vhledů</li>
-        <li>Každý vhled zpětně ověřen oproti datům</li>
+        <li>Každý formulovaný vhled zpětně ověřen oproti nasbíraným datům</li>
       </ul>
     </div>
     <figure>
-      <img src="/presentations/img/sense-making.jpg" alt="Foto z vlastního sense-makingu - ruční tematická analýza výzkumných dat na stole">
+      <img src="/presentations/img/sense-making.jpg"
+        alt="Foto z vlastního sense-makingu - ruční tematická analýza výzkumných dat na stole">
     </figure>
   </div>
   <aside class="notes"></aside>
 </section>
 
-<!-- bez nadpisu - víc místa pro obsah (přání Erika) -->
-<section class="layout-heading-body">
+<section class="layout-heading-body compact">
+  <h2 id="11-hlavnch-vhled-z-vzkumu">11 hlavních vhledů z výzkumu</h2>
   <ol>
     <li><strong>Co zažívá člověk v nouzi</strong>
       <ul>
@@ -187,9 +225,14 @@
       </ul>
     </li>
   </ol>
-  <div class="quote-block" style="margin-top: 1.25rem;">
+  <div class="quote-block" style="margin-top: 1rem;">
     <blockquote>Problém není jen o informacích - je navigační, vztahový a kompetenční.</blockquote>
   </div>
+  <br>  
+  <br>  
+  <br>  
+  <p style="margin-top:0.8rem; color:#968878; font-family:'Inter',sans-serif; font-size:0.9rem;">Plné znění výzkumných
+    vhledů je v příloze bakalářské práce.</p>
   <aside class="notes"></aside>
 </section>
 
@@ -215,32 +258,44 @@
       </defs>
 
       <!-- hladina -->
-      <line x1="20" y1="150" x2="395" y2="150" stroke="#5a86a0" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.7" />
-      <text x="22" y="143" font-family="Inter, sans-serif" font-size="11" fill="#7a90a0" font-style="italic">hladina</text>
+      <line x1="20" y1="150" x2="395" y2="150" stroke="#5a86a0" stroke-width="1.5" stroke-dasharray="5 5"
+        opacity="0.7" />
+      <text x="22" y="143" font-family="Inter, sans-serif" font-size="11" fill="#7a90a0"
+        font-style="italic">hladina</text>
 
       <!-- Vrstva 1 - Základní informační / Události -->
       <rect x="70" y="60" width="320" height="80" rx="6" fill="#2c2820" stroke="#46403a" stroke-width="1" />
-      <text x="230" y="95" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#ddd8d0" text-anchor="middle">Základní informační</text>
-      <text x="230" y="116" font-family="Inter, sans-serif" font-size="11.5" fill="#8a8070" text-anchor="middle">Události – co se právě děje</text>
+      <text x="230" y="95" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#ddd8d0"
+        text-anchor="middle">Základní informační</text>
+      <text x="230" y="116" font-family="Inter, sans-serif" font-size="11.5" fill="#8a8070"
+        text-anchor="middle">Události – co se právě děje</text>
 
       <!-- Vrstva 2 - Komunitní a podpůrná / Vzorce chování -->
       <rect x="86" y="170" width="288" height="80" rx="6" fill="#332c1d" stroke="#5a4d34" stroke-width="1" />
-      <text x="230" y="205" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#e3ddd2" text-anchor="middle">Komunitní a podpůrná</text>
-      <text x="230" y="226" font-family="Inter, sans-serif" font-size="11.5" fill="#9a8a6a" text-anchor="middle">Vzorce chování</text>
+      <text x="230" y="205" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#e3ddd2"
+        text-anchor="middle">Komunitní a podpůrná</text>
+      <text x="230" y="226" font-family="Inter, sans-serif" font-size="11.5" fill="#9a8a6a" text-anchor="middle">Vzorce
+        chování</text>
 
       <!-- Vrstva 3 - Odborná / Struktura systému -->
       <rect x="104" y="280" width="252" height="80" rx="6" fill="#4a3c22" stroke="#6e5a30" stroke-width="1" />
-      <text x="230" y="315" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#efe7d8" text-anchor="middle">Odborná</text>
-      <text x="230" y="336" font-family="Inter, sans-serif" font-size="11.5" fill="#b39a62" text-anchor="middle">Struktura systému</text>
+      <text x="230" y="315" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600" fill="#efe7d8"
+        text-anchor="middle">Odborná</text>
+      <text x="230" y="336" font-family="Inter, sans-serif" font-size="11.5" fill="#b39a62"
+        text-anchor="middle">Struktura systému</text>
 
       <!-- Vrstva 4 - Preventivní a vzdělávací / Mentální modely (nejvyšší páka) -->
-      <rect x="122" y="390" width="216" height="80" rx="6" fill="rgba(232,160,48,0.16)" stroke="#e8a030" stroke-width="1.5" />
-      <text x="230" y="425" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#f6efe2" text-anchor="middle">Preventivní a vzdělávací</text>
-      <text x="230" y="446" font-family="Inter, sans-serif" font-size="11.5" fill="#e8a030" text-anchor="middle">Mentální modely</text>
+      <rect x="122" y="390" width="216" height="80" rx="6" fill="rgba(232,160,48,0.16)" stroke="#e8a030"
+        stroke-width="1.5" />
+      <text x="230" y="425" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#f6efe2"
+        text-anchor="middle">Preventivní a vzdělávací</text>
+      <text x="230" y="446" font-family="Inter, sans-serif" font-size="11.5" fill="#e8a030"
+        text-anchor="middle">Mentální modely</text>
 
       <!-- šipka rostoucí páky -->
       <line x1="420" y1="70" x2="420" y2="455" stroke="#e8a030" stroke-width="2" marker-end="url(#lev-tip)" />
-      <text x="443" y="262" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#e8a030" text-anchor="middle" transform="rotate(90 443 262)">Rostoucí páka</text>
+      <text x="443" y="262" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#e8a030"
+        text-anchor="middle" transform="rotate(90 443 262)">Rostoucí páka</text>
     </svg>
   </div>
   <aside class="notes"></aside>
@@ -262,11 +317,12 @@
       <ul>
         <li><strong>Interní v JINAG</strong> - výuka HCD + pilot formátu</li>
         <li><strong>Velký strategický</strong> - nad daty z výzkumu s krajskými aktéry</li>
-        <li><strong>Dny AI</strong> - smíšené publikum</li>
+        <li><strong>Dny AI</strong> - veřejně přístupný a jiná audience</li>
       </ul>
     </div>
     <figure>
-      <img src="/presentations/img/jinag-workshop.jpg" alt="Foto z workshopu shora - flipchart s barevnými post-ity, ruce účastníků třídí poznatky">
+      <img src="/presentations/img/jinag-workshop.jpg"
+        alt="Foto z workshopu shora - flipchart s barevnými post-ity, ruce účastníků třídí poznatky">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -283,7 +339,8 @@
       </ul>
     </div>
     <figure>
-      <img src="/presentations/img/business-case.png" alt="Jednostránkový business case Jarmilky od JINAG - ilustrace zeměkoule, název Jarmilka jako osobní průvodkyně sociálně-zdravotní sítí a popis konceptu">
+      <img src="/presentations/img/business-case.png"
+        alt="Jednostránkový business case Jarmilky od JINAG - ilustrace zeměkoule, název Jarmilka jako osobní průvodkyně sociálně-zdravotní sítí a popis konceptu">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -296,11 +353,13 @@
       <ul>
         <li><strong>Platforma</strong> k oslovení jiného spektra lidí</li>
         <li>Publikum: <strong>sociální + zdravotní + tech + veřejná správa</strong></li>
+        <li>S propagací pomohla záštita LF MUNI a institutu SYRI</li>
         <li>Rozpracování nejslibnějšího konceptu</li>
       </ul>
     </div>
     <figure>
-      <img src="/img/2024/case-studies/jarmilka/proces/dny-ai.jpeg" alt="Foto z workshopu na Dnech AI - účastníci u stolu pracují na návrhu řešení">
+      <img src="/img/2024/case-studies/jarmilka/proces/dny-ai.jpeg"
+        alt="Foto z workshopu na Dnech AI - účastníci u stolu pracují na návrhu řešení">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -326,11 +385,12 @@
             <li>Jarmilka poradí, „co dělat, když…"</li>
           </ul>
         </li>
-        <li>Bez odborné terminologie</li>
+        <li>Bez odborná terminologie a nutnosti se orientovat v systému</li>
       </ul>
     </div>
     <figure>
-      <img src="/img/2024/case-studies/jarmilka/jarmilka-laptop.png" alt="Jarmilka v okně prohlížeče - avatar průvodkyně a uvítací chat">
+      <img src="/img/2024/case-studies/jarmilka/jarmilka-laptop.png"
+        alt="Jarmilka v okně prohlížeče - avatar průvodkyně a uvítací chat">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -366,8 +426,11 @@
       </ul>
     </div>
     <figure>
-      <img src="/img/2024/case-studies/jarmilka/screens/Intro-prompt.png" alt="Obrazovka Jarmilky - pole pro popis situace a spodní lišta s pěti kroky průchodu">
-      <figcaption><a href="https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka?node-id=9-3&amp;starting-point-node-id=9%3A3" target="_blank" rel="noopener">▶ Vyzkoušet interaktivní prototyp</a></figcaption>
+      <img src="/img/2024/case-studies/jarmilka/screens/Intro-prompt.png"
+        alt="Obrazovka Jarmilky - pole pro popis situace a spodní lišta s pěti kroky průchodu">
+      <figcaption><a
+          href="https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka?node-id=9-3&amp;starting-point-node-id=9%3A3"
+          target="_blank" rel="noopener">▶ Vyzkoušet interaktivní prototyp</a></figcaption>
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -383,7 +446,8 @@
       </ul>
     </div>
     <figure>
-      <img src="/img/2024/case-studies/jarmilka/proces/testing-I.jpg" alt="Uživatelské testování papírového prototypu Jarmilky - respondent prochází obrazovky">
+      <img src="/img/2024/case-studies/jarmilka/proces/testing-I.jpg"
+        alt="Uživatelské testování papírového prototypu Jarmilky - respondent prochází obrazovky">
     </figure>
   </div>
   <aside class="notes"></aside>
@@ -399,23 +463,42 @@
     <li><strong>Není pro každého</strong> - část cílovky AI chatbota nepřijme, a to je v pořádku</li>
     <li>Etika: může při chybě uškodit - riziko lze minimalizovat, ne eliminovat</li>
   </ul>
+  <br>
+  <br>
+  <br>
   <div class="quote-block" style="margin-top: 1rem;">
-    <blockquote>Jarmilka z povahy wicked problémů nemůže vyřešit všechny problémy. Může být ale hodnotnou součástí širšího řešení.</blockquote>
+    <blockquote>Jarmilka z povahy wicked problémů nemůže vyřešit všechny problémy. Může být ale hodnotnou součástí
+      širšího řešení.</blockquote>
   </div>
   <aside class="notes"></aside>
 </section>
 
+<!-- DÍKY + QR na portfolio vpravo (statement-inner zúžen vpravo, QR jako absolutní sourozenec) -->
 <section class="layout-statement">
-  <div class="statement-inner">
+  <div class="statement-inner" style="right: 23rem;">
     <h1 id="dky">Díky 🙏</h1>
     <div style="width:48px; height:2px; border-radius:1px; background-color:#e8a030; margin:2rem 0 2rem;"></div>
-    <p style="font-family:'Space Grotesk', sans-serif; font-size:1.5rem; line-height:1.5; color:#f0ece4; margin:0;">Tímto chci poděkovat všem, s nimiž jsem se mohl během práce na tomto projektu potkat.</p>
-    <p style="font-family:'Inter', sans-serif; font-size:1.2rem; line-height:1.55; color:#ddd8d0; margin-top:1.25rem;">Zejména těm, které nazývám <strong>jednorožci</strong> – lidé z praxe, kteří se nebojí přesahovat své role a hledat kreativní cesty pro řešení složitých problémů. Na některé rozhovory dodnes rád vzpomínám, přestože probíraná témata nebyla jednoduchá.</p>
-    <p style="font-family:'Inter', sans-serif; font-size:1.05rem; line-height:1.5; color:#968878; margin-top:2.25rem;">Kdyby vás zajímalo, na čem dalším jsem pracoval, mrkněte na <a href="https://erikvanek.com/dis-kisk" target="_blank" rel="noopener" style="color:#e8a030; font-weight:600;">erikvanek.com/dis-kisk</a>.</p>
+    <p style="font-family:'Space Grotesk', sans-serif; font-size:1.5rem; line-height:1.5; color:#f0ece4; margin:0;">
+      Tímto chci poděkovat všem, s nimiž jsem se mohl během práce na tomto projektu potkat.</p>
+    <p style="font-family:'Inter', sans-serif; font-size:1.2rem; line-height:1.55; color:#ddd8d0; margin-top:1.25rem;">
+      Zejména těm, které nazývám <strong>jednorožci</strong> – lidé z praxe, kteří se nebojí přesahovat své role a
+      hledat kreativní cesty pro řešení složitých problémů. Na některé rozhovory dodnes rád vzpomínám, přestože
+      probíraná témata nebyla jednoduchá.</p>
+    <p style="font-family:'Inter', sans-serif; font-size:1.05rem; line-height:1.5; color:#968878; margin-top:2.25rem;">
+      Kdyby vás zajímalo, na čem dalším jsem pracoval, mrkněte na <a href="https://erikvanek.com/dis-kisk"
+        target="_blank" rel="noopener" style="color:#e8a030; font-weight:600;">erikvanek.com/dis-kisk</a>.</p>
+  </div>
+  <div
+    style="position:absolute; right:7.5rem; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; align-items:center; gap:0.75rem;">
+    <img src="/presentations/img/qrcode_portfolio.png" alt="QR kód vedoucí na portfolio erikvanek.com/dis-kisk"
+      width="190" height="190"
+      style="display:block; width:190px; height:190px; background:#ffffff; padding:12px; border-radius:10px; box-sizing:border-box;">
+    <span
+      style="font-family:'Space Grotesk', sans-serif; font-size:0.95rem; font-weight:500; letter-spacing:0.04em; color:#e8a030;">Naskenuj
+      a mrkni</span>
   </div>
   <aside class="notes"></aside>
 </section>
-
     </div>
     <div class="slide-footer"><span>erikvanek.com/dis-kisk/thesis</span></div>
   </div>
@@ -425,7 +508,7 @@
   <script src="../../js/reveal-notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
   <script>
-    Reveal.initialize({ center: false, hash: true, autoPlayMedia: true, transition: 'slide', plugins: [RevealNotes] });
+    Reveal.initialize({ width: 1280, height: 720, center: false, hash: true, autoPlayMedia: true, transition: 'slide', plugins: [RevealNotes] });
 
     mermaid.initialize({ startOnLoad: false, theme: 'base' });
 
