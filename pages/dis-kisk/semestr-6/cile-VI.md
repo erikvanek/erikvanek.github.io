@@ -74,9 +74,17 @@ Větší část toho posunu jsem si vyzkoušel mimo klientskou práci - na vlast
 Můj vývojový proces je centrovaný kolem Claude Code - popíšu chování, většinou rovnou slovy přes mikrofon, na vyladění UX zapojím paper.design přes MCP, následně vytvořím pull request s živým preview nové funkce, zhodnotím jestli je dle mé specifikace a pokud jo, přidávám do existující codebase. Source of truth zůstává v kódu, ne ve Figmě. Pro mě osobně byl tohle moment, kdy jsem *agentic engineering* přestal cítit jako experiment a začal jsem jej považovat za primární pracovní nástroj.
 ### UX Monday Praha - test toho všeho najednou {#ux-monday}
 
+<div class="float-wrap">
+<figure class="float-figure float-right">
+  <img src="/dis-kisk/cesta/img/vi-ux-monday.jpg" alt="Erik na pódiu UX Monday v Praze, květen 2026" />
+  <figcaption>Na pódiu UX Monday v Praze, květen 2026.</figcaption>
+</figure>
+
 V květnu 2026 jsem dostal zhruba 45 minut prostor na meetupu UX Monday v Praze. Přednášku jsem pojmenoval *"The process isn't dead. It's just different."* jako variaci na Fowlerovo [Is TDD dead?](https://martinfowler.com/articles/is-tdd-dead/){target="_blank"} či nedávnou přednášku od Jenny Wen [Design process is dead](https://www.youtube.com/watch?v=eh8bcBIAAFo){target="_blank"}.
 
 Přednáška popisovala workflow, které jsem si v semestru postavil - brain dump method, AI-asistované kódování rozhovorů (živé demo na přepisech z dalšího bočního projektu), prototypování s využitím Claude Code a Paper.design. Na závěr jsem lehce představil i projekty, které se věnují sociálním inovacím jako osvěžení od čistě digitálního obsahu.
+
+</div>
 
 📜 [**Surový brain dump z procházky**](/dis-kisk/ux-monday-braindump/) → ⚡ agentní mód (popsaný výše) → 🎙️ [**hotová prezentace na UX Monday**](/ux-monday-26){target="_blank"}
 
