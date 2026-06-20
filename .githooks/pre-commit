@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+#
+# Pre-commit guard for erikvanek.github.io (PUBLIC repo → www.erikvanek.com)
+# Two layers:
+#   1) gitleaks — blocks API keys / tokens / private keys in staged changes
+#   2) path guard — blocks staging files that must never be published
+#
+# Bypass in a genuine emergency with:  git commit --no-verify
+# Setup (once per clone):              git config core.hooksPath .githooks
+#
+set -euo pipefail
+RED=$'\033[31m'; YEL=$'\033[33m'; GRN=$'\033[32m'; NC=$'\033[0m'
+fail=0
+repo_root="$(git rev-parse --show-toplevel)"
+
+# ── Layer 1: secret scanning ─────────────────────────────────
+if command -v gitleaks >/dev/null 2>&1; then
+  if ! gitleaks git --staged --no-banner --redact \
+        --config "$repo_root/.gitleaks.toml" 2>/dev/null; then
+    echo "${RED}✖ gitleaks found a potential secret in your staged changes.${NC}"
+    echo "  Move it to 1Password. To override (rare): git commit --no-verify"
+    fail=1
+  fi
+else
+  echo "${YEL}⚠ gitleaks not installed — secret scan skipped.${NC}"
+  echo "  Install: brew install gitleaks"
+fi
+
+# ── Layer 2: private-path guard ──────────────────────────────
+# Block anything that should never enter this public repo, even via 'git add -f'.
+staged="$(git diff --cached --name-only --diff-filter=AM)"
+# Type-based only (no content/client names — the config is public, names would be a hint).
+deny_regex='\.env($|\.)|(^|/)\.obsidian/|(^|/)\.smart-env/|(^|/)\.claude/|\.(key|pem|pfx|p12)$'
+# Match deny list, but allow *.env.example (placeholders) — gitleaks still scans their content.
+blocked="$(echo "$staged" | grep -E "$deny_regex" | grep -vE '\.env\.example$' || true)"
+if [ -n "$blocked" ]; then
+  echo "${RED}✖ Blocked: these staged paths must not be published:${NC}"
+  echo "$blocked" | sed 's/^/    /'
+  echo "  They are private (vault config / secrets) and must stay out of this repo."
+  echo "  Unstage them, or override (rare): git commit --no-verify"
+  fail=1
+fi
+
+if [ "$fail" -eq 0 ]; then
+  echo "${GRN}✓ pre-commit checks passed (gitleaks + path guard)${NC}"
+fi
+exit "$fail"

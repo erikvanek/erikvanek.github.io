@@ -22,3 +22,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Follow the existing patterns in the codebase when creating new components or modifying existing ones.
 - make sure the progress in all relevant markdown docs
+
+## Privacy & content boundaries
+- This repo is **public** and builds to www.erikvanek.com. Anything committed is world-readable.
+- PARA **Projects** and **Archive** are **private** and live in a separate private repo - they are NOT part of this public second brain. Only Areas/Resources-type notes are published here.
+- Never commit secrets, `.env`, `.obsidian/`, `.smart-env/`, or `.claude/` (enforced by the pre-commit hook in `.githooks/` + gitleaks; run `git config core.hooksPath .githooks` once per clone).
+- Do not enumerate private file or client names in public config (`.gitignore`, hooks, commit messages) - that itself hints they exist. Protect by file *type*, and keep private content out of the repo entirely.
+
+## Project lifecycle → continual publishing
+A project may move from **Projects → Archive** only if one of these is true:
+- a **case study is published** on the site (portfolio / case-studies page), or
+- the project note carries an **explicit `no case study needed`** marker.
+
+If neither holds, do not archive it - flag it so a case study gets written first. This keeps the public site continually updated with recent work.

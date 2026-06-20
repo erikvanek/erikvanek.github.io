@@ -1,0 +1,24 @@
+# gitleaks config for erikvanek.github.io
+# Extends gitleaks' built-in ruleset; allowlist avoids false positives from
+# bundled third-party JavaScript and genuine placeholder VALUES only.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Global allowlist for this repo"
+# Path allowlist: vendor/lock files only. NOTE: .env.example is intentionally
+# NOT allowlisted here, so a real key accidentally left in an example is caught.
+paths = [
+  '''node_modules/''',
+  '''(^|/)package-lock\.json$''',
+  '''(^|/)yarn\.lock$''',
+  '''\.obsidian/plugins/.*/main\.js$''',  # bundled Obsidian plugin libraries
+]
+# Value allowlist: match only obvious placeholder VALUES (not the word "example"
+# alone, which would whitelist real keys on any line mentioning it).
+regexes = [
+  '''(?i)your[_-]?(api[_-]?)?(key|token|secret)[_-]?here''',
+  '''(?i)replace[_-]?with[_-]?your''',
+  '''^x{8,}$''',
+  '''<[^>]+>''',
+]
