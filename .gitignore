@@ -20,3 +20,8 @@ yarn-error.log
 **/.obsidian/
 **/.smart-env/
 **/.claude/
+
+# ── Private PARA folders: kept in a separate private repo, never here ─
+# (generic category names only; restores protection that must not be lost)
+pages/notes/10 - 🧠 Knowledge/1 - 🚀 Projects/
+pages/notes/10 - 🧠 Knowledge/4 - 🏛️ Archives/
