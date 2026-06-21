@@ -98,6 +98,9 @@ A product vision articulates the desired future state that a product aims to cre
 
 **Created:** 2025-06-29
 
+## On owning vs. keeping the vision — *The Hard Thing About Hard Things* (Horowitz)
+- the CEO does not need to be the creator of that vision but **must** be its keeper ([[The Hard Thing About Hard Things#^hthat-vision-keeper|Horowitz]])
+
 ## Related notes
 - [[🔥 Project planning]]
 - [[Behavioral design]]

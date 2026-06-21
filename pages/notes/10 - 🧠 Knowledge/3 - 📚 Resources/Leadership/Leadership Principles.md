@@ -19,6 +19,11 @@ resources:
 - During one's personal development – try to map out skills that are relevant for what you want to do and try to excel at one of them – imagine a "one-liner" that you get remembered for and recognized for
 - culture is what do we say yes to, what do we say no to, what is our standard and how do we help each other to meet that standard and **it is set by the leaders** – if the leaders are slacking, it's going to be hard to motivate people underneath
 - Leadership is about stepping into the unknown and helping others navigate complex environments riddled with ambiguity. From this perspective, a certain degree of naiveness is almost a requirement to be effective.
+- the secret of being a CEO - the ability to make the best move in situations when there are no good moves ([[The Hard Thing About Hard Things#^hthat-no-good-moves|Horowitz]])
+- *most important decisions test the courage more than the intelligence* ([[The Hard Thing About Hard Things#^hthat-courage|Horowitz]])
+- *take care of people, product, profit exactly in that order* ([[The Hard Thing About Hard Things#^hthat-people-product-profit|Horowitz]])
+- truly great leaders create an environment where their employees have the experience that they matter more than the leader itself ([[The Hard Thing About Hard Things#^hthat-leaders-matter|Horowitz]])
+- *political behavior almost always starts at the top from the CEO* ([[The Hard Thing About Hard Things#^hthat-politics-top|Horowitz]])
 
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety]]

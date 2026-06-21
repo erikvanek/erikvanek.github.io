@@ -38,3 +38,4 @@
 - Dave Gray: "Action may not always bring happiness, but there is no happiness without action"
 - Dave Gray: "The best way to promote a new or different belief is not with facts, but with a story"
 - Dave Gray: "Liminal thinking is a way of navigating change by opening the door to ambiguity and uncertainty"
+- Andy Grove: "The right kind of ambition is the one that helps the company succeed with their vision with the employee's personal success coming only as a by-product of this victory"

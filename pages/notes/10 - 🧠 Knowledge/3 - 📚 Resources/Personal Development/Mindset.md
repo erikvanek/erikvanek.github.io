@@ -1,1 +1,5 @@
 - **Build your own products.** If you are challenged by the corporate environment, start creating. These tools make it possible for individual designers to build products without traditional engineering constraints. Build the companies you want to work for.
+- the struggle is where greatness comes from ([[The Hard Thing About Hard Things#^hthat-struggle-greatness|Horowitz]])
+- **most important entrepreneurship lesson - embrace the struggle & extra on top of that embrace your background, weirdness and instinct** ([[The Hard Thing About Hard Things#^hthat-embrace-struggle|Horowitz]])
+- *spend less time on what you could have done and focus that time and attention on what you might do now as there is something you can still influence* ([[The Hard Thing About Hard Things#^hthat-focus-influence|Horowitz]])
+- *running a company is like driving a car in 300 km/h in a turn - if you focus on a wall, you crash; if you focus on a road, you carry on* ([[The Hard Thing About Hard Things#^hthat-driving|Horowitz]])

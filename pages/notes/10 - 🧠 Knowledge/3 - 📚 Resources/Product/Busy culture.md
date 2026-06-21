@@ -7,3 +7,4 @@ resources:
 - "As Toby Lowe suggests, performance metrics often encourage short-term outcomes and discourage experimentation and learning. This pressure to meet immediate goals and prove value quickly fosters a busy culture where employees are more likely to prioritise quick wins."
 	- from [here](https://centreforpublicimpact.org/resource-hub/disarming-busy-culture/)
 - try to prevent [presenteeism](https://www.bbc.com/worklife/article/20210604-why-presenteeism-always-wins-out-over-productivity)
+- **an equivalent of being too busy to train is to be too hungry to eat** ([[The Hard Thing About Hard Things#^hthat-too-busy|Horowitz]])

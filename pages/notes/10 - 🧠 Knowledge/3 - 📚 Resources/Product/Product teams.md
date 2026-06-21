@@ -9,3 +9,8 @@
 - a core challenge: teams are often organized around making stuff, making it hard to focus on cross-functional outcomes
 - trust is a key ingredient for adopting an outcome-oriented approach
 - earlier engagement between designers and developers is critical to orient work more around outcomes
+
+## Good vs. bad product managers — *The Hard Thing About Hard Things* (Horowitz)
+- *good product managers crisply define the target, the "what" and manage the delivery of the "what", they don't give direction informally but they gather information informally* ([[The Hard Thing About Hard Things#^hthat-good-pm|Horowitz]])
+- *good product managers anticipate product flaws and build real solutions, bad PMs firefight all day* ([[The Hard Thing About Hard Things#^hthat-pm-anticipate|Horowitz]])
+- *good product managers decompose problems, bad ones mold problems into one* ([[The Hard Thing About Hard Things#^hthat-pm-decompose|Horowitz]])

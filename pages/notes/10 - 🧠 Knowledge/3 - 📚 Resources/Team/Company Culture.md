@@ -1,1 +1,4 @@
 - great example of how they do it at [Duolingo](https://handbook.duolingo.com/)
+- *in a sign of good culture - good news travel slow and bad news spread fast → what helps is to encourage - not punish - people to put problems in the open* ([[The Hard Thing About Hard Things#^hthat-good-news|Horowitz]])
+- being a good company does not matter when things go well but matters big time when things don't go so well which happens at some point for sure ([[The Hard Thing About Hard Things#^hthat-good-company|Horowitz]])
+- **people won't remember everything working for your organization but they will remember the day of being laid off - that's why it's important that their direct managers lay them off and not HR or something similar as they don't have that strong relationships with those being laid off** ([[The Hard Thing About Hard Things#^hthat-layoffs|Horowitz]])

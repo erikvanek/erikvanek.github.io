@@ -31,6 +31,10 @@ These findings emphasize that successful teams focus on how members work togethe
 
 ---
 
+## On training & hiring — *The Hard Thing About Hard Things* (Horowitz)
+- *training is one of the highest leverage activities a manager can perform* ([[The Hard Thing About Hard Things#^hthat-training-leverage|Horowitz]])
+- *it's important to hire for strengths rather for the lack of weaknesses* ([[The Hard Thing About Hard Things#^hthat-hire-strengths|Horowitz]])
+
 ## Related notes
 - [[Leadership Principles]]
 - [[Company Culture]]
