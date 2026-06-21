@@ -1,0 +1,196 @@
+/* ===========================================
+   LAYOUT
+   Slide structure and image treatments
+   =========================================== */
+
+/* -------------------------
+   Base Slide Styling
+   ------------------------- */
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: var(--slide-padding);
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Override reveal.js default centering */
+.reveal .slides section > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* -------------------------
+   Slide Background
+   ------------------------- */
+
+.reveal {
+  background: var(--color-bg);
+}
+
+.reveal .slide-background {
+  background: var(--color-bg);
+}
+
+/* -------------------------
+   Content Constraints
+   ------------------------- */
+
+.reveal .slides section {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Image Treatments
+   All images get consistent styling
+   ------------------------- */
+
+.reveal img {
+  border-radius: var(--image-radius);
+  box-shadow: var(--image-shadow);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove shadow for decorative/icon images */
+.reveal img.no-shadow {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* -------------------------
+   Image Layouts
+   ------------------------- */
+
+/* Half-width image (left or right) */
+.reveal .image-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.reveal .image-half img {
+  width: 100%;
+}
+
+.reveal .image-half .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Full-width image */
+.reveal .image-full img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Image with caption */
+.reveal figure {
+  margin: 0;
+}
+
+.reveal figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  text-align: center;
+}
+
+/* -------------------------
+   Two-Column Layout
+   ------------------------- */
+
+.reveal .columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.reveal .columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------------------------
+   Centering Utilities
+   ------------------------- */
+
+.reveal .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.reveal .centered h1,
+.reveal .centered h2,
+.reveal .centered p {
+  max-width: 900px;
+}
+
+/* -------------------------
+   Spacers
+   ------------------------- */
+
+.reveal .spacer-sm { height: var(--space-4); }
+.reveal .spacer-md { height: var(--space-8); }
+.reveal .spacer-lg { height: var(--space-12); }
+
+/* -------------------------
+   Slide Transitions
+   ------------------------- */
+
+.reveal .slides section {
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+/* -------------------------
+   Speaker Notes (hidden)
+   ------------------------- */
+
+.reveal aside.notes {
+  display: none;
+}
+
+/* -------------------------
+   Vertical Slides Indicator
+   ------------------------- */
+
+.reveal .controls {
+  color: var(--color-purple);
+}
+
+.reveal .progress {
+  background: var(--color-bg-alt);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: linear-gradient(90deg, var(--color-purple), var(--color-pink));
+}
+
+/* -------------------------
+   Print / PDF Export
+   ------------------------- */
+
+@media print {
+  .reveal .slides section {
+    page-break-after: always;
+  }
+  
+  .blob-container {
+    display: none !important;
+  }
+}

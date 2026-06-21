@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Design is a job</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="design-is-a-job">Design is a job</h1>
+                    
+                        <p class="subtitle">a Mark Monteiro je král</p>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">28. 1. 2024</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">1. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <p>Mark Monteiro je král. Mark Monteiro je král. Mark Monteiro je král. (stejně tak jako <a href="https://www.youtube.com/watch?v=tMWqs63N_K8" target="_blank">Rey Koranteng</a>)</p>
+<p>Je to tak. Neskutečně zábavnou a zároveň věcnou formou ve svojí knížce <a href="https://abookapart.com/products/design-is-a-job" target="_blank">Design is a job</a> popisuje spíše strasti než radosti designerstva, často z freelance perspektivy nebo ředitele design studia.</p>
+<p>Čtení knížky se mi sešlo s poměrně stresující pracovní situací, kterou jsem si na konci roku 2023 procházel a při čtení jsem se častokrát přistihnul že se jednak dost za břicho popadám a taky, že často popisuje situace, kterýma jsem si sám poměrně intenzivně nedávno procházel.</p>
+<p>Nevím jestli kdybych knížku četl před tím, než se mi to pracovní prostředí tak zašmodrchalo, by mi pomohlo těm problémům předejít. Ale co mi vlastně dost pomohlo a trošku mě i potěšilo je, že někdo dokázal ty situace a problémy kvalitně pojmenovat a já si je tak mohl zpětně znovu ještě trošku jinou formou zreflektovat.</p>
+<p>Zároveň je to za mě čtení, který není užitečný jenom pro lidi z designu. Podle mě je to knížka pro kohokoli, kdo má chuť dělat něco víc než jen sedět v kanclu u nějakýho CRMka a cvakat do něj faktury. Forma nemusí sednout každýmu, ale pokud člověka baví <a href="https://schwarzprior.bandcamp.com/music" target="_blank">Schwarzprior</a>, <a href="https://prigl.cz/" target="_blank">Prigl</a> nebo pořád nadáváš na kapitalismus a děláš s lidma tak je to za mě must read. Já se k tomu brzo vrátím a dám si to znova. Je to fakt řachanda.</p>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

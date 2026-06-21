@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="cs" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cesta studiem DIS KISK — Erik Vaněk</title>
+<link rel="stylesheet" href="/fonts/fonts.css"/>
+<link rel="stylesheet" href="/css/pico.classless.min.css"/>
+<link rel="stylesheet" href="/dis-kisk/cesta/cesta.css"/>
+</head>
+<body>
+  <header class="wall-head">
+    <p class="wh-name">Erik Vaněk</p>
+    <p class="wh-line">Cesta studiem Designu informačních služeb · KISK FF MUNI</p>
+  </header>
+
+  <div id="bau-grid" class="wall"></div>
+
+  <footer class="wall-foot">
+    <p>2023–2026 · vybráno ze studijních hroznů, s ❤️</p>
+  </footer>
+
+  <script src="/dis-kisk/cesta/cards.js"></script>
+  <script src="/js/rough.js"></script>
+  <script>
+  (function () {
+    // semester = metadata only: colour + tag, never a heading
+    var SEM_COLOR = { 'I':'#6B7A45','II':'#3E5A6E','III':'#B0552E','IV':'#6F2430','V':'#C26818','VI':'#9a7a23','?':'#7a7060' };
+
+    // ---------- helpers ----------
+    function el(tag, cls, text, styles){
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      if (styles) for (var k in styles) n.style[k] = styles[k];
+      return n;
+    }
+    // function stripEmoji(s){ return s.replace(/[^\w\sáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ&×—-]/g,'').trim().toLowerCase(); }
+    function stripEmoji(s){ return s }
+    function noEmoji(s){ return s}
+    // function noEmoji(s){ return s.replace(/[^\p{L}\p{N}\s.,:–—&()'→↗←-]/gu,'').replace(/\s+/g,' ').trim(); }
+
+    // snap each tile to one of 4 grid footprints: explicit fp wins, feature → 2×2,
+    // tall photo → 1×2, wide photo → 2×1, otherwise (text + near-square) → 1×1
+    function footprint(it){
+      if (it.fp)      return ' ' + it.fp;
+      if (it.feature) return ' f-big';
+      if (!it.photo)  return '';
+      var r = it.photo.ratio || 1;
+      if (r < 0.85) return ' f-portrait';
+      if (r > 1.25) return ' f-landscape';
+      return '';
+    }
+
+    // one initiative → one tile (thematic tags + emoji-stripped title on a stamp; chips kept but hidden).
+    // A tile with it.link becomes an <a> so the whole card is clickable.
+    function makeTile(it, fpOverride){
+      var fp = (fpOverride != null) ? (' ' + fpOverride) : footprint(it);
+      var tag = it.link ? 'a' : 'div';
+      var tile;
+      if (it.photo){
+        tile = el(tag,'tile'+fp);
+        var img = document.createElement('img');
+        // cards.js photo srcs stay relative to the cesta asset folder; this page
+        // now lives at /dis-kisk/, so resolve them against the assets' real path.
+        var ps = it.photo.src;
+        img.src = /^(\/|https?:)/.test(ps) ? ps : '/dis-kisk/cesta/' + ps;
+        img.alt = it.photo.alt||''; tile.appendChild(img);
+      } else {
+        tile = el(tag,'tile text'+(it.missing?' missing':'')+fp);
+      }
+      var isExt = it.link && /^https?:\/\//.test(it.link);   // external URL → opens in a new tab
+      if (it.link){
+        tile.setAttribute('href', it.link);
+        if (isExt){ tile.setAttribute('target','_blank'); tile.setAttribute('rel','noopener'); }
+      }
+      var tagText = it.tag ? (/^\d/.test(it.tag) ? it.tag : 'semestr '+it.tag) : 'semestr '+it.sem;
+      tile.appendChild(el('span','sem-tag', tagText, {background: it.color || SEM_COLOR[it.sem]}));
+      var stamp = el('div','tile-stamp ext');
+      if (it.tags && it.tags.length){
+        var tg = el('div','tile-tags');
+        it.tags.forEach(function(t){ tg.appendChild(el('span','tt', t)); });
+        stamp.appendChild(tg);
+      }
+      var titleEl = el('div','tile-title', noEmoji(it.title));
+      if (isExt) titleEl.appendChild(el('span','tile-ext', ' 🔗'));   // signals the card leads off-site
+      stamp.appendChild(titleEl);
+      // one muted functional clause under the title — only where there's room (2×2+)
+      if (it.sub && /f-big|f-profile/.test(fp)) stamp.appendChild(el('div','tile-sub', it.sub));
+      var chips = (it.chips || []).filter(function(c){ return stripEmoji(c.text) !== stripEmoji(it.title); });
+      if (chips.length){
+        var box = el('div','tile-chips');
+        chips.forEach(function(c){ box.appendChild(el('span','tc'+(c.variant?(' '+c.variant):''), c.text)); });
+        stamp.appendChild(box);
+      }
+      tile.appendChild(stamp);
+      return tile;
+    }
+    function makeHero(){
+      // hero · 2×2 — text-on-paper door into the story; the rough circle
+      // around the CTA draws itself shortly after load (see circleCta)
+      var hero = el('a','tile hero f-big');
+      hero.setAttribute('href', '/dis-kisk/portfolio/');
+      hero.appendChild(el('h1','h-title','Tři roky studia DIS KISK'));
+      hero.appendChild(el('p','h-sub','Výběr z hroznů z mé cesty studiem. 2023–2026'));
+      hero.appendChild(el('span','h-cta','Začni tady →'));
+      return hero;
+    }
+    function makeQuoteTile(text, ref, link){
+      var tile = el('div','tile quote-tile f-landscape');   // research voices are 2:1
+      tile.appendChild(el('p','qt-text', text));
+      tile.appendChild(el('div','qt-ref', '— ' + ref));
+      // a stretched overlay link makes the whole card clickable without making
+      // the tile an <a> (which would collide with the „ glyph on ::before)
+      if (link){
+        var a = el('a','qt-link');
+        a.setAttribute('href', link);
+        a.setAttribute('aria-label', 'Otevřít: ' + ref);
+        tile.appendChild(a);
+      }
+      return tile;
+    }
+
+    // reading order: pinned start → lead tiles (opening) → middle (array order) → pinned end
+    function orderedSeq(){
+      var start = INITIATIVES.filter(function(i){ return i.pin === 'start'; });
+      var end   = INITIATIVES.filter(function(i){ return i.pin === 'end'; });
+      var lead  = INITIATIVES.filter(function(i){ return i.lead; }).sort(function(a,b){ return a.lead - b.lead; });
+      var mid   = INITIATIVES.filter(function(i){ return !i.pin && !i.lead; });
+      return start.concat(lead).concat(mid).concat(end);
+    }
+
+    // ---- entry kinds + band packing ----
+    function isQuote(it){ return it.quote != null; }                           // standalone research-voice card
+    function isClosing(it){ return it.closing === true; }                      // inverted outro tile
+    function makeClosingTile(it){
+      // statement card — Erik's voice, deliberately not clickable
+      var tile = el('div','tile hero closing f-big');
+      tile.appendChild(el('p','h-statement', it.title));
+      if (it.sig) tile.appendChild(el('div','h-sig', it.sig));
+      return tile;
+    }
+    function makeAny(it){ return isClosing(it) ? makeClosingTile(it) : isQuote(it) ? makeQuoteTile(it.quote, it.ref, it.link) : makeTile(it); }
+    function tallOf(it){ return isClosing(it) ? true : isQuote(it) ? false : isTallFp(footprint(it)); }
+    function pick(arr, pred){ for (var i=0;i<arr.length;i++){ if (pred(arr[i])) return arr.splice(i,1)[0]; } return null; }
+    function isTallFp(fp){ return fp === ' f-big' || fp === ' f-portrait'; }   // 2 units tall
+    // group {el, tall} into card-tall columns: tall tiles stand alone; 1-unit tiles pair into a .stack
+    function packColumns(descs){
+      var cols = [], pend = null;
+      function flush(){ if (pend){ var s = el('div','stack'); s.appendChild(pend); cols.push(s); pend = null; } }
+      descs.forEach(function(d){
+        if (d.tall){ flush(); cols.push(d.el); }
+        else if (pend){ var s = el('div','stack'); s.appendChild(pend); s.appendChild(d.el); cols.push(s); pend = null; }
+        else pend = d.el;
+      });
+      flush();
+      return cols;
+    }
+    function emitBands(wall, cols, per){
+      for (var i=0;i<cols.length;i+=per){
+        var b = el('div','band');
+        cols.slice(i, i+per).forEach(function(c){ b.appendChild(c); });
+        wall.appendChild(b);
+      }
+    }
+
+    // Opening composition — centred flex bands:
+    //   row 1 — [Erik 2023 · 2×2] [hero · 2×2, centre] [Hackathon / Když nevíš · 2×1 stacked]
+    //   row 2 — three standard project cards (quotes are skipped here — they can't be 2×2)
+    //   rest  — projects + standalone research-voice quote cards, in data order, paired into columns, 3 per band
+    function renderWall(){
+      var wall = document.getElementById('bau-grid');
+      wall.innerHTML = '';
+      var seq  = orderedSeq();
+      var erik = pick(seq, function(i){ return i.pin === 'start'; });
+      var hack = pick(seq, function(i){ return i.title && /Hackathon/.test(i.title); });
+      var second = pick(seq, function(i){ return i.title && /zeptej/.test(i.title); });  // "Když nevíš, tak se zeptej" — second tile in the opening stack
+
+      var b1 = el('div','band');
+      if (erik) b1.appendChild(makeTile(erik, 'f-big'));
+      b1.appendChild(makeHero());
+      var stack = el('div','stack');
+      if (hack)   stack.appendChild(makeTile(hack,   'f-landscape'));
+      if (second) stack.appendChild(makeTile(second, 'f-landscape'));
+      b1.appendChild(stack);
+      wall.appendChild(b1);
+
+      // row 2 — first three PROJECT cards (skip quote entries so none renders as a 2×2)
+      var row2 = [];
+      while (row2.length < 3){
+        var p = pick(seq, function(i){ return !isQuote(i); });
+        if (!p) break;
+        row2.push(p);
+      }
+      var b2 = el('div','band');
+      row2.forEach(function(it){ b2.appendChild(makeTile(it, 'f-big')); });
+      wall.appendChild(b2);
+
+      // rest — every remaining entry (projects + standalone quotes) rendered by kind, in order
+      emitBands(wall, packColumns(seq.map(function(it){
+        return { el: makeAny(it), tall: tallOf(it) };
+      })), 3);
+
+      // staggered entrance: CSS animation keyed off --i per band
+      Array.prototype.forEach.call(wall.children, function(b, i){ b.style.setProperty('--i', i); });
+    }
+
+    // rough.js easter egg: quote tiles get a hand-drawn sharpie border (progressive)
+    function sketchQuoteBorders(){
+      if (typeof rough === 'undefined') return;
+      var NS = 'http://www.w3.org/2000/svg';
+      document.querySelectorAll('.tile.quote-tile').forEach(function(tile){
+        var w = tile.offsetWidth, h = tile.offsetHeight;
+        if (!w || !h) return;
+        var svg = document.createElementNS(NS, 'svg');
+        svg.setAttribute('class', 'rough-note');
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        svg.setAttribute('aria-hidden', 'true');
+        // inset enough that rough's stroke jitter stays inside the tile's
+        // overflow:hidden clip (was 3px → outer wobble got chopped at edges)
+        svg.appendChild(rough.svg(svg).rectangle(7, 7, w - 14, h - 14, {
+          roughness: 1.4, bowing: 1.2, strokeWidth: 1.2, stroke: 'rgba(122, 112, 96, .65)'
+        }));
+        tile.appendChild(svg);
+        tile.classList.add('has-rough');
+      });
+    }
+
+    // rough.js: a marker circle draws itself around the hero CTA after load
+    function circleCta(){
+      if (typeof rough === 'undefined') return;
+      var cta = document.querySelector('.h-cta');
+      if (!cta) return;
+      var NS = 'http://www.w3.org/2000/svg';
+      // generous box so the hand-drawn wobble + overshoot never clips
+      var padX = 30, padY = 24;
+      var w = cta.offsetWidth + padX * 2, h = cta.offsetHeight + padY * 2;
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'rough-note');
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.setAttribute('aria-hidden', 'true');
+      svg.style.width = w + 'px';
+      svg.style.height = h + 'px';
+      svg.appendChild(rough.svg(svg).ellipse(w / 2, h / 2, w - 26, h - 20, {
+        roughness: 1.3, bowing: 2.2, strokeWidth: 2.6, stroke: 'rgba(28, 24, 18, .82)',
+        disableMultiStroke: true   // one confident hand loop, not a scribble
+      }));
+      cta.appendChild(svg);
+
+      // Draw it like a hand circling once: reveal the single stroke from its
+      // start point to its end. Driven explicitly via WAAPI with the measured
+      // length — no CSS-var/implicit-from race (that caused it to pop in or
+      // sometimes not draw at all).
+      var reduce = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      svg.querySelectorAll('path').forEach(function(p){
+        var len = 0;
+        try { len = p.getTotalLength(); } catch (e) {}
+        if (!len || reduce || !p.animate) return; // leave it fully drawn
+        p.style.strokeDasharray = len;
+        p.style.strokeDashoffset = len;           // start hidden, then sweep
+        p.animate(
+          [{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+          { duration: 620, easing: 'cubic-bezier(.45, .02, .3, 1)', fill: 'forwards' }
+        );
+      });
+    }
+
+    // ---------- boot ----------
+    renderWall();
+    sketchQuoteBorders();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function(){ setTimeout(circleCta, 500); });
+    } else {
+      setTimeout(circleCta, 900);
+    }
+  })();
+  </script>
+</body>
+</html>

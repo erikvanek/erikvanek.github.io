@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/03-Knowledge">
+                ⬅️ Back to 03 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="measuring-business-value">Measuring Business Value</h1>
+
+    <h1 id="measuring-business-value">Measuring Business Value</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Effective product management requires understanding how to measure the business value created by product initiatives. This note outlines frameworks and approaches for quantifying the impact of product decisions, connecting customer outcomes to business results, and establishing meaningful metrics.</p>
+<h2 id="outcomes-vs-impact">Outcomes vs. Impact</h2>
+<h3 id="the-value-chain-from-a-hrefnotesoutcomes-over-outputoutcomes-over-outputa">The Value Chain (from <a href="/notes/Outcomes over Output/">Outcomes over Output</a>)</h3>
+<ul>
+<li><strong>Outputs</strong> (what we build) → <strong>Outcomes</strong> (behavior change) → <strong>Impact</strong> (business results)</li>
+<li>Impact is a side effect of well-designed outcomes</li>
+<li>Leaders typically focus on impact, while executors are responsible for outputs and outcomes</li>
+<li><strong>Example Value Chain</strong>:
+<ul>
+<li><strong>Impact</strong>: Reduce support costs</li>
+<li><strong>Outcome</strong>: Fewer people calling tech support</li>
+<li><strong>Output</strong>: Improved usability of confusing features</li>
+</ul>
+</li>
+</ul>
+<h3 id="importance-of-outcome-focus">Importance of Outcome Focus</h3>
+<ul>
+<li>Focusing on outcomes rather than outputs shifts attention to customer value</li>
+<li>Product teams should be accountable for outcomes, not just shipping features</li>
+<li>Outcomes are more stable than the solutions we might build to achieve them</li>
+</ul>
+<h2 id="indicators-and-metrics">Indicators and Metrics</h2>
+<h3 id="leading-vs-lagging-indicators">Leading vs. Lagging Indicators</h3>
+<ul>
+<li>
+<p><strong>Lagging Indicators</strong>:</p>
+<ul>
+<li>Tell you what happened in the past</li>
+<li>Have limited predictive power</li>
+<li>Examples: revenue, profit, customer satisfaction</li>
+</ul>
+</li>
+<li>
+<p><strong>Leading Indicators</strong>:</p>
+<ul>
+<li>Have a proven relationship between an action and a future result</li>
+<li>Provide early signals of success or failure</li>
+<li>Examples: engagement metrics, activation rates</li>
+</ul>
+</li>
+<li>
+<p>Leading indicators show if you'll hit or miss the target, lagging indicators reveal the actual target</p>
+</li>
+<li>
+<p>Key results in OKRs are outcome-based - having an outcome (measurable human behavior) almost automatically provides key result definition</p>
+</li>
+</ul>
+<h2 id="product-metrics-frameworks">Product Metrics Frameworks</h2>
+<h3 id="north-star-metric">North Star Metric</h3>
+<ul>
+<li>One key indicator reflecting the core value of your product</li>
+<li>Expresses the main long-term goal</li>
+<li>Measures how well the product meets customer needs</li>
+<li>Examples:
+<ul>
+<li>Streaming service: Number of viewing hours</li>
+<li>SaaS product: Weekly active users</li>
+<li>E-commerce: Customer lifetime value</li>
+</ul>
+</li>
+</ul>
+<h3 id="okr-objectives-key-results">OKR (Objectives - Key Results)</h3>
+<ul>
+<li>Framework for setting ambitious goals with measurable results</li>
+<li>Objectives are qualitative, inspiring goals</li>
+<li>Key Results are specific metrics that track progress</li>
+<li>Typically used in quarterly cycles</li>
+<li>Focuses teams on outcomes rather than activities</li>
+</ul>
+<h3 id="kpi-key-performance-indicators">KPI (Key Performance Indicators)</h3>
+<ul>
+<li>Specific metrics for operational performance monitoring</li>
+<li>All KPIs are metrics, but not all metrics are KPIs</li>
+<li>Should be tied to strategic business objectives</li>
+<li>Regularly monitored for decision making</li>
+</ul>
+<h3 id="cross-team-metric-strategies">Cross-Team Metric Strategies</h3>
+<ul>
+<li>Connect specific product metrics to broader organizational goals</li>
+<li>Use metric translation as a persuasion tool in cross-team discussions</li>
+<li>Develop thoughtful proxy metrics when direct measurement isn't possible</li>
+<li>Supplement A/B testing with deeper data science analysis</li>
+<li>Proactively address potential metric conflicts between teams</li>
+</ul>
+<h3 id="pirateaarrr-framework">Pirate/AARRR Framework</h3>
+<p>Startup framework for measuring the customer journey:</p>
+<ul>
+<li><strong>A</strong>cquisition: How users find your product</li>
+<li><strong>A</strong>ctivation: First experience and &quot;wow&quot; moment</li>
+<li><strong>R</strong>etention: How well you keep users engaged</li>
+<li><strong>R</strong>evenue: How the product generates income</li>
+<li><strong>R</strong>eferral: How users recommend your product</li>
+</ul>
+<h3 id="common-product-metrics">Common Product Metrics</h3>
+<ul>
+<li><strong>Conversion Rate</strong>: Percentage of visitors who perform a desired action</li>
+<li><strong>Retention Rate</strong>: Percentage of customers who return after a certain period</li>
+<li><strong>Churn Rate</strong>: Percentage of customers who stop using your product</li>
+<li><strong>Customer Acquisition Cost (CAC)</strong>: Cost to acquire a new customer</li>
+<li><strong>Customer Lifetime Value (LTV)</strong>: Total revenue expected from a customer</li>
+</ul>
+<h2 id="hypothesis-driven-approach">Hypothesis-Driven Approach</h2>
+<h3 id="effective-hypothesis-structure">Effective Hypothesis Structure</h3>
+<ul>
+<li><strong>Belief statement</strong>: What you believe will work or is true</li>
+<li><strong>Evidence</strong>: The data you'll look for to confirm or disprove the hypothesis</li>
+<li><strong>Expected outcome</strong>: What success looks like</li>
+</ul>
+<h3 id="hypothesis-to-experiment-flow">Hypothesis to Experiment Flow</h3>
+<ol>
+<li>Formulate a clear hypothesis based on observations and insights</li>
+<li>Define what needs to happen to validate or invalidate the hypothesis</li>
+<li>Design an experiment to test the hypothesis</li>
+<li>Collect and analyze data</li>
+<li>Draw conclusions and iterate</li>
+</ol>
+<h3 id="outcome-based-goal-setting">Outcome-Based Goal Setting</h3>
+<ul>
+<li>When we state goals with outcomes, we propose a relationship between our work and its results</li>
+<li>This relationship can be captured in a hypothesis</li>
+<li>Test with experiments to validate or refine</li>
+</ul>
+<h2 id="customer-signals-and-commitment">Customer Signals and Commitment</h2>
+<h3 id="commitment-currencies-from-a-href-classpending-linkthe-mom-testa">Commitment Currencies (from <a href="#" class="pending-link">The Mom Test</a>)</h3>
+<ul>
+<li>
+<p>Major currencies our partners invest are:</p>
+<ul>
+<li><strong>Time</strong>: Willingness to spend time with you</li>
+<li><strong>Reputation risk</strong>: Introducing you to others</li>
+<li><strong>Money</strong>: Actual financial investment</li>
+</ul>
+</li>
+<li>
+<p>Strong commitment often combines multiple currencies</p>
+</li>
+<li>
+<p>Warning signs:</p>
+<ul>
+<li>Not getting introduced to other stakeholders</li>
+<li>Lack of concrete decision points</li>
+</ul>
+</li>
+<li>
+<p>It's not a real lead until you've given them a concrete chance to reject you</p>
+</li>
+<li>
+<p>Look for emotional signals like &quot;This is the worst part of my life, and you can help me fix it&quot;</p>
+</li>
+</ul>
+<h2 id="the-outcomes-learning-cycle">The Outcomes Learning Cycle</h2>
+<p>The iterative process for measuring and improving business value:</p>
+<ol>
+<li><strong>Build</strong>: Create experiments or minimal solutions</li>
+<li><strong>Measure</strong>: Collect data on outcomes</li>
+<li><strong>Learn</strong>: Analyze results and generate insights</li>
+<li><strong>Iterate</strong>: Apply learnings to the next cycle</li>
+</ol>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/03-Knowledge/ProductManagement/ProductManagement-MOC/">Product Management</a></li>
+<li><a href="/notes/Product discovery/">Product Discovery</a></li>
+<li><a href="/notes/Knowledge/Design/UX_Metriky/">UX Metrics</a></li>
+<li><a href="/notes/Knowledge/Design/CX_Metriky/">CX Metrics</a></li>
+<li><a href="/notes/Knowledge/Design/Designove_experimenty_metodika/">Experimental Design Methodology</a></li>
+<li><a href="#" class="pending-link">Design Experiments</a></li>
+<li><a href="/notes/UX_Customer_Experience/">UX and Customer Experience</a></li>
+</ul>
+<h2 id="application-examples">Application Examples</h2>
+<ul>
+<li>Setting up a product metrics dashboard</li>
+<li>Designing an experiment to test a new feature's value</li>
+<li>Creating an OKR framework for a product team</li>
+<li>Developing a North Star metric for a new product</li>
+</ul>
+<h2 id="action-items">Action Items</h2>
+<ul>
+<li>Create a standard template for hypothesis documentation</li>
+<li>Develop a framework for connecting product metrics to business outcomes</li>
+<li>Establish a regular review process for key metrics</li>
+</ul>
+<h2 id="raw-notes">Raw Notes</h2>
+<p>This note has been processed from a top-level note into the knowledge base structure.</p>
+
+
+    
+</body>
+
+</html>

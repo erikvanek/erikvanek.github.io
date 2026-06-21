@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4lzLUckaWn8onmSxB6y18ZD6ljLzNqdBzMtvGXXQL6s" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content='Jak bychom mohli využít AI pro průvodcovství obyvatel sítí dostupných zdravotních a sociálních služeb?'>
+    <title>AI jako váš průvodce sociálně-zdravotním labyrintem | Erik Vaněk</title>
+    <meta name="description" content='Jak bychom mohli využít AI pro průvodcovství obyvatel sítí dostupných zdravotních a sociálních služeb?'>
+    <link rel="stylesheet" href="/css/nu.css">
+    <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+</link>
+<!-- <link rel="stylesheet" href="../../css/revealjs/black.css">
+</link> -->
+    <link rel="stylesheet" href="../css/presentation-jinag.css">
+    </link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+    <div class="backgrounds">
+            <!-- <div class="background-grid"></div> -->
+        <div></div>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+            
+<style>
+    li,
+    ol,
+    p,
+    ul {
+        font-family: "Inter", sans-serif !important;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #eee;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+</style>
+<!-- 
+<img src="../presentations/img/dny-ai-logo-negativni.png" alt="" srcset=""
+    style="position: absolute; top: 2rem; left: 2rem;"> -->
+
+<section>
+    <h1 class="r-fit-text">AI jako váš průvodce <br>sociálně-zdravotním <br> labyrintem</h1>
+    <br>
+    <br>
+    <p>Brno, 17.10. v rámci <a href="https://www.dny.ai/" target="_blank">Dnů AI</a>
+    </p>
+    <p>Spolupráce <a href="https://jinag.eu/" target="_blank">JINAG</a>, <a href="https://www.syri.cz/"
+            target="_blank">SYRI</a>, <a href="https://www.med.muni.cz/" target="_blank">MED MUNI</a> a <a
+            href="https://kisk.phil.muni.cz/" target="_blank">KISK</a>
+    </p>
+    <p>Erik Vaněk, <a href="mailto:erik.vanek@jinag.eu">erik.vanek@jinag.eu</a>
+    </p>
+    <!-- <h4 id="brno-1710">Brno, 17.10.</h4> -->
+    <!-- <h4 id="jinag-syri-med-muni-kisk">JINAG, SYRI, MED MUNI, KISK</h4> -->
+</section>
+
+<section>
+    <h1 id="harmonogram-workshopu">Harmonogram workshopu</h1>
+    <ul>
+        <li>Zdravice od proděkanky MED MUNI</li>
+        <li>Harmonogram, kontext workshopu</li>
+        <li>Kdo je kdo?</li>
+        <li>2 výzvy</li>
+        <li>Úvodní brainstorming</li>
+        <li>Průběžná pauza na ☕ okolo 11. hodiny</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="druh-st">Druhá část</h1>
+    <ul>
+        <li>Jak nám může AI pomoci?</li>
+        <li>Osnova a klíčové prvky</li>
+        <li>Výběr formátu sdělení</li>
+        <li>Rozpracování do hloubky</li>
+        <li>Vzájemné sdílení, zpětná vazba a další kroky</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="zdravice">Zdravice</h1>
+    <p>Odkaz <a href="https://meet.google.com/xkx-aocf-kcw" target="_blank">zde</a>
+    </p>
+</section>
+
+<!-- <section>
+    <h1 id="krtk-pedstaven">Krátké představení</h1>
+    <ul>
+        <li>10 let v prostředí vývoje softwaru</li>
+        <li>engineering, design, product management</li>
+        <li>od 2022 pomáhám organizacím vytvářet účelné služby
+            <ul>
+                <li>Takové, které stojí na <b>poznání potřeb klientů</b> a schopnostech organizací, které je poskytují
+                </li>
+            </ul>
+        </li>
+        <li>Spolupráce např. s JINAG, MPSV nebo IQRS</li>
+    </ul>
+</section> -->
+
+<section>
+    <h1 id="pravidla">Pravidla</h1>
+    <ul>
+        <li>Jste tu dobrovolně</li>
+        <li>Kdykoli se ptejte na cokoli – lepší teď než pozdě</li>
+        <li>Žádný nápad není špatný, možná jen nepřišel v pravou chvíli</li>
+        <li>
+            Pro dnes zkuste zapomenout <em>„To nejde, protože ...“</em>
+            <ul>
+                <li>A nalaďte se na <em>„Jak bychom mohli ...?“</em>
+                </li>
+            </ul>
+        </li>
+        <li>Vzájemný respekt ✊</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="kontext-projektu">Kontext projektu</h1>
+    <ul>
+        <li>Jihomoravský kraj</li>
+        <li>Strategický cíl:<ul>
+                <li>
+                    <em>Zvýšení informovanosti obyvatel Jihomoravského kraje o&nbsp;službách v sociální a zdravotní
+                        oblasti</em>
+                </li>
+            </ul>
+        <li>Ten uchopuje <b>JINAG</b>
+        </li>
+        <li>A uvnitř JINAG tým zabývající se sociální a zdravotní oblastí</li>
+        <li>Projekt <a href="https://jinag.eu/cs/access4all-cast-design-sluzby" target="_blank">Access 4
+                all</a>
+        </li>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="access-4-all">Access 4 all</h1>
+    <ul>
+        <li>Hledáme cesty, jak zvýšit informovanost o dostupných službách</li>
+        <li>Projektové aktivity:
+            <ul>
+                <li>Výzkum s relevantními aktéry</li>
+                <li>Analýza a syntéza dat</li>
+                <li>
+                    <b>Hledání návrhů řešení</b> (proto jsme dnes tady)
+                </li>
+                <li>Ověření návrhů v terénu</li>
+                <li>Představení návrhů zadavatelům</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="vzjemn-seznmen">Vzájemné seznámení</h1>
+    <ul>
+        <li>Kdo jste?</li>
+        <li>Co si dnes chcete odnést?</li>
+        <li>V čem vám je dnes AI <em>opravdu</em> k užitku?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="tmata-v-access-4-all">Témata v Access 4 all</h1>
+    <ul>
+        <li>
+            <b>Nízká informovanost</b> o dostupné síti služeb
+            <ul>
+                <li>U klientů i poskytovatelů</li>
+            </ul>
+        </li>
+        <li>Chybí kvalitní a důvěryhodné průvodcovství
+            <ul>
+                <li>
+                    <b>Co mám dělat když ... ?</b>
+                </li>
+            </ul>
+        </li>
+        <li>Nízká provázanost zdravotního a sociálního světa</li>
+        <li>
+            <strong>Reaktivní řešení</strong> životních situací
+            <ul>
+                <li>Neatraktivní téma, stigma, málo prevence, ...</li>
+            </ul>
+        </li>
+        <li>Informací je dostatek, jejich srozumitelnost je nízká
+            <ul>
+                <li>Neznalost klientů následně zatěžuje poskytovatele</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="post-it pink">
+            <text>Ale na tom pracáku opravdu velmi často ty informace nezískáte. Já jsem na pracáku půl roku dělala na
+                oddělení zaměstnanosti. Ale musela jsem odejít, protože <strong>jsem byla moc proaktivní a bylo mi
+                    říkáno, tohle jim neříkej</strong>, pak se to obrátí proti tobě.</text>
+        </div>
+        <div class="post-it yellow">
+            <text>Tak vemte si, že se obracíte na někoho, koho jste nikdy nepotřeboval a <strong>už jen ten název
+                    sociální
+                    práce
+                    znamená něco jako poměrně negativního</strong> s tím názvem sociální.</text>
+        </div>
+        <div class="post-it blue">
+            <text>To, co jako nefunguje, je, že třeba ty <strong>holky na tom sociálním odboru jsou strašně
+                    přetížený</strong>. Ta práce
+                je blbě ceněná finančně hodnocená. Často tak jedou na nějaký osobní altruismus, ale to vás časem
+                doběhne.</text>
+        </div>
+        <div class="post-it yellow">
+            <text>
+                <strong>Já jako konzument péče potřebuji vědět kde dostanu adekvátní informace</strong>. Což znamená,
+                já nevím, umřel
+                mi je příbuzný. A já jako doktor bych měl říct, hele, podívejte se tady je leták a v jednu chvíli to
+                nastane. Vemte si to domů. Přečtěte si to. A případně doplnit o digitální zdroje.</text>
+        </div>
+        <div class="post-it pink">
+            <text>Když se nám podaří <strong>snížit návštěvnost toho systému</strong> o blbých 20%, nebo o 15%,
+                díky tomu že si
+                někteří uvědomí, že s rýmou prostě ve tři ráno nemají co dělat na pohotovosti no tak ježišmarja, to je
+                úplně skvělý.</text>
+        </div>
+        <div class="post-it green">
+            <text>A taky víte, ono v Čechách, tady díky tomu... komunismu a tomu systému, jaký byl, tak se nastavilo to,
+                že zdraví
+                není osobní zodpovědnost. Což znamená, že <strong>spousta lidí spolehá na to, že až se něco stane, tak o
+                    ně
+                    bude
+                    postaráno</strong>.
+                A víceméně pořád čekají na to, až se něco stane. A nestarájí se o to, aby to ideálně
+                vůbec nenastalo.</text>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1 id="kdy-potebujeme-pomoc">Kdy potřebujeme pomoc?</h1>
+    <ul>
+        <li>1. Paní Magda a její manžel</li>
+        <li>2. Mladý student Petr</li>
+        <li>3. Samoživitelka Jana</li>
+    </ul>
+</section>
+
+<section>
+    <h4 id="pan-magda-a-jej-manel-s-alzheimerovou-chorobou">Paní Magda a její manžel s Alzheimerovou chorobou</h4>
+    <ul>
+        <li>Žena, 68 let</li>
+        <li>Pečuje na denní bázi o manžela</li>
+        <li>Vyčerpání, potřeba pomoci a podpory</li>
+        <li>Nezná existující možnosti</li>
+    </ul>
+</section>
+
+<section>
+    <h4 id="mlad-student-petr-s-duevnm-onemocnnm">Mladý student Petr s duševním onemocněním</h4>
+    <ul>
+        <li>Muž, 22 let</li>
+        <li>Sociální izolace</li>
+        <li>Strach, možná stud</li>
+        <li>Neví, kde začít</li>
+    </ul>
+</section>
+
+<section>
+    <h4 id="samoivitelka-jana-a-pe-o-dt-se-specilnmi-potebami">Samoživitelka Jana a péče o dítě se speciálními potřebami</h4>
+    <ul>
+        <li>Žena, 35 let</li>
+        <li>Dlouhodobá potřeba individuální péče</li>
+        <li>Cítí potřebu podpory a péče, ale neví jak</li>
+        <li>Každodenní vyčerpání jako bariéra</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="2-vzvy-k-vbru">2 výzvy k výběru</h1>
+    <ul>
+        <li>1. <strong>Osobní navigátor</strong> sítí sociálních a zdravotních služeb</li>
+        <li>2. <strong>Asistent prevence</strong> a včasné intervence využivající prvky AI</li>
+    </ul>
+</section>
+
+<!-- <section>
+    <h1 class="r-fit-text">Jak bychom mohli pomocí AI vytvořit chytrého pomocníka pro hledání zdravotních a sociálních
+        služeb?</h1>
+</section> -->
+
+<section>
+    <h1 id="osobn-navigtor-existujc-st-slueb">Osobní navigátor existující sítí služeb</h1>
+    <ul>
+        <li>Nachází služby podle osobních potřeb člověka</li>
+        <li>Doporučuje plán kroků pro řešení složitých situací</li>
+        <li>Funguje na počítači, mobilu i přes hlasové ovládání</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>Jak ho udělat jednoduchým pro všechny věkové skupiny?</li>
+        <li>Jak bezpečně pracovat s osobními údaji?</li>
+        <li>Jak zajistit, aby vždy nabízel aktuální služby?</li>
+    </ul>
+</section>
+
+<!-- <section>
+    <h1 class="r-fit-text">Jak bychom mohli pomocí AI včas odhalit a reagovat na zdravotní a sociální problémy?</h1>
+</section> -->
+
+<section>
+    <h1 id="asistent-vasn-prevence">Asistent včasné prevence</h1>
+    <ul>
+        <li>Pomáhá předpovídat možné zdravotní a sociální potíže</li>
+        <li>Navrhuje včasná řešení
+        </li>
+        <li>Spojuje informace ze zdravotnictví a sociální oblasti</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>Jak zajistit, aby systém nenahrazoval, ale podporoval lidské rozhodování?</li>
+        <li>Jak lidi motivovat lidi k využívání podobného systému? </li>
+        <li>Jak užitečně předat zjištění lékařům a sociálním pracovníkům?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Dává to smysl?</h1>
+</section>
+
+<section>
+    <h1 id="vbr-vzvy">Výběr výzvy</h1>
+    <ul>
+        <li>Rozdělíme se do menších skupin</li>
+        <li>Vyberte si ve skupince jednu ze dvou výzev<ul>
+                <li>Osobní preference</li>
+                <li>Dopad</li>
+                <li>Nápady na možná řešení</li>
+                <li>Inspirace z jiných prostředí, zahraničí, ...</li>
+                <li>"Něco, nad čím se vám bude dobře přemýšlet"</li>
+            </ul>
+        </li>
+        <li>15 minut</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="ke-zven-pi-vbru">Ke zvážení při výběru</h1>
+    <ul>
+        <li>
+            Řešení které výzvy přinese největší dopad pro klienty?
+        </li>
+        <li>
+            Kde byste mohli nejvíce využít své zkušenosti a znalosti?
+        </li>
+        <li>Která výzva vás osobně nejvíce motivuje k hledání řešení?</li>
+
+        <li>Který z problémů lépe využije potenciál nástrojů umělé inteligence?</li>
+    </ul>
+</section>
+
+<!-- <section>
+    <h1 id="jak-bychom-mohli">Jak bychom mohli ... ?</h1>
+    <ul>
+        <li>Při hledání řešení chceme využívat i moderní technologie</li>
+        <li>Můžeme účinně využít rozvoje na poli AI?<ul>
+                <li>Chatboti</li>
+                <li>Virtuální asistenti</li>
+                <li>Diagnostické nástroje</li>
+            </ul>
+        </li>
+        <li>To budeme dnes zjišťovat!</li>
+    </ul>
+</section> -->
+
+<section>
+    <h1 id="jak-me-vzvu-pomoci-eit-ai-nstroj">Jak může výzvu pomoci řešit AI nástroj?</h1>
+    <ul>
+        <li>Individuální brainstorming</li>
+        <li>Jak by mohla vypadat 4 možná řešení vybrané výzvy?</li>
+        <li>Postup:
+            <ul>
+                <li>Každý dostane papír se 4 políčky</li>
+                <li>Budete mít 4x3 minuty na <strong>popis 4 návrhů řešení</strong>
+                    <ul>
+                        <li>Když nebudou 4, nic se neděje</li>
+                    </ul>
+                </li>
+                <li>4 úplně rozdílné návrhy, nebo třeba postupně se rozvíjející</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section data-background="../presentations/img/craz8s.webp" data-background-size="contain"></section>
+<section>
+    <h1 class="r-fit-text">Otázky před začátkem?</h1>
+</section>
+
+<section>
+    <!-- <h4 id="inspirace">Inspirace</h4> -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="post-it pink">
+            <!-- <text> -->
+            Zefektivnění procesů ve službách (chatboty, smlouvy, plány péče atd.), <strong>podpora v domácím
+                prostředí</strong>
+            (asistivní technologie, ...)
+            <!-- </text> -->
+        </div>
+        <div class="post-it yellow">
+            <!-- <text> -->
+            Zjednodušení života koncového uživatele, <strong>zpřehlednění informací</strong>&nbsp;, odstranění bariér v
+            přístupu k
+            sociální i zdravotní službě
+            <!-- </text> -->
+        </div>
+        <div class="post-it blue">
+            <text>
+                Představím si <strong>nástroje designované tak, aby je uživatelé snadno našli a mohli jim snadno
+                    důvěřovat</strong>.<br><br> Utopicky
+                si
+                představuji situaci, kdy <strong>AI maximálně pomáhá tam, kde fyzický kontakt s odborníky není
+                    nutný</strong> a je
+                pro ně zatěžující.
+            </text>
+        </div>
+        <div class="post-it yellow">
+            <!-- <text> -->
+            <strong>Přenesení byrokratické zátěže na robota, pomoc s diagnostikou, lepší a přesnější
+                predikce</strong>
+            nemoci na
+            základě brzkých symptomů, přeložení úředničiny do češtiny, přístupnější a srozumitelnější možnosti
+            dostupné péče
+            <!-- </text> -->
+        </div>
+        <div class="post-it pink">
+            <!-- <text> -->
+            1. jednotlivec - zorientovat se v nabídce služeb v místě a <strong>kde najít pomoc s konkrétním
+                problémem</strong>
+            <!-- <br> -->
+            2. NNO, státní služby - provázanost organizací - zjistit, s jakou službou lze spolupracovat na řešení
+            situace klienta
+            <!-- <br> -->
+            <br>
+            3. všichni - umět vybrat důvěryhodné informace v záplavě webů na jedno téma
+            <!-- </text> -->
+        </div>
+        <div class="post-it green">
+            <!-- <text> -->
+            Pokrytí triviálních administrativních úkonů strojem (zpracování dat, měření, objednávání, alerts
+            atd.), <strong>víc prostoru na lidskou práci lidmi.</strong>
+            <!-- </text> -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1 id="vzjemn-sdlen-ve-skupinkch">Vzájemné sdílení ve skupinkách</h1>
+    <h4 id="a-pak-20-minut-pauza-na-a">A pak 20 minut pauza na 🍇 a ☕</h4>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Pauza do 11:20</h1>
+</section>
+
+<section>
+    <h1 id="druh-st-workshopu">Druhá část workshopu</h1>
+    <ul>
+        <li>Vybrali jsme si výzvu</li>
+        <li>Máme desítky nápadů</li>
+        <li>Jak vypadá svět v roce 2027?</li>
+        <li>Co se musí stát, aby takový byl?</li>
+        <li>Detailní rozpracování</li>
+        <li>Vzájemné sdílení návrhů, zpětná vazba, další kroky</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="zmna-k-lepmu">Změna k lepšímu</h1>
+    <ul>
+        <li>Je rok 2027</li>
+        <li>Výzvě se nám daří čelit</li>
+        <li>Co se změnilo?</li>
+        <li>Jak vypadá úspěch?</li>
+        <li>Chceme si představit <strong>dopad nástrojů, které budeme navrhovat</strong>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="fiktivn-titulka-novin">Fiktivní titulka novin</h1>
+    <ul>
+        <li>Navrhněte fiktivní titulní stránku novin po změně k lepšímu</li>
+        <li>Co má obsahovat?
+            <ul>
+                <li>Titulek</li>
+                <li>Perex - úvodní odstavec</li>
+                <li>Citát účastníka změny</li>
+                <li>Ilustrace?</li>
+                <li>Čísla?</li>
+                <li>...</li>
+            </ul>
+        </li>
+        <li>Vycházejte z nápadů a inspirací z brainstormingu před pauzou</li>
+        <li>15 minut</li>
+    </ul>
+</section>
+<section data-background="../presentations/img/cover-story.jpg"></section>
+
+<section>
+    <h1 id="otzky-ped-tvorbou">Otázky před tvorbou?</h1>
+</section>
+
+<section>
+    <h1 id="inovace-jako-vyplovn-mezer">Inovace jako vyplňování mezer</h1>
+    <ul>
+        <li>Máme popsán vychozí a cílový bod</li>
+        <li>Inovace často spočívá ve vhodném <strong>vyplnění tohoto prostoru</strong>
+        </li>
+        <li>
+            <a href="https://blog.planview.com/what-is-a-gap-analysis/" target="_blank">Gap analysis</a>
+        </li>
+        <li>Jak vypadají kroky, které nás dovedou k cíli?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="nvrh-konkrtnho-nstroje">Návrh konkrétního nástroje</h1>
+    <ul>
+        <li>Jakou formu má vaše řešení?
+            <ul>
+                <li>Aplikace pro klienty služeb?</li>
+                <li>Personalizované školení pro zástupce služeb?</li>
+                <li>Hlasová linka?</li>
+                <li>Chatbot?</li>
+                <li>Kombinace nástrojů?</li>
+                <li>"Něco", co ještě neexistuje?</li>
+                <li>...</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="doporuovan-postup">Doporučovaný postup</h1>
+    <ul>
+        <li>Definujte klíčové funkce nástroje</li>
+        <li>Sepište si kostru/osnovu</li>
+        <li>Jakou má nástroj formu? A jak jej předáte ostatním?</li>
+        <li>Dolaďte detaily
+            <ul>
+                <li>Obsah a data</li>
+                <li>Aktéři</li>
+                <li>Údržba a aktualizace</li>
+                <li>Bezpečnost</li>
+                <li>Odhad rozpočtu?</li>
+                <li>Motivace k využití?</li>
+                <li>Kroky ke změně / rámcový harmonogram aktivit</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>
+        Možné formáty
+    </h1>
+    <ul>
+        <li>Soupis vlastností nástroje
+            <ul>
+                <li>Co "to" umí?</li>
+                <li>Jako [<strong>někdo</strong>] chci [<strong>něco</strong>], aby [<strong>přínos</strong>]</li>
+            </ul>
+        </li>
+        <li>Myšlenkové mapy</li>
+        <li>Drátěné modely / náčrty obrazovek</li>
+        <li>Komix / storyboard / libovolná vizualizace</li>
+        <li>A samozřejmě jejich kombinace</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Zdroje inspirace</h1>
+</section>
+
+<section data-background="../presentations/img/mindmapa.webp" data-background-size="contain"></section>
+
+<section data-background="../presentations/img/storyboard.jpg" data-background-size="contain"></section>
+
+<section data-background="../presentations/img/wireframe-2.webp" data-background-size="contain"></section>
+
+<section data-background="../presentations/img/wireframe.svg" data-background-color="white"
+    data-background-size="contain"></section>
+
+<section>
+    <h4 id="nvrh-ovldn-chytr-domcnosti">Návrh ovládání chytré domácnosti</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YJJNGHjzbCo?si=ry_916iZ5MD8stXm"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- <video
+    data-autoplay
+    src="https://www.youtube.com/embed/YJJNGHjzbCo?si=ry_916iZ5MD8stXm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  ></video> -->
+</section>
+
+<section>
+    <h1 class="r-fit-text">Otázky než začneme?</h1>
+</section>
+
+<section>
+    <h1 id="doporuovan-postup">Doporučovaný postup</h1>
+    <ul>
+        <li>Co "to" umí?</li>
+        <li>Kostra / osnova</li>
+        <li>Forma prezentace
+            <ul>
+                <li>Vlastností, myšlenkové mapy, náčrty obrazovek, storyboardy</li>
+            </ul>
+        </li>
+        <li>Detaily
+            <ul>
+                <li>Obsah a data, aktéři, údržba, bezpečnost, rozpočet, motivace</li>
+            </ul>
+        </li>
+        <li>Otázky k zamyšlení</li>
+        <li>Sdílení ve 12:30</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="k-zamylen">K zamyšlení</h1>
+    <ul>
+        <li>Jaké potřebujeme kompetence?</li>
+        <li>Kdo jsou zapojení aktéři?</li>
+        <li>Jaké jsou možné bariéry?</li>
+        <li>Kdo jsou partneři umožňující změny?</li>
+        <li>Dokážeme odhadnout cenu?</li>
+        <li>Jak motivovat lidi ke změně?</li>
+        <li>Jsme blíž budoucnosti z naší titulní stránky?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="vzjemn-sdlen">Vzájemné sdílení</h1>
+    <ul>
+        <li>Jak vypadá budoucnost s vaším nástrojem?</li>
+        <li>Jak funguje váš nástroj?</li>
+        <li>Jak jste k tomu došli?</li>
+        <li>Jak nástroj pomáhá k lepší budoucnosti?</li>
+        <li>Jaké jsou první kroky?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jak-to-lo">Jak to šlo?</h1>
+    <h1 id="jak-to-nelo">Jak to nešlo?</h1>
+    <h1 id="co-pt-jinak">Co příště jinak?</h1>
+    <h1 id="co-si-odnte">Co si odnášíte?</h1>
+</section>
+
+<section>
+    <h1 id="moc-dky">Moc díky!</h1>
+</section>
+
+<!-- <section>
+    <h1 id="kontext-jinag-a-jmk">Kontext JINAG a JmK</h1>
+</section>
+
+<section>
+    <h1 id="kontext-ai">Kontext AI</h1>
+</section>
+
+<section>
+    <h1 id="spojit-to-cel-dohromady">Spojit to celý dohromady</h1>
+</section> -->
+
+        </div>
+
+        <footer>Presentation at <a href="/jinag-dny-AI" target="_blank">erikvanek.com/jinag-dny-AI</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
+
+    <script>
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
+    </script>
+</body>

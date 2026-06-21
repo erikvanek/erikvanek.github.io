@@ -1,0 +1,362 @@
+/* Reset and variables */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Adjusted colors for more purple prominence */
+    --color-primary: #2B1B44;
+    --color-secondary: #6B4C8F;
+    --color-accent: #FFB562;
+    --color-background: #F5F3F7;
+    --color-text: #1a1a1a;
+    --color-text-light: #ffffff;
+    
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    
+    --spacing-base: 1rem;
+    --max-width: 70rem;
+    --content-width: 45rem;
+}
+
+/* Base styles with purple theme */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-primary);
+    font-size: 1.125rem;
+}
+
+.background-wrapper {
+    background: var(--color-background);
+    min-height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    padding: calc(var(--spacing-base) * 2) 0;
+}
+
+/* Enhanced typography */
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: calc(var(--spacing-base) * 2);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing-base) * 1.5);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+    font-weight: 600;
+    margin-bottom: var(--spacing-base);
+    letter-spacing: -0.01em;
+}
+
+.subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 500;
+    color: var(--color-secondary);
+    /* margin-bottom: calc(var(--spacing-base) * 3); */
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout with narrower content */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-base) * 2);
+}
+
+header {
+    text-align: center;
+    padding: calc(var(--spacing-base) * 4) 0;
+}
+
+.intro {
+    max-width: var(--content-width);
+    margin: 0 auto calc(var(--spacing-base) * 6);
+}
+
+.intro p + p {
+    margin-top: calc(var(--spacing-base) * 1.5);
+}
+
+/* Enhanced teasers */
+.teasers {
+    display: grid;
+    gap: calc(var(--spacing-base) * 2);
+    margin: calc(var(--spacing-base) * 6) auto;
+    max-width: var(--max-width);
+}
+
+@media (min-width: 768px) {
+    .teasers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.teaser {
+    position: relative;
+    padding: calc(var(--spacing-base) * 2);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(43, 27, 68, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.teaser::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.teaser:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(43, 27, 68, 0.15);
+}
+
+.teaser:hover::before {
+    transform: scaleX(1);
+}
+
+/* Enhanced form section */
+.form-section {
+    position: relative;
+    padding: calc(var(--spacing-base) * 3);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(43, 27, 68, 0.1);
+    overflow: hidden;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--gradient-primary);
+    opacity: 0.05;
+    transform: rotate(-12deg);
+    z-index: 0;
+}
+
+.email-form {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    margin-top: calc(var(--spacing-base) * 2);
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 1em 1.5em;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: var(--color-background);
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background: white;
+    box-shadow: 0 4px 12px rgba(43, 27, 68, 0.1);
+}
+
+button {
+    padding: 1em 2em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: white;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(43, 27, 68, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(43, 27, 68, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .email-form {
+        flex-direction: column;
+    }
+    
+    .background-wrapper {
+        clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.intro, .teaser, .form-section {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.teaser:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.teaser:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Previous CSS remains the same until the layout section */
+
+/* Layout with report preview */
+.main-content {
+    display: grid;
+    gap: calc(var(--spacing-base) * 4);
+    margin-bottom: calc(var(--spacing-base) * 4);
+}
+
+@media (min-width: 968px) {
+    .main-content {
+        grid-template-columns: 350px 1fr;
+        align-items: start;
+    }
+}
+
+.report-preview {
+    position: sticky;
+    top: calc(var(--spacing-base) * 2);
+    transition: transform 0.3s ease;
+}
+
+.report-preview:hover {
+    transform: translateY(-5px);
+}
+
+.report-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(43, 27, 68, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 0;
+    padding: calc(var(--spacing-base) * 4) 0;
+}
+
+.intro {
+    max-width: var(--content-width);
+}
+
+.intro p + p {
+    margin-top: calc(var(--spacing-base) * 1.5);
+}
+
+/* Enhanced input styling */
+input[type="email"] {
+    flex: 1;
+    padding: 1em 1.5em;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(43, 27, 68, 0.1);
+}
+
+input[type="email"]:hover {
+    box-shadow: 0 4px 12px rgba(43, 27, 68, 0.15);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(43, 27, 68, 0.2);
+}
+
+/* Teasers grid hover effect */
+.teasers {
+    display: grid;
+    gap: calc(var(--spacing-base) * 2);
+    margin: 0 auto calc(var(--spacing-base) * 4);
+    max-width: var(--max-width);
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .teasers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .teasers:hover {
+        transform: translateY(-5px);
+    }
+
+    .teasers:hover .teaser {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+
+    .teasers .teaser:hover {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+#status-message {
+    margin-top: 16px;
+    text-align: center;
+    color: #666;
+}
+
+
+.success {
+    color: #4caf50;
+}
+
+.error {
+    color: #f44336;
+}

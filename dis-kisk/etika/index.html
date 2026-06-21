@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Etika v designu: rozvaha nad Jarmilkou</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="etika-v-designu-rozvaha-nad-jarmilkou">Etika v designu: rozvaha nad Jarmilkou</h1>
+                    
+                        <p class="subtitle">Co se stane, když se nástroj, který radí lidem v nouzi, splete?</p>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">20. 1. 2026</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">5. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <p>Pro kurz o etice v designu jsem si vzal vlastní projekt - <a href="/jarmilka.html">Jarmilku</a> - a prohnal ho etickou rozvahou. Důvod byl prostý: Jarmilka je návrh digitálního průvodce sociálně-zdravotním pomezím v Jihomoravském kraji, tedy nástroj, který lidem radí, co dělat v náročných životních situacích. Když se takový nástroj splete, nezpůsobí to rozbitý košík v e-shopu, ale reálnou újmu. A protože stojí na jazykových modelech, které mají tendenci si občas halucinovat, je etická rozvaha něco, co musí přijít ještě před návrhem - ne až po něm.</p>
+<h2 id="pro-zrovna-jarmilka">Proč zrovna Jarmilka</h2>
+<p>Jarmilka vznikla z původního zadání agentury JINAG - <em>„jak obyvatelům Jihomoravského kraje přinést lepší povědomí o existujících sociálních a zdravotních službách?&quot;</em> Z očekávaného „rozcestníku, který obsahuje všechno&quot; se projekt v průběhu přerodil do čtyř iniciativ; jednou z nich je právě Jarmilka, osobní průvodkyně sociálně-zdravotní sítí. Moje role v ní byla „od čumáčku po ocásek&quot; - navrhl a vyhodnotil jsem uživatelský výzkum, odfacilitoval ideační workshopy (jeden klíčový proběhl v rámci Brno AI Days), postavil finální prototyp ve Figmě a otestoval jeho použitelnost.</p>
+<h2 id="jak-jsem-to-uchopil">Jak jsem to uchopil</h2>
+<p>Přiznám se, že do tématu jsem šel s dost vágním povědomím a útržkovitými představami - žádný ucelený rámec. Vyšel jsem z materiálů v kurzu a navázal vlastní rešerší. Hledal jsem strukturovaný způsob, jak propojit <strong>záměr, návrh a dopad</strong> dohromady, a hlavně techniky, které si odnesu do praxe.</p>
+<p>Nejvíc mě chytil portál <a href="https://www.ethicsfordesigners.com/normative-design-scheme" target="_blank">Ethics for Designers</a> a jeho technika <strong>Normative design scheme</strong> - podobně jako consequence scanning mapuje vztah mezi tím, co nástrojem zamýšlím, jak ho navrhuju a jaký dopad reálně přináší.</p>
+<figure>
+  <img src="/dis-kisk/img/normative-scheme.png" alt="Vyplněný canvas Normative design scheme pro Jarmilku - záměr, návrh, dopad" />
+  <figcaption>Můj vyplněný canvas: tři roviny - záměr, návrh, dopad</figcaption>
+</figure>
+<p>Canvas jsem vyplňoval sám a postupně se nořil do tří rovin - záměr, návrh, dopad. A hned přišla první nečekaná práce: vymezit a správně oddělit, co je ještě záměr a co už návrh nebo dopad, mi zabralo víc času, než jsem čekal. Druhá věc - během vyplňování mi technika začala přijít spíš střižená na komerční digitální produkty. U mise, jakou má Jarmilka, se mi těžko hledaly dostatečně „ambivalentní&quot; polohy, kde by se dalo eticky přít.</p>
+<h2 id="co-mi-to-pineslo">Co mi to přineslo</h2>
+<p>Paradoxně pro mě nebyla největší hodnota v aplikaci na samotný projekt, ale v tom, že jsem se konečně uceleně zabýval etikou jako tématem a prošel si k ní pořádnou sadu materiálů. Nejdůležitější výstup je pro mě sada <strong>provokativních otázek</strong>, které jsem si cestou zaznamenával - k těm se budu vracet a rád bych si z nich časem upletl vlastní rámec, něco ve stylu toho canvasu.</p>
+<p>Otevřel se mi taky pohled z článku <a href="https://alistapart.com/article/redefine-success-first/" target="_blank">Designers, (Re)define success first</a>: dělat z etiky strategickou iniciativu a „zapéct&quot; ji do designerské každodennosti, místo abych ji řešil až na konci.</p>
+<p>Z technik si odnáším dvě konkrétní věci:</p>
+<ul>
+<li><strong><a href="https://doteveryone.org.uk/project/consequence-scanning/" target="_blank">Consequence scanning</a></strong> - chci ji rovnou vyzkoušet v jednom sociálně-inovativním projektu. Cením, že je zarámovaná jako aktivita, která zapadá do běžného agilního cyklu - to dost zvyšuje šanci, že ji protlačím i do byznysového prostředí.</li>
+<li><strong><a href="https://www.ideo.com/journal/the-little-book-of-design-research-ethics" target="_blank">The little book of design research ethics</a></strong> - drobné, ale cenné podněty: respekt k času participantstva, konsent jako průběžná (ne jednorázová) aktivita a follow-up na konci výzkumu jako ocenění jejich příspěvku.</li>
+</ul>
+<h2 id="co-s-tm-dl">Co s tím dál</h2>
+<p>Profesně jsem teď rozkročený mezi hledáním smysluplných aplikací ML/AI nástrojů a sociálními inovacemi - a v obou je obří prostor pro hlubší etické rozvahy (Jarmilka je ostatně dobrá ilustrace toho rozkročení). Etika by - podobně jako inkluzivní design - neměla být „after-thought&quot;, ale nedílná součást procesu. Aby to šlo, musí být svázaná s misí organizace nebo projektu.</p>
+<p>Takže do dalších projektů, hlavně na jejich začátku, jdu s tím, že se zamýšleným i nezamýšleným dopadem budu zabývat důrazněji. A z mých zjištění bych si rád postavil i něco jako vlastní <em>code of conduct</em> pro případné zájemce o mé služby.</p>
+<h2 id="pouit-zdroje">Použité zdroje</h2>
+<ul>
+<li><a href="https://vanschneider.medium.com/can-good-design-be-bad-design-f76504b8e018" target="_blank">Can good design be bad design?</a></li>
+<li><a href="https://doteveryone.org.uk/project/consequence-scanning/" target="_blank">Consequence scanning</a></li>
+<li><a href="https://www.ethicsfordesigners.com/normative-design-scheme" target="_blank">Normative design scheme</a></li>
+<li><a href="https://www.ideo.com/journal/the-little-book-of-design-research-ethics" target="_blank">The little book of design research ethics</a></li>
+<li><a href="https://alistapart.com/article/redefine-success-first/" target="_blank">(Re)define success first</a></li>
+<li><a href="https://alistapart.com/article/daily-ethical-design/" target="_blank">Daily ethical design</a></li>
+<li><a href="https://alistapart.com/article/design-white-lies-ethics/" target="_blank">Design's white lies</a></li>
+</ul>
+<p><a href="https://docs.google.com/presentation/d/1NrFcR45plOErZkwjjLW2_z4YU31s1eb6kXIPL_ZF4Vk/edit?usp=sharing" target="_blank">Původní prezentace ke stažení</a></p>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

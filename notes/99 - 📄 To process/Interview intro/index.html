@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="interview-intro">Interview intro</h1>
+
+    <p>Dobrý den,<br>
+jmenuji se Erik Vaněk a dnes jsem tu s vámi protože [ placeholder ].</p>
+<p>Našim hlavním cílem je dobře porozumět tomu, co vaše práce obnáší, jakým výzvám čelíte zejména ve vztahu k [ zaměření výzkumu ].</p>
+<p>Budu rád když k nám budete maximálně upřímný. V tomto formátu není žádná odpověď špatná, to spíše otázky, které budeme klást :)</p>
+<p>Může se stát, že budu pokládat náročné otázky. Nebojte se si na odpověď vzít dostatek času k promyšlení, odpověď odmítnout či odpovědět nevím.</p>
+<p>Také se vás možná budu často ptát na konkrétní příklady a zkušenosti z minulosti, protože mě zajímá, co reálně děláte, ne teoretické plány do budoucna.</p>
+<p>Máte nějaké otázky před tím než oficiálně začneme?</p>
+<p>Můžeme si dnešní setkání nahrát? Jde nám o to, abychom se mohli k informacím ještě vrátit při následné analýze. Žádné osobní nebo tajné informace o vaší organizaci nebudeme sdílet externě. Zároveň bychom ale data anonymně rádi využili pro tvorbu závěrečné analýzy, kterou s vámi pak rádi nasdílíme. Může to sloužit jako zajímavá sonda do problematiky [ zaměření výzkumu ] a třeba v ní následně můžete najít inspiraci pro vaše pracovní prostředí.</p>
+<h2 id="efektivn-techniky-z-knihy-a-href-classpending-linkthe-mom-testa">Efektivní techniky z knihy <a href="#" class="pending-link">The Mom Test</a></h2>
+<ul>
+<li>&quot;Popište mi, kdy naposledy jste se setkal s tímto problémem&quot; - tato otázka vede k faktickým odpovědím místo obecných prohlášení</li>
+<li>Zaměřte se na fakta o životě zákazníka a jeho pohledu na svět, ne na jeho názory na váš nápad</li>
+<li>Nepředstavujte svůj nápad příliš brzy - nechte respondenta nejprve sdílet své problémy</li>
+<li>Hledejte hluboké emoce - když někdo řekne &quot;Tohle je nejhorší část mé práce a vy mi s tím můžete pomoci&quot; jste na správné stopě</li>
+<li>Struktura rozhovoru: Vize → Zarámování → Slabé stránky → Uznání → Pomoc</li>
+<li>Cílem je dozvědět se, co lidé skutečně dělají, ne co říkají, že by mohli dělat</li>
+</ul>
+<h2 id="connection-point">Connection point</h2>
+<ul>
+<li>connective tissue between research and interview content</li>
+<li>e.g. a CEO with a proven track of results and my goal is to talk about product vision
+<ul>
+<li><em>&quot;So I know you have a proven track of building inspiring and successful products. What helped you in those cases achieve such astounding results?</em></li>
+</ul>
+</li>
+</ul>
+
+
+    
+</body>
+
+</html>

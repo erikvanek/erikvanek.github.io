@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1 id="second-brain-system-implementation">Second Brain System Implementation</h1>
+
+    <h1 id="second-brain-system-implementation">Second Brain System Implementation</h1>
+<p>This README documents the integration of a comprehensive second-brain system into your Obsidian vault.</p>
+<h2 id="what-has-been-done">What Has Been Done</h2>
+<ol>
+<li>
+<p><strong>Folder Structure Creation</strong></p>
+<ul>
+<li>Created the main organizational folders:
+<ul>
+<li>00-Inbox (for raw captures)</li>
+<li>01-Processing (for in-progress notes)</li>
+<li>02-RAW (for preserving original notes)</li>
+<li>03-Knowledge (for processed, organized content)</li>
+<li>06-System (for system documentation)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Domain Organization</strong></p>
+<ul>
+<li>Established knowledge domains:
+<ul>
+<li>Product Management</li>
+<li>Research</li>
+<li>Design</li>
+<li>Productivity</li>
+<li>Learning</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Note Processing</strong></p>
+<ul>
+<li>Processed several top-level notes into the structured system:
+<ul>
+<li>Product Discovery</li>
+<li>Qualitative Research</li>
+<li>Productivity</li>
+<li>Eisenhower Matrix</li>
+<li>Design Crit</li>
+<li>Learning</li>
+<li>Second Brain</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Knowledge Maps Creation</strong></p>
+<ul>
+<li>Created Maps of Content (MOCs) for domains:
+<ul>
+<li>ProductManagement-MOC</li>
+<li>Research-MOC</li>
+<li>Design-MOC</li>
+<li>Productivity-MOC</li>
+<li>Learning-MOC</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>System Documentation</strong></p>
+<ul>
+<li>Created a system guide: <a href="#" class="pending-link">06-System/second-brain-guide</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="how-to-use-this-system">How to Use This System</h2>
+<ol>
+<li><strong>Capture new information</strong> in the 00-Inbox folder</li>
+<li><strong>Process notes</strong> following the workflow in the system guide</li>
+<li><strong>Access knowledge</strong> through the domain MOCs or by searching/filtering</li>
+<li><strong>Maintain the system</strong> with regular reviews and reorganization</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li>Process remaining top-level notes</li>
+<li>Set up templates in the 05-Templates folder</li>
+<li>Establish regular processing and maintenance routines</li>
+<li>Use this README as a reference point for system evolution</li>
+</ol>
+<p>The detailed system guide can be found at <a href="#" class="pending-link">06-System/second-brain-guide</a>.</p>
+<p>The original requirements and vision for this system are preserved in <a href="#" class="pending-link">06-System/Second-brain-master-prompt</a>.</p>
+
+
+    
+</body>
+
+</html>

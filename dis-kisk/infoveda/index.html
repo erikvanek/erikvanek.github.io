@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Informační věda</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="informan-vda">Informační věda</h1>
+                    
+                        <p class="subtitle">aneb nerdění o LLM a algoritmizaci kvasících procesů</p>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">18. 1. 2024</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">1. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <p>Nejvíc teorie a nerdství jsem si užil v díky Josefu Šlerkovi v Informační vědě. Hodně jsme řešili téma LLM a teoretických základů na kterých podobné technologie stojí. Podobné nástroje jsem doposud vnímal dost na intuitivní bázi a dost na základě doměnek a ne nutně hlubšího vhledu. Přednášky a diskuze mi pomohly se nad vnitřní architekturou a následných možnostech (a omezeních) využití zamyslet a podívat se na problematiku trochu víc do hloubky.</p>
+<p>Zároveň pro mě bylo dost zajímavé vnímat a nasávat informace od někoho, kdo je v tématu očividně dost ponořenej a hodně na tepu doby. Nastavilo to zajímavé zrcadlo mému doposud spíš uměřenému postoji k využívání podobných nástrojů.</p>
+<p>Zajímavá facka pro mě taky nastala ve chvíli, kdy jsme s Matějem Káninským promýšleli způsoby ukončení předmětu, který spolu budeme v příštím semestru vést. Poměrně radikálně mi vzal z vítr plachet statement, že psát eseje je dneska vlastně dost neefektivní protože to prostě už LLM vyčaruje za pár vteřin. Dost zásadně se tím potom proměňuje přemýšlení nad tím, jak vlastně hodnotit výstupy práce. Zároveň mi někde vzadu v hlavě bliká kontrolka v chlívečku &quot;digital divide&quot; a dokážu si představit, že ten, kdo už teď má náskok a prostředky na tom bude násobně líp než ten, kdo má tu startovní čáru míň výhodnou. V kontextu jednoho z mých pracovních projektů – digitální transformace <a href="https://iqrs.cz/" target="_blank">IQRS</a> – to působí poměrně zlověstně.</p>
+<p>Zakončím to pozitivně. Nebylo lepšího startu do předmětu než se na konci první přednášky bavit o rozdílech mezi recepty na vaření či kvašení oproti algoritmům. Trošku smutný je, že k podobné metafoře či analogii jsem se za 4 roky studia na informatice předtím nedostal. Tady stačila jedna přednáška. Zábava a dík! 🙌</p>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

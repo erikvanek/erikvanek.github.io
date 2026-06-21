@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Tři roky studia DIS KISK</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="ti-roky-studia-dis-kisk">Tři roky studia DIS KISK</h1>
+                    
+                        <p class="subtitle">Výběr z hroznů z mé cesty studiem. 2023–2026.</p>
+                    
+                    
+                    
+                </header>
+            
+
+            <article>
+                <figure class="float-figure float-right">
+  <img src="/dis-kisk/cesta/img/vi-ux-monday.jpg" alt="Erik na pódiu UX Monday v Praze, květen 2026" />
+  <figcaption><em>UX Monday, Praha, květen 2026.</em></figcaption>
+</figure>
+<p class="story-lead">Květen 2026. <a href="/dis-kisk/cile-VI/#ux-monday">UX Monday</a> v Praze - největší designérský meetup v zemi. Dostal jsem 45 minut na to, abych mluvil o tom, jak pracuju. Velkou část přednášky jsem chystal metodou, které dnes říkám "braindump method" – procházel jsem se po městě a nahrával dlouhou hlasovou zprávu o tom, co chci vlastně předat.</p>
+<p class="story-lead">Tahle situace hezky ilustruje cestu, kterou jsem za poslední tři roky ušel. A vybrané kroky v tomto portfoliu ukazují hlavníky na mé cestě při studiu DIS KISK MUNI.</p>
+<h1 id="jak-jsem-do-studia-vstupoval">Jak jsem do studia vstupoval?</h1>
+<figure class="float-figure float-left">
+  <img src="/dis-kisk/cesta/img/i-me-melon.jpeg" alt="Erik v roce 2023" />
+  <figcaption><em>Erik 2023 - neohrabaný praktik.</em></figcaption>
+</figure>
+<p>Za mnou skoro deset let v softwaru a čerstvý vyhazov z Infarmu - konec jedné kapitoly. Do <a href="/dis-kisk/erik-2023/">DISu</a> jsem vcházel spíš jako inženýr než designér. Praxe jsem měl dost, ale dělal jsem ji po citu: <em>&quot;mačkal jsem tlačítka&quot;</em> a koukal, co zabere. Inženýrský základ, vyhraněné názory, díry v metodologii. Možnost jít podruhé studovat na KISK pro mě byla vítaná opora v kariérní transformaci, na kterou jsem se po konci v Infarmu vydal. Mým cílem bylo se po letech pokukování tímto směrem stát designerem <em>naplno</em>.</p>
+<h1 id="krek-prvn-adam-a-jeho-ast-na-hackatonu">Krůček první: Adam a jeho účast na hackatonu</h1>
+<figure class="float-figure float-right">
+  <img src="/dis-kisk/cesta/img/i-hackathon-adam.jpg" alt="Testování s Adamem na hackathonu, první semestr" />
+  <figcaption><em>Usability testování na hackathonu, 1. semestr.</em></figcaption>
+</figure>
+<p>První semestr, závěrečný <a href="/dis-kisk/hackaton-I/">hackathon</a>. Na usability testování jsem si přizval kamaráda Adama - učitele, který do té doby s designem neměl nic společného. Pomáhal nám otestovat nástroj, který by mohl sloužit jako interní kompetenční audit pro základní školy pro mapování možností jejich dalšího rozvoje.</p>
+<p>O pár měsíců později se Adam rozhodl kandidovat na ředitele základní školy. A vyhrál. A zpětně mi přiznal, že právě účast na našem hackatonu pro něj byl ten poslední impuls pro to, aby se do výběrového řízení přihlásil.</p>
+<p>Tohle pro mě byla první ochutnávka toho, co na designu zbožňuju dodnes – malá intervence, kterou někomu otevřete dveře - a ty dveře pak zůstávají otevřené dávno po tom, co projekt skončí. A Adam dnes úspěšně končí druhý rok v pozici ředitele a ze školy ze špatnou pověstí se stává škola, na kterou se mu daří získávat učitele ze škol, které by se daly označit jako &quot;výběrové&quot;.</p>
+<h1 id="krek-druh-flda-a-audit-pvtivosti">Krůček druhý: Fléda a audit přívětivosti</h1>
+<figure class="float-figure float-left">
+  <img src="/dis-kisk/cesta/img/iii-fleda.png" alt="Fléda - brněnský hudební klub" />
+  <figcaption><em>„na Flédě mám ráda její atmosféru a duši…“ - z dotazníku.</em></figcaption>
+</figure>
+<p>O rok později jsem se rozhodl si ve spolupráci na projektu oslovit <a href="/dis-kisk/fleda-audit/">Flédu</a> - brněnský klub, kam sám chodím a v něčem poměrně jeden ze zásadních kulturních provozů ve městě. S CEO Flédy jsme se párkrát potkali na obědě se známými, ale osobně jsme se téměř neznali. Neměl jsem na něj žádný kontakt a tak jsem tzv <em>nastudeno</em> odhadl formát firemního e-mailu a napsal mu e-mail. Druhý den jsme už spolu seděli a já mu vysvětloval co bych pro něj mohl udělat a mu se ta vidina líbila.</p>
+<p>Udělali jsme audit přívětivosti celého provozu: rozhovory s interními lidmi, dotazník se stovkami odpovědí, doporučení dalšího rozvoje. A když dneska na Flédu přijdete, některé z těch věcí tam postupně reálně přibývají což mi dělá velkou radost.</p>
+<p>Souběžně jsem na zakázce pro veřejnou správu vedl <a href="/dis-kisk/aby-to-mamka-nechtela-vypnout/">usability studii digitální průvodkyně Jarmilky</a> - z té se později stala moje bakalářka. Tady ji jen ukazuju; celá je k přečtení jinde.</p>
+<h1 id="krek-tet-od-vzkumu-k-veejnmu-vystupovn">Krůček třetí: od výzkumu k veřejnému vystupování</h1>
+<figure class="float-figure float-right">
+  <img src="/dis-kisk/cesta/img/iv-tajemnicky.jpg" alt="Ideační workshop s tajemníky ministerstev, 2025" />
+  <figcaption><em>Workshop s tajemnictvem více než poloviny ministerstev, 5. 5. 2025.</em></figcaption>
+</figure>
+<p>Tenhle krůček je ve skutečnosti obrovský skok a začíná už ve druhém semestru. S našim výzkumným Drýmtýmem jsme tehdy <a href="/dis-kisk/ostrovy-pozitivni-inovace/">zkoumali, jak fungují inovativní týmy ve státní správě</a> - mluvili jsme s lidmi, kteří pomáhají systematicky inovovat veřejné služby téhle země, a vydali z toho digitální studii.</p>
+<p>Ten výzkum nezůstal ležet v šuplíku. Jak už to tak někdy bývá – souhrou okolností se dostal na stůl nejvyššího státního tajemníka – člověka, který vede českou veřejnou správu. Na základě schůzky, kterou jsme si s ním sjednali, jsme v roce 2025 dostali do jedné místnosti <a href="/dis-kisk/praxe-IV/">tajemníky a tajemnice více než poloviny českých ministerstev</a> - ideační workshop a prostor pro to podnítit přemýšlení nad inovacemi s lidmi, kteří mají reálnou šanci je ve veřejných službách zavádět.</p>
+<figure class="float-figure float-left">
+  <img src="/dis-kisk/cesta/img/sds.webp" alt="Medaile Ministerstva vnitra - Úřednický čin roku 2024" />
+  <figcaption><em>Sousedské dětské skupiny - medaile Ministerstva vnitra.</em></figcaption>
+</figure>
+<p>Mezitím projekt <a href="/dis-kisk/sousedske-detske-skupiny/">Sousedské dětské skupiny</a>, na kterém jsem pracoval, získal medaili Ministerstva vnitra za úřednický čin roku. Na Zlín Design Weeku jsem o designu ve veřejné správě <a href="/dis-kisk/ucast-na-konferencich/">mluvil v podcastu Design KANTÝNA</a> - poprvé veřejně před odborným publikem.</p>
+<p>A celý tento krůček, spíš krok, vyústil v to, že jsem začal design i <a href="/dis-kisk/vyuka/">vyučovat</a>. Učit jsem se učil taky po krůčcích: nejdřív jako tutor po boku Matěje Káninského, pak sólo - Service design workshop pro studenty KISKu - a nakonec to nejtěžší: <a href="/dis-kisk/praxe-V/">KISKED19</a>, kurz designového myšlení pro úředníky a úřednice, přímo pro lidi v terénu.</p>
+<h1 id="posledn-mle">Poslední míle</h1>
+<figure class="float-figure float-right">
+  <img src="/dis-kisk/cesta/img/vi-jarmilka-bp.png" alt="Digitální prototyp průvodkyně Jarmilky" />
+  <figcaption><em>Jarmilka - jeden z návrhů projektu mé bakalářské práce</em></figcaption>
+</figure>
+<p>Šestý semestr už žádné nové zásadní novinky v mé studujní cestě nepřidal. Jen se všechno hezky složilo dohromady.</p>
+<p>Postavil jsem si <a href="/dis-kisk/cile-VI/">agentní workflow</a>, kterým teď řídím celý svůj design proces – druhý mozek v Obsidianu, MCP servery, Claude Code, markdown jako lingua franca. Část mojí pracovní doby se přesunula z židle ven do formátu procházek během nichž si diktuju věci a pak je zpětně u počítače zpracovávám pomocí tzv. - <a href="/dis-kisk/ux-monday-braindump/">braindump metody</a>: jdu, mluvím do telefonu, vrátím se k utříděnému materiálu.</p>
+<p>Žádné kouzlo to není - garbage in, garbage out platí čím dál víc; hlídat výstup je práce, která nezmizí. S tímhle workflow jsem si připravil přednášku na UX Monday nebo i toto portfolio.</p>
+<h1 id="studijn-cesta-krek-po-krku">Studijní cesta krůček po krůčku</h1>
+<p>V roce 2023 jsem do studia vcházel spíš jako inženýr než designér - praxe po citu, vyhraněné názory, díry v metodologii. Postupná cesta, kterou jsem si prošel, mi pomáhala zvyšovat profesní sebevědomí. Kdyby mi někdo před třemi lety řekl, že v průběhu svého studia dokážu být součástí týmu, který dokáže dát do jedné místnosti vedení půlky českých ministerstev a připraví pro ně výborný workshop zaměřený inovace, tak bych tomu rozhodně nevěřil. Ale stalo se a jsem za to nesmírně vděčný.</p>
+<p>Tady je ještě trošku strukturovanější přehled mojí studijní cesty – šest semestrů, šest konrétních posunů na své studijní cestě, která koncem studia rozhodně nekončí.</p>
+<section class="parts-summary">
+  <h2 id="co-vechno-v-portfoliu-najdete">Co všechno v portfoliu najdete</h2>
+  <p>Studium má svou povinnou strukturu: za každý semestr studijní cíle a jejich reflexi, plus reflexi praxe. Tady je přehled - každá položka vede na příslušnou stránku.</p>
+  <ol class="parts-list">
+    <li><span class="ps-sem">1. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-I/">Reflexe cílů</a> · <a href="/dis-kisk/hackaton-I/">Praxe: hackathon</a></span></li>
+    <li><span class="ps-sem">2. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-II/">Reflexe cílů</a> · <a href="/dis-kisk/ostrovy-pozitivni-inovace/">Praxe: studie inovativních týmů</a></span></li>
+    <li><span class="ps-sem">3. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-III/">Reflexe cílů</a> · <a href="/dis-kisk/praxe-III/">Praxe: ideační workshopy</a></span></li>
+    <li><span class="ps-sem">4. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-IV/">Reflexe cílů</a> · <a href="/dis-kisk/praxe-IV/">Praxe: workshop s tajemnictvem</a></span></li>
+    <li><span class="ps-sem">5. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-V/">Reflexe cílů</a> · <a href="/dis-kisk/praxe-V/">Praxe: kurz KISKED19</a></span></li>
+    <li><span class="ps-sem">6. semestr</span> <span class="ps-slot"><a href="/dis-kisk/cile-VI/">Reflexe cílů</a> · <span class="ps-thesis"><a href="/dis-kisk/thesis/">Bakalářská práce</a></span> <span class="ps-note">- závěrečný projekt (Jarmilka)</span></span></li>
+  </ol>
+</section>
+<h1 id="dky-za-lidi-co-jsem-poznal">Díky za lidi co jsem poznal!</h1>
+<p>Nejcennější, co si ze tří let odnáším, nejsou metody - jsou to lidi, které jsem potkal. V rámci studia hlavně náš Drýmtým ve složení Franta, Johanka a Veru. Jsem strašně vděčnej za to, jak jsme se zkamarádili s Baru. Díky za příležitosti Laďce a spolupráci na předmětu s Matějem. Za inspiraci od Romana a Romana a mentoring od Jitky. A spoustu dalších, které jsem potkal ať už v rámci studia, nebo aktivit na něj navazující. Dík! ❤️</p>
+<nav class="journey-cta">
+  <p>Tohle byl příběh. Teď ta samá cesta po krůčcích - článek po článku:</p>
+  <a href="/dis-kisk/hackaton-I/" class="journey-start">Projít cestu od začátku →</a>
+</nav>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

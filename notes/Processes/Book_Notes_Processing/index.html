@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/Processes">
+                ⬅️ Back to Processes
+            </a>
+        </div>
+    
+
+    <h1 id="book_notes_processing">Book_Notes_Processing</h1>
+
+    <h1 id="content-processing-guide">Content Processing Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>This document outlines the process for processing various types of content (books, articles, podcasts, videos, course notes) and integrating them into the knowledge base.</p>
+<h2 id="process-steps">Process Steps</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Upload PDF or image files of book notes to a conversation with Claude</li>
+<li>Specify that these are book notes that need processing</li>
+<li>Indicate whether there is handwritten text to be ignored</li>
+</ul>
+<h3 id="2-note-cleanup-and-structuring">2. Note Cleanup and Structuring</h3>
+<ul>
+<li>Correct any OCR-related typos or imperfections</li>
+<li>Ignore handwritten text</li>
+<li>Organize content into logical sections with headers</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-book-note-creation">3. Book Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each book in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Books/</code></li>
+<li>Use a clear naming convention: <code>Book_Title.md</code></li>
+<li>Structure each book note with:
+<ul>
+<li>YAML frontmatter for metadata and resources:<pre><code class="language-yaml">---
+title: &quot;Book Title&quot;
+author: &quot;Author Name&quot;
+published: YYYY
+tags:
+  - tag1
+  - tag2
+  - tag3
+resources:
+  # Pouze zdroje zmíněné v textu poznámky
+  - odkaz_z_obsahu_1
+  - odkaz_z_obsahu_2
+---
+</code></pre>
+</li>
+<li>Core concept sections (H2)</li>
+<li>Key points as bullet points</li>
+<li>Any diagrams or frameworks explained</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration-and-note-reorganization">4. Thematic Integration and Note Reorganization</h3>
+<ul>
+<li>Identify the most important insights and concepts from the book</li>
+<li>Search existing notes in the knowledge base for related topics</li>
+<li>Carefully enrich these existing notes with new insights from the book</li>
+<li>When adding to existing notes, consider overall reorganization for improved readability:
+<ul>
+<li>Evaluate whether the existing structure still makes sense after additions</li>
+<li>Group related concepts together under logical headings</li>
+<li>Consider creating a summary section at the beginning for long notes</li>
+<li>Ensure the note flows well from general concepts to specific details</li>
+</ul>
+</li>
+<li>Use Obsidian's <code><a href="#" class="pending-link">reference</a></code> links to properly connect resources:
+<ul>
+<li>Format as <code><a href="#" class="pending-link">Book Title</a></code> for clean display</li>
+<li>This creates a proper graph view that shows relationships between notes</li>
+<li>Look for opportunities to add links to other relevant notes in your knowledge base</li>
+</ul>
+</li>
+<li>Clearly attribute the source by adding &quot;(from <a href="#" class="pending-link">Book Title</a>)&quot; where appropriate</li>
+<li>Organize the new information under appropriate headers or create new sections if needed</li>
+<li>Focus on enhancing existing notes rather than creating new thematic notes when possible</li>
+<li>Only create new thematic notes for significant concepts that don't fit into any existing notes</li>
+</ul>
+<h3 id="5-note-reconciliation">5. Note Reconciliation</h3>
+<ul>
+<li>After adding new content to existing notes, perform a reconciliation step:
+<ul>
+<li>Review the entire note for consistency and flow</li>
+<li>Check for redundancies or contradictions between old and new information</li>
+<li>Consolidate similar points and concepts</li>
+<li>Ensure headings and subheadings reflect the updated content</li>
+<li>Rewrite transitions between sections if necessary</li>
+<li>Consider whether the note might benefit from being split if it has become too large</li>
+</ul>
+</li>
+<li>This reconciliation step is essential for maintaining a useful second brain that remains accessible and coherent over time</li>
+</ul>
+<h3 id="6-tagging-strategy">6. Tagging Strategy</h3>
+<ul>
+<li>Use 3 tags per book for high-level categorization</li>
+<li>Consider using tags for:
+<ul>
+<li>Subject area (e.g., #ProductStrategy, #CustomerResearch)</li>
+<li>Methodology type (e.g., #OutcomesDriven, #UserInterviews)</li>
+<li>Application context (e.g., #BusinessResults, #ProductDevelopment)</li>
+</ul>
+</li>
+</ul>
+<h2 id="example">Example</h2>
+<ul>
+<li>Book: &quot;The Mom Test&quot; → Tags: #CustomerResearch #UserInterviews #ProductDevelopment</li>
+<li>Book: &quot;Outcomes over Output&quot; → Tags: #OutcomesDriven #ProductStrategy #BusinessResults</li>
+</ul>
+<h2 id="templates">Templates</h2>
+<h3 id="book-note-template">Book Note Template</h3>
+<pre><code class="language-markdown">---
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+# [Book Title]
+
+## Core Principles
+- [Key principle 1]
+- [Key principle 2]
+
+## [Topic Section]
+- [Point 1]
+- [Point 2]
+
+## [Another Topic Section]
+- [Point 1]
+- [Point 2]
+</code></pre>
+<h3 id="thematic-note-template">Thematic Note Template</h3>
+<pre><code class="language-markdown">---
+tags:
+  - theme
+  - relevantTag1
+  - relevantTag2
+---
+# [Theme]
+
+## Key Principles (from <a href="#" class="pending-link">Book Title</a>)
+- [Principle 1]
+- [Principle 2]
+
+## [Aspect of Theme]
+- [Point from Book A]
+- [Related point from Book B]
+
+## [Another Aspect]
+- [Point from Book C]
+- [Synthesis of ideas from multiple sources]
+</code></pre>
+<hr>
+<p>Next time you can simply say &quot;process last two books&quot; and this process will be followed automatically.</p>
+<h2 id="lecturepresentation-notes-processing">Lecture/Presentation Notes Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share lecture or presentation notes via text or images</li>
+<li>Specify that these are lecture notes that need processing</li>
+<li>Include the title, presenter, and context if available</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Correct the language so it's structured better for future reference</li>
+<li>Organize content into logical sections with clear headings</li>
+<li>Format bulleted lists for easy scanning</li>
+<li>Add a created date field to the frontmatter (for all entries)</li>
+</ul>
+<h3 id="3-lecture-note-creation">3. Lecture Note Creation</h3>
+<ul>
+<li>Create a dedicated note in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Lectures/</code></li>
+<li>Use a clear naming convention: <code>Topic_Presenter.md</code> or <code>EventName_Topic.md</code></li>
+<li>Structure each lecture note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Lecture Title&quot;
+type: lecture-notes
+presenter: &quot;Presenter Name&quot;
+event: &quot;Event Name&quot;
+created: YYYY-MM-DD
+tags:
+  - tag1
+  - tag2
+  - tag3
+resources:
+  # ONLY include actual URLs mentioned in the lecture, NOT keywords or note references
+  - https://example.com/resource-1
+  - https://example.com/resource-2
+---
+</code></pre>
+</li>
+<li>Key themes (H2)</li>
+<li>Main points organized under topical sections (H3)</li>
+<li>Insights and takeaways</li>
+<li>Follow-up questions if applicable</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use the same approach as books: enrich existing notes with new insights</li>
+<li>Make sure to link using standard markdown style, not <code><a href="#" class="pending-link">wiki-style</a></code> links in frontmatter</li>
+<li>Only use actual external URLs in the resources field, never internal note references</li>
+</ul>
+<h3 id="5-note-reconciliation">5. Note Reconciliation</h3>
+<ul>
+<li>Use the same approach as books to maintain consistency throughout the knowledge base</li>
+</ul>
+<h2 id="course-notes-processing">Course Notes Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Upload course materials, syllabus, or your lecture notes to a conversation with Claude</li>
+<li>Specify that these are course notes that need processing</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key concepts, frameworks, and techniques from the course</li>
+<li>Group related concepts into modules or topics based on course structure</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-course-note-creation">3. Course Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each course in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Knowledge/Courses/</code></li>
+<li>Use a clear naming convention: <code>CourseCode_MainTopic.md</code> (e.g., <code>DESB42_Designove_experimenty.md</code>)</li>
+<li>Structure each course note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+tags:
+  - course
+  - tag1
+  - tag2
+  - tag3
+resources:
+  # Pouze zdroje zmíněné v textu poznámky
+  - odkaz_z_obsahu_1
+  - odkaz_z_obsahu_2
+---
+</code></pre>
+</li>
+<li>Course title (H1) including course code</li>
+<li>Overview section summarizing main topics</li>
+<li>Key concepts organized by modules or topics</li>
+<li>Practical methods and techniques covered</li>
+<li>Resources mentioned in the course materials</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Course Title</a></code> for clean display</li>
+</ul>
+<h2 id="article-processing">Article Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share article links or upload article PDFs to a conversation with Claude</li>
+<li>Specify that these are articles that need processing</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Extract key points, insights, and quotes from the articles</li>
+<li>Organize content into logical sections with headers</li>
+<li>Format bulleted lists for easy scanning</li>
+</ul>
+<h3 id="3-article-note-creation">3. Article Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each article in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Articles/</code></li>
+<li>Use a clear naming convention: <code>Author_Year_Title.md</code></li>
+<li>Structure each article note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Article Title&quot;
+author: &quot;Author Name&quot;
+publication: &quot;Publication Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/article&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key points and insights</li>
+<li>Notable quotes</li>
+<li>Personal reflections (if any)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Article Title</a></code> for clean display</li>
+</ul>
+<h2 id="podcast-processing">Podcast Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share podcast episodes via links or notes from listening sessions</li>
+<li>Note important timestamps if available</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key insights, concepts, and quotes from the podcast</li>
+<li>Include timestamps when possible for easy reference</li>
+</ul>
+<h3 id="3-podcast-note-creation">3. Podcast Note Creation</h3>
+<ul>
+<li>Create a dedicated note for each podcast episode in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Podcasts/</code></li>
+<li>Use a clear naming convention: <code>Podcast_Ep#_Title.md</code></li>
+<li>Structure each podcast note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Episode Title&quot;
+podcast: &quot;Podcast Name&quot;
+episode: 123
+host: &quot;Host Name&quot;
+guest: &quot;Guest Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/podcast-episode&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key discussion points with timestamps</li>
+<li>Notable quotes</li>
+<li>Resources mentioned during the episode</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Episode Title</a></code> for clean display</li>
+</ul>
+<h2 id="videocourse-processing">Video/Course Processing</h2>
+<h3 id="1-initial-capture">1. Initial Capture</h3>
+<ul>
+<li>Share notes from videos or courses via summary points or screenshots</li>
+<li>Include timestamps for important concepts</li>
+</ul>
+<h3 id="2-content-extraction-and-structuring">2. Content Extraction and Structuring</h3>
+<ul>
+<li>Organize key lessons, frameworks, and techniques from the video/course</li>
+<li>Group related concepts into modules or sections</li>
+</ul>
+<h3 id="3-videocourse-note-creation">3. Video/Course Note Creation</h3>
+<ul>
+<li>Create a dedicated note for videos/courses in <code>/Users/erik/dev/erikvanek.github.io/pages/notes/Courses/</code></li>
+<li>Use a clear naming convention: <code>Creator_Title.md</code> or <code>Platform_CourseName.md</code></li>
+<li>Structure each note with:
+<ul>
+<li>YAML frontmatter for metadata:<pre><code class="language-yaml">---
+title: &quot;Course/Video Title&quot;
+creator: &quot;Creator Name&quot;
+platform: &quot;Platform Name&quot;
+date: YYYY-MM-DD
+url: &quot;https://example.com/course&quot;
+tags:
+  - tag1
+  - tag2
+  - tag3
+---
+</code></pre>
+</li>
+<li>Key lessons organized by modules or topics</li>
+<li>Practical exercises or techniques to try</li>
+<li>Resources mentioned in the video/course</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-thematic-integration">4. Thematic Integration</h3>
+<ul>
+<li>Use same approach as books: enhance existing notes with Obsidian reference links</li>
+<li>Format as <code><a href="#" class="pending-link">Course Title</a></code> for clean display</li>
+</ul>
+<h1 id="recent-implementation-examples-march-2025">Recent Implementation Examples (March 2025)</h1>
+<h2 id="books-processed">Books Processed</h2>
+<ul>
+<li>&quot;The Mom Test&quot; - Notes focused on effective customer interviewing techniques</li>
+<li>&quot;Outcomes over Output&quot; - Notes focused on outcome-driven product strategy</li>
+</ul>
+<h2 id="notes-enhanced">Notes Enhanced</h2>
+<ul>
+<li><strong>Product <a href="http://discovery.md">discovery.md</a></strong>: Added sections on outcome-driven discovery and discovery interviewing techniques from both books</li>
+<li><strong>Qualitative <a href="http://research.md">research.md</a></strong>: Added section on interview best practices from The Mom Test</li>
+<li><strong>Interview <a href="http://intro.md">intro.md</a></strong>: Added effective interviewing techniques to use when starting conversations</li>
+<li><strong><a href="http://research.md">research.md</a></strong>: Added detailed sections on customer interviews and outcome-based research</li>
+</ul>
+<p>The focus was on enriching existing notes rather than creating many new thematic entries, ensuring that the knowledge from these books enhances and complements the existing knowledge structure.</p>
+
+
+    
+</body>
+
+</html>

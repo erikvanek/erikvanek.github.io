@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/02 - 📩 Inbox">
+                ⬅️ Back to 02   📩 Inbox
+            </a>
+        </div>
+    
+
+    <h1 id="measuring-business-value">Measuring Business Value</h1>
+
+    <h1 id="measuring-business-value">Measuring Business Value</h1>
+<h2 id="outcomes-vs-impact-from-a-href-classpending-linkoutcomes-over-outputa">Outcomes vs. Impact (from <a href="#" class="pending-link">Outcomes over Output</a>)</h2>
+<ul>
+<li>Outcomes (behavior change) → impact (increase in revenue, loyalty...)</li>
+<li>Impact is a side effect of well-designed outcomes</li>
+<li>Leaders think about impact, executors are responsible for outputs and outcome</li>
+<li>Example pathway: impact (reduce cost) → outcome (fewer people calling tech support) → output (improved usability of confusing features)</li>
+</ul>
+<h2 id="indicators-and-metrics">Indicators and Metrics</h2>
+<ul>
+<li>Leading vs. lagging indicators:
+<ul>
+<li>Lagging tells you what happened in the past and have limited predictive power</li>
+<li>Leading indicator has a proven relationship between an action and a result</li>
+</ul>
+</li>
+<li>Leading indicators show hit or miss the target, lagging indicators reveal the target</li>
+<li>Key results in OKRs are by outcomes - having an outcome (measurable human behavior) almost automatically gives key result definition</li>
+</ul>
+<h2 id="product-metrics-from-a-hrefnotes99-to-processknowledgedesigncx_metrikycx-metrikya">Product Metrics (from <a href="/notes/99 - 📄 To process/Knowledge/Design/CX_Metriky/">CX Metriky</a>)</h2>
+<h3 id="cross-team-metric-strategies">Cross-Team Metric Strategies</h3>
+<ul>
+<li>Connect specific product metrics to broader organizational goals when communicating with stakeholders</li>
+<li>Use metric translation as a persuasion tool in cross-team discussions</li>
+<li>When direct measurement isn't possible, develop thoughtful proxy metrics</li>
+<li>Supplement A/B testing with deeper data science analysis to uncover correlations</li>
+<li>Proactively address potential metric conflicts between teams</li>
+<li><strong>North Star Metric</strong>: One key indicator reflecting the main value of your product, expressing the main long-term goal and measuring how well the product meets customer needs (e.g., number of viewing hours for a streaming service)</li>
+<li><strong>OKR (Objectives - Key Results)</strong>: Framework for setting ambitious goals and measurable results, focusing on qualitative, inspiring goals supported by specific metrics, typically used in quarterly cycles</li>
+<li><strong>KPI (Key Performance Indicators)</strong>: Specific metrics for operational performance monitoring, all KPIs are metrics, but not all metrics are KPIs</li>
+<li><strong>Pirate/AARRR Framework</strong>: Startup framework for measuring customer journey:
+<ul>
+<li><strong>A</strong>cquisition: How users find your product</li>
+<li><strong>A</strong>ctivation: First experience and &quot;wow&quot; moment</li>
+<li><strong>R</strong>etention: How well you keep users engaged</li>
+<li><strong>R</strong>evenue: How the product generates income</li>
+<li><strong>R</strong>eferral: How users recommend your product</li>
+</ul>
+</li>
+<li><strong>Common Product Metrics</strong>:
+<ul>
+<li>Conversion Rate: Percentage of visitors who perform a desired action</li>
+<li>Retention Rate: Percentage of customers who return after a certain period</li>
+<li>Churn Rate: Percentage of customers who stop using your product</li>
+</ul>
+</li>
+</ul>
+<h2 id="hypothesis-driven-approach">Hypothesis-Driven Approach</h2>
+<ul>
+<li>Hypothesis has two parts: the thing we believe in and the evidence we look for to be able to (dis)prove it</li>
+<li>Next step with hypothesis is to define what needs to happen to find out if the hypothesis is right or wrong</li>
+<li>When we state goals with outcomes, we propose some relationship between our work and its results which we can capture in a hypothesis</li>
+<li>Test with an experiment</li>
+</ul>
+<h2 id="customer-signals-from-a-href-classpending-linkthe-mom-testa">Customer Signals (from <a href="#" class="pending-link">The Mom Test</a>)</h2>
+<ul>
+<li>Major currencies our partners are investing are time, reputation risk and money</li>
+<li>Sometimes strong commitment combines multiple currencies</li>
+<li>Not having a chance to be introduced to other stakeholders is a bad sign</li>
+<li>It's not a real lead until you gave them a concrete chance to reject you</li>
+<li>Look for &quot;This is the worst part of my life and you can help me fix it&quot; as those might be most prospective clients</li>
+</ul>
+<h2 id="the-outcomes-learning-cycle">The Outcomes Learning Cycle</h2>
+<ul>
+<li>Build experiments</li>
+<li>Measure outcomes</li>
+<li>Learn and iterate</li>
+</ul>
+<h2 id="souvisejc-poznmky">Související poznámky</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/UX_Metriky/">UX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/CX_Metriky/">CX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Metodika designových experimentů</a></li>
+<li><a href="#" class="pending-link">Designové experimenty</a></li>
+<li><a href="#" class="pending-link">UX a zákaznická zkušenost</a></li>
+<li>Product Discovery</li>
+<li>Navigating the Corporate Maze</li>
+</ul>
+
+
+    
+</body>
+
+</html>

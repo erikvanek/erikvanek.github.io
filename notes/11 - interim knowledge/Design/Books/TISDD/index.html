@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/11 - interim knowledge">
+                ⬅️ Back to 11   interim knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="this-is-service-design-doing-prototyping-amp-process">This is Service Design Doing: Prototyping &amp; Process</h1>
+
+    <h1 id="this-is-service-design-doing-prototyping-amp-process">This is Service Design Doing: Prototyping &amp; Process</h1>
+<h2 id="book-overview">Book Overview</h2>
+<p>&quot;This is Service Design Doing&quot; provides practical guidance on service design methodologies, tools, and implementation. The book emphasizes hands-on approaches to designing services that work for real people in real situations. This note focuses primarily on the prototyping methodologies and service design process outlined in the book.</p>
+<h2 id="service-design-process">Service Design Process</h2>
+<h3 id="core-framework">Core Framework</h3>
+<p>The service design process follows a general structure of:</p>
+<ol>
+<li><strong>Research</strong> →</li>
+<li><strong>Ideation</strong> →</li>
+<li><strong>Prototyping</strong> →</li>
+<li><strong>Piloting</strong> →</li>
+<li><strong>Implementation</strong></li>
+</ol>
+<h3 id="value-creation-framework">Value Creation Framework</h3>
+<p>Service design balances three key dimensions in what the authors call the Value Triangle:</p>
+<ul>
+<li><strong>Desirability</strong> - What customers want and need</li>
+<li><strong>Feasibility</strong> - What is technically and organizationally possible</li>
+<li><strong>Viability</strong> - What is financially sustainable</li>
+</ul>
+<p>These dimensions interact through:</p>
+<ul>
+<li><strong>Intentions</strong> - The strategic goals and planned outcomes</li>
+<li><strong>Interactions</strong> - The tactical touchpoints and experiences</li>
+</ul>
+<h3 id="research-approach">Research Approach</h3>
+<ul>
+<li>Focus on understanding user needs through contextual inquiry</li>
+<li>Makes visible what other companies with similar approaches have already done</li>
+<li>Emphasis on finding unmet needs and generating insights</li>
+<li>Methods include:
+<ul>
+<li>Customer journey shadowing</li>
+<li>Contextual interviews</li>
+<li>Observation of existing processes</li>
+</ul>
+</li>
+</ul>
+<h2 id="prototyping-methodology">Prototyping Methodology</h2>
+<h3 id="core-principles">Core Principles</h3>
+<h4 id="purpose-of-prototyping">Purpose of Prototyping</h4>
+<p>Prototyping serves three main purposes:</p>
+<ol>
+<li>
+<p><strong>Exploratory</strong> - To explore new options and future solutions</p>
+<ul>
+<li>Often done for internal team consumption</li>
+<li>Functions as &quot;ideation at work&quot;</li>
+<li>Focuses on divergent thinking</li>
+</ul>
+</li>
+<li>
+<p><strong>Evaluative</strong> - To test how people experience proposed solutions</p>
+<ul>
+<li>Helps the team converge on promising directions</li>
+<li>Includes testing specific hypotheses</li>
+<li>Clarifies priorities and focus areas</li>
+</ul>
+</li>
+<li>
+<p><strong>Communicative</strong> - To explain concepts to specific audiences</p>
+<ul>
+<li>Tailored to particular stakeholders</li>
+<li>Reduces misunderstandings</li>
+<li>Kickstarts meaningful discussions</li>
+<li>Should minimize friction</li>
+</ul>
+</li>
+</ol>
+<h4 id="economic-principle">Economic Principle</h4>
+<p>&quot;The best prototype is the one that in its simplest way makes the possibilities and limitations of a design idea visible and measurable.&quot;</p>
+<h4 id="benefits-of-prototyping">Benefits of Prototyping</h4>
+<ul>
+<li>Reduces uncertainty and risk</li>
+<li>Identifies and explores alternative solutions</li>
+<li>Creates shared understanding of ideas and concepts</li>
+<li>Uncovers new questions for research</li>
+<li>Reduces bias through realistic testing</li>
+</ul>
+<h3 id="prototyping-approaches">Prototyping Approaches</h3>
+<h4 id="fidelity-considerations">Fidelity Considerations</h4>
+<ul>
+<li><strong>Fidelity</strong> = level of detail in the prototype</li>
+<li>Different fidelity needs for different parts/stages of a service</li>
+<li>Low-fidelity prototypes inspire more open discussions</li>
+<li>High-fidelity prototypes better for evaluating details</li>
+<li>Generally, fidelity increases as development progresses:
+<ul>
+<li>Early stage → exploratory → lower fidelity</li>
+<li>Later stage → evaluative/communicative → higher fidelity</li>
+</ul>
+</li>
+</ul>
+<h4 id="context-ctx">Context (CTX)</h4>
+<ul>
+<li>Contextual testing (in realistic environments) provides more reliable feedback</li>
+<li>Lab testing is easier but less realistic</li>
+<li>The closer the context to intended implementation, the more reliable the feedback</li>
+</ul>
+<h4 id="iterative-process">Iterative Process</h4>
+<ul>
+<li>Plan prototyping as a series of iterative loops</li>
+<li>Each loop addresses different questions</li>
+<li>First loops are often exploratory in nature</li>
+<li>Continuously verify that selected loops deliver expected results</li>
+<li>Consider establishing sprint-like structure for iterations</li>
+</ul>
+<h4 id="multitracking">Multitracking</h4>
+<ul>
+<li>Can prototype multiple concepts simultaneously (parallel)</li>
+<li>Or refine a single concept through sequential iterations (series)</li>
+<li>Parallel approaches provide comparative insights</li>
+<li>Sequential approaches allow progressive refinement</li>
+</ul>
+<h3 id="prototyping-planning">Prototyping Planning</h3>
+<h4 id="assessment-framework">Assessment Framework</h4>
+<p>Future-state journey mapping helps break projects into prototypable elements:</p>
+<ul>
+<li>Interactions and key points</li>
+<li>Physical objects</li>
+<li>Spaces and architecture</li>
+<li>Digital and software elements</li>
+<li>Ecosystems and business value models</li>
+</ul>
+<h4 id="resource-allocation">Resource Allocation</h4>
+<ul>
+<li>Wisely allocate time, money, and people</li>
+<li>Decide on audience, authorship, fidelity levels, and iteration loops</li>
+<li>Consider multi-tracking opportunities for parallel testing</li>
+</ul>
+<h4 id="method-selection">Method Selection</h4>
+<ul>
+<li>Choose methods that provide the most useful data for subsequent iterations</li>
+<li>Use method triangulation (multiple complementary methods)</li>
+<li>Rule of thumb: include at least one method for each:
+<ul>
+<li>Validating core value proposition</li>
+<li>Customer experience exploration</li>
+<li>Key elements testing</li>
+</ul>
+</li>
+</ul>
+<h4 id="question-driven-approach">Question-Driven Approach</h4>
+<ul>
+<li>Each prototype should answer specific research questions</li>
+<li>Questions guide the design and evaluation of prototypes</li>
+<li>Selecting the focus is &quot;the art of prototyping&quot;</li>
+</ul>
+<h3 id="team-roles-in-prototyping">Team Roles in Prototyping</h3>
+<p>Multiple roles contribute to effective prototyping:</p>
+<ol>
+<li><strong>Concept Owner</strong> - Original ideator</li>
+<li><strong>Model Maker</strong> - Creates scripts, sketches scenes, prepares props</li>
+<li><strong>Facilitator</strong> - Guides audience through the testing session</li>
+<li><strong>Actors &amp; Operators</strong> - Assist during sessions, play roles as needed</li>
+<li><strong>Researcher</strong> - Observes and documents insights</li>
+<li><strong>Experts &amp; Stakeholders</strong> - Provide specialized knowledge and skills</li>
+</ol>
+<p>One person can fulfill multiple roles, especially in early stages of the process.</p>
+<h3 id="participant-considerations">Participant Considerations</h3>
+<h4 id="audience-selection">Audience Selection</h4>
+<ul>
+<li>Similar principles to research participant recruitment</li>
+<li>Goal is to get as close as possible to real users</li>
+<li>Internal testing can be a useful shortcut in some cases</li>
+</ul>
+<h4 id="testing-formats">Testing Formats</h4>
+<ul>
+<li>A/B testing approaches (2x2 design) can be effective</li>
+<li>Can range from face-to-face to online integration</li>
+<li>Consider balanced sampling of different user types</li>
+</ul>
+<h2 id="implementation-considerations">Implementation Considerations</h2>
+<h3 id="service-integration">Service Integration</h3>
+<p>The implementation phase brings together:</p>
+<ul>
+<li>Concept work</li>
+<li>Business model</li>
+<li>Brand focus</li>
+<li>Technology requirements</li>
+<li>Management approach</li>
+</ul>
+<h3 id="balancing-elements">Balancing Elements</h3>
+<p>One of the key challenges is balancing:</p>
+<ul>
+<li>Individual component prototyping</li>
+<li>Holistic service journey integration</li>
+</ul>
+<p>This balance requires careful consideration of both detailed elements and the overall service experience.</p>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/design/Service design/">Service design</a></li>
+<li><a href="#" class="pending-link">99 - 📄 To process/design/Concepts/Prototyping</a></li>
+<li><a href="/notes/11 - interim knowledge/Design/Methods/Lo-Fi_Prototyping_Methods/">Lo-Fi_Prototyping_Methods</a></li>
+<li><a href="/notes/99 - 📄 To process/design/Design tools/Journey maps/">Journey maps</a></li>
+<li><a href="/notes/99 - 📄 To process/design/Concepts/Design Thinking/">Design Thinking</a></li>
+<li><a href="/notes/99 - 📄 To process/design/Design methods/">Design methods</a></li>
+<li><a href="/notes/11 - interim knowledge/Design/Design-MOC/">Design-MOC</a></li>
+</ul>
+<h2 id="references">References</h2>
+<p>Stickdorn, M., Hormess, M., Lawrence, A., &amp; Schneider, J. (2018). This is Service Design Doing: Applying Service Design Thinking in the Real World. O'Reilly Media.</p>
+
+
+    
+</body>
+
+</html>

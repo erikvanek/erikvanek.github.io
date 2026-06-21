@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/99 - 📄 To process">
+                ⬅️ Back to 99   📄 To process
+            </a>
+        </div>
+    
+
+    <h1 id="intro">Intro</h1>
+
+    <h1 id="cl">Cíl</h1>
+<h2 id="vstupy">Výstupy</h2>
+<ul>
+<li>Dohromady v týmech business case
+<ul>
+<li>pokud by to někomu nevyhovovalo tak dejte vědět</li>
+</ul>
+</li>
+<li>Nějaký (ideálně otestovanej) prototyp cestou</li>
+<li>Zhodnocení spolupráce
+<ul>
+<li>Co byste dělali jinak a tak?</li>
+<li>Doporučuju průběžně</li>
+<li>Doporučuju 1 – 2 retrospektivy v průběhu
+<ul>
+<li>minimálně alespoň jednu na konci</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="podmnky-hodnocen-aka-co-znamen-projt">Podmínky hodnocení aka Co znamená projít?</h2>
+<ul>
+<li>odevzdaný týmový projekt max týden před prvním termínem prvního člena týmu</li>
+<li>aktivní účast na kolokviu
+<ul>
+<li>48 hodin předem odevzdaná individuální 1-2 A4 reflexe</li>
+</ul>
+</li>
+<li>4 z 6 účastí na hodinách
+<ul>
+<li>dejte mi vědět jestli je to pro někoho omezující teď anebo nikdy</li>
+</ul>
+</li>
+<li>vlastně mě ani tolik nezajímá výsledek (ale ideálně je dobrej), ale hlavně <em>cesta</em> jakou jste k němu došli
+<ul>
+<li>co jste zkoušeli, co fungovalo, co nefungovalo, co byste příště dělali jinak, co si odnášíte, kam vás to (ne)posunulo</li>
+</ul>
+</li>
+</ul>
+<h2 id="co-kdy">Co když ... ?</h2>
+<ul>
+<li>Někdo z projektu dropne a nedá se s ním domluvit?
+<ul>
+<li>Zvládnete to sami? Tak to zvládněte!</li>
+<li>Ohrožuje to vaši práci? Dejte vědět</li>
+</ul>
+</li>
+<li>Víte, že nechcete dělat z jakéhokoli důvodu týmový projekt
+<ul>
+<li>Dejte mi vědět</li>
+</ul>
+</li>
+</ul>
+<h2 id="motivace-a-forma">Motivace a forma</h2>
+<ul>
+<li>je to workshop (tedy dílna)</li>
+<li>&quot;Kdo umí, umí. Kdo neumí, učí.&quot;
+<ul>
+<li>Nevím, co z toho jsem já, ale nemyslím si o sobě, že jsem vyloženě učitel</li>
+</ul>
+</li>
+</ul>
+<h3 id="principy">Principy</h3>
+<ul>
+<li>jste spolutvůrci a spolutvůrkyně
+<ul>
+<li>rád předám co mám a zároveň chci nasát jak to vidíte vy</li>
+<li>zvyšujeme tak retenci informací</li>
+</ul>
+</li>
+<li>P2P
+<ul>
+<li>občas v týmech, občas se promícháme</li>
+</ul>
+</li>
+<li>
+<h2 id="tolerance-a-hrefhttpswwwbbccomworklifearticle20170718-the-subtle-power-of-uncomfortable-silencesk-tichua">tolerance <a href="https://www.bbc.com/worklife/article/20170718-the-subtle-power-of-uncomfortable-silences">k tichu</a></h2>
+</li>
+</ul>
+<h2 id="cle-kurzu">Cíle kurzu</h2>
+<h2 id="co-chci-abyste-si-odnesli">Co chci abyste si odnesli</h2>
+<ul>
+<li>příjemnou zkušenost z týmové spolupráce a chuť hledat cesty, jak ji posunout dál</li>
+<li>osahat si nové nástroje, mindsety, přístupy
+<ul>
+<li>e.g. AI-assisted prototyping, retro, business-case</li>
+</ul>
+</li>
+<li>demytizovat inženýring
+<ul>
+<li>pojďme trošku za běžný &quot;Hello world&quot;</li>
+</ul>
+</li>
+<li>způsob přemýšlení vedoucí k experimentování, ověřování a postupnému učení</li>
+<li>Naučte se nějaký BPMN-něco a použijte ho
+<ul>
+<li>experimentujte, hledejte cesty, není žádná správná cesta</li>
+<li>cíl je se učit děláním</li>
+</ul>
+</li>
+<li>Board v nástroji
+<ul>
+<li>Ne board pro board, ale mrkněte na featury, co vám to může dát, jak se dá dobře asynchronně spolupracovat</li>
+</ul>
+</li>
+</ul>
+<h2 id="tmata">Témata</h2>
+<h3 id="tmov-spoluprce">Týmová spolupráce</h3>
+<ul>
+<li>sync – async
+<ul>
+<li>remote-first vs remote-friendly</li>
+</ul>
+</li>
+<li>meeting as a last resort</li>
+<li>empatie napříč rolemi
+<ul>
+<li>a že jí pomáhá znát problémy, nástroje a WOW ostatních rolí</li>
+</ul>
+</li>
+<li>what works over processes over tools</li>
+<li>Basecamp jako inspirace</li>
+<li>Tooly</li>
+<li>Agile
+<ul>
+<li>Manifesto, Scrum, Kanban, SAFE, Fake agile</li>
+<li>Basecamp</li>
+<li>Spotify model</li>
+<li>Linear model</li>
+<li>Pros and cons</li>
+<li>Iterace vs inkrement</li>
+</ul>
+</li>
+</ul>
+<h3 id="produktov-trio">Produktový trio</h3>
+<ul>
+<li>zlatý grál</li>
+<li>tři role
+<ul>
+<li>product manager</li>
+<li>product designer</li>
+<li>engineer</li>
+</ul>
+</li>
+<li>design engineering</li>
+</ul>
+<h3 id="software">Software</h3>
+<ul>
+<li>stack a jak to funguje a proč to tak je
+<ul>
+<li>problémy
+<ul>
+<li>technický dluh</li>
+<li>legacy</li>
+<li>maintenance</li>
+<li>bugfixing</li>
+<li>modularita vs monolit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>nástroje
+<ul>
+<li>Git a verzování</li>
+</ul>
+</li>
+<li>jazyky a přístupy
+<ul>
+<li>paradigmata (boring)</li>
+<li>JS, python, ...</li>
+</ul>
+</li>
+<li>škálování</li>
+<li>easy to get v 2025
+<ul>
+<li>šáhněte si na kód
+<ul>
+<li>101
+<ul>
+<li>příkaz</li>
+<li>funkce</li>
+<li>třída ?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>code-generation
+<ul>
+<li>LLM,</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="prototyping">Prototyping</h3>
+<ul>
+<li>low-fi</li>
+<li>hi-fi</li>
+<li>AI-assisted</li>
+</ul>
+<h3 id="ai">AI</h3>
+<ul>
+<li></li>
+</ul>
+<h2 id="kdo-su-a-co-jsem-dlal">Kdo su a co jsem dělal</h2>
+<ul>
+<li>poker, software (IC, lead, product, design), kurátorství, kulturní akce, hydroponie, veřejné služby, nezisk</li>
+</ul>
+<h1 id="jak-to-bude">Jak to bude?</h1>
+<h2 id="1-hodina">1. hodina</h2>
+<ul>
+<li>wow
+<ul>
+<li>6x3 plus kolokvium</li>
+<li>co chci od každého
+<ul>
+<li>týmu</li>
+<li>člověka</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>meet &amp; greet</li>
+<li>projekty témata
+<ul>
+<li>sociálně-zdravotní pomezí</li>
+<li>digitální vyloučení</li>
+<li>nezisk digital</li>
+<li>inovační týmy státní správy</li>
+<li>JIC</li>
+<li>případně po vlastní ose
+<ul>
+<li>svoje věci, z práce</li>
+<li>STEM, PAQ, ...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>tvorba týmů a next steps</li>
+<li>posledních 30 minut výjimky</li>
+</ul>
+<h2 id="2-hodina">2. hodina</h2>
+<ul>
+<li>témata check</li>
+<li>hiring na testování (doporučuju)!</li>
+</ul>
+
+
+    
+</body>
+
+</html>

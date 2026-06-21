@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Retrospektiva studia: design na vlastní program</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="retrospektiva-studia-design-na-vlastn-program">Retrospektiva studia: design na vlastní program</h1>
+                    
+                        <p class="subtitle">Jak bychom mohli posunout DIS KISK zase o kus dál?</p>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">24. 1. 2025</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">3. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <p>V lednu 2025 jsme se na závěrečném setkání všech tří ročníků v Brně sešli nad otázkou, kterou většina studentů nechá jenom viset ve vzduchu: jak by se náš vlastní studijní program dal posunout zase o kus dál. Místo abychom si postěžovali u piva, rozhodli jsme se použít přesně tu disciplínu, kterou se v DIS učíme - participativní a service design - na něco, co se týká přímo nás.</p>
+<p>Připravoval a vedl jsem ho společně s Veronikou Dufek a Barborou Obračajovou.</p>
+<figure class="hero-figure">
+  <a href="/dis-kisk/img/retro.png" target="_blank" rel="noopener">
+    <img src="/dis-kisk/img/retro.png" alt="Účastníci a účastnice retrospektivního workshopu před stěnou polepenou lepíky, Brno, leden 2025" />
+  </a>
+  <figcaption>Parta, která si přišla nadesignovat vlastní studium. Brno, 24. ledna 2025. (Klikni pro plné rozlišení.)</figcaption>
+</figure>
+<h2 id="cl">Cíl</h2>
+<p>Distanční program DIS KISK stojí na hezké vizi - propojit teorii s praxí a dělat participativní vzdělávání v service designu. Lednové setkání, kde se potkávají všechny tři ročníky najednou, mi přišlo jako ideální moment tu vizi vzít vážně a část programu věnovat tomu, abychom si studium spoludesignovali sami.</p>
+<p>Cíle jsme si dali čtyři: vytvořit prostor pro meziroční sdílení a síťování, pojmenovat klíčové výzvy i příležitosti ke zlepšení, navrhnout k nim konkrétní řešení a vůbec posílit komunitu okolo programu. Tak trochu meta cvičení - human-centered přístup obrácený na nás samotné.</p>
+<h2 id="jak-jsme-to-pojali">Jak jsme to pojali</h2>
+<div class="float-wrap">
+<figure class="float-figure float-right">
+<a href="/dis-kisk/cesta/img/retro-2.jpg" target="_blank" rel="noopener">
+<img src="/dis-kisk/cesta/img/retro-2.jpg" alt="Účastníci a účastnice workshopu uprostřed sdílecí aktivity, Brno, leden 2025" />
+</a>
+<figcaption>Workshop v plném proudu. (Klikni pro plné rozlišení.)</figcaption>
+</figure>
+<p>Postavili jsme zhruba tříhodinový workshop pro dvacet až třicet lidí namíchaných napříč ročníky. Dramaturgie šla ve třech vlnách:</p>
+<ul>
+<li><strong>Retrospektiva.</strong> Nejdřív jsme zmapovali, co koho během studia pálí - lepíky na stěnu a sdílecí aktivita ve stylu „ano, a…“, kdy si lidi navzájem rozvíjeli nápady, místo aby je shazovali.</li>
+<li><strong>Futuring.</strong> Pak jsme se odrazili od toho, co nejvíc rezonovalo, a navrhovali scénáře ideální budoucnosti. „Burza budoucností“ je pak roztřídila podle rytmů, událostí a rolí.</li>
+<li><strong>Akční plány.</strong> Nakonec se kolem nejlákavějších budoucností utvořily týmy a rozepsaly k nim konkrétní kroky. Zakončili jsme reflexí a přátelskou bitkou o nejlepší akční kroky.</li>
+</ul>
+<p>Vlastnictví bloků jsme si rozdělili - já vzal úvod a futuring, Veru a Baru zbytek. Sáhli jsme po nástrojích z vlastního arzenálu (design studio, futuring, lepíkové mapování), což byla zároveň hezká ukázka toho, že ty metody fakt umíme použít, ne o nich jen mluvit.</p>
+</div>
+<h2 id="co-z-toho-vzelo">Co z toho vzešlo</h2>
+<div class="float-wrap">
+<figure class="float-figure float-left">
+<a href="/dis-kisk/cesta/img/retro-3.jpg" target="_blank" rel="noopener">
+<img src="/dis-kisk/cesta/img/retro-3.jpg" alt="Stěna polepená barevnými lepíky se scénáři budoucnosti studia, Brno, leden 2025" />
+</a>
+<figcaption>Burza budoucností - stěna plná scénářů, jak by mohlo studium vypadat.</figcaption>
+</figure>
+<p>Z retrospektivy a sdílení vykrystalizovalo pět stěžejních témat, z nichž každé jsme rozpracovali do prvních nápadů:</p>
+<ol>
+<li><strong>Komunály</strong> - komunitní rituály pořádané mezi ročníky navzájem, třeba iniciační „Přílet ptáka Ludvíka“ pro prváky nebo pokračování akcí po skončení hackathonů a konferencí.</li>
+<li><strong>Průběžné setkávání a sdílení</strong> - chybějící společné kanály, pravidelné online „studovny“ a řízené propojování ročníků (speed dating, bingo, triády) místo náhodného posezení u piva.</li>
+<li><strong>Záměrné projektové náhody</strong> - jak si vybírat projekty tak, aby smysluplně procházely napříč předměty a semestry; buddy program „adoptuj si prváka, nech se adoptovat třeťákem“.</li>
+<li><strong>Zpětná vazba 2.0</strong> - zástupci jednotlivých ročníků v pravidelných poradách a sdílený backlog příležitostí ke zlepšení mezi programem a studentstvem, aby informovanost tekla oběma směry.</li>
+<li><strong>Týmovost a vizibilita</strong> - průběžně dotvářené textové medailonky a „pavouci“ kompetencí, abychom věděli, kdo co umí, a víc se učili jeden od druhého.</li>
+</ol>
+<p>Nešlo o to všechno na místě vyřešit, ale pojmenovat to, setřídit a dát tomu první akční obrysy. Hmatatelným výstupem byla sada konkrétních návrhů s kroky, znatelně silnější vazby napříč ročníky a podklady, se kterými může program dál pracovat - a hlavně parta studujících, která se k vlastnímu programu postavila jako spolutvůrci, ne jen jako konzumenti.</p>
+</div>
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<h1 id="presentation-wizard">Presentation Wizard</h1>
+<p>Takes a brain dump and produces a complete, structured reveal.js presentation in two output files:</p>
+<ul>
+<li><code>slides.yaml</code> — structured source of truth (schema in <a href="yaml-schema.md">yaml-schema.md</a>)</li>
+<li><code>[name].html</code> — reveal.js file ready to deploy via eleventy</li>
+</ul>
+<hr>
+<h2 id="phase-1-intake">Phase 1 — Intake</h2>
+<p>Receive the brain dump. Then ask for anything not already answered in it:</p>
+<ol>
+<li><strong>Event</strong> — name and type (conference talk, lecture, workshop, client pitch)</li>
+<li><strong>Date</strong> — YYYY-MM-DD</li>
+<li><strong>Venue / city</strong></li>
+<li><strong>Audience</strong> — who are they, what do they know, what do they care about?</li>
+<li><strong>Duration</strong> — minutes available</li>
+<li><strong>Language</strong> — <code>en</code> or <code>cs</code> — must be explicit, never assumed</li>
+<li><strong>Lead-gen intent</strong> — is there a commercial goal? (e.g. &quot;subtly generate freelance leads&quot;) — affects closing slide</li>
+<li><strong>Partner / co-brand</strong> — is this talk co-branded with an organization?</li>
+</ol>
+<p>Do not proceed to Phase 2 until all eight are answered or explicitly skipped by the user.</p>
+<hr>
+<h2 id="phase-2-second-brain-check">Phase 2 — Second Brain Check</h2>
+<p>Attempt to connect to Obsidian via MCP.</p>
+<p><strong>If MCP succeeds:</strong></p>
+<ul>
+<li>Query for notes relevant to the talk topic: research methods, past project reflections, domain knowledge, method notes, anything topically adjacent</li>
+<li>Surface 3–5 most relevant notes and briefly state what each contributes</li>
+<li>Carry this context into Phase 3 when proposing structure</li>
+</ul>
+<p><strong>If MCP fails:</strong></p>
+<ul>
+<li>Stop immediately. Do not proceed.</li>
+<li>Say: <em>&quot;Second brain (Obsidian MCP) is unavailable. This step enriches the outline with your accumulated knowledge — skipping it may produce a thinner structure. Options: (a) start your local MCP server and let me know, or (b) type OVERRIDE to continue without it.&quot;</em></li>
+<li>Wait for response before continuing.</li>
+</ul>
+<hr>
+<h2 id="phase-3-talk-structure-proposal">Phase 3 — Talk Structure Proposal</h2>
+<p>Propose a section-by-section outline. For each section include:</p>
+<ul>
+<li>Section name</li>
+<li>List of proposed slides (one line each — heading + type hint)</li>
+<li>Estimated duration</li>
+</ul>
+<p>Flag in the outline:</p>
+<ul>
+<li><code>[DEMO]</code> — live demo slot</li>
+<li><code>[QUOTE]</code> — strong quote moment</li>
+<li><code>[VISUAL]</code> — slide that likely needs a diagram or image</li>
+<li><code>[ENGAGEMENT]</code> — audience interaction moment</li>
+</ul>
+<p>End with total estimated duration vs. available duration.</p>
+<p><strong>Wait for explicit approval. Iterate until approved. Do not proceed to Phase 3.5 without a green light.</strong></p>
+<hr>
+<h2 id="phase-35-stylistic-customizations-optional">Phase 3.5 — Stylistic Customizations (optional)</h2>
+<p>Ask:</p>
+<ol>
+<li><strong>Partner logo?</strong> If yes: which organization, what file? → placed bottom-right on all slides, subtle (see HTML generation)</li>
+<li><strong>Color palette?</strong> Any brand or preference? → stored in <code>presentation.customizations</code></li>
+<li><strong>Any other visual constraints?</strong> (client brand, accessibility requirements, etc.)</li>
+</ol>
+<p>If user says none or skips, proceed with defaults. Record any confirmed customizations in the <code>presentation.customizations</code> block of the YAML.</p>
+<hr>
+<h2 id="phase-4-yaml-generation">Phase 4 — YAML Generation</h2>
+<p>Convert approved structure + brain dump into <code>slides.yaml</code>.</p>
+<p>Follow the schema in <a href="yaml-schema.md">yaml-schema.md</a> exactly. Rules:</p>
+<ul>
+<li>
+<p><strong>Use <code>-</code> not <code>—</code> in all slide content</strong>: headings, bullets, prose, speaker notes, captions. Never write an em dash <code>—</code> anywhere in the <code>slides.yaml</code> content fields. This applies to both generated content and verbatim brain dump material.</p>
+</li>
+<li>
+<p>Every slide has: <code>heading</code>, <code>layout</code>, <code>content</code>, <code>images</code>, <code>speaker_notes</code></p>
+</li>
+<li>
+<p><code>speaker_notes</code>: <strong>leave as an empty string</strong> (<code>speaker_notes: &quot;&quot;</code>). Do NOT auto-generate speaker notes — the user authors these manually. Keep the field present on every slide as an empty placeholder.</p>
+</li>
+<li>
+<p>Assign layout types from the defined types — see <a href="yaml-schema.md">yaml-schema.md</a></p>
+</li>
+<li>
+<p>Mark slides needing a visual with a YAML comment: <code># VISUAL NEEDED — [reason]</code></p>
+</li>
+<li>
+<p><code>images: []</code> by default — populated in Phase 5</p>
+</li>
+<li>
+<p>Diagrams (Mermaid or SVG) go in the <code>content</code> field or a <code>type: mermaid</code> column — see <a href="diagrams.md">diagrams.md</a></p>
+</li>
+<li>
+<p><strong><code>layout: custom</code></strong> — use when a slide has bespoke HTML no standard layout can produce (custom charts, complex infographics, hand-tuned compositions). Set <code>content: &quot;&quot;</code>, add <code>custom_file: &quot;slide-N.html&quot;</code> (N = 1-based slide number, relative to the presentation directory) and a <code>description</code> field. Keep <code>speaker_notes</code> current — still managed in YAML. The <code>slide-N.html</code> file holds the actual <code>&lt;section&gt;</code> markup; it is never generated from YAML. See <a href="yaml-schema.md">yaml-schema.md</a> and <a href="layout-html.md">layout-html.md</a>.</p>
+</li>
+<li>
+<p><strong>DRY frontmatter</strong>: use YAML anchors (<code>&amp;title</code>, <code>&amp;date</code>, <code>&amp;event</code>, <code>&amp;speaker</code>, <code>&amp;description</code>) in the <code>presentation:</code> block and aliases (<code>*title</code> etc.) on the title slide — see <a href="yaml-schema.md">yaml-schema.md</a></p>
+</li>
+<li>
+<p><strong>Compress list slides</strong>: when a section has multiple short conceptual items (declared biases, principles, rules), collapse into a single <code>heading-body</code> slide with bullet points. Keep all elaboration in numbered <code>speaker_notes</code>. Do not give each item its own slide unless it warrants a dedicated visual or demo.</p>
+</li>
+<li>
+<p><strong>Default to bullet lists</strong>: <code>heading-body</code> content should almost always be a <code>&lt;ul&gt;</code> list, not bare <code>&lt;p&gt;</code> blocks. Use <code>&lt;p&gt;</code> only for a single short intro sentence before a list, or for genuinely standalone statements. Multiple <code>&lt;p&gt;</code> tags for what are effectively list items is not allowed. Exception: <code>statement</code> and <code>quote</code> layouts which have their own rules.</p>
+</li>
+</ul>
+<p>Ask user to confirm save location. Default: a new subfolder under <code>pages/presentations/[event-slug]/</code>.</p>
+<hr>
+<h2 id="phase-5-visual-review">Phase 5 — Visual Review</h2>
+<p>Walk through every slide marked <code># VISUAL NEEDED</code> one at a time.</p>
+<p>For each flagged slide:</p>
+<ol>
+<li>State the slide heading and why a visual would help</li>
+<li>Offer: <strong>(a)</strong> user provides image path/description, <strong>(b)</strong> generate Mermaid diagram, <strong>(c)</strong> generate inline SVG, <strong>(d)</strong> mark TBD and continue</li>
+<li>If Mermaid or SVG — generate immediately, embed in <code>content</code> field of the YAML</li>
+<li>If image — ask for <code>src</code>, <code>placement</code>, <code>dimensions</code>, <code>alt</code>; update the <code>images</code> array</li>
+<li>If TBD — leave <code>src: TBD</code> with a descriptive <code>alt</code> as a placeholder note</li>
+</ol>
+<p>After all flagged slides: show a summary list of resolved vs. TBD assets.</p>
+<hr>
+<h2 id="phase-6-html-generation">Phase 6 — HTML Generation</h2>
+<p>Convert <code>slides.yaml</code> to a reveal.js HTML file following <a href="layout-html.md">layout-html.md</a>.</p>
+<h3 id="frontmatter">Frontmatter</h3>
+<pre><code class="language-yaml">---
+title: [presentation.title]
+date: [presentation.date]
+layout: presentation-wizard.njk
+permalink: /[slugified-title]/
+eleventyExcludeFromCollections: true
+description: [presentation.description]
+---
+</code></pre>
+<h3 id="css-theme-toggle-mermaid-and-footer">CSS, theme toggle, Mermaid, and footer</h3>
+<p>All handled by <code>presentation-wizard.njk</code> + <code>presentation-wizard.css</code>. Do not add any <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, or <code>&lt;script&gt;</code> tags manually — the layout includes everything.</p>
+<h3 id="partner-logo-if-set-in-customizations">Partner logo (if set in customizations)</h3>
+<p>Add directly in the HTML output, after the frontmatter:</p>
+<pre><code class="language-html">&lt;img class=&quot;partner-logo&quot; src=&quot;[logo-src]&quot; alt=&quot;[org name]&quot;&gt;
+</code></pre>
+<p>The <code>.partner-logo</code> class is defined in <code>presentation-wizard.css</code>.</p>
+<h3 id="footer-url">Footer URL</h3>
+<p><code>presentation-wizard.njk</code> renders <code>erikvanek.com/[slug]</code> automatically as a footer. Do not add it manually.</p>
+<h3 id="slides">Slides</h3>
+<p>Convert each slide from YAML using <a href="layout-html.md">layout-html.md</a>.</p>
+<p>For <code>layout: custom</code> slides: <strong>do not generate markup</strong>. Read the <code>custom_file</code> path from YAML, embed its <code>&lt;section&gt;</code> block verbatim at the correct position. Update only <code>&lt;aside class=&quot;notes&quot;&gt;</code> inside that section if <code>speaker_notes</code> has changed. If the file does not exist, create it as a placeholder and flag it in the post-generation summary. See <a href="layout-html.md">layout-html.md</a> and <a href="yaml-schema.md">yaml-schema.md</a>.</p>
+<p>For <code>two-column</code> slides with a <code>type: custom-svg</code> column: preserve the SVG markup verbatim — do not replace with Mermaid or a generated diagram.</p>
+<p>Ask user to confirm output path before writing. Default: <code>pages/presentations/[event-slug]/[talk-slug].html</code>.</p>
+<hr>
+<h2 id="pre-delivery-checklist">Pre-delivery checklist</h2>
+<p>Before handing off the HTML file:</p>
+<ul>
+<li>[ ] No slide has more than 6 bullet points</li>
+<li>[ ] <code>speaker_notes</code> left empty (<code>speaker_notes: &quot;&quot;</code>) on every slide for manual authoring — never auto-generated</li>
+<li>[ ] Intro slide has date, place, speaker</li>
+<li>[ ] Closing slide has contact info; if lead-gen intent was set, includes &quot;currently available&quot; line</li>
+<li>[ ] Footer URL is visible only on the first and last slides — hidden on all other slides via the <code>slidechanged</code> / <code>ready</code> JS hook (see <a href="layout-html.md">layout-html.md</a>)</li>
+<li>[ ] All <code>layout: custom</code> slides preserved verbatim from existing HTML (only <code>&lt;aside class=&quot;notes&quot;&gt;</code> updated if speaker_notes changed)</li>
+<li>[ ] All <code>type: custom-svg</code> columns preserved verbatim — not replaced with Mermaid</li>
+<li>[ ] TBD images are listed in a final summary for the user</li>
+<li>[ ] If Mermaid is used in <code>content</code> field: diagrams use <code>base</code> theme; themeVariables set if custom colors were requested</li>
+<li>[ ] If Mermaid is used as a <code>type: mermaid</code> column: content is raw Mermaid (no fences), rendered via <code>&lt;div class=&quot;mermaid&quot;&gt;</code></li>
+<li>[ ] Language is consistent throughout — matches the explicit choice from Phase 1</li>
+</ul>

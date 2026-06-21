@@ -1,0 +1,103 @@
+<h1 id="revealjs-power-user-patterns">Reveal.js Power User Patterns</h1>
+<p>Combine 4-6 features systematically rather than using individual capabilities in isolation.</p>
+<h2 id="pattern-1-progressive-concept-building">Pattern 1: Progressive Concept Building</h2>
+<p>Reveal complex ideas incrementally for cognitive scaffolding.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h2&gt;Service Blueprint Layers&lt;/h2&gt;
+  &lt;div class=&quot;fragment&quot; data-fragment-index=&quot;1&quot;&gt;Customer Actions (visible touchpoints)&lt;/div&gt;
+  &lt;div class=&quot;fragment&quot; data-fragment-index=&quot;2&quot;&gt;Frontstage (employee interactions)&lt;/div&gt;
+  &lt;div class=&quot;fragment&quot; data-fragment-index=&quot;3&quot;&gt;Backstage (invisible processes)&lt;/div&gt;
+  &lt;div class=&quot;fragment&quot; data-fragment-index=&quot;4&quot;&gt;Support Processes (infrastructure)&lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Explaining layered concepts, building stakeholder maps, walking through process stages.</p>
+<h2 id="pattern-2-vertical-slides-for-depth">Pattern 2: Vertical Slides for Depth</h2>
+<p>Horizontal = main narrative. Vertical = optional deep-dives, examples, Q&amp;A material.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;section&gt;&lt;h2&gt;Personas&lt;/h2&gt;&lt;!-- Main concept --&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h3&gt;Example: Healthcare Persona&lt;/h3&gt;&lt;!-- Optional depth --&gt;&lt;/section&gt;
+  &lt;section&gt;&lt;h3&gt;Anti-patterns to Avoid&lt;/h3&gt;&lt;!-- Reference material --&gt;&lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Main concept + detailed examples, core material + tangential questions. Skip deep-dives when time-constrained; return during Q&amp;A.</p>
+<h2 id="pattern-3-stacked-image-layers-r-stack">Pattern 3: Stacked Image Layers (r-stack)</h2>
+<p>Layer visual elements progressively with fragments.</p>
+<pre><code class="language-html">&lt;div class=&quot;r-stack&quot;&gt;
+  &lt;img class=&quot;fragment&quot; src=&quot;blueprint-layer1-customer.svg&quot;&gt;
+  &lt;img class=&quot;fragment&quot; src=&quot;blueprint-layer2-frontstage.svg&quot;&gt;
+  &lt;img class=&quot;fragment&quot; src=&quot;blueprint-layer3-backstage.svg&quot;&gt;
+  &lt;img class=&quot;fragment&quot; src=&quot;blueprint-layer4-support.svg&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>Use for:</strong> Service blueprints, journey maps, stakeholder diagrams where layers build on each other.</p>
+<h2 id="pattern-4-two-panel-layouts">Pattern 4: Two-Panel Layouts</h2>
+<p>Side-by-side comparisons using CSS grid.</p>
+<pre><code class="language-html">&lt;section class=&quot;equal-columns&quot;&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Výhody&lt;/h2&gt;
+    &lt;ul&gt;&lt;li&gt;Point 1&lt;/li&gt;&lt;li&gt;Point 2&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Nevýhody&lt;/h2&gt;
+    &lt;ul&gt;&lt;li&gt;Point 1&lt;/li&gt;&lt;li&gt;Point 2&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Current vs. future state, competitor analysis, stakeholder perspectives, pros/cons.</p>
+<h2 id="pattern-5-background-media-for-context">Pattern 5: Background Media for Context</h2>
+<p>Full-bleed images or embedded iframes as slide backgrounds.</p>
+<pre><code class="language-html">&lt;section data-background-image=&quot;journey-map.jpg&quot; data-background-opacity=&quot;0.3&quot;&gt;
+  &lt;h2 class=&quot;text-shadow-black&quot; style=&quot;color: white;&quot;&gt;Understanding the current experience&lt;/h2&gt;
+&lt;/section&gt;
+
+&lt;section data-background-iframe=&quot;https://miro.com/board/...&quot; data-background-interactive&gt;
+  &lt;!-- Live Miro board exploration --&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Creating immersive context, embedding live design tools (Miro, Figma).</p>
+<h2 id="pattern-6-auto-animate-for-visual-continuity">Pattern 6: Auto-Animate for Visual Continuity</h2>
+<p>Automatically animate matching elements between adjacent slides.</p>
+<pre><code class="language-html">&lt;section data-auto-animate&gt;
+  &lt;div data-id=&quot;box&quot; style=&quot;width: 100px; background: blue;&quot;&gt;Step 1&lt;/div&gt;
+&lt;/section&gt;
+&lt;section data-auto-animate&gt;
+  &lt;div data-id=&quot;box&quot; style=&quot;width: 300px; background: green;&quot;&gt;Step 2&lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Showing evolution of diagrams, demonstrating iteration, animating journey maps being built.</p>
+<h2 id="pattern-7-speaker-notes-for-teaching-prompts">Pattern 7: Speaker Notes for Teaching Prompts</h2>
+<p>Hidden notes visible only to presenter (press <code>S</code> key).</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Topic&lt;/h1&gt;
+  &lt;ul&gt;&lt;li&gt;Point 1&lt;/li&gt;&lt;/ul&gt;
+  
+  &lt;aside class=&quot;notes&quot;&gt;
+    - Timing: spend max 5 min here
+    - Example to mention: MPSV project
+    - Common question: &quot;What about X?&quot;
+  &lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Timing cues, examples to mention, anticipated questions, facilitation prompts.</p>
+<h2 id="pattern-8-emphasis-slides">Pattern 8: Emphasis Slides</h2>
+<p>Use r-fit-text for single powerful statements.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1 class=&quot;r-fit-text&quot;&gt;Proč jsme tady?&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Use for:</strong> Transition moments, key questions, dramatic pauses. Don't overuse.</p>
+<h2 id="high-value-feature-combinations">High-Value Feature Combinations</h2>
+<h3 id="combination-a-progressive-explanation-stack">Combination A: Progressive Explanation Stack</h3>
+<p>Fragments + Vertical slides + Speaker notes = Build concepts incrementally with optional depth and teaching prompts.</p>
+<h3 id="combination-b-comparative-analysis-suite">Combination B: Comparative Analysis Suite</h3>
+<p>Two-panel layout + Fragments + Background images = Show comparisons with context and controlled reveal.</p>
+<h3 id="combination-c-teaching-infrastructure">Combination C: Teaching Infrastructure</h3>
+<p>Speaker notes + Question slides + Vertical slides = Main content with prompts, Q&amp;A buffers, and reference material.</p>
+<h2 id="anti-patterns-to-avoid">Anti-Patterns to Avoid</h2>
+<ul>
+<li><strong>Wall of text</strong> – No slide should have more than 6 bullet points</li>
+<li><strong>Fragment overload</strong> – Not every list needs fragments; use for pacing important concepts</li>
+<li><strong>Decoration backgrounds</strong> – Backgrounds should add meaning, not distract</li>
+<li><strong>Missing speaker notes</strong> – Complex slides need prompts for consistent delivery</li>
+<li><strong>Linear only</strong> – Vertical slides enable flexible navigation during Q&amp;A</li>
+</ul>

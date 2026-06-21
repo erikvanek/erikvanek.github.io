@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/04 - 💽 RAW">
+                ⬅️ Back to 04   💽 RAW
+            </a>
+        </div>
+    
+
+    <h1 id="product-discovery">Product discovery</h1>
+
+    <h1 id="product-discovery">Product Discovery</h1>
+<h2 id="core-principles">Core Principles</h2>
+<ul>
+<li>Product discovery is all about finding solutions to the business problems we are assigned in our objectives</li>
+<li>Our aim is to <strong>discover</strong> about the problem space – then we understand what the problem space is</li>
+<li>If you start with a solution in your mind, there's no point in doing research</li>
+</ul>
+<h2 id="discovery-process">Discovery Process</h2>
+<h3 id="kick-off-workshop">Kick-off Workshop</h3>
+<ul>
+<li><a href="https://www.nngroup.com/videos/discovery-kick-off-workshops/?lm=problem-statements&amp;pt=article">Kick off workshop steps</a>:
+<ul>
+<li>Onboard team – decide roles, responsibilities</li>
+<li>Agree on norms – e.g. one hour client facing a week, etc.</li>
+<li>Define a problem to be solved with a problem statement</li>
+<li><em>Set a goal</em> – what do we want to achieve by the end of the discovery</li>
+<li>Identify and prioritize unknowns</li>
+</ul>
+</li>
+<li>Create a research plan to tackle these unknowns</li>
+</ul>
+<h2 id="discovery-approaches">Discovery Approaches</h2>
+<h3 id="outcome-driven-discovery-from-a-href-classpending-linkoutcomes-over-outputa">Outcome-Driven Discovery (from <a href="#" class="pending-link">Outcomes over Output</a>)</h3>
+<ul>
+<li>Focus on outcomes (behavior changes) rather than outputs (features)</li>
+<li>Ask &quot;what are the customer behaviors that drive business results?&quot;</li>
+<li>Plan in terms of outcomes, not features with deadlines</li>
+<li>The 3 magic questions:
+<ol>
+<li>What are the user/customer actions that drive business results?</li>
+<li>How can we make people do more of these actions?</li>
+<li>How do we know that we're right?</li>
+</ol>
+</li>
+<li>Instead of focusing on lists of features, manage a list of hypotheses with expected metrics</li>
+<li>Example reframe: &quot;IDP redesign&quot; → &quot;boost sales by 10% from IDP&quot;</li>
+<li>Roadmaps should be centered around sets of outcomes not feature delivery deadlines</li>
+<li>A basic problem of output-based planning is not knowing what value each feature brings, making prioritization difficult</li>
+<li>Metaphor: Planning with outputs is like promising to cross a desert of unknown size by a specific date</li>
+</ul>
+<h3 id="continuous-discovery-from-a-hrefnotes99-to-processknowledgecoursesdesb42_designove_experimentydesb42-designov-experimentya">Continuous Discovery (from <a href="/notes/99 - 📄 To process/Knowledge/Courses/DESB42_Designove_experimenty/">DESB42: Designové experimenty</a>)</h3>
+<ul>
+<li>Regular customer feedback gathering and use in product development</li>
+<li>Reduces the risk of bad decisions</li>
+<li>Helps create products that solve real problems</li>
+<li>Involves a mindset of ongoing learning and adapting</li>
+</ul>
+<h2 id="research-methods">Research Methods</h2>
+<h3 id="discovery-interviewing-from-a-href-classpending-linkthe-mom-testa">Discovery Interviewing (from <a href="#" class="pending-link">The Mom Test</a>)</h3>
+<ul>
+<li>Be genuinely interested in the customer to open their hearts</li>
+<li>Don't mention your idea/solution too soon - focus on their problems first</li>
+<li>Ask &quot;Talk me through the last time [problem] happened&quot; to get concrete examples</li>
+<li>Beware of compliments (&quot;We love it&quot;) and hypothetical statements (would/could/might) - they're often fluff</li>
+<li>Plan the three most important things you want to learn from each interview</li>
+<li>Look for customers who express emotion about their problems - they might be your best prospects</li>
+</ul>
+<h2 id="experimentation">Experimentation</h2>
+<h3 id="framework">Framework</h3>
+<ul>
+<li>Frame discovery as experiments to test hypotheses</li>
+</ul>
+<h3 id="designing-experiments-from-a-hrefnotes99-to-processknowledgedesigndesignove_experimenty_metodikadesignov-experimenty-metodikaa">Designing Experiments (from <a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Designové experimenty - metodika</a>)</h3>
+<ul>
+<li><strong>Operationalization</strong>: Converting general questions into specific measurable metrics</li>
+<li><strong>Hypothesis formulation</strong>: Consists of a belief statement and evidence we'll look for to confirm/disprove it</li>
+<li><strong>Selecting appropriate metrics</strong>: Should be relevant, measurable, interpretable, and able to provide actionable insights</li>
+<li><strong>Experiment types</strong>:
+<ul>
+<li>Information/interaction design: A/B testing, usability testing, eye-tracking studies</li>
+<li>Service design: Service prototyping, customer journey testing</li>
+<li>Behavioral design: Testing nudges, default options, call-to-action variations</li>
+</ul>
+</li>
+</ul>
+<h3 id="evaluating-experiments">Evaluating Experiments</h3>
+<ul>
+<li><strong>Combine data sources</strong>: Use qualitative (WHY) and quantitative (WHAT) data</li>
+<li><strong>Consider statistical validity</strong>: Be aware of significance and avoid false positives</li>
+<li><strong>Use iterative process</strong>: Apply learnings to new iterations</li>
+<li><strong>Documentation</strong>: Document and share findings with the team</li>
+</ul>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Courses/DESB42_Designove_experimenty/">DESB42: Designové experimenty</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/UX_Metriky/">UX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/CX_Metriky/">CX Metriky</a></li>
+<li><a href="/notes/99 - 📄 To process/Knowledge/Design/Designove_experimenty_metodika/">Metodika designových experimentů</a></li>
+<li><a href="#" class="pending-link">UX a zákaznická zkušenost</a></li>
+<li><a href="#" class="pending-link">Měření obchodní hodnoty</a></li>
+<li><a href="/notes/02 - 📩 Inbox/Behavior design/">Behavior Design</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.nngroup.com/videos/discovery-kick-off-workshops/?lm=problem-statements&amp;pt=article" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/videos/discovery-kick-off-workshops/?lm=problem-statements&amp;pt=article</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

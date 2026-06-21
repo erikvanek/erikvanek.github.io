@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Motivační rozhovory</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="motivan-rozhovory">Motivační rozhovory</h1>
+                    
+                        <p class="subtitle">aneb hledání cesty k trvalé změně</p>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">14. 1. 2024</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">1. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <p>Krátké zhodnocení toho, co jsem si odnesl z prvního setkání kurzu <a href="http://motivacnirozhovory.cz/" target="_blank">Motivačních rozhovorů</a>. Pár lidí si psalo o sdílení zkušeností z kurzu takže here-we-go!</p>
+<p>Mám za sebou 1. ze 4 částí kurzu a strašně mě to baví z různých perspektiv a rovin.</p>
+<p>Kurz je hodně o práci s jazykem jako nástrojem. Přerámovávání, intonace, otevřené otázky, afirmace apod. Technika silně pracuje s pojmem ambivalence. Abych se pro něco rozhodnul, tak často překonávám to, že něco musím obětovat a možná ne vždy chci. Velký důraz se klade na dlouhodobou změnu chování, takže to má dobrý využití třeba u závislostního chování.</p>
+<h2 id="wows">WOWs</h2>
+<ul>
+<li>super nástroj do prvního diamantu designového procesu
+<ul>
+<li>techniky a nástroje, který v kurzu trénujeme a cvičíme člověka udržují v &quot;problem space&quot; a neskákat k návrhům řešení</li>
+</ul>
+</li>
+<li>Honza Soukup, který kurz vede, to dělá neskutečně příjemně a vlídně. Jeho facilitační styl je velice uvolněný, přirozený a laskavý. Absolutně nic není ve stresu, právě naopak.</li>
+<li>je to teda v krásným prostředí ekodomu <a href="https://www.lipka.cz/rozmarynek" target="_blank">Rozmarýnek</a> a maj tam spoustu skvělý havěti a zábavný králíky na zahradě!</li>
+<li>velká inspirace pro vlastní facilitační praxi
+<ul>
+<li>např. při úvodním kolečku byly uprostřed dva flipcharty a dvě sady vodových barev a každý člověk měl přijít doprostřed a nakreslit něco, co ilustruje nějaký jeho (třeba ne úplně známý) koníček.<br>
+K tomu bylo třeba říct co má rád na svých klientech a nakonec připsat své jméno. Docela náročný tyhle tři věci skloubit dohromady, ale dost to pomohlo prolomit ledy a hned zpočátku si trošku udělat přehled o tom kdo je kdo a co má rád a tak</li>
+</ul>
+</li>
+<li>celkově je atmosféra strašně přijímající a akceptující (yay psychologické bezpečí!) a i třeba ne nutně jednoduchý témata nebo zpětny vazby jsou uchopený strašně ohleduplně</li>
+</ul>
+<h2 id="lows">LOWs</h2>
+<ul>
+<li>myslím, že jsem z těch 21 přítomných jediný ne-absolvent ať už psychologie nebo nějakého výcviku a ty nácviky jsou dost mířené na vztah pracovník-klient, takže si tam občas musím domýšlet kolegy nebo různý jiný lidi z mýho života :)</li>
+<li>je to vlastně strašně intenzivní a náročný (což je jako dobře, ale prostě náročný :) )</li>
+</ul>
+<h3 id="perlika-na-zvr">Perlička na závěr</h3>
+<p>Když jsem v kolečku na úvod říkal, že živím jako designer služeb, tak si mě spousta lidí zaškatulkovala jako <em>&quot;týpka z korporátu&quot;</em>. Když jsem pak ten pojem a co vlastně probíral s různými lidmi 1:1 tak vesměs říkali že to je vlastně strašně super.</p>
+<p>No a pointa je, že by bylo super, aby když řeknu, co dělám tak aby mi lidi rozuměli na první dobrou. Rád bych se tady tou otázkou teď trošku víc zabýval - tj. když to zformuluju jako nějakou výzvu, znělo by to nějak takto - <strong>&quot;Jak bychom mohli lépe lidem nezasvěceným do HCD prezentovat rozměry a náplň našich aktivit?&quot;</strong>. Nejspíše to nebude jednoduchý, ale bylo by skvělý to posunout.</p>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,607 @@
+/* ============================================================
+   Cesta — styles.
+   Pico classless provides the CSS reset and typographic base;
+   this file overrides Pico variables to match the cesta palette,
+   then builds the tile grid on top.
+   ============================================================ */
+
+/* --- Pico variable overrides: palette + font --- */
+:root {
+  --pico-font-family-sans-serif: "DM Sans", system-ui, sans-serif;
+  --pico-font-family: var(--pico-font-family-sans-serif);
+  --serif: "DM Serif Display", Georgia, serif;
+  --pico-background-color: #eeebe4;
+  --pico-color: #1c1812;
+  --pico-muted-color: #7a7060;
+  --pico-primary: #3E5A6E;
+  --pico-border-color: rgba(28, 24, 18, .30);
+}
+
+/* --- Cesta palette tokens --- */
+:root {
+  --ink:   #1c1812;
+  --quiet: #7a7060;
+  --line:  rgba(28, 24, 18, .30);
+  --card:  #ffffff;
+  --cream: #f4efe5;
+
+  --cell: clamp(135px, 13.5vw, 198px);
+  --gap:  clamp(28px, 3vw, 44px);      /* airy: gap scales with viewport */
+  --big:  calc(2 * var(--cell) + var(--gap));
+
+  /* layered card shadows — soft ink-tinted ambient + key light,
+     plus an inset top sheen + hairline for the glossy-print edge */
+  --shadow-rest:
+    inset 0 1px 0 rgba(255, 255, 255, .20),
+    inset 0 0 0 1px rgba(28, 24, 18, .05),
+    0 1px 2px rgba(28, 24, 18, .08),
+    0 4px 10px rgba(28, 24, 18, .09),
+    0 14px 28px rgba(28, 24, 18, .07);
+  --shadow-hover:
+    inset 0 1px 0 rgba(255, 255, 255, .26),
+    inset 0 0 0 1px rgba(28, 24, 18, .05),
+    0 2px 3px rgba(28, 24, 18, .09),
+    0 10px 22px rgba(28, 24, 18, .12),
+    0 30px 60px rgba(28, 24, 18, .16);
+}
+
+body {
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cross-document view transition: wall → article cross-fade
+   (Chromium + Safari 18.2; elsewhere navigation is just instant). */
+@view-transition {
+  navigation: auto;
+}
+
+::selection {
+  background: rgba(214, 178, 123, .45);
+}
+
+/* --- Lava-lamp background: three blobs on independent slow clocks.
+       Warm sand + rust carry the mood, one low-chroma slate blob is the
+       counterpoint that keeps the mesh from going muddy. Edge tint rides
+       on the first layer. Transform-only; still under reduced motion. --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(36% 32% at 22% 24%, rgba(218, 158, 70, .62), transparent 68%),
+    linear-gradient(90deg,
+      rgba(202, 158, 96, .42) 0%, rgba(202, 158, 96, 0) 16%,
+      rgba(189, 130, 98, 0) 84%, rgba(189, 130, 98, .40) 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(32% 36% at 78% 32%, rgba(199, 104, 56, .48), transparent 70%);
+}
+.wall::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(40% 34% at 50% 88%, rgba(62, 90, 110, .32), transparent 70%);
+}
+/* paper-tooth grain over the whole ground (static, sits above the blobs,
+   under the tiles) — kills the flat-render feel at ~5% opacity */
+.wall::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.66' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: no-preference) {
+  body::before  { animation: blob-a 36s ease-in-out infinite alternate; }
+  body::after   { animation: blob-b 47s ease-in-out infinite alternate; }
+  .wall::before { animation: blob-c 59s ease-in-out infinite alternate; }
+}
+@keyframes blob-a {
+  from { transform: translate3d(-4%, -5%, 0) scale(1); }
+  to   { transform: translate3d(5%, 8%, 0) scale(1.2); }
+}
+@keyframes blob-b {
+  from { transform: translate3d(3%, 7%, 0) scale(1.15); }
+  to   { transform: translate3d(-6%, -6%, 0) scale(.92); }
+}
+@keyframes blob-c {
+  from { transform: translate3d(-6%, 3%, 0) scale(1); }
+  to   { transform: translate3d(6%, -7%, 0) scale(1.25); }
+}
+
+/* --- Staggered band entrance (JS sets --i per band) --- */
+@media (prefers-reduced-motion: no-preference) {
+  .band {
+    animation: band-rise .55s cubic-bezier(.2, .7, .3, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+}
+@keyframes band-rise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+/* ============================================================
+   The wall: centred flex bands (one .band per row).
+   Tiles use 4 fixed footprints off --cell:
+     1×1 default, 2×2 .f-big, 1×2 .f-portrait, 2×1 .f-landscape.
+   Short tiles pair into a .stack so each column is card-tall.
+   ============================================================ */
+
+/* --- Page chrome: editorial masthead + personality footer --- */
+.wall-head {
+  text-align: center;
+  padding: clamp(44px, 7vh, 88px) 16px 0;
+}
+.wall-head .wh-name {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: clamp(44px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: var(--ink);
+}
+.wall-head .wh-line {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 650;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+.wall-head::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin: 26px auto 0;
+  background: rgba(28, 24, 18, .35);
+}
+.wall-foot {
+  text-align: center;
+  padding: 0 16px clamp(40px, 7vh, 90px);
+}
+.wall-foot p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--quiet);
+}
+
+.wall {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+  padding: clamp(28px, 5vh, 64px) clamp(16px, 3vw, 56px) clamp(48px, 8vh, 110px);
+}
+
+.band {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  flex: none;
+}
+
+/* --- Tile base --- */
+.tile {
+  position: relative;
+  flex: none;
+  width: var(--cell);
+  height: var(--cell);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+  box-shadow: var(--shadow-rest);
+}
+
+.tile.f-portrait  { width: var(--cell); height: var(--big); }   /* 1×2 tall  */
+.tile.f-landscape { width: var(--big);  height: var(--cell); }  /* 2×1 wide  */
+.tile.f-big       { width: var(--big);  height: var(--big); }   /* 2×2 card  */
+.tile.f-square    { width: var(--cell); height: var(--cell); }  /* 1×1 force */
+.tile.f-profile   { width: calc(2.5 * var(--cell) + var(--gap)); height: var(--big); } /* 2.5×2 */
+
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a.tile img {
+  transition: transform .9s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* hover scrim: deepens the photo behind the stamp so the title pops */
+a.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to top, rgba(20, 18, 14, .38), rgba(20, 18, 14, 0) 55%);
+  opacity: 0;
+  transition: opacity .6s ease;
+  pointer-events: none;
+}
+a.tile.text::after,
+a.tile.hero::after { content: none; }
+
+/* --- Stamp (title overlay at the bottom of photo tiles) --- */
+.tile-stamp {
+  position: absolute;
+  z-index: 1;
+  left: 0; right: 0; bottom: 0;
+  padding: 21px 12px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(to top, rgba(20, 18, 14, .55), rgba(20, 18, 14, 0));
+}
+
+.tile-title {
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -.01em;
+  color: var(--cream);
+  line-height: 1.22;
+}
+
+.tile-ext { font-size: .8em; font-weight: 500; } /* 🔗 marker on external cards */
+
+/* one muted functional clause under the title (big tiles only) */
+.tile-sub {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(244, 239, 229, .85);
+}
+.tile.text .tile-sub { color: var(--quiet); }
+
+.sem-tag {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .35);
+}
+
+/* --- Clickable tile --- */
+a.tile {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  /* growth-only hover: scale moves every edge outward, so the card can
+     never move away from the cursor and un-hover itself (no flicker);
+     the deepening shadow carries the "lift" */
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1), box-shadow .6s cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+a.tile:hover,
+a.tile:focus-visible {
+  transform: scale(1.022);
+  box-shadow: var(--shadow-hover);
+}
+a.tile:active {
+  transform: scale(1.008);
+  transition-duration: .15s;
+}
+
+/* --- Easter egg: a soft light slowly circling the card border on hover.
+       Conic gradient ring masked to a 2px band; @property animates the
+       angle. Browsers without @property just get a still glint. --- */
+@property --spin {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+a.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: 8px;
+  padding: 2px;
+  background: conic-gradient(from var(--spin),
+    transparent 0%, transparent 70%,
+    rgba(244, 239, 229, .95) 86%,
+    transparent 98%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .8s ease;
+  pointer-events: none;
+}
+a.tile:hover::before,
+a.tile:focus-visible::before {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  a.tile:hover::before,
+  a.tile:focus-visible::before {
+    animation: ring-spin 5s linear infinite;
+  }
+}
+@keyframes ring-spin {
+  to { --spin: 360deg; }
+}
+a.tile:hover img,
+a.tile:focus-visible img { transform: scale(1.045); }
+a.tile:hover::after,
+a.tile:focus-visible::after { opacity: 1; }
+a.tile:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+/* --- Text tile (no photo) --- */
+.tile.text {
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.tile.text.missing { border-style: dashed; background: rgba(255, 255, 255, .55); }
+.tile.text .tile-stamp { position: static; background: none; padding: 14px; }
+.tile.text .tile-title { color: var(--ink); font-size: 22px; }
+.tile.text.missing .tile-title { color: var(--quiet); }
+
+/* --- Hero tile (text-on-paper door into the story) + closing statement --- */
+/* Not a card: it almost blends into the page. Just a whisper of a warm veil
+   over the lava-lamp — no shadow, no border — so it nearly disappears and the
+   expressive typography (plus the hand-drawn CTA circle) does the inviting.
+   Shared by the start CTA and the closing statement. */
+.tile.hero {
+  background: rgba(244, 239, 229, .22);
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 30px;
+  gap: 14px;
+}
+.tile.hero .h-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(33px, 3.6vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -.018em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.tile.hero .h-sub {
+  margin: 0;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.45;
+  color: var(--quiet);
+  max-width: 460px;
+}
+
+/* The blended hero has no hover effect of its own — just neutralize the raised
+   a.tile:hover lift; only the CTA reacts (see below). */
+a.tile.hero:hover,
+a.tile.hero:focus-visible {
+  transform: none;
+  box-shadow: none;
+}
+/* no spinning border ring on the blended hero — it would read as a surface */
+a.tile.hero::before { content: none; }
+
+/* the "Začni tady →" nudge: a tiny grow + playful tilt on hover (the rough.js
+   circle is its child, so it grows and tilts along with it). */
+@media (prefers-reduced-motion: no-preference) {
+  .h-cta { transition: transform .25s cubic-bezier(.22, .61, .36, 1); }
+  a.tile.hero:hover .h-cta,
+  a.tile.hero:focus-visible .h-cta { transform: scale(1.05) rotate(-2deg); }
+}
+
+/* the "start here" nudge — rough.js circles it shortly after load */
+.h-cta {
+  position: relative;
+  /* the circle overflows ~19px above the text box; this gap is measured to
+     the text, so it must clear the circle, not just the words */
+  margin-top: 26px;
+  padding: 9px 22px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: .01em;
+  color: var(--ink);
+}
+.h-cta svg.rough-note {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;            /* never clip the hand-drawn overshoot */
+  pointer-events: none;
+}
+/* soft pencil-like ends; the draw is driven by WAAPI (see circleCta), so the
+   shared CSS rough-draw animation is disabled here to avoid a double-fire */
+.h-cta svg.rough-note path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: none;
+}
+
+/* closing statement card — not clickable, Erik's voice */
+.tile.hero.closing { gap: 16px; }
+.tile.hero.closing .h-statement {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(19px, 1.85vw, 28px);
+  line-height: 1.36;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  max-width: 440px;
+  text-wrap: balance;
+}
+.tile.hero.closing .h-sig {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+/* rough.js draw-on animation (shared by CTA circle + quote borders) */
+@media (prefers-reduced-motion: no-preference) {
+  svg.rough-note path {
+    stroke-dasharray: var(--len, 0);
+    stroke-dashoffset: var(--len, 0);
+    animation: rough-draw .8s ease-out forwards;
+  }
+}
+@keyframes rough-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* --- Thematic tags (hidden until portfolio rework) --- */
+.tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tile-tags .tt {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(244, 239, 229, .5);
+}
+.tile-stamp.ext { gap: 7px; }
+.tile:not(.text) .tile-stamp.ext {
+  padding: 14px 12px 12px;
+  background: linear-gradient(to top, rgba(18, 16, 12, .6) 62%, rgba(18, 16, 12, 0));
+}
+.tile.text .tile-tags .tt {
+  color: var(--quiet);
+  background: rgba(28, 24, 18, .05);
+  border-color: var(--line);
+}
+
+/* --- Quote tile (standalone research voice) --- */
+.tile.quote-tile {
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+}
+.tile.quote-tile::before {
+  content: '„';
+  position: absolute;
+  top: -6px; right: 11px;
+  font-family: var(--serif);
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 400;
+  color: rgba(28, 24, 18, .10);
+  pointer-events: none;
+}
+.tile.quote-tile > * { position: relative; }
+.tile.quote-tile .qt-text {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(19.5px, 1.5vw, 24px);
+  line-height: 1.34;
+  color: var(--ink);
+}
+/* rough.js sharpie border overlay (drawn by inline script, progressive);
+   the crisp border yields to the hand-drawn one once it exists */
+.tile.quote-tile.has-rough { border-color: transparent; }
+.tile.quote-tile svg.rough-note {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.tile.quote-tile .qt-ref {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+/* Clickable quote cards: a stretched overlay link (the whole card opens the
+   detail page) + a subtle lift on hover. Overlay specificity beats the
+   `.tile.quote-tile > *` position:relative rule so it stays absolute. */
+.tile.quote-tile a.qt-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: inherit;
+}
+.tile.quote-tile a.qt-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.tile.quote-tile:has(a.qt-link) {
+  cursor: pointer;
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1), box-shadow .5s cubic-bezier(.22, .61, .36, 1);
+}
+.tile.quote-tile:has(a.qt-link:hover),
+.tile.quote-tile:has(a.qt-link:focus-visible) {
+  transform: scale(1.018);
+  box-shadow: var(--shadow-hover);
+}
+
+/* chips + thematic tags hidden until portfolio rework */
+.tile-chips,
+.tile-tags { display: none !important; }
+
+/* --- Mobile: bands wrap and recentre; cells scale to the viewport --- */
+@media (max-width: 760px) {
+  :root {
+    --cell: clamp(120px, 40vw, 198px);
+    --gap: 16px;
+  }
+  .band {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wall {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

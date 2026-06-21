@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="progress-log">Progress Log</h1>
+<p>Running log of what was done, when, and by whom. Append entries at the top (newest first). Check this first when resuming after a break — it tells you where things stand without having to re-read everything.</p>
+<p>See <a href="/notes/01 - 🤖 Second brain/Revival-Strategy/">Revival-Strategy</a> for the full plan and <a href="/notes/01 - 🤖 Second brain/Decision-Log/">Decision-Log</a> for structural decisions.</p>
+<hr>
+<h2 id="current-state-update-this-section-when-resuming">Current State (update this section when resuming)</h2>
+<p><strong>Last active</strong>: 2026-03-05<br>
+<strong>Current phase</strong>: Phase 3 complete. Phase 4 (weekly routine) ready to start.<br>
+<strong>Blocking</strong>: 9 binary files in <code>99 - 📄 To process</code> need manual moves in Finder (see below).<br>
+<strong>Next action</strong>: Manually move binary files, git commit, then begin Phase 4.</p>
+<hr>
+<h2 id="log-entries">Log Entries</h2>
+<h3 id="2026-03-05-phase-3-complete-99-backlog-processed">2026-03-05 — Phase 3 complete: 99 backlog processed</h3>
+<p><strong>By</strong>: Claude (session with Erik)</p>
+<p><strong>What happened</strong>:<br>
+All markdown content in <code>99 - 📄 To process</code> has been triaged and migrated. The folder now contains only binary files (PDFs, PNGs, XLSX) that cannot be moved via MCP — these need manual handling in Finder.</p>
+<p><strong>Subfolders processed</strong>:</p>
+<ul>
+<li><code>design/</code> (~35 files) — fully reconciled against <code>Resources/Design/</code>; 17 migrated, 11 discarded (stubs/empty/superseded), 2 links merged into existing <a href="http://Prototyping.md">Prototyping.md</a></li>
+<li><code>JTBD/</code> (7 md + 5 PNGs) — all markdown migrated to <code>Resources/Product/JTBD/</code>; 5 images remain (manual move needed)</li>
+<li><code>Tools 1/</code> (7 md + scoresheet folder) — all markdown migrated to <code>Resources/Design/Tools/</code>; scoresheet XLSX+PDF remain (manual move needed)</li>
+<li><code>Knowledge/Design/Tools/</code> — only Nesta Playbook PDF remains (manual move needed)</li>
+<li>All other subfolders (Lectures/, Planning/, Product Management/, Themes/, tools/) — fully processed</li>
+</ul>
+<p><strong>Root-level files</strong> (35 files): all processed — ~25 migrated, ~10 discarded (empty/stub/stale/duplicate)</p>
+<p><strong>Key destinations</strong>:</p>
+<ul>
+<li><code>Resources/Design/Concepts/</code> — Ability, Boundary objects, Buzzwords, Cone of possibilities, Design Thinking, Glossary, Humans, Indexing, Memory, Speculative design</li>
+<li><code>Resources/Design/Discovery/</code> — Calendly, Codebook, Customer research synthesis, Fake door tests, Interview Reflections/, Recruiting for research, Selective coding, Trauma informed research, Usability goals</li>
+<li><code>Resources/Design/Tools/</code> — Business model canvas, Business analysis, Design brief, Design tools, Journey maps, Persona, Service blueprint, System maps, Three horizons</li>
+<li><code>Resources/Design/</code> — Agencies, AI, AI-native design, Design checklist, Design competence, Design conferences, Design portfolios, Education, Institutions, People, Random finds, Reference links, Research through design, Service design, Working with clients</li>
+<li><code>Resources/Design/Activities/</code> — Design activities, Workshops</li>
+<li><code>Resources/Product/</code> — Agile, Navigating the corporate maze, Product risk taxonomy, Product teams, Risk management</li>
+<li><code>Resources/Product/JTBD/</code> — Activity-centered design, Competition, Growth, Measuring, Motivation, Value, Value proposition</li>
+<li><code>Resources/Technology/</code> — Human in the loop, MCP, Tools 2024</li>
+<li><code>Resources/Team/</code> — Company culture, Debriefing</li>
+<li><code>Resources/Personal Development/</code> — Learning techniques, Mindset, Personal effectiveness, Reflection</li>
+<li><code>Areas/Home/Recipes/</code> — Kuře (Czech recipe)</li>
+<li><code>Areas/Personal development/</code> — previously migrated in Phase 3 earlier (resume, experiences, travel)</li>
+<li><code>Resources/Learning/Courses/</code> — DESB42 Czech course notes</li>
+</ul>
+<p><strong>Discarded</strong> (stub/empty/duplicate/stale):</p>
+<ul>
+<li>design/: <a href="http://Design.md">Design.md</a>, Human-centered <a href="http://design.md">design.md</a>, Double <a href="http://diamond.md">diamond.md</a>, <a href="http://Ideation.md">Ideation.md</a>, VUCA <a href="http://world.md">world.md</a>, <a href="http://Implementation.md">Implementation.md</a>, Good <a href="http://design.md">design.md</a>, Social <a href="http://design.md">design.md</a>, Design for <a href="http://public.md">public.md</a>, <a href="http://Treninky.md">Treninky.md</a>, Design methods stubs, Walkthroughs (empty)</li>
+<li>Root: <a href="http://Freelancing.md">Freelancing.md</a>, Problem <a href="http://statements.md">statements.md</a>, Prompt <a href="http://engineering.md">engineering.md</a>, <a href="http://Remote.md">Remote.md</a>, <a href="http://System-Integration-README.md">System-Integration-README.md</a>, <a href="http://feature.md">feature.md</a></li>
+<li>Product Management/: Navigating_Corporate_Maze.md + PM_Challenges_and_Strategies.md (duplicates of Lectures/ version)</li>
+<li>Themes/: Measuring_Business_Value.md + Outcome_Driven_Product_Strategy.md (superseded by richer existing notes)</li>
+</ul>
+<p><strong>Binary files requiring manual move</strong> (Finder):</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Current location</th>
+<th>Suggested destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AFA Workshop Templates.pdf</td>
+<td><code>99/design/</code></td>
+<td><code>Resources/Design/Tools/</code></td>
+</tr>
+<tr>
+<td>Nesta Playbook.pdf</td>
+<td><code>99/Knowledge/Design/Tools/</code></td>
+<td><code>Resources/Design/Tools/</code></td>
+</tr>
+<tr>
+<td>TheMoment-ServiceDesignScorecard-Worksheet-V2.xlsx</td>
+<td><code>99/Tools 1/Design tools/Service design scoresheet/</code></td>
+<td><code>Resources/Design/Tools/Service design scoresheet/</code></td>
+</tr>
+<tr>
+<td>themoment_ServiceDesignScoresheetGuide_FINAL-1.pdf</td>
+<td><code>99/Tools 1/Design tools/Service design scoresheet/</code></td>
+<td><code>Resources/Design/Tools/Service design scoresheet/</code></td>
+</tr>
+<tr>
+<td>Pasted image 20241225133343.png</td>
+<td><code>99/JTBD/</code></td>
+<td><code>Resources/Product/JTBD/</code></td>
+</tr>
+<tr>
+<td>Pasted image 20241225134006.png</td>
+<td><code>99/JTBD/</code></td>
+<td><code>Resources/Product/JTBD/</code></td>
+</tr>
+<tr>
+<td>Pasted image 20241225134148.png</td>
+<td><code>99/JTBD/</code></td>
+<td><code>Resources/Product/JTBD/</code></td>
+</tr>
+<tr>
+<td>Pasted image 20241225134219.png</td>
+<td><code>99/JTBD/</code></td>
+<td><code>Resources/Product/JTBD/</code></td>
+</tr>
+<tr>
+<td>Pasted image 20241225134243.png</td>
+<td><code>99/JTBD/</code></td>
+<td><code>Resources/Product/JTBD/</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vault changes</strong>: ~100 files deleted from <code>99 - 📄 To process</code>, ~80 files created across Knowledge and Areas<br>
+<strong>Git commit</strong>: Not yet — commit after manual binary file moves<br>
+<strong>Czech flags</strong>: <a href="http://Workshops.md">Workshops.md</a> migrated as-is in Czech (workshop prep notes, minimal); <a href="http://xn--Kue-4ya.md">Kuře.md</a> migrated as Czech recipe to Areas/Home/Recipes/</p>
+<hr>
+<h3 id="2026-03-05-phase-2-complete-interim-knowledge-absorbed">2026-03-05 — Phase 2 complete: interim knowledge absorbed</h3>
+<p><strong>By</strong>: Claude (session with Erik)<br>
+<strong>What happened</strong>:</p>
+<ul>
+<li>Triaged all 20 notes in <code>11 - ⏳ interim knowledge</code></li>
+<li>14 notes migrated to <code>10 - 🧠 Knowledge</code></li>
+<li>1 Czech note staged with flag (UX Customer <a href="http://Experience.md">Experience.md</a>)</li>
+<li>5 stale MOC files discarded (Design-MOC, Learning-MOC, ProductManagement-MOC, Productivity-MOC, Research-MOC — all had broken links to old paths)</li>
+<li><code>11 - ⏳ interim knowledge</code> folder is now empty and removed</li>
+</ul>
+<p><strong>File routing — migrated</strong>:</p>
+<ul>
+<li><code>Design/Books/Hooked.md</code> → <code>Resources/Design/</code></li>
+<li><code>Design/Books/TISDD.md</code> → <code>Resources/Design/</code></li>
+<li><code>Design/Concepts/Prototyping.md</code> → <code>Resources/Design/Delivery/</code></li>
+<li><code>Design/Methods/Lo-Fi_Prototyping_Methods.md</code> → <code>Resources/Design/Delivery/</code></li>
+<li><code>Design/Design Crit.md</code> → <code>Resources/Design/Activities/</code></li>
+<li><code>Learning/Learning.md</code> → <code>Resources/Learning/</code></li>
+<li><code>ProductManagement/Books/Outcomes_over_Output.md</code> → <code>Resources/Product/</code></li>
+<li><code>ProductManagement/Measuring Business Value.md</code> → <code>Resources/Product/</code></li>
+<li><code>ProductManagement/Product Discovery.md</code> → <code>Resources/Design/Discovery/</code></li>
+<li><code>Productivity/Eisenhower Matrix.md</code> → <code>Resources/Personal Development/</code></li>
+<li><code>Productivity/Productivity.md</code> → <code>Resources/Personal Development/</code></li>
+<li><code>Productivity/Second Brain.md</code> → <code>Resources/Personal Development/</code></li>
+<li><code>Research/Books/The_Mom_Test.md</code> → <code>Resources/Design/Discovery/</code></li>
+<li><code>Research/Qualitative Research.md</code> → <code>Resources/Design/Discovery/</code></li>
+</ul>
+<p><strong>File routing — staged</strong>:</p>
+<ul>
+<li><code>Design/UX_Customer_Experience.md</code> → <code>05 - 🌱 Staging/</code> (Czech — translate before migrating)</li>
+</ul>
+<p><strong>Vault changes</strong>: 20 files deleted from interim knowledge, 14 files created in Knowledge, 1 file staged<br>
+<strong>Git commit</strong>: Not yet</p>
+<hr>
+<h3 id="2026-03-04-phase-1-complete-inbox-cleared">2026-03-04 — Phase 1 complete: Inbox cleared</h3>
+<p><strong>By</strong>: Claude (session with Erik)<br>
+<strong>What happened</strong>:</p>
+<ul>
+<li>Triaged all 22 notes in <code>02 - 📩 Inbox</code></li>
+<li>15 notes migrated to <code>10 - 🧠 Knowledge</code></li>
+<li>1 note staged in <code>05 - 🌱 Staging</code> (<a href="http://Facilitation.md">Facilitation.md</a>)</li>
+<li>1 Czech note staged with flag (<a href="http://Krkonose-list.md">Krkonose-list.md</a>)</li>
+<li>4 notes discarded (Jobs to be done, Product vision, Tldraw canvas, Untitled.base)</li>
+<li><code>Systemic design.md</code> merged into <code>System dynamics.md</code>, then discarded</li>
+</ul>
+<p><strong>File routing — migrated</strong>: Ethics in design, Manifestos, Random design insights, The Story Is Everything, Business case, Design research goals, Value proposition canvas, Iteration, System dynamics (+ Systemic design merged), Hyperfocus, Liminal Thinking, Evals, New product, Busy culture, Product market fit</p>
+<p><strong>Vault changes</strong>: 22 files deleted from Inbox, 17 files created across Knowledge + Staging<br>
+<strong>Git commit</strong>: Not yet</p>
+<hr>
+<h3 id="2026-03-04-phase-0-complete-structure-set-up">2026-03-04 — Phase 0 complete: structure set up</h3>
+<p><strong>By</strong>: Claude (session with Erik)<br>
+<strong>What happened</strong>:</p>
+<ul>
+<li>Created <code>05 - 🌱 Staging/README.md</code></li>
+<li>Restructured <code>10 - 🧠 Knowledge/2 - 🌱 Areas</code>: created Product &amp; Design practice, Personal development, Teaching &amp; Lecturing, Nonprofit design; deleted Continuous improvement and Freelance design practice</li>
+</ul>
+<p><strong>Vault changes</strong>: 2 folders removed, 4 folders created, 14 files relocated, 1 new top-level folder<br>
+<strong>Git commit</strong>: Committed by Erik after Phase 0</p>
+<hr>
+<h3 id="2026-03-04-strategy-and-documentation-created">2026-03-04 — Strategy and documentation created</h3>
+<p><strong>By</strong>: Claude (dialogue with Erik)<br>
+<strong>What happened</strong>:</p>
+<ul>
+<li>Full vault analysis, agreed on Areas structure (DEC-001 through DEC-010)</li>
+<li>Created Revival-Strategy, Decision-Log, Progress-Log</li>
+</ul>
+<p><strong>Vault changes</strong>: 3 new files in <code>01 - 🤖 Second brain/</code><br>
+<strong>Git commit</strong>: Clean baseline committed by Erik</p>
+<hr>
+<h2 id="phase-status-overview">Phase Status Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Name</th>
+<th>Status</th>
+<th>Last touched</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Structure setup</td>
+<td>✅ Complete</td>
+<td>2026-03-04</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Process Inbox</td>
+<td>✅ Complete</td>
+<td>2026-03-04</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Absorb interim knowledge</td>
+<td>✅ Complete</td>
+<td>2026-03-05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Process 99 backlog</td>
+<td>✅ Complete (9 binary files need manual move)</td>
+<td>2026-03-05</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Build weekly routine</td>
+<td>⬜ Not started</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Build agent skills</td>
+<td>⬜ Not started</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="czech-content-tracker">Czech Content Tracker</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Location</th>
+<th>Proposed action</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://Krkonose-list.md">Krkonose-list.md</a></td>
+<td><code>05 - 🌱 Staging/</code></td>
+<td>Translate or keep as-is in personal checklists</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>UX Customer <a href="http://Experience.md">Experience.md</a></td>
+<td><code>05 - 🌱 Staging/</code></td>
+<td>Translate + migrate to <code>Resources/Design/</code></td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><a href="http://Workshops.md">Workshops.md</a></td>
+<td><code>Resources/Design/Activities/</code></td>
+<td>Minimal Czech prep notes — translate when expanding</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><a href="http://xn--Kue-4ya.md">Kuře.md</a></td>
+<td><code>Areas/Home/Recipes/</code></td>
+<td>Czech recipe — keep as-is</td>
+<td>Done</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="template-for-new-entries">Template for new entries</h2>
+<pre><code>### YYYY-MM-DD — Short description
+**By**: [Claude / Erik / Agent]  
+**What happened**:
+- [bullet list of what was done]
+
+**Vault changes**: [what files were moved/created/deleted]  
+**Git commit**: [commit hash or &quot;not yet&quot;]
+**Czech flags**: [any Czech notes found]
+</code></pre>
+
+
+    
+</body>
+
+</html>

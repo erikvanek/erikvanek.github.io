@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Design jako most mezi veřejnou správou a inovacemi: pozorování ze Zlín Design Weeku</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/fonts/fonts.css"/>
+        <link rel="stylesheet" href="/css/pico.classless.min.css"/>
+        <link rel="stylesheet" href="/css/dis-article.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/icon.png"/>
+        <script>
+          /* Deep-linked headings (e.g. the cesta cards → /…/#design-kantyna,
+             /…/cile-VI/#ux-monday) should glide into view, not jump. Strip the
+             hash before first paint so the browser doesn't jump, then smooth-
+             scroll to it once the page (and its images) have loaded. Self-
+             contained on purpose — no external file to half-load. */
+          (function () {
+            var hash = window.location.hash;
+            if (!hash || hash.length < 2) return;
+            try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* noop */ }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function go() {
+              var id;
+              try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
+              var el = document.getElementById(id);
+              try { history.replaceState(null, '', hash); } catch (e) { /* noop */ }
+              if (!el) return;
+              try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+              catch (e) { window.location.hash = hash; }
+            }
+            window.addEventListener('load', go);
+          })();
+        </script>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+    <body>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span><span class="progress__done"></span></div>
+
+        <main id="wrapper">
+            
+                <a href="/dis-kisk/" class="back">← Cesta studiem</a>
+                <header class="article-head">
+                    <h1 id="design-jako-most-mezi-veejnou-sprvou-a-inovacemi-pozorovn-ze-zln-design-weeku">Design jako most mezi veřejnou správou a inovacemi: pozorování ze Zlín Design Weeku</h1>
+                    
+                    
+                    
+                        <div class="article-meta">
+                            <span class="am-date">20. 6. 2025</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-sem">4. semestr</span>
+                            <span class="am-sep">·</span>
+                            <span class="am-type">Projekt</span>
+                        </div>
+                    
+                </header>
+            
+
+            <article>
+                <h1 id="design-jako-most-mezi-veejnou-sprvou-a-inovacemi">Design jako most mezi veřejnou správou a inovacemi</h1>
+<p>Když jsem si letos na jaře skládal individuální studijní plán pro předmět Účast na konferencích, měl jsem docela jasno v tom, kam se chci profesně posouvat. Pohybuji se na pomezí veřejné správy a designu, konkrétně se specializuji na design (nejen veřejných) služeb a service design. A právě tahle interdisciplinární pozice mi umožňuje propojovat principy designového myšlení s reálnými potřebami veřejného sektoru.</p>
+<p>Do plánu jsem si zapsal dvě akce: <strong>Zlín Design Week (ZDW)</strong> (7.-13. května) a <strong>Festival kreativní byrokracie (FKB)</strong> (19. června). U obou jsem očekával prohloubení znalostí v oblasti současných designových přístupů a metodologií s možností jejich aplikace v mé vlastní praxi.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/kantyna-menu.png alt=Krásně zpracovaný program ZDW - vizuální identita je něco, na co může být ZDW tým pyšný/>
+    <figcaption>
+        <em>Krásně zpracovaný program ZDW - vizuální identita je něco, na co může být ZDW tým pyšný</em>
+    </figcaption>
+</figure> 
+<p>Realita byla složitější. <strong>ZDW pro mě byl velice přínosnou akcí a jednou z nejpříjemnějších návštěv Zlína poslední doby.</strong> FKB jsem se bohužel kvůli zdravotním komplikacím nemohl zúčastnit, i přestože jsme s kolegy připravili workshop. Tenhle článek proto reflektuje především pozorování ze ZDW, která byla natolik bohatá, že by stála za vlastní zpracování.</p>
+<p>ZDW pro mě nebyl jen o získávání nových poznatků - stal se prostorem, kde jsem mohl <strong>aktivně sdílet zkušenosti</strong> z toho, co považujem za jeden z nejtěžších segmentů pro aplikaci designu. Zároveň mi ukázal, jak moc kvalitní organizace a příprava může zásadně ovlivnit výsledek jakékoli akce. A to je něco, co přímo aplikuji ve své facilitační praxi.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/banner.png alt=Plakát lákající návštěvnictvo Zlína na ZDW/>
+    <figcaption>
+        <em>Plakát lákající návštěvnictvo Zlína na ZDW</em>
+    </figcaption>
+</figure> 
+<h1 id="design-kantyna">Design Kantýna: Proč je důležité mluvit o veřejné správě</h1>
+<p>Jedním z hlavních důvodů, proč jsem se na ZDW těšil, byla možnost aktivní participace v panelové diskuzi v rámci <strong>Design Kantýny</strong> jako host <a href="https://zlindesignweek.com/2025/design-kantyna/" target="_blank">panelu o designu inovací ve veřejném sektoru</a>. Po tom, co jsme začátkem roku s týmem <a href="https://www.inovacnitymystatnispravy.cz/" target="_blank">publikovali výzkum inovativních týmů ve státní správě</a> a následně v květnu organizovali <a href="/dis-kisk/praxe-IV/" target="_blank">workshop pro tajemnictvo ministerstev</a>, jsem měl o čem povídat.</p>
+<p>Během panelu jsem se snažil popsat, <strong>jak náročné téma design ve veřejném sektoru vlastně je</strong>. Hierarchičnost organizací dost věcí komplikuje, je potřeba mít podporu svrchu, a bez ní se člověk často dostane do pozice, kdy má skvělé nápady, ale nemá mandát ani politické krytí je realizovat. Popisoval jsem konkrétní zkušenosti z mého angažmá na MPSV nebo při přípravě workshopu s tajemníky ministerstev.</p>
+<p>Co mě potěšilo, byly reakce od <strong>Lukáše Němce</strong>, druhého hosta panelu, který se věnuje designu služeb v neziskovém sektoru. Potkávali jsme se tématicky, málokdy jsme si vyloženě rozporovali. Vlastně jsme si potvrzovali pozorování z různých úhlů pohledu - ať už jde o státní správu nebo neziskovky, <strong>systémové změny jsou prostě náročné a potřebují kombinaci správných lidí, správného mandátu a trpělivosti</strong>.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/rozprava.png alt=Rozprava s Lukášem v rámci našeho společného panelu/>
+    <figcaption>
+        <em>Rozprava s Lukášem v rámci našeho společného panelu</em>
+    </figcaption>
+</figure> 
+<p>Mimo svůj panel jsem se účastnil i ostatních Design Kantýn jako divák. <strong>Panelová diskuze s týmem z Mira</strong> mi ukázala, jak konkrétně vypadá design-centered organizace u tak pro designery zásadního nástroje jako je Miro. Bylo fascinující sledovat, jak přemýšlejí o interních procesech, kultuře organizace a tom, jak se design-first přístup promítá do každodenní práce. Pro někoho, kdo většinu času řeší, jak dostat designové myšlení do prostředí, které k němu není přirozeně nakloněné, to byla cenná inspirace. Rád bych ještě vypíchl naprosto fenomenální moderování této diskuze, kterou měla na starosti <a href="https://baruobracajova.com/" target="_blank">Baru</a>.</p>
+<h1 id="workshopy-jako-laborato-designovho-mylen">Workshopy jako laboratoř designového myšlení</h1>
+<h2 id="exquisite-corps-highlight-celho-zdw">Exquisite Corps: Highlight celého ZDW</h2>
+<p>Pokud bych měl vybrat <strong>jeden zážitek, který za mě definoval celé ZDW</strong>, byl by to workshop <strong>Exquisite Corps</strong> od Paula Mesarcika, Martina Borna a Kuby Lance. A to hned z několika důvodů.</p>
+<p>Nejdřív ale k tomu, co mě na tomhle workshopu úplně dostalo. Když jsme se na začátku představovali a bavili o tom, kdo odkud je, jedna z účastnic říkala, že studuje jedno ze zlínských gymnázií. Zeptal jsem se jí, jestli na takovou věc dostanou volno, a ona odpověděla, že <strong>šla kvůli tomu za školu</strong>. To mi přišlo naprosto skvělé - že si někdo najde v programu anotaci workshopu, která není z těch jednodušších, a rozhodne se kvůli tomu jít za školu. I když jejími slovy &quot;si nebyla úplně jistá, co od toho čekat, ale znělo to zajímavě&quot;.</p>
+<p>Workshop samotný byl o tom, jak mohou vypadat různé způsoby organizování se, které jsou ziskové, ale zároveň udržitelné a smysluplné. Facilitátoři nás provedli současnými modely ekonomického myšlení a pak jsme společně experimentovali s využitím <strong>metafor</strong>, skrze něž jsme nahlíželi na jednotlivé aspekty organizací, do kterých jsme zapojeni.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/corps-2.png alt=Úvodní společná část workshopu Exquisite corps/>
+    <figcaption>
+        <em>Úvodní společná část workshopu Exquisite corps</em>
+    </figcaption>
+</figure> 
+<p>Pracovali jsme s předem vybranými metaforami - nejdřív jsme popisovali jejich charakteristiky a pak hledali způsoby, jak by ty metafory mohly být aplikovány na organizace, v nichž působíme. Ta nejzajímavější pro mě byla asi <strong>mycelium</strong> - podhoubí, které spojuje stromy v lese a umožňuje jim sdílet živiny a informace.</p>
+<p>Když jsem o téhle metafoře přemýšlel v kontextu veřejné správy, napadlo mě, jak moc se podobá tomu, co se snažíme budovat při mezioborové spolupráci. Ty neformální sítě, kterými si lidé vyměňují informace, zkušenosti a podporu napříč ministerstvy nebo organizacemi. <strong>Regenerativní versus extraktivní systémy</strong> - to je přesně to, o co se snažíme ve veřejném sektoru. Vytváříme systémy, které &quot;vyčerpávají&quot; lidi a organizace, nebo ty, které je posilují a umožňují jim růst?</p>
+<h2 id="wayfinding-workshop-istota-instrukc">Wayfinding workshop: Čistota instrukcí</h2>
+<p>Druhý workshop, který si zaslouží pozornost, byl <strong>workshop wayfindingu</strong> od Míši Holubec Birtusové z Czechdesignu. Pro mě to byl skvělý úvod do tématu, které není moje hlavní specializace, ale které má jasné spojitosti se service designem a doteď jsem jej vnímal spíše intuitivně a ne vyloženě do hloubky. Nejvíc jsem se asi dostal během mého <a href="https://medium.com/design-kisk/kdy%C5%BE-nev%C3%AD%C5%A1-tak-se-zeptej-s-dominikou-potu%C5%BE%C3%A1kovou-o-inkluzivn%C3%ADm-designu-a-n%C3%A1vrhu-wayfinding-faae3273f6f9" target="_blank">rozhovoru</a> s Dominikou Potužákovou.</p>
+<p>Wayfinding není jen o umístění šipek a cedulek. Je to o <strong>porozumění tomu, jak se lidé pohybují prostorem, jaké mají mentální mapy, jaké mají schopnosti a možnosti a o hledání cest, jak jim můžeme pomoci orientovat se nejen fyzicky, ale i kognitivně</strong>. To má přímé aplikace v designu veřejných služeb - ať už jde o design webu úřadu nebo o to, jak je člověk proveden procesem vyřízení nějaké záležitosti.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/wayfinding-heat.png alt=Intenzivní diskuze v rámci workshopu o wayfindingu/>
+    <figcaption>
+        <em>Intenzivní diskuze v rámci workshopu o wayfindingu</em>
+    </figcaption>
+</figure> 
+<p>Co se mi na tomhle workshopu potvrdilo, a co přímo souvisí s mou zkušeností z <a href="/dis-kisk/praxe-IV/" target="_blank">ministerského workshopu</a>, je <strong>důležitost křišťálově čistých instrukcí</strong>. Když facilitátor nebo organizátor věc připraví tak, že každý přesně ví, co má dělat a proč, akce pak funguje podstatně lépe. Ve světle mého nedávného workshopu s tajemníky ministerstev, kde jsme každou minutu naplánovali a každý přechod mezi aktivitami nacvičili, mi to přišlo jako důležité potvrzení tohoto nedávného zjištění.</p>
+<p>Wayfinding má ještě jeden důležitý aspekt, který se přímo vztahuje k service designu ve veřejném sektoru - <strong>kognitivní zátěž</strong>. Kolik mentální energie musí člověk vynaložit na to, aby pochopil, jak se má v systému pohybovat? V kontextu veřejných služeb to může být rozdíl mezi tím, jestli člověk dokončí proces vyřízení své záležitosti, nebo to vzdá z frustrace. Má dnešní zkušenost z procesu obnovování elektronického podpisu je potvrzením tady tohoto fenoménu. Instrukce, která by vyšla na tři až pět vět, neexistuje. Místo toho jsem na pobočce pošty strávil několik minut frustrace, která byla úplně zbytečná.</p>
+<h2 id="design-kantna-s-miro-tmem-pohled-do-design-centered-organizace">Design Kantýna s Miro týmem: Pohled do design-centered organizace</h2>
+<p>Jedna z nejinspirativnějších částí celého ZDW pro mě byla <strong>panelová diskuze s týmem z Mira</strong>. Jako člověk, který většinu času řeší, jak dostat designové myšlení do prostředí, které k němu není přirozeně nakloněné, jsem byl fascinován tím, jak vypadá každodenní práce v organizaci, která má design v DNA.</p>
+<p>Bylo zajímavé sledovat, jak <strong>přemýšlejí o interních procesech, kultuře organizace a tom, jak se design-first přístup promítá do každodenní práce</strong>. Jeden z momentů, který mi utkvěl v paměti, bylo když mluvili o tom, jak řeší konflikty mezi různými týmy a jak používají designové metody i pro řešení interních organizačních problémů.</p>
+<figure class=narrow>
+    <img src=/dis-kisk/img/zdw-25/miro-debate.png alt=Design kantýna s designery z Miro/>
+    <figcaption>
+        <em>Design kantýna s designery z Miro</em>
+    </figcaption>
+</figure> 
+<p>Pro někoho, kdo většinu času pracuje s klienty z veřejného sektoru, kde je nutné neustále vysvětlovat hodnotu designového přístupu, to byla cenná připomínka toho, jak může vypadat prostředí, kde jsou designové principy skutečně integrované do organizace.</p>
+<h1 id="vborn-organizace-a-pe-o-astnictvo-zdw">Výborná organizace a péče o účastnictvo ZDW</h1>
+<p>Jedna věc, která mě na ZDW absolutně fascinovala, byla <strong>úroveň organizace a péče o detaily</strong>. A to zejména v kontextu toho, že vím, jak náročné je organizovat kvalitní akce pro různorodé publikum.</p>
+<p><strong>Catering od kavárny Jedním tahem</strong> byl něco, co podle mě <strong>by měl být standard na každé profesionální akci</strong>. Super buchty a koláče, výborné kafe, ale i skvělé slaný věci - chlebíčky s avokádem nebo lososem. Vlastně poměrně prémiové suroviny, které tam byly zadarmo. Wow.</p>
+<p>Možná to zní jako detail, ale není. Když organizuješ akci pro lidi, kteří tam tráví celý den, <strong>kvalita jídla a nápojů přímo ovlivňuje jejich pozornost, náladu a ochotu participovat</strong>. Po zkušenosti s organizací workshopu pro tajemnictvo ministerstev vím, jak moc záleží na každém detailu - od kvality materiálů přes timing až po atmosféru místnosti.</p>
+<p>Srovnání s wayfinding workshopem, který jsem absolvoval, mi ukázalo ještě jednu věc. <strong>Když jsou instrukce vyladěné a organizace na špičkové úrovni, účastníci se můžou plně soustředit na obsah</strong> místo toho, aby řešili, co mají dělat nebo kde najdou záchod.</p>
+<p>To je něco, co si přímo odnáším do své facilitační praxe. Nejen pro práci s veřejným sektorem, ale obecně. <strong>Kvalitní příprava není jen o obsahu, ale o celkové zkušenosti účastníků.</strong></p>
+<h1 id="a-co-fkb">A co FKB?</h1>
+<p>Původně jsem plánoval, že tenhle článek bude kombinací pozorování ze ZDW a z <strong>Festivalu kreativní byrokracie</strong> (19. června). S kolegy jsme dokonce připravili workshop pro FKB, ale bohužel jsem se kvůli zdravotním komplikacím nemohl akce účastnit. Moc jim děkuji za to, že workshop i v trošku náročnějších podmínkách zvládli beze mě.🙏</p>
+<h2 id="pprava-workshopu-jako-uen">Příprava workshopu jako učení</h2>
+<p>I když jsem se FKB nemohl zúčastnit, <strong>příprava workshopu pro festival byla sama o sobě cenná zkušenost</strong>. Téma &quot;kreativní byrokracie&quot; mě nutilo přemýšlet o tom, kde jsou hranice mezi inovací a stabilitou ve veřejném sektoru. Jak může být úřad kreativní, aniž by ztratil svou důvěryhodnost? Jak najít prostor pro experimenty v systémech, které jsou z podstaty založené na předvídatelnosti?</p>
+<p>Tyto otázky zůstávají relevantní i bez přímé účasti na festivalu a <strong>propojují se s tím, co jsem si odnesl ze ZDW</strong> - zejména z diskuzí o regenerativních versus extraktivních systémech v rámci Exquisite Corps workshopu.</p>
+<h2 id="co-si-odnm-pro-svou-praxi">Co si odnáším pro svou praxi</h2>
+<p>Po ZDW si uvědomuji několik věcí, které přímo aplikuji do své práce:</p>
+<p><strong>1. Důležitost mluvení o veřejné správě v designové komunitě</strong><br>
+Často mám pocit, že design ve veřejném sektoru je taková &quot;niche&quot; specializace. Ale zkušenost z Design Kantýny mi ukázala, že <strong>o těchto tématech je potřeba mluvit</strong>, protože se týkají každého. A designová komunita má co nabídnout.</p>
+<p>Reakce Lukáše v rámci našeho společného panelu, kdy jsme se potkávali v pozorováních z různých úhlů pohledu, mi potvrdila, že <strong>problémy se systémovými změnami jsou podobné napříč sektory</strong>. Ať už pracujete s ministerstvem nebo s neziskovkou, narážíte na podobné strukturální výzvy.</p>
+<p><strong>2. Metafory jako nástroj pro změnu mentálních modelů</strong><br>
+Workshop Exquisite Corps mi připomněl sílu <strong>metafor při práci se změnou</strong>. Když někomu vysvětluji, proč je důležité přemýšlet o organizaci jako o ekosystému místo stroje, nebo když mluvím o tom, jak funguje mycelium, často dosáhnu většího porozumění než technickými termíny.</p>
+<p><strong>Mycelium jako metafora pro veřejnou správu</strong> je něco, co budu určitě používat dál. Ta představa neviditelné sítě, která spojuje různé entity a umožňuje jim sdílet zdroje a informace, perfektně popisuje to, co se snažíme budovat při mezioborové spolupráci mezi ministerstvy.</p>
+<p><strong>3. Kvalitní organizace jako předpoklad úspěchu</strong><br>
+ZDW mi potvrdil to, co jsem si odnášel z ministerského workshopu - <strong>detailní příprava a péče o zkušenost účastníků je klíčová</strong>. Není to jen o obsahu, ale o celkovém rámci, ve kterém se učení a spolupráce odehrává.</p>
+<p>Kvalita cateringu, jasnost instrukcí, timing, atmosféra místnosti - všechno to ovlivňuje to, jestli se účastníci cítí komfortně a můžou se plně soustředit na obsah. <strong>Ve veřejném sektoru, kde se chyby odpouštějí méně než jinde, je tahle pozornost k detailům ještě důležitější.</strong></p>
+<p><strong>4. Hodnota mezioborového setkávání</strong><br>
+Jedna z největších přidaných hodnot ZDW pro mě byla možnost <strong>potkávat lidi z různých koutů designu</strong> a vidět, jak řeší podobné výzvy v jiných kontextech. Diskuze s týmem z Mira mi ukázala, jak může vypadat design-centered organizace. Workshop wayfindingu mi dal nástroje, které můžu aplikovat v service designu.</p>
+<p>To je něco, co se snažím přenést i do své práce - vytvářet prostory, kde se různí aktéři mohou potkat a inspirovat se navzájem. <strong>Mezioborové učení je klíčové pro inovace ve veřejném sektoru.</strong></p>
+<p><strong>5. Přístupnost designu jako hodnota</strong><br>
+Příběh se studentkou střední školy, která šla za školu kvůli workshopu Exquisite Corps, mi připomněl důležitou věc: <strong>design by měl být přístupný i pro lidi, kteří se v něm nepohybují profesně</strong>. To platí dvojnásob pro práci s veřejným sektorem, kde často pracujeme s lidmi, kteří mají úplně jiný background než my.</p>
+<p><strong>6. Cognitive load jako designový princip</strong><br>
+Pozorování z wayfinding workshopu o tom, kolik mentální energie musí člověk vynaložit na orientaci v systému, přímo aplikuji do designu veřejných služeb. <strong>Každá zbytečná složitost v procesu je bariérou pro občana.</strong></p>
+<h2 id="reflexe-individulnho-studijnho-plnu">Reflexe individuálního studijního plánu</h2>
+<p>Když se podívám zpět na svůj původní plán, <strong>očekávání se splnilo, ale úplně jinak, než jsem čekal</strong>. Místo pasivního &quot;prohloubení znalostí&quot; jsem dostal příležitost aktivně sdílet svoje zkušenosti a zároveň se učit od ostatních.</p>
+<p>I když jsem se nemohl zúčastnit FKB, <strong>ZDW mi dal dostatečně bohaté pozorování pro reflexi studia</strong>. Možná je to i lepší - místo povrchnějšího zpracování dvou akcí jsem mohl do hloubky reflektovat jednu kvalitní zkušenost.</p>
+<p>ZDW mi potvrdil, že <strong>práce na pomezí designu a veřejné správy má smysl</strong> a že existuje komunita lidí, kteří řeší podobné výzvy. To je pro mě osobně i profesně velmi cenné.</p>
+<h2 id="doporuen-pro-facilittory-a-service-designry">Doporučení pro facilitátory a service designéry</h2>
+<p>Pro ostatní <strong>facilitátory a service designéry</strong>, kteří uvažují o práci s veřejným sektorem, bych z pozorování ZDW vyzdvihl několik věcí:</p>
+<ul>
+<li>
+<p><strong>Buďte připraveni na to, že hierarchie komplikuje věci víc, než čekáte</strong> - ale nehte se tím odradit. I v hierarchických systémech lze najít spojence a postupně budovat změnu.</p>
+</li>
+<li>
+<p><strong>Investujte do kvalitní přípravy každého detailu</strong> - ve veřejném sektoru se chyby odpouštějí méně než jinde, ale kvalitní práce si lidí všimnou a ocení.</p>
+</li>
+<li>
+<p><strong>Hledejte metafory a způsoby, jak mluvit o změně</strong> způsobem, který rezonuje s prostředím - mycelium, ekosystém, regenerativní systémy. Tyto obrazy často fungují lépe než technický žargon.</p>
+</li>
+<li>
+<p><strong>Budujte sítě a vztahy</strong> - ve veřejném sektoru jsou osobní vztahy často klíčové pro úspěch. Investujte čas do poznávání lidí a organizací.</p>
+</li>
+<li>
+<p><strong>Mluvte o té práci</strong> - veřejný sektor potřebuje kvalitní design stejně jako kterýkoli jiný segment. A designová komunita má co nabídnout.</p>
+</li>
+<li>
+<p><strong>Buďte trpěliví, ale ne pasivní</strong> - změny ve veřejném sektoru trvají déle, ale to neznamená, že se nedějí. Hledejte malé kroky a postupné zlepšování.</p>
+</li>
+</ul>
+<h2 id="zvrem-design-jako-most">Závěrem: Design jako most</h2>
+<p>ZDW mi ukázal, že <strong>design skutečně může sloužit jako most mezi různými světy</strong> - mezi veřejným a soukromým sektorem, mezi technickými řešeními a lidskými potřebami, mezi inovacemi a stabilitou.</p>
+<p>Tohle propojování je možná jedna z nejdůležitějších rolí, kterou můžeme jako designéři ve veřejném sektoru hrát. Nejsme tam jen proto, abychom udělali věci &quot;hezčí&quot; nebo &quot;uživatelsky přívětivější&quot;. <strong>Jsme tam proto, abychom pomohli budovat systémy, které skutečně slouží lidem.</strong></p>
+<p>A k tomu potřebujeme nejen designové dovednosti, ale i schopnost porozumět složitosti prostředí, ve kterém pracujeme. Potřebujeme trpělivost, empatii a někdy i odvahu mluvit o problémech, které jiní raději ignorují nebo nemají chuť je otevírat. ZDW mi to všechno připomněl.</p>
+
+            </article>
+        </main>
+
+        <script src="/js/progress.js" defer></script>
+        <script src="/js/rough.js" defer></script>
+        <script src="/js/journey.js" defer></script>
+        <script src="/js/dis-flourish.js" defer></script>
+    </body>
+</html>

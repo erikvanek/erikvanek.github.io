@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="the-mom-test">The Mom Test</h1>
+<h2 id="book-overview">Book Overview</h2>
+<p>&quot;The Mom Test&quot; by Rob Fitzpatrick is a practical guide to conducting customer interviews that yield honest, useful information. The title refers to the principle that your interview questions should be so grounded in reality that even your mom couldn't lie to you when answering them.</p>
+<h2 id="core-principle">Core Principle</h2>
+<p>Don't ask people what they think of your idea — ask them about their life and problems. People will lie (kindly) about your idea, but they can't lie about their own past behavior.</p>
+<h2 id="good-vs-bad-questions">Good vs. Bad Questions</h2>
+<h3 id="bad-questions-avoid">Bad questions (avoid)</h3>
+<ul>
+<li>&quot;Do you think this is a good idea?&quot; — people will say yes to be nice</li>
+<li>&quot;Would you use/buy this?&quot; — hypotheticals are unreliable</li>
+<li>&quot;How much would you pay for this?&quot; — speculative</li>
+</ul>
+<h3 id="good-questions-use-these">Good questions (use these)</h3>
+<ul>
+<li>&quot;Talk me through the last time [the problem] happened&quot;</li>
+<li>&quot;How are you dealing with it now?&quot;</li>
+<li>&quot;What have you already tried?&quot;</li>
+<li>&quot;What's the hardest part about [the situation]?&quot;</li>
+</ul>
+<h2 id="key-rules">Key Rules</h2>
+<ol>
+<li><strong>Talk about their life, not your idea</strong></li>
+<li><strong>Ask about specifics in the past, not generalities or opinions about the future</strong></li>
+<li><strong>Listen more, talk less</strong></li>
+</ol>
+<h2 id="signals-to-watch-for">Signals to Watch For</h2>
+<h3 id="bad-data-ignorediscount">Bad data (ignore/discount)</h3>
+<ul>
+<li>Compliments: &quot;That's really cool!&quot; — feels good, tells you nothing</li>
+<li>Hypotheticals: &quot;I would definitely use that&quot; — not a commitment</li>
+<li>Vague future promises: &quot;We'd probably be interested in that&quot;</li>
+</ul>
+<h3 id="good-data-pay-attention">Good data (pay attention)</h3>
+<ul>
+<li>Specific past behavior: &quot;Last week I spent 3 hours doing X manually&quot;</li>
+<li>Emotional language: &quot;This is the worst part of my week&quot;</li>
+<li>Existing workarounds: &quot;I use a spreadsheet + 2 apps to manage this&quot;</li>
+<li>Concrete commitments: time, reputation, money</li>
+</ul>
+<h2 id="commitment-currencies">Commitment Currencies</h2>
+<p>Strong signals come when people invest something real:</p>
+<ul>
+<li><strong>Time</strong>: agreeing to a follow-up, giving you an intro</li>
+<li><strong>Reputation</strong>: introducing you to a colleague or decision-maker</li>
+<li><strong>Money</strong>: pre-payment, letter of intent</li>
+</ul>
+<p>A conversation without a commitment is just a chat. Push for something concrete at the end.</p>
+<h2 id="the-mom-test-rule">The Mom Test Rule</h2>
+<p>If your interview questions could be answered with pleasing lies, you're doing it wrong. Reframe until only honest answers are useful.</p>
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+<li><a href="/notes/04 - 💽 RAW/2025/04/06/Qualitative research/">Qualitative Research</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Product Discovery/">Product Discovery</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews/">Interviews</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

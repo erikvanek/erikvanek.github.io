@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>Ben Horowitz's <em>The Hard Thing About Hard Things</em> is a field guide to the parts of running a company that have no playbook - the decisions that are emotional rather than analytical, made under existential pressure, with no good moves available. Its throughline is that hard things are hard precisely because there is no formula: leadership is the willingness to sit in that ambiguity, make the least-bad call, and own the struggle rather than wish it away. The struggle, in Horowitz's framing, is where greatness comes from.</p>
+<p>A large share of the notes is about people and organization as the real product of a CEO. Horowitz treats communication architecture as the CEO's most important operational job - one-on-ones, reporting lines, and deliberate process design are how information and trust scale as the company grows and the easy things (communication, decision-making, common knowledge) get hard. He is blunt about the human cost of leadership: being a good company matters most when things go badly, layoffs must be done by direct managers, and political behavior always starts at the top. Hiring is for strengths not absence of weakness, training is among the highest-leverage things a manager can do, and the right kind of executive ambition optimizes for the organization, not the self.</p>
+<p>The closing thread is identity and conviction. Strategy and story are the same thing - a company's &quot;why&quot; must answer why anyone should join, buy, or care - and great CEOs build internal intelligence to keep making good decisions as context shifts. The final lesson is personal: embrace the struggle, and on top of that embrace your own background, weirdness, and instinct.</p>
+<hr>
+<h1 id="the-hard-thing-about-hard-things">The Hard Thing About Hard Things</h1>
+<h2 id="leadership-amp-the-ceos-job">Leadership &amp; the CEO's job</h2>
+<ul>
+<li>the hard thing about hard things is that there's no formula to sort them out</li>
+<li>leadership is the skill to get someone to follow you even out of curiosity</li>
+<li>needs always trump wants in acquisitions and mergers</li>
+<li>innovation requires a combination of knowledge, skill and courage</li>
+<li>all decisions are objective until the first line of code is written - after that, all decisions are emotional</li>
+<li>when you're building a company, you must believe there is an answer to your problems and don't focus on your odds of solving it</li>
+<li>the secret of being a CEO - the ability to make the best move in situations when there are no good moves ^hthat-no-good-moves</li>
+<li><em>most important decisions test the courage more than the intelligence</em> ^hthat-courage</li>
+<li><em>take care of people, product, profit exactly in that order</em> ^hthat-people-product-profit</li>
+<li>3 aspects that make a person worth following:
+<ol>
+<li>ability to articulate vision</li>
+<li>the right kind of ambition</li>
+<li>the ability to achieve the vision</li>
+</ol>
+</li>
+<li>truly great leaders create an environment where their employees have the experience that they matter more than the leader itself ^hthat-leaders-matter</li>
+</ul>
+<h2 id="people-hiring-training-amp-layoffs">People: hiring, training &amp; layoffs</h2>
+<ul>
+<li>if you don't have a world-class talent, you won't be a world-class company</li>
+<li>people are most valuable assets even in technological companies</li>
+<li><em>training is one of the highest leverage activities a manager can perform</em> ^hthat-training-leverage</li>
+<li><em>functional training focuses on finding the most important skills to train your colleagues so that they can do their job well</em></li>
+<li>there are only two ways how to improve employee's performance - motivation and training</li>
+<li><strong>an equivalent of being too busy to train is to be too hungry to eat</strong> ^hthat-too-busy</li>
+<li>the only good reason to hire a senior person to the team is to acquire knowledge and experience on your part you can't fill with existing talent in your organization and that's why often promoting technical roles to executive roles works better than e.g. in sales as knowing internal tech stack is way more important for the role versus knowing client behavior/environment needed for a good sales person can be more easily acquired from the outside</li>
+<li><em>it's important to hire for strengths rather for the lack of weaknesses</em> ^hthat-hire-strengths</li>
+<li>most layoffs happen because the company did not meet its goals / hit its strategy / it is more rare that it's a personal issue and it is important to admit company failure to prevent losing trust of those that remain</li>
+<li><strong>people won't remember everything working for your organization but they will remember the day of being laid off - that's why it's important that their direct managers lay them off and not HR or something similar as they don't have that strong relationships with those being laid off</strong> ^hthat-layoffs</li>
+</ul>
+<h2 id="product-management">Product management</h2>
+<ul>
+<li>in enterprise software companies - two most important roles are VP of sales and VP of engineering</li>
+<li><em>good product managers crisply define the target, the &quot;what&quot; and manage the delivery of the &quot;what&quot;, they don't give direction informally but they gather information informally</em> ^hthat-good-pm</li>
+<li><em>good product managers anticipate product flaws and build real solutions, bad PMs firefight all day</em> ^hthat-pm-anticipate</li>
+<li>bad product managers feel the best when they figure out &quot;the how&quot;</li>
+<li><em>good product managers decompose problems, bad ones mold problems into one</em> ^hthat-pm-decompose</li>
+<li>vanity metrics might decently work for attraction but not for retention as retention metrics don't describe the problem of retention deeply enough</li>
+<li>measurement debt is similar to technical debt and can harm the org from different perspective - occurs when overcapacity to counter-offer an employee that wants to quit or with no performance management being afraid of feeling &quot;like a big company&quot;</li>
+<li><em>sales methodology is an important intellectual property of each company</em></li>
+<li><em>technological founders are the best to run technological companies</em></li>
+</ul>
+<h2 id="communication">Communication</h2>
+<ul>
+<li>sharing setbacks &amp; issues with broader team empowers them to contribute to fixing what's most worth working on right</li>
+<li>in any human interaction - the amount of required communication is inversely proportional to the level of trust - the ability to build this trust is the difference between an organization that works well and the one that is slow ^hthat-trust-comm</li>
+<li><em>the more brains working on the hard problem, the better</em> - &quot;Given enough eyeballs, all bugs are shallow&quot;</li>
+<li>as companies grow bigger, their biggest problem is efficient communication</li>
+<li>CEO's most important operational goal is to implement communication architecture in the company ^hthat-comm-architecture</li>
+<li>one on ones are the best mechanism how to propagate information higher up in the company ^hthat-one-on-ones</li>
+<li>one on ones are employee's meeting and the speaking ratio should be ~90:10 employee:manager</li>
+</ul>
+<h2 id="organization-design-amp-scaling">Organization design &amp; scaling</h2>
+<ul>
+<li><em>running a large organization requires a different skillset than building a company</em></li>
+<li>The Peter principle - in hierarchical organizations people are promoted as long as they are competent at what they do until at some moment they get promoted to a place where they are no longer competent and that place can't be predicted</li>
+<li>promotion process ideally reminds of the very best karate dojos (e.g. getting a black belt from brown means winning a fight over black belt to make sure you are on par with black belt) - sadly there is no clear analogue to this in business</li>
+<li>when companies grow, things that were easier at the beginning become hard, namely these three:
+<ol>
+<li>communication</li>
+<li>decision making</li>
+<li>common knowledge</li>
+</ol>
+</li>
+<li>when scaling organizations - the challenge is to grow while limiting degradation compared to the team of one &quot;that knows everything about everything&quot;</li>
+<li>when scaling organizations - it is important to be able to hand over responsibilities and processes bit by bit - only that's the way how to really scale but it means losing ground slowly by transferring the ownership to someone else</li>
+<li>the first scaling technique to implement is specialization to combat the jack-of-all-trades</li>
+<li><em>the first rule of organizational design is that all organizational designs are bad</em></li>
+<li>if you want people to communicate - the best way is to make them report to the same manager</li>
+<li>when company grows big - it must make a decision whether to organize by a function (dev, sales, ...) or a mission (client-specific, cross-functional teams, ...) and the most important decision is to choose the least evil of those</li>
+<li>six steps plan for org design:
+<ol>
+<li>figure out what needs to be communicated</li>
+<li>figure out what needs to be decided regularly</li>
+<li>prioritize the most important communication and decision paths</li>
+<li>decide who's going to run each group</li>
+<li>identify flaws &amp; implications in previous steps</li>
+<li>figure out a plan to mitigate those</li>
+</ol>
+</li>
+<li>the purpose of process is communication or even better - is a well-structured communication vehicle</li>
+<li>who should design processes? those that do those activities in ad hoc manner</li>
+<li><em>it's much easier to add new people to old processes rather than new processes to old people</em></li>
+<li>during org design it's good to anticipate growth but it's bad to overanticipate it</li>
+<li>there's no such thing as a great executive - there is only a great executive for a specific company at a specific point in time</li>
+</ul>
+<h2 id="strategy-vision-amp-the-company-story">Strategy, vision &amp; the company story</h2>
+<ul>
+<li>when people are buying (not necessarily your product) - it's not a good time for pivot</li>
+<li>in good organizations, people believe that if they do their job well it's going to translate for the good for them and for the organization - this is what makes working for such organizations motivating and fulfilling</li>
+<li>Andy Grove: <em>&quot;The right kind of ambition is the one that helps the company succeed with their vision with the employee's personal success coming only as a by-product of this victory&quot;</em> (on employee ambition types)</li>
+<li>the right kind of executive motivation is to optimize for organization's success rather than a personal one otherwise it will demotivate their subordinates as great company mission motivates more than helping my boss having a good career</li>
+<li><em>in good companies the strategy and the story are the same thing thus every strategy produced there is a story and the story of a company goes beyond quarterly and yearly goals and answers around the question &quot;why&quot; → why should I join the company? why should I be excited to work here? why should I buy its product? why is a world better off thanks to what this company produces? ...</em> ^hthat-strategy-story</li>
+<li>the CEO does not need to be the creator of that vision but <strong>must</strong> be its keeper ^hthat-vision-keeper</li>
+<li>an example of a great company story is Jeff Bezos' letter to stockholders from 1997</li>
+<li><em>great CEOs create exceptional strategies that allow them to continuously build internal intelligence to support good decision making</em> ^hthat-great-ceos</li>
+<li>the number one reason executives fail is that when they continue to do their old job instead of moving to doing their new job especially when context around is changing</li>
+</ul>
+<h2 id="culture-politics-amp-feedback">Culture, politics &amp; feedback</h2>
+<ul>
+<li><em>in a sign of good culture - good news travel slow and bad news spread fast → what helps is to encourage - not punish - people to put problems in the open</em> ^hthat-good-news</li>
+<li>being a good company does not matter when things go well but matters big time when things don't go so well which happens at some point for sure ^hthat-good-company</li>
+<li><em>being a good company is an end in itself and Bill Campbell is good at that</em></li>
+<li>the employee lifecycle - from hire to retire</li>
+<li>a great HR department should help to support, measure and help improve your management team</li>
+<li>head of HR should be similarly to the head of QA, master of process design</li>
+<li>sometimes an organization does not need a decision it needs clarity e.g. in cases of defining org values</li>
+<li><em>political behavior almost always starts at the top from the CEO</em> ^hthat-politics-top</li>
+<li>org politics = people advancing their agendas and careers by other means than contribution and merits</li>
+<li><em>build strong processes around possibly political topics like compensation schemes or personal development</em></li>
+<li>keys for successful feedback provision: ^hthat-feedback-keys
+<ol>
+<li>be authentic from your core and believe fully in what you're saying</li>
+<li>come from the right place and focus on setting up the receiver for success</li>
+<li>don't get personal</li>
+<li>don't clown people in front of their peers</li>
+<li>feedback is not a one-size-fits-all and different people need different approaches</li>
+<li>be direct and specific but not mean</li>
+<li>think of a feedback as a dialogue instead of a monologue</li>
+</ol>
+</li>
+</ul>
+<h2 id="mindset-wartime-amp-entrepreneurship">Mindset, wartime &amp; entrepreneurship</h2>
+<ul>
+<li>the struggle is where greatness comes from ^hthat-struggle-greatness</li>
+<li><em>spend less time on what you could have done and focus that time and attention on what you might do now as there is something you can still influence</em> ^hthat-focus-influence</li>
+<li><em>there's no inertia that is putting company to motion - now should kickstart eight to ten initiatives when creating a startup</em></li>
+<li>WFIO - we're fucked - it's over</li>
+<li><em>running a company is like driving a car in 300 km/h in a turn - if you focus on a wall, you crash; if you focus on a road, you carry on</em> ^hthat-driving</li>
+<li>peacetime/wartime - in peacetime a company focuses on extending its customer base and reinforcing the company's strengths; in wartime a company is typically fending off existential crisis</li>
+<li><em>hard things are hard because there are no easy answers and recipes</em></li>
+<li><strong>most important entrepreneurship lesson - embrace the struggle &amp; extra on top of that embrace your background, weirdness and instinct</strong> ^hthat-embrace-struggle</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/04 - 💽 RAW/2023/01/06/hooked/">Hooked</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/2026/Hyperfocus/">Hyperfocus</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/2026/Liminal Thinking/">Liminal Thinking</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Books to read/">Books to read</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

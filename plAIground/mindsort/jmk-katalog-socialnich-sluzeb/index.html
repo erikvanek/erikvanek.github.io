@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://prostedoma.jmk.cz/Sluzby/Vyhledavani -->
+<html lang="cs" style="font-size: 10px;" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/scripts/content/gps.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podrobné vyhledávání - Elektronický katalog sociálních služeb</title>
+
+    <script src="./jmk-katalog-socialnich-sluzeb_files/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./jmk-katalog-socialnich-sluzeb_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./jmk-katalog-socialnich-sluzeb_files/css">
+    <link href="./jmk-katalog-socialnich-sluzeb_files/bootstrap.css" rel="stylesheet">
+    <link href="./jmk-katalog-socialnich-sluzeb_files/main.min.css" rel="stylesheet">
+    <link href="./jmk-katalog-socialnich-sluzeb_files/animate.min.css" rel="stylesheet">
+    <link href="./jmk-katalog-socialnich-sluzeb_files/Site.css" rel="stylesheet">
+    <link href="./jmk-katalog-socialnich-sluzeb_files/bootstrap-select.css" rel="stylesheet">
+    <script src="./jmk-katalog-socialnich-sluzeb_files/modernizr"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="./jmk-katalog-socialnich-sluzeb_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HX6TTV6PZ9');
+    </script>
+   
+</head>
+<body style="" data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
+    <div id="sticky-content">
+        <header class="header hidden-print">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12 hidden-print">
+                    <div class="header__image-box header__image-box--right">
+                        <a href="https://www.jmk.cz/" title="Portál Jihomoravského kraje">
+                            <img src="./jmk-katalog-socialnich-sluzeb_files/jmk-logo.png" alt="Portál Jihomoravského kraje">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="header__text-box">
+                        <a href="https://prostedoma.jmk.cz/">
+                            <h1>Elektronický katalog sociálních služeb</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-7">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://prostedoma.jmk.cz/">Domů</a></li>
+                                <li><a href="https://prostedoma.jmk.cz/Sluzby/Vyhledavani">Podrobné vyhledání</a></li>
+                                <li><a href="https://prostedoma.jmk.cz/Home/Kontakty">Kontakty</a></li>
+                                <li><a href="https://prostedoma.jmk.cz/Home/Navod">Jak vyhledat službu</a></li>
+                                <li><a href="https://prostedoma.jmk.cz/Home/Vice">Vyhledání služby na mapce JMK</a></li>
+                                <li><a href="http://kissos.kr-jihomoravsky.cz/" title="Přihlášení pro poskytovatele sociálních služeb, pracovníky kraje a obcí">KISSoS</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-lg-3">
+                            <!-- FULLTEXTOVÉ VYHLEDÁVÁNÍ FORM-->
+                            <form class="navbar-form navbar-right" role="search" action="https://prostedoma.jmk.cz/Sluzby/Vyhledat" method="get">
+                                <div class="input-group stylish-input-group">
+                                    <input type="text" class="form-control form-rounded text-white background-hlavni" placeholder="VYHLEDAT SLUŽBU" name="Filter.Text"> 
+                                    <span class="input-group-addon form-rounded">
+                                        <button type="submit">
+                                            <span class="glyphicon glyphicon-search text-kraj-hlavni"></span>   
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-12 col-lg-2">
+                            <div id="font-settings">
+                                <a class="jfontsize-button btn btn-default" id="jfontsize-m2" title="Zmenšit velikost písma" style="cursor: pointer;">A-</a>
+                                <a class="jfontsize-button btn btn-default" id="jfontsize-d2" title="Normální velikost písma" style="cursor: pointer;">A</a>
+                                <a class="jfontsize-button btn btn-default" id="jfontsize-p2" title="Zvětšit velikost písma" style="cursor: pointer;">A+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section id="section-content">
+            <div class="body-container">
+
+
+                
+
+
+<div class="panel panel-info">
+    <div class="panel-heading">Vyhledat</div>
+    <div class="panel-body">
+        <form action="https://prostedoma.jmk.cz/Sluzby/Vyhledat" method="get">    <div class="form-group row">
+        <label class="control-label col-sm-2" for="Filter_CilovaSkupina">Cílové skupina:</label>
+        <div class="col-sm-4">
+            <select class="form-control" data-dep="true" data-dep-child="Filter_ZivotniSituace" data-dep-multiselect="True" data-dep-url="/DataJson/GetZivotniSituace" data-val="true" data-val-number="The field Cílové skupina: must be a number." id="Filter_CilovaSkupina" name="Filter.CilovaSkupina"><option value="">-- Vyberte cílovou skupinu --</option>
+<option value="1">Senioři</option>
+<option value="2">Rodiny s&nbsp;dětmi</option>
+<option value="3">Osoby se zdravotním postižením</option>
+<option value="4">Osoby v&nbsp;krizových situacích</option>
+</select>
+        </div>
+
+        <label class="control-label col-sm-2" for="Filter_FormaSluzby">Forma poskytování sociální služby:</label>
+        <div class="col-sm-4">
+            <select class="form-control" data-val="true" data-val-number="The field Forma poskytování sociální služby: must be a number." id="Filter_FormaSluzby" name="Filter.FormaSluzby"><option value="">-- Vyberte formu služby --</option>
+<option value="0">Pobytová (P)</option>
+<option value="1">Ambulantní (A)</option>
+<option value="2">Terénní (T)</option>
+</select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-sm-2" for="Filter_ZivotniSituace">Životní situace:</label>
+        <div class="col-sm-4">
+            <span class="multiselect-native-select"><select class="form -control" id="Filter_ZivotniSituace" multiple="multiple" name="Filter.ZivotniSituace" style="display: none;"><option value="">-- Vyberte druh služby --</option>
+<option value="1">Chci rozvíjet své dovednosti, setkávat se s vrstevníky</option>
+<option value="2">Doma mě bijí a zanedbávají mě</option>
+<option value="3">Stal/a jsem se obětí trestné činnosti, bojím se násilníka</option>
+<option value="4">Šikanují mě - šikana, kyberšikana</option>
+<option value="5">V důsledku braní drog / jiných závislostí jsem se dostal/a do nesnází</option>
+<option value="6">Vycházím z&nbsp;dětského domova</option>
+<option value="7">Nemám kde bydlet, hrozí mi ztráta bydlení</option>
+<option value="8">Nemám práci, hrozí mi ztráta zaměstnání, omezení mi znemožňuje pracovat</option>
+<option value="9">Mám problémy v&nbsp;rodině, v&nbsp;partnerských vztazích</option>
+<option value="10">Potřebuji pomoc s&nbsp;otázkami ohledně peněz, mám dluhy</option>
+<option value="11">Potřebuji pomoc: hrozí odebrání dítěte / problémové chování dítěte</option>
+<option value="12">Potřebuji pomoc s péčí o dítě do 7 let s vývojovou vadou</option>
+<option value="13">V důsledku duševní nemoci nemohu žít stejný život jako moji vrstevníci</option>
+<option value="14">Mám (mně blízký člověk má) poruchu autistického spektra, potřebuji pomoc</option>
+<option value="15">Potřebuji pomoc s péčí o sebe (o někoho blízkého), chci (chce) zůstat doma</option>
+<option value="16">Potřebuji pomoc s péčí o sebe (o někoho blízkého), nemůžu (nemůže) zůstat doma</option>
+<option value="17">Potřebuji pomoc s&nbsp;dopravou, doprovodem, tlumočením</option>
+<option value="18">Potřebuji zajistit nebo půjčit kompenzační pomůcku, potřebuji úpravu bytu</option>
+<option value="19">Potřebuji pomoc: s péčí o umírající osobu / překonat úmrtí blízké osoby</option>
+<option value="20">Pečuji o blízkou osobu, potřebuji odpočinek, čas na vyřízení vlastních záležitostí</option>
+<option value="21">Jsem cizinec v krizi potřebuji pomoc a informace </option>
+<option value="22">Jsem v jiné situaci, potřebuji poradit</option>
+</select><div class="btn-group" style="width: 100%;"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="-- Vyberte životní situaci --" style="width: 100%; overflow: hidden; text-overflow: ellipsis;" aria-expanded="false"><span class="multiselect-selected-text">-- Vyberte životní situaci --</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu" style="max-height: 300px; overflow: hidden auto;"><li class="multiselect-item multiselect-filter" value="0"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text" placeholder="Search"><span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span></div></li><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all"> Vybrat vše</label></a></li><li><a tabindex="0"><label class="checkbox" title="-- Vyberte druh služby --"><input type="checkbox" value=""> -- Vyberte druh služby --</label></a></li><li><a tabindex="0"><label class="checkbox" title="Chci rozvíjet své dovednosti, setkávat se s vrstevníky"><input type="checkbox" value="1"> Chci rozvíjet své dovednosti, setkávat se s vrstevníky</label></a></li><li><a tabindex="0"><label class="checkbox" title="Doma mě bijí a zanedbávají mě"><input type="checkbox" value="2"> Doma mě bijí a zanedbávají mě</label></a></li><li><a tabindex="0"><label class="checkbox" title="Stal/a jsem se obětí trestné činnosti, bojím se násilníka"><input type="checkbox" value="3"> Stal/a jsem se obětí trestné činnosti, bojím se násilníka</label></a></li><li><a tabindex="0"><label class="checkbox" title="Šikanují mě - šikana, kyberšikana"><input type="checkbox" value="4"> Šikanují mě - šikana, kyberšikana</label></a></li><li><a tabindex="0"><label class="checkbox" title="V důsledku braní drog / jiných závislostí jsem se dostal/a do nesnází"><input type="checkbox" value="5"> V důsledku braní drog / jiných závislostí jsem se dostal/a do nesnází</label></a></li><li><a tabindex="0"><label class="checkbox" title="Vycházím z dětského domova"><input type="checkbox" value="6"> Vycházím z&nbsp;dětského domova</label></a></li><li><a tabindex="0"><label class="checkbox" title="Nemám kde bydlet, hrozí mi ztráta bydlení"><input type="checkbox" value="7"> Nemám kde bydlet, hrozí mi ztráta bydlení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Nemám práci, hrozí mi ztráta zaměstnání, omezení mi znemožňuje pracovat"><input type="checkbox" value="8"> Nemám práci, hrozí mi ztráta zaměstnání, omezení mi znemožňuje pracovat</label></a></li><li><a tabindex="0"><label class="checkbox" title="Mám problémy v rodině, v partnerských vztazích"><input type="checkbox" value="9"> Mám problémy v&nbsp;rodině, v&nbsp;partnerských vztazích</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc s otázkami ohledně peněz, mám dluhy"><input type="checkbox" value="10"> Potřebuji pomoc s&nbsp;otázkami ohledně peněz, mám dluhy</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc: hrozí odebrání dítěte / problémové chování dítěte"><input type="checkbox" value="11"> Potřebuji pomoc: hrozí odebrání dítěte / problémové chování dítěte</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc s péčí o dítě do 7 let s vývojovou vadou"><input type="checkbox" value="12"> Potřebuji pomoc s péčí o dítě do 7 let s vývojovou vadou</label></a></li><li><a tabindex="0"><label class="checkbox" title="V důsledku duševní nemoci nemohu žít stejný život jako moji vrstevníci"><input type="checkbox" value="13"> V důsledku duševní nemoci nemohu žít stejný život jako moji vrstevníci</label></a></li><li><a tabindex="0"><label class="checkbox" title="Mám (mně blízký člověk má) poruchu autistického spektra, potřebuji pomoc"><input type="checkbox" value="14"> Mám (mně blízký člověk má) poruchu autistického spektra, potřebuji pomoc</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc s péčí o sebe (o někoho blízkého), chci (chce) zůstat doma"><input type="checkbox" value="15"> Potřebuji pomoc s péčí o sebe (o někoho blízkého), chci (chce) zůstat doma</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc s péčí o sebe (o někoho blízkého), nemůžu (nemůže) zůstat doma"><input type="checkbox" value="16"> Potřebuji pomoc s péčí o sebe (o někoho blízkého), nemůžu (nemůže) zůstat doma</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc s dopravou, doprovodem, tlumočením"><input type="checkbox" value="17"> Potřebuji pomoc s&nbsp;dopravou, doprovodem, tlumočením</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji zajistit nebo půjčit kompenzační pomůcku, potřebuji úpravu bytu"><input type="checkbox" value="18"> Potřebuji zajistit nebo půjčit kompenzační pomůcku, potřebuji úpravu bytu</label></a></li><li><a tabindex="0"><label class="checkbox" title="Potřebuji pomoc: s péčí o umírající osobu / překonat úmrtí blízké osoby"><input type="checkbox" value="19"> Potřebuji pomoc: s péčí o umírající osobu / překonat úmrtí blízké osoby</label></a></li><li><a tabindex="0"><label class="checkbox" title="Pečuji o blízkou osobu, potřebuji odpočinek, čas na vyřízení vlastních záležitostí"><input type="checkbox" value="20"> Pečuji o blízkou osobu, potřebuji odpočinek, čas na vyřízení vlastních záležitostí</label></a></li><li><a tabindex="0"><label class="checkbox" title="Jsem cizinec v krizi potřebuji pomoc a informace "><input type="checkbox" value="21"> Jsem cizinec v krizi potřebuji pomoc a informace </label></a></li><li><a tabindex="0"><label class="checkbox" title="Jsem v jiné situaci, potřebuji poradit"><input type="checkbox" value="22"> Jsem v jiné situaci, potřebuji poradit</label></a></li></ul></div></span>
+        </div>
+        <label class="control-label col-sm-2" for="Filter_DruhSluzby">Druh služby:</label>
+        <div class="col-sm-4">
+            <select class="form-control" data-val="true" data-val-number="The field Druh služby: must be a number." id="Filter_DruhSluzby" name="Filter.DruhSluzby"><option value="">-- Vyberte druh služby --</option>
+<option value="1">Azylové domy</option>
+<option value="2">Centra denních služeb</option>
+<option value="3">Denní stacionáře</option>
+<option value="4">Domovy pro osoby se zdravotním postižením</option>
+<option value="5">Domovy pro seniory</option>
+<option value="6">Domovy se zvláštním režimem</option>
+<option value="7">Domy na půl cesty</option>
+<option value="8">Chráněné bydlení</option>
+<option value="9">Intervenční centra</option>
+<option value="10">Kontaktní centra</option>
+<option value="11">Krizová pomoc</option>
+<option value="12">Nízkoprahová denní centra</option>
+<option value="13">Nízkoprahová zařízení pro děti a mládež</option>
+<option value="14">Noclehárny</option>
+<option value="15">Odborné sociální poradenství</option>
+<option value="16">Odlehčovací služby</option>
+<option value="17">Osobní asistence</option>
+<option value="18">Pečovatelská služba</option>
+<option value="19">Podpora samostatného bydlení</option>
+<option value="20">Průvodcovské a předčitatelské služby</option>
+<option value="21">Raná péče</option>
+<option value="22">Služby následné péče</option>
+<option value="23">Sociálně aktivizační služby pro rodiny s dětmi</option>
+<option value="24">Sociálně aktivizační služby pro seniory a osoby se zdravotním postižením</option>
+<option value="25">Sociálně terapeutické dílny</option>
+<option value="26">Sociální rehabilitace</option>
+<option value="27">Sociální služby poskytované ve zdravotnických zařízeních lůžkové péče</option>
+<option value="28">Telefonická krizová pomoc</option>
+<option value="29">Terapeutické komunity</option>
+<option value="30">Terénní programy</option>
+<option value="32">Tlumočnické služby</option>
+<option value="33">Týdenní stacionáře</option>
+<option value="34">Tísňová péče</option>
+<option value="35">Centra duševního zdraví</option>
+</select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-sm-2" for="Filter_KlicovaSlova">Kličové slovo:</label>
+        <div class="col-sm-4">
+            <span class="multiselect-native-select"><select class="form-control" id="Filter_KlicovaSlova" multiple="multiple" name="Filter.KlicovaSlova" style="display: none;"><option value="1">Alkohol</option>
+<option value="2">Alzheimerova choroba</option>
+<option value="3">Asistence</option>
+<option value="4">Autismus </option>
+<option value="5">Bezbariérový byt </option>
+<option value="6">Bydlení</option>
+<option value="7">Dluhy</option>
+<option value="8">Domácí násilí</option>
+<option value="9">Doprovod, tlumočení</option>
+<option value="10">Drogy</option>
+<option value="11">Duševní onemocnění</option>
+<option value="12">Exekuce</option>
+<option value="13">Gamblerství </option>
+<option value="14">Mozková příhoda</option>
+<option value="15">Oběť trestného činu</option>
+<option value="16">Péče o dítě</option>
+<option value="17">Péče o dospělého</option>
+<option value="18">Péče o lidi s handicapem</option>
+<option value="19">Péče o seniory </option>
+<option value="20">Péče o umírající</option>
+<option value="21">Pomoc v nouzi</option>
+<option value="22">Poradenství</option>
+<option value="23">Problémy ve vztazích</option>
+<option value="24">Sociální dávky </option>
+<option value="25">Stařecká demence</option>
+<option value="26">Šikana, kyberšikana</option>
+<option value="27">Výkon trestu, vězení</option>
+<option value="28">Zapůjčení kompenzačních pomůcek</option>
+<option value="29">Závislost</option>
+<option value="30">Ztráta bydlení</option>
+<option value="31">Ztráta zaměstnání</option>
+<option value="32">Mentální postižení</option>
+<option value="33">Smyslové omezení</option>
+</select><div class="btn-group" style="width: 100%;"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="-- Vyberte kličové slovo --" style="width: 100%; overflow: hidden; text-overflow: ellipsis;" aria-expanded="false"><span class="multiselect-selected-text">-- Vyberte kličové slovo --</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu" style="max-height: 300px; overflow: hidden auto;"><li class="multiselect-item multiselect-filter" value="0"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text" placeholder="Search"><span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span></div></li><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all"> Vybrat vše</label></a></li><li><a tabindex="0"><label class="checkbox" title="Alkohol"><input type="checkbox" value="1"> Alkohol</label></a></li><li><a tabindex="0"><label class="checkbox" title="Alzheimerova choroba"><input type="checkbox" value="2"> Alzheimerova choroba</label></a></li><li><a tabindex="0"><label class="checkbox" title="Asistence"><input type="checkbox" value="3"> Asistence</label></a></li><li><a tabindex="0"><label class="checkbox" title="Autismus "><input type="checkbox" value="4"> Autismus </label></a></li><li><a tabindex="0"><label class="checkbox" title="Bezbariérový byt "><input type="checkbox" value="5"> Bezbariérový byt </label></a></li><li><a tabindex="0"><label class="checkbox" title="Bydlení"><input type="checkbox" value="6"> Bydlení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Dluhy"><input type="checkbox" value="7"> Dluhy</label></a></li><li><a tabindex="0"><label class="checkbox" title="Domácí násilí"><input type="checkbox" value="8"> Domácí násilí</label></a></li><li><a tabindex="0"><label class="checkbox" title="Doprovod, tlumočení"><input type="checkbox" value="9"> Doprovod, tlumočení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Drogy"><input type="checkbox" value="10"> Drogy</label></a></li><li><a tabindex="0"><label class="checkbox" title="Duševní onemocnění"><input type="checkbox" value="11"> Duševní onemocnění</label></a></li><li><a tabindex="0"><label class="checkbox" title="Exekuce"><input type="checkbox" value="12"> Exekuce</label></a></li><li><a tabindex="0"><label class="checkbox" title="Gamblerství "><input type="checkbox" value="13"> Gamblerství </label></a></li><li><a tabindex="0"><label class="checkbox" title="Mozková příhoda"><input type="checkbox" value="14"> Mozková příhoda</label></a></li><li><a tabindex="0"><label class="checkbox" title="Oběť trestného činu"><input type="checkbox" value="15"> Oběť trestného činu</label></a></li><li><a tabindex="0"><label class="checkbox" title="Péče o dítě"><input type="checkbox" value="16"> Péče o dítě</label></a></li><li><a tabindex="0"><label class="checkbox" title="Péče o dospělého"><input type="checkbox" value="17"> Péče o dospělého</label></a></li><li><a tabindex="0"><label class="checkbox" title="Péče o lidi s handicapem"><input type="checkbox" value="18"> Péče o lidi s handicapem</label></a></li><li><a tabindex="0"><label class="checkbox" title="Péče o seniory "><input type="checkbox" value="19"> Péče o seniory </label></a></li><li><a tabindex="0"><label class="checkbox" title="Péče o umírající"><input type="checkbox" value="20"> Péče o umírající</label></a></li><li><a tabindex="0"><label class="checkbox" title="Pomoc v nouzi"><input type="checkbox" value="21"> Pomoc v nouzi</label></a></li><li><a tabindex="0"><label class="checkbox" title="Poradenství"><input type="checkbox" value="22"> Poradenství</label></a></li><li><a tabindex="0"><label class="checkbox" title="Problémy ve vztazích"><input type="checkbox" value="23"> Problémy ve vztazích</label></a></li><li><a tabindex="0"><label class="checkbox" title="Sociální dávky "><input type="checkbox" value="24"> Sociální dávky </label></a></li><li><a tabindex="0"><label class="checkbox" title="Stařecká demence"><input type="checkbox" value="25"> Stařecká demence</label></a></li><li><a tabindex="0"><label class="checkbox" title="Šikana, kyberšikana"><input type="checkbox" value="26"> Šikana, kyberšikana</label></a></li><li><a tabindex="0"><label class="checkbox" title="Výkon trestu, vězení"><input type="checkbox" value="27"> Výkon trestu, vězení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Zapůjčení kompenzačních pomůcek"><input type="checkbox" value="28"> Zapůjčení kompenzačních pomůcek</label></a></li><li><a tabindex="0"><label class="checkbox" title="Závislost"><input type="checkbox" value="29"> Závislost</label></a></li><li><a tabindex="0"><label class="checkbox" title="Ztráta bydlení"><input type="checkbox" value="30"> Ztráta bydlení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Ztráta zaměstnání"><input type="checkbox" value="31"> Ztráta zaměstnání</label></a></li><li><a tabindex="0"><label class="checkbox" title="Mentální postižení"><input type="checkbox" value="32"> Mentální postižení</label></a></li><li><a tabindex="0"><label class="checkbox" title="Smyslové omezení"><input type="checkbox" value="33"> Smyslové omezení</label></a></li></ul></div></span>
+        </div>
+
+        <label class="control-label col-sm-2" for="Filter_Obec">Obec:</label>
+        <div class="col-sm-4">
+            <select class="form-control" data-val="true" data-val-number="The field Obec: must be a number." disabled="disabled" id="Filter_Obec" name="Filter.Obec"><option value="">-- Nejprve vyberte okres --</option>
+</select>
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <label class="control-label col-sm-2" for="Filter_Okres">Okres:</label>
+        <div class="col-sm-4">
+            <span class="multiselect-native-select"><select class="form-control" data-dep="true" data-dep-child="Filter_Obec" data-dep-url="/DataJson/GetObce" id="Filter_Okres" multiple="multiple" name="Filter.Okres" style="display: none;"><option value="">-- Vyberte okres --</option>
+<option value="1">Brno-město</option>
+<option value="2">Brno-venkov</option>
+<option value="3">Blansko</option>
+<option value="4">Břeclav</option>
+<option value="5">Hodonín</option>
+<option value="6">Vyškov</option>
+<option value="7">Znojmo</option>
+</select><div class="btn-group" style="width: 100%;"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="-- Vyberte okres --" style="width: 100%; overflow: hidden; text-overflow: ellipsis;" aria-expanded="false"><span class="multiselect-selected-text">-- Vyberte okres --</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu" style="max-height: 300px; overflow: hidden auto;"><li class="multiselect-item multiselect-filter" value="0"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text" placeholder="Search"><span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span></div></li><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all"> Vybrat vše</label></a></li><li><a tabindex="0"><label class="checkbox" title="-- Vyberte okres --"><input type="checkbox" value=""> -- Vyberte okres --</label></a></li><li><a tabindex="0"><label class="checkbox" title="Brno-město"><input type="checkbox" value="1"> Brno-město</label></a></li><li><a tabindex="0"><label class="checkbox" title="Brno-venkov"><input type="checkbox" value="2"> Brno-venkov</label></a></li><li><a tabindex="0"><label class="checkbox" title="Blansko"><input type="checkbox" value="3"> Blansko</label></a></li><li><a tabindex="0"><label class="checkbox" title="Břeclav"><input type="checkbox" value="4"> Břeclav</label></a></li><li><a tabindex="0"><label class="checkbox" title="Hodonín"><input type="checkbox" value="5"> Hodonín</label></a></li><li><a tabindex="0"><label class="checkbox" title="Vyškov"><input type="checkbox" value="6"> Vyškov</label></a></li><li><a tabindex="0"><label class="checkbox" title="Znojmo"><input type="checkbox" value="7"> Znojmo</label></a></li></ul></div></span>
+        </div>
+        <label class="control-label col-sm-2" for="Filter_Vzdalenost">Vzdálenost od obce:</label>
+        <div class="col-sm-4">
+            <div class="input-group">
+                <select class="form-control" data-val="true" data-val-number="The field Vzdálenost od obce: must be a number." disabled="disabled" id="Filter_Vzdalenost" name="Filter.Vzdalenost" title="Vzdálenost je počítána od středu obce"><option value="">-- Vyberte vzdálenost od obce --</option>
+<option value="5">5</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="30">30</option>
+<option value="35">35</option>
+<option value="40">40</option>
+<option value="45">45</option>
+<option value="50">50</option>
+</select>
+                <div class="input-group-addon">km</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row hidden-print">
+        <div class="col-sm-6">
+            <button type="submit" class="btn btn-primary"> Vyhledat </button>
+            <a id="ZobrazMapu" class="btn btn-primary" href="https://prostedoma.jmk.cz/Sluzby/Vyhledavani#map" style="visibility: hidden">Zobrazit na mapě</a>
+
+        </div>
+    </div>
+</form><link href="./jmk-katalog-socialnich-sluzeb_files/bootstrap-multiselect.css" rel="stylesheet">
+<script src="./jmk-katalog-socialnich-sluzeb_files/bootstrap-multiselect.js"></script>
+<script src="./jmk-katalog-socialnich-sluzeb_files/bootstrap-multiselect-collapsible-groups.js"></script>
+<script>
+
+    var state = {
+        disabled: false
+    }
+    $(document).ready(function () {
+        setMultiselects('#Filter_ZivotniSituace', '-- Vyberte životní situaci --')
+        setMultiselects('#Filter_KlicovaSlova', '-- Vyberte kličové slovo --')
+        setMultiselects('#Filter_Okres', '-- Vyberte okres --')
+    });
+    function setMultiselects(selector,nonSelectedText) {
+        $(selector).multiselect({
+            buttonWidth: '100%',
+            numberDisplayed: 10,
+            maxHeight: 300,
+            delimiterText: ' | ',
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            disableIfEmpty: true,
+            nonSelectedText: nonSelectedText,
+            nSelectedText: 'Vybráno',
+            allSelectedText: 'Vybrat vše',
+            selectAllText: 'Vybrat vše',
+            onChange: function (option, checked) {
+                console.log(this);
+                debugger;
+                var element = $(this.$select[0]);
+                if (element.data('dep')) {
+                    element.trigger("change");
+                }
+                checkDisabled(element);
+            },
+            onSelectAll: function () {
+                debugger 
+                var element = $(this)[0].$select;
+                checkDisabled(element);
+            },
+            onDeselectAll: function () {
+                debugger 
+                var element = $(this)[0].$select;
+                checkDisabled(element);
+            }
+
+
+        });
+        $(selector).hide();
+    }
+
+    function checkDisabled(element) {
+        if (element.attr('id') === 'Filter_ZivotniSituace' && element.find('option:selected').length > 0){
+            $('#Filter_KlicovaSlova').attr('disabled', 'disabled');
+            $('#Filter_KlicovaSlova').next().find("button").attr('disabled', 'disabled');
+            state.disabled = true;
+        }
+        if (element.attr('id') === 'Filter_ZivotniSituace' && element.find('option:selected').length === 0 ){
+            $('#Filter_KlicovaSlova').attr('disabled', false);
+            $('#Filter_KlicovaSlova').next().find("button").attr('disabled', false);
+            state.disabled = false;
+        }
+        if (element.attr('id') === 'Filter_KlicovaSlova' && element.find('option:selected').length > 0 && state.disabled === false){
+            $('#Filter_ZivotniSituace').attr('disabled', 'disabled');
+            $('#Filter_ZivotniSituace').next().find("button").attr('disabled', 'disabled');
+            state.disabled = true;
+        }
+        if (element.attr('id') === 'Filter_KlicovaSlova' && element.find('option:selected').length === 0 ){
+            $('#Filter_ZivotniSituace').attr('disabled', false);
+            $('#Filter_ZivotniSituace').next().find("button").attr('disabled', false);
+            state.disabled = false;
+        }
+        return false;
+    }
+
+    function allowVzdalenost(e) {
+        if ($(this).val() === "null") {
+            $("#Filter_Vzdalenost").attr("disabled", true);
+        } else {
+            $("#Filter_Vzdalenost").attr("disabled", false);
+        }
+    }
+
+    $(document).ready(function () {
+        $("#Filter_Obec").on('change', allowVzdalenost);
+        $("select").each(function() {
+            var element = $(this);
+            checkDisabled(element);
+        });
+    });
+
+
+</script>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#ddcilSku').selectpicker();
+        $('#ddzivSit').selectpicker();
+        $('#ddkliSlo').selectpicker();
+    });
+</script>
+
+
+            </div>
+    </section>
+
+    <section class="section-contact">
+        <div class="row footer hidden-print">
+            <div class="">
+                <div class="col-md-4 ">
+                    <div class="circle-tile">
+                        <div class="circle-tile-heading background-hlavni"><i class="fa fa-phone fa-fw fa-3x"></i></div>
+                        <div class="circle-tile-content background-hlavni">
+                            <h4 class="text-uppercase text-faded text-white">KONTAKTY</h4>
+                            <div class="text-faded contacts text-white">
+                                <p>
+                                    <strong>Krajský úřad Jihomoravského kraje<br></strong>
+                                    Žerotínovo nám. 449/3
+                                    601 82 Brno
+                                </p>
+                                <p>
+                                    Telefon: +420 541 651 111<br>
+                                    <a href="http://www.jmk.cz/">www.jmk.cz</a>
+                                </p>
+                                <p>
+                                    <a href="https://socialnisluzby-jmk.kr-jihomoravsky.cz/Folders/753-1-Kontakty.aspx">Kontakty na pracovníky odboru sociálních věcí Krajského úřadu</a>
+                                </p>
+                            </div>
+                            <div class="circle-title_bottom">
+                                <a class="circle-tile-footer text-white" href="https://prostedoma.jmk.cz/Home/Kontakty">Více kontaktů <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 ">
+                    <div class="circle-tile">
+                        <div class="circle-tile-heading background-kraj-doplnkova"><i class="fa fa-phone fa-fw fa-3x"></i></div>
+                        <div class="circle-tile-content background-kraj-doplnkova">
+                            <h4 class="text-uppercase text-faded text-white">Tísňové kontakty</h4>
+                            <div class="text-faded contacts">
+
+                                <table class="kontakty-table">
+                                    <tbody><tr>
+                                        <td>112</td>
+                                        <td>Tísňová linka (univerzální)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>150</td>
+                                        <td>Hasiči</td>
+                                    </tr>
+                                    <tr>
+                                        <td>155</td>
+                                        <td>Záchranka</td>
+                                    </tr>
+                                    <tr>
+                                        <td>158</td>
+                                        <td>Policie ČR</td>
+                                    </tr>
+                                    <tr>
+                                        <td>156</td>
+                                        <td>Městská policie</td>
+                                    </tr>
+                                </tbody></table>
+
+                            </div>
+                            <div class="circle-title_bottom">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 ">
+                    <div class="circle-tile">
+                        <a href="https://prostedoma.jmk.cz/Sluzby/Vyhledat?druhSluzby=28&amp;druhSluzby=11">
+                            <div class="circle-tile-heading background-kraj-doplnkova"><i class="fa fa-phone fa-fw fa-3x"></i></div>
+                        </a>
+                        <div class="circle-tile-content background-kraj-doplnkova">
+                            <h4 class="text-uppercase text-faded text-white">Krizové linky</h4>
+                            <div class="text-faded contacts">
+
+                                Kontakty na telefonickou krizovou pomoc a krizovou pomoc – sociální služby poskytující radu, pomoc a podporu lidem, kteří se nacházejí v situaci ohrožení zdraví nebo života.
+
+
+                            </div>
+                            <div class="circle-title_bottom">
+                                <a class="circle-tile-footer text-white" href="https://prostedoma.jmk.cz/Sluzby/Vyhledat?druhSluzby=28&amp;druhSluzby=11&amp;ShowFilter=false">Pomoc v krizi&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="hidden-print">
+
+        <div class="bottom">
+            <div class="row mt-2">
+
+                <div class="col-md-3"><img src="./jmk-katalog-socialnich-sluzeb_files/logo_footer1.svg" class="footer__logo"></div>
+                <div class="col-md-9">
+                    Elektronický katalog sociálních služeb Jihomoravského kraje vznikl dle smlouvy o dílo v rámci individuálního projektu „Podpora plánování rozvoje sociálních služeb v Jihomoravském kraji IV“, registrační číslo projektu: CZ.03.2.63/0.0/0.0/15_007/0006965, financovaného z Evropského sociálního fondu a státního rozpočtu ČR prostřednictvím Operačního programu Zaměstnanost.
+                </div>
+            </div>
+            <p>
+                © 2024 - <a href="http://www.augur-consulting.cz/">AUGUR Consulting s.r.o.</a>
+                © <a href="http://www.kr-jihomoravsky.cz/">Jihomoravský kraj - informační portál</a>
+            </p>
+            <span>
+                <a href="https://www.toplist.cz/">
+                    <script>
+                    <!--
+                        document.write('<img src="https://toplist.cz/dot.asp?id=1786368&http=' +
+                            escape(document.referrer) +
+                            '&t=' +
+                            escape(document.title) +
+                            '&wi=' +
+                            escape(window.screen.width) +
+                            '&he=' +
+                            escape(window.screen.height) +
+                            '&cd=' +
+                            escape(window.screen.colorDepth) +
+                            '" width="1" height="1" border=0 alt="Elektronický katalog sociálních služeb Jihomoravského kraje" />');
+                                                                //--></script><img src="./jmk-katalog-socialnich-sluzeb_files/dot.asp" width="1" height="1" border="0" alt="Elektronický katalog sociálních služeb Jihomoravského kraje">
+                    <noscript>
+                        <img src="https://toplist.cz/dot.asp?id=1786368"
+                             alt="Elektronický katalog sociálních služeb Jihomoravského kraje" width="1" height="1" />
+                    </noscript>
+                </a>
+            </span>
+        </div>
+
+    </footer>
+
+
+
+    
+    <script src="./jmk-katalog-socialnich-sluzeb_files/bootstrap"></script>
+
+
+    <script src="./jmk-katalog-socialnich-sluzeb_files/bootstrap-select.js"></script>
+    <script src="./jmk-katalog-socialnich-sluzeb_files/bootstrap-select-cz.js"></script>
+
+    <script src="./jmk-katalog-socialnich-sluzeb_files/jstorage.js"></script>
+    <script src="./jmk-katalog-socialnich-sluzeb_files/jquery.jfontsize-2.0.js"></script>
+    <script src="./jmk-katalog-socialnich-sluzeb_files/shared"></script>
+
+
+    
+    
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

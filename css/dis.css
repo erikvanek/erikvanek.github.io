@@ -1,0 +1,266 @@
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --dark-color: #222;
+    --gray-color: #ddd;
+    --gray-light-color: #eee;
+    --gray-darker-color: #bbb;
+    --s1-color: #48d;
+    --s2-color: #b84;
+    --s3-color: #8b4;
+    --s4-color: #84b;
+    --s5-color: #b48;
+    --s6-color: #4b2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-color);
+    font-size: 20px;
+    color: var(--gray-light-color);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+li,
+p {
+    line-height: 2rem;
+    max-width: 55ch;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+#wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+}
+
+#intro {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+
+    #intro,
+    #bio,
+    .expandable {
+        width: 90%;
+    }
+}
+
+#bio-text,
+.expandable {
+    background-color: var(--gray-color);
+    color: var(--dark-color);
+}
+
+.expandable {
+    padding: 0.5rem;
+    --angle: 0deg;
+    border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+    animation: 10s rotate linear infinite;
+    border-width: .375rem;
+    margin: 0.375rem;
+    flex-grow: 1;
+    border-style: solid;
+}
+
+h3 {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+a {
+    color: var(--gray-light-color);
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    border: 2px dotted var(--gray-darker-color);
+}
+
+#bio-text a,
+.expandable a {
+    color: var(--dark-color);
+    border: 2px dotted var(--dark-color);
+}
+
+#bio {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+}
+
+#bio img {
+    object-fit: cover;
+    max-width: 35%;
+    clip-path: circle(40%);
+    margin: 1rem;
+}
+
+@media (max-width: 800px) {
+    #bio {
+        flex-direction: column;
+    }
+
+    #bio img {
+        max-width: 100%;
+        clip-path: circle(50%);
+        order: 2;
+    }
+
+    #wrapper {
+        width: auto;
+        margin: .5rem;
+        font-size: 16px;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+}
+
+#bio-text {
+    padding: 0rem 1%;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    margin: 1.5rem;
+    text-align: left;
+}
+
+h2,
+h3,
+h4 {
+    align-self: flex-start;
+    margin-left: 6rem;
+}
+
+@media (max-width: 800px) {
+
+h2,
+h3,
+h4 {
+    align-self: flex-start;
+    margin-left: 3rem;
+}
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--gray-color);
+    max-width: 80%;
+}
+
+img {
+    max-width: 100%;
+}
+
+figcaption {
+    color: var(--gray-color);
+    padding-top: 1rem;
+    text-decoration: overline;
+}
+
+.s1 h3 {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+ul {
+    width: 100%;
+    margin-left: 8rem;
+    margin-top: 0;
+}
+
+/* ============================================================
+   Hero figure — full-width image at the top of an article.
+   Use <figure class="hero-figure"> around the img.
+   ============================================================ */
+.hero-figure {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 2rem;
+}
+.hero-figure a { border: none; padding: 0; }
+.hero-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* ============================================================
+   Reusable floated article figures
+   Used by: ostrovy-pozitivni-inovace, retro-workshop (+ future articles).
+   Wrap a <figure class="float-figure"> together with the paragraph(s)
+   it should sit beside inside a <div class="float-wrap">.
+   Modifiers: .left floats left, .narrow shrinks it (e.g. portrait shots).
+   ============================================================ */
+
+/* On any page with a floated figure, left-align the column so wrapped text
+   and the rest of the body share a single left edge. */
+#wrapper:has(.float-figure) { align-items: baseline; }
+/* ...but a hero image opts back into centering. */
+#wrapper:has(.float-figure) .hero-figure { align-self: center; }
+
+/* Block formatting context: contains the float within its own section. */
+.float-wrap { width: 100%; overflow: hidden; }
+/* tame the site's deep list indents when a list sits beside a float */
+.float-wrap ul,
+.float-wrap ol { margin-left: 1.5rem; }
+
+.float-figure { float: right; width: clamp(220px, 32vw, 300px); margin: .3rem 0 1.2rem 1.8rem; }
+.float-figure.left { float: left; margin: .3rem 1.8rem 1.2rem 0; }
+.float-figure.narrow { width: clamp(160px, 22vw, 215px); }
+.float-figure img { display: block; width: 100%; height: auto; border-radius: 4px;
+                    box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
+                    transition: transform .15s ease, box-shadow .15s ease; }
+/* figure links opt out of the global dotted link border */
+.float-figure a { border: none; border-radius: 0; padding: 0; }
+.float-figure a:hover img { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(0, 0, 0, .34); }
+.float-figure figcaption a { color: var(--gray-color); font-weight: 600; }
+.float-figure figcaption a:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+    .float-figure,
+    .float-figure.left,
+    .float-figure.narrow { float: none; width: min(280px, 70%); margin: 0 auto 1.4rem; }
+}

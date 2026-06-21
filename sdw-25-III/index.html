@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4lzLUckaWn8onmSxB6y18ZD6ljLzNqdBzMtvGXXQL6s" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content='Prioritizace, agilní metodiky a troška prototypování'>
+    <title>Service design workshop III | Erik Vaněk</title>
+    <meta name="description" content='Prioritizace, agilní metodiky a troška prototypování'>
+    <link rel="stylesheet" href="/css/nu.css">
+    <link rel="stylesheet" href="../../css/revealjs/reveal.css">
+</link>
+<!-- <link rel="stylesheet" href="../../css/revealjs/black.css">
+</link> -->
+    <link rel="stylesheet" href="../css/presentation-jinag.css">
+    </link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6MSV4WTZ4N"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MSV4WTZ4N');
+</script>
+
+
+<body>
+    <div class="backgrounds">
+            <!-- <div class="background-grid"></div> -->
+        <div></div>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+            
+<link rel="stylesheet" href="../css/presentation-kisk.css">
+</link>
+
+
+<section>
+    <div class="equal-columns">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+            <br>
+            <br>
+            <h1 id="service-design-workshop-iii">Service design workshop III</h1>
+            <h2 id="prioritizace-agiln-metodiky-a-troka-prototypovn">Prioritizace, agilní metodiky a troška prototypování</h2>
+            <br>
+            <br>
+            <h4 id="erik-vank-20032025">Erik Vaněk, 20.03.2025</h4>
+            <h4 id="a-hrefmailto359416mailmunicz359416mailmunicza"><a href="mailto:359416@mail.muni.cz">359416@mail.muni.cz</a></h4>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1 id="co-dnes-ekat">Co dnes čekat?</h1>
+    <ul>
+        <li>Hlavní téma - prioritizace</li>
+        <li>Rozcvička</li>
+        <li>Organizační vize a strategie</li>
+        <li>Produktové trio a agilní metodiky</li>
+        <li>MVP a iterace</li>
+        <li>Prioritizační techniky prakticky</li>
+        <li>Pauza na ☕ (kolem 11:40)</li>
+        <li>Na konci trošku k prototypování</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="dneska-zaneme-aktivnji">Dneska začneme aktivněji</h1>
+    <ul>
+        <li>Než se pustíme do teorie, zkusíme malou simulaci</li>
+        <li>Zabere nám to cca 20 minut</li>
+        <li>
+            Představte si hypotetický scénář:</li>
+
+        <p>
+            Jako tým jste vyhráli expedici na rok na pustý tropický ostrov. Váš tým bude
+            společně žít, pracovat a přežívat.
+            Na ostrově je pitná voda, ovoce a ryby. Podnebí je příjemné. Jako tým si můžete vzít deset věcí, které vám
+            pomohou přežít a udržet si pohodu.
+        </p>
+</section>
+
+<section>
+    <h1 id="rozdlen-a-1-kolo">Rozdělení a 1. kolo</h1>
+    <ul>
+        <li>Rozdělíme se a promícháme po 3-4 lidech</li>
+        <li>Každý individuálně vymyslete <strong>5-7 věcí</strong>, které si chcete vzít</li>
+        <li>Napište na lepíky – jedna věc na jeden lepík</li>
+        <li>Máte na to 3 minuty</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="redukce-duplicit-a-prvn-vbr">Redukce duplicit a první výběr</h1>
+    <ul>
+        <li>Představte si seznamy ve skupině navzájem</li>
+        <li>Eliminujte duplicity</li>
+        <li>Vyberte 10 nejdůležitějších věcí (ideálně seřaďte dle potřebnosti sestupně)</li>
+        <li>Máte na to 5 minut</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="houstone-mme-problm">Houstone máme problém 🔥</h1>
+    <p>Loď, která vás převáží na ostrov, narazila na problém. Kvůli poškození trupu a přílivové vlně musí kapitán
+        odlehčit náklad. Každý tým si nyní může vzít pouze 5 věcí.</p>
+    <ul>
+        <li>Vyberte TOP 5</li>
+        <li>Proč zrovna tyto?</li>
+        <li>Proč ne jiné?</li>
+        <li>Máte na to 5 minut</li>
+    </ul>
+</section>
+
+
+<section>
+    <h1 id="debrief">Debrief</h1>
+    <ul>
+        <li>Jak těžké by bylo vybrat TOP 3?</li>
+        <li>Podle čeho jste postupovali?</li>
+        <li>U čeho byly nejtěžší diskuze?</li>
+        <li>Co by vám pomohlo se lépe rozhodnout?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="projekty">Projekty</h1>
+    <ul>
+        <li>Jak jste spokojení s vašimi výzvami?</li>
+        <li>Jak se dařila tvorba konceptů?</li>
+        <li>Jak šla AI-powered ideace?</li>
+        <li>Co hiring?</li>
+        <li>Potřebujete ode mě aktuálně něco?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Otázky než začneme?</h1>
+</section>
+
+<section>
+    <h1 id="prioritizace">Prioritizace</h1>
+    <ul>
+        <li>Typický zástupce sbíhavého myšlení</li>
+        <li>Cíl: Vybrat ty <strong>aktuálně nejdůležitější</strong> nápady, koncepty, iniciativy</li>
+        <li>Dle čeho prioritizujeme?</li>
+        <ul>
+            <li>Čas</li>
+            <li>Kvalita</li>
+            <li>Preference</li>
+        </ul>
+        <li>Ruthless prioritization – maximální prioritizace dopadu</li>
+    </ul>
+</section>
+
+<section>
+    <h2 id="zna-kvlen">Zóna kvílení</h2>
+    <img src="https://i0.wp.com/i2insights.org/wp-content/uploads/2019/05/kappel_kaner-diamond-model-participation.jpg?resize=1050%2C772&ssl=1"
+        alt="" style="max-height: 500px;">
+    <p>Zdroj: <a target="_blank" href="https://i2insights.org/2019/05/28/collaboration-groan-zone/">i2insights.org</a>
+        nebo <a
+            href="https://futuropolis.cz/kriticky-vyucujici/dialogicke-a-bezpecne-prostredi/groan-zone-zona-kvileni/"
+            target="_blank">Futuropolis</a></p>
+</section>
+
+<section>
+    <h1 id="co-pro-prioritizaci-potebujeme">Co pro prioritizaci potřebujeme?</h1>
+    <ul>
+        <li>Znát cíle organizace/týmu/projektu
+            <ul>
+                <li>Z nich pak vyplývají heuristiky</li>
+            </ul>
+        </li>
+        <li>Znát metriky např. formou KPIs, OKRs, ...</li>
+        <li>Znát vizi a strategii</li>
+        <li>
+            Prostor pro kvalitní diskuzi
+        </li>
+        <li>Co potřebujeme záleží v jaký moment a co prioritizujeme</li>
+    </ul>
+</section>
+
+
+<section>
+    <h1 id="vize">Vize</h1>
+    <ul>
+        <li>Když nemáme vizi, nevíme kam jdeme
+            <ul>
+                <li>A nevíme jak určit priority</li>
+            </ul>
+        </li>
+        <li>Vize jako nástroj motivace a náboru talentu</li>
+        <li>Audiovizuální formát pomáhá přesvědčivosti
+        </li>
+        <li>Ideálně sdílená
+            <ul>
+                <li>Jinak je to jen floskule z níž mají lidi srandu</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="knowledge-navigator-1987">Knowledge navigator 1987</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/umJsITGzXd0?si=qzLMpw8f1a4T9a4g"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h1 id="microsoft-productivity-ped-10-lety">Microsoft productivity – před 10 lety</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/w-tFdreZB94?si=n3Q0p4tLJUNr0Xhs"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h1 id="strategie">Strategie</h1>
+    <ul>
+        <li>Vize definuje čeho chceme dosáhnout – popisuje žádoucí stav</li>
+        <li>Strategie popisuje konkrétní kroky, jak vize dosáhnout
+            <ul>
+                <li>Přemosťuje současný a žádoucí stav</li>
+            </ul>
+        </li>
+        <li>Někdy mluvíme o tzv. gap analýze
+            <ul>
+                <li>Pomáhá určit co je mezera mezi žádoucím a současným</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <h1 id="taxonomie-rizik">Taxonomie rizik</h1>
+    <ul>
+        <li>
+            Při prioritizaci se protínají různé perspektivy a čelíme různým typům rizik, ty popisují tzv. taxonomie
+            rizik
+        </li>
+        <li><a href="https://designthinking.ideo.com/">IDEO</a>
+            <ul>
+                <li>Desirability, Viability, Feasibility (product trio)</li>
+            </ul>
+        </li>
+        <li>
+            <a href="https://www.svpg.com/four-big-risks/">SVPG</a>
+            <ul>
+                <li>Value, Usability, Feasibility, Business viability</li>
+            </ul>
+        </li>
+        <li>Za každý typ rizika zodpovídá jiná role
+            <ul>
+                <li>Potřebujeme znát perspektivy ostatních rolí</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <img src="https://makeiterate.com/wp-content/uploads/2023/01/DVF-Framework-Venn-Diagram-1024x696.png" alt=""
+        style="max-height: 500px;">
+    <p>IDEO taxonomie – Zdroj: <a
+            href="https://makeiterate.com/ideos-desirability-viability-feasibility-framework-a-practical-guide/"
+            target="_blank">Make:iterate</a></p>
+</section>
+
+<section>
+    <h1 id="product-trio">Product trio</h1>
+    <ul>
+        <li>Multidisciplinární tým zodpovědný za podobu scope a následný vývoj</li>
+        <li>
+            Role:
+            <ul>
+                <li>Product manager – viability</li>
+                <li>Engineering – feasibility</li>
+                <li>Design – desirability</li>
+            </ul>
+        </li>
+        <li>PM říká <strong>co</strong>, design říká <strong>proč</strong>, engineering řeší <strong>jak</strong></li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="product-trio-ii">Product trio II</h1>
+    <ul>
+        <li>Prioritizce probíhá typicky společně</li>
+        <li>Frekvence a podoba závisí na zvolené metodice a přístupu k vývoji
+            <ul>
+                <li>Agilní přístup – průběžně cca za jeden až 2 týdny</li>
+                <li>Vodopád – intenzivně na začátku</li>
+                <li>Shape-up – 6 týdenní cykly</li>
+            </ul>
+        </li>
+        <li>Standard u digitálních produktových týmů, service design takový standard nemá (nebo o něm nevím)</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="agiln-metodiky">Agilní metodiky</h1>
+    <ul>
+        <li>Původně vychází ze softwarového prostředí</li>
+        <li>Výkop – Agilní manifesto v 2001</li>
+        <li>Cílem bylo:
+            <ul>
+                <li>Lepší zpětná vazba v procesu</li>
+                <li>Kvalitnější komunikace s klienty</li>
+                <li><strong>Snižování rizik</strong> zkracováním smyček zpětné vazby</li>
+                <li>Snazší reakce na změny</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section data-background="../img/design/agile-manifesto.png" data-background-size="contain">
+</section>
+
+<section>
+    <h1 id="agiln-metodiky-ii">Agilní metodiky II</h1>
+    <ul>
+        <li>Iterace!</li>
+        <li>Kaizen</li>
+        <li>Retrospektiva</li>
+        <li>Prezentace inkrementů (přírůstků) ideálně se zákazníkem</li>
+        <li>Nejběžnější je Scrum</li>
+        <li>Dneska je agilní kdeco – důležitý je pragmatismus</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="scrum">Scrum</h1>
+    <ul>
+        <li>Běžně 2 týden dlouhé iterace – tzv. sprinty</li>
+        <li>Rituály:
+            <ul>
+                <li>Daily stand-up</li>
+                <li>Grooming a prioritizace backlogu</li>
+                <li>Sprint review</li>
+                <li>Sprint planning</li>
+            </ul>
+        </li>
+        <li>Pozor na byrokracii</li>
+    </ul>
+</section>
+
+<section data-background="white">
+    <h1 id="scrum">Scrum</h1>
+    <img src="https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2023-09/scrum-framework-9.29.23.png"
+        alt="" srcset="">
+</section>
+
+<section>
+    <h1 class="r-fit-text">MVP 🚀</h1>
+    <ul>
+        <li>Zkušenosti?</li>
+        <li>Výhody?</li>
+        <li>Nevýhody?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="mvp">MVP</h1>
+    <ul>
+        <li>Minimal <strong>viable</strong> product</li>
+        <li>Nejmenší možný produkt či služba na který lze získat zpětnou vazbu</li>
+        <ul>
+            <li>Např. u ISu by to mohla být funkce zápisu známek či přihlašování na zkoušky</li>
+        </ul>
+        <li>Hlavní motivace – překvapivě <strong>prioritizace</strong>
+            <ul>
+                <li>Soustředit se na ty aktuálně nejdůležitější aspekty</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section data-background="https://blog.crisp.se/wp-content/uploads/2016/01/Making-sense-of-MVP-.jpg"
+    data-background-size="contain">
+</section>
+
+<section>
+    <h1 id="mvp-ii">MVP II</h1>
+    <ul>
+        <li>Co je ten aktuálně nejdůležitější problém, který aktuálně uživatelé potřebují vyřešit?
+            <ul>
+                <li>Víme z výzkumu, může pomoci continuous discovery</li>
+            </ul>
+        </li>
+        <li>Nejspíše máme spoustu nápadů – vzhůru do prioritizace!</li>
+        <li>Objevuje se i <a
+                href="https://medium.com/agileinsider/what-is-a-minimum-lovable-product-mvp-vs-mlp-including-examples-4f78cdba7f8e"
+                target="_blank">MLP</a> – minimum loveable product</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Otázky? 🤔</h1>
+</section>
+
+<section>
+    <h1 id="prioritizan-techniky">Prioritizační techniky</h1>
+    <ul>
+        <li>Detailněji v interaktivní osnově
+            <ul>
+                <li>Dot voting</li>
+                <li>Tématická analýza / clustering (už jsme dnes zkoušeli)</li>
+                <li>Rozhodovací matice</li>
+                <li>Eisenhower matice</li>
+                <li>MOSCOW</li>
+                <li>Backlog (je spíš nástroj)</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="dot-voting">Dot voting</h1>
+    <ul>
+        <li>Určitě znáte</li>
+        <li>"Každý dostane X teček, které umístí kam uzná za vhodné"</li>
+        <li>Jednoduchá metoda k provedení</li>
+        <li>Demokratizace rozhodování</li>
+        <li>Neobstojí u strategičtějších rozhodnutí</li>
+    </ul>
+</section>
+
+<section data-background="../img/design/dotvoting.png" data-background-size="contain">
+</section>
+
+<!-- https://www.linkedin.com/pulse/dotmocracy-broken-jason-diceman/ -->
+
+<section>
+    <h1 id="tmatick-analza-clustering">Tématická analýza / clustering</h1>
+    <ul>
+        <li>Typicky následuje po ideaci</li>
+        <li>Redukujeme duplicity a hledáme tématické shluky</li>
+        <li>Druhý krok dnešní zahřívací aktivity</li>
+        <li>Hledání shody je skvělá skupinová aktivita</li>
+        <li>Někdy může být náročné definovat shluky (obzvlášť u abstraktnějších témat)</li>
+    </ul>
+</section>
+
+<section data-background="../img/design/clusetr-dot-vote.jpg" data-background-size="contain">
+</section>
+
+
+<section>
+    <h1 id="rozhodovac-matice">Rozhodovací matice</h1>
+    <ul>
+        <li>Výborný a flexibilní nástroj pro rozhodování</li>
+        <li>Typický postup:
+            <ul>
+                <li>Výběr kritérií</li>
+                <li>Definovat váhy kritérií (např. 0-10)</li>
+                <li>Ohodnotit (možnost kombinace individuální a společné práce)</li>
+                <li>Diskuze nad výsledky</li>
+            </ul>
+        <li>Lze využít i vážení – tj. nějaké faktory mají vyšší hodnotu při hodnocení</li>
+        </li>
+    </ul>
+</section>
+
+
+<section data-background="https://cloudfresh.com/wp-content/uploads/2022/09/matrix-decision-score.png"
+    data-background-size="contain">
+</section>
+
+<section>
+    <h1 id="eisenhowerova-matice">Eisenhowerova matice</h1>
+    <ul>
+        <li>Super pro rozdělování úkolů strategické a taktické</li>
+        <li>Eisenhower: <em>"Důležité úkoly nejsou nikdy urgentní"</em> (zjednodušeno)</li>
+        <li>
+            2 osy
+            <ul>
+                <li>Urgence X Důležitost</li>
+            </ul>
+        </li>
+        <li>4 kvartály
+            <ul>
+                <li>Důležité, Urgentní, Nedůležité, K zahození</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="eisenhowerova-matice-ii">Eisenhowerova matice II</h1>
+    <ul>
+        <li>4 kvartály
+            <ul>
+                <li>Q1 – Důležité a urgentní – udělat hned</li>
+                <li>Q2 – <strong>Důležité a neurgentní – naplánovat</strong></li>
+                <li>Q3 – Nedůležité a urgentní – delegovat</li>
+                <li>Q4 – Nedůležité a neurgentní – zahodit</li>
+            </ul>
+        </li>
+        <li>Q2 jako cesta ke strategické a hluboké práci</li>
+    </ul>
+</section>
+
+
+<section data-background-size="contain">
+    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F6Z0iRvBwjXMLrd28BUzTW4%2Fa3b7838c90a65b26a2edb6814e7430dd%2Feisenhower-matrix.png"
+        alt="" style="max-height: 600px;">
+</section>
+
+<!-- https://www.todoist.com/cs/productivity-methods/eisenhower-matrix -->
+
+<section>
+    <h1 id="moscow">MOSCOW</h1>
+    <ul>
+        <li>Must have</li>
+        <li>Should have</li>
+        <li>Could have</li>
+        <li>Will not have</li>
+        <li>Skupinová diskuze nad tím která položka patří do které kategorie</li>
+        <li>Výborný nástroj pro prioritizaci při tvorbě MVP a navazujících iterací</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="jet-drobnosti">Ještě drobnosti</h1>
+    <ul>
+        <li>Prioritizujeme ideálně průběžně
+            <ul>
+                <li>Stratgická prioritizace jendou za kvartál, rok, ...</li>
+                <li>Taktická prioritizace jendou za týden, kteraci, ...</li>
+            </ul>
+        </li>
+        <li>Podobně jako u ideace – techniky lze kombinovat vzájemně</li>
+        <li>V reálných prostředí často do procesu promlouvá politika a jiná dynamika</li>
+        <li>Garbage in, garbage out – někdy nám nezbývá než odhadovat </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="dneska-si-vyzkoume">Dneska si vyzkoušíme</h1>
+    <ul>
+        <li>Středně pokročilé metody
+            <ul>
+                <li>Impact effort matici</li>
+                <li>NUF test (nakonec jsme nestihli během hodiny)</li>
+            </ul>
+        </li>
+        <li>Budeme kombinovat individuální a skupinové hodnocení</li>
+        <li>Cílem je mít na konci vybrán ideálně jeden, maximálně 2 koncepty, které budete v projektech dál
+            rozpracovávat
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="impact-effort-matice">Impact effort matice</h1>
+    <ul>
+        <li>Podobný postup jako Eisenhower</li>
+        <ul>
+            <li>Dvě osy
+                <ul>
+                    <li>Dopad – jaký dopad bude mít vyřešení na naši cílovku?</li>
+                    <li>Náročnost – jak náročné je daný problém vyřešit se zdroji, které máme?</li>
+                </ul>
+            </li>
+        </ul>
+        <li>Cílem je identifikovat tzv. quick wins nebo nízko visící ovoce – položky, které mají <strong>vysoký dopad a
+                jsou snadno realizovatelné</strong></li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="impact-effort-matice-ii">Impact effort matice II</h1>
+    <ul>
+        <li>Položku jednu po druhé ohodnocujeme a umísťujeme na dvojdimenzionální ose</li>
+        <li>Průběžně jednotlivé položky mezi sebou porovnáváme</li>
+        <li>Můžeme je přemisťovat dle průběžné diskuze nad komplexitou a dopadem</li>
+        <li>Na konci typicky vybíráme ty s nízkou náročností a vyoským dopadem pro další rozpracování</li>
+    </ul>
+</section>
+
+<section data-background="https://media.nngroup.com/media/editor/2021/11/11/impact-effort-nng.png"
+    data-background-size="contain">
+</section>
+
+<!-- https://www.nngroup.com/articles/prioritization-methods/ -->
+
+<section
+    data-background="https://cdn.prod.website-files.com/638399844afef71800e463bc/679ba1d81720fd7935b54c38_6410b0473adb341feeeea34d_cnvs-prioritizing-product-backlog-3-effort.jpeg"
+    data-background-size="contain">
+</section>
+
+<!-- https://www.getcnvs.design/blog/design-an-impact-effort-matrix -->
+
+<section>
+    <h1 id="pojme-si-to-vyzkouet">Pojďme si to vyzkoušet</h1>
+    <ul>
+        <li>doporučuju seřadit nejdřív na jedné ose a pak na druhé</li>
+        <li>pracujte se vzájemným srovnáváním
+            <ul>
+                <li>Jen X snazší než Y?</li>
+                <li>Má X vyšší dopad než Y?</li>
+                <li>Postupně budete nejspíše položky průběžně předělávat</li>
+            </ul>
+        </li>
+        <li>dejme tomu 15 minut</li>
+        <li>Možná obměna – zaměnit náročnost za zajímavost</li>
+    </ul>
+</section>
+
+
+<section>
+    <h1 id="nuf-test">NUF test</h1>
+    <ul>
+        <li>Příklad rozhodovací matice
+            <ul>
+                <li>New – už to někdo dříve zkoušel? (pro hodnocení pomůže znalost prostředí)</li>
+                <li>Useful – jak pomůže nápad vyřešit problém?</li>
+                <li>Feasible – jak snadno můžeme nápad zrealizovat?</li>
+            </ul>
+        </li>
+        <li>Zkusme opět se všemi koncepty</li>
+        <li>Dostaneme podobné výsledky nebo se budou lišit?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="nuf-test-ii">NUF test II</h1>
+    <ul>
+        <li>Udělejte si tabulku v níž bude 5 sloupců:
+            <ul>
+                <li>Název konceptu, New , Useful, Feasible, Skóre</li>
+            </ul>
+        </li>
+        <li>Řádky budou jednotlivé koncepty</li>
+        <li>Ohodnoťte jednotlivé koncepty v těchto třech kategoriích a v posledním sečtěte
+            <ul>
+                <li>Nejdříve individuálně za 10 minut, pak diskutujte v týmu individuální pořadí a co z něj vyplývá</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section data-background="https://i0.wp.com/gamestorming.com/wp-content/uploads/2011/03/NUF.jpg?resize=300%2C238&ssl=1"
+    data-background-size="contain">
+</section>
+
+<!-- https://gamestorming.com/nuf-test/ -->
+
+<section>
+    <h1 class="r-fit-text">Pauza na ☕</h1>
+</section>
+
+<section>
+    <h1 id="prototypovn">Prototypování</h1>
+</section>
+
+<section>
+
+    <img src="https://images.computerhistory.org/revonline/images/102716262p-03-01.jpg?w=600" style="max-height: 500px;"
+        alt="">
+</section>
+
+<section>
+    <div class="equal-columns">
+
+        <img src="https://images.computerhistory.org/revonline/images/102716262p-03-01.jpg?w=600"
+            style="max-height: 500px;" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Palm-IMG_7025.jpg"
+            style="height: 600px; margin: 0 auto;" alt="">
+    </div>
+</section>
+
+<section>
+    <img src="https://jablickar.cz/wp-content/uploads/2019/03/twarren_190308_3283_2333.jpg" style="max-height: 500;"
+        alt="">
+</section>
+
+<!-- <section>
+    <h1 id="prototypovn">Prototypování</h1>
+    <ul>
+        <li>Jaké máte zkušenosti?</li>
+        <li>Co byste si chtěli odnést?</li>
+    </ul>
+</section> -->
+
+<section>
+    <h1 id="motivace-k-prototypovn">Motivace k prototypování</h1>
+    <ul>
+        <li>Prototypujeme abychom <strong>něco zjistili</strong></li>
+        <li>Prototypováním snižujeme rizika špatných rozhodnutí
+            <ul>
+                <li>Zkracování zpětnovazebné smyčky</li>
+                <li>Průběžné korekce</li>
+                <li>Vodopád verus agilní přístup</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="proces-prototypovn">Proces prototypování</h1>
+    <ul>
+        <li>Zjemňování nápadů</li>
+        <li>Rekombinace různých nápadů dohromady</li>
+        <li>Prototypy jsou throw-away!
+            <ul>
+                <li>Fail and learn fast</li>
+            </ul>
+        </li>
+        <li>Typicky: nápad > koncept > prototyp > zjištění > akce
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="co-pi-prototypovn-zvit">Co při prototypování zvážit</h1>
+    <ul>
+        <li>Papír X Digitál X Video X Fyzické objekty</li>
+        <li>High / mid / low fidelity</li>
+        <li>Na začátku klíčová otázka – co chci zjistit / ověřit?</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="nstroje">Nástroje</h1>
+    <ul>
+        <li>Papír a psací potřeby</li>
+        <li>Digitální – Figma (state-of-art), Miro, Framer, ...</li>
+        <li>Kód ať už na webu, v aplikacích nebo hardware</li>
+        <li>Vibe coding / design – snižování bariéry ke kódu
+        <li>Příště si ukážeme nějaké AI-powered nástroje</li>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2 id="low-fidelity-app-prototyping">Low-fidelity app prototyping</h2>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/y20E3qBmHpg?si=oS4AO1SkrOG_ql6A"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <p>nebo třeba <a
+            href="https://www.figma.com/proto/bfxhhYTW26rwx3KTTqx1GS/Jarmilka?node-id=9-3&p=f&viewport=237,1264,0.25&t=yPvV5ZNldI2a81JY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=9:3"
+            target="_blank">klikatelný prototyp</a> ve Figmě</p>
+</section>
+
+<section>
+    <h1 id="pt">Příště</h1>
+    <ul>
+        <li>Prosím přineste vybrané koncepty
+            <ul>
+                <li>Nebojte se je i více dopracovat</li>
+            </ul>
+        </li>
+        <li>Prakticky si vyzkoušíme techniku design critique
+            <ul>
+                <li>Budete sbírat první zpětnou vazbu mimo svůj tým</li>
+            </ul>
+        </li>
+        <li>Detailněji se budeme zabývat prototypováním</li>
+        <li>Pokud můžete – přineste si počítače</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="r-fit-text">Konzultace k projektům</h1>
+</section>
+
+        </div>
+
+        <footer>Presentation at <a href="/sdw-25-III" target="_blank">erikvanek.com/sdw-25-III</a>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="../../js/reveal.js"></script>
+    <script type="text/javascript" src="../../js/reveal-notes.js"></script>
+
+
+    <script>
+        Reveal.initialize({ center: true, hash: true, autoPlayMedia: true, plugins: [RevealNotes],
+ });
+    </script>
+</body>
