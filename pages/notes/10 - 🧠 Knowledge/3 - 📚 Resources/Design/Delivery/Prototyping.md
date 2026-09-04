@@ -83,6 +83,14 @@ Prototypes can be categorized by what they aim to represent or test:
 ## Relation to Design Process
 Prototyping serves as a bridge between conceptual models (the interface people interact with) and mental models (what humans have in mind). Effective prototyping aligns these models through iterative exploration and validation.
 
+## On prototyping the why - *Build* (Fadell)
+
+- *prototyping = turning abstract concepts into physical representations* ([[Build#^build-prototyping-def|Fadell]])
+- **prototyping each path of the customer journey** helps tremendously to get it right - the more physical / tangible those prototypes can be, the better feedback can be gathered ([[Build#^build-prototype-journey|Fadell]])
+- *prototypes are a great way to articulate **the why** behind the idea* ([[Build#^build-prototype-why|Fadell]])
+- *the more amazing an idea seems - the more time you spend prototyping it to get as much data as possible* ([[Build#^build-amazing-prototype|Fadell]])
+- *marketing has to be embedded in product development since day 1 as it can bring important context similarly to user research and it is especially helpful while prototyping product's narrative* ([[Build#^build-marketing-day-1|Fadell]])
+
 ## Related Notes
 - [[Lo-Fi Prototyping Methods]]
 - [[Iteration]]

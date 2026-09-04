@@ -5,7 +5,7 @@ resources:
 
 ## Customer interviews
 - the problem with customer interviews is **that they want to please you** therefore can't be trusted fully
-- What helps is to **ask more widely for their [[JTBD 1]]** and their context rather than just on a specific product
+- What helps is to **ask more widely for their [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]]** and their context rather than just on a specific product
 	- focus on the question – what is the job your customer is hiring you for?
 - we must **understand what customers do and do not know**
 	- customers usually know only what system tells and allows then
@@ -26,7 +26,7 @@ resources:
 - what other solutions they tried
 - what worked and what did not
 - what is similar and what is different between those solutions
-- how is their life better once they have solved the [[JTBD 1]]
+- how is their life better once they have solved the [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]]
 - what makes customers think one solution is better than the other
 - How will the customers evolve once their job is solved
 - what alternatives have you tours tried before

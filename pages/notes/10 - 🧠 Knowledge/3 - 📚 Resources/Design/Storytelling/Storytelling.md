@@ -42,3 +42,13 @@ tags:
 	- that's what helps to structure headlines
 		- main headline asks the question
 		- subhead is as clear as possible in what it does
+
+## On the product story - *Build* (Fadell)
+
+- *storytelling is how you get a group of people make a leap of faith to do something new which is what all big choices we make ultimately boil down to - believing in a story that if X is done, Y happens* ([[Build#^build-leap-of-faith|Fadell]])
+- *every product should have a story that explains why it exists and **how** it solves customer's problem* ([[Build#^build-product-story|Fadell]])
+- a good product story has three elements: focuses on people's rational and emotional sides; it translates complicated concepts into simple ones; it reminds people of the problem being solved by focusing on the **why** ([[Build#^build-story-elements|Fadell]])
+- a good story is an act of empathy - it recognizes the needs of its audience ([[Build#^build-story-empathy|Fadell]])
+- *analogies give customers superpowers e.g. 1000 songs in your pocket is easy to grasp and then to share with others* ([[Build#^build-analogies|Fadell]])
+- **quick stories are easy to remember & repeat** ([[Build#^build-quick-stories|Fadell]])
+- *the ultimate job of marketing is to find the very best way to tell the **true** story of your product* ([[Build#^build-marketing-true-story|Fadell]])

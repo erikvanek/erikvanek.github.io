@@ -9,3 +9,10 @@ resources:
 	- Others have mentioned second naïveté as the ability to revisit a domain of expertise in a completely new light and engaging with it anew to uncover new ideas. **The banal becomes the sublime over time.**
 - And the only way to continuously learn and create is to have what the zen masters call **_the beginner’s mind._**
 - long term cultivateion of **naivité** is an effective antidoite against mid-career doldrums and helps preventing running out of fumes - sometimes referred to as deliberate amateurism
+
+## Related notes
+
+- [[Knowledge]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Learning Techniques|Learning Techniques]]
+- [[Cognitive Processes]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Personal Development/Second Brain|Second Brain]]

@@ -26,7 +26,7 @@ The field encompasses various metric types including performance metrics (task c
 
 ## Key concepts
 - **Metrics** – verified indicators for measuring attributes or aspects
-	- [[UX_Metriky]] & [[CX_Metriky]]
+	- [[UX Metriky]] & [[CX Metrics]]
 - **Frameworks** – verified procedures and guides
 	- e.g. B-COM model
 - **Theory** – verified descriptions of reality and their explanations

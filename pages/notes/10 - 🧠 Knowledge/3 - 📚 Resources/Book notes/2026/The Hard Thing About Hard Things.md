@@ -1,9 +1,11 @@
 ---
+type: note
+created: 2026-06-21
+source_type: book
 title: The Hard Thing About Hard Things
 author: Ben Horowitz
 year: 2014
-date_created: 2026-06-21
-source_type: book
+intent: "[[Book Notes Extraction]]"
 tags:
   - leadership
   - management
@@ -154,3 +156,4 @@ The closing thread is identity and conviction. Strategy and story are the same t
 - [[Hyperfocus]]
 - [[Liminal Thinking]]
 - [[Books to read]]
+- [[Build]]

@@ -32,4 +32,4 @@ This MOC organizes recipes, techniques, and notes related to cooking and ferment
 - [[to cook|Cooking Plans]]
 
 ## Related Areas
-- [[10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation|Cooking and Fermentation Area]]
+- [[10 - 🧠 Knowledge/2 - 🌱 Areas/Cooking and fermentation/Index|Cooking and Fermentation Area]]

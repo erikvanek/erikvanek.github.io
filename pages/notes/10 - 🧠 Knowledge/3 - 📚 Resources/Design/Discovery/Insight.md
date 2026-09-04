@@ -43,3 +43,12 @@ __“I saw this” + “I know this” = insight__
 - ARTICULATE THE WHY
 - CAPTURE THE MOTIVATION
 - ENVISION THE IDEAL
+
+## Research as delayed intuition - *Build* (Fadell)
+
+- *research is a practice of delayed intuition* ([[Build#^build-delayed-intuition|Fadell]])
+- Daniel Kahneman - in order to make better decisions - you need to slow down ([[Build#^build-kahneman-slow|Fadell]])
+- *the best ideas are painkillers, not vitamins* - painkillers eliminate something that's constantly bothering you, a regular irritation you can't get rid of ([[Build#^build-painkillers|Fadell]])
+- *numbers are empty without interpretation and that's where storytelling / empathization tools like personas can come into play* ([[Build#^build-numbers-empty|Fadell]])
+- *when you're making something new, there's never a way how to support with data that it's going to work* ([[Build#^build-no-data-new|Fadell]])
+- most decisions we make are data-informed, not data-made ([[Build#^build-data-informed|Fadell]])

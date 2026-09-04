@@ -2,6 +2,8 @@
 
 This folder contains automation scripts for maintaining and validating the second brain system.
 
+> Personal terminal/Claude Code config (statusline, iTerm2 profile) lives in `terminal-setup/` - see its own README.
+
 ## 🔄 Script Reuse Policy
 - **Always check this folder first** before creating new scripts for similar operations
 - Extend existing scripts rather than duplicating functionality

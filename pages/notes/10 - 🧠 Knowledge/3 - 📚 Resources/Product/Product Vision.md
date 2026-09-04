@@ -101,6 +101,14 @@ A product vision articulates the desired future state that a product aims to cre
 ## On owning vs. keeping the vision — *The Hard Thing About Hard Things* (Horowitz)
 - the CEO does not need to be the creator of that vision but **must** be its keeper ([[The Hard Thing About Hard Things#^hthat-vision-keeper|Horowitz]])
 
+## Vision, insights & data - *Build* (Fadell)
+
+- *for a disruptive product you need these 3 things in this order: **vision** (what you want to make, why, who is it for, why would they pay), **insights** (from customer and/or market research), **data** (the scope of opportunity and how people currently use what they use)* ([[Build#^build-vision-insights-data|Fadell]])
+- when working on a new version - this order gets reversed to 3-2-1 ([[Build#^build-order-reversed|Fadell]])
+- *once you have your vision - a good technique to try out is to write a press release for what you want to put out there - it makes you prioritize and focus on what matters* ([[Build#^build-press-release|Fadell]])
+- **the why behind the product should be crisp & easy to articulate to be able to easily explain why people need it and that's the only way to decide what features it should have** ([[Build#^build-crisp-why|Fadell]])
+- story helps you align people behind a shared vision ([[Build#^build-story-align|Fadell]])
+
 ## Related notes
 - [[🔥 Project planning]]
 - [[Behavioral design]]

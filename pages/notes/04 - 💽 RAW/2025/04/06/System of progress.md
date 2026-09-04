@@ -41,7 +41,7 @@ For product innovators, this framework offers strategic insight into customer be
 - **Needs, wants and desired outcomes change when a system changes** and interdependent system change in various ways easily
 
 ## Related notes
-- [[JTBD 1]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]]
 - [[04 - 💽 RAW/Customer]]
 - [[04 - 💽 RAW/Opposing forces of customer demand]]
 - [[Discovery MOC]]

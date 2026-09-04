@@ -21,3 +21,8 @@
 - [When kale and coffee compete](https://drive.google.com/file/d/1t-JZTuzaOw6Ge2p-W3A7BxcpXq0AhD-U/view)
 	- on building products people want to buy
 	- Free PDF
+
+- Crossing the Chasm (Geoffrey A. Moore)
+	- the V1/V2/V3 customer-type framework referenced throughout [[Build]] ([[Build#^build-chasm-phases|Fadell]])
+- Super Founder (Ali Tamaseb)
+	- flagged while reading [[Build]]

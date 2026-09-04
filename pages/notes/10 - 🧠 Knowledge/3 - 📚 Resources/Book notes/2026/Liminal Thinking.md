@@ -1,10 +1,12 @@
 ---
+type: note
+created: 2026-01-11
+source_type: book
 title: Liminal Thinking
 author: Dave Gray
 year: 2016
-date_created: 2026-01-11
 date_read: 2024-04-22
-source_type: book
+intent: "[[Book Notes Extraction]]"
 tags:
   - thinking
   - beliefs

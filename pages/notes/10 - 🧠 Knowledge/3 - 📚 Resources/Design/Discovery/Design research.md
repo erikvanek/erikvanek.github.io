@@ -18,8 +18,8 @@
 	- experience gaps
 	- testing & feedback collection
 - outcomes should be _clear & understandable to the whole team_
-- use [[Triangulation]] - allows to have more & better [[Prototype]]s
-- starts with [[Research planning]]
+- use [[Triangulation]] - allows to have more & better [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery/Prototyping|prototype]]s
+- starts with [[Design research goals]]
 - results should be visualized by [[Research Visualization]]
 - "CX oriented research is rather inductive (finding out along the way), whereas testing prototypes is deductive (validating hypothesis)"
 - Important to take notes [well][https://condens.io/user-research-note-taking/]

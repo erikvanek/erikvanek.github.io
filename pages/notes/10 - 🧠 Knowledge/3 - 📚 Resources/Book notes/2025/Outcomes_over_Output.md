@@ -1,8 +1,10 @@
 ---
-title: "Outcomes Over Output"
-date_created: 2025-04-06
+type: note
+created: 2025-04-06
 source_type: book
+title: "Outcomes Over Output"
 source: "Outcomes Over Output (Book)"
+intent: "[[Book Notes Extraction]]"
 tags:
   - product-development
   - product-strategy

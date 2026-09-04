@@ -35,6 +35,16 @@ These findings emphasize that successful teams focus on how members work togethe
 - *training is one of the highest leverage activities a manager can perform* ([[The Hard Thing About Hard Things#^hthat-training-leverage|Horowitz]])
 - *it's important to hire for strengths rather for the lack of weaknesses* ([[The Hard Thing About Hard Things#^hthat-hire-strengths|Horowitz]])
 
+## On hiring & trust - *Build* (Fadell)
+
+- the best teams are multigenerational ones ([[Build#^build-multigenerational|Fadell]])
+- *every new perspective (generational, cultural, gendered, experience) makes your business stronger so hiring for diversity is greatly important* ([[Build#^build-diversity|Fadell]])
+- **after you hire someone, even despite some concerns along the way, that person should start with 100 % trust - you can't expect someone to prove themselves to you** ([[Build#^build-100-trust|Fadell]])
+- *investing in young talent is actually investing in a long-term health of an organization and should not be looked at as a burden first of all* ([[Build#^build-young-talent|Fadell]])
+- *everyone who is struggling should have a (bi-)weekly 1:1s about that struggle and that aim to come up with solutions to it* ([[Build#^build-struggle-1on1|Fadell]])
+- **the most important thing when running a team / org is how is the team doing (+ what issues they face)** ([[Build#^build-how-is-team|Fadell]])
+- *what you building does not matter as much as the people you're building it with* ([[Build#^build-people-over-product|Fadell]])
+
 ## Related notes
 - [[Leadership Principles]]
 - [[Company Culture]]

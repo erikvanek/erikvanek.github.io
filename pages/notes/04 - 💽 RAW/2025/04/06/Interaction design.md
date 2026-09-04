@@ -24,7 +24,7 @@ Building upon interaction science principles, effective interaction design trans
 - Should take into consideration users' [[Ability]]
 - **Usability**
 	- Ensuring that products are easy to learn, effective to use and enjoyable from user's perspective
-	- Focuses on achieving key [[6 usability goals]]
+	- Focuses on achieving key [[Usability goals]]
 - Micro interactions can have a big impact on overall perceived satisfaction with a product
 - We should focus more on user experience than on usability. Super usable product with dark patterns will rank low in user experience
 - Builds on top of *interaction science*
@@ -34,7 +34,7 @@ Building upon interaction science principles, effective interaction design trans
 	- If you have a brand new product that you know will not match anyone's mental model, you'll need to provide training to prepare people to create a new mental model.
 
 ## Related notes
-- [[99 - 📄 To process/6 usability goals]]
+- [[Usability goals]]
 - [[99 - 📄 To process/Ability]]
 - [[Usability testing]]
 - [[Discovery MOC]]

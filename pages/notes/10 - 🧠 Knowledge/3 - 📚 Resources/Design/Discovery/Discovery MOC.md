@@ -30,7 +30,7 @@ Discovery is the initial phase of design and product development that seeks to u
 
 ## Product Discovery Approaches
 - [[99 - 📄 To process/Product discovery|Product Discovery Principles]] - Core principles and approaches to product discovery
-- [[Problem statements|Problem Statements]] - Techniques for crafting effective problem statements
+- [[Problem framing#Problem statements|Problem Statements]] - Techniques for crafting effective problem statements
 - [[99 - 📄 To process/Product discovery#Outcome-Driven Discovery|Outcome-Driven Discovery]] - Focus on outcomes rather than outputs
 - [[99 - 📄 To process/Product discovery#Continuous Discovery|Continuous Discovery]] - Regular feedback cycles with customers
 

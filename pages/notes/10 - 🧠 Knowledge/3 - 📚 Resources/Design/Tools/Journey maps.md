@@ -41,3 +41,17 @@ resources:
 - **Touchpoint** — any point where a customer observes or interacts with the brand
 
 See also: [[Service blueprint]], [[Persona]], [[System maps]]
+
+## The full customer journey - *Build* (Fadell)
+
+- customer journey w/ your product:
+  1. awareness
+  2. education
+  3. acquisition
+  4. product (that's where most UX/product designers put most effort)
+  5. onboarding
+  6. usage
+  7. support
+  8. loyalty ([[Build#^build-customer-journey|Fadell]])
+- *between each of those steps customers experience friction & it's our job to help them bridge the gap - typical frictions: "why should I buy / use / stick with it?" & the product should give easy answers to those so that the user is on a smooth ride* ([[Build#^build-bridge-gaps|Fadell]])
+- *"the role of a designer is to visualize exactly how a customer discovers, considers, installs, uses, fixes and even returns your product"* ([[Build#^build-designer-role|Fadell]])

@@ -1,10 +1,12 @@
 ---
+type: note
+created: 2026-01-11
+source_type: book
 title: The Story Is Everything
-subtitle: Mastering Creative Communication for Business
 author: Andreas Loizou
 year: 2021
-date_created: 2026-01-11
-source_type: book
+subtitle: Mastering Creative Communication for Business
+intent: "[[Book Notes Extraction]]"
 tags:
   - storytelling
   - business-communication

@@ -1,5 +1,5 @@
 - series of repeating, deepening & explorative loops
 - common evolution
-	- [[Iteration]] -> [[Prototype]] -> Pilot -> Implementation
+	- [[Iteration]] -> [[10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery/Prototyping|Prototype]] -> Pilot -> Implementation
 - often fast & dirty, whereas implementation is slow and should be durable
 - motivation: the beauty of sharing an incomplete product with others is the opportunity to share it with folks who see unlike yourself

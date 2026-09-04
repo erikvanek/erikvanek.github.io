@@ -68,3 +68,5 @@ A "Second Brain" is a personal knowledge management system that extends your cog
 ## Related Notes
 - [[Productivity]]
 - [[01 - 🤖 Second brain/Revival-Strategy]]
+
+- what makes a second brain useful is that information in it becomes actionable - see [[Knowledge]] on why knowledge is information you can act on

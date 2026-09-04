@@ -55,7 +55,7 @@ The forces of progress are **emotional forces that shape [[Customer]]'s demand**
 - **Comparing the habits of best customers to switchers' is the best way to find out how to make switchers return**
 
 ## Related notes
-- [[JTBD 1]]
+- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]]
 - [[04 - 💽 RAW/Customer]]
 - [[02 - 📩 Inbox/System of progress]]
 - [[Discovery MOC]]

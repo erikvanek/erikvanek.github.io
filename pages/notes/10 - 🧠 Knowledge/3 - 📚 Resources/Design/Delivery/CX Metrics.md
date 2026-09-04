@@ -134,10 +134,10 @@ Rámec používaný v startupovém prostředí k měření a optimalizaci zákaz
   - A/B testování s různými cenovými úrovněmi
 
 ## Související poznámky
-- [[DESB42_Designove_experimenty|DESB42: Designové experimenty]]
-- [[UX_Metriky|UX Metriky]]
+- [[DESB42 Designové experimenty|DESB42: Designové experimenty]]
+- [[UX Metriky|UX Metriky]]
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
-- [[Designove_experimenty_metodika|Metodika designových experimentů]]
+- [[Designove experimenty metodika|Metodika designových experimentů]]
 - [[99 - 📄 To process/Measuring Business Value|Měření obchodní hodnoty]]
 - [[99 - 📄 To process/Product discovery|Product Discovery]]
 

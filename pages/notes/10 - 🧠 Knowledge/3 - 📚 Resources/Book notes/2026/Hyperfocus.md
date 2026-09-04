@@ -1,8 +1,10 @@
 ---
+type: note
+created: 2026-01-11
+source_type: book
 title: Hyperfocus
 author: Chris Bailey
-date_created: 2026-01-11
-source_type: book
+intent: "[[Book Notes Extraction]]"
 tags:
   - productivity
   - focus

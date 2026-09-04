@@ -16,8 +16,8 @@ Prototypes can take various forms including actions/processes/experiences (story
 - can be focused holistically or for individual step
 - set up & built so that we can learn from them later
 - replace actual implementation to learn faster & the aim is to __maximize learning__ (because they are cheap to change / throw away)
-- [[Prototype]] is for [[Service design]] what learning is for humans
-- Act of creating and using [[Prototype]] is called [[Prototyping]]
+- a prototype is for [[Service design]] what learning is for humans
+- Act of creating and using a prototype is called prototyping
 - We're also using tools and techniques from [[Interaction design]]
 - usually framed as a conceptual model
 	- that is the actual interface people interact with
@@ -56,7 +56,7 @@ Prototypes can take various forms including actions/processes/experiences (story
 - materials
 
 ### Environment, spaces & architecture prototypes
-- special case of [[Physical prototypes]]
+- special case of physical prototypes
 - often minimized compared to the result
 
 #### Include

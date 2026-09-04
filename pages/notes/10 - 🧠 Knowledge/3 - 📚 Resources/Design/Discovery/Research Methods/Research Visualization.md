@@ -21,7 +21,7 @@ tags:
 	- [[Journey maps]]
 	- [[System maps]]
 	- Key [[Insight]]s
-	- [[Jobs to be done]]
+	- [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|Jobs to be done]]
 	- User stories
 
 ## Related notes

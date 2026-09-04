@@ -29,7 +29,7 @@ The field provides several practical frameworks including COM-B (Capability + Op
 	- e.g. Netflix autoplay, Duolingo's gamification or loss aversion (losing a hot streak)
 - A [manifesto for applying behavioral science](https://www.bi.team/wp-content/uploads/2023/04/BIT_Manifesto.pdf) looks into the future of behavior science
 
-## Behavioral Design Experimentation (from [[DESB42_Designove_experimenty|DESB42: Designové experimenty]])
+## Behavioral Design Experimentation (from [[DESB42 Designové experimenty|DESB42: Designové experimenty]])
 - **Testing nudges**: Experiments with subtle design elements that guide user behavior without restricting choices
 - **Default option testing**: Evaluating how different preset options influence decision-making
 - **Call-to-action variations**: Testing different formulations of messages and prompts
@@ -73,8 +73,8 @@ M = motivation
 	- **Investment**
 		- user invests time or energy which increases the chance of returning to the product or service (IKEA effect)
 ## Související poznámky
-- [[DESB42_Designove_experimenty|DESB42: Designové experimenty]]
-- [[Designove_experimenty_metodika|Metodika designových experimentů]]
+- [[DESB42 Designové experimenty|DESB42: Designové experimenty]]
+- [[Designove experimenty metodika|Metodika designových experimentů]]
 - [[99 - 📄 To process/UX_Customer_Experience|UX a zákaznická zkušenost]]
 - [[99 - 📄 To process/Product discovery|Product Discovery]]
 

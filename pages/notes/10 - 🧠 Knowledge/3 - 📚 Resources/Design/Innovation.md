@@ -40,6 +40,16 @@ tags:
 ## Articles
 - [How to make something great](https://ryolu.notion.site/how-to-make-something-great)
 
+## Disrupting yourself - *Build* (Fadell)
+
+- *after trends change (faster internet, AI, ...) you can't be afraid to disrupt yourself and that thing that brought you success or you can end up like Kodak or Nokia* ([[Build#^build-disrupt-yourself|Fadell]])
+- **to maintain the core of your product - they are usually one or two important parts that stay consistent while everything else spins around them** ([[Build#^build-product-core|Fadell]])
+- when facing a new product - consumers will almost every time favor something that already exists even if it sucks ([[Build#^build-favor-existing|Fadell]])
+- if your product is disruptive, be prepared for stronger reactions & stronger emotions - it's not welcome by anyone and it makes enemies ([[Build#^build-disruptive-enemies|Fadell]])
+- *good innovator's mindset - if it was easy, everyone would be doing that + it's great to be able to foresee risks you anticipate & find solutions to them* ([[Build#^build-innovator-mindset|Fadell]])
+- most startups are built from people's own frustration and then looking to find solutions to them ([[Build#^build-own-frustration|Fadell]])
+- *constraints help make good decisions and time is the best constraint* ([[Build#^build-time-constraint|Fadell]])
+
 ## Related Notes
 - [[Design|Design Fundamentals]]
 - [[Design MOC|Design Resources]]

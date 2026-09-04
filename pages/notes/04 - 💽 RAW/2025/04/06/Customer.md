@@ -32,9 +32,9 @@ The Jobs To Be Done (JTBD) framework conceptualizes needs as dynamic interaction
 
 ## Needs
 - Needs and wants change in time and do not belong to the customer
-- A need represents **an interaction between the customer, their desire for Progress, and the product they hired for [[JTBD 1]]**
+- A need represents **an interaction between the customer, their desire for Progress, and the product they hired for [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]]**
 - "Customer wants" come from the system, not from customers
-	- If you want to persuade customers to use your product you either have to outcompete a current solution, or make the customer change their [[JTBD 1]] thus want a new solution
+	- If you want to persuade customers to use your product you either have to outcompete a current solution, or make the customer change their [[10 - 🧠 Knowledge/3 - 📚 Resources/Product/JTBD/JTBD|JTBD]] thus want a new solution
 - Unmet [[Goal]] is a future experience a [[Customer]] wants, but can't get at the moment
 
 ## Related notes

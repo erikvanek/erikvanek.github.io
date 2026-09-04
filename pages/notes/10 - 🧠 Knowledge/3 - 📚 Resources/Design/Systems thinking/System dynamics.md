@@ -28,8 +28,9 @@ resources:
 ## Systemic design
 
 - systemic design applies systems thinking to design practice — awareness of feedback loops, unintended consequences, and interdependencies should inform how we frame and solve design problems
-- see also: [[Systemic design]] (stub merged here)
 
 ## Related notes
 
+- [[Complex adaptive systems]]
 - [[Innovation]]
+- [[Problem framing]]

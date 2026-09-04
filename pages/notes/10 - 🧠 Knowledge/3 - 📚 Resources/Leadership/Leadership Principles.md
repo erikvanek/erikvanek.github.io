@@ -25,6 +25,16 @@ resources:
 - truly great leaders create an environment where their employees have the experience that they matter more than the leader itself ([[The Hard Thing About Hard Things#^hthat-leaders-matter|Horowitz]])
 - *political behavior almost always starts at the top from the CEO* ([[The Hard Thing About Hard Things#^hthat-politics-top|Horowitz]])
 
+## On managing & caring - *Build* (Fadell)
+
+- *management is a learned skill, not a talent* ([[Build#^build-management-learned|Fadell]])
+- one of the most important management skills is to be able to tell unpopular truths when needed ([[Build#^build-unpopular-truths|Fadell]])
+- caring deeply about the quality of your team's output is exactly what you're supposed to be doing, as opposed to micromanagement ([[Build#^build-caring-quality|Fadell]])
+- managers should be like parents - they should care of their teams as they would care for their kids ie wish them to be more successful than themselves ([[Build#^build-managers-parents|Fadell]])
+- another important job of a manager is to help his people succeed; it helps to create an environment that allows your team to surprise & surpass you ([[Build#^build-surprise-surpass|Fadell]])
+- **most important leadership rule - you don't have to be an expert on everything but you need to care** ([[Build#^build-need-to-care|Fadell]])
+- *once you become a manager, you stop being what you were before* ([[Build#^build-stop-being-before|Fadell]])
+
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety]]
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Company Culture]]
