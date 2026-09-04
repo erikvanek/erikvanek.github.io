@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="research-map-of-content">Research Map of Content</h1>
+<h2 id="overview">Overview</h2>
+<p>Where <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Discovery MOC/">Discovery</a> is the phase, research is the practice that feeds it. This MOC collects how research gets planned, run, analysed and turned into something a team acts on. It is deliberately broader than discovery: research also serves evaluation, and it runs continuously rather than only at the front of a project.</p>
+<p>Research is exploratory by nature - it goes looking for what is there. That is the line against <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Experiments/">experimentation</a>, which starts from a clearly defined hypothesis and sets out to test it.</p>
+<h2 id="framing-the-research">Framing the research</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research/">Design research</a> - foundations and principles of the practice</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Design research goals/">Design research goals</a> - what the research is for before what it does</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question/">Research question</a> - crafting questions that can actually be answered</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing/">Problem framing</a> - framing the problem the research serves</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Hypothesis/">Hypothesis</a> - when you already have a proposition to test</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews/">Interviews</a> - the workhorse method</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/The Mom Test/">The Mom Test</a> - how to ask so people can't flatter you</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Ethnographic observation/">Ethnographic observation</a> - watching rather than asking</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Focus groups/">Focus groups</a> - when group dynamics help and when they distort</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Desk research/">Desk research</a> - secondary sources</li>
+<li><a href="#" class="pending-link">Qualitative Research</a> - the qualitative tradition</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Delivery/Usability testing/">Usability testing</a> and <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Usability goals/">Usability goals</a> - evaluative research</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Fake door tests/">Fake door tests</a> - demand signals before you build</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Triangulation/">Triangulation</a> - validating findings across methods</li>
+</ul>
+<h2 id="recruiting-amp-fieldwork">Recruiting &amp; fieldwork</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Recruiting for research/">Recruiting for research</a> - finding the right participants</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Calendly/">Calendly</a> - scheduling logistics</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Trauma informed research/">Trauma informed research</a> - research with people in vulnerable situations</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Reflection templates/Stakeholder interview reflection framework/">Stakeholder interview reflection framework</a> - reflecting after a session</li>
+</ul>
+<h2 id="analysis-amp-synthesis">Analysis &amp; synthesis</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Codebook/">Codebook</a> - the coding scheme</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Selective coding/">Selective coding</a> - working the codes toward a core category</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Grounded theory/">Grounded theory</a> - inductive theory-building from data</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Customer research synthesis/">Customer research synthesis</a> - getting from raw data to patterns</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Sense-making/">Sense-making</a> - the interpretive move</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a> - what the analysis is supposed to produce</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research Methods/Research Visualization/">Research Visualization</a> - making findings legible</li>
+</ul>
+<h2 id="making-it-land">Making it land</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing/#from-recommendation-to-change">Research breakage</a> - insights themselves change nothing; track whether recommendations reach the user</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/">Storytelling</a> - what gives a finding a life beyond the readout</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Tools/Persona/">Persona</a> - a synthesis artifact that carries research into design conversation</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Tools/Journey maps/">Journey maps</a> - another synthesis artifact</li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Knowledge/">Knowledge</a> - why a finding only becomes knowledge in the moment of use</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Discovery MOC/">Discovery MOC</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Design MOC/">Design MOC</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Experiments/">Experiments</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

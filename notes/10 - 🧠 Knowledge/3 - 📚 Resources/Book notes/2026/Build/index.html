@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h2 id="summary">Summary</h2>
+<p>Tony Fadell's <em>Build</em> is a career-shaped manual: it starts with how you learn, moves through becoming a manager, then a product person, then a founder, and ends with running a company. Its throughline is that making something worth making is a <strong>learning problem</strong> before it is an execution problem - you learn by failing, by picking jobs for what you will learn rather than what they pay, and by surrounding yourself with people worth learning from. Productive struggle is the mechanism, and comfort (accumulated wealth, relationships, habituation) is what quietly stops you reaching for it.</p>
+<p>The product half of the book turns on the <strong>why</strong>. Every product needs a story that explains why it exists and how it solves a real customer problem, because a story is how a group of people makes a leap of faith together - and every big choice ultimately is one. Data informs those choices but never makes them; Fadell's version is Ivy Ross's &quot;it's data <em>and</em> intuition&quot;. Prototyping is the practical instrument: it turns abstract concepts into physical representations and lets you articulate the why before you have built anything. The customer journey runs well past the product itself (awareness through loyalty), and the designer's job is to bridge the friction between each step. On the disruption side, three generations are usually needed to get a product right, profit is a post-product-market-fit concern, and the order vision -&gt; insights -&gt; data reverses to data -&gt; insights -&gt; vision once you are iterating on something that already exists.</p>
+<p>The organizational half is about people and the moments organizations break. Hiring is a battle, every new perspective makes the business stronger, and a new hire starts at 100% trust rather than earning it. Silos appear the moment the first management layer does, and lack of bottom-up/top-down information flow fills the vacuum with distrust. Breakpoints (around 30-40 and 80-120 people) catch leadership off guard and cannot be managed with &quot;if it's not broken, don't fix it&quot;. The closing leadership rule is characteristically blunt: you do not have to be an expert on everything, but you do have to care.</p>
+<h1 id="build">Build</h1>
+<h2 id="learning-mentors-amp-career">Learning, mentors &amp; career</h2>
+<ul>
+<li>A good mentor won't give you all the answers but will make space for looking at the problem from different perspectives</li>
+<li>failing is the best way to learn, especially in contexts where someone is trying to come up with something a world has not seen before</li>
+<li>the best way [to find] the job and career you'll love and will be successful at is to find out what you want to learn</li>
+<li><em>humans learn through productive struggle</em></li>
+<li>accumulation of wealth / relationships / ... make people risk less due to the fear of losing that wealth</li>
+<li><em>customers need to see that you are solving a pain point they have right now, not a hypothetical problem that might have in future</em></li>
+<li>when job hunting people optimize often for money whereas optimizing for people to learn from / be surrounded with is way more important - without them it will suck big time</li>
+<li><em>making a connection is the best way to get a job anywhere</em></li>
+</ul>
+<h2 id="becoming-a-manager">Becoming a manager</h2>
+<ul>
+<li><em>management is a learned skill, not a talent</em> ^build-management-learned</li>
+<li>one of the most important management skills is to be able to tell unpopular truths when needed ^build-unpopular-truths</li>
+<li><em>once you become a manager, you stop being what you were before - if you find yourself doing what you did before switch often and you like it more than what you're supposed to do now - you probably should have not switched in the first place</em> ^build-stop-being-before</li>
+<li>one of the hardest parts of becoming a manager is letting go (previous known job tasks, giving team full freedom, ...)</li>
+<li>caring deeply about the quality of your team's output is exactly what you're supposed to be doing (as opposed to micromanagement) ^build-caring-quality</li>
+<li>another important job of a manager is to help his people succeed; it helps to create an environment that allows your team to surprise &amp; surpass you ^build-surprise-surpass</li>
+<li>managers should be like parents - they should care of their teams as they would care for their kids ie wish them to be more successful than themselves ^build-managers-parents</li>
+</ul>
+<h2 id="decisions-data-amp-storytelling">Decisions, data &amp; storytelling</h2>
+<ul>
+<li>when facing a new product - consumers will almost every time favor something that already exists even if it sucks ^build-favor-existing</li>
+<li>it is harder to test / collect data for a new product as there is nothing to compare data with</li>
+<li><em>when you're making something new, there's never a way how to support with data that it's going to work</em> ^build-no-data-new</li>
+<li>having / creating a good story helps to break a situation when a management stalls / slows down a decision</li>
+<li><em>storytelling is how you get a group of people make a leap of faith to do something new which is what all big choices we make ultimately boil down to - believing in a story that if X is done, Y happens</em> ^build-leap-of-faith</li>
+<li>most decisions we make are data-informed, not data-made - just grab evidence you have compiled, believe your instinct and take the first leap &amp; hope for the best ^build-data-informed</li>
+<li>Ivy Ross: <em>&quot;It's not data, it's not intuition. It's data <strong>and</strong> intuition&quot;</em></li>
+</ul>
+<h2 id="assholes-amp-quitting-well">Assholes &amp; quitting well</h2>
+<ul>
+<li><em>real assholes always make it personal - their motivation is not the work but their ego</em></li>
+<li><em>when quitting a job - people won't remember how you started, they will remember how you left</em></li>
+<li>one shouldn't ever threaten to quit, then flip-flop around and stay - that is weak and breaks careers and decreases respect</li>
+<li>quitting is not a negotiating tactic, it's the last card you play</li>
+</ul>
+<h2 id="design-amp-the-customer-journey">Design &amp; the customer journey</h2>
+<ul>
+<li>the role of design is to make the intangible tangible</li>
+<li><em>&quot;the role of a designer is to visualize exactly how a customer discovers, considers, installs, uses, fixes and even returns your product&quot;</em> ^build-designer-role</li>
+<li>customer journey w/ your product: ^build-customer-journey
+<ol>
+<li>awareness</li>
+<li>education</li>
+<li>acquisition</li>
+<li>product (that's where most UX/product designers put most effort)</li>
+<li>onboarding</li>
+<li>usage</li>
+<li>support</li>
+<li>loyalty</li>
+</ol>
+</li>
+<li><em>between each of those steps customers experience friction &amp; it's our job to help them bridge the gap - typical frictions: &quot;why should I buy / use / stick with it?&quot; &amp; the product should give easy answers to those so that the user is on a smooth ride</em> ^build-bridge-gaps</li>
+<li>and <strong>prototyping each path of such journey</strong> helps tremendously to get it right - the more physical / tangible those prototypes can be, the better feedback can be gathered ^build-prototype-journey</li>
+<li><em>prototyping = turning abstract concepts into physical representations</em> ^build-prototyping-def</li>
+</ul>
+<h2 id="the-product-story-amp-the-why">The product story &amp; the why</h2>
+<ul>
+<li><em>every product should have a story that explains why it exists and <strong>how</strong> it solves customer's problem</em> ^build-product-story</li>
+<li>a good product story has three elements: ^build-story-elements
+<ol>
+<li>focuses on people's rational and emotional sides</li>
+<li>it translates complicated concepts into simple ones</li>
+<li>it reminds people of the problem being solved by focusing on the <strong>why</strong></li>
+</ol>
+</li>
+<li>that why is the most important aspect - when it's figured how, then it's possible to find out <strong>how</strong> to solve it</li>
+<li><em>understanding the why means really understanding the issue customers are facing on a daily basis and holding on to that what is important as it tends to become obvious during building the how</em></li>
+<li>a good story is an act of empathy - it recognizes the needs of its audience ^build-story-empathy</li>
+<li><em>analogies give customers superpowers e.g. 1000 songs in your pocket is easy to grasp and then to share with others</em> ^build-analogies</li>
+<li><strong>quick stories are easy to remember &amp; repeat</strong> ^build-quick-stories</li>
+<li>if your product is disruptive, be prepared for stronger reactions &amp; stronger emotions - it's not welcome by anyone and it makes enemies ^build-disruptive-enemies</li>
+<li>the most basic learning curve - do, fail, learn</li>
+</ul>
+<h2 id="disruption-generations-amp-profit">Disruption, generations &amp; profit</h2>
+<ul>
+<li><strong>to maintain the core of your product - they are usually one or two important parts that stay consistent while everything else spins around them</strong> ^build-product-core</li>
+<li><em>after trends change (faster internet, AI, ...) you can't be afraid to disrupt yourself and that thing that brought you success or you can end up like Kodak or Nokia</em> ^build-disrupt-yourself</li>
+<li><em>for a disruptive product you need these 3 things (in this order):</em> ^build-vision-insights-data
+<ol>
+<li><strong>vision</strong> - know what you want to make, why are you making it, who is it for and why would they want to pay for it</li>
+<li><strong>insights</strong> - from customer and/or market research to support decision making</li>
+<li><strong>data</strong> - the scope of opportunity and how people currently use what they use</li>
+</ol>
+</li>
+<li>when working on a new version - this order gets reversed to 3-2-1 ^build-order-reversed</li>
+<li><em>once you have your vision - a good technique to try out is to write a press release for what you want to put out there - it makes you prioritize and focus on what matters and it should help you articulate what are you building and why crisply</em> ^build-press-release</li>
+<li><em>constraints help make good decisions and time is the best constraint</em> ^build-time-constraint</li>
+<li>the best external heartbeats (time deadlines) aren't set by the company but by the external event like holidays or a big conference</li>
+<li><em>the typical crisis of V1 launch is that you haven't promised anything and it's easier to just keep working and the best way to break that is to impose a deadline on yourself</em></li>
+<li><em>typically 3 generations of a disruptive product need to be built to get it right, find the product-market fit &amp; make profit and the main reason for this is that learning takes time + also the fact that most customers are not early adopters complicate things</em> ^build-three-generations</li>
+<li><strong>The rule of thumb of creating great products / companies:</strong> ^build-rule-of-thumb
+<ol>
+<li>you build the product</li>
+<li>you fix the product</li>
+<li>you build the business</li>
+</ol>
+</li>
+<li>from the book Crossing the chasm - there are 3 phases - V1, V2 &amp; V3 and each has typical customer types: V1 - innovators &amp; early adopters (split w/ V2); V2 - early adopters &amp; early majority; V3 - late majority &amp; laggards ^build-chasm-phases</li>
+<li><em>focusing on profit makes sense only after finding appropriate product-market fit</em> - hardware companies look at COGS (cost of goods sold) whereas software companies look at CAC (customer acquisition cost) ^build-profit-after-pmf</li>
+<li><em>there's a really low chance to be profitable at V1 release - often reinventing at least 2-3 times helps to get to that stage, sometimes even more</em></li>
+<li><strong>products are like humans - before running, they need to learn to crawl and then to walk + they usually cause another tidal wave of skilled newcomers to join</strong> ^build-products-like-humans</li>
+</ul>
+<h2 id="ideas-worth-chasing">Ideas worth chasing</h2>
+<ul>
+<li>3 elements of a good idea:
+<ol>
+<li>it solves for why - you need to understand the why before the what and why people will want it</li>
+<li>it solves a problem lot of people have in their daily lives</li>
+<li>it follows you around - even if you research it, figure out how hard it will be - it does not leave your head</li>
+</ol>
+</li>
+<li><em>research is a practice of delayed intuition</em> ^build-delayed-intuition</li>
+<li>Daniel Kahneman - in order to make better decisions - you need to slow down ^build-kahneman-slow</li>
+<li><em>the more amazing an idea seems - the more time you spend prototyping it to get as much data as possible</em> ^build-amazing-prototype</li>
+<li><em>the best ideas are painkillers, not vitamins</em> ^build-painkillers
+<ul>
+<li>painkillers eliminate something that's constantly bothering you - a regular irritation you can't get rid of</li>
+</ul>
+</li>
+<li>most startups are built from people's own frustration and then looking to find solutions to them ^build-own-frustration</li>
+<li><strong>the why behind the product should be crisp &amp; easy to articulate to be able to easily explain why people need it and that's the only way to decide what features it should have</strong> ^build-crisp-why</li>
+<li><em>prototypes are a great way to articulate <strong>the why</strong> behind the idea</em> ^build-prototype-why</li>
+<li><em>good innovator's mindset - if it was easy, everyone would be doing that + it's great to be able to foresee risks you anticipate &amp; find solutions to them</em> ^build-innovator-mindset</li>
+<li><em>a good idea is the one that won't let you go &amp; the others are distractions (drop them)</em></li>
+</ul>
+<h2 id="founders-first-hires-amp-mentors">Founders, first hires &amp; mentors</h2>
+<ul>
+<li>first hires are crucial for setting a company culture ^build-first-hires</li>
+<li>story helps you align people behind a shared vision ^build-story-align</li>
+<li>in those very early days you want to have people aligned behind your mission</li>
+<li>at the beginning - you're looking for <strong>seed crystals</strong> - people that are so good and so well loved so everyone listens to them &amp; they can build large parts of your org on their own</li>
+<li>you can make it without a team or a cofounder but not without a mentor which have been there and that can see a problem from a mile away - ideally a person you can trust and that believes in you</li>
+<li>the key to success at any life / work / love / business relationship is get to know each other before it becomes serious, to build trust &amp; get to know each other</li>
+</ul>
+<h2 id="funding-amp-vcs">Funding &amp; VCs</h2>
+<ul>
+<li>the (VC) funding environment circles between times that are more founder-friendly to those that are more investor-friendly</li>
+<li>all those times where it feels crazy and that no rules are used anymore are going back to the mere average</li>
+<li><em>a lot of pre-seed startups don't need VC money especially if they are still testing out how the product should work etc - there the money won't help that much + it helps to get comfortable with delayed intuition</em></li>
+<li><em>Once you take money from VC you're stuck with them (almost like a marriage)</em></li>
+<li>when considering VCs - pay close attention to their behavior as that's the moment when they behave their best</li>
+<li><em>start pitching process before you actually need the money as it might take longer months to secure the funding</em></li>
+</ul>
+<h2 id="crisis-health-amp-resilience">Crisis, health &amp; resilience</h2>
+<ul>
+<li>Steve Jobs: <em>&quot;Any company that tries to do B2B &amp; B2C will fail&quot;</em></li>
+<li><strong>vacations are a great way to build your future team's capabilities</strong></li>
+<li><em>vacations are important in a high stress jobs - maybe even for the teams you delegate work to</em></li>
+<li>on eating well - try not to eat much and not eat late &amp; try to make sure you don't feel like trash</li>
+<li>if you don't encounter crises - you're probably not close to your edge</li>
+<li>good mantra for the times of crisis: we'll get trough this; we've done it before; here's the plan</li>
+<li><em>if something happened and it's your fault, never cover up &amp; tell people (customers) what happened, what you learned from it &amp; why it won't happen again otherwise they will be pissed</em></li>
+<li>it's good to talk to your mentors / board or some other people that might have experienced something similar before and try to get good advice</li>
+<li>the best learning an organization can achieve after a crisis is to create an internal story of how they were able to overcome it that is ideally intrinsically shared by org members so that they trust it well</li>
+</ul>
+<h2 id="hiring-amp-growing-people">Hiring &amp; growing people</h2>
+<ul>
+<li>the best teams are multigenerational ones ^build-multigenerational</li>
+<li><em>investing in young talent is actually investing in a long-term health of an organization and should not be looked at as a burden first of all</em> ^build-young-talent</li>
+<li>it is a battle to find amazing talent</li>
+<li><em>every new perspective (generational, cultural, gendered, experience) makes your business stronger so hiring for diversity is greatly important</em> ^build-diversity</li>
+<li><em>during hiring it's important that during interview process - candidates talk to roles they will be working with e.g. PMs to designers or QAs with engineers</em> ^build-interview-cross-roles</li>
+<li><strong>after you hire someone, even despite some concerns along the way, that person should start with 100 % trust - you can't expect someone to prove themselves to you</strong> ^build-100-trust</li>
+<li><em>a good topic for interview co-working session is to pick a topic both of you know not that much about and try to collaborate on it - because if you pick a topic where one of you is stronger at - it won't be as well in simulating the day-to-day</em></li>
+<li>while interviewing you not only scan for skills they have today but also for what might be important tomorrow that you don't know that much about yet</li>
+<li><em>after hiring someone - give them the positive push so that they can easily run with the pack instead of hoping to learn something by reading the docs to get past the starting line</em></li>
+<li>if someone is struggling and would be better off in a different place - act fast and frame it as a looking for a place where that person feels better and make sure firing someone is not a surprise
+<ul>
+<li><em>everyone who is struggling should have a (bi-)weekly 1:1s about that struggle and that aim to come up with solutions to it</em> ^build-struggle-1on1</li>
+</ul>
+</li>
+</ul>
+<h2 id="org-design-culture-amp-change">Org design, culture &amp; change</h2>
+<ul>
+<li><strong>the most important thing when running a team / org -&gt; how is the team doing? (+ what issues they face) and this often, sadly, becomes the boring HR update at the end</strong> ^build-how-is-team</li>
+<li><em>what you building does not matter as much as the people you're building it with</em> ^build-people-over-product</li>
+<li><em>silos start appearing when first management layer is introduced and people distribute into verticals &amp; those might not share enough</em> ^build-silos</li>
+<li><em>lack of transparency due to the lack of bottom-up / top-down information flow can bring distrust - when there's a lack of data, distrust fills that void</em> ^build-distrust-void</li>
+<li><em>if people are afraid of something (change, specialization, ..) try to focus on the positive at what it might bring to them and try to co-cultivate it with them and in general it's great to find out what they want to learn and help them get it</em></li>
+<li><em>when being layered - it's important that the person above can be inspiring / someone to learn from to the person below</em></li>
+<li>a quote: <em>&quot;Life is a process of elimination&quot;</em></li>
+<li>coaching / mentoring is especially important at breakpoints - e.g. when around 30-40 ppl or 80-120 ^build-breakpoint-sizes</li>
+<li><em>culture is the hardest thing to pinpoint and to preserve</em> ^build-culture-hardest</li>
+<li><em>org breakpoints seem to catch (leadership) people off guard and it's annoying to plan for them because it's messy - sadly here the &quot;if it's not broken, don't fix it&quot; does not work</em> ^build-breakpoints-offguard</li>
+<li><em>quote: &quot;change is growth and growth is opportunity&quot;</em></li>
+<li><strong>in the process of change - don't worry what you're about to lose - think of what you want to become</strong> ^build-what-to-become</li>
+</ul>
+<h2 id="design-craft-amp-noticing-problems">Design craft &amp; noticing problems</h2>
+<ul>
+<li>designing means thinking through a problem and finding an elegant solution and being a designer means making things work better ^build-designing-means</li>
+<li><em>a good principle to follow as a designer is to avoid habituation - e.g. it's easy to get used to brand stickers on apples - that moment of getting used to something is dangerous</em> ^build-habituation</li>
+<li><strong>as a designer you can find improvement to experiences where people in their day to day just expect them to be terrible</strong> ^build-expect-terrible</li>
+<li><em>there are no perfect designs and there are always constraints</em> ^build-no-perfect-design</li>
+<li><em>quote: &quot;not everyone can be a designer but everyone can think like one&quot;</em> ^build-think-like-designer</li>
+<li><strong>you can't solve interesting problems if you don't notice they're out there and that's a difference between a startup founder and its employee - e.g. before iPod every was ok / habituated to take their CD stashes with them</strong> ^build-notice-problems</li>
+<li><em>people that notice problems around them are mostly inventors, startup founders and kids</em></li>
+<li><em>keeping your brain young is key</em></li>
+</ul>
+<h2 id="marketing-messaging-amp-the-pm-craft">Marketing, messaging &amp; the PM craft</h2>
+<ul>
+<li><em>the ultimate job of marketing is to find the very best way to tell the <strong>true</strong> story of your product</em> and Steve Jobs was saying that the best marketing is just telling the truth and it should be enough to simply describe what are you making and why are you making it ^build-marketing-true-story</li>
+<li>each pain point should give your product a reason to exist</li>
+<li><em>felt emotion brings pain which opens doors for opportunities</em></li>
+<li>pain points are often emotious or something your customer has already habituated away whereas when buying solutions - customers often already use their rationale</li>
+<li><em>marketing has to be embedded in product development since day 1 as it can bring important context similarly to user research and it is especially helpful while prototyping product's narrative</em> ^build-marketing-day-1</li>
+<li><strong>Nest created a &quot;why we made it&quot; tab on their site to simply describe the reasoning behind the product</strong></li>
+<li><em>product messaging shapes the product - what you're telling to customers is what you're building</em> ^build-messaging-shapes</li>
+<li><em>the superpower of every great product manager is empathy</em> ^build-pm-empathy</li>
+<li><em>numbers are empty without interpretation and that's where storytelling / empathization tools like personas can come into play and tell a story that e.g. having 10 % less battery might not be that bad if we know who is the user and what are their usage patterns</em> ^build-numbers-empty</li>
+<li><em>building products is like making songs and the product team is the band and the PM is the producer and they should be <strong>rarely</strong> dictating everything, rather than that they should be <strong>empowering</strong> the team - if a PM makes most of important decisions, it's not a good PM</em> ^build-pm-producer</li>
+<li><em>product people are the hardest to hire and to train and that's why they are so valuable</em> ^build-pm-hardest-hire</li>
+</ul>
+<h2 id="sales-leadership-amp-the-board">Sales, leadership &amp; the board</h2>
+<ul>
+<li>when sales - when focusing on long term relationships it is often worth sacrificing a sale to building a relationship</li>
+<li><em>the best salespeople are the ones who maintain relationships even though they don't make money that day</em></li>
+<li><strong>most important leadership rule - you don't have to be an expert on everything but you need to care</strong> ^build-need-to-care</li>
+<li><em>&quot;If you aren't failing, you aren't trying hard enough&quot;</em></li>
+<li>big risk for CEOs is becoming babysitters when avoiding hard decisions or people pleasing in general</li>
+<li><em>even the most incredible CEO in the world needs a board mainly for the advice of smart, invested and experienced people</em></li>
+</ul>
+<h2 id="benefits-vs-perks">Benefits vs perks</h2>
+<ul>
+<li>there are differences between benefits and perks - health insurance is a benefit, free meal is a perk so benefits are in general something that might in positive improve employee's lives</li>
+<li>benefits allow your employees &amp; their families to stay healthy &amp; to achieve their goals</li>
+<li>an oversupply of perks can hurt your company bottom line and employee morale</li>
+<li>if you attract people with perks mainly, your times will be tough</li>
+<li>there's a psychology behind entitlement that is that it something's free - it's basically worthless therefore perks should be subsidized - not free</li>
+</ul>
+<h2 id="to-process">To process</h2>
+<ul>
+<li>[ ] look up the book <strong>Crossing the Chasm</strong> - extract its summary and suggest putting it to my to-read list</li>
+<li>[ ] look up the book <strong>Super Founder</strong></li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/2026/The Hard Thing About Hard Things/">The Hard Thing About Hard Things</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/2026/The Story Is Everything/">The Story Is Everything</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Product/Outcomes over Output/">Outcomes over Output</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Storytelling/">Storytelling</a></li>
+<li><a href="#" class="pending-link">Prototyping</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Product/Product Vision/">Product Vision</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Books to read/">Books to read</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>
