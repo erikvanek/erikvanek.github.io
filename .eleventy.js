@@ -176,6 +176,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.ignores.add("pages/dis-kisk/portfolio-shaping/**");
     eleventyConfig.watchIgnores.add("pages/dis-kisk/portfolio-shaping/**");
 
+    // Slidev decks live entirely under pages/presentations/slidev/ and are
+    // built directly by Slidev (scripts/build-slidev-decks.mjs), never by
+    // Eleventy's own templating — keeps the two build pipelines from ever
+    // touching each other's output.
+    eleventyConfig.ignores.add("pages/presentations/slidev/**");
+    eleventyConfig.watchIgnores.add("pages/presentations/slidev/**");
+
     eleventyConfig.setTemplateFormats([
         'css',
         'pdf',
