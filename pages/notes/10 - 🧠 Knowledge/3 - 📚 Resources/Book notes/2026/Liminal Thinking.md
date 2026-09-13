@@ -23,8 +23,6 @@ Gray argues that beliefs are not objective truths but constructed models of real
 
 Gray emphasizes that emotional needs drive behavior more than reason, and unmet emotional needs trigger fight-or-flight responses. The most profound changes come from questioning governing beliefs—those deeply tied to identity and self-worth. Liminal thinking is less about having the right answers and more about developing the capacity to hold multiple perspectives loosely while remaining open to revision.
 
----
-
 # Liminal Thinking
 
 - Limen = threshold

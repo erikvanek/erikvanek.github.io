@@ -27,8 +27,6 @@ Several frameworks emerge as practical approaches: the five principles of resear
 
 The research also surfaces critical questions designers should continuously ask: who benefits and who loses, what perspectives are excluded, how might designs be misused, and whether we're making promises we can't keep. The underlying theme is that designers are guests in participants' worlds, and responsible practice means building relationships rooted in trust, consent, and genuine respect for people's time and stories.
 
----
-
 # From "Did Hitler have great designers?"
 
 - design is a practical activity whereas ethics is a system of beliefs

@@ -57,7 +57,6 @@ Your knowledge system excels at capture and organization but could better suppor
 **Every other Tuesday** (20 minutes) create "Thinking Trigger" notes:
 
 ```markdown
----
 title: "Thinking Trigger: [Concept A] × [Concept B]"
 date_created: YYYY-MM-DD
 tags:
@@ -65,7 +64,6 @@ tags:
   - cross-domain-connection
   - [domain-A]
   - [domain-B]
----
 
 # Thinking Trigger: [Concept A] × [Concept B]
 

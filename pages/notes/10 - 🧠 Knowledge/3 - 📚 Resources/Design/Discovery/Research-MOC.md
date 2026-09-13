@@ -55,7 +55,7 @@ Research is exploratory by nature - it goes looking for what is there. That is t
 
 ## Making it land
 
-- [[Problem framing#From recommendation to change|Research breakage]] - insights themselves change nothing; track whether recommendations reach the user
+- [[Research breakage]] - insights themselves change nothing; track whether recommendations reach the user
 - [[Storytelling]] - what gives a finding a life beyond the readout
 - [[Persona]] - a synthesis artifact that carries research into design conversation
 - [[Journey maps]] - another synthesis artifact

@@ -36,14 +36,12 @@ This creates a "knowledge accumulation without leverage" problem.
 Expand your existing [[Process reflection]] template:
 
 ```markdown
----
 title: "[PROJECT NAME] - Process Reflection"
 date_created: YYYY-MM-DD
 project: "[PROJECT NAME]"
 tags:
   - process-reflection
   - [project-specific-tags]
----
 
 # [PROJECT NAME] - Process Reflection
 

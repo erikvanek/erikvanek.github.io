@@ -11,29 +11,40 @@ resources:
 
 # Leadership Principles
 
+## Becoming a manager
+
+- *management is a learned skill, not a talent* ([[Build#^build-management-learned|Fadell]])
 - to be a great manager – what helps is to have an experience being a great IC before - if one likes the people management part but does not have the respect from ICs by being good in that craft - it's hard to be a good manager without this trust
 	- to be able to lead someone – you need to to know what you're talking about and have a good idea what does excellence look like
-- part of leadership is giving guidance - the ability to give tough feedback is one of the most important competencies
-	- sharing **why** with the feedback helps the team to grow themselves and decrease the need for them to seek approval when problem solving
+- *once you become a manager, you stop being what you were before* ([[Build#^build-stop-being-before|Fadell]])
+
+## What the job actually is
+
+- **most important leadership rule - you don't have to be an expert on everything but you need to care** ([[Build#^build-need-to-care|Fadell]])
+- caring deeply about the quality of your team's output is exactly what you're supposed to be doing, as opposed to micromanagement ([[Build#^build-caring-quality|Fadell]])
+- another important job of a manager is to help his people succeed; it helps to create an environment that allows your team to surprise & surpass you ([[Build#^build-surprise-surpass|Fadell]])
+- truly great leaders create an environment where their employees have the experience that they matter more than the leader itself ([[The Hard Thing About Hard Things#^hthat-leaders-matter|Horowitz]])
+- managers should be like parents - they should care of their teams as they would care for their kids ie wish them to be more successful than themselves ([[Build#^build-managers-parents|Fadell]])
 - **get the right people to know what's in your head**
-- During one's personal development – try to map out skills that are relevant for what you want to do and try to excel at one of them – imagine a "one-liner" that you get remembered for and recognized for
-- culture is what do we say yes to, what do we say no to, what is our standard and how do we help each other to meet that standard and **it is set by the leaders** – if the leaders are slacking, it's going to be hard to motivate people underneath
+
+## Making the hard calls
+
 - Leadership is about stepping into the unknown and helping others navigate complex environments riddled with ambiguity. From this perspective, a certain degree of naiveness is almost a requirement to be effective.
 - the secret of being a CEO - the ability to make the best move in situations when there are no good moves ([[The Hard Thing About Hard Things#^hthat-no-good-moves|Horowitz]])
 - *most important decisions test the courage more than the intelligence* ([[The Hard Thing About Hard Things#^hthat-courage|Horowitz]])
+- one of the most important management skills is to be able to tell unpopular truths when needed ([[Build#^build-unpopular-truths|Fadell]])
 - *take care of people, product, profit exactly in that order* ([[The Hard Thing About Hard Things#^hthat-people-product-profit|Horowitz]])
-- truly great leaders create an environment where their employees have the experience that they matter more than the leader itself ([[The Hard Thing About Hard Things#^hthat-leaders-matter|Horowitz]])
+
+## Culture and politics start at the top
+
+- culture is what do we say yes to, what do we say no to, what is our standard and how do we help each other to meet that standard and **it is set by the leaders** – if the leaders are slacking, it's going to be hard to motivate people underneath
 - *political behavior almost always starts at the top from the CEO* ([[The Hard Thing About Hard Things#^hthat-politics-top|Horowitz]])
 
-## On managing & caring - *Build* (Fadell)
+## Feedback and growth
 
-- *management is a learned skill, not a talent* ([[Build#^build-management-learned|Fadell]])
-- one of the most important management skills is to be able to tell unpopular truths when needed ([[Build#^build-unpopular-truths|Fadell]])
-- caring deeply about the quality of your team's output is exactly what you're supposed to be doing, as opposed to micromanagement ([[Build#^build-caring-quality|Fadell]])
-- managers should be like parents - they should care of their teams as they would care for their kids ie wish them to be more successful than themselves ([[Build#^build-managers-parents|Fadell]])
-- another important job of a manager is to help his people succeed; it helps to create an environment that allows your team to surprise & surpass you ([[Build#^build-surprise-surpass|Fadell]])
-- **most important leadership rule - you don't have to be an expert on everything but you need to care** ([[Build#^build-need-to-care|Fadell]])
-- *once you become a manager, you stop being what you were before* ([[Build#^build-stop-being-before|Fadell]])
+- part of leadership is giving guidance - the ability to give tough feedback is one of the most important competencies
+	- sharing **why** with the feedback helps the team to grow themselves and decrease the need for them to seek approval when problem solving
+- During one's personal development – try to map out skills that are relevant for what you want to do and try to excel at one of them – imagine a "one-liner" that you get remembered for and recognized for
 
 ## Related notes
 - [[10 - 🧠 Knowledge/3 - 📚 Resources/Team/Psychological Safety]]

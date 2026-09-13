@@ -22,8 +22,6 @@ The solution lies in managing attentional space: maintaining awareness of what o
 
 Ultimately, the quality of your attention determines the quality of your life, and managing it requires treating your brain as a guest that needs both structure and space.
 
----
-
 # Hyperfocus
 
 ## Attention and Intention

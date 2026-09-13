@@ -1,3 +1,13 @@
+---
+type: note
+tags:
+  - design-methods
+  - prototyping
+  - service-design
+  - iteration
+  - learning
+---
+
 # Prototyping
 
 ## AI-assisted summary
@@ -5,8 +15,6 @@
 Prototyping is a fundamental tool in service design that serves as a method of self-expression and mutual understanding, designed to maximize learning through rapid iteration and failure. The approach emphasizes having multiple prototypes simultaneously since they are meant to fail, allowing teams to learn from those failures quickly and cheaply before actual implementation.
 
 Prototypes can take various forms including actions/processes/experiences (storytelling sessions with actors, props, and staged environments), physical objects (lo-fi versions focusing on functionality, form, and materials), digital/software interfaces (from sketches to interactive software), environmental/architectural spaces (often miniaturized representations), and business ecosystem models. Each type includes specific components and can be applied holistically or to individual steps within the service design process.
-
----
 
 - __"The best way to have an idea is to have a lot of ideas"__
 - a tool of self-expression & to help understand each other better
@@ -87,12 +95,6 @@ Prototypes can take various forms including actions/processes/experiences (story
 
 ### Ecosystem & business value prototypes
 - basically [[Business model canvas]]
-
----
-
-**Tags:** #design-methods #prototyping #service-design #iteration #learning
-
-**Created:** 2025-06-29
 
 ## Related notes
 - [[Co-design]]

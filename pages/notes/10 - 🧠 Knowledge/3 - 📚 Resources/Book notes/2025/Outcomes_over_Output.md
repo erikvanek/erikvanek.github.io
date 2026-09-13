@@ -20,8 +20,6 @@ tags:
 
 Implementing this approach requires fundamental organizational shifts, as most companies are structured around creating outputs rather than delivering outcomes. The method utilizes outcome-based roadmaps built around customer journey maps and behavior analysis rather than feature timelines. This shift creates more realistic planning around uncertainty while requiring teams to develop explicit theories connecting customer value to business results. Though challenging to adopt due to outcomes' abstract nature and the required surrender of control, the approach ultimately delivers maximum business impact with minimal feature development through deeper understanding of behavior drivers.
 
----
-
 ## Core Principles
 - An outcome is a change in human behavior that drives business results
 - Outcomes are delivered by changing customer behavior

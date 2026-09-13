@@ -28,14 +28,12 @@ Currently, your knowledge and active projects operate in separate workflows. You
 Create this template in your Templates folder:
 
 ```markdown
----
 title: "[PROJECT NAME] - Knowledge Map"
 date_created: YYYY-MM-DD
 project: "[PROJECT NAME]"
 tags:
   - project-knowledge-map
   - [project-specific-tags]
----
 
 # [PROJECT NAME] - Knowledge Map
 

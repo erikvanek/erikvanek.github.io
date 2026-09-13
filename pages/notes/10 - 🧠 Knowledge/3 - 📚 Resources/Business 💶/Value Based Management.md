@@ -38,7 +38,6 @@ Value-Based Management (VBM) is a strategic approach that focuses on maximizing 
 
 VBM implementation requires identifying and organizing "value drivers" - the performance variables that influence company value - into hierarchical levels: generic (organization-wide metrics like ROIC), business unit specific variables, and grass-roots factors controllable by front-line managers. For successful implementation, VBM must be integrated into corporate culture and decision-making processes at all levels of the organization.
 
----
 ## Related notes
 - [[Team Effectiveness]]
 - [[Leadership Principles]]

@@ -18,8 +18,6 @@ Measuring in design follows the fundamental principle that designers should pay 
 
 The field encompasses various metric types including performance metrics (task completion, time, error rates), user problem related metrics (accessibility, navigation issues), self-reporting metrics (satisfaction scales), and behavioral/physiological metrics (eye-tracking, emotion measurement). The HEART framework provides guidance for selecting appropriate metrics, and combining performance with self-reported metrics typically yields the best results for understanding user experience.
 
----
-
 - **To design the best UX, pay attention to what users do, not what they say**
 - To discover which designs work best, **watch users as they attempt to perform tasks** with the user interface
 - When should you collect [preference data](https://www.nngroup.com/articles/ab-testing-and-ux-research/ "Define Stronger A/B Test Variations Through UX Research") from users? **Only after they have used a design** and have a real feeling for how well it supports them

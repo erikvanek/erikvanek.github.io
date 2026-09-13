@@ -22,8 +22,6 @@ A large share of the notes is about people and organization as the real product 
 
 The closing thread is identity and conviction. Strategy and story are the same thing - a company's "why" must answer why anyone should join, buy, or care - and great CEOs build internal intelligence to keep making good decisions as context shifts. The final lesson is personal: embrace the struggle, and on top of that embrace your own background, weirdness, and instinct.
 
----
-
 # The Hard Thing About Hard Things
 
 ## Leadership & the CEO's job

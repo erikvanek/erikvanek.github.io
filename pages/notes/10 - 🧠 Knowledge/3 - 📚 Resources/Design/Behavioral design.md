@@ -19,8 +19,6 @@ Behavioral design connects design with insights from behavioral science, economy
 
 The field provides several practical frameworks including COM-B (Capability + Opportunity + Motivation = Behavior), EAST (Easy, Attractive, Social, Timely), and the Hook model for building engaging products. These frameworks help designers create experiences that guide user behavior through methods like testing nudges, default option variations, and ethical considerations around user manipulation.
 
----
-
 - Nice patterns in [Coglode cookbook](https://www.coglode.com/)
 - Intro to [behavior science](https://insights.aimforbehavior.com/p/a-short-introduction-to-behavioral)
 - Connects design with insights from behavioral science, economy and psychology to **directly affect the behavior of users or customers**

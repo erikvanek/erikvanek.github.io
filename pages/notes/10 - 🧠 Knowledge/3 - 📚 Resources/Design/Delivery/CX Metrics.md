@@ -18,8 +18,6 @@ Customer experience and service design metrics are essential for measuring desig
 
 The document covers frameworks like North Star metrics, OKR/KPI systems, and the AARRR framework for comprehensive measurement approaches. It also includes specific techniques for measuring price sensitivity through Van Westendorp and Gabor-Granger methods, emphasizing the importance of combining multiple measurement approaches rather than relying on single metrics to understand complex customer experiences.
 
----
-
 ## Postojové metriky pro měření celkového zážitku
 - jsou do jisté míry problematické kvůli přílišnému zjednodušování a možné dezinterpretovatelnosti – např. NPS jako jedno číslo schovává spoustu komplexity, která ovlivňuje zákaznickou zkušenost, navíc třeba nereflektuje kulturní rozdíly mezi prostředími
 

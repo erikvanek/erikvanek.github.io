@@ -15,8 +15,6 @@ Design is fundamentally a verb - an active practice focused on creating meaningf
 
 Key design principles include managing complexity while maintaining usability, creating emotionally resonant products especially in the AI age, and considering sustainable impact through inclusive and ethical practices. Design operates as both sense-making and form-giving, requiring teams to balance cognitive load, embrace rapid iteration, and understand that effective design brings form around function to minimize user effort.
 
----
-
 - __to _design_ is a verb__
 - "Splitters" care about UX/[[Service design]]/[[Human-centered design]] differences vs lumpers don't care as long as you practice properly
 - when you start - _be shitty, not pretty_ - throw away easily & iterate further

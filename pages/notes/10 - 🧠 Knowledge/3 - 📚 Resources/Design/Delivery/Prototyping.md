@@ -13,7 +13,7 @@ tags:
 # Prototyping
 
 ## Overview
-Prototyping is the iterative process of creating representations of design solutions before final implementation. It allows designers to explore, evaluate, and communicate ideas rapidly while maximizing learning and minimizing risk.
+Prototyping is the iterative process of creating representations of design solutions before final implementation. It allows designers to explore, evaluate, and communicate ideas rapidly while maximizing learning and minimizing risk. Put at its shortest: *prototyping = turning abstract concepts into physical representations* ([[Build#^build-prototyping-def|Fadell]]).
 
 ## Core Principles
 
@@ -23,6 +23,8 @@ Prototyping is the iterative process of creating representations of design solut
 - Maximize learning through rapid iteration
 - Replace actual implementation to accelerate the learning cycle
 - Set up and built so we can extract meaningful insights
+- *prototypes are a great way to articulate **the why** behind the idea* ([[Build#^build-prototype-why|Fadell]])
+- *the more amazing an idea seems - the more time you spend prototyping it to get as much data as possible* ([[Build#^build-amazing-prototype|Fadell]])
 
 ### Key Characteristics
 - Never rely on a single prototype - they are meant to fail and provide learning
@@ -61,6 +63,7 @@ Prototypes can be categorized by what they aim to represent or test:
 - Environment, spaces & architecture prototypes - Spatial experiences
 - Digital & SW prototypes - Software and digital experiences
 - Ecosystem & business value prototypes - Service ecosystems and business models
+- Narrative prototypes - the story the product tells; *marketing has to be embedded in product development since day 1 as it can bring important context similarly to user research and it is especially helpful while prototyping product's narrative* ([[Build#^build-marketing-day-1|Fadell]])
 
 ## Best Practices
 
@@ -72,6 +75,7 @@ Prototypes can be categorized by what they aim to represent or test:
 - **Rapid iteration** - Move quickly between cycles of building and testing
 - **User involvement** - Engage users early and often
 - **Document learning** - Capture insights from each prototype iteration
+- **Prototype each path of the [[Journey maps|customer journey]]**, not just the product - the more physical / tangible those prototypes can be, the better feedback can be gathered ([[Build#^build-prototype-journey|Fadell]])
 
 ### Common Pitfalls
 - Premature commitment to a single direction
@@ -82,14 +86,6 @@ Prototypes can be categorized by what they aim to represent or test:
 
 ## Relation to Design Process
 Prototyping serves as a bridge between conceptual models (the interface people interact with) and mental models (what humans have in mind). Effective prototyping aligns these models through iterative exploration and validation.
-
-## On prototyping the why - *Build* (Fadell)
-
-- *prototyping = turning abstract concepts into physical representations* ([[Build#^build-prototyping-def|Fadell]])
-- **prototyping each path of the customer journey** helps tremendously to get it right - the more physical / tangible those prototypes can be, the better feedback can be gathered ([[Build#^build-prototype-journey|Fadell]])
-- *prototypes are a great way to articulate **the why** behind the idea* ([[Build#^build-prototype-why|Fadell]])
-- *the more amazing an idea seems - the more time you spend prototyping it to get as much data as possible* ([[Build#^build-amazing-prototype|Fadell]])
-- *marketing has to be embedded in product development since day 1 as it can bring important context similarly to user research and it is especially helpful while prototyping product's narrative* ([[Build#^build-marketing-day-1|Fadell]])
 
 ## Related Notes
 - [[Lo-Fi Prototyping Methods]]

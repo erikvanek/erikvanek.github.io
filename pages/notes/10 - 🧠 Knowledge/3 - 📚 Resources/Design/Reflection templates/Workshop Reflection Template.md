@@ -12,14 +12,12 @@ tags:
 
 > **Important**: Keep reflections concise and factual. Focus on what actually happened rather than elaborating or generalizing. Include links to relevant preparation materials and notes when submitting a reflection.
 
----
 date: [YYYY-MM-DD]
 workshop_name: [Name]
 participants: [Types/Roles]
 goals: [Main objectives]
 format: [Structure/Activities]
 tags: [tag1, tag2, tag3]
----
 
 ## Workshop Materials
 *Links to preparation documents, planning notes, and materials used*

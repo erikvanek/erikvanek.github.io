@@ -19,8 +19,6 @@ The opportunity solution tree is a technique from Teresa Torres' book "Continuou
 
 The framework helps teams systematically explore customer problems and validate solutions through a structured approach. The key principle for validating opportunities is asking whether there are multiple ways to address each opportunity, ensuring they represent genuine customer needs rather than disguised solutions.
 
----
-
 - A technique described in a book **Continuous discovery habits**
 - Consists of **layers**
 	1. **Desired outcome**

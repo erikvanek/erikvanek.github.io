@@ -1,3 +1,13 @@
+---
+type: note
+tags:
+  - product-strategy
+  - vision
+  - leadership
+  - product-development
+  - product-management
+---
+
 # Product Vision
 
 ## AI-assisted summary
@@ -6,12 +16,14 @@ Product vision serves as a persuasive tool and north star for product teams, art
 
 The vision development process involves researching problem spaces, articulating multiple potential futures, and testing with stakeholders, while distinguishing vision (the future you want) from mission (how you'll get there). Modern examples like Josh Miller's Arc browser pivot demonstrate how vision-driven prioritization can lead to strategic course corrections, with vision statements serving as context for teams much like prompts for AI systems.
 
----
-
 ## Introduction
 A product vision articulates the desired future state that a product aims to create. It serves as a north star for product teams, aligning efforts and inspiring action. This note explores what makes an effective product vision and how to craft one.
 
 ## Core Characteristics of Effective Product Visions
+
+### Who owns it
+- the CEO does not need to be the creator of that vision but **must** be its keeper ([[The Hard Thing About Hard Things#^hthat-vision-keeper|Horowitz]])
+- story helps you align people behind a shared vision ([[Build#^build-story-align|Fadell]])
 
 ### Persuasive Power
 - Admittedly, a good product vision is a bit of an art form, as fundamentally it is a _persuasion tool_.
@@ -27,6 +39,7 @@ A product vision articulates the desired future state that a product aims to cre
 - A good vision is thought-provoking, inspiring, memorable and concrete
 - Simple enough to be remembered and repeated
 - Specific enough to guide decision-making
+- **the why behind the product should be crisp & easy to articulate to be able to easily explain why people need it and that's the only way to decide what features it should have** ([[Build#^build-crisp-why|Fadell]])
 
 ## Notable Examples
 
@@ -66,6 +79,10 @@ A product vision articulates the desired future state that a product aims to cre
 4. Refine based on feedback
 5. Communicate consistently and with conviction
 
+- *for a disruptive product you need these 3 things in this order: **vision** (what you want to make, why, who is it for, why would they pay), **insights** (from customer and/or market research), **data** (the scope of opportunity and how people currently use what they use)* ([[Build#^build-vision-insights-data|Fadell]])
+	- when working on a new version - this order gets reversed to 3-2-1 ([[Build#^build-order-reversed|Fadell]])
+- *once you have your vision - a good technique to try out is to write a press release for what you want to put out there - it makes you prioritize and focus on what matters* ([[Build#^build-press-release|Fadell]])
+
 ### Vision vs. Mission
 - Vision describes the future you want to create
 - Mission describes how you'll get there
@@ -91,23 +108,6 @@ A product vision articulates the desired future state that a product aims to cre
 - Test vision with users and stakeholders
 - Look for emotional resonance and understanding
 - Refine the articulation if it's not landing as intended
-
----
-
-**Tags:** #product-strategy #vision #leadership #product-development #product-management
-
-**Created:** 2025-06-29
-
-## On owning vs. keeping the vision — *The Hard Thing About Hard Things* (Horowitz)
-- the CEO does not need to be the creator of that vision but **must** be its keeper ([[The Hard Thing About Hard Things#^hthat-vision-keeper|Horowitz]])
-
-## Vision, insights & data - *Build* (Fadell)
-
-- *for a disruptive product you need these 3 things in this order: **vision** (what you want to make, why, who is it for, why would they pay), **insights** (from customer and/or market research), **data** (the scope of opportunity and how people currently use what they use)* ([[Build#^build-vision-insights-data|Fadell]])
-- when working on a new version - this order gets reversed to 3-2-1 ([[Build#^build-order-reversed|Fadell]])
-- *once you have your vision - a good technique to try out is to write a press release for what you want to put out there - it makes you prioritize and focus on what matters* ([[Build#^build-press-release|Fadell]])
-- **the why behind the product should be crisp & easy to articulate to be able to easily explain why people need it and that's the only way to decide what features it should have** ([[Build#^build-crisp-why|Fadell]])
-- story helps you align people behind a shared vision ([[Build#^build-story-align|Fadell]])
 
 ## Related notes
 - [[🔥 Project planning]]

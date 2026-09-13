@@ -1,3 +1,15 @@
+---
+type: note
+created: 2025-06-29
+tags:
+  - quotes
+  - insights
+  - wisdom
+  - productivity
+  - design
+  - innovation
+---
+
 # Quotes
 
 - Peter Senge: "Many of the problems we face today are yesterday's solutions"
@@ -17,11 +29,6 @@
 - Karri Saarinen on [X](https://x.com/karrisaarinen/status/1999623683065987330) – Design is search
 	- "If you let constraints define the space too early, you do not just get a worse outcome. You lose outcomes that never get discovered."
 	- "Protect exploration from premature constraint. Invite constraints when you are ready to learn from them"
----
-
-**Tags:** #quotes #insights #wisdom #productivity #design #innovation
-
-**Created:** 2025-06-29
 
 ## Related notes
 - [[Goal Frameworks]]

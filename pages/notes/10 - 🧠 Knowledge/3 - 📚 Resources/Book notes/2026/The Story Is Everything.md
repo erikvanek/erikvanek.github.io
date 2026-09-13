@@ -23,8 +23,6 @@ The book draws on Robert Cialdini's influence principles and covers practical wr
 
 The book also addresses audience engagement (you have only 8 seconds to make an impression), presentation techniques using Aristotle's rhetorical triad (ethos, pathos, logos), and data presentation strategies that transform raw data into audience knowledge.
 
----
-
 # The Story Is Everything
 
 - knowing how your story ends is a huge help at the beginning

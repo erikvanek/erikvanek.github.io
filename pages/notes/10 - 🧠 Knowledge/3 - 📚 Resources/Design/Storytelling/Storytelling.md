@@ -8,6 +8,15 @@ tags:
   - storytelling
   - design
 ---
+
+## Why storytelling matters
+- one of the most important skills of a designer
+- *storytelling is how you get a group of people make a leap of faith to do something new which is what all big choices we make ultimately boil down to - believing in a story that if X is done, Y happens* ([[Build#^build-leap-of-faith|Fadell]])
+- get inspired by movies, literature etc – they are great at storytelling
+- **evocation over information**
+	- the message has to **make you feel something**
+
+## Story structure
 - beginning
 	- set expectations
 - Telling a compelling story is formed of three resources
@@ -22,16 +31,25 @@ tags:
 - different arcs
 	- https://prezlab.com/what-narrative-arc-best-suits-your-presentation/
 	- https://www.ideou.com/blogs/inspiration/how-to-choose-a-story-arc-for-your-presentation
-- get inspired by movies, literature etc – they are great at storytelling
-- one of the most important skills of a designer
-- every headline is a positioning
-- **evocation over information**
-	- the message has to **make you feel something**
+
+## The product story
+- *every product should have a story that explains why it exists and **how** it solves customer's problem* ([[Build#^build-product-story|Fadell]])
+- a good product story has three elements: focuses on people's rational and emotional sides; it translates complicated concepts into simple ones; it reminds people of the problem being solved by focusing on the **why** ([[Build#^build-story-elements|Fadell]])
+- a good story is an act of empathy - it recognizes the needs of its audience ([[Build#^build-story-empathy|Fadell]])
+- *the ultimate job of marketing is to find the very best way to tell the **true** story of your product* ([[Build#^build-marketing-true-story|Fadell]])
+
+## Writing the copy
 - When coming up with copywriting or storytelling
 	- put yourself into the shoes of your audience and ask yourself - does it sound useful or bullshit? what the heck this thing do?
 	- how would you refer your friend about the product you just found out? would it "unleash your full potential" or you'd just say "dopest to-do-list because of X..."
+
+## Headlines & hooks
+- every headline is a positioning
 - **A headline is a hook** and should work as a hook
 	- ideally expressed with brevity and clarity – 3 or 4 words
+- **quick stories are easy to remember & repeat** ([[Build#^build-quick-stories|Fadell]])
+- *analogies give customers superpowers e.g. 1000 songs in your pocket is easy to grasp and then to share with others* ([[Build#^build-analogies|Fadell]])
+
 ## Headline structure
 	- show me the problem and then solve it
 		- look at how it looks on tiktok
@@ -42,13 +60,3 @@ tags:
 	- that's what helps to structure headlines
 		- main headline asks the question
 		- subhead is as clear as possible in what it does
-
-## On the product story - *Build* (Fadell)
-
-- *storytelling is how you get a group of people make a leap of faith to do something new which is what all big choices we make ultimately boil down to - believing in a story that if X is done, Y happens* ([[Build#^build-leap-of-faith|Fadell]])
-- *every product should have a story that explains why it exists and **how** it solves customer's problem* ([[Build#^build-product-story|Fadell]])
-- a good product story has three elements: focuses on people's rational and emotional sides; it translates complicated concepts into simple ones; it reminds people of the problem being solved by focusing on the **why** ([[Build#^build-story-elements|Fadell]])
-- a good story is an act of empathy - it recognizes the needs of its audience ([[Build#^build-story-empathy|Fadell]])
-- *analogies give customers superpowers e.g. 1000 songs in your pocket is easy to grasp and then to share with others* ([[Build#^build-analogies|Fadell]])
-- **quick stories are easy to remember & repeat** ([[Build#^build-quick-stories|Fadell]])
-- *the ultimate job of marketing is to find the very best way to tell the **true** story of your product* ([[Build#^build-marketing-true-story|Fadell]])
