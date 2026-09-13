@@ -10,8 +10,11 @@ sessionTitle: Foundations & framing
 date: 17 Sep 2026
 transition: slide-left
 mdc: true
+hideInToc: true
 ---
 
+---
+hideInToc: true
 ---
 
 # This is the MUNI Arts theme
@@ -24,6 +27,78 @@ Headings use **Muni** (the university's own display face) with a Helvetica/Arial
 
 ---
 layout: heading-body
+hideInToc: true
+---
+
+# Agenda
+
+This is what a real session opening would look like - the headings below also drive the progress bar at the bottom of the screen, section by section.
+
+<Toc minDepth="1" maxDepth="1" />
+
+---
+layout: section-break
+---
+
+# Warm-up
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Warm-up
+
+Dummy placeholder content, standing in for whatever a real warm-up activity slide would hold.
+
+---
+layout: section-break
+---
+
+# Concept input
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Concept input
+
+Dummy placeholder content.
+
+---
+layout: section-break
+---
+
+# Hands-on exercise
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Hands-on exercise
+
+Dummy placeholder content.
+
+---
+layout: section-break
+---
+
+# Debrief & homework
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Debrief & homework
+
+Dummy placeholder content.
+
+---
+layout: heading-body
+hideInToc: true
 ---
 
 # Layout gallery
@@ -32,6 +107,7 @@ One example of each of the eight content layouts below - test content, for tunin
 
 ---
 layout: heading-body
+hideInToc: true
 ---
 
 # What changes this run
@@ -43,6 +119,7 @@ layout: heading-body
 ---
 layout: quote
 author: Erika Hall
+hideInToc: true
 ---
 
 Research isn't one thing - different questions need different kinds of looking.
@@ -50,6 +127,7 @@ Research isn't one thing - different questions need different kinds of looking.
 ---
 layout: two-column
 ratio: "60-40"
+hideInToc: true
 ---
 
 # Double diamond, still the spine
@@ -74,6 +152,7 @@ Theory, methods, and the team-project brief
 
 ---
 layout: reflection
+hideInToc: true
 ---
 
 # What shifted for you today?
@@ -82,6 +161,7 @@ Not what you learned - what's different in how you'd approach the next real prob
 
 ---
 layout: homework
+hideInToc: true
 ---
 
 # Before session 2
@@ -94,12 +174,14 @@ layout: homework
 layout: full-image
 image: ../../../img/design/workshop.jpg
 credit: Erik Vaněk
+hideInToc: true
 ---
 
 # Session 1, spring 2025
 
 ---
 layout: break
+hideInToc: true
 ---
 
 # Break

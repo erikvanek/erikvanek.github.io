@@ -1,0 +1,11 @@
+{
+  "name": "slidev-theme-muni-arts",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Local Slidev theme for MUNI Faculty of Arts / KISK course decks - see README.md",
+  "slidev": {
+    "defaults": {
+      "favicon": "/favicon.svg"
+    }
+  }
+}

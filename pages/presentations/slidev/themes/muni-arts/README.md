@@ -54,6 +54,30 @@ Names and shapes are carried over from the layout taxonomy Erik has used across 
 
 See `sdw-26-hello-world/slides.md` for one worked example of each - that deck doubles as the layout gallery for fine-tuning these together before they hit a real session deck.
 
+## Course-progress bar
+
+A thin bar at the bottom of the screen: one tick per real slide ("step"), grouped into sections, steps within a section flush against each other (one connected bar per section, 2px between sections) - pairs with an agenda slide built from `<Toc minDepth="1" maxDepth="1" />` so both read the same structure. Color reads by section, not just by step: entering a section (landing on its divider already counts) lights up its whole run of steps at a mid-tone, and only the one exact step you're on gets the fuller, more saturated color; a section you haven't reached yet stays a faint neutral mark. Sits on its own translucent-white rail rather than drawing straight onto the slide, so it reads the same on a plain white slide and on a full-bleed MUNI-blue one - a flat brand-color (or plain white) mark drawn directly on a same-color slide otherwise nearly vanishes (2026-09-13 fix, after it tested invisible on white slides). Understated by design (2026-09-13 request: "doesn't have to be super visible").
+
+**Sections are bounded by layout, not by heading text** (`dividerLayouts` prop, default `['section-break', 'break']`): a slide using one of those layouts is a "divider" - never a step in the bar itself, and (when it isn't `hideInToc`) the one thing that opens a new tracked section. Every other slide belongs to whichever section's divider it most recently followed, right up to the next divider - a layout-gallery slide, a quote, a reflection slide all count as steps, not just ones that happen to repeat the section's own heading (2026-09-13 rework, replacing an earlier heading-text-matching version - see git history on this file if curious). A hidden divider (the cover, a mid-deck break) opens nothing and closes nothing, it's just skipped. Content before the first real divider - the cover, the intro slide, the agenda slide itself - is never inside any section, so none of it needs special-casing to stay untracked.
+
+Hand-rolled (`components/CourseProgress.vue`), not the `slidev-component-progress` npm addon - that addon renders nothing against this Slidev version (`@slidev/cli` 52.x vs. its peer dep on `@slidev/client ^0.48.0`, last published April 2024). See `snippets/global-bottom.vue` for the full story.
+
+Wiring up a new deck (3 steps, none automatic from the theme alone - Slidev addon/global-layer discovery is per-deck):
+1. Copy `snippets/global-bottom.vue` into the deck's own project root as `global-bottom.vue`.
+2. Give each real agenda-item divider slide `layout: section-break` (or `break`) and no `hideInToc`; everything else can be any other layout and any `hideInToc` value - it'll track as a step of whichever section it falls in either way. Only add `hideInToc: true` to a divider itself if you want it to act as a silent pause (like the cover, or a mid-deck breather) that doesn't open its own section.
+3. Add an agenda slide near the top: `<Toc minDepth="1" maxDepth="1" />`.
+
+See `sdw-26-hello-world/slides.md` for the full worked example (Agenda slide + five sections, the fifth being the pre-existing "Part II" gallery slide).
+
+## Favicon
+
+The MUNI Arts mark (`components/MuniArtsMark.vue`'s same paths, on a white rounded-square backdrop so it stays legible in a dark browser tab bar too) as the browser-tab icon. The `favicon: /favicon.svg` default is set in the theme's own `package.json` (`slidev.defaults`) so every deck on this theme picks it up with no per-deck frontmatter - confirmed this actually works (theme-level `slidev.defaults` do merge into a deck automatically).
+
+The *file* still needs one per-deck step, same limitation as the progress bar: Slidev's static-asset copying for a theme's own `public/` folder lands it at a deep, unpredictable build path (`theme/themes/muni-arts/public/...`), not at the site root - confirmed by an actual build, not just reasoning about it. So the real, working copy has to live in each deck's own `public/` folder instead (Vite's native `publicDir`, which reliably serves at the root in both dev and build):
+1. Copy `snippets/favicon.svg` into the deck's own project root as `public/favicon.svg`.
+
+See `sdw-26-hello-world/public/favicon.svg` for the worked example.
+
 ## Multi-client theming
 
 This repo is public, so it only ever holds brand themes that are fine to publish (MUNI, a public university, qualifies). Confidential/client-specific branding for other engagements lives entirely in **other repos**, used **locally or as exported files** (PDF/PPTX) - this repo doesn't stage or preview that content at all, so there's no placeholder folder for it here.
