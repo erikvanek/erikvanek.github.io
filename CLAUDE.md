@@ -23,6 +23,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Follow the existing patterns in the codebase when creating new components or modifying existing ones.
 - make sure the progress in all relevant markdown docs
 
+## Slidev decks and per-client theming
+Slidev decks live under `pages/presentations/slidev/<deck-name>/slides.md`, built to `docs/presentations/slidev/<deck-name>/` via `yarn build:slides` (`scripts/build-slidev-decks.mjs`) - isolated from Eleventy and from the older reveal.js decks elsewhere under `pages/presentations/`. `yarn slides` runs the top-level scratch file for quick trying-out; it's excluded from the build on purpose (see the script's own header comment).
+- **This repo is public** - only brand themes that are fine to publish belong in `themes/<name>/` (e.g. `muni-arts`, built for the MUNI/KISK course SDW-26). A theme never stores proprietary assets (font files, source manuals) even when it's committed - it just references them by name/URL and lets the browser resolve or fall back; see `themes/muni-arts/README.md` for the pattern.
+- **Confidential/client-specific branding** for other engagements lives entirely in other repos, used locally or as exported files (PDF/PPTX) - this repo doesn't stage or preview that content at all.
+
 ## Workflow skills (note processing)
 Custom Claude skills for personal note workflows live in **`pages/skills/`** (they publish with the site). Because Claude Code only auto-discovers skills under `.claude/skills/`, this repo symlinks them there locally (`.claude/skills/` is gitignored, so re-create the symlinks per clone: `ln -sfn "$PWD/pages/skills/<name>" .claude/skills/<name>`). **If a skill isn't showing up, look in `pages/skills/` first.**
 

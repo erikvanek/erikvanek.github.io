@@ -1,0 +1,29 @@
+/**
+ * Design tokens - MUNI Faculty of Arts brand theme.
+ * Source: Grafický manuál Filozofické fakulty (MUNI, export 2019-03-22), p.30-31.
+ * Do not add colors here that aren't in the manual's approved palette - see
+ * "Zakázané varianty" (p.23): no off-palette recoloring of the mark or its
+ * accompanying system.
+ */
+:root {
+  /* MUNI base colors - p.30 (RGB given in the manual; MUNI blue is NOT web #00d,
+     it's the flat institutional blue below) */
+  --muni-blue: #0000dc;
+  --muni-black: #000000;
+  --muni-white: #ffffff;
+
+  /* Filozofická fakulta (Faculty of Arts) accent - p.31. Every MUNI faculty
+     has one; this is the one that applies to KISK (a department of this
+     faculty). Do not swap in another faculty's color. */
+  --muni-arts-blue: #4bc8ff;
+
+  /* KISK department mark color, sampled directly from the department's own
+     hosted logo (cdn.muni.cz/media/3023556/logo-yellow-rgb.svg) - not in the
+     brand manual itself (KISK's own choice within it), kept as a token since
+     the logo is used as an accent, not just an image. */
+  --kisk-yellow: #ffff00;
+
+  /* Derived, not brand-specified: a readable body-text gray for captions/meta,
+     kept low-saturation so it never competes with the two brand blues. */
+  --muni-gray: #595959;
+}

@@ -1,0 +1,64 @@
+/**
+ * Base typography and color wiring for the MUNI Faculty of Arts theme.
+ *
+ * Font split (deliberate, not just "Muni is unavailable so we cheaped out"):
+ * the manual (p.27) says Muni should be used in all applications, but it's a
+ * monospace display face - fine for headings/marks, hard to read as
+ * multi-line body copy. So: headings ask for Muni first, body text uses the
+ * sans stack directly. Neue Haas Unica Pro (the manual's own secondary font)
+ * isn't used at all - it's a paid Linotype license held by the university,
+ * not by this repo/account, so this theme uses the manual's own documented
+ * fallback for that case: Helvetica/Arial (p.28), same as headings fall
+ * through to if 'Muni' isn't resolved.
+ *
+ * This repo never stores or loads the actual Muni font FILES - no
+ * @font-face, no local copy, nothing to gitignore. `font-family: 'Muni'`
+ * is just a name request: any machine that has the 4 files installed as
+ * system fonts (macOS Font Book, one-time, outside any repo) resolves it
+ * automatically; every other machine - including anyone viewing the
+ * published public site - falls straight through to Helvetica/Arial. See
+ * README.md for the one-time install step.
+ */
+
+:root {
+  --slidev-theme-primary: var(--muni-blue);
+}
+
+.slidev-layout {
+  color: var(--muni-black);
+  background: var(--muni-white);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'Muni', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: var(--muni-blue);
+  letter-spacing: 0.01em;
+}
+
+.slidev-layout h1 {
+  font-weight: 700;
+}
+
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-weight: 500;
+}
+
+.slidev-layout a {
+  color: var(--muni-blue);
+}
+
+/* Accent utilities for section/divider slides - mirrors the manual's own
+   divider pages (a flat brand-color field with black display type on top,
+   e.g. p.26 "Styl", p.33 "Merkantil"). */
+.bg-muni-blue {
+  background: var(--muni-blue);
+  color: var(--muni-white);
+}
+.bg-arts-blue {
+  background: var(--muni-arts-blue);
+  color: var(--muni-black);
+}
