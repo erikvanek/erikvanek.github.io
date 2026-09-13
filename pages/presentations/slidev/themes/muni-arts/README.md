@@ -40,9 +40,19 @@ A CSS `font-family: 'Muni'` request resolves to any font installed under that na
 
 ## Layouts
 
-- `layouts/cover.vue` - title slide. Props: `session` (e.g. `"Session 1"`), `date` (e.g. `"17 Sep 2026"`). Everything else (title, subtitle) comes through as normal markdown content. Top-left mark is `components/MuniArtsMark.vue`, real vector paths - not a font-and-CSS approximation.
+Names and shapes are carried over from the layout taxonomy Erik has used across SDW-25 and the Discovery Practice Program (audited 2026-09-13) - same nine slide types, minus the facilitation-prep fields (those lived in a yaml/pptx pipeline, not here) and speaker notes (out of scope for now).
 
-That's the only custom layout so far - a deliberate "hello world" scope. Add more (`section.vue`, `default.vue`, etc.) as real session content needs them; don't pre-build layouts nothing uses yet.
+- `layouts/cover.vue` - title slide. Props: `session` (e.g. `"Session 1"`), `date` (e.g. `"17 Sep 2026"`). Everything else (title, subtitle) comes through as normal markdown content. Top-left mark is `components/MuniArtsMark.vue`, real vector paths - not a font-and-CSS approximation.
+- `layouts/heading-body.vue` - standard content slide, heading + bullets/prose. No props. The default, highest-volume slide type - deliberately plain.
+- `layouts/quote.vue` - featured quote. Props: `author` (optional). Body slot is the quote text.
+- `layouts/two-column.vue` - heading (optional, spans both) over two columns. Props: `ratio` (e.g. `"60-40"`, default `"50-50"`). Slots: default (header), `left`, `right`.
+- `layouts/section-break.vue` - major divider, flat MUNI-blue field. No props.
+- `layouts/reflection.vue` - closing debrief slide, fixed "Reflection" eyebrow, Faculty of Arts blue accent rule. No props.
+- `layouts/homework.vue` - assignment brief, fixed "Homework" eyebrow, KISK yellow accent rule. No props.
+- `layouts/full-image.vue` - full-bleed image. Props: `image` (src), `credit` (optional caption), `dim` (default `true` - scrim for legible overlaid text).
+- `layouts/break.vue` - explicit break slide, same field family as section-break but sparser. No props.
+
+See `sdw-26-hello-world/slides.md` for one worked example of each - that deck doubles as the layout gallery for fine-tuning these together before they hit a real session deck.
 
 ## Multi-client theming
 
