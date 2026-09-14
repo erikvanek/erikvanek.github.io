@@ -151,7 +151,7 @@ layout: section-break
 Theory, methods, and the team-project brief
 
 ---
-layout: reflection
+layout: groupwork
 hideInToc: true
 ---
 

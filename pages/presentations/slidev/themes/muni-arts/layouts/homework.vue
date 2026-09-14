@@ -1,5 +1,5 @@
 <!--
-  Assignment brief slide - same shape as reflection.vue (fixed eyebrow +
+  Assignment brief slide - same shape as groupwork.vue (fixed eyebrow +
   accent rule), but with the KISK yellow accent: this slide type is about
   to send people off to do something, so it reads as "action", not "calm".
 -->

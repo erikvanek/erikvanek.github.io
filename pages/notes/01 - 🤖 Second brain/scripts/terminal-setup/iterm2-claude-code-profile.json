@@ -1,12 +1,10 @@
 {
-  "Profiles": [
+  "Profiles" : [
     {
-      "Name": "Claude Code",
-      "Guid": "73b38001-0080-4e7a-bbc9-ac4702227a9c",
-      "Normal Font": "SFMono-Regular 14",
-      "Non Ascii Font": "SFMono-Regular 14",
-      "Use Non-ASCII Font": false,
-      "Custom Directory": "Recycle"
+      "Use Separate Colors for Light and Dark Mode" : true,
+      "Name" : "erikvanek",
+      "Rewritable" : true,
+      "Guid" : "73b38001-0080-4e7a-bbc9-ac4702227a9c"
     }
   ]
 }

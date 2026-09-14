@@ -36,10 +36,36 @@
   font-weight: 700;
   color: var(--muni-blue);
   letter-spacing: 0.01em;
+  /* Headings default to a line-height under 1, so a heading that wraps renders
+     its two lines almost touching (measured: 35px caps, 40px baseline-to-
+     baseline, a 5px gap). 1.38 roughly doubles the visible gap at any heading
+     size, since the cap-to-em ratio is constant within the face. Set globally
+     rather than per-slide - every wrapping heading has the same problem. */
+  line-height: 1.38;
 }
 
 .slidev-layout h1 {
   font-weight: 700;
+}
+
+/* Muni is monospace: its space glyph carries the same 0.70em advance as every
+   other glyph, roughly 2.5x a normal sans space, so word gaps in headings read
+   as holes. Two successive 40% cuts on Erik's eye (0.70em -> 0.42em -> 0.25em)
+   land at -0.45em, which is a shade tighter than a normal sans word space.
+   Gated on `.muni-font`, set by setup/main.ts only when Muni actually resolved -
+   the Helvetica/Arial fallback everyone else gets (including the published site)
+   has a normal 0.278em space that this would erase. */
+.muni-font .slidev-layout h1,
+.muni-font .slidev-layout h2,
+.muni-font .slidev-layout h3,
+/* section-break's subtitle and the quote layout's attribution also run in Muni -
+   see those layouts' comments. Both rules live here rather than in the layouts'
+   own scoped blocks, because Vue's scoped compiler collapses a
+   `:global(.muni-font) ...` selector down to a bare `.muni-font`, which lands on
+   <html> and inherits into every text element in the deck. */
+.muni-font .slidev-layout.quote .quote-author,
+.muni-font .slidev-layout.section-break p {
+  word-spacing: -0.45em;
 }
 
 .slidev-layout h2,
@@ -61,4 +87,18 @@
 .bg-arts-blue {
   background: var(--muni-arts-blue);
   color: var(--muni-black);
+}
+
+/* Blue bullet markers on every layout, not just heading-body - Erik asked for
+   these everywhere. On the flat brand-color fields (section-break, break) and
+   over a photo (full-image) the body text is white and a MUNI-blue marker would
+   disappear into the background, so those keep whatever color they inherit. */
+.slidev-layout li::marker {
+  color: var(--muni-blue);
+}
+
+.slidev-layout.section-break li::marker,
+.slidev-layout.break li::marker,
+.slidev-layout.full-image li::marker {
+  color: currentColor;
 }

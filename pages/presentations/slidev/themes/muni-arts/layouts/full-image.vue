@@ -10,6 +10,10 @@
     credit: string   optional - small caption, bottom-right
     dim: boolean     default true - scrim behind overlaid text; set false
                      for a slide with no text over the image
+    fit: string      default "cover" - background-size. Use "contain" for a
+                     photo that is not 16:9 (square, portrait) so the whole
+                     frame stays visible instead of being cropped to the
+                     slide's aspect ratio.
 -->
 <script setup lang="ts">
 import { computed } from 'vue'
@@ -19,8 +23,9 @@ const props = withDefaults(
     image?: string
     credit?: string
     dim?: boolean
+    fit?: 'cover' | 'contain'
   }>(),
-  { dim: true },
+  { dim: true, fit: 'cover' },
 )
 
 // Same shape as @slidev/client's own layoutHelper.handleBackground(), inlined
@@ -41,7 +46,7 @@ const style = computed(() => {
       : `url("${url}")`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundSize: props.fit,
   }
 })
 </script>

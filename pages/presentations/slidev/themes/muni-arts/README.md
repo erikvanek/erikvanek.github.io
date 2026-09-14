@@ -38,6 +38,12 @@ The KISK logo is the opposite case: it's hotlinked live from `cdn.muni.cz` (see 
 
 A CSS `font-family: 'Muni'` request resolves to any font installed under that name on the machine viewing the page - no file management needed in this repo. For live presenting or a PDF export where the real look matters, install the 4 files as system fonts once (macOS: open each in Font Book and click "Install Font"). Every other machine - including anyone viewing the published public site - just falls straight through to Helvetica/Arial, since nothing named 'Muni' is registered there.
 
+### Word spacing in headings
+
+Muni is a monospace face, so its space glyph carries the same 0.70em advance as every other glyph - roughly 2.5x a normal sans space. Left alone, word gaps in headings read as holes (measured in headless Chrome: Muni space 0.70em vs Helvetica Neue 0.278em). `styles/base.css` pulls them back with `word-spacing: -0.45em` on h1/h2/h3 - two successive 40% cuts on Erik's eye, 0.70em -> 0.42em -> 0.25em, ending slightly tighter than a normal sans word space.
+
+That correction must not reach the Helvetica fallback, whose spacing is already right and whose words would run together. So the rule is gated on a `.muni-font` class that `setup/main.ts` puts on `<html>` only when 'Muni' actually resolved, detected by canvas glyph measurement (`document.fonts.check` is unreliable for locally-installed system families). Both the class and the rule are verified present in a production build.
+
 ## Layouts
 
 Names and shapes are carried over from the layout taxonomy Erik has used across SDW-25 and the Discovery Practice Program (audited 2026-09-13) - same nine slide types, minus the facilitation-prep fields (those lived in a yaml/pptx pipeline, not here) and speaker notes (out of scope for now).
@@ -47,7 +53,7 @@ Names and shapes are carried over from the layout taxonomy Erik has used across 
 - `layouts/quote.vue` - featured quote. Props: `author` (optional). Body slot is the quote text.
 - `layouts/two-column.vue` - heading (optional, spans both) over two columns. Props: `ratio` (e.g. `"60-40"`, default `"50-50"`). Slots: default (header), `left`, `right`.
 - `layouts/section-break.vue` - major divider, flat MUNI-blue field. No props.
-- `layouts/reflection.vue` - closing debrief slide, fixed "Reflection" eyebrow, Faculty of Arts blue accent rule. No props.
+- `layouts/groupwork.vue` - small-group work slide, fixed "Skupinová práce" eyebrow, Faculty of Arts blue accent rule. No props. (Renamed from `reflection` on 2026-09-14 - it was always used for the in-class exercise, not a closing debrief.)
 - `layouts/homework.vue` - assignment brief, fixed "Homework" eyebrow, KISK yellow accent rule. No props.
 - `layouts/full-image.vue` - full-bleed image. Props: `image` (src), `credit` (optional caption), `dim` (default `true` - scrim for legible overlaid text).
 - `layouts/break.vue` - explicit break slide, same field family as section-break but sparser. No props.
@@ -58,16 +64,24 @@ See `sdw-26-hello-world/slides.md` for one worked example of each - that deck do
 
 A thin bar at the bottom of the screen: one tick per real slide ("step"), grouped into sections, steps within a section flush against each other (one connected bar per section, 2px between sections) - pairs with an agenda slide built from `<Toc minDepth="1" maxDepth="1" />` so both read the same structure. Color reads by section, not just by step: entering a section (landing on its divider already counts) lights up its whole run of steps at a mid-tone, and only the one exact step you're on gets the fuller, more saturated color; a section you haven't reached yet stays a faint neutral mark. Sits on its own translucent-white rail rather than drawing straight onto the slide, so it reads the same on a plain white slide and on a full-bleed MUNI-blue one - a flat brand-color (or plain white) mark drawn directly on a same-color slide otherwise nearly vanishes (2026-09-13 fix, after it tested invisible on white slides). Understated by design (2026-09-13 request: "doesn't have to be super visible").
 
-**Sections are bounded by layout, not by heading text** (`dividerLayouts` prop, default `['section-break', 'break']`): a slide using one of those layouts is a "divider" - never a step in the bar itself, and (when it isn't `hideInToc`) the one thing that opens a new tracked section. Every other slide belongs to whichever section's divider it most recently followed, right up to the next divider - a layout-gallery slide, a quote, a reflection slide all count as steps, not just ones that happen to repeat the section's own heading (2026-09-13 rework, replacing an earlier heading-text-matching version - see git history on this file if curious). A hidden divider (the cover, a mid-deck break) opens nothing and closes nothing, it's just skipped. Content before the first real divider - the cover, the intro slide, the agenda slide itself - is never inside any section, so none of it needs special-casing to stay untracked.
+**Every slide gets a tick except a visible divider.** That is the whole rule (2026-09-14 change, at Erik's request: "keep everything apart from dividers in the progressbar by default, otherwise it is a bit confusing" - the session-1 deck had a third of its slides silently untracked).
+
+**Sections are bounded by layout, not by heading text** (`dividerLayouts` prop, default `['section-break', 'break']`): a slide using one of those layouts is a "divider" *only when it is not `hideInToc`* - then it gets no tick of its own and opens a new tracked section. Every other slide belongs to whichever section's divider it most recently followed, right up to the next divider - a layout-gallery slide, a quote, a full-image photo, a video slide, a groupwork slide all count as steps, not just ones that happen to repeat the section's own heading (2026-09-13 rework, replacing an earlier heading-text-matching version - see git history on this file if curious).
+
+Two consequences worth knowing:
+- **A hidden divider is an ordinary step**, not a skipped pause - a welcome slide or mid-deck breather on `section-break` with `hideInToc: true` still gets its own tick, it just doesn't open a section.
+- **Content before the first real divider forms an implicit leading section** - cover, opening story, quote, bio - rather than falling off the bar. It carries no title (there's no divider to take one from) and is never "upcoming", since you're already in it from slide 1.
 
 Hand-rolled (`components/CourseProgress.vue`), not the `slidev-component-progress` npm addon - that addon renders nothing against this Slidev version (`@slidev/cli` 52.x vs. its peer dep on `@slidev/client ^0.48.0`, last published April 2024). See `snippets/global-bottom.vue` for the full story.
 
 Wiring up a new deck (3 steps, none automatic from the theme alone - Slidev addon/global-layer discovery is per-deck):
 1. Copy `snippets/global-bottom.vue` into the deck's own project root as `global-bottom.vue`.
-2. Give each real agenda-item divider slide `layout: section-break` (or `break`) and no `hideInToc`; everything else can be any other layout and any `hideInToc` value - it'll track as a step of whichever section it falls in either way. Only add `hideInToc: true` to a divider itself if you want it to act as a silent pause (like the cover, or a mid-deck breather) that doesn't open its own section.
+2. Give each real agenda-item divider slide `layout: section-break` (or `break`) and no `hideInToc`; everything else can be any other layout and any `hideInToc` value - it'll track as a step of whichever section it falls in either way. Add `hideInToc: true` to a divider only when you want that slide to stop being structural: it then keeps its own tick like any other slide but opens no section.
 3. Add an agenda slide near the top: `<Toc minDepth="1" maxDepth="1" />`.
 
 See `sdw-26-hello-world/slides.md` for the full worked example (Agenda slide + five sections, the fifth being the pre-existing "Part II" gallery slide).
+
+The step/section computation itself is pulled out of the `.vue` file into `components/course-progress.ts` (a pure function, no Vue/Slidev runtime needed) and unit tested in `components/course-progress.test.ts` - the whole behavior spec above, encoded as tests, including the sdw-26-hello-world deck's real slide sequence as a regression case. Run with `yarn test` from the repo root.
 
 ## Favicon
 

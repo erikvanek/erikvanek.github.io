@@ -1,21 +1,26 @@
 <!--
   Hand-rolled course-progress bar (not the `slidev-component-progress` addon -
-  see themes/muni-arts/snippets/global-bottom.vue for why). One tick per real
-  slide ("step") - except the deck's blue-field "divider" slides (section-break,
-  break) never get a tick of their own, they only mark where a section starts.
-  Every other slide following a real (non-hidden) divider is a step of that
-  section, all the way up to the next divider - regardless of its own heading
-  or `hideInToc`, so a layout-gallery slide, a quote, a reflection slide all
-  count, not just ones that repeat the section's own title. Content before the
-  first real divider (the cover, the intro slide, the agenda slide itself)
-  is simply never inside any section, so it's automatically never a step -
-  no special-casing needed for those three.
+  see themes/muni-arts/snippets/global-bottom.vue for why).
+
+  **Every slide in the deck gets a tick ("step") except one thing: a VISIBLE
+  divider.** A divider is a slide on a blue-field divider layout (section-break,
+  break) that is not `hideInToc` - it marks where a section starts and never
+  gets a tick of its own. Everything else counts, regardless of its own heading
+  or `hideInToc`: a quote, a full-image photo, a video slide, a groupwork
+  slide, and a slide that merely uses a divider layout while hidden (an opening
+  welcome slide, a mid-deck pause) are all steps of whichever section is open.
+
+  Content before the first real divider - cover, opening story, quote, bio -
+  forms an implicit leading section rather than falling off the bar. Leaving
+  a third of the deck untracked read as confusing rather than tidy, so the
+  default is now "show everything, minus the dividers themselves".
 
   Sits on its own translucent-white rail rather than drawing straight onto the
   slide, so it reads the same on a plain white slide and on a full-bleed
   MUNI-blue one - a flat brand-color mark on its own brand-color background
   (or a white one on white) otherwise nearly vanishes. Understated by design:
-  thin, low opacity, hidden on the cover slide.
+  thin, low opacity, hidden on the cover slide, and hidden on any slide whose
+  frontmatter sets `hideProgress: true`.
 
   Color reads by SECTION, not just by step: a section you've already left
   behind and a section you're currently in both show the same mid-tone -
@@ -23,11 +28,14 @@
   up" its whole run of steps - and only the one exact step you're on gets the
   fuller, more saturated color. A section you haven't reached yet stays a
   faint neutral mark.
+
+  The actual step/section computation lives in ./course-progress.ts, unit
+  tested in course-progress.test.ts - this file is just the render.
 -->
 <script setup lang="ts">
-import type { SlideRoute } from '@slidev/types'
 import { computed } from 'vue'
 import { useSlideContext } from '@slidev/client'
+import { computeProgressSteps } from './course-progress'
 
 const props = withDefaults(
   defineProps<{
@@ -35,8 +43,9 @@ const props = withDefaults(
     railOpacity?: number
     gap?: string
     sectionGap?: string
-    /** Slide layouts that are "dividers" - never a step themselves, and (when
-     * not `hideInToc`) the only thing that opens a new tracked section. */
+    /** Slide layouts that can act as "dividers". A slide on one of these is
+     * structural - no tick of its own, opens a new tracked section - only when
+     * it is NOT `hideInToc`; a hidden one is treated as an ordinary step. */
     dividerLayouts?: string[]
   }>(),
   {
@@ -49,46 +58,23 @@ const props = withDefaults(
 
 const { $slidev } = useSlideContext()
 
-const steps = computed(() => {
-  const slides = ($slidev?.nav.slides ?? []) as SlideRoute[]
-  const currentPage = $slidev?.nav.currentPage ?? 1
+/** Per-slide opt-out: `hideProgress: true` in a slide's frontmatter. For slides
+ *  where the rail is visual noise rather than orientation - a full-bleed photo
+ *  or video that should reach every edge of the frame. */
+const hiddenHere = computed(
+  () => $slidev?.nav.currentSlideRoute?.meta?.slide?.frontmatter?.hideProgress === true,
+)
 
-  const sections: { title: string, dividerNo: number, nos: number[] }[] = []
-  let current: { title: string, dividerNo: number, nos: number[] } | null = null
-
-  for (const route of slides) {
-    const frontmatter = route.meta.slide.frontmatter ?? {}
-    if (props.dividerLayouts.includes(frontmatter.layout)) {
-      // A real (visible) divider opens a new section; a hidden one (the
-      // cover, a mid-deck break) opens nothing and doesn't close the section
-      // already open either - it's just a pause, skipped either way.
-      if (!frontmatter.hideInToc) {
-        current = { title: route.meta.slide.title ?? '', dividerNo: route.no, nos: [] }
-        sections.push(current)
-      }
-      continue
-    }
-    current?.nos.push(route.no)
-  }
-
-  const result: { no: number, title?: string, sectionStart: boolean, sectionEnd: boolean, state: 'mid' | 'current' | 'upcoming' }[] = []
-  for (const s of sections) {
-    if (!s.nos.length)
-      continue
-    const sectionIsFuture = currentPage < s.dividerNo
-    const last = s.nos[s.nos.length - 1]
-    for (const no of s.nos) {
-      const state = sectionIsFuture ? 'upcoming' : no === currentPage ? 'current' : 'mid'
-      result.push({ no, title: s.title, sectionStart: no === s.nos[0], sectionEnd: no === last, state })
-    }
-  }
-  return result
-})
+const steps = computed(() => computeProgressSteps(
+  $slidev?.nav.slides ?? [],
+  $slidev?.nav.currentPage ?? 1,
+  props.dividerLayouts,
+))
 </script>
 
 <template>
   <div
-    v-if="steps.length && $slidev?.nav.currentLayout !== 'cover'"
+    v-if="steps.length && $slidev?.nav.currentLayout !== 'cover' && !hiddenHere"
     class="muni-course-progress"
     :style="{ padding: `0 ${sectionGap}` }"
   >

@@ -31,10 +31,20 @@
   font-size: 3rem;
 }
 
+/* The subtitle carries the brand face rather than the neutral sans stack -
+   in Helvetica it read as a default caption under a styled heading. Muni's
+   monospace space needs the same 40%-twice correction the headings get - that
+   rule lives in styles/base.css, because Vue's scoped compiler collapses a
+   `:global(.muni-font) ... :deep(p)` selector down to a bare `.muni-font`,
+   which would land on <html> and inherit into every text element in the deck. */
 .section-body :deep(p) {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.3rem;
+  font-family: 'Muni', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.55rem;
   color: var(--muni-white);
-  opacity: 0.85;
+  opacity: 0.9;
+  margin-top: 2rem;
+  /* Wrapped subtitles were rendering at ~19px baseline-to-baseline against a
+     17px cap height - a 1px gap, so the two lines read as one block. */
+  line-height: 1.6;
 }
 </style>
