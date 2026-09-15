@@ -3,9 +3,8 @@ theme: ../themes/muni-arts
 title: SDW-26 I - Úvod
 info: |
   Service design workshop, podzim 2026, setkání 1 (17. 9.).
-  Draft - kondenzováno z kapitoly IO "01 Setkání 1 - Úvod".
-  Revize 14. 9. podle braindumpu: nový otvírák (Simon), kolečko na tři otázky,
-  wow slide přesunutý před skupinovou práci. Running order: backlog 001.
+  Poznámky pro prezentujícího, časový rozpočet a pořadí škrtů: SDW-26, artifacts/IO/01 Setkání 1 - Úvod/deck-01.md
+  Running order, rozhodnutí a otevřené body: SDW-26, backlog/001-prep-session-1-materials.md
 layout: cover
 session: 1
 sessionTitle: Úvod, organizace kurzu, motivace k prototypování
@@ -14,13 +13,6 @@ transition: slide-left
 mdc: true
 hideInToc: true
 ---
-
-<!--
-TENHLE SLIDE ZŮSTÁVÁ ZMRZLÝ NA PLÁTNĚ, ZATÍMCO SE LIDI SCHÁZEJÍ. Pustit ho dřív, než přijde první člověk.
-Layout si všechno bere z frontmatteru (course, session, sessionTitle, date, facilitator) - tělo slidu se nikam nevykresluje, nemá slot. Takže tady text needitovat, měnit frontmatter nahoře.
-Důsledek, který se hodí: moje jméno, KISK MUNI a datum jsou na plátně celou dobu, co lidi chodí dovnitř. Otázku "kdo to tam stojí" si přečtou sami a nemusím na ni pálit slide ani čas.
-Až se sál usadí, přepnu na uvítací slide a jdu rovnou do příběhu. Žádné bio, žádná organizace kurzu.
--->
 
 ---
 layout: section-break
@@ -38,12 +30,6 @@ hideInToc: true
 .welcome-slide p { font-size: 1.6rem !important; opacity: 0.9; }
 </style>
 
-<!--
-První mluvené slovo hodiny. Pozdravit, nechat sál dosednout, nespěchat.
-Žádné odrážky, žádná organizace, žádné "kurz je strukturovaný takhle". Jenom uvítání a rozběh.
-Spodní řádek je nájezd na kohoutek - řeknu ho a přepnu. Od téhle věty do videa už to jede samo.
--->
-
 ---
 layout: full-image
 image: /mimo-provoz-II-sdr.jpg
@@ -54,14 +40,6 @@ hideProgress: true
 ---
 
 <div style="position:absolute;left:37.4%;top:75.8%;transform:translate(-50%,-50%);font-size:80px;line-height:1;">🥳</div>
-
-<!--
-TOHLE JE TO „ROZTOMILÉ". Přichází hned po uvítání. Žádný text na slidu, jenom fotka - mluvím přes ni.
-Kohoutek na záchodě podniku, kde si evidentně dávají záležet. Rozbil se. Někdo to vyřešil ručně psanou kartičkou a oranžovou mašlí, ne izolepou a vytištěnou cedulí.
-Nechat sál dojít k tomu, že je to milé. „Ah, hezký, někdo si dal záležet." PŘESNĚ TAM JE CHCI MÍT, než pustím video na dalším slidu.
-Nerozbalovat tady pointu. Tenhle slide je jenom ta první půlka obratu.
-Fotka je Erikova vlastní, čtvercový ořez (2731x2732) - proto `fit: contain`, aby se neořízla na 16:9.
--->
 
 ---
 hideInToc: true
@@ -82,18 +60,6 @@ const asset = import.meta.env.BASE_URL
   ></video>
 </div>
 
-<!--
-TOHLE JE POINTA. Takhle se ten kohoutek rozbil.
-Páčka je drobná a celá výtoková ramena se volně otáčejí, takže člověk neví, čeho se má chytit a kterým směrem to jde. Chytí se špatného dílu, zapáčí - a je to.
-Věta, na kterou to celé směřuje: tu kartičku někdo musel napsat, PROTOŽE ten kohoutek lidem neřekne, jak se používá. Ta mašle je záplata na designové rozhodnutí.
-A ještě jedna, pokud bude nálada: ten kohoutek je krásný. Matná čerň, čistý tvar. A neumí to jediné, co umět má. K tomuhle se vrátíme u Nestu a platebního terminálu.
-Celý obrat je „ah, to je hezký" -> „fuj, ono to nemělo být rozbité už na začátku". Tím kohoutek končí, později se k němu nevracím.
-Video je bez zvuku a smyčkuje se - klidně ho nechat běžet, zatímco mluvím. 17 s.
-Je na výšku (9:16), zvětšené na 140 % výšky slidu a vycentrované na černé ploše. Nahoře a dole se tím záměrně ořízne (zrcadlo a rukáv), zato je kohoutek velký. Černé pruhy po stranách jsou záměr.
-Slide je bez progress baru (`hideProgress: true` ve frontmatteru), stejně jako fotka kohoutku před ním - přes celoplošný vizuál je to rušivý prvek. Černá plocha přetéká o 2 px přes okraje, aby na hraně nevznikl šedý vlas z Slidevího scale transformu.
-Styly jsou schválně inline, ne v <style> bloku: Slidev scopuje styly slidu a u tohohle slidu se to dvakrát tiše minulo účinkem.
--->
-
 ---
 layout: section-break
 hideInToc: true
@@ -103,29 +69,30 @@ hideInToc: true
 
 Aby takové věci vůbec nemusely vzniknout
 
-<!--
-Obrat z háčku do toho, o čem kurz je. Přichází hned po videu, dokud jim v hlavě visí ten ulomený kohoutek.
-„Jsme" tady znamená nás v téhle místnosti, ne instituci.
-Osobní věta, která sem patří říct nahlas (byla dřív na vlastním slidu, teď ji říkám tady): design mi dovoluje dvě věci najednou - zkoumat svět, ve kterém žiju, a pak do něj sáhnout a změnit ho.
-Netlačit na pilu a nevysvětlovat dlouho. Simon na dalším slidu to zobecní za mě.
-Vědomě jsem NEZAČÍNAL organizací kurzu ani tím, jak AI všechno mění - na AI je to moc kontroverzní start a část sálu bych ztratil v první minutě.
--->
-
 ---
 layout: quote
-author: Herbert A. Simon, The Sciences of the Artificial
+author: Herbert A. Simon, The Sciences of the Artificial, 1969
 hideInToc: true
 ---
 
-Navrhuje každý, kdo hledá cesty, jimiž chce změnit stávající situace v situace preferované.
+Navrhuje každý, kdo hledá cesty, jak změnit stávající situace v situace preferované.
 
-<!--
-Originál: "Everyone designs who devises courses of action aimed at changing existing situations into preferred ones."
-Kap. 5 s. 111 (3. vydání, 1996) / kap. 3 s. 55 (1. vydání, 1969). Ověřeno 14. 9. proti otisku kapitoly v Design Issues 4(1/2), 1988, s. 67-82.
-POZOR: Simon píše "preferred ones", tedy preferované *situace*. Ne "preferred futures" - to je slovník futures studies a kolidovalo by s paralelním kurzem Futures.
-Pointa, kterou na tom stavím: designem se zabývá každý, kdo něco mění. Řemeslo je to, co vám dá sílu tu změnu opravdu provést - a o tom je tenhle kurz.
-TODO: rozhodnout, jestli na slidu nechat český překlad, anglický originál, nebo obojí. Překlad je můj, publikovaný český překlad knihy neexistuje.
--->
+<div class="original">Everyone designs who devises courses of action aimed at changing existing situations into preferred ones.</div>
+
+<style>
+/* Originál pod překladem: menší a lehčí, ale pořád čitelný ze zadní řady.
+   .original je napsaný tady ve slidu, takže nese scope id a sedne se na něj přímo -
+   na rozdíl od .quote-body, který patří layoutu a šel by jen přes :deep(). */
+.original {
+  margin-top: 1.4rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-style: italic;
+  opacity: 0.55;
+  max-width: 34rem;
+}
+</style>
 
 ---
 layout: two-column
@@ -158,13 +125,29 @@ const asset = import.meta.env.BASE_URL
 
 <img :src="asset + 'erik-teaching.jpg'" alt="Erik u tabule na workshopu" style="width:100%;height:100%;object-fit:cover;display:block;" />
 
-<!--
-Čtvrtý slide, vědomě ne první. Příběh a Simon jdou napřed, tohle je až odpověď na "a kdo to tvrdí".
-Krátce a mimochodem. Zároveň tím modeluju tempo, jakým chci, aby za chvíli mluvili oni v kolečku - pár vět, konkrétně, bez CV.
--->
-
 ---
 layout: heading-body
+hideInToc: true
+---
+
+# Dvě praktické věci než začneme
+- oslovování
+- výjimky v zápisu
+
+<style>
+/* Řídký slide, vycentrovaný na výšku, ať prázdné plátno vypadá jako záměr. */
+.heading-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 { margin-bottom: 0.45em !important; }
+p { font-size: 1.35em; opacity: 0.75; }
+</style>
+
+---
+layout: two-column
+ratio: "60-40"
 hideInToc: true
 ---
 
@@ -172,23 +155,15 @@ hideInToc: true
 
 Abych vás trochu poznal, rád bych od každého slyšel:
 
-- **jméno**
-- **kde jste na své designérské cestě** – od „zatím jsem si o tom jen četl(a)“ přes pár vlastních projektů až po „už v oboru pracuju“
-- **jedno konkrétní očekávání** od kurzu
-- **s jakým konkrétním produktem nebo službou**, se kterou přicházíte pravidelně do styku a máte k ní silný vztah – zbožňujete ji, nebo vás spolehlivě vytáčí – a proč?
+1. **jméno**
+2. **kde jste na své designérské cestě**
+    - čtu si o tom / něco jsem vyzkoušel(a) / (částečně) mě to živí / ...
+3. **jedno konkrétní očekávání** od kurzu
+4. **produkt nebo službu, ke které máte silný vztah** – používáte ji pravidelně a buď ji zbožňujete, nebo vás spolehlivě vytáčí. A proč
 
 <br>
-(Pokud nechcete sdílet veřejně – klidně můžeme přeskočit ale rád bych si to alespoň privátně pak přečetl na MS Teams.)
-
-<!--
-25 minut, nejdůležitější blok hodiny. Slide zůstává na plátně po celou dobu kolečka.
-Tenhle běh neznám nikoho z nich - kolečko je jediný nástroj, jak si nakalibrovat obsah zbytku semestru. Odpovědi si zapisuju, vracím se k nim později v semestru.
-U očekávání tlačit na konkrétnost. „Chci se naučit něco o designu“ je k ničemu; „zkoušel jsem vést testování a nešlo mi napsat scénář“ je zlato.
-Opt-out vyslovit nahlas rovnou při zadávání, ne až se někdo ozve - v kohortě jsou studenti se speciálními potřebami.
-Produkty píšu na tabuli: munice pro diskuzi o dobrém designu a zároveň seznam kandidátů na téma projektu.
-POZOR NA ČAS: čtyři údaje na dvacet lidí ve 25 minutách vychází na 75 sekund na člověka. Když to nevyjde, první padá dotaz na produkt - jenže pak chybí ten seznam témat na tabuli. Rozhodnout předem, ne za běhu.
-TODO: zvážit vizuální škálu 1-5 pro designérskou cestu - rychlejší a porovnatelnější než dvacet improvizovaných sebepopisů.
--->
+<br>
+Nechcete mluvit před ostatními? Klidně přeskočte, jen mi to pak prosím napište na Teams.
 
 ---
 layout: section-break
@@ -205,21 +180,25 @@ hideInToc: true
 
 # Sedm setkání, jednou za čtrnáct dní
 
-- 17\. 9. – úvod, organizace kurzu, motivace
-  - seznámení a očekávání, dobrý a špatný design, proč prototypovat
-- 1\. 10. – prototypování více do hloubky
-  - věrnost a typy prototypů, interakční principy, úvod do vyhodnocování
-- 15\. 10. – ideační techniky
-  - praktický workshop pro semestrální projekty
-- 29\. 10. – evaluace prototypů, AI v designu, produktové trio
-  - uživatelské testování a jeho variace, role v týmech a role AI v odvětví
-- 12\. 11. – pokročilejší prototypovací techniky
-  - HCI, design systémy a UI kity, vibe coding a agentní vývoj
-- 26\. 11. – design critique
-  - peer-to-peer sdílení prototypů, techniky pro finální prezentace
-- 10\. 12. – závěrečné prezentace
-  - prezentace týmových projektů, zpětná vazba, zadání individuální reflexe
-
+17\. 9. – úvod, organizace kurzu, motivace
+<br>
+<br>
+1\. 10. – prototypování více do hloubky
+<br>
+<br>
+15\. 10. – ideační techniky
+<br>
+<br>
+29\. 10. – evaluace prototypů, AI v designu, produktové trio
+<br>
+<br>
+12\. 11. – pokročilejší prototypovací techniky
+<br>
+<br>
+26\. 11. – design critique + business case
+<br>
+<br>
+10\. 12. – závěrečné prezentace 🔥
 
 <style>
 /* The nested lines are a supporting layer, not siblings of the dates - and
@@ -231,6 +210,7 @@ h1 {
 li {
   margin-top: 0.04em;
   margin-bottom: 0.04em;
+  font-size: 1.5rem;
 }
 
 ul ul {
@@ -240,11 +220,6 @@ ul ul {
 }
 </style>
 
-<!--
-Mezi setkáními se pracuje - sto minut jednou za dva týdny nestačí na nic, co by stálo za to. Tuhle větu říct nahlas, byla dřív na slidu vpravo.
-Všechno ostatní je v interaktivní osnově.
-Podbody jsou orientační, ne slib - ať vidí, že kurz má tvar, a ať si dokážou představit, do čeho jdou.
--->
 ---
 layout: two-column
 ratio: "53-47"
@@ -256,13 +231,13 @@ hideInToc: true
 ::left::
 
 - **MS Teams** je preferovaný komunikační kanál
-  - budu rád když jej budete i otevřeně využívat mezi sebou
+  - budu rád, když ho budete otevřeně využívat i mezi sebou
   - např. při hledání lidí do týmů
-- **Konzultace se mnou v případě potřeby** – ideálně týmově + se mnou nasdílet přípravu
+- **Konzultace se mnou v případě potřeby** – ideálně týmově a s předem nasdílenou přípravou
 <br>
 <br>
 - **AI nástroje** používejte dle vlastního uvážení a platných univerzitních pravidel
-  - Mám jedinou podmínku u svých rozhodnutí a výstupů musíte umíte vysvětlit proč mají podobu jakou mají
+  - Mám jedinou podmínku: u svých rozhodnutí a výstupů musíte umět vysvětlit, proč mají podobu, jakou mají
 
 ::right::
 
@@ -283,10 +258,6 @@ const asset = import.meta.env.BASE_URL
 }
 </style>
 
-<!--
-Odkaz na oficiální stanovisko MUNI je v osnově, kapitola 00.6. Nevykládat dlouho - je to demonstrace postoje, že AI je doplňková dovednost, ne téma kurzu.
--->
-
 ---
 layout: heading-body
 hideInToc: true
@@ -298,15 +269,14 @@ Tým **3–5 lidí**, ideálně 4. Téma si vybíráte sami – v interaktivní 
 - ve zkratce – vyberte si něco, co vás vážně zajímá a ideálně i trochu štve
 - týmy ideálně utvořte do příště – nebojte se využít MS Teams kanál
 
-Do konce semestru musí každý projekt splnit tři věci:
+Každý projekt musí splnit tři náležitosti:
 
 1. **Doložit, že řešíte reálný problém**
-- úspěšné projekty se opírají buď o existující nebo nově nasbíraná data
+- úspěšné projekty se opírají buď o existující, nebo nově nasbíraná data
 2. **První pokus o řešení, otestovaný**
 - testování proběhne s alespoň pěti lidmi
 3. **Projít alespoň jednou iterací**
 - iterace probíhá na základě výsledků testování
-
 
 ---
 layout: heading-body
@@ -324,13 +294,6 @@ hideInToc: true
   ></iframe>
 </div>
 
-<!--
-Ukázka projektů z jarního běhu 2025 - můj vlastní LinkedIn post. Zhruba 4 minuty.
-Rámovat jako "tohle je možné", ne jako "tohle je strop".
-POZOR: embed se načítá živě z LinkedInu, takže potřebuje síť. Když bude v sále špatné wifi, slide zůstane prázdný - mít po ruce screenshot jako zálohu.
--->
-
-
 ---
 layout: heading-body
 hideInToc: true
@@ -340,7 +303,7 @@ hideInToc: true
 
 | **Termín** | **Co odevzdáváte** |
 |---|---|
-| **8. 10.** | Rámovaný problém formou vyplněného canvasu + příspěvek do Teams |
+| **8. 10.** | Vyplněného canvas řešeného problému + příspěvek do Teams |
 | **25. 11.** | Výsledky prvního testování (min. 5 lidí) |
 | **10. 12.** | Závěrečná prezentace projektu |
 | **15. 1.** | Individuální písemná reflexe |
@@ -363,15 +326,16 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Co lze kurzu reálně očekávat
+# Co lze od kurzu reálně očekávat
 
-- Vnímám vedení kurzu na stejné úrovni jako klientskou práci
+- Vedení kurzu na stejné úrovni jako klientskou práci
 - Většina práce probíhá v čase mezi setkáními
   - Kurz je za 5 kreditů, [1 ECTS kredit odpovídá ~ 25-30 hodinám času](https://en.wikipedia.org/wiki/European_Credit_Transfer_and_Accumulation_System)
 - S vašimi návrhy budete pracovat v terénu a budete sami získávat lidi pro testování a zpětnou vazbu
 - Budeme se hodně dotýkat současného dění v oboru a jak se dynamicky v posledních letech proměňuje
 - Budu maximálně podněcovat vzájemné P2P a reflektivní učení
 - Já od vás a vaší účasti očekávám, že jste dospělí
+
 ---
 layout: section-break
 ---
@@ -392,11 +356,11 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-<img :src="asset + 'nest.png'" alt="Termostat Nest Learning, 3. generace" style="max-height:19rem;width:auto;max-width:100%;display:block;margin:0 auto;" />
+<img :src="asset + 'nest.png'" alt="Termostat Nest Learning" style="max-height:19rem;width:auto;max-width:100%;display:block;margin:0 auto;" />
 
 <v-click at="1">
 
-**Nest Learning Thermostat** (3. generace)
+**Nest Learning Thermostat**
 
 </v-click>
 
@@ -420,19 +384,6 @@ const asset = import.meta.env.BASE_URL
 }
 </style>
 
-<!--
-WOW SLIDE. Žádné popisky, žádná jména značek. Jenom dvě fotky vedle sebe a otázka.
-Nechat je chvíli hádat a ptát se, jestli něco z toho používali.
-5 minut. NEROZBALOVAT tady rozdíly - tenhle slide je provokace, která otevírá skupinovou práci.
-Nejdřív jenom fotky bez popisků. Až je necháš chvíli hádat, JEDNO kliknutí dole odkryje oba názvy naráz.
-Nechat je chvíli hádat, zeptat se, jestli něco z toho používali, a rovnou z toho poslat do skupinek.
-Odpověď přijde až v debriefu, a ideálně od nich, ne ode mě.
-Produktové video Nest (1. generace), k přehrání: https://www.youtube.com/watch?v=HhqD-ljcD6I
-Zdroj fotky termostatu: https://www.alza.cz/google-nest-learning-thermostat-3rd-generation-black-d12424061.htm
-Zdroj fotky terminálu: https://www.alibaba.com/product-detail/Vending-Machine-Card-System-Entertainment-Multi_1601801280406.html
-POZOR: fotka i popisek jsou 3. generace. Video v odkazu výš je 1. generace - sjednotit, ať na slidu a v mluveném slově sedí stejná generace.
--->
-
 ---
 hideInToc: true
 background: '#000000'
@@ -449,58 +400,200 @@ hideProgress: true
   ></iframe>
 </div>
 
-<!--
-Produktové video k termostatu (YouTube: "Nest Learning Thermostat - 1st Generation", kanál Green San Diego).
-Celoplošné na černé, bez progress baru - stejný režim jako kohoutkové video. 16:9, takže sedí přesně na formát slidu.
-Autoplay je zapnutý. Prohlížeč pustí video se zvukem jenom tehdy, když už na stránce došlo k interakci - což při proklikávání slidů platí, takže by to mělo naběhnout samo.
-Kdyby se video nerozjelo, zůstane na náhledu a stačí jedno kliknutí. Vyzkoušet dopředu na tom notebooku, ze kterého budeš prezentovat.
-POZOR: tohle je živý embed z YouTube, potřebuje síť. Bez wifi zůstane slide černý - mít po ruce zálohu.
--->
-
 ---
 layout: groupwork
 hideInToc: true
 ---
 
-# Podle čeho poznáte, že je něco navržené dobře?
+# Podle čeho poznáte, že je to navržené dobře?
 
-Ve skupinkách po pěti. Vezměte si ty dvě zařízení a věci z tabule.
+První společná rozehřívací aktivita. 3 kroky:
+1. **Každý sám** (2 min)
+    - napište si jednu věc, která je podle vás navržená dobře, a jednu, která ne + proč
+2. **Skupinky po ~ 4 lidech** (8 min)
+    - projděte si k čemu jste společně došli je a hledejte společné znaky
+    - zkuste společně najít odpověď na otázku "podle čeho to poznáme?"
+3. **Skupinové sdílení** (3 min)
+    - k čemu jste ve skupině došli?
 
-Cíl: vaše vlastní definice dobrého designu.
+<style>
+/* Instrukce zůstávají na plátně celých dvanáct minut a čtou se z posledních řad,
+   takže se text stahuje o kus dolů proti výchozí velikosti odrážek. */
+h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
+li { margin-top: 0.3em; margin-bottom: 0.3em; }
+p:last-child { margin-top: 1em; }
+</style>
 
-<!--
-12 minut ve skupinkách. Není to World Café, jenom skupinky s jedním zadáním.
-TODO: napsat jim facilitační instrukce - co přesně mají ve skupince udělat a s čím vylézt ven.
-Pak 13 minut debrief: posbírat definice, doplnit vlastní příklady, dojet to na etiku.
-V debriefu tlačit na to, aby odpovědi stály na zkušenosti, ne na vzhledu.
--->
+---
+layout: two-column
+ratio: "50-50"
+hideInToc: true
+---
+
+# Stejná situace, dvě různé varianty
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+<img :src="asset + 'vlak-cedule-1.jpg'" alt="Displej řazení vlaku ve Vídni, ukazuje polohu každého vozu podél nástupiště" />
+
+Kde přesně bude stát můj vůz
+
+::right::
+
+<img :src="asset + 'vlak-cedule-2.jpg'" alt="Cedule na českém nádraží: cílová stanice, číslo vlaku, zpoždění 60 minut" />
+
+Vlak má zpoždění 60 minut
+
+<style>
+.col-left img, .col-right img { width: 100%; height: auto; object-fit: contain; display: block; }
+.col-left p, .col-right p { text-align: center; margin-top: 0.8rem; font-size: 0.95em; opacity: 0.8; }
+h1 { font-size: 1.9rem !important; }
+</style>
 
 ---
 layout: heading-body
 hideInToc: true
 ---
 
-# Obojí vypadá vyladěně
+# Jde to i lépe
 
-- Kulatý displej, minimum ovládacích prvků, „moderní“ vzhled
-- Zkušenost z nich je přitom úplně jiná
-- Povrch o kvalitě designu neřekne skoro nic
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
-<!--
-Tady rozbalit konkrétní rozdíly. Video Nest: https://www.youtube.com/watch?v=HhqD-ljcD6I
--->
+<img :src="asset + 'berlin-board.jpg'" alt="Informační tabule na berlínském nádraží: tři vlaky vedle sebe, u každého čas, zpoždění, trasa a schéma řazení vozů podle písmen na nástupišti" class="tabule" />
 
 ---
 layout: quote
-author: Mike Monteiro
+author: Mike Monteiro, Ruined by Design, 2019
 hideInToc: true
 ---
 
-Každé designové rozhodnutí někomu něco usnadní a někomu jinému zavře dveře.
+Svět není rozbitý. Funguje přesně tak, jak byl navržený. A navrhli jsme ho my.
 
-<!--
-Přednáška je mezi povinnými zdroji. Moje vlastní příklady sem.
--->
+<div class="original">The world isn't broken. It's working exactly as it was designed to work. And we're the ones who designed it.</div>
+
+<style>
+/* Stejný vzorec jako u Simona: česky velkým, originál pod tím menším. */
+.original {
+  margin-top: 1.4rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-style: italic;
+  opacity: 0.55;
+  max-width: 34rem;
+}
+</style>
+
+---
+layout: section-break
+---
+
+# Orientace v oboru
+
+Service design, dvojitý diamant a dva způsoby přemyšlení
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Service design? 🤔
+
+<div class="definice">
+<strong>Service design:</strong> The activity of planning and organizing a business's resources (people, props, and processes) in order to (1) directly improve the employee's experience, and (2) indirectly, the customer's experience.
+</div>
+
+**Service design vs. designing a service**
+
+- **Service design** řeší, jak organizace něco dělá – tedy „zkušenost zaměstnance".
+- **Designing a service** řeší dotykové body (touchpoints), ze kterých se skládá cesta zákazníka – tedy „zkušenost uživatele".
+
+V kurzu se pohybujeme v obojím a nebudeme to nijak zvlášť rozlišovat.
+
+<div class="credit">Sarah Gibbons, <a href="https://www.nngroup.com/articles/service-design-101/">Service Design 101</a> (NN/g) – mezi doporučenými zdroji v osnově</div>
+
+<style>
+/* Gibbonsova definice doslova, proto vizuálně oddělená jako citace. */
+.definice {
+  border-left: 4px solid var(--muni-arts-blue);
+  padding-left: 1rem;
+  margin: 0.2rem 0 1.4rem;
+}
+h1 { font-size: 1.9rem !important; margin-bottom: 0.6em !important; }
+li { margin-top: 0.25em; margin-bottom: 0.25em; }
+.credit { margin-top: 1.4rem; font-size: 0.75em; opacity: 0.65; }
+</style>
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Dvojitý diamant
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div style="position:relative;display:inline-block;margin-top:-0.5rem;">
+  <img :src="asset + 'double-diamond.png'" alt="Dvojitý diamant: problem space (Discovery) a solution space (Delivery)" style="display:block;width:38rem;height:auto;" />
+  <v-click>
+    <div style="position:absolute;top:0;left:0;width:50%;height:100%;background:rgba(255,255,255,0.78);"></div>
+  </v-click>
+</div>
+
+<v-click>
+
+**Tento kurz se zabývá zejména druhým diamantem.**
+
+Problematikou prvního diamantu se někteří z vás budou zabývat v paralelním kurzu uživatelského výzkumu.
+
+</v-click>
+
+<div class="credit">Rámec Double Diamond formuloval britský <a href="https://www.designcouncil.org.uk/resources/the-double-diamond/">Design Council</a> (2004)</div>
+
+<style>
+h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
+p { font-size: 0.9em; margin-top: 0.9rem; }
+.credit { font-size: 0.7em; opacity: 0.6; margin-top: 0.7rem; }
+</style>
+
+---
+layout: two-column
+ratio: "55-45"
+hideInToc: true
+---
+
+# Dva typy myšlení, které se střídají
+
+::left::
+
+- **Divergentní** (rozbíhavé) – generujeme co nejpestřejší paletu možností a záměrně nehodnotíme ani nekritizujeme. „Ano, a…"
+- **Konvergentní** (sbíhavé) – vybíráme, porovnáváme a rozhodujeme. „Ano, ale…"
+
+S oběma je potřeba umět pracovat a je potřeba vědět, který kdy využít.
+
+::right::
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<img :src="asset + 'groanzone.webp'" alt="Diamant participace: introduction, divergent, emergent se zónou kvílení uprostřed, convergent, closure" class="groan" />
+
+<div class="credit">Zóna kvílení. Diamant participace <a href="https://i2insights.org/2019/05/28/collaboration-groan-zone/">Sama Kanera</a>, kresba Carrie Kappel (2019), i2insights.org. Česky na <a href="https://futuropolis.cz/knihovna/groan-zone-zona-kvileni/">Futuropolis</a></div>
+
+<style>
+.groan { width: 100%; height: auto; display: block; }
+.col-left li { margin-top: 0.4em; margin-bottom: 0.4em; }
+.credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.7rem; line-height: 1.35; }
+</style>
 
 ---
 layout: section-break
@@ -509,17 +602,89 @@ layout: section-break
 # Proč vůbec prototypovat
 
 ---
+hideInToc: true
+hideProgress: true
+clicks: 2
+---
+
+<script setup>
+import { watch, onUnmounted } from 'vue'
+import { useSlideContext, onSlideEnter, onSlideLeave } from '@slidev/client'
+
+const asset = import.meta.env.BASE_URL
+// Slidev sám vkládá do slidu $clicks, takže se nesmí znovu deklarovat - přejmenováno na krok.
+const { $clicks: krok } = useSlideContext()
+
+// Každý snímek dostane 5 s. Časovač i šipka sahají na tentýž ref, takže
+// se nemůžou rozejít: když Erik klikne dřív, odpočet se jen přenastaví na další.
+const PAUZA = 5000
+let timer = null
+const clear = () => { if (timer) { clearTimeout(timer); timer = null } }
+const schedule = () => {
+  clear()
+  if (krok.value < 2) timer = setTimeout(() => { krok.value = krok.value + 1 }, PAUZA)
+}
+onSlideEnter(schedule)
+onSlideLeave(clear)
+onUnmounted(clear)
+watch(krok, schedule)
+</script>
+
+<div class="rails">
+  <div class="cell"><img :src="asset + 'ljub-4.jpg'" alt="Neopracovaný dřevěný hranol přišroubovaný závitovými tyčemi k betonové zdi venkovního schodiště, po kterém zrovna chodí lidé" /></div>
+  <div class="cell" :class="{ on: $clicks >= 1 }"><img :src="asset + 'ljub-3.jpg'" alt="Stejná maketa uvnitř nádraží, provizorně uchycená vedle rozpracovaných úchytů" /></div>
+  <div class="cell" :class="{ on: $clicks >= 2 }"><img :src="asset + 'zabradli-1.jpg'" alt="Hotové zábradlí o kus dál v nádraží, broušené a nalakované dřevo v čistých úchytech" /></div>
+</div>
+
+<style>
+/* Celoplošně a bez textu - fotky nesou sdělení samy, mluví se přes ně.
+   Přetéká o 2 px přes okraje, aby na hraně nevznikl šedý vlas ze Slidevího scale transformu. */
+.rails {
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  display: flex;
+  gap: 4px;
+  background: #fff;
+}
+/* Každá fotka má napevno svoji třetinu plátna a jenom se objeví - žádné
+   přeskupování, rozměr se během slidu nemění. */
+.rails .cell {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.rails .cell:nth-child(2),
+.rails .cell:nth-child(3) {
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+.rails .cell.on { opacity: 1; }
+.rails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>
+
+---
 layout: heading-body
 hideInToc: true
 ---
 
 # Prototyp je nástroj, jak se něco dozvědět
 
-- Každý prototyp odpovídá na konkrétní otázku
-- Není to zmenšená verze hotové věci
-- Není to ani „tady to máte, snad se vám to líbí"
+- Každý prototyp odpovídá na jednu konkrétní otázku
+- Podstatou prototypování je získávat poznání, ne vytvářet artefakty
+- Čím dřív něco někomu dáte k užívání tím rychleji se dozvíte, jak dál
 
-Na tohle navážeme naplno příště.
+Tenhle přístup má svoje jméno – **research through design**. Poznání vzniká tím, že něco navrhnete a pustíte to mezi lidi k užívání. Tímto přístupem dnes postupuje hodně AI-first produktových týmů. O jeho (ne)výhodách si povíme později.
+
+<div class="credit">Zimmerman, Forlizzi a Evenson: <a href="https://arl.human.cornell.edu/879Readings/Research%20through%20Design.pdf">Research Through Design as a Method for Interaction Design Research in HCI</a> (CHI 2007)</div>
+
+<style>
+.credit { font-size: 0.7em; opacity: 0.6; margin-top: 1.1rem; }
+</style>
 
 ---
 layout: homework
@@ -528,34 +693,28 @@ hideInToc: true
 
 # Do příště, tedy do 1. 10.
 
-- **Domluvte se na týmu** – 3 až 5 lidí, ideálně 4. Nikoho neznáte? Ozvěte se v kurzovním týmu v Teams
+- **Domluvte se na týmu** – 3 až 5 lidí, ideálně 4.
+    - Pokud nikoho neznáte a hledáte lidi do týmu – použijte MS Teams
 - **Vyberte si rámcově téma** – stačí tematický okruh
-- **Přijďte s obojím** – pracujeme s tím od začátku hodiny
 
-Kritéria, rychlý test i náhradní náměty jsou v osnově.
-
-<!--
-3 minuty. Nést sem myšlenku z Fadella: všímat si toho, co je rozbité, je samo o sobě designová dovednost.
-Odkázat na tabuli - je tam dvacet věcí, které vás štvou, začněte tam.
--->
+Kritéria, rychlý test i náhradní náměty jsou detailněji rozebrány v osnově.
 
 ---
 layout: heading-body
 hideInToc: true
 ---
 
-# Příště: rámování problému a ideace
+# Příště: prototypování více do hloubky
 
-- Jak z „něco tu nefunguje" udělat zadání, se kterým se dá pracovat
-- „Jak bychom mohli…?" a generování nápadů
-- Prototypování: věrnosti, nástroje, co s tím udělala AI
-- Odnesete si plátno pro rámování problému
+- **Věrnost prototypu** – od skici po klikatelný prototyp a co s tím udělala AI
+- **Principy interakčního designu**, které použijete rovnou při stavění
+- **Nástroje** – co si vybrat podle toho, co zrovna potřebujete zjistit
+- **Úvod do testování prototypů**
+- Na konec **rámování problému** – jak z „něco tu nefunguje" udělat zadání. Na to bude navazovat první "ostrý" úkol.
 
-Otázky?
+---
+layout: section-break
+hideInToc: true
+---
 
-<!--
-POZOR, TOHLE JE NEDODĚLANÝ KONEC. Celá hodina je stavěná na peak-end pravidlo, podle kterého si
-zapamatují začátek a konec - a konec je zatím jenom "co bude příště" a Q&A buffer. Sedm minut.
-Otvírák dostal příběh a Simona, konec nedostal nic.
-TODO: rozhodnout, čím hodina skutečně končí. Erik zatím neřekl. Viz backlog 001, otevřené body.
--->
+# Co se vám honí hlavou?

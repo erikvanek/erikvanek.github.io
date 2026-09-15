@@ -50,8 +50,10 @@
 
 /* Muni is monospace: its space glyph carries the same 0.70em advance as every
    other glyph, roughly 2.5x a normal sans space, so word gaps in headings read
-   as holes. Two successive 40% cuts on Erik's eye (0.70em -> 0.42em -> 0.25em)
-   land at -0.45em, which is a shade tighter than a normal sans word space.
+   as holes. Three successive cuts on Erik's eye, 40% then 40% then a third
+   (0.70em -> 0.42em -> 0.25em -> 0.167em), land at -0.53em. That is now well
+   below a normal sans word space (0.278em), which is deliberate: at display
+   sizes Muni's gaps still read wider than they measure.
    Gated on `.muni-font`, set by setup/main.ts only when Muni actually resolved -
    the Helvetica/Arial fallback everyone else gets (including the published site)
    has a normal 0.278em space that this would erase. */
@@ -65,7 +67,7 @@
    <html> and inherits into every text element in the deck. */
 .muni-font .slidev-layout.quote .quote-author,
 .muni-font .slidev-layout.section-break p {
-  word-spacing: -0.45em;
+  word-spacing: -0.53em;
 }
 
 .slidev-layout h2,

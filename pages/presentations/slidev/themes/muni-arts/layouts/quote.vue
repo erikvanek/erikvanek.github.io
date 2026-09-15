@@ -43,9 +43,9 @@ defineProps<{
   /* Placement is set from the glyph's INK box, not its em box - Georgia inks at
      ~26% of font-size, offset ~4% right and ~11% down, so the two differ by tens
      of px at display sizes. Current values sit the mark beside the quote's first
-     line, just off the left edge. */
-  top: 10.75rem;
+     line, just off the top-left corner of the slide. */
   left: 1.25rem;
+  margin-top: -1.5rem;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 16rem;
   line-height: 1;
