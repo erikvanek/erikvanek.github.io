@@ -159,7 +159,7 @@ Abych vás trochu poznal, rád bych od každého slyšel:
 2. **kde jste na své designérské cestě**
     - čtu si o tom / něco jsem vyzkoušel(a) / (částečně) mě to živí / ...
 3. **jedno konkrétní očekávání** od kurzu
-4. **produkt nebo službu, ke které máte silný vztah** – používáte ji pravidelně a buď ji zbožňujete, nebo vás spolehlivě vytáčí. A proč
+4. **produkt nebo službu, ke které máte silný vztah** – používáte ji pravidelně a buď ji zbožňujete, nebo vás spolehlivě vytáčí a proč?
 
 <br>
 <br>
@@ -266,7 +266,7 @@ hideInToc: true
 # Týmové projekty
 
 Tým **3–5 lidí**, ideálně 4. Téma si vybíráte sami – v interaktivní osnově jsou detailní instrukce.
-- ve zkratce – vyberte si něco, co vás vážně zajímá a ideálně i trochu štve
+- ve zkratce – **vyberte si něco, co vás vážně zajímá a ideálně i trochu štve**
 - týmy ideálně utvořte do příště – nebojte se využít MS Teams kanál
 
 Každý projekt musí splnit tři náležitosti:
@@ -335,6 +335,13 @@ hideInToc: true
 - Budeme se hodně dotýkat současného dění v oboru a jak se dynamicky v posledních letech proměňuje
 - Budu maximálně podněcovat vzájemné P2P a reflektivní učení
 - Já od vás a vaší účasti očekávám, že jste dospělí
+
+---
+layout: section-break
+---
+
+# Nějajké otázky k průběhu a organizaci?
+
 
 ---
 layout: section-break
@@ -409,11 +416,11 @@ hideInToc: true
 
 První společná rozehřívací aktivita. 3 kroky:
 1. **Každý sám** (2 min)
-    - napište si jednu věc, která je podle vás navržená dobře, a jednu, která ne + proč
+    - promyslete si jednu věc, která je podle vás navržená dobře, a jednu, která ne a důvody proč
 2. **Skupinky po ~ 4 lidech** (8 min)
     - projděte si k čemu jste společně došli je a hledejte společné znaky
     - zkuste společně najít odpověď na otázku "podle čeho to poznáme?"
-3. **Skupinové sdílení** (3 min)
+3. **Skupinové sdílení** (10 min)
     - k čemu jste ve skupině došli?
 
 <style>
@@ -468,6 +475,61 @@ const asset = import.meta.env.BASE_URL
 <img :src="asset + 'berlin-board.jpg'" alt="Informační tabule na berlínském nádraží: tři vlaky vedle sebe, u každého čas, zpoždění, trasa a schéma řazení vozů podle písmen na nástupišti" class="tabule" />
 
 ---
+hideInToc: true
+hideProgress: true
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="duo">
+  <div class="cell"><img :src="asset + 'terminal-2.jpg'" alt="Malý platební terminál dotypay na pultu kavárny, na displeji čitelně 58,00 Kč, zákazník k němu přikládá telefon" /></div>
+  <div class="cell"><img :src="asset + 'terminal-1.jpg'" alt="Objemný terminál Fiskal Pro T6 přišroubovaný na dřevěném prkně u zdi, obsluha se k němu natahuje přes pult" /></div>
+</div>
+
+<style>
+/* Stejný vzorec jako u kolejnicového slidu níž: dvě fotky přes celé plátno, bez textu.
+   Obě jsou oříznuté na 8:9, tedy přesně na polovinu plátna, takže cover nic neukrajuje.
+   Přetéká o 2 px přes okraje, aby na hraně nevznikl šedý vlas ze Slidevího scale transformu. */
+.duo {
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  display: flex;
+  gap: 4px;
+  background: #fff;
+}
+.duo .cell { flex: 1 1 0; min-width: 0; overflow: hidden; }
+.duo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+
+---
+hideInToc: true
+hideProgress: true
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="duo">
+  <div class="cell"><img :src="asset + 'klikatko-2.jpg'" alt="Prezentační klikátko Logitech R400 v ruce, tvarované do dlaně, dvě výrazně odlišená tlačítka dopředu a dozadu" /></div>
+  <div class="cell"><img :src="asset + 'klikatko-1.jpg'" alt="Prezentační klikátko Genius v ruce, placatá symetrická destička, tlačítka stejně velká a bez hmatového rozlišení" /></div>
+</div>
+
+<style>
+.duo {
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  display: flex;
+  gap: 4px;
+  background: #fff;
+}
+.duo .cell { flex: 1 1 0; min-width: 0; overflow: hidden; }
+.duo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+
+---
 layout: quote
 author: Mike Monteiro, Ruined by Design, 2019
 hideInToc: true
@@ -494,7 +556,7 @@ Svět není rozbitý. Funguje přesně tak, jak byl navržený. A navrhli jsme h
 layout: section-break
 ---
 
-# Orientace v oboru
+# Základní pojmy
 
 Service design, dvojitý diamant a dva způsoby přemyšlení
 
@@ -697,7 +759,7 @@ hideInToc: true
     - Pokud nikoho neznáte a hledáte lidi do týmu – použijte MS Teams
 - **Vyberte si rámcově téma** – stačí tematický okruh
 
-Kritéria, rychlý test i náhradní náměty jsou detailněji rozebrány v osnově.
+Kritéria, rychlý test náměty kdybyste neměli žádná vlastní témata jsou detailněji rozebrány v osnově.
 
 ---
 layout: heading-body
@@ -718,3 +780,10 @@ hideInToc: true
 ---
 
 # Co se vám honí hlavou?
+
+---
+layout: section-break
+hideInToc: true
+---
+
+# Díky a pěkný večer!
