@@ -174,6 +174,12 @@ Abych vás trochu poznal, rád bych od každého slyšel:
 <br>
 Nechcete mluvit před ostatními? Klidně přeskočte, jen mi to pak prosím napište na Teams.
 
+<!--
+🛑 **Nejpozději 18:30 je kolečko hotové.**
+
+Nejdůležitější blok hodiny, 25 minut. Když přetahuje, krátí se organizace za ním, ne tenhle blok.
+-->
+
 ---
 layout: section-break
 hideProgress: true
@@ -347,6 +353,10 @@ hideInToc: true
 - Budu maximálně podněcovat vzájemné P2P a reflektivní učení
 - Já od vás a vaší účasti očekávám, že jste dospělí
 
+<!--
+🛑 **Nejpozději 18:50 končí organizace.**
+-->
+
 ---
 layout: section-break
 shader: true
@@ -446,6 +456,14 @@ h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
 li { margin-top: 0.3em; margin-bottom: 0.3em; }
 p:last-child { margin-top: 1em; }
 </style>
+
+<!--
+🛑 **Začátek nejpozději 19:00, konec nejpozději 19:20.**
+
+Aktivita trvá 20 minut (2 + 8 + 10), takže z konce ve 19:20 vychází začátek v 19:00 sám.
+
+Když je 19:00 a ještě se nezačalo: ven jde lublaňské zábradlí a video Nestu, a to ještě PŘED skupinovou prací. Škrtat až po ní už čas nevrátí.
+-->
 
 ---
 layout: two-column
@@ -787,7 +805,7 @@ hideInToc: true
 # Příště: prototypování více do hloubky
 
 - **Věrnost prototypu** – od skici po klikatelný prototyp a co s tím udělala AI
-- **Principy interakčního designu**, které použijete rovnou při stavění
+- **Principy interakčního designu**, které vám pomohou při správném návrhu
 - **Nástroje** – co si vybrat podle toho, co zrovna potřebujete zjistit
 - **Úvod do testování prototypů**
 - Na konec **rámování problému** – jak z „něco tu nefunguje" udělat zadání. Na to bude navazovat první "ostrý" úkol.
@@ -809,3 +827,5 @@ hideInToc: true
 ---
 
 # Díky a pěkný večer!
+
+Zítra pošlu krátký anonymní formulář na zpětnou vazbu
