@@ -130,6 +130,13 @@ const footerLines = computed(() => {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--muni-gray);
   margin: 0;
+  /* The cover is an alignment composition: the mark, both headings, these two
+     lines and the footer rule all have to sit on one edge. Helvetica's own left
+     side bearing is small (measured 1.37px at 17.6px type, 0.078em) but at this
+     scale, against a hard rule, it is visible. The headings get the equivalent
+     correction theme-wide in base.css; this is the body half of the same idea,
+     kept local because 1.4px is not worth chasing inside ordinary content. */
+  margin-left: -0.078em;
 }
 
 .cover-institute {

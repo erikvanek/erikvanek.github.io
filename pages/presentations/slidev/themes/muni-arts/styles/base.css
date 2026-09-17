@@ -75,6 +75,41 @@
   font-weight: 500;
 }
 
+/* Muni is monospace, so every glyph's ink sits centred inside a fixed advance
+   and carries a left side bearing that grows with the font size. Measured on
+   the cover: a 48px h1 starts its ink 7.70px right of its box, a 25.6px h2
+   starts 4.51px right, while the Helvetica body text under them starts 1.37px
+   right. All three boxes are at the identical left edge - it is the ink that
+   steps right as the type gets bigger, so a heading reads as indented against
+   its own body copy and against anything else on the slide's left margin.
+   Pulling the block back by the bearing puts the INK on the margin, which is
+   the edge a reader actually sees.
+
+   margin-left, not text-indent: text-indent corrects only the first line, so a
+   heading that wraps (the cover's own subtitle does) would have its second line
+   left behind at the old position.
+
+   Excluded from the two centred layouts, where the bearing is symmetric and
+   already balanced, and a negative left margin would only push the block
+   off-centre. Gated on .muni-font for the same reason the word-spacing rule is:
+   the Helvetica fallback has roughly half this bearing and would overshoot. */
+/* Both faces need this, only by different amounts, so the base value is
+   ungated: Helvetica's bearing measures 0.078em and it is what the published
+   deck renders with on any machine without Muni installed. Gating the whole
+   correction on .muni-font would have fixed the alignment only on the two or
+   three machines that have the font. */
+.slidev-layout:not(.section-break):not(.break) h1,
+.slidev-layout:not(.section-break):not(.break) h2,
+.slidev-layout:not(.section-break):not(.break) h3 {
+  margin-left: -0.078em;
+}
+
+.muni-font .slidev-layout:not(.section-break):not(.break) h1,
+.muni-font .slidev-layout:not(.section-break):not(.break) h2,
+.muni-font .slidev-layout:not(.section-break):not(.break) h3 {
+  margin-left: -0.16em;
+}
+
 .slidev-layout a {
   color: var(--muni-blue);
 }

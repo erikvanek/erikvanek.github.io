@@ -11,6 +11,11 @@ sessionTitle: Úvod, organizace kurzu, motivace k prototypování
 date: 17. 9. 2026
 transition: slide-left
 mdc: true
+shader: false
+shaderMotion: always
+shaderFadeIn: 60
+shaderRustDelay: 20
+shaderRustDuration: 180
 hideInToc: true
 ---
 
@@ -18,6 +23,7 @@ hideInToc: true
 layout: section-break
 class: welcome-slide
 hideInToc: true
+hideProgress: true
 ---
 
 # Vítejte v SDW 2026
@@ -63,6 +69,8 @@ const asset = import.meta.env.BASE_URL
 ---
 layout: section-break
 hideInToc: true
+hideProgress: true
+
 ---
 
 # Proto jsme tady
@@ -130,9 +138,10 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Dvě praktické věci než začneme
+# Tři praktické věci než začneme
 - oslovování
 - výjimky v zápisu
+- pauzy
 
 <style>
 /* Řídký slide, vycentrovaný na výšku, ať prázdné plátno vypadá jako záměr. */
@@ -151,7 +160,7 @@ ratio: "60-40"
 hideInToc: true
 ---
 
-# Úvodní kolečko
+# Úvodní seznámení
 
 Abych vás trochu poznal, rád bych od každého slyšel:
 
@@ -167,6 +176,8 @@ Nechcete mluvit před ostatními? Klidně přeskočte, jen mi to pak prosím nap
 
 ---
 layout: section-break
+hideProgress: true
+
 ---
 
 # Průběh kurzu
@@ -303,7 +314,7 @@ hideInToc: true
 
 | **Termín** | **Co odevzdáváte** |
 |---|---|
-| **8. 10.** | Vyplněného canvas řešeného problému + příspěvek do Teams |
+| **8. 10.** | Vyplněný canvas řešeného problému + příspěvek do Teams |
 | **25. 11.** | Výsledky prvního testování (min. 5 lidí) |
 | **10. 12.** | Závěrečná prezentace projektu |
 | **15. 1.** | Individuální písemná reflexe |
@@ -338,13 +349,18 @@ hideInToc: true
 
 ---
 layout: section-break
+shader: true
+hideProgress: true
+
 ---
 
-# Nějajké otázky k průběhu a organizaci?
+# Nějaké otázky k průběhu a organizaci?
 
 
 ---
 layout: section-break
+hideProgress: true
+
 ---
 
 # Existuje dobrý nebo špatný design?
@@ -659,6 +675,8 @@ const asset = import.meta.env.BASE_URL
 
 ---
 layout: section-break
+hideProgress: true
+
 ---
 
 # Proč vůbec prototypovat
@@ -777,12 +795,16 @@ hideInToc: true
 ---
 layout: section-break
 hideInToc: true
+shader: true
+hideProgress: true
+
 ---
 
 # Co se vám honí hlavou?
 
 ---
 layout: section-break
+hideProgress: true
 hideInToc: true
 ---
 

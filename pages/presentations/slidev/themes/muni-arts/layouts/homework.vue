@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="slidev-layout homework">
-    <div class="homework-eyebrow">Homework</div>
+    <div class="homework-eyebrow">Domácí práce</div>
     <slot />
   </div>
 </template>
