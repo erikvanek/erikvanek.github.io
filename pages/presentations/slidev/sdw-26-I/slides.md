@@ -426,7 +426,7 @@ hideProgress: true
 
 <div style="position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:#000000;overflow:hidden;">
   <iframe
-    src="https://www.youtube.com/embed/HhqD-ljcD6I?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;color=white"
+    src="https://www.youtube.com/embed/HhqD-ljcD6I?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;color=white"
     title="Nest Learning Thermostat - produktové video"
     style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block;"
     allow="encrypted-media; picture-in-picture; fullscreen"
@@ -508,6 +508,10 @@ const asset = import.meta.env.BASE_URL
 </script>
 
 <img :src="asset + 'berlin-board.jpg'" alt="Informační tabule na berlínském nádraží: tři vlaky vedle sebe, u každého čas, zpoždění, trasa a schéma řazení vozů podle písmen na nástupišti" class="tabule" />
+
+<style>
+.tabule { width: 100%; height: auto; display: block; }
+</style>
 
 ---
 hideInToc: true
