@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/10 - 🧠 Knowledge">
+                ⬅️ Back to 10   🧠 Knowledge
+            </a>
+        </div>
+    
+
+    <h1 id="problem-statements">Problem statements</h1>
+<p>The artifact <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing/">Problem framing</a> produces. Framing is the thinking; the statement is the thing you write down, circulate, and get agreement on.</p>
+<h2 id="what-it-is">What it is</h2>
+<ul>
+<li>a problem statement is used to identify and frame the problem to be explored and solved, and to communicate the discovery's scope and focus</li>
+<li><strong>a concise description of the problem that needs to be solved</strong> - a nice, snappy definition</li>
+<li>some discoveries begin with investigating solutions, rather than the problems those solutions are intended to solve - <strong>if you don't know the problem, you're not going to have much luck solving it</strong></li>
+<li>the better a problem is articulated, the easier and more effectively it can be solved</li>
+<li>they are also great communication tools - a well-written one gains buy-in from stakeholders on why it's important to explore and solve the problem</li>
+<li>write one as early as possible in discovery, as it helps set discovery goals and objectives</li>
+<li>it should <strong>be written in plain language - no professional jargon or acronyms; anyone reading it should easily understand what the problem is you're trying to solve</strong></li>
+<li>roughly corresponds to the epic
+<ul>
+<li>epic title should not be vague but way more specific</li>
+<li><strong>the problem describes the shift in customer behavior</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="what-it-should-include">What it should include</h2>
+<ul>
+<li>a problem statement should include:
+<ol>
+<li><strong>The background of a problem.</strong> Which organization or department has the problem and what is the problem? Why has the problem arisen? (in some cases you may not know the exact causes - discovery can help with that)</li>
+<li><strong>The people affected by the problem.</strong> There could be multiple user groups affected in different ways - call out how the problem affects users.</li>
+<li><strong>The impact of the problem on the organization.</strong> If it is not fixed, what will be the effect? Reputational damage? Unavoidable costs? Losing market share?</li>
+</ol>
+</li>
+<li>an alternative three-part shape that works well:
+<ol>
+<li><strong>background and context</strong> - what was meant to happen? What was the existing service or product meant to do? What is the context (where is it happening, online or offline)? Who are the users?</li>
+<li><strong>what is the problem?</strong> - what is happening now? How do you know a problem exists? What can you observe? What can you see in the data? This is where facts from research or data analysis belong</li>
+<li><strong>what is the effect of that?</strong> - what is happening because of the problem? What does the data tell you? This section tells you which metrics you can use to see if your solution works</li>
+</ol>
+</li>
+<li>example: <code>Users of our newspaper app often export content from our app, rather than sharing content through our app. This is a problem because target audiences are less likely to know that the content came from our app, leading to lower conversion rates. This is also a problem for app users, as exporting content is time-consuming and could lead to a decrease in app usage.</code></li>
+<li>if you don't have all the answers, don't panic - while you should know <strong>what</strong> the problem is, you may not know exactly <strong>why</strong> it came about; <strong>that is what discovery should tackle</strong></li>
+</ul>
+<h2 id="gathering-the-facts-the-5-ws">Gathering the facts: the 5 Ws</h2>
+<p>A simple technique for gathering the relevant facts before writing the statement.</p>
+<ul>
+<li>What
+<ul>
+<li>What is the focus of the problem?</li>
+<li>What is the problem?</li>
+<li>What supporting evidence is there about this problem?</li>
+</ul>
+</li>
+<li>Who
+<ul>
+<li>Who is affected by the problem?</li>
+<li>How do we know?</li>
+<li>How are their voices present in the problem statement?</li>
+</ul>
+</li>
+<li>Where
+<ul>
+<li>Where does this problem occur?</li>
+<li>How does the context of the problem impact its expression?</li>
+</ul>
+</li>
+<li>When
+<ul>
+<li>When does the problem occur - and what is the timeframe in which it has developed?</li>
+</ul>
+</li>
+<li>Why
+<ul>
+<li>Why does the problem occur?</li>
+<li>Why is this problem worth addressing?</li>
+<li>What impact will addressing it have?</li>
+</ul>
+</li>
+</ul>
+<h2 id="opportunity-statements">Opportunity statements</h2>
+<ul>
+<li>problem statements can also capture opportunities (then sometimes called <strong>opportunity statements</strong>, though written and used the same way)
+<ul>
+<li>example: <code>The process of purchasing a newly built home can take a long time and requires many offline activities. This means sales often take a long time to close. There's an opportunity to make home buying quicker and easier, and thus improve customer-satisfaction ratings and sales.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="user-need-statements">User need statements</h2>
+<ul>
+<li>a fundamental tool for defining and aligning on the problem you are going to solve, used <strong>before</strong> spending time and resources generating possible solutions</li>
+<li>this maximizes resource use and decreases the likelihood of friction and disagreement in the prototyping, testing and implementation stages</li>
+<li><strong>the purpose of user need / problem statements is to capture what we want to achieve with our design, not how</strong></li>
+<li>they encourage us to <strong>see users' needs as verbs (goals and end states) instead of nouns that describe solutions</strong>
+<ul>
+<li>for example, users don't ever need a dropdown (noun); they need to see the choices they can make and select one of them (verb)</li>
+<li>the nouns are possible solutions to users' needs, but not the only ones - focusing on them risks suboptimal designs</li>
+</ul>
+</li>
+<li>traditional need statements have 3 components: <strong>1) a user, 2) a need, 3) a goal</strong>, combined as <em>[A user] needs [need] in order to accomplish [goal]</em>
+<ul>
+<li><em>for example, [Alieda, a multitasking, tech-savvy mother of 2] needs [to quickly and confidently compare options without leaving her comfort zone] in order to [spend more time doing the things that really matter]</em></li>
+</ul>
+</li>
+<li>keep in mind: <strong>users do not always know what they need, even though they may say so</strong></li>
+<li><strong>the insight, or goal, is the result of meeting that need - it should be rooted in empathy</strong> (see <a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a>)</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Problem framing/">Problem framing</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Insight/">Insight</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Research question/">Research question</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Discovery MOC/">Discovery MOC</a></li>
+</ul>
+
+
+    
+    <section class="resources-section">
+        <h2 id="resources">Resources</h2>
+        <ul>
+            
+            <li><a href="https://www.nngroup.com/articles/problem-statements/" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/articles/problem-statements/</a></li>
+            
+            <li><a href="https://www.nngroup.com/articles/user-need-statements/" target="_blank" rel="noopener noreferrer">https://www.nngroup.com/articles/user-need-statements/</a></li>
+            
+            <li><a href="https://digital.nhs.uk/blog/design-matters/2022/what-is-your-problem" target="_blank" rel="noopener noreferrer">https://digital.nhs.uk/blog/design-matters/2022/what-is-your-problem</a></li>
+            
+        </ul>
+    </section>
+    
+</body>
+
+</html>

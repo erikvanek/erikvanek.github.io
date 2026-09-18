@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #800080;
+            --primary-light: #9932CC;
+            --text: #333;
+            --background: #ffffff;
+            --spacing: 1.5rem;
+            --link-indicator: #DDA0DD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--primary);
+            margin-top: calc(var(--spacing) * 2);
+            margin-bottom: var(--spacing);
+            position: relative;
+        }
+
+        /* Style for headers that are links */
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Add a subtle link indicator */
+        h1 a::after,
+        h2 a::after,
+        h3 a::after,
+        h4 a::after,
+        h5 a::after,
+        h6 a::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 0.3em;
+            color: var(--link-indicator);
+            position: relative;
+            top: -0.2em;
+        }
+
+        /* Hover effects for linked headers */
+        h1 a:hover,
+        h2 a:hover,
+        h3 a:hover,
+        h4 a:hover,
+        h5 a:hover,
+        h6 a:hover {
+            color: var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        ul {
+            padding-left: var(--spacing);
+            margin-bottom: var(--spacing);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing) * 0.5);
+        }
+
+        /* Regular link styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-indicator);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+            background-color: rgba(221, 160, 221, 0.1);
+        }
+
+        .pending-link {
+            color: #999;
+            border-bottom: 1px dashed #999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: var(--spacing) 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-section {
+            margin-top: calc(var(--spacing) * 3);
+            padding-top: var(--spacing);
+            border-top: 2px solid var(--primary);
+        }
+
+        .parent-nav {
+            margin-bottom: var(--spacing);
+            font-size: 0.9rem;
+        }
+
+        .parent-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+
+        .parent-nav a:hover {
+            opacity: 1;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --spacing: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding: var(--spacing);
+            }
+
+            /* Adjust link indicator size for mobile */
+            h1 a::after,
+            h2 a::after,
+            h3 a::after,
+            h4 a::after,
+            h5 a::after,
+            h6 a::after {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+        
+        
+        <div class="parent-nav">
+            <a href="/notes/01 - 🤖 Second brain">
+                ⬅️ Back to 01   🤖 Second brain
+            </a>
+        </div>
+    
+
+    <h1 id="2026-review-making-this-second-brain-agent-maintained">2026 review: making this second brain agent-maintained</h1>
+<p>A review of how this vault is actually orchestrated today, against how the practice has moved in 2026 (Karpathy's LLM Wiki and what came after it). Written as a menu to pick from, not a plan to adopt wholesale.</p>
+<h2 id="part-a-where-the-documented-system-and-the-real-one-have-drifted">Part A: where the documented system and the real one have drifted</h2>
+<p>Found by reading <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index/">Index</a>, <a href="/notes/01 - 🤖 Second brain/Principles/">Principles</a>, <a href="/notes/01 - 🤖 Second brain/Processes/">Processes</a> and then measuring the vault against them.</p>
+<table>
+<thead>
+<tr>
+<th>Documented</th>
+<th>Actual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>00 - ⚙️ Processing</code> folder</td>
+<td>does not exist</td>
+</tr>
+<tr>
+<td><code>03 - 🗑️ Dump</code> folder, with <a href="/notes/01 - 🤖 Second brain/Routines/Dump processing/">Dump processing</a> routine</td>
+<td>does not exist</td>
+</tr>
+<tr>
+<td>(undocumented)</td>
+<td><code>05 - 🌱 Staging</code> exists</td>
+</tr>
+<tr>
+<td><code>11 - ⏳ interim knowledge</code></td>
+<td>empty, still linked from 3 notes</td>
+</tr>
+<tr>
+<td><code>99 - 📄 To process</code> holds notes to process gradually</td>
+<td>no markdown left in it, 6 links point into it</td>
+</tr>
+<tr>
+<td>Inbox notes move to <code>04 - 💽 RAW</code> after processing</td>
+<td>book notes go to <code>10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/[year]/</code></td>
+</tr>
+<tr>
+<td>Principle 3: knowledge base fully in English</td>
+<td>Czech notes throughout (travel checklists, recipes, course notes)</td>
+</tr>
+</tbody>
+</table>
+<p>Other measurements:</p>
+<ul>
+<li><strong>Note sizes are bimodal.</strong> Median note is 120 words, p90 is 571, but 14 notes exceed 900. The long tail of 1-3 line stubs is where the graph leaks: an empty <code>Interviews.md</code> was shadowing the real one and silently capturing every <code><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Design/Discovery/Interviews/">Interviews</a></code> link in the vault.</li>
+<li><strong>The &quot;auto-generate AI summaries over 1500 characters&quot; rule in <a href="/notes/01 - 🤖 Second brain/Processes/">Processes</a> produced a redundant layer.</strong> Roughly ten notes carry an <code>## AI-assisted summary</code> block restating the note underneath it.</li>
+<li><strong>Frontmatter has no single schema.</strong> <code>date_created</code> vs <code>created</code>, <code>type</code> present or absent, and six notes had their tags only in a <code>**Tags:** #a #b</code> footer where no query could reach them.</li>
+<li><strong>Template placeholders pollute link health.</strong> Of 85 broken wikilinks, 72 were placeholders inside <code>Templates/</code> and <code>Routines/</code> (<code><a href="#" class="pending-link">Related note 1</a></code>, <code><a href="#" class="pending-link">Link to agenda</a></code>). Real breakage was 23, and nearly half of that was fallout from the private-repo split.</li>
+<li><strong>There are two skill homes.</strong> <code>pages/skills/</code> holds the superseded <code>book-notes</code> and <code>deep-dive-notes</code>; the live <code>reading-notes</code> and <code>obsidian-connector</code> live in a separate skills repo. The project <a href="http://CLAUDE.md">CLAUDE.md</a> still points at the stale one.</li>
+<li><strong>Routines are prose, not programs.</strong> <code>Routines/*.md</code> describe processes an agent must read and interpret each time, rather than skills it invokes.</li>
+</ul>
+<h2 id="part-b-what-changed-in-2026">Part B: what changed in 2026</h2>
+<p>Karpathy published the <strong>LLM Wiki</strong> pattern in April 2026 (<a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">gist</a>). Three layers:</p>
+<ul>
+<li><strong>raw/</strong> immutable sources the model reads but never edits</li>
+<li><strong>wiki/</strong> entity and concept pages the model writes and maintains</li>
+<li><strong>schema</strong> (<code>CLAUDE.md</code>) that governs how it does so, co-evolving with the human</li>
+</ul>
+<p>The argument that matters: <em>&quot;The tedious part of maintaining a knowledge base is not the reading or the thinking, it's the bookkeeping. Humans abandon wikis because the maintenance burden grows faster than the value. LLMs don't get bored.&quot;</em> The human curates sources and asks questions; the agent does cross-referencing, consistency and repair.</p>
+<p>Two mechanics carry most of the weight:</p>
+<ul>
+<li><strong><a href="http://index.md">index.md</a></strong> as a content catalog: every page with a link and a one-line summary, updated on every ingest.</li>
+<li><strong><a href="http://log.md">log.md</a></strong> as an append-only record with a fixed prefix (<code>## [2026-04-02] ingest | Article Title</code>) so it is parseable with plain unix tools.</li>
+</ul>
+<p>Plus a <strong>lint pass</strong> the agent runs periodically: contradictions between pages, stale claims superseded by newer sources, orphan pages, missing cross-references.</p>
+<p>A <a href="https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2">follow-up</a> adds lifecycle thinking: supersession rather than deletion (a contradicted claim is marked stale and linked to its replacement, preserving the reasoning history), typed entity relationships, and consolidation tiers. Its comment thread is worth as much as the gist: critics argue numeric confidence scores are false precision, that models &quot;silently corrupt the graph&quot; at scale, and that <strong>&quot;human-in-the-loop as a write gate is not backwardness, it is quality control&quot;</strong> when the writer is an LLM. That last point is <a href="/notes/01 - 🤖 Second brain/Principles/">Principle 2</a> restated by strangers.</p>
+<p>One <a href="https://aimaker.substack.com/p/llm-wiki-obsidian-knowledge-base-andrej-karphaty">Obsidian adaptation</a> reduces the daily loop to three commands, <code>/ingest-url</code>, <code>/process-inbox</code>, <code>/lint-wiki</code>, and frames it as: <em>&quot;Obsidian is the IDE, the LLM is the programmer, the wiki is the codebase.&quot;</em></p>
+<h2 id="part-c-the-menu">Part C: the menu</h2>
+<p>Ordered by value per unit of effort. Each says what it costs and what it argues with.</p>
+<h3 id="1-a-codelint-vaultcode-skill-highest-value">1. A <code>/lint-vault</code> skill (highest value)</h3>
+<p>Every check run by hand this session should be a skill: broken wikilinks, short links that resolve ambiguously because two notes share a name, empty notes, notes whose only tags sit in a body footer, oversized notes, source-labelled sections that were appended rather than integrated, and frontmatter that does not match schema. Template placeholders excluded by a <code>type: template</code> marker.</p>
+<p>This is exactly the bookkeeping Karpathy says humans abandon. It found five empty notes, six notes with unreachable tags and 23 real broken links today.</p>
+<p><strong>Cost:</strong> one skill. <strong>Conflicts with:</strong> nothing.</p>
+<h3 id="2-turn-codeindexmdcode-into-a-real-content-catalog">2. Turn <code>Index.md</code> into a real content catalog</h3>
+<p>Today it describes the folder structure. Karpathy's index lists every page with a one-line summary, which is what makes an agent able to orient without reading the whole vault. Generate it with the linter rather than maintaining it by hand.</p>
+<p><strong>Cost:</strong> generated file, needs a rule that it is generated and not hand-edited. <strong>Conflicts with:</strong> Principle 6 (keep it lean) if it grows unbounded. Cap it at Knowledge, skip RAW.</p>
+<h3 id="3-one-frontmatter-schema-enforced">3. One frontmatter schema, enforced</h3>
+<p><code>type</code>, <code>created</code>, <code>tags</code>, plus <code>source_type</code>/<code>title</code>/<code>author</code> for reading notes and <code>intent</code>/<code>sources</code> for provenance. Already the reading-notes schema. Migrate the rest and let the linter fail on drift.</p>
+<p><strong>Cost:</strong> one migration pass. <strong>Conflicts with:</strong> nothing, the older notes are already inconsistent with each other.</p>
+<h3 id="4-an-append-only-ingest-log">4. An append-only ingest log</h3>
+<p>You have <code>CHANGELOG.md</code>, <code>Progress-Log.md</code> and <code>Decision-Log.md</code> doing overlapping jobs. Converge on one with a fixed parseable prefix. It answers &quot;when did this claim enter the vault and from what&quot; without git archaeology.</p>
+<p><strong>Cost:</strong> consolidating three files. <strong>Conflicts with:</strong> nothing.</p>
+<h3 id="5-move-routines-from-prose-to-skills">5. Move routines from prose to skills</h3>
+<p><code>Routines/Inbox processing.md</code>, <code>Knowledge Rebalancing.md</code>, <code>MOC maintenance.md</code> and <code>Tagging.md</code> are instructions an agent must find and interpret. As skills they become invocable and testable. <code>Book Notes Extraction.md</code> is already superseded by the <code>reading-notes</code> skill and should say so.</p>
+<p><strong>Cost:</strong> real work, one routine at a time. <strong>Conflicts with:</strong> nothing, but do it lazily, only when a routine next gets used.</p>
+<h3 id="6-supersession-instead-of-silent-overwrite">6. Supersession instead of silent overwrite</h3>
+<p>When new reading contradicts an existing claim, mark the old one stale and link the replacement rather than editing it away. Preserves why you believed the earlier thing.</p>
+<p><strong>Cost:</strong> discipline plus a convention. <strong>Conflicts with:</strong> Principle 6. Worth it only for claims you actually reason from, not for every bullet.</p>
+<h3 id="7-fix-the-drift-in-part-a">7. Fix the drift in Part A</h3>
+<p>Either create <code>00 - ⚙️ Processing</code> and <code>03 - 🗑️ Dump</code> or delete them from <a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index/">Index</a> and <a href="/notes/01 - 🤖 Second brain/Processes/">Processes</a>. Document <code>05 - 🌱 Staging</code>. Retire <code>11 - ⏳ interim knowledge</code>. Decide whether Principle 3 (English only) is a rule or an aspiration, because right now it is neither.</p>
+<p><strong>Cost:</strong> an hour. <strong>Conflicts with:</strong> nothing.</p>
+<h3 id="8-retire-the-ai-summary-layer">8. Retire the AI-summary layer</h3>
+<p>The over-1500-characters rule creates a block that restates the note. A summary earns its place on a long transcript, like a book note; on a 600-word concept note it is noise. Narrow the rule to <code>source_type: book</code> and delete the rest.</p>
+<p><strong>Cost:</strong> a pass over ~10 notes. <strong>Conflicts with:</strong> the current <a href="/notes/01 - 🤖 Second brain/Processes/">Processes</a> rule, which would need editing.</p>
+<h2 id="what-not-to-adopt">What not to adopt</h2>
+<ul>
+<li><strong>Numeric confidence scores.</strong> The v2 critics are right that a float on a claim is false precision. What you actually need is provenance, which the block-reference backlinks already give you.</li>
+<li><strong>Vector or hybrid retrieval.</strong> At 238 notes in Knowledge, grep and wikilinks are faster and more legible than an embedding index. Revisit past roughly a thousand pages.</li>
+<li><strong>Fully autonomous writes into Knowledge.</strong> The write gate is the thing that keeps this trustworthy, and it is already <a href="/notes/01 - 🤖 Second brain/Principles/">Principle 2</a>.</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<ul>
+<li><a href="/notes/01 - 🤖 Second brain/Principles/">Principles</a></li>
+<li><a href="/notes/01 - 🤖 Second brain/Processes/">Processes</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Home/Index/">Index</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/2 - 🌱 Areas/Personal development/Second brain/">Second Brain</a></li>
+<li><a href="/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Knowledge/">Knowledge</a></li>
+</ul>
+
+
+    
+</body>
+
+</html>

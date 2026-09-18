@@ -1,0 +1,30 @@
+---
+# Generates one stub page per entry in _data/redirects.json.
+#
+# GitHub Pages serves static files and has no redirect layer - no _redirects, no
+# .htaccess, no per-path rules - so a real 301 is not available for a path inside
+# this site. A stub page is the standard substitute and is what jekyll-redirect-from
+# emits too. location.replace keeps the old URL out of the back button, so Back goes
+# where the visitor came from instead of bouncing off this page again; the meta tag
+# is the fallback when JavaScript is off.
+pagination:
+  data: redirects
+  size: 1
+  alias: r
+permalink: "{{ r.from }}"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Přesměrování</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ r.to }}">
+<meta http-equiv="refresh" content="0; url={{ r.to }}">
+<script>location.replace("{{ r.to }}")</script>
+</head>
+<body>
+<p>Prezentace se přestěhovala na <a href="{{ r.to }}">{{ r.to }}</a>.</p>
+</body>
+</html>

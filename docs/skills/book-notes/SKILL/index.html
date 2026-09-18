@@ -19,6 +19,8 @@ for i, img in enumerate(images):
 <p><strong>For image input:</strong><br>
 Accept images directly and process in order.</p>
 <p>Then visually read and transcribe each page.</p>
+<p><strong>reMarkable exports are often one very tall single page</strong> (an infinite vertical scroll). Render with <code>pdftoppm -png -r 150 input.pdf out</code>, then slice the tall PNG into overlapping page-height bands (e.g. 2200px tall, 200px overlap) with PIL so no line is cut mid-stroke and detail survives.</p>
+<p><strong>Flag what you can't read.</strong> Do not silently guess ambiguous handwriting - re-render the region at higher DPI to resolve it, mark anything still uncertain inline (<code>word [?]</code> / <code>[illegible]</code>), and give the user a short &quot;Needs your eyes&quot; list at the end with your best guess and reasoning. See <code>../shared/formatting-rules.md</code> → &quot;Uncertain or illegible readings&quot;.</p>
 <h3 id="2-verify-content-type">2. Verify Content Type</h3>
 <p>Book notes typically have:</p>
 <ul>
@@ -38,6 +40,7 @@ Accept images directly and process in order.</p>
 <li>H2 (<code>##</code>) marks chapters/sections if present</li>
 <li>Quotes: <code>Author: *&quot;Quote text&quot;*</code></li>
 </ul>
+<p><strong>Section long transcriptions.</strong> If the transcription runs longer than ~1.5 A4 of text, divide it into meaningful thematic <code>##</code> sections, each ≤1-2 A4. Use the book's own chapter structure if the notes carry it; otherwise group by theme. This keeps the note skimmable and gives the enrichment step (below) coherent units to work from.</p>
 <h3 id="4-collect-metadata">4. Collect Metadata</h3>
 <p>Ask user for:</p>
 <ul>
@@ -60,7 +63,7 @@ Accept images directly and process in order.</p>
 <pre><code class="language-yaml">---
 title: [Book title]
 author: [Author name]
-date_created: [YYYY-MM-DD]
+date_created: [YYYY-MM-DD]   # the processing date - also keys the Book notes/[YEAR]/ folder and chronological browsing
 source_type: book
 tags:
   - [3-5 relevant tags from vault]
@@ -79,6 +82,22 @@ tags:
 <p>Use <code>obsidian-mcp-tools:create_vault_file</code> with the complete markdown content.</p>
 <h3 id="9-add-related-notes">9. Add Related Notes</h3>
 <p>Query Obsidian for related existing notes and add a <code>## Related notes</code> section with wiki-links at the end.</p>
+<h3 id="10-cross-pollinate-the-second-brain">10. Cross-pollinate the second brain</h3>
+<p>Once the transcript is saved, mine it for the parts that clearly mattered to the reader and graft them into existing notes so the knowledge lives where it gets used - not just in an inbox file.</p>
+<ul>
+<li><strong>Signal of what mattered.</strong> Prioritise in this order: <code>!!!</code> (bold) → underlined/highlighted → <code>!</code> (italic) → other strong standalone insights. A rich, lengthy set of notes usually means the book landed - mine it harder; a thin set, lighter.</li>
+<li><strong>Coverage.</strong> As a rule of thumb (not a quota), aim for <strong>~20%+ of the content</strong> to end up enriching an existing note.</li>
+<li><strong>Find the home.</strong> For each selected item, locate the single best-matching existing node (mature notes only - Areas/Resources, not inbox/drafts). If nothing genuinely fits, skip it - do not create new nodes or force a weak match.</li>
+<li><strong>Enrich verbatim.</strong> Paste the item's <strong>exact text</strong> (keep emphasis) into the target node. Placement is mixed per node: weave inline where there's an obvious natural home; otherwise append under a labeled <code>## ...</code> section that names the source book.</li>
+<li><strong>Backlink to the originator.</strong> Give each reused bullet in the transcript an Obsidian block anchor (<code> ^short-id</code> at end of the line) and, in the enriched node, point back with a block reference: <code>[[Book Title#^short-id]]</code>. This makes traceability bidirectional - the reader can jump from the node to the originating note, and the transcript's backlinks pane shows every node that reused a line.</li>
+<li><strong>Report a manifest</strong> of item → node edits at the end.</li>
+</ul>
+<h3 id="11-file-the-note-out-of-the-inbox">11. File the note out of the inbox</h3>
+<p>The inbox is a processing bay, not a home. Once transcription, summary, quotes, related notes, and cross-pollination are all complete, move the finished note to its permanent location:</p>
+<ul>
+<li><strong>Book notes</strong> → <code>10 - 🧠 Knowledge/3 - 📚 Resources/Book notes/[YEAR]/</code>, where <code>[YEAR]</code> is the year of <code>date_created</code> (create the year subfolder if it doesn't exist). Book notes are their own first-class collection - one home, divided by year, browsable chronologically by <code>date_created</code>.</li>
+</ul>
+<p>The cross-pollination backlinks use short-form wiki-links (<code>[[Book Title#^id]]</code>), which resolve by name and survive the move - but verify nothing breaks. Once the transcription is verified, remove the source export (PDF/photos) from the inbox too (or keep it as an attachment if the reader prefers); don't leave raw sources cluttering the inbox.</p>
 <h2 id="output-structure">Output Structure</h2>
 <pre><code class="language-markdown">---
 [frontmatter]

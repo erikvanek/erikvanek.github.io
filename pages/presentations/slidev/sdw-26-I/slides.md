@@ -1,6 +1,7 @@
 ---
 theme: ../themes/muni-arts
 title: SDW-26 I - Úvod
+publicPath: /sdw-26/I/
 info: |
   Service design workshop, podzim 2026, setkání 1 (17. 9.).
   Poznámky pro prezentujícího, časový rozpočet a pořadí škrtů: SDW-26, artifacts/IO/01 Setkání 1 - Úvod/deck-01.md
