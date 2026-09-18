@@ -73,3 +73,20 @@
 </code></pre>
 <h2 id="personal-notes">Personal Notes</h2>
 <p>Preserve personal notes/todos in their original language (Czech or English).</p>
+<h2 id="block-anchors-amp-backlinks-for-cross-pollination">Block anchors &amp; backlinks (for cross-pollination)</h2>
+<p>When a transcribed line is reused to enrich another note, make the link traceable both ways with Obsidian block references:</p>
+<ul>
+<li>In the <strong>source transcript</strong>, append a block anchor to the reused line: <code>- the line text  ^short-id</code> (lowercase, hyphenated, unique within the file; prefix with a short book slug, e.g. <code>^hthat-vision-keeper</code>).</li>
+<li>In the <strong>enriched note</strong>, reference it: <code>[[Book Title#^short-id]]</code>.</li>
+</ul>
+<p>Anchors render invisibly in Obsidian preview, so only add them to lines that are actually reused - don't anchor every bullet.</p>
+<h2 id="uncertain-or-illegible-readings">Uncertain or illegible readings</h2>
+<p>Handwriting will sometimes be ambiguous. Never silently guess.</p>
+<ol>
+<li><strong>Try to resolve it first.</strong> Re-render the specific region at higher resolution before flagging. For a tall single-page scroll, crop just that band at 300 dpi:<pre><code class="language-bash"># page is W x H px at the chosen dpi; -x -y -W -H crop in those pixels
+pdftoppm -png -r 300 -x 0 -y &lt;top&gt; -W &lt;pageWidth&gt; -H &lt;bandHeight&gt; input.pdf zoom
+</code></pre>
+Use surrounding context and the book's known facts (names, dates, terms) to disambiguate.</li>
+<li><strong>If still unsure, mark it inline</strong> in the transcription so it is visibly uncertain - e.g. <code>word [?]</code> for a doubtful word, or <code>[illegible]</code> for something unreadable. Do not invent text to fill a gap.</li>
+<li><strong>Report a short &quot;Needs your eyes&quot; list to the user</strong> at the end: each uncertain item, your best guess, and why. Resolved-by-zoom items can be mentioned briefly so the user knows what was checked.</li>
+</ol>
