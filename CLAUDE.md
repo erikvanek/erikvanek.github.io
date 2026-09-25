@@ -30,16 +30,6 @@ Slidev decks live under `pages/presentations/slidev/<deck-name>/slides.md`, buil
 - **This repo is public** - only brand themes that are fine to publish belong in `themes/<name>/` (e.g. `muni-arts`, built for the MUNI/KISK course SDW-26). A theme never stores proprietary assets (font files, source manuals) even when it's committed - it just references them by name/URL and lets the browser resolve or fall back; see `themes/muni-arts/README.md` for the pattern.
 - **Confidential/client-specific branding** for other engagements lives entirely in other repos, used locally or as exported files (PDF/PPTX) - this repo doesn't stage or preview that content at all.
 
-## Workflow skills (note processing)
-Custom Claude skills for personal note workflows live in **`pages/skills/`** (they publish with the site). Because Claude Code only auto-discovers skills under `.claude/skills/`, this repo symlinks them there locally (`.claude/skills/` is gitignored, so re-create the symlinks per clone: `ln -sfn "$PWD/pages/skills/<name>" .claude/skills/<name>`). **If a skill isn't showing up, look in `pages/skills/` first.**
-
-| Skill | Trigger phrase | Input | Routes when |
-|-------|----------------|-------|-------------|
-| `book-notes` | "process book notes" | PDF or images | Single book source, cohesive narrative, optional chapters |
-| `deep-dive-notes` | "process deep dive notes" | PDF or images | Multi-source research notes |
-
-Both read `pages/skills/shared/formatting-rules.md` for transcription conventions. The SKILL.md files were authored for an `obsidian-mcp-tools` MCP server; when that's not connected, operate on the vault as plain files instead - vault root is `pages/notes/`, inbox `pages/notes/02 - 📩 Inbox/`, quotes `pages/notes/10 - 🧠 Knowledge/3 - 📚 Resources/Learning/Quotes.md`. New skills go in their own folder under `pages/skills/` and get a row here.
-
 ## Privacy & content boundaries
 - This repo is **public** and builds to www.erikvanek.com. Anything committed is world-readable.
 - PARA **Projects** and **Archive** are **private** and live in a separate private repo - they are NOT part of this public second brain. Only Areas/Resources-type notes are published here.
