@@ -1,0 +1,4 @@
+- taken from https://www.paulgraham.com/taste.html
+- an essay on taste
+- Whatever job people do, they naturally want to do better. Football players like to win games. CEOs like to increase earnings. It's a matter of pride, and a real pleasure, to get better at your job. But if your job is to design things, and there is no such thing as beauty, then there is no way to get better at your job. If taste is just personal preference, then everyone's is already perfect: you like whatever you like, and that's it.
+- "When you're forced to be simple, you're forced to face the real problem. When you can't deliver ornament, you have to deliver substance."

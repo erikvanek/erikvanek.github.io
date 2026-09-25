@@ -53,7 +53,7 @@ Names and shapes are carried over from the layout taxonomy Erik has used across 
 - `layouts/quote.vue` - featured quote. Props: `author` (optional). Body slot is the quote text.
 - `layouts/two-column.vue` - heading (optional, spans both) over two columns. Props: `ratio` (e.g. `"60-40"`, default `"50-50"`). Slots: default (header), `left`, `right`.
 - `layouts/section-break.vue` - major divider, flat MUNI-blue field. No props.
-- `layouts/groupwork.vue` - small-group work slide, fixed "Skupinová práce" eyebrow, Faculty of Arts blue accent rule. No props. (Renamed from `reflection` on 2026-09-14 - it was always used for the in-class exercise, not a closing debrief.)
+- `layouts/groupwork.vue` - small-group work slide, fixed "Skupinová práce" eyebrow, Faculty of Arts blue accent rule. Optional props: `timer` and `gong`, which turn on the activity timer - see "Activity timer" below. (Renamed from `reflection` on 2026-09-14 - it was always used for the in-class exercise, not a closing debrief.)
 - `layouts/homework.vue` - assignment brief, fixed "Homework" eyebrow, KISK yellow accent rule. No props.
 - `layouts/full-image.vue` - full-bleed image. Props: `image` (src), `credit` (optional caption), `dim` (default `true` - scrim for legible overlaid text).
 - `layouts/break.vue` - explicit break slide, same field family as section-break but sparser. No props.
@@ -82,6 +82,47 @@ Wiring up a new deck (3 steps, none automatic from the theme alone - Slidev addo
 See `sdw-26-hello-world/slides.md` for the full worked example (Agenda slide + five sections, the fifth being the pre-existing "Part II" gallery slide).
 
 The step/section computation itself is pulled out of the `.vue` file into `components/course-progress.ts` (a pure function, no Vue/Slidev runtime needed) and unit tested in `components/course-progress.test.ts` - the whole behavior spec above, encoded as tests, including the sdw-26-hello-world deck's real slide sequence as a regression case. Run with `yarn test` from the repo root.
+
+## Activity timer
+
+A card on a `groupwork` slide that shows one step of an in-class activity at a time, with that step's own clock and a dot stepper for the shape of the whole activity (SDW-26 backlog item 032, shaped with Erik from his sketch on 2026-09-24). It exists because the activities are multi-step - session 1's warm-up is 2 minutes alone, 8 in groups, 10 sharing - and the room should see which step it is on and how long that step has left, instead of Erik being the only one holding the time.
+
+```md
+---
+layout: groupwork
+timer: [2, 8, 10]   # minutes per step; `timer: 12` is a single step; four steps at most
+gong: false         # optional, silences the gong on this slide
+---
+
+# Heading and a one-line intro stay above the card
+
+::step-1::
+
+**Každý sám**
+
+- instruction for step 1
+
+::step-2::
+
+**Skupinky po ~ 4 lidech**
+
+- instruction for step 2
+```
+
+**How it runs, all on the clicker:**
+- Landing on the slide shows step 1 with its clock stopped at full. Every step takes two presses: one shows it, the next starts it. No step ever starts on its own, because Erik gives the instructions step by step.
+- A press while a step runs ends it wherever its clock is and shows the next step, waiting. After the last step, forward leaves the slide.
+- Back on a running step resets it to full and stops it; back on a waiting step goes to the previous step, also waiting at full.
+- At zero one soft gong plays and the clock runs on into a muted grey overrun (`+1:20`). It never advances by itself, and nothing turns red or flashes.
+- Leaving the slide and coming back resets it to step 1. A browser reload does the same; surviving a reload was deliberately left out.
+
+**Mouse, for adjustments only,** to the right of the clock: play/pause, -1 min, +1 min (both work while running), and clicking the numbers to type what is left (`5` or `4:30`, Enter to set, Esc to cancel). The play button is always visible while a step is waiting; everything else appears only while the pointer is over the clock, so the projected card stays clean.
+
+**Things to know:**
+- **Don't mix it with `v-click` on the same slide.** The timer registers its own clicks (two per step, minus the landing) and assumes it is the only click consumer on the slide.
+- **The gong is synthesised** with the Web Audio API (`components/gong.ts`), so there is no sound file to license or ship and it works offline. Browsers only allow sound after a user gesture; the clicker press that starts a step counts.
+- **Clock state is local to each window.** In the presenter view both windows follow the same clicks, but a pause or +1 min pressed in one does not reach the other. The gong only plays from the audience window, so it never sounds twice.
+- Code shape follows the progress bar: `components/ActivityTimer.vue` is the render and the Slidev wiring, every timing rule lives in `components/activity-timer.ts`, unit tested in `activity-timer.test.ts` (`yarn test`).
 
 ## Favicon
 

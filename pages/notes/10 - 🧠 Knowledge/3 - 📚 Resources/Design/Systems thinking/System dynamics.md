@@ -2,6 +2,7 @@
 resources:
   - https://www.leancompliance.ca/post/system-dynamics
   - https://thesystemsthinker.com/identifying-and-breaking-vicious-cycles/
+  - https://www.designcouncil.org.uk/resources/systemic-design-framework/
 ---
 
 - dynamic systems characterized by interdependence, mutual interaction, information feedback, and circular causality
@@ -28,7 +29,7 @@ resources:
 ## Systemic design
 
 - systemic design applies systems thinking to design practice — awareness of feedback loops, unintended consequences, and interdependencies should inform how we frame and solve design problems
-
+- great mindset & toolkit available from design council org that re-shapes and widens the typical Double diamond with more systemic approach
 ## Related notes
 
 - [[Complex adaptive systems]]

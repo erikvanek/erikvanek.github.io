@@ -437,18 +437,31 @@ hideProgress: true
 ---
 layout: groupwork
 hideInToc: true
+timer: [2, 8, 10]
 ---
 
 # Podle čeho poznáte, že je to navržené dobře?
 
 První společná rozehřívací aktivita. 3 kroky:
-1. **Každý sám** (2 min)
-    - promyslete si jednu věc, která je podle vás navržená dobře, a jednu, která ne a důvody proč
-2. **Skupinky po ~ 4 lidech** (8 min)
-    - projděte si k čemu jste společně došli je a hledejte společné znaky
-    - zkuste společně najít odpověď na otázku "podle čeho to poznáme?"
-3. **Skupinové sdílení** (10 min)
-    - k čemu jste ve skupině došli?
+
+::step-1::
+
+**Každý sám**
+
+- promyslete si jednu věc, která je podle vás navržená dobře, a jednu, která ne a důvody proč
+
+::step-2::
+
+**Skupinky po ~ 4 lidech**
+
+- projděte si k čemu jste společně došli je a hledejte společné znaky
+- zkuste společně najít odpověď na otázku "podle čeho to poznáme?"
+
+::step-3::
+
+**Skupinové sdílení**
+
+- k čemu jste ve skupině došli?
 
 <style>
 /* Instrukce zůstávají na plátně celých dvanáct minut a čtou se z posledních řad,
