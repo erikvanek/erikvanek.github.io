@@ -407,12 +407,6 @@ hideInToc: true
 
 Každá skupina přečte svůj problém jednou větou.
 
-<v-click>
-
-**Co z e-mailu podklady potvrdily a co ne?**
-
-</v-click>
-
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
 p { font-size: 1.35em; }
@@ -692,31 +686,6 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Fyzické prototypování
-
-<div class="video">
-  <iframe
-    src="https://www.youtube.com/embed/DOP7q-YMeY8?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;color=white"
-    title="Service Staging Prototype"
-    allow="encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen
-  ></iframe>
-</div>
-
-<div class="credit">Angelika Simonfalvi, Service Staging Prototype (<a href="https://www.youtube.com/watch?v=DOP7q-YMeY8">YouTube</a>)</div>
-
-<style>
-h1 { margin-bottom: 0.4em !important; }
-.video { width: 38rem; aspect-ratio: 16 / 9; }
-.video iframe { width: 100%; height: 100%; border: 0; display: block; }
-.credit { font-size: 0.7em; opacity: 0.6; margin-top: 0.6rem; }
-</style>
-
----
-layout: heading-body
-hideInToc: true
----
-
 # Čitelná Praha
 
 Jednotný navigační systém pro pražskou MHD i ulice, který vede ROPID.
@@ -743,6 +712,31 @@ h1 { margin-bottom: 0.4em !important; }
 .cp-row { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
 .cp-row img { flex-basis: 0; min-width: 0; height: auto; display: block; }
 .credit { font-size: 0.62em; opacity: 0.62; margin-top: 0.5rem; line-height: 1.35; }
+</style>
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Fyzické prototypování
+
+<div class="video">
+  <iframe
+    src="https://www.youtube.com/embed/DOP7q-YMeY8?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;color=white"
+    title="Service Staging Prototype"
+    allow="encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="credit">Angelika Simonfalvi, Service Staging Prototype (<a href="https://www.youtube.com/watch?v=DOP7q-YMeY8">YouTube</a>)</div>
+
+<style>
+h1 { margin-bottom: 0.4em !important; }
+.video { width: 38rem; aspect-ratio: 16 / 9; }
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.credit { font-size: 0.7em; opacity: 0.6; margin-top: 0.6rem; }
 </style>
 
 ---
