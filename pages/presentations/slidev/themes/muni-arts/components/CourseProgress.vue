@@ -29,6 +29,11 @@
   fuller, more saturated color. A section you haven't reached yet stays a
   faint neutral mark.
 
+  An in-class exercise (a section opened by a `progressSection` slide on the
+  groupwork layout) takes the groupwork layout's pale Faculty-of-Arts blue
+  instead of MUNI blue once you reach it. Until then it is the same faint
+  neutral as any section still ahead.
+
   The actual step/section computation lives in ./course-progress.ts, unit
   tested in course-progress.test.ts - this file is just the render.
 -->
@@ -47,12 +52,16 @@ const props = withDefaults(
      * structural - no tick of its own, opens a new tracked section - only when
      * it is NOT `hideInToc`; a hidden one is treated as an ordinary step. */
     dividerLayouts?: string[]
+    /** Layouts that make a `progressSection` slide open an exercise section,
+     * drawn in pale blue. */
+    exerciseLayouts?: string[]
   }>(),
   {
     thickness: '4px',
     railOpacity: 0.6,
     sectionGap: '2px',
     dividerLayouts: () => ['section-break', 'break'],
+    exerciseLayouts: () => ['groupwork'],
   },
 )
 
@@ -69,6 +78,7 @@ const steps = computed(() => computeProgressSteps(
   $slidev?.nav.slides ?? [],
   $slidev?.nav.currentPage ?? 1,
   props.dividerLayouts,
+  props.exerciseLayouts,
 ))
 </script>
 
@@ -86,6 +96,7 @@ const steps = computed(() => computeProgressSteps(
         step.state,
         step.sectionStart && 'section-start',
         step.sectionEnd && 'section-end',
+        step.exercise && 'exercise',
       ]"
       :style="{
         height: thickness,
@@ -131,6 +142,16 @@ const steps = computed(() => computeProgressSteps(
 }
 .muni-course-progress__step.current {
   background: var(--slidev-theme-primary, #5d8392);
+  opacity: 1;
+}
+/* Exercises in the groupwork layout's pale blue once reached; one still
+   ahead stays neutral like every upcoming section. */
+.muni-course-progress__step.exercise.mid {
+  background: var(--muni-arts-blue, #4bc8ff);
+  opacity: 0.6;
+}
+.muni-course-progress__step.exercise.current {
+  background: var(--muni-arts-blue, #4bc8ff);
   opacity: 1;
 }
 </style>

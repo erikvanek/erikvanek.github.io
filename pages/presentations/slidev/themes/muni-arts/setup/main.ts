@@ -34,7 +34,27 @@ function muniIsInstalled(): boolean {
   )
 }
 
+/**
+ * Every link that leaves the deck opens in a new tab, so a click during the
+ * session never navigates the presentation away (Erik, 1 Oct). Done once here
+ * with a capture-phase listener instead of target="_blank" on each link, so it
+ * covers markdown links, HTML links and links added later alike. Links inside
+ * the deck (same origin: slide numbers, presenter view) keep their behaviour.
+ */
+function openExternalLinksInNewTab() {
+  document.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0) return
+    const link = (event.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null
+    if (!link) return
+    const url = new URL(link.href, location.href)
+    if (!/^https?:$/.test(url.protocol) || url.origin === location.origin) return
+    event.preventDefault()
+    window.open(url.href, '_blank', 'noopener,noreferrer')
+  }, true)
+}
+
 export default function ({ app: _app }: AppContext) {
   if (typeof document === 'undefined') return
   if (muniIsInstalled()) document.documentElement.classList.add(MUNI_CLASS)
+  openExternalLinksInNewTab()
 }

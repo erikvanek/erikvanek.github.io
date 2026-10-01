@@ -49,11 +49,12 @@
 }
 
 /* Muni is monospace: its space glyph carries the same 0.70em advance as every
-   other glyph, roughly 2.5x a normal sans space, so word gaps in headings read
-   as holes. Three successive cuts on Erik's eye, 40% then 40% then a third
-   (0.70em -> 0.42em -> 0.25em -> 0.167em), land at -0.53em. That is now well
-   below a normal sans word space (0.278em), which is deliberate: at display
-   sizes Muni's gaps still read wider than they measure.
+   other glyph, roughly 2.5x a normal sans space, so an uncorrected word gap in
+   a heading reads as a hole. But Muni's tracking is wide too, so a word gap
+   only reads as one when it is clearly wider than the gaps between letters.
+   -0.53em (15 Sep) left about 0.17em and titles like "Jobs to be done" ran
+   together (Erik, 1 Oct); -0.3em leaves about 0.4em, roughly twice a letter
+   gap. This is the rule for every deck on the theme.
    Gated on `.muni-font`, set by setup/main.ts only when Muni actually resolved -
    the Helvetica/Arial fallback everyone else gets (including the published site)
    has a normal 0.278em space that this would erase. */
@@ -67,7 +68,17 @@
    <html> and inherits into every text element in the deck. */
 .muni-font .slidev-layout.quote .quote-author,
 .muni-font .slidev-layout.section-break p {
-  word-spacing: -0.53em;
+  word-spacing: -0.3em;
+}
+/* The subtitle and the attribution are set at about half the heading size,
+   where the same cut leaves the word gap no wider than Muni's own letter gaps
+   and the words run together (Erik, 1 Oct: "almost invisible spaces"; -0.38em
+   was still too tight on his screen). Muni's tracking is wide, so a word gap
+   only reads as one when it is clearly wider than the letter gaps: these keep
+   Muni's own full space. */
+.muni-font .slidev-layout.quote .quote-author,
+.muni-font .slidev-layout.section-break p {
+  word-spacing: 0;
 }
 
 .slidev-layout h2,

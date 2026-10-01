@@ -40,7 +40,7 @@ A CSS `font-family: 'Muni'` request resolves to any font installed under that na
 
 ### Word spacing in headings
 
-Muni is a monospace face, so its space glyph carries the same 0.70em advance as every other glyph - roughly 2.5x a normal sans space. Left alone, word gaps in headings read as holes (measured in headless Chrome: Muni space 0.70em vs Helvetica Neue 0.278em). `styles/base.css` pulls them back with `word-spacing: -0.45em` on h1/h2/h3 - two successive 40% cuts on Erik's eye, 0.70em -> 0.42em -> 0.25em, ending slightly tighter than a normal sans word space.
+Muni is a monospace face, so its space glyph carries the same 0.70em advance as every other glyph - roughly 2.5x a normal sans space. Left alone, word gaps in headings read as holes (measured in headless Chrome: Muni space 0.70em vs Helvetica Neue 0.278em). `styles/base.css` pulls them back with `word-spacing: -0.3em` on h1/h2/h3, which leaves a word gap of about 0.4em, roughly twice the gap between Muni's widely tracked letters. It was -0.53em from 15 Sep, and titles like "Jobs to be done" ran together (Erik, 1 Oct). The smaller Muni text (the section-break subtitle, the quote attribution) keeps Muni's own full space (`word-spacing: 0`): with the heading value, and still at -0.38em, its words ran together, because Muni's wide tracking makes a small word gap look like a letter gap (Erik, 1 Oct).
 
 That correction must not reach the Helvetica fallback, whose spacing is already right and whose words would run together. So the rule is gated on a `.muni-font` class that `setup/main.ts` puts on `<html>` only when 'Muni' actually resolved, detected by canvas glyph measurement (`document.fonts.check` is unreliable for locally-installed system families). Both the class and the rule are verified present in a production build.
 
@@ -50,7 +50,7 @@ Names and shapes are carried over from the layout taxonomy Erik has used across 
 
 - `layouts/cover.vue` - title slide. Props: `session` (e.g. `"Session 1"`), `date` (e.g. `"17 Sep 2026"`). Everything else (title, subtitle) comes through as normal markdown content. Top-left mark is `components/MuniArtsMark.vue`, real vector paths - not a font-and-CSS approximation.
 - `layouts/heading-body.vue` - standard content slide, heading + bullets/prose. No props. The default, highest-volume slide type - deliberately plain.
-- `layouts/quote.vue` - featured quote. Props: `author` (optional). Body slot is the quote text.
+- `layouts/quote.vue` - featured quote. Props: `author` and `link` (both optional; `link` turns the author line into a link to the source). Body slot is the quote text.
 - `layouts/two-column.vue` - heading (optional, spans both) over two columns. Props: `ratio` (e.g. `"60-40"`, default `"50-50"`). Slots: default (header), `left`, `right`.
 - `layouts/section-break.vue` - major divider, flat MUNI-blue field. No props.
 - `layouts/groupwork.vue` - small-group work slide, fixed "Skupinová práce" eyebrow, Faculty of Arts blue accent rule. Optional props: `timer` and `gong`, which turn on the activity timer - see "Activity timer" below. (Renamed from `reflection` on 2026-09-14 - it was always used for the in-class exercise, not a closing debrief.)
@@ -70,6 +70,8 @@ A thin bar at the bottom of the screen: one tick per real slide ("step"), groupe
 
 Two consequences worth knowing:
 - **A hidden divider is an ordinary step**, not a skipped pause - a welcome slide or mid-deck breather on `section-break` with `hideInToc: true` still gets its own tick, it just doesn't open a section.
+- **`progressSection: true` opens a section on an ordinary slide** (2026-10-01, Erik: the sdw-26-II framing exercise starts on a groupwork slide and its own divider is hidden). Unlike a divider, that slide keeps its tick as the section's first step; the section takes the slide's heading as its title and runs to the next visible divider or the next `progressSection` slide.
+- **An exercise section is pale blue** (2026-10-01, Erik: „could in-class exercises get pale blue color in progressbar as their supporting visuals have?“). A section opened by a `progressSection` slide on the groupwork layout (`exerciseLayouts` prop, default `['groupwork']`) draws in `--muni-arts-blue`, the groupwork layout's own accent, once reached: mid-tone for the section, full on the current slide. Until then it stays the same neutral grey as every upcoming section (Erik, same day). A section that opens on another layout - a hidden divider for a client pitch, say - is an exercise when its slide says `progressSection: exercise`.
 - **Content before the first real divider forms an implicit leading section** - cover, opening story, quote, bio - rather than falling off the bar. It carries no title (there's no divider to take one from) and is never "upcoming", since you're already in it from slide 1.
 
 Hand-rolled (`components/CourseProgress.vue`), not the `slidev-component-progress` npm addon - that addon renders nothing against this Slidev version (`@slidev/cli` 52.x vs. its peer dep on `@slidev/client ^0.48.0`, last published April 2024). See `snippets/global-bottom.vue` for the full story.
@@ -136,3 +138,7 @@ See `sdw-26-hello-world/public/favicon.svg` for the worked example.
 ## Multi-client theming
 
 This repo is public, so it only ever holds brand themes that are fine to publish (MUNI, a public university, qualifies). Confidential/client-specific branding for other engagements lives entirely in **other repos**, used **locally or as exported files** (PDF/PPTX) - this repo doesn't stage or preview that content at all, so there's no placeholder folder for it here.
+
+## Links out of the deck
+
+Every link to another site opens in a new tab, so a click during a session never navigates the presentation away (Erik, 1 Oct). `setup/main.ts` does it once for the whole deck with a capture-phase click listener, which covers markdown links, HTML links and anything added later; links inside the deck (same origin) behave as before. Slides need no `target="_blank"` of their own.

@@ -25,18 +25,25 @@ export interface ProgressStep {
   sectionStart: boolean
   sectionEnd: boolean
   state: 'mid' | 'current' | 'upcoming'
+  /** The section is an in-class exercise: it opens on a `progressSection`
+   * slide in one of `exerciseLayouts` (groupwork by default) or on one that
+   * says `progressSection: exercise`, and the bar shows it in the groupwork
+   * layout's pale blue. */
+  exercise: boolean
 }
 
 interface Section {
   title: string
   dividerNo: number
   nos: number[]
+  exercise: boolean
 }
 
 export function computeProgressSteps(
   slides: NavSlide[],
   currentPage: number,
   dividerLayouts: string[] = ['section-break', 'break'],
+  exerciseLayouts: string[] = ['groupwork'],
 ): ProgressStep[] {
   const sections: Section[] = []
   let current: Section | null = null
@@ -48,7 +55,16 @@ export function computeProgressSteps(
     // divider layout (the welcome slide, a mid-deck pause), so it counts as an
     // ordinary step of whichever section is open.
     if (dividerLayouts.includes(frontmatter.layout as string) && !frontmatter.hideInToc) {
-      current = { title: route.meta.slide.title ?? '', dividerNo: route.no, nos: [] }
+      current = { title: route.meta.slide.title ?? '', dividerNo: route.no, nos: [], exercise: false }
+      sections.push(current)
+      continue
+    }
+    // An ordinary slide opens a section too when it says so with
+    // `progressSection: true` - an exercise that starts on a groupwork slide
+    // rather than on a divider. Unlike a divider it keeps its own tick, as the
+    // first step of the section it opens.
+    if (frontmatter.progressSection) {
+      current = { title: route.meta.slide.title ?? '', dividerNo: route.no, nos: [route.no], exercise: frontmatter.progressSection === 'exercise' || exerciseLayouts.includes(frontmatter.layout as string) }
       sections.push(current)
       continue
     }
@@ -56,7 +72,7 @@ export function computeProgressSteps(
       // Everything before the first real divider - cover, opening story, quote -
       // is still part of the deck, so it forms an implicit leading section
       // instead of falling off the bar. dividerNo 0 keeps it never-upcoming.
-      current = { title: '', dividerNo: 0, nos: [] }
+      current = { title: '', dividerNo: 0, nos: [], exercise: false }
       sections.push(current)
     }
     current.nos.push(route.no)
@@ -70,7 +86,7 @@ export function computeProgressSteps(
     const last = s.nos[s.nos.length - 1]
     for (const no of s.nos) {
       const state = sectionIsFuture ? 'upcoming' : no === currentPage ? 'current' : 'mid'
-      result.push({ no, title: s.title, sectionStart: no === s.nos[0], sectionEnd: no === last, state })
+      result.push({ no, title: s.title, sectionStart: no === s.nos[0], sectionEnd: no === last, state, exercise: s.exercise })
     }
   }
   return result

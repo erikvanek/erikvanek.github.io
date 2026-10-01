@@ -3,6 +3,7 @@
 
   Frontmatter props (all optional):
     author: string   e.g. "Erika Hall"
+    link: string     URL of the source; turns the author line into a link to it
 
   Body slot is the quote itself - plain markdown, sized big by the layout.
 
@@ -15,6 +16,7 @@
 <script setup lang="ts">
 defineProps<{
   author?: string
+  link?: string
 }>()
 </script>
 
@@ -23,7 +25,10 @@ defineProps<{
     <div class="quote-mark" aria-hidden="true">&#8220;</div>
     <div class="quote-body">
       <slot />
-      <p v-if="author" class="quote-author">{{ author }}</p>
+      <p v-if="author" class="quote-author">
+        <a v-if="link" :href="link">{{ author }}</a>
+        <template v-else>{{ author }}</template>
+      </p>
     </div>
   </div>
 </template>
@@ -84,5 +89,10 @@ defineProps<{
 
 .quote-author::before {
   content: '- ';
+}
+
+/* Slidev's own dashed link underline marks it as clickable */
+.quote-author a {
+  color: inherit;
 }
 </style>

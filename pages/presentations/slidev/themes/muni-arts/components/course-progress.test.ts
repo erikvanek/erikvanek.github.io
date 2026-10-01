@@ -13,7 +13,7 @@ const DIVIDERS = ['section-break', 'break']
  * slide's own heading - only meaningful when the slide is itself a divider,
  * since that's the only place computeProgressSteps reads it (it becomes the
  * whole section's title, not that one slide's). */
-function slide(no: number, opts: { layout?: string, hideInToc?: boolean, title?: string } = {}): NavSlide {
+function slide(no: number, opts: { layout?: string, hideInToc?: boolean, progressSection?: boolean, title?: string } = {}): NavSlide {
   return {
     no,
     meta: {
@@ -22,6 +22,7 @@ function slide(no: number, opts: { layout?: string, hideInToc?: boolean, title?:
         frontmatter: {
           ...(opts.layout ? { layout: opts.layout } : {}),
           ...(opts.hideInToc ? { hideInToc: true } : {}),
+          ...(opts.progressSection ? { progressSection: true } : {}),
         },
       },
     },
@@ -62,6 +63,63 @@ describe('dividers', () => {
     // other slide, and does not start a section of its own
     expect(steps.map(s => s.no)).toEqual([2, 3, 4])
     expect(steps.every(s => s.title === 'Hands-on exercise')).toBe(true)
+  })
+})
+
+describe('progressSection', () => {
+  // sdw-26-II: the framing exercise starts on a groupwork slide and its own
+  // TopVlaky divider is hidden, yet Erik wants it as its own section
+  const slides = [
+    slide(1, { layout: 'section-break', title: 'Rámování problému' }),
+    slide(2),
+    slide(3, { layout: 'groupwork', progressSection: true, title: 'Pojďme si to vyzkoušet' }),
+    slide(4, { layout: 'section-break', hideInToc: true, title: 'TopVlaky' }),
+    slide(5),
+    slide(6, { layout: 'section-break', title: 'Mindset prototypování' }),
+    slide(7),
+  ]
+
+  it('opens a section on an ordinary slide, which keeps its own tick as the first step', () => {
+    const steps = computeProgressSteps(slides, 2, DIVIDERS)
+    expect(steps.map(s => s.no)).toEqual([2, 3, 4, 5, 7])
+    expect(steps.find(s => s.no === 2)?.sectionEnd).toBe(true)
+    expect(steps.find(s => s.no === 3)?.sectionStart).toBe(true)
+    expect(steps.filter(s => s.no >= 3 && s.no <= 5).every(s => s.title === 'Pojďme si to vyzkoušet')).toBe(true)
+  })
+
+  it('marks a section opened on a groupwork slide as an exercise, and nothing else', () => {
+    const steps = computeProgressSteps(slides, 2, DIVIDERS)
+    expect(steps.filter(s => s.exercise).map(s => s.no)).toEqual([3, 4, 5])
+  })
+
+  it('makes an exercise of any layout that says progressSection: exercise', () => {
+    const pitch = [
+      slide(1, { layout: 'section-break', title: 'Rámování problému' }),
+      slide(2),
+      { no: 3, meta: { slide: { title: 'TopVlaky', frontmatter: { layout: 'section-break', hideInToc: true, progressSection: 'exercise' } } } },
+      slide(4, { layout: 'groupwork' }),
+      slide(5, { layout: 'section-break', title: 'Mindset prototypování' }),
+      slide(6),
+    ]
+    const steps = computeProgressSteps(pitch, 3, DIVIDERS)
+    expect(steps.filter(s => s.exercise).map(s => s.no)).toEqual([3, 4])
+    expect(steps.find(s => s.no === 3)?.state).toBe('current')
+  })
+
+  it('does not make an exercise of a progressSection slide on another layout', () => {
+    const plain = [
+      slide(1, { layout: 'section-break', title: 'Intro' }),
+      slide(2, { layout: 'heading-body', progressSection: true, title: 'Case study' }),
+      slide(3),
+    ]
+    expect(computeProgressSteps(plain, 2, DIVIDERS).some(s => s.exercise)).toBe(false)
+  })
+
+  it('treats that section as upcoming until its first slide, then marks that slide current', () => {
+    expect(computeProgressSteps(slides, 2, DIVIDERS).filter(s => s.no >= 3 && s.no <= 5).every(s => s.state === 'upcoming')).toBe(true)
+    const steps = computeProgressSteps(slides, 3, DIVIDERS)
+    expect(steps.find(s => s.no === 3)?.state).toBe('current')
+    expect(steps.find(s => s.no === 5)?.state).toBe('mid')
   })
 })
 

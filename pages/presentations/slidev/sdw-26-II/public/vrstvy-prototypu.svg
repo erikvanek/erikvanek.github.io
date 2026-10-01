@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 540" width="1120" height="540" role="img" aria-labelledby="title desc">
+  <title id="title">Co se dá prototypovat: vrstvy, které do sebe zapadají</title>
+  <desc id="desc">Pět vnořených vrstev od nejmenší po největší: obsah a texty (úřední dopis) uvnitř obrazovek a dílčích průchodů (dokončení objednávky), ty uvnitř zákaznické cesty (od objednávky po vrácení zboží), cesta ve fyzických prostorech a navigaci (zákaznické centrum úřadu) a to celé v produktové vizi (Knowledge Navigator, Apple 1987).</desc>
+  <style>
+    .muni { font-family: 'Muni', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; }
+    .sans { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  </style>
+  <rect x="1" y="1" width="1118" height="538" rx="22" fill="#f6f8fb" stroke="#e2e8f0" stroke-width="1.5"/>
+  <!-- the nesting, outermost first so each inner layer draws on top -->
+  <g>
+    <g data-layer="0"><rect x="36" y="36" width="1048" height="430" rx="14" fill="rgb(255 255 255)" stroke="#c3d3e4" stroke-width="1.5"/><text class="muni" y="77.5" font-size="18" fill="#0000dc"><tspan x="58.0">PRODUKTOVÁ</tspan><tspan x="191.2">VIZE</tspan></text><text class="sans" x="902" y="77.5" font-size="18" text-anchor="end" fill="#1b1f24">Knowledge Navigator (Apple, 1987)</text></g>
+    <g data-layer="1"><rect x="76" y="106" width="968" height="344" rx="14" fill="rgb(246 252 255)" stroke="#c3d3e4" stroke-width="1.5"/><text class="muni" y="147.5" font-size="18" fill="#0000dc"><tspan x="98.0">FYZICKÉ</tspan><tspan x="193.4">PROSTORY</tspan><tspan x="301.4">A</tspan><tspan x="321.2">NAVIGACE</tspan></text><text class="sans" x="902" y="147.5" font-size="18" text-anchor="end" fill="#1b1f24">zákaznické centrum úřadu</text></g>
+    <g data-layer="2"><rect x="116" y="176" width="888" height="258" rx="14" fill="rgb(237 250 255)" stroke="#c3d3e4" stroke-width="1.5"/><text class="muni" y="217.5" font-size="18" fill="#0000dc"><tspan x="138.0">ZÁKAZNICKÁ</tspan><tspan x="271.2">CESTA</tspan></text><text class="sans" x="902" y="217.5" font-size="18" text-anchor="end" fill="#1b1f24">od objednávky po vrácení zboží</text></g>
+    <g data-layer="3"><rect x="156" y="246" width="808" height="172" rx="14" fill="rgb(228 247 255)" stroke="#c3d3e4" stroke-width="1.5"/><text class="muni" y="287.5" font-size="18" fill="#0000dc"><tspan x="178.0">OBRAZOVKY</tspan><tspan x="298.6">A</tspan><tspan x="318.4">DÍLČÍ</tspan><tspan x="388.6">PRŮCHODY</tspan></text><text class="sans" x="902" y="287.5" font-size="18" text-anchor="end" fill="#1b1f24">dokončení objednávky</text></g>
+    <g data-layer="4"><rect x="196" y="316" width="728" height="86" rx="14" fill="rgb(219 244 255)" stroke="#c3d3e4" stroke-width="1.5"/><text class="muni" y="365.5" font-size="18" fill="#0000dc"><tspan x="218.0">OBSAH</tspan><tspan x="288.2">A</tspan><tspan x="308.0">TEXTY</tspan></text><text class="sans" x="902" y="365.5" font-size="18" text-anchor="end" fill="#1b1f24">úřední dopis</text></g>
+  </g>
+  <text class="sans" x="36" y="504" font-size="17" fill="#595959">Každá vrstva je součástí té větší</text>
+</svg>
