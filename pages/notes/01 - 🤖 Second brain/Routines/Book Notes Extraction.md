@@ -11,6 +11,7 @@ Complete end-to-end workflow for processing handwritten book notes from A5 pages
 ## **Processing Steps:**
 
 ### **1. Transcription Phase**
+- **Agent instructions**: lines starting with `@` (or a bullet followed by `@`) are directions to the agent, not note content. Do not transcribe them; apply them and report them back before saving. See [[Agent Instructions in Handwritten Notes]]
 - Transcribe handwritten text from each page photo to digital text
 - **Preserve hierarchical indentation structure** - if bullet points are indented under other points, maintain that relationship using proper markdown indentation
 - **Preserve emphasis formatting**:
@@ -126,3 +127,4 @@ This workflow integrates with:
 - [[Knowledge Rebalancing]]
 - [[Chunking]]
 - [[Clean URL System]]
+- [[Agent Instructions in Handwritten Notes]]

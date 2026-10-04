@@ -24,6 +24,16 @@ See [[Revival-Strategy]] for the full plan and [[Decision-Log]] for structural d
 
 ## Log Entries
 
+### 2026-10-04 — Agent instruction convention for handwritten notes
+**By**: Claude (session with Erik)
+
+**What happened**:
+Designed and documented the `@` convention for leaving instructions to a processing agent inside handwritten notes (opener `@` or `- @`, closer bare `@`, scope rules, echo-back before saving). Tested on a real reMarkable page. Written up as [[Agent Instructions in Handwritten Notes]], linked from [[Book Notes Extraction]], logged as DEC-012 in [[Decision-Log]].
+
+**Still to do**: paste the shared definition and the step 1b into the claude.ai book-notes and deep-dive-notes skills (they sync from the account, not this repo). Decide the default meaning of "merge" for re-read notes.
+
+---
+
 ### 2026-03-05 — Phase 3 complete: 99 backlog processed
 **By**: Claude (session with Erik)
 
