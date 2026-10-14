@@ -1,0 +1,6 @@
+- nabíječka na mobil
+- mobil
+- peněženka
+- klíče
+- sluneční brýle
+- věci v síti (powerbanka, čelovka, ...)
