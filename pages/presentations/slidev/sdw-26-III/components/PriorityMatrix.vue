@@ -4,6 +4,7 @@
   Props:
     kind     'impact' | 'eisenhower'
     mode     'static' (výchozí): vždy svítí jen vítězné pole
+             'both': vždy svítí vítězné i druhé dobré pole, bez animace
              'reveal': dokud step < 1, jsou všechna pole v základní barvě, po kliknutí
                        se rozsvítí vítězné pole (nejsytější modrá) a druhé dobré (světlejší)
     step     $clicks slidu, jen pro mode 'reveal'
@@ -13,7 +14,7 @@
 import { computed } from 'vue'
 
 const props = withDefaults(
-  defineProps<{ kind: 'impact' | 'eisenhower'; mode?: 'static' | 'reveal'; step?: number; compact?: boolean }>(),
+  defineProps<{ kind: 'impact' | 'eisenhower'; mode?: 'static' | 'reveal' | 'both'; step?: number; compact?: boolean }>(),
   { mode: 'static', step: 0, compact: false }
 )
 
@@ -44,7 +45,11 @@ const presets = {
 }
 
 const preset = computed(() => presets[props.kind])
-const lit = computed(() => (props.mode === 'static' ? 'best' : props.step >= 1 ? 'both' : 'none'))
+const lit = computed(() => {
+  if (props.mode === 'static') return 'best'
+  if (props.mode === 'both') return 'both'
+  return props.step >= 1 ? 'both' : 'none'
+})
 
 function cls(c: Cell) {
   if (lit.value === 'none') return ''
@@ -99,6 +104,14 @@ function cls(c: Cell) {
 }
 .pm:not(.compact) .cell {
   height: 9.2rem;
+}
+/* Popisky v polích na detailních slidech: při velkém písmu matice působily vedle
+   pole předimenzovaně. */
+.pm:not(.compact) .cell strong {
+  font-size: 0.85em;
+}
+.pm:not(.compact) .cell small {
+  font-size: 0.62em;
 }
 /* Název osy sedí přímo na ose, v mezeře mezi poli, takže je jasné, ke které patří */
 .axis-name {
@@ -175,12 +188,15 @@ function cls(c: Cell) {
 }
 .sign.y-hi { top: 0; }
 .sign.y-lo { bottom: 0; color: #8fcff2; }
+/* Na konci vodorovné osy, těsně nad ní a mimo pole. Větší znaménko s odsazením
+   0.2rem se dotýkalo rohu pole a vypadalo jako druhá čára za ním. */
 .sign.x-lo,
 .sign.x-hi {
-  top: calc(50% - 2.2rem);
+  top: calc(50% - 1.7rem);
+  font-size: 1em;
 }
-.sign.x-lo { left: 0.2rem; color: #8fcff2; }
-.sign.x-hi { right: 0.2rem; color: var(--hi); }
+.sign.x-lo { left: 0; color: #8fcff2; }
+.sign.x-hi { right: 0; color: var(--hi); }
 .axis.y::before {
   top: 0;
   left: 50%;
@@ -220,8 +236,13 @@ function cls(c: Cell) {
   border: 1px solid #dbe6f2;
   transition: background-color 0.9s ease, border-color 0.9s ease, box-shadow 0.9s ease;
 }
+.pm.compact { max-width: none; --gap: 1.6rem; }
+.compact .plot { padding: 1rem 1.2rem; }
 .compact .cell {
-  height: 3.6rem;
+  height: 5.7rem;
+}
+.compact .cell strong {
+  font-size: 0.92em;
 }
 .compact .cell small {
   display: none;
@@ -239,6 +260,9 @@ function cls(c: Cell) {
 }
 .cell.bright {
   background: linear-gradient(135deg, #3fc1fb, #86dcff);
+  /* Gradient přes celý rámeček. Jinak se pod průhledným okrajem opakuje další
+     dlaždice gradientu a po horní a dolní hraně pole vznikne druhá čára. */
+  background-origin: border-box;
   border-color: transparent;
   box-shadow: 0 6px 16px rgba(75, 200, 255, 0.4);
 }

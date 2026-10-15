@@ -21,6 +21,12 @@ hideInToc: true
 ---
 
 
+<!--
+<br/>
+
+**Úvod <span style="white-space:nowrap">18:00–18:10 (1/3)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -29,6 +35,7 @@ hideInToc: true
 # Dnes nás čeká
 
 - **Ideace** – mindset a dvě techniky, brainwriting a SCAMPER
+- **Pauza** – doufám!
 - **Prioritizace** – jak ze spousty nápadů vybrat ty, které stojí za prototyp
 - **Co nám má prototyp přinést?**
 - **Úkol** – první prototyp k testování
@@ -39,7 +46,11 @@ h1 { margin-bottom: 0.45em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
+<!--
+<br/>
 
+**Úvod <span style="white-space:nowrap">18:00–18:10 (2/3)</span>**
+-->
 
 ---
 layout: section-break
@@ -49,6 +60,16 @@ hideProgress: true
 
 # Jak šly první úkoly?
 
+<!--
+<br/>
+
+**Úvod <span style="white-space:nowrap">18:00–18:10 (3/3)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:10 končí úvod a zpětná vazba k úkolům.**
+-->
+
 ---
 layout: section-break
 ---
@@ -56,6 +77,12 @@ layout: section-break
 # Ideační techniky
 
 Nápady jsou levné
+
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (1/7)</span>**
+-->
 
 ---
 layout: heading-body
@@ -86,7 +113,7 @@ clicks: 4
     <ellipse cx="300" cy="347" rx="10" ry="23" transform="rotate(-2 300 347)" fill="#0000dc" />
   </svg>
   <p class="note">Omezení pomáhá začít. Důležité je začít a dokonalost hledat až později.</p>
-  <div class="credit">Impose constraints, <a href="https://hci.stanford.edu/courses/cs147/2021/wi/readings/bootcamp_bootleg.pdf">d.school Bootcamp Bootleg</a></div>
+  <div class="credit">Impose constraints, <a href="https://hci.stanford.edu/courses/cs147/2021/wi/readings/bootcamp_bootleg.pdf">d.school</a></div>
 </div>
 </Transition>
 
@@ -106,6 +133,12 @@ clicks: 4
 .elephant .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.3rem; line-height: 1.35; }
 </style>
 
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (2/7)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "60-40"
@@ -119,7 +152,7 @@ hideInToc: true
 - Víc než talent rozhoduje tvorba **prostředí stimulující kreativitu**
 - Kreativní sebedůvěra je *přesvědčení* spíš než něco co "máte nebo nemáte"
   - V knížce se tomu taky říká *karaoke confidence*
-- Kreativita není o tom umět precizně kreslit nebo skládat hudbu
+- Kreativita není jen o tom umět precizně kreslit nebo skládat hudbu
 
 ::right::
 
@@ -138,6 +171,12 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 .cover img { height: 21rem; width: auto; display: inline-block; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.8rem; line-height: 1.35; }
 </style>
+
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (3/7)</span>**
+-->
 
 ---
 layout: quote
@@ -171,9 +210,16 @@ Jakmile se špatné nápady vypustí ven, stane se něco překvapivého – zač
 }
 </style>
 
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (4/7)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
+disabled: true
 ---
 
 # Máte někdo nějaký trik?
@@ -203,7 +249,7 @@ const asset = import.meta.env.BASE_URL
 
 <div class="cover">
   <img :src="asset + 'big-mind-cover.jpg'" alt="Obálka knihy Big Mind od Geoffa Mulgana" />
-  <div class="credit">Big Mind. <a href="https://press.princeton.edu/books/hardcover/9780691170794/big-mind">Geoff Mulgan</a>, <a href="https://press.princeton.edu/">Princeton University Press</a></div>
+  <div class="credit">Big Mind. <a href="https://press.princeton.edu/books/hardcover/9780691170794/big-mind">Geoff Mulgan</a></div>
 </div>
 
 <style>
@@ -212,6 +258,12 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 .cover img { height: 21rem; width: auto; display: inline-block; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.8rem; line-height: 1.35; }
 </style>
+
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (5/7)</span>**
+-->
 
 ---
 layout: heading-body
@@ -251,6 +303,12 @@ h1 { margin-bottom: 0.4em !important; }
 .proto-grid figcaption { position: absolute; left: 0; bottom: 0; background: var(--muni-blue, #0000dc); color: #fff; font-size: 0.85em; font-weight: 700; padding: 0.2em 0.6em; }
 </style>
 
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (6/7)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -260,7 +318,7 @@ hideInToc: true
 
 - Brainstorming – skupinové "střílení" nápadů
 - **Brainwriting** – nápady píšete každý sám a pak je skládáte dohromady
-- Myšlenkové mapy – nápady jako větve kolem tématu
+- Myšlenkové mapy – nápady jako větve rozvíjející téma
 - Crazy 8s – osm náčrtů za osm minut
 - **SCAMPER** – sedm otázek, které nápad přetvářejí
 - Thinking hats – každý ve skupině přichází s jiným mindsetem
@@ -272,6 +330,16 @@ Dnes si vyzkoušíte ty vytučněné. Detailnější popis všech technik najdet
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 p { margin-top: 1.2em; opacity: 0.75; }
 </style>
+
+<!--
+<br/>
+
+**Ideační mindset a techniky <span style="white-space:nowrap">18:10–18:23 (7/7)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:23 končí ideační mindset a techniky.**
+-->
 
 ---
 layout: two-column
@@ -290,36 +358,24 @@ hideInToc: true
 
 ::right::
 
-<div class="wall" aria-label="Schéma: stůl plný post-itů s nápady">
-  <div class="note y"><i></i><i></i></div>
-  <div class="note p"><i></i><i></i><i></i></div>
-  <div class="note b"><i></i></div>
-  <div class="note g"><i></i><i></i></div>
-  <div class="note b"><i></i><i></i><i></i></div>
-  <div class="note y"><i></i></div>
-  <div class="note g"><i></i><i></i></div>
-  <div class="note p"><i></i><i></i></div>
-  <div class="note y"><i></i><i></i><i></i></div>
-  <div class="note p"><i></i></div>
-  <div class="note b"><i></i><i></i></div>
-  <div class="note g"><i></i><i></i></div>
-</div>
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
-<div class="credit">Schéma: nápady na post-itech na stole</div>
+<div class="pic">
+  <img :src="asset + 'brainwriting-post-its.jpg'" alt="Růžové, žluté a modré post-ity s ručně psanými nápady rozházené na papíru na stole" />
+</div>
 
 <style>
 .col-left li { margin-top: 0.5em; margin-bottom: 0.5em; }
-.wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; padding: 1rem; background: #f4f7fb; border: 1px solid #d3dce7; }
-.note { aspect-ratio: 1; padding: 0.55rem 0.5rem; display: flex; flex-direction: column; gap: 0.35rem; box-shadow: 0 0.15rem 0.3rem rgb(0 0 0 / 0.12); }
-.note i { display: block; height: 0.28rem; background: rgb(0 0 0 / 0.28); border-radius: 0.2rem; }
-.note i:nth-child(2) { width: 75%; }
-.note i:nth-child(3) { width: 55%; }
-.note.y { background: #ffe94d; transform: rotate(-3deg); }
-.note.p { background: #ffb3c7; transform: rotate(2deg); }
-.note.b { background: #9fe0ff; transform: rotate(-1.5deg); }
-.note.g { background: #c5f0a4; transform: rotate(3deg); }
-.credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.6rem; line-height: 1.35; }
+.pic img { width: 100%; height: auto; display: block; }
 </style>
+
+<!--
+<br/>
+
+**Brainwriting <span style="white-space:nowrap">18:23–18:30 (1/3)</span>**
+-->
 
 ---
 layout: groupwork
@@ -346,6 +402,16 @@ ul ul { font-size: 0.9em; }
 .tpl span { padding: 0.05em 0.3em; background: rgba(255, 226, 0, 0.5); border-radius: 0.3em 0.7em 0.4em 0.6em / 0.6em 0.3em 0.7em 0.4em; }
 </style>
 
+<!--
+<br/>
+
+**Brainwriting <span style="white-space:nowrap">18:23–18:30 (2/3)</span>**
+
+<br/>
+
+- ⏱️ 5 minut
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -367,6 +433,20 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 ul ul { font-size: 0.9em; }
 </style>
 
+<!--
+<br/>
+
+**Brainwriting <span style="white-space:nowrap">18:23–18:30 (3/3)</span>**
+
+<br/>
+
+- ⏱️ 5 minut
+
+<br/>
+
+🛑 **Nejpozději 18:30 končí brainwriting.**
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -383,6 +463,20 @@ hideInToc: true
 h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
+
+<!--
+<br/>
+
+**Sdílení v týmu <span style="white-space:nowrap">18:30–18:35 (1/1)</span>**
+
+<br/>
+
+- ⏱️ 4 minuty
+
+<br/>
+
+🛑 **Nejpozději 18:35 končí sdílení v týmu.**
+-->
 
 ---
 layout: two-column
@@ -442,6 +536,12 @@ progressSection: true
 .scamper .node.on .c { fill: #333; }
 </style>
 
+<!--
+<br/>
+
+**SCAMPER <span style="white-space:nowrap">18:35–18:45 (1/5)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -461,6 +561,12 @@ Z jednoho nápadu jsou tak tři další.
 li { margin-top: 0.55em; margin-bottom: 0.55em; }
 p { margin-top: 1.2em; }
 </style>
+
+<!--
+<br/>
+
+**SCAMPER <span style="white-space:nowrap">18:35–18:45 (2/5)</span>**
+-->
 
 ---
 layout: groupwork
@@ -482,6 +588,16 @@ h1 { font-size: 1.9rem !important; margin-bottom: 0.4em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
+<!--
+<br/>
+
+**SCAMPER <span style="white-space:nowrap">18:35–18:45 (3/5)</span>**
+
+<br/>
+
+- ⏱️ 3 minuty
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -500,6 +616,16 @@ hideInToc: true
 h1 { font-size: 1.9rem !important; margin-bottom: 0.4em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
+
+<!--
+<br/>
+
+**SCAMPER <span style="white-space:nowrap">18:35–18:45 (4/5)</span>**
+
+<br/>
+
+- ⏱️ 3 minuty
+-->
 
 ---
 layout: groupwork
@@ -520,6 +646,20 @@ h1 { font-size: 1.9rem !important; margin-bottom: 0.4em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
+<!--
+<br/>
+
+**SCAMPER <span style="white-space:nowrap">18:35–18:45 (5/5)</span>**
+
+<br/>
+
+- ⏱️ 3 minuty
+
+<br/>
+
+🛑 **Nejpozději 18:45 končí SCAMPER.**
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -539,6 +679,20 @@ h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
+<!--
+<br/>
+
+**Sdílení náčrtů <span style="white-space:nowrap">18:45–18:50 (1/1)</span>**
+
+<br/>
+
+- ⏱️ 10 minut
+
+<br/>
+
+🛑 **Nejpozději 18:50 končí sdílení náčrtů.**
+-->
+
 ---
 layout: break
 hideProgress: true
@@ -549,6 +703,20 @@ hideInToc: true
 
 5 minut
 
+<!--
+<br/>
+
+**Pauza <span style="white-space:nowrap">18:50–18:55 (1/1)</span>**
+
+<br/>
+
+- ⏱️ 5 minut
+
+<br/>
+
+🛑 **Nejpozději 18:55 končí pauza.**
+-->
+
 ---
 layout: section-break
 ---
@@ -556,6 +724,12 @@ layout: section-break
 # Výběr
 
 Z palety nápadů k těm nejlepším
+
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (1/8)</span>**
+-->
 
 ---
 layout: two-column
@@ -586,6 +760,12 @@ const asset = import.meta.env.BASE_URL
 .col-left li { margin-top: 0.5em; margin-bottom: 0.5em; }
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.7rem; line-height: 1.35; }
 </style>
+
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (2/8)</span>**
+-->
 
 ---
 layout: two-column
@@ -627,6 +807,12 @@ hideInToc: true
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 1rem; line-height: 1.35; }
 </style>
 
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (3/8)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "50-50"
@@ -651,7 +837,7 @@ const asset = import.meta.env.BASE_URL
 
 <div class="pic">
   <img :src="asset + 'dot-voting-nngroup.jpg'" alt="Nástěnka s lepicími lístky, na kterých jsou červené tečky z dot votingu" />
-  <div class="credit">Dot voting. <a href="https://www.nngroup.com/articles/author/sarah-gibbons/">Sarah Gibbons</a>, <a href="https://www.nngroup.com/articles/dot-voting/">NN/g</a></div>
+  <div class="credit">Dot voting,  <a href="https://www.nngroup.com/articles/dot-voting/">NN/g</a></div>
 </div>
 
 <style>
@@ -660,6 +846,12 @@ const asset = import.meta.env.BASE_URL
 .pic img { width: 100%; height: auto; display: block; }
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.6rem; line-height: 1.35; }
 </style>
+
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (4/8)</span>**
+-->
 
 ---
 layout: two-column
@@ -695,6 +887,12 @@ const asset = import.meta.env.BASE_URL
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.6rem; line-height: 1.35; }
 </style>
 
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (5/8)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "50-50"
@@ -705,7 +903,7 @@ hideInToc: true
 
 ::left::
 
-- Každý nápad zařadíte podle dvou os: **dopad na uživatele** a **složitost vývoje**
+- Každý nápad zařadíte podle dvou os: **dopad na uživatele** a **složitost tvorby**
 - Hned vidíte "rychlé výhry" a nápady náročné na realizaci
 
 **Pozor na rychlé výhry**
@@ -724,6 +922,12 @@ hideInToc: true
 .col-left li { margin-top: 0.25em; margin-bottom: 0.25em; }
 .col-left p { margin-top: 0.8em; }
 </style>
+
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (6/8)</span>**
+-->
 
 ---
 layout: two-column
@@ -749,6 +953,12 @@ hideInToc: true
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 1rem; line-height: 1.35; }
 </style>
 
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (7/8)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "45-55"
@@ -764,6 +974,7 @@ hideInToc: true
 - Pod ním **příležitosti**: potřeby a bolesti lidí
 - Pod nimi **řešení**, která zkoumáte
 - Dole **testy předpokladů**
+- Může sloužit jako „odkladiště“ nápadů
 
 ::right::
 
@@ -772,19 +983,47 @@ const asset = import.meta.env.BASE_URL
 </script>
 
 <div class="pic">
-  <img :src="asset + 'ost-product-talk.webp'" alt="Opportunity solution tree: výsledek nahoře, pod ním příležitosti, řešení a testy předpokladů" />
-  <div class="credit">Opportunity solution tree. <a href="https://www.producttalk.org/opportunity-solution-trees/">Teresa Torres</a>, <a href="https://www.producttalk.org/">Product Talk</a></div>
+  <svg viewBox="0 0 480 345" class="ost" role="img" aria-label="Opportunity-solution tree: výsledek nahoře, pod ním příležitosti, řešení a testy předpokladů">
+    <path d="M240 56 C240 80.5, 80 80.5, 80 105" class="l dim"/><path d="M240 56 C240 80.5, 240 80.5, 240 105" class="l"/><path d="M240 56 C240 80.5, 400 80.5, 400 105" class="l dim"/>
+    <path d="M240 151 C240 175.5, 170 175.5, 170 200" class="l"/><path d="M240 151 C240 175.5, 310 175.5, 310 200" class="l dim"/>
+    <path d="M170 246 C170 270.5, 84 270.5, 84 295" class="l"/><path d="M170 246 C170 270.5, 256 270.5, 256 295" class="l"/>
+    <rect x="165" y="10" width="150" height="46" rx="10" class="n o"/><text x="240" y="40" class="t o">Výsledek</text>
+    <rect x="10" y="105" width="140" height="46" rx="10" class="n p dim"/><text x="80" y="135" class="t p dim">Příležitost</text><rect x="170" y="105" width="140" height="46" rx="10" class="n p"/><text x="240" y="135" class="t p">Příležitost</text><rect x="330" y="105" width="140" height="46" rx="10" class="n p dim"/><text x="400" y="135" class="t p dim">Příležitost</text>
+    <rect x="105" y="200" width="130" height="46" rx="10" class="n s"/><text x="170" y="230" class="t s">Řešení</text><rect x="245" y="200" width="130" height="46" rx="10" class="n s dim"/><text x="310" y="230" class="t s dim">Řešení</text>
+    <rect x="2" y="295" width="164" height="46" rx="10" class="n a"/><text x="84" y="325" class="t a">Test předpokladu</text><rect x="174" y="295" width="164" height="46" rx="10" class="n a"/><text x="256" y="325" class="t a">Test předpokladu</text>
+    </svg>
+  <div class="credit">Opportunity solution tree, <a href="https://www.producttalk.org/">Product Talk</a></div>
 </div>
 
 <style>
 .col-left li { margin-top: 0.25em; margin-bottom: 0.25em; }
-.pic img { width: 100%; height: auto; display: block; }
+.ost { width: 100%; height: auto; display: block; }
+.ost rect.o { fill: var(--muni-blue, #0000dc); }
+.ost rect.p { fill: var(--muni-arts-blue, #4bc8ff); }
+.ost rect.s { fill: #bdeaff; }
+.ost rect.a { fill: #f1f6fc; stroke: #9fc4e6; stroke-width: 2; }
+.ost .dim { opacity: 0.45; }
+.ost .t { font: 700 18px Helvetica, Arial, sans-serif; text-anchor: middle; fill: #111; }
+.ost .t.o { fill: #fff; }
+.ost .l { fill: none; stroke: #4a5a6a; stroke-width: 2.5; }
+.ost .l.dim { opacity: 0.35; }
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 0.6rem; line-height: 1.35; }
 </style>
+
+<!--
+<br/>
+
+**Úvod do prioritizace <span style="white-space:nowrap">18:55–19:05 (8/8)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:05 končí úvod do prioritizace.**
+-->
 
 ---
 layout: heading-body
 hideInToc: true
+disabled: true
 ---
 
 # Strom jako odkladiště
@@ -798,49 +1037,55 @@ li { margin-top: 0.55em; margin-bottom: 0.55em; }
 </style>
 
 ---
-layout: two-column
-ratio: "50-50"
+layout: groupwork
 hideInToc: true
-clicks: 1
 ---
 
-# Vyberte si matici
+# Umístěte své nápady
 
-::left::
-
-<div class="choice">
-  <div class="mname">Impact and effort</div>
-  <PriorityMatrix kind="impact" mode="reveal" :step="$clicks" compact />
-  <ul class="pc">
-    <li class="pro">Rychlá ilustrace přínosu a nákladů</li>
-    <li class="pro">Pomůže identifikovat rychlé výhry</li>
-    <li class="con">Neustálý výběr rychlých výher neřeší strukturální problémy</li>
-    <li class="con">Dopad i úsilí často jen odhadujete</li>
-  </ul>
-</div>
-
-::right::
-
-<div class="choice">
-  <div class="mname">Eisenhower matrix</div>
-  <PriorityMatrix kind="eisenhower" mode="reveal" :step="$clicks" compact />
-  <ul class="pc">
-    <li class="pro">Oddělí to důležité od akutního</li>
-    <li class="pro">Pomáhá identifikovat strategická témata</li>
-    <li class="con">Vznikla pro úkoly, ne pro nápady</li>
-    <li class="con">Důležitost je věc názoru</li>
-  </ul>
+<div class="duo">
+  <div class="choice">
+    <div class="mname">Impact and effort</div>
+    <PriorityMatrix kind="impact" mode="both" compact />
+    <ul class="pc">
+      <li class="pro">Rychlá ilustrace přínosu a nákladů</li>
+      <li class="pro">Pomůže identifikovat rychlé výhry</li>
+      <li class="con">Může přehlížet strukturální problémy</li>
+      <li class="con">Dopad i úsilí často jen odhadujete</li>
+    </ul>
+  </div>
+  <div class="choice">
+    <div class="mname">Eisenhower matrix</div>
+    <PriorityMatrix kind="eisenhower" mode="both" compact />
+    <ul class="pc">
+      <li class="pro">Oddělí to důležité od akutního</li>
+      <li class="pro">Pomáhá identifikovat strategická témata</li>
+      <li class="con">Vznikla pro úkoly, ne pro nápady</li>
+      <li class="con">Důležitost je věc názoru</li>
+    </ul>
+  </div>
 </div>
 
 <style>
-.choice { max-width: 25rem; margin: 0 auto; }
-.mname { font-weight: 700; font-size: 1.1em; margin-bottom: 0.2em; }
-.pc { list-style: none; padding: 0; margin: 0.4rem 0 0; font-size: 0.82em; line-height: 1.25; }
-.pc li { position: relative; padding-left: 1.2rem; margin: 0 0 0.3rem; }
+h1 { font-size: 1.9rem !important; margin-bottom: 0.3em !important; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.mname { font-weight: 700; font-size: 1em; margin-bottom: 0.1em; }
+.pc { list-style: none; padding: 0; margin: 0.3rem 0 0; font-size: 0.72em; line-height: 1.2; }
+.pc li { position: relative; padding-left: 1.1rem; margin: 0 0 0.2rem; }
 .pc li::before { position: absolute; left: 0; font-weight: 700; }
 .pro::before { content: "+"; color: #1a7f37; }
 .con::before { content: "-"; color: #b42318; }
 </style>
+
+<!--
+<br/>
+
+**Prioritizace v týmech <span style="white-space:nowrap">19:05–19:20 (1/2)</span>**
+
+<br/>
+
+- ⏱️ 9 minut
+-->
 
 ---
 layout: groupwork
@@ -854,12 +1099,27 @@ progressSection: true
 Vezměte jeden nebo dva vítězné nápady.
 
 - Co byste se díky prototypu **dozvěděli od uživatelů**?
-- Jak by prototyp vypadal? Stačí hrubá představa.
+- Jak by prototyp vypadal? Načrtněte hroubou představu.
+- Následně si vzájemně nasdílíme
 
 <style>
 h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
+
+<!--
+<br/>
+
+**Prioritizace v týmech <span style="white-space:nowrap">19:05–19:20 (2/2)</span>**
+
+<br/>
+
+- ⏱️ 6 minut
+
+<br/>
+
+🛑 **Nejpozději 19:20 končí prioritizace v týmech.**
+-->
 
 ---
 layout: heading-body
@@ -877,6 +1137,16 @@ hideInToc: true
 li { margin-top: 0.55em; margin-bottom: 0.55em; }
 </style>
 
+<!--
+<br/>
+
+**Sdílení za týmy <span style="white-space:nowrap">19:20–19:25 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:25 končí sdílení za týmy.**
+-->
+
 ---
 layout: section-break
 hideInToc: true
@@ -884,6 +1154,12 @@ hideProgress: true
 ---
 
 # (re)frame?
+
+<!--
+<br/>
+
+**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (1/4)</span>**
+-->
 
 ---
 layout: section-break
@@ -893,6 +1169,12 @@ hideProgress: true
 
 # Ideace a remix nápadů je jen začátek
 
+<!--
+<br/>
+
+**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (2/4)</span>**
+-->
+
 ---
 layout: homework
 hideInToc: true
@@ -900,10 +1182,17 @@ hideInToc: true
 
 # První prototyp do 29. 10.
 
-- **Dokončete hrubý prototyp** aspoň jednoho nápadu – buď dopracujte něco z dneška, nebo si vyberte něco jiného, nebo klidně projděte celým procesem znovu
+- **Dokončete hrubý prototyp** aspoň jednoho nápadu
+- Dopracujte něco z dneška, nebo si vyberte něco jiného, nebo klidně projděte celým procesem znovu
 - Příště přineste výsledek tak, abyste jej mohli ukázat druhým
   - Uděláme si první vzájemné testování
   - Každý v týmu si přineste vlastní kopii vašeho prototypu – anebo ještě lépe – za tým si přineste prototypů několik!
+
+<!--
+<br/>
+
+**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (3/4)</span>**
+-->
 
 ---
 layout: heading-body
@@ -919,6 +1208,16 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (4/4)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:30 končí domácí úkol včetně (re)frame.**
+-->
+
 ---
 layout: section-break
 hideInToc: true
@@ -928,6 +1227,12 @@ hideProgress: true
 
 # Co se vám honí hlavou?
 
+<!--
+<br/>
+
+**Debrief a otázky <span style="white-space:nowrap">19:30–19:40 (1/2)</span>**
+-->
+
 ---
 layout: section-break
 hideProgress: true
@@ -935,3 +1240,13 @@ hideInToc: true
 ---
 
 # Díky a pěkný večer!
+
+<!--
+<br/>
+
+**Debrief a otázky <span style="white-space:nowrap">19:30–19:40 (2/2)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:40 končí hodina, debrief a otázky.**
+-->
