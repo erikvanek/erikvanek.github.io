@@ -53,8 +53,37 @@ function openExternalLinksInNewTab() {
   }, true)
 }
 
+/**
+ * Wall clock on the presenter view (Erik, 15 Oct), so the segment times in the
+ * notes can be checked against the real time without looking away. Slidev's own
+ * presenter timer only counts elapsed time. It is a fixed element over the top
+ * left corner, where the notes start; every note opens with two <br/> to leave
+ * the room. Present on /presenter routes only, never in the audience window.
+ */
+function presenterClock() {
+  const ID = 'muni-presenter-clock'
+  const tick = () => {
+    const el = document.getElementById(ID)
+    if (!/\/presenter(\/|$)/.test(location.pathname)) { el?.remove(); return }
+    const clock = el ?? Object.assign(document.createElement('div'), { id: ID })
+    if (!el) {
+      Object.assign(clock.style, {
+        position: 'fixed', top: '3.5rem', left: '2.5rem', zIndex: '9999', padding: '0 0.4rem 0 0',
+        font: '700 2.5rem/1.2 Helvetica, Arial, sans-serif',
+        background: '#fff', color: '#000', pointerEvents: 'none',
+      })
+      document.body.appendChild(clock)
+    }
+    const now = new Date()
+    clock.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`
+  }
+  tick()
+  setInterval(tick, 1000)
+}
+
 export default function ({ app: _app }: AppContext) {
   if (typeof document === 'undefined') return
   if (muniIsInstalled()) document.documentElement.classList.add(MUNI_CLASS)
   openExternalLinksInNewTab()
+  presenterClock()
 }

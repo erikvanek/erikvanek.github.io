@@ -150,3 +150,31 @@
 .slidev-layout.full-image li::marker {
   color: currentColor;
 }
+
+/* Presenter notes are read at arm's length while talking, and Slidev's default
+   (1em, about 16 px) is too small for that. The font-size is set inline by the
+   presenter's own A+ and A- buttons, which would beat a plain font-size here, so
+   the default boost is a zoom that those buttons still scale on top of. Bold keeps
+   the one-line 🛑 deadlines readable. */
+.slidev-note {
+  zoom: 2.5;
+  font-weight: 700;
+}
+/* Gaps in a note come only from the <br/>s in it, two between every pair of
+   lines, so they are even. Prose margins would add an uneven extra on top. */
+.slidev-note p,
+.slidev-note ul,
+.slidev-note li {
+  margin: 0;
+}
+
+/* Slidev's "No notes." placeholder on slides without a note is noise. */
+.slidev-note.italic.select-none {
+  display: none;
+}
+/* Room for the presenter clock above the first line of a note, about one line of
+   note text above the clock and one between it and the note. Doubled class beats
+   the padding utility Slidev puts on the same element. */
+.slidev-note.slidev-note {
+  padding-top: 2.75rem;
+}

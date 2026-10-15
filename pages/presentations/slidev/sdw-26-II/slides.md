@@ -354,7 +354,7 @@ li { margin-top: 0.6em; margin-bottom: 0.6em; }
 layout: section-break
 hideProgress: true
 hideInToc: true
-progressSection: exercise
+progressSection: true
 ---
 
 # TopVlaky

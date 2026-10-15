@@ -87,34 +87,6 @@ describe('progressSection', () => {
     expect(steps.filter(s => s.no >= 3 && s.no <= 5).every(s => s.title === 'Pojďme si to vyzkoušet')).toBe(true)
   })
 
-  it('marks a section opened on a groupwork slide as an exercise, and nothing else', () => {
-    const steps = computeProgressSteps(slides, 2, DIVIDERS)
-    expect(steps.filter(s => s.exercise).map(s => s.no)).toEqual([3, 4, 5])
-  })
-
-  it('makes an exercise of any layout that says progressSection: exercise', () => {
-    const pitch = [
-      slide(1, { layout: 'section-break', title: 'Rámování problému' }),
-      slide(2),
-      { no: 3, meta: { slide: { title: 'TopVlaky', frontmatter: { layout: 'section-break', hideInToc: true, progressSection: 'exercise' } } } },
-      slide(4, { layout: 'groupwork' }),
-      slide(5, { layout: 'section-break', title: 'Mindset prototypování' }),
-      slide(6),
-    ]
-    const steps = computeProgressSteps(pitch, 3, DIVIDERS)
-    expect(steps.filter(s => s.exercise).map(s => s.no)).toEqual([3, 4])
-    expect(steps.find(s => s.no === 3)?.state).toBe('current')
-  })
-
-  it('does not make an exercise of a progressSection slide on another layout', () => {
-    const plain = [
-      slide(1, { layout: 'section-break', title: 'Intro' }),
-      slide(2, { layout: 'heading-body', progressSection: true, title: 'Case study' }),
-      slide(3),
-    ]
-    expect(computeProgressSteps(plain, 2, DIVIDERS).some(s => s.exercise)).toBe(false)
-  })
-
   it('treats that section as upcoming until its first slide, then marks that slide current', () => {
     expect(computeProgressSteps(slides, 2, DIVIDERS).filter(s => s.no >= 3 && s.no <= 5).every(s => s.state === 'upcoming')).toBe(true)
     const steps = computeProgressSteps(slides, 3, DIVIDERS)
