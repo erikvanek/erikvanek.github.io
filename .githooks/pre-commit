@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #
 # Pre-commit guard for erikvanek.github.io (PUBLIC repo → www.erikvanek.com)
-# Two layers:
+# Three layers:
+#   0) main guard — refuses commits on master (PR-gated repo, see CLAUDE.md)
 #   1) gitleaks — blocks API keys / tokens / private keys in staged changes
 #   2) path guard — blocks staging files that must never be published
 #
@@ -12,6 +13,11 @@ set -euo pipefail
 RED=$'\033[31m'; YEL=$'\033[33m'; GRN=$'\033[32m'; NC=$'\033[0m'
 fail=0
 repo_root="$(git rev-parse --show-toplevel)"
+
+# ── Layer 0: main guard ──────────────────────────────────────
+# Byte-identical copy of the erik-skills backlog main-guard.sh (also installed
+# as pre-merge-commit). Re-copy both when that asset changes.
+sh "$repo_root/.githooks/main-guard.sh" || exit 1
 
 # ── Layer 1: secret scanning ─────────────────────────────────
 if command -v gitleaks >/dev/null 2>&1; then
