@@ -17,7 +17,9 @@ repo_root="$(git rev-parse --show-toplevel)"
 # ── Layer 0: main guard ──────────────────────────────────────
 # Byte-identical copy of the erik-skills backlog main-guard.sh (also installed
 # as pre-merge-commit). Re-copy both when that asset changes.
-sh "$repo_root/.githooks/main-guard.sh" || exit 1
+# Resolved next to this hook, not the worktree: a worktree cut from an older
+# branch may run this hook without having main-guard.sh checked out.
+sh "$(dirname "$0")/main-guard.sh" || exit 1
 
 # ── Layer 1: secret scanning ─────────────────────────────────
 if command -v gitleaks >/dev/null 2>&1; then
