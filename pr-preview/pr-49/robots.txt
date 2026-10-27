@@ -1,4 +1,0 @@
-Sitemap: https://www.erikvanek.com/sitemap.xml
-
-User-agent: *
-Disallow:
