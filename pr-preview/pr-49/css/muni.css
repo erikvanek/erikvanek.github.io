@@ -1,0 +1,9 @@
+:root {
+    --base-size: 16px;
+    --line-width: 1px;
+    --border-radius: 0.25rem;
+
+    --dark-color: rgba(0,0,220,1);
+    --darker-color: #000;
+    --accent-color: #bcf;
+}

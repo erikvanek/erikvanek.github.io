@@ -1,0 +1,187 @@
+:root {
+  --bg-color: #f5e9e2;
+  --main-color: #773344;
+  --main-color-light: #e3b5a4;
+  --main-color-lightest: #d44d5c;
+  --main-color-darker: #0b0014;
+  background: linear-gradient(0deg, var(--main-color-light), var(--bg-color));
+  /* background: 
+  That'd be cool to include!
+  url("../img/beet.jpg")  no-repeat center center,
+    linear-gradient(180deg, var(--main-color-light), var(--bg-color));
+ */
+}
+
+time {
+  color: mediumvioletred;
+  margin-left: 1rem;
+}
+
+body {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  color: var(--main-color);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.375rem;
+  }
+
+  .landing a {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .landing a {
+    text-decoration-thickness: .25rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .landing a {
+    font-size: 1rem;
+    text-decoration-thickness: .25rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.landing a:hover {
+  background-color: var(--main-color-darker);
+  color: var(--bg-color);
+  border: 4px dotted var(--bg-color) !important;
+  transition: all 0.25s ease-out;
+}
+
+a {
+  text-decoration: underline dotted;
+  transition: all 0.25s ease-out;
+  color: var(--main-color);
+  font-weight: 700;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  /* padding: 0.125rem; */
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  transition: all 0.25s ease-out;
+  border-color: var(--main-color);
+}
+
+.landing ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.article {
+  max-width: 75ch;
+  margin: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--main-color);
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+address {
+  display: inline;
+}
+
+ul {
+  margin-top: 0.5rem;
+}
+
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(2.5) translateY(-0.75em);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+.main-claim {
+  padding: 0;
+  display: none;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.landing h2,
+.main-claim,
+.landing li {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #eeaa52, #e73c6f, #2394d5, #2af3b7);
+  color: rgba(255, 128, 128, .875);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 8px transparent;
+  padding: 1rem;
+}
+
+.landing h2 {
+  -webkit-text-stroke: 4px transparent;
+  margin: 0;
+  padding: 0;
+}
+
+
+.landing li {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 2px transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .main-claim {
+    font-size: 2.75rem;
+    -webkit-text-stroke: 4px transparent;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#notes,
+#review {
+  display: none;
+}
