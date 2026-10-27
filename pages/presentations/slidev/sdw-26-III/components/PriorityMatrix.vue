@@ -4,7 +4,8 @@
   Props:
     kind     'impact' | 'eisenhower'
     mode     'static' (výchozí): vždy svítí jen vítězné pole
-             'both': vždy svítí vítězné i druhé dobré pole, bez animace
+             'both': vždy svítí vítězné i druhé dobré pole (světlejší modrá, čárkovaný rámeček), bez animace
+    Obě osy jdou vždy zleva doprava a zdola nahoru od minus k plus.
              'reveal': dokud step < 1, jsou všechna pole v základní barvě, po kliknutí
                        se rozsvítí vítězné pole (nejsytější modrá) a druhé dobré (světlejší)
     step     $clicks slidu, jen pro mode 'reveal'
@@ -36,8 +37,8 @@ const presets = {
     yAxis: 'importance',
     xAxis: 'urgency',
     cells: [
-      { label: 'Schedule', hint: 'důležité, nenaléhavé', level: 2 },
-      { label: 'Do', hint: 'důležité, naléhavé', level: 1 },
+      { label: 'Schedule', hint: 'důležité, nenaléhavé', level: 1 },
+      { label: 'Do', hint: 'důležité, naléhavé', level: 2 },
       { label: 'Delete', hint: 'nedůležité, nenaléhavé', level: 0 },
       { label: 'Delegate', hint: 'nedůležité, naléhavé', level: 0 }
     ] as Cell[]
@@ -83,9 +84,9 @@ function cls(c: Cell) {
 .pm {
   --axis: var(--muni-arts-blue, #4bc8ff);
   --base: #f1f6fc;
-  --mild: #bdeaff;
+  --mild: #a3e0fd;
   --bright: var(--muni-arts-blue, #4bc8ff);
-  --lo: #cdeeff;
+  --lo: #8fcff2;
   --hi: #0a9be8;
   --gap: 2.8rem;
   width: 100%;
@@ -124,7 +125,7 @@ function cls(c: Cell) {
   font-weight: 700;
   color: var(--muni-gray, #595959);
   background: #fff;
-  padding: 0.15em 0.4em;
+  padding: 0.05em 0.4em;
   white-space: nowrap;
 }
 .axis-name.x-name {
@@ -136,11 +137,12 @@ function cls(c: Cell) {
   left: 50%;
   top: 1.9rem;
   writing-mode: vertical-rl;
+  padding: 0.4em 0.05em;
   transform: translateX(-50%) rotate(180deg);
 }
 .plot {
   position: relative;
-  padding: 1.2rem 1.4rem;
+  padding: 1.3rem 1.4rem;
 }
 .axis {
   position: absolute;
@@ -175,28 +177,26 @@ function cls(c: Cell) {
 .axis.x::before {
   border-color: var(--lo);
 }
+/* Znaménka sedí v prázdném okraji grafu, mimo pole i mimo hroty šipek, a mají přesně
+   barvu konce osy, u kterého stojí (--lo a --hi). Svislý okraj plotu je vyšší než znaménko. */
 .sign {
   position: absolute;
-  font-size: 1.3em;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1;
 }
 .sign.y-hi,
 .sign.y-lo {
-  left: calc(50% + 0.7rem);
-  color: var(--hi);
+  left: calc(50% + 0.9rem);
 }
-.sign.y-hi { top: 0; }
-.sign.y-lo { bottom: 0; color: #8fcff2; }
-/* Na konci vodorovné osy, těsně nad ní a mimo pole. Větší znaménko s odsazením
-   0.2rem se dotýkalo rohu pole a vypadalo jako druhá čára za ním. */
+.sign.y-hi { top: 0; color: var(--hi); }
+.sign.y-lo { bottom: 0; color: var(--lo); }
 .sign.x-lo,
 .sign.x-hi {
-  top: calc(50% - 1.7rem);
-  font-size: 1em;
+  bottom: calc(50% + 0.7rem);
 }
-.sign.x-lo { left: 0; color: #8fcff2; }
-.sign.x-hi { right: 0; color: var(--hi); }
+.sign.x-lo { left: 0.2rem; color: var(--lo); }
+.sign.x-hi { right: 0.2rem; color: var(--hi); }
 .axis.y::before {
   top: 0;
   left: 50%;
@@ -233,19 +233,23 @@ function cls(c: Cell) {
   padding: 0.4rem;
   border-radius: 0.6rem;
   background: var(--base);
-  border: 1px solid #dbe6f2;
+  border: 3px solid transparent;
+  box-shadow: inset 0 0 0 1px #dbe6f2;
   transition: background-color 0.9s ease, border-color 0.9s ease, box-shadow 0.9s ease;
 }
 .pm.compact { max-width: none; --gap: 1.6rem; }
-.compact .plot { padding: 1rem 1.2rem; }
+.compact .plot { padding: 1.1rem 1.2rem; }
 .compact .cell {
   height: 5.7rem;
 }
 .compact .cell strong {
   font-size: 0.92em;
 }
+/* Podtitulek v poli je důležitý, proto je vidět i ve dvojici matic. Písmo je o chlup
+   menší než odrážky plusů a minusů pod maticemi (0,72em), ať je pod nimi pořadí čitelné. */
 .compact .cell small {
-  display: none;
+  font-size: 0.65em;
+  line-height: 1.15;
 }
 .cell strong {
   font-size: 1.1em;
@@ -256,7 +260,8 @@ function cls(c: Cell) {
 }
 .cell.mild {
   background: var(--mild);
-  border-color: var(--mild);
+  border: 3px dashed var(--hi);
+  box-shadow: none;
 }
 .cell.bright {
   background: linear-gradient(135deg, #3fc1fb, #86dcff);

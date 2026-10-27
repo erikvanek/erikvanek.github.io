@@ -2,8 +2,8 @@
   "Profiles" : [
     {
       "Use Separate Colors for Light and Dark Mode" : true,
-      "Name" : "erikvanek",
       "Rewritable" : true,
+      "Name" : "erikvanek",
       "Guid" : "73b38001-0080-4e7a-bbc9-ac4702227a9c"
     }
   ]

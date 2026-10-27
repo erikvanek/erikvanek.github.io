@@ -162,7 +162,7 @@ const asset = import.meta.env.BASE_URL
 
 <div class="cover">
   <img :src="asset + 'creative-confidence-cover.jpg'" alt="Obálka knihy Creative Confidence od Toma Kelleyho a Davida Kelleyho" />
-  <div class="credit">Creative Confidence. <a href="https://www.designkit.org/mindsets/3.html">Tom Kelley a David Kelley</a>, <a href="https://images.penguinrandomhouse.com/cover/9780385349369">Penguin Random House</a></div>
+  <div class="credit">Creative Confidence. <a href="https://www.designkit.org/mindsets/3.html">Tom Kelley a David Kelley</a></div>
 </div>
 
 <style>
@@ -686,7 +686,7 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 
 <br/>
 
-- ⏱️ 10 minut
+- ⏱️ 5 minut
 
 <br/>
 
@@ -915,7 +915,7 @@ hideInToc: true
 
 ::right::
 
-<PriorityMatrix kind="impact" />
+<PriorityMatrix kind="impact" mode="both" />
 
 <style>
 .credit { font-size: 0.68em; opacity: 0.62; margin-top: 1rem; line-height: 1.35; }
@@ -946,7 +946,7 @@ hideInToc: true
 
 ::right::
 
-<PriorityMatrix kind="eisenhower" />
+<PriorityMatrix kind="eisenhower" mode="both" />
 
 <style>
 .col-left li { margin-top: 0.3em; margin-bottom: 0.3em; }
@@ -1037,31 +1037,36 @@ li { margin-top: 0.55em; margin-bottom: 0.55em; }
 </style>
 
 ---
-layout: groupwork
+layout: section-break
 hideInToc: true
 ---
 
-# Umístěte své nápady
+# Výběr a rozpracování vašich nápadů
+
+---
+layout: groupwork
+hideInToc: true
+---
 
 <div class="duo">
   <div class="choice">
     <div class="mname">Impact and effort</div>
     <PriorityMatrix kind="impact" mode="both" compact />
+    <div class="when">Vyberte, když řešíte spíš funkce</div>
     <ul class="pc">
-      <li class="pro">Rychlá ilustrace přínosu a nákladů</li>
-      <li class="pro">Pomůže identifikovat rychlé výhry</li>
-      <li class="con">Může přehlížet strukturální problémy</li>
-      <li class="con">Dopad i úsilí často jen odhadujete</li>
+      <li>Konkrétní funkce a obrazovky</li>
+      <li>Práci umíte odhadnout</li>
+      <li>Nápady jsou podobně velké</li>
     </ul>
   </div>
   <div class="choice">
     <div class="mname">Eisenhower matrix</div>
     <PriorityMatrix kind="eisenhower" mode="both" compact />
+    <div class="when">Vyberte, když řešíte spíš chování</div>
     <ul class="pc">
-      <li class="pro">Oddělí to důležité od akutního</li>
-      <li class="pro">Pomáhá identifikovat strategická témata</li>
-      <li class="con">Vznikla pro úkoly, ne pro nápady</li>
-      <li class="con">Důležitost je věc názoru</li>
+      <li>Změnu chování a návyků</li>
+      <li>Dopad těžko změříte</li>
+      <li>Příčiny sahají hluboko</li>
     </ul>
   </div>
 </div>
@@ -1070,11 +1075,9 @@ hideInToc: true
 h1 { font-size: 1.9rem !important; margin-bottom: 0.3em !important; }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .mname { font-weight: 700; font-size: 1em; margin-bottom: 0.1em; }
-.pc { list-style: none; padding: 0; margin: 0.3rem 0 0; font-size: 0.72em; line-height: 1.2; }
-.pc li { position: relative; padding-left: 1.1rem; margin: 0 0 0.2rem; }
-.pc li::before { position: absolute; left: 0; font-weight: 700; }
-.pro::before { content: "+"; color: #1a7f37; }
-.con::before { content: "-"; color: #b42318; }
+.when { font-weight: 700; font-size: 0.85em; margin-top: 0.5rem; }
+.pc { margin: 0.2rem 0 0; padding-left: 1.2rem; line-height: 1.25; }
+.pc li { margin: 0 0 0.15rem; }
 </style>
 
 <!--
@@ -1094,13 +1097,12 @@ progressSection: true
 # timer: 6   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
-# Co by vám prototyp řekl?
+# Finální výběr
 
-Vezměte jeden nebo dva vítězné nápady.
-
-- Co byste se díky prototypu **dozvěděli od uživatelů**?
-- Jak by prototyp vypadal? Načrtněte hroubou představu.
-- Následně si vzájemně nasdílíme
+- Vyberte jeden nebo dva nápady z "horních polovin"
+- Rozpracujte trochu víc do hloubky jak chcete, aby to fungovalo
+- Načrtněte na A4 – pak budeme vzájemně sdílet
+- promyslete otázku - co byste se takovým prototypem **dozvěděli od uživatelů**?
 
 <style>
 h1 { font-size: 1.9rem !important; margin-bottom: 0.5em !important; }
@@ -1140,11 +1142,11 @@ li { margin-top: 0.55em; margin-bottom: 0.55em; }
 <!--
 <br/>
 
-**Sdílení za týmy <span style="white-space:nowrap">19:20–19:25 (1/1)</span>**
+**Sdílení za týmy <span style="white-space:nowrap">19:20–19:30 (1/1)</span>**
 
 <br/>
 
-🛑 **Nejpozději 19:25 končí sdílení za týmy.**
+🛑 **Nejpozději 19:30 končí sdílení za týmy.**
 -->
 
 ---
@@ -1158,21 +1160,7 @@ hideProgress: true
 <!--
 <br/>
 
-**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (1/4)</span>**
--->
-
----
-layout: section-break
-hideInToc: true
-hideProgress: true
----
-
-# Ideace a remix nápadů je jen začátek
-
-<!--
-<br/>
-
-**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (2/4)</span>**
+**Domácí úkol <span style="white-space:nowrap">19:30–19:35 (1/3)</span>**
 -->
 
 ---
@@ -1191,7 +1179,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (3/4)</span>**
+**Domácí úkol <span style="white-space:nowrap">19:30–19:35 (2/3)</span>**
 -->
 
 ---
@@ -1211,11 +1199,11 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 <!--
 <br/>
 
-**Domácí úkol <span style="white-space:nowrap">19:25–19:30 (4/4)</span>**
+**Domácí úkol <span style="white-space:nowrap">19:30–19:35 (3/3)</span>**
 
 <br/>
 
-🛑 **Nejpozději 19:30 končí domácí úkol včetně (re)frame.**
+🛑 **Nejpozději 19:35 končí domácí úkol včetně (re)frame.**
 -->
 
 ---
@@ -1230,7 +1218,7 @@ hideProgress: true
 <!--
 <br/>
 
-**Debrief a otázky <span style="white-space:nowrap">19:30–19:40 (1/2)</span>**
+**Debrief a otázky <span style="white-space:nowrap">19:35–19:40 (1/2)</span>**
 -->
 
 ---
@@ -1244,7 +1232,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Debrief a otázky <span style="white-space:nowrap">19:30–19:40 (2/2)</span>**
+**Debrief a otázky <span style="white-space:nowrap">19:35–19:40 (2/2)</span>**
 
 <br/>
 
