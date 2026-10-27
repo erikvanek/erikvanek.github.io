@@ -1,0 +1,54 @@
+# PR previews: builds every PR into gh-pages:/pr-preview/pr-N/, served at
+# https://www.erikvanek.com/pr-preview/pr-N/, comments the link on the PR, and
+# removes the folder when the PR closes. Which site a preview builds, and the
+# noindex stamp on every page, are decided in scripts/build-deploy.mjs.
+name: Preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Per PR: a newer push or the close cancels a preview build still running.
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    # Fork and Dependabot PRs run with a read-only token and cannot push to gh-pages.
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        if: github.event.action != 'closed'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        if: github.event.action != 'closed'
+        run: yarn install --frozen-lockfile
+
+      - name: Build _deploy/
+        if: github.event.action != 'closed'
+        run: yarn build:deploy --preview /pr-preview/pr-${{ github.event.pull_request.number }}/
+
+      - name: Deploy or remove preview
+        uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9 # v1.8.1
+        with:
+          source-dir: _deploy
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          pages-base-url: www.erikvanek.com
+          qr-code: false
+          action: auto
