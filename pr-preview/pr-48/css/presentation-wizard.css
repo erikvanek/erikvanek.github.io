@@ -1,0 +1,798 @@
+/* ─── Reset ─── */
+.reveal,
+.reveal * {
+  box-sizing: border-box;
+}
+
+/* ─── Design tokens — candlelit dark ─── */
+:root {
+  --bg:       #1c1812;
+  --surface:  #2c2820;
+  --text:     #f0ece4;
+  --muted:    #ddd8d0;
+  --dim:      #968878;
+  --accent:   #e8a030;
+  --border:   #2c2820;
+}
+
+/* ─── Base ─── */
+body {
+  background-color: var(--bg);
+}
+
+.reveal {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.reveal * {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.reveal .slides section {
+  text-align: left;
+  padding: 0 6rem;
+  padding-top: 100px;
+  color: var(--text);
+  background: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ─── Headings ─── */
+.reveal h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0 0 2.5rem;
+  text-shadow: none;
+  background: none;
+}
+
+.reveal h2 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 2.5rem;
+  text-shadow: none;
+  background: none;
+}
+
+.reveal h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+/* ─── Body text ─── */
+.reveal p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+/* ─── Lists ─── */
+.reveal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reveal ul li {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--text);
+  position: relative;
+  padding-left: 3.25rem;
+  margin: 0;
+  text-indent: 0;
+}
+
+.reveal ul li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1.5;
+}
+
+/* ─── Nested list items: no arrow, muted, aligned with parent text ─── */
+.reveal ul li ul {
+  margin-top: 0.4rem;
+  padding-left: 0;
+  gap: 0.4rem;
+}
+
+.reveal ul li ul li {
+  font-size: 1.5rem;
+  color: var(--dim);
+  padding-left: 0;
+}
+
+.reveal ul li ul li::before {
+  display: none;
+}
+
+/* Sub-items nested inside an ORDERED list (ol > li > ul > li): same treatment as
+   ul-nested - no arrow, muted, aligned. Without this they wrongly inherit the
+   ul-arrow and it overlaps the text. */
+.reveal ol li ul {
+  margin-top: 0.4rem;
+  padding-left: 0;
+  gap: 0.4rem;
+}
+.reveal ol li ul li {
+  font-size: 1.5rem;
+  color: var(--dim);
+  padding-left: 0;
+}
+.reveal ol li ul li::before {
+  display: none;
+}
+
+.reveal ol {
+  margin: 0;
+  padding: 0 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reveal ol li {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.reveal ol li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ─── Reveal.js UI ─── */
+.reveal .progress {
+  height: 6px;
+  background: var(--dim);
+  color: var(--accent);
+}
+
+.reveal .progress span {
+  background: var(--accent);
+}
+
+.reveal .controls .controls-arrow {
+  color: var(--accent);
+}
+
+.reveal .controls .navigate-left .controls-arrow {
+  color: var(--dim);
+}
+
+.reveal .controls .navigate-right .controls-arrow {
+  color: var(--accent);
+}
+
+/* ─── Inline emphasis ─── */
+.reveal strong { color: var(--text); font-weight: 700; }
+.reveal em     { font-family: 'Inter', sans-serif; font-style: italic; color: var(--muted); }
+
+/* ─── Links ─── */
+.reveal a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ─── Code ─── */
+.reveal pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+.reveal code {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.1rem;
+  color: var(--text);
+  background: none;
+}
+
+/* ─── Blockquote ─── */
+.reveal blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 2rem;
+  margin: 0 0 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  color: var(--text);
+  background: none;
+  box-shadow: none;
+  width: auto;
+}
+
+.reveal cite {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  margin-top: 1rem;
+  font-style: normal;
+}
+
+/* ─── Figure / image ─── */
+.reveal figure { margin: 0; }
+.reveal figcaption {
+  font-size: 0.85rem;
+  color: var(--dim);
+  margin-top: 0.4rem;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(150, 136, 120, 0.45);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.reveal figcaption a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.reveal img { max-width: 100%; height: auto; border-radius: 4px; }
+
+/* ─── Quote-block: usable outside .layout-quote too (e.g. in two-col columns) ─── */
+.quote-block {
+  border-left: 4px solid var(--accent);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quote-block blockquote {
+  border-left: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* ─── Layout: title ─── */
+.layout-title {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 5rem !important;
+  gap: 0;
+}
+
+.layout-title h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0 auto 3.5rem;
+  max-width: 18ch;
+  text-align: center;
+}
+
+.layout-title .slide-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 36ch;
+  margin: 0 auto 1.25rem;
+}
+
+.layout-title .slide-rule {
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 0 auto 1.25rem;
+}
+
+.layout-title .slide-byline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ─── Slide eyebrow: small orange label above heading ─── */
+.reveal .slide-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 2rem;
+}
+
+/* ─── Layout: heading-body ─── */
+.layout-heading-body {
+  justify-content: flex-start !important;
+}
+
+/* ─── Layout: statement ─── */
+.layout-statement {
+  padding: 0 !important;
+}
+
+.layout-statement .statement-inner {
+  position: absolute;
+  top: 50%;
+  left: 7.5rem;
+  right: 7.5rem;
+  transform: translateY(-50%);
+}
+
+.layout-statement h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  max-width: 20ch;
+  margin: 0 0 1rem;
+}
+
+/* ─── Layout: quote ─── */
+.layout-quote {
+  justify-content: center !important;
+  gap: 2rem;
+}
+
+/* Reduced top padding when heading is present so content has more room */
+.layout-quote:has(h2) {
+  padding-top: 80px !important;
+}
+
+.layout-quote h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* When only a heading precedes, push to bottom */
+.layout-quote h2 ~ blockquote,
+.layout-quote h2 ~ .quote-block {
+  margin-top: auto;
+}
+
+/* When a list precedes, override with explicit gap (must come after h2~ rule to win) */
+.layout-quote ul ~ blockquote,
+.layout-quote ul ~ .quote-block {
+  margin-top: 2rem;
+}
+
+.layout-quote blockquote {
+  margin-top: 1.5rem;
+}
+
+.reveal del {
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Switch-to-Claude badge ─── */
+@keyframes claude-beep {
+  0%   { opacity: 0; }
+  60%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes claude-beep-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#claude-badge {
+  position: fixed;
+  bottom: 24px;
+  right: 120px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 2.5px solid var(--accent);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#claude-badge span {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+#claude-badge.active {
+  animation: claude-beep 1.5s ease-in-out forwards;
+}
+
+#claude-badge.leaving {
+  animation: claude-beep-out 0.5s ease-in-out forwards;
+}
+
+.layout-quote > p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.375rem;
+  color: var(--dim);
+  margin: 0;
+}
+
+/* quote-block: amber bar spans both blockquote and cite */
+.layout-quote .quote-block {
+  border-left: 4px solid var(--accent);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.layout-quote .quote-block blockquote {
+  border-left: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* ─── Layout: section-break ─── */
+.layout-section-break {
+  justify-content: center !important;
+  padding: 5rem 6rem !important;
+}
+
+.layout-section-break .section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 2rem;
+}
+
+.layout-section-break h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0 0 2rem;
+}
+
+.layout-section-break .section-rule {
+  width: 64px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+/* ─── Layout: two-column ─── */
+.layout-two-col {
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  /* right padding trimmed (3rem -> 1rem) so right-column photos grow toward the edge */
+  padding: 100px 1rem 2rem 3rem !important;
+}
+
+.layout-two-col h2 {
+  flex: none;
+  margin-bottom: 2.5rem;
+}
+
+.layout-two-col .cols {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.layout-two-col .cols > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Optional width splits — add class to .cols, e.g. <div class="cols cols--70-30"> */
+.layout-two-col .cols.cols--70-30 { align-items: stretch; }
+.layout-two-col .cols.cols--70-30 > *:first-child { flex: 0 0 70%; }
+.layout-two-col .cols.cols--70-30 > *:last-child  { flex: 0 0 28%; }
+.layout-two-col .cols.cols--30-70 > *:first-child { flex: 0 0 28%; }
+.layout-two-col .cols.cols--30-70 > *:last-child  { flex: 0 0 70%; }
+.layout-two-col .cols.cols--60-40 > *:first-child { flex: 0 0 60%; }
+.layout-two-col .cols.cols--60-40 > *:last-child  { flex: 0 0 38%; }
+.layout-two-col .cols.cols--40-60 > *:first-child { flex: 0 0 38%; }
+.layout-two-col .cols.cols--40-60 > *:last-child  { flex: 0 0 60%; }
+
+/* Text + photo two-col: widen the image column (>50%) so photos grow toward the
+   right edge. Targets <figure> only - text and SVG columns (e.g. iceberg) untouched. */
+.layout-two-col .cols > figure {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.layout-two-col .cols > figure img {
+  width: 100%;
+  max-height: 27rem;
+  object-fit: contain;
+}
+
+/* compact heading-body: hustší slidy (víc odrážek + citát) - menší písmo proti přetečení dolů */
+.layout-heading-body.compact > ul > li,
+.layout-heading-body.compact > ol > li { font-size: 1.7rem; }
+.layout-heading-body.compact .quote-block { margin-top: 1rem; }
+.layout-heading-body.compact .quote-block blockquote { font-size: 1.5rem; }
+
+/* ─── Layout: demo ─── */
+.layout-demo {
+  justify-content: center !important;
+  gap: 0;
+  padding: 5rem 6rem !important;
+}
+
+.layout-demo .demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  width: fit-content;
+  margin-bottom: 2.5rem;
+}
+
+.layout-demo .demo-badge::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.layout-demo .demo-badge span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.layout-demo h2 {
+  margin: 0 0 1.5rem;
+}
+
+.layout-demo > p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--dim);
+  margin: 0;
+}
+
+/* ─── Layout: full-image ─── */
+.layout-full-image {
+  justify-content: flex-end !important;
+  align-items: center;
+  text-align: center;
+  padding: 5rem !important;
+  gap: 1.25rem;
+}
+
+.layout-full-image h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.layout-full-image > p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.layout-full-image .available-line {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Custom: enjoyment chart slide ─── */
+.layout-custom-chart {
+  padding: 100px 5rem 2rem !important;
+}
+
+/* ─── Custom: transcripts-stack visualization (Progress UI) ─── */
+.layout-transcripts-stack {
+  padding: 80px 6rem 4rem !important;
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.layout-transcripts-stack h2 {
+  color: var(--text) !important;
+  font-size: 4rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.layout-transcripts-stack .subtitle {
+  font-size: 1.5rem;
+  color: var(--dim);
+  margin-bottom: 2rem;
+}
+
+.layout-transcripts-stack .visual-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* Transcripts Stack */
+.transcripts-stack-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.transcript-paper {
+  position: absolute;
+  width: 320px;
+  height: 400px;
+  background: white;
+  border: 1px solid #c8b89a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transcript-paper.top {
+  border: 2px solid #1c1812;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+
+.paper-line { height: 6px; background: #eeeeee; border-radius: 2px; }
+.paper-line.highlight { background: #e8a030; }
+
+/* Progress List */
+.progress-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  width: 400px;
+}
+
+.progress-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.progress-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+.checkbox.pending {
+  background: transparent;
+  border: 1px solid var(--dim);
+}
+
+.item-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.item-text.done {
+  text-decoration: line-through;
+  color: var(--dim);
+}
+
+/* ─── Footer ─── */
+.slide-footer {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.slide-footer span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  background-color: rgba(28, 24, 18, 0.7);
+  padding: 0.375rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--surface);
+}
+
+/* ─── Partner logo ─── */
+.partner-logo {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  height: 2.5rem;
+  opacity: 0.65;
+  z-index: 100;
+}
+
+/* ─── Theme toggle ─── */
+#theme-toggle {
+  display: none;
+}

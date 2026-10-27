@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Čtyři síly: člověk stojí na cestě mezi dnešním stavem a novým řešením, push a pull ho táhnou k novému, habit a anxiety zpátky">
+  <defs>
+    <marker id="head-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0000dc"/>
+    </marker>
+    <marker id="head-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#595959"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #ffffff; stroke: #0000dc; stroke-width: 2.5; }
+    .box-title { font-family: 'Muni', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 19px; fill: #0000dc; word-spacing: -0.3em; }
+    .box-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #595959; }
+    .force { font-family: 'Muni', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; }
+    .force-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #595959; }
+    .band { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; fill: #595959; letter-spacing: 0.08em; text-transform: uppercase; }
+  </style>
+
+  <!-- the switch: from how people do it today to the new solution -->
+  <rect class="box" x="16" y="160" width="150" height="80" rx="8"/>
+  <text class="box-title" x="91" y="196" text-anchor="middle">DNES</text>
+  <text class="box-sub" x="91" y="219" text-anchor="middle">jak to dělají teď</text>
+
+  <rect class="box" x="474" y="160" width="150" height="80" rx="8"/>
+  <text class="box-title" x="549" y="196" text-anchor="middle">NOVÉ ŘEŠENÍ</text>
+  <text class="box-sub" x="549" y="219" text-anchor="middle">lepší způsob</text>
+
+  <line x1="176" y1="200" x2="464" y2="200" stroke="#595959" stroke-width="1.5" stroke-dasharray="5 6"/>
+
+  <!-- the person, standing on the way from today to the new, torn between the forces -->
+  <circle cx="320" cy="180.5" r="15" fill="#0000dc"/>
+  <path d="M294.5,234.5 C294.5,210.5 305,200 320,200 C335,200 345.5,210.5 345.5,234.5 Z" fill="#0000dc"/>
+
+  <!-- helping the change: both point to the new solution -->
+  <text class="band" x="320" y="40" text-anchor="middle">Pomáhají změně</text>
+  <line x1="186" y1="130" x2="306" y2="130" stroke="#0000dc" stroke-width="4" marker-end="url(#head-blue)"/>
+  <text class="force" x="246" y="88" text-anchor="middle" fill="#0000dc">PUSH</text>
+  <text class="force-sub" x="246" y="110" text-anchor="middle">tlak současné situace</text>
+  <line x1="334" y1="130" x2="454" y2="130" stroke="#0000dc" stroke-width="4" marker-end="url(#head-blue)"/>
+  <text class="force" x="394" y="88" text-anchor="middle" fill="#0000dc">PULL</text>
+  <text class="force-sub" x="394" y="110" text-anchor="middle">přitažlivost nového</text>
+
+  <!-- blocking the change: both point back to today -->
+  <line x1="306" y1="270" x2="186" y2="270" stroke="#595959" stroke-width="4" marker-end="url(#head-gray)"/>
+  <text class="force" x="246" y="306" text-anchor="middle" fill="#595959">HABIT</text>
+  <text class="force-sub" x="246" y="328" text-anchor="middle">zvyk a setrvačnost</text>
+  <line x1="454" y1="270" x2="334" y2="270" stroke="#595959" stroke-width="4" marker-end="url(#head-gray)"/>
+  <text class="force" x="394" y="306" text-anchor="middle" fill="#595959">ANXIETY</text>
+  <text class="force-sub" x="394" y="328" text-anchor="middle">obavy z nového</text>
+  <text class="band" x="320" y="374" text-anchor="middle">Brzdí změnu</text>
+</svg>

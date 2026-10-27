@@ -1,0 +1,239 @@
+/* ==========================================================================
+   TYPOGRAPHY.CSS
+   Font loading and text styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Font Loading
+   Using Inter - crisp, geometric sans-serif
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hjp-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hjp-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjp-Ek-_EeA.woff2') format('woff2');
+}
+
+/* --------------------------------------------------------------------------
+   Base Typography
+   -------------------------------------------------------------------------- */
+
+.reveal {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  margin: 0 0 var(--space-lg) 0;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+}
+
+.reveal h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.reveal h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.reveal h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+}
+
+.reveal h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Paragraphs
+   -------------------------------------------------------------------------- */
+
+.reveal p {
+  margin: 0 0 var(--space-md) 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.reveal p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+
+.reveal a {
+  color: var(--color-purple);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.reveal a:hover {
+  color: var(--color-pink);
+  border-bottom-color: var(--color-pink);
+}
+
+/* --------------------------------------------------------------------------
+   Lists
+   -------------------------------------------------------------------------- */
+
+.reveal ul,
+.reveal ol {
+  margin: 0 0 var(--space-lg) 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+}
+
+.reveal li {
+  position: relative;
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-md);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.reveal li:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom bullet - gradient dot */
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+  border-radius: 50%;
+}
+
+/* Ordered list numbers */
+.reveal ol {
+  counter-reset: list-counter;
+}
+
+.reveal ol li {
+  counter-increment: list-counter;
+}
+
+.reveal ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 0.875em;
+  color: var(--color-purple);
+}
+
+/* --------------------------------------------------------------------------
+   Emphasis
+   -------------------------------------------------------------------------- */
+
+.reveal strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reveal em {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Code
+   -------------------------------------------------------------------------- */
+
+.reveal code {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  color: var(--color-purple-deep);
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+
+/* Text colors */
+.reveal .text-purple { color: var(--color-purple); }
+.reveal .text-pink { color: var(--color-pink); }
+.reveal .text-navy { color: var(--color-navy); }
+.reveal .text-muted { color: var(--color-text-muted); }
+
+/* Gradient text */
+.reveal .text-gradient {
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Text alignment */
+.reveal .text-center { text-align: center; }
+.reveal .text-left { text-align: left; }
+.reveal .text-right { text-align: right; }
+
+/* Font weights */
+.reveal .font-normal { font-weight: 400; }
+.reveal .font-medium { font-weight: 500; }
+.reveal .font-semibold { font-weight: 600; }
+.reveal .font-bold { font-weight: 700; }
