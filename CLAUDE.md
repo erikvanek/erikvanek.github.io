@@ -30,6 +30,14 @@ Slidev decks live under `pages/presentations/slidev/<deck-name>/slides.md`, buil
 - **This repo is public** - only brand themes that are fine to publish belong in `themes/<name>/` (e.g. `muni-arts`, built for the MUNI/KISK course SDW-26). A theme never stores proprietary assets (font files, source manuals) even when it's committed - it just references them by name/URL and lets the browser resolve or fall back; see `themes/muni-arts/README.md` for the pattern.
 - **Confidential/client-specific branding** for other engagements lives entirely in other repos, used locally or as exported files (PDF/PPTX) - this repo doesn't stage or preview that content at all.
 
+## v2 site (rework in progress)
+- `v2/` is the new Eleventy site with its own config (`v2/eleventy.config.mjs`, `v2/src/` -> `v2/_site/`). It shares nothing with `pages/` or `docs/`. `yarn start:v2` serves it on port 8090, `yarn test` runs its unit tests.
+- `yarn build:deploy` writes the live site into `_deploy/`, chosen by the one-line `SITE` file: `legacy` copies the committed `docs/`, `v2` builds `v2/`. A `SITE` environment variable overrides the file for one run; `PATH_PREFIX=/pr-preview/pr-N/` builds v2 for a subfolder and adds `noindex`.
+- `node scripts/switch-site.mjs legacy|v2` rewrites `SITE`. The flip is a PR Erik merges; rollback is reverting it.
+- The folder is called `v2/` because macOS's case-insensitive filesystem cannot hold a `site/` folder next to the `SITE` file.
+- English lives at `/`, Czech at `/cs/`. A page's twin is found by URL (`/x/` <-> `/cs/x/`); set `twin:` in front matter when the slugs differ. Every page whose `<html lang="cs">` gets the Vlna transform (non-breaking space after one-letter words).
+- CSS follows CUBE with Utopia tokens in `v2/src/css/_tokens.css`. A new block goes in `v2/src/css/blocks/_name.css` and gets one `@import` line in `css/main.css`. No CSS framework, no analytics.
+
 ## Privacy & content boundaries
 - This repo is **public** and builds to www.erikvanek.com. Anything committed is world-readable.
 - PARA **Projects** and **Archive** are **private** and live in a separate private repo - they are NOT part of this public second brain. Only Areas/Resources-type notes are published here.
