@@ -1,0 +1,12 @@
+{#- Flag selector, top right. The current language links to this page, the
+    other one to this page's twin, or to that language's home page when there
+    is no twin. lang-save.js remembers a click on either. -#}
+<nav class="lang-switch" aria-label="{{ languages[lang].switchLabel }}">
+<ul class="cluster" role="list">
+{%- for code, language in languages %}
+{%- set isCurrent = code == lang %}
+{%- set href = page.url if isCurrent else (twinHref if hasTwin else language.home) %}
+<li><a href="{{ href }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ language.name }}" data-lang-choice="{{ code }}"{% if isCurrent %} aria-current="page"{% endif %}>{% include "partials/flag-" + code + ".svg" %}<span class="visually-hidden">{{ language.name }}</span></a></li>
+{%- endfor %}
+</ul>
+</nav>

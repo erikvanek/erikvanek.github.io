@@ -20,3 +20,7 @@ yarn-error.log
 **/.obsidian/
 **/.smart-env/
 **/.claude/
+
+# ── Build output that is never committed ─────────────────────
+_deploy/
+v2/_site/

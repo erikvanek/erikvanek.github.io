@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+bilingual: true
+title: Page not found / Stránka nenalezena
+eleventyExcludeFromCollections: true
+---
+{#- One page in both languages: GitHub Pages serves a single 404.html for
+    every missing path. No list of old URLs on purpose, it would expose them. -#}
+<h1>404</h1>
+<section class="flow" lang="en">
+<h2>Page not found</h2>
+<p>This page doesn't exist, or it hasn't come back since the rebuild.</p>
+<p><a href="/">Go to the homepage</a></p>
+</section>
+<section class="flow" lang="cs">
+<h2>{{ "Stránka nenalezena" | vlna }}</h2>
+<p>{{ "Tahle stránka neexistuje, nebo se po přestavbě webu zatím nevrátila." | vlna }}</p>
+<p><a href="/cs/">{{ "Přejít na úvodní stránku" | vlna }}</a></p>
+</section>

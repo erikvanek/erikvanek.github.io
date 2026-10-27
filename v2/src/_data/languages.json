@@ -1,0 +1,4 @@
+{
+	"en": { "name": "English", "home": "/", "switchLabel": "Language" },
+	"cs": { "name": "Čeština", "home": "/cs/", "switchLabel": "Jazyk" }
+}

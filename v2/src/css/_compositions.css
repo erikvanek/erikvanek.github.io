@@ -1,0 +1,24 @@
+/* wrapper: centred column with a fluid gutter on both sides */
+.wrapper {
+	inline-size: min(100% - 2 * var(--gutter), var(--wrapper-max));
+	margin-inline: auto;
+}
+
+/* flow: even vertical rhythm between siblings; set --flow-space to change it */
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+/* region: vertical padding around a page section */
+.region {
+	padding-block: var(--region-space, var(--space-l-xl));
+}
+
+/* cluster: items in a row that wraps when it runs out of room */
+.cluster {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--cluster-gap, var(--space-xs));
+	justify-content: var(--cluster-justify, flex-start);
+}

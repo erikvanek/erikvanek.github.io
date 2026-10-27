@@ -1,0 +1,46 @@
+{#- Every v2 page. Front matter it reads: title, description, twin (the other
+    language's URL when its slug differs), bilingual (a page in both languages
+    at once, like the 404: no selector, no twin). -#}
+{%- set twinHref = twin or (page.url | twinUrl(lang)) -%}
+{%- set hasTwin = (not bilingual) and (collections.all | hasUrl(twinHref)) -%}
+{%- set enHref = page.url if lang == "en" else twinHref -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+{%- if description %}
+<meta name="description" content="{{ description }}">
+{%- endif %}
+{%- if preview %}
+<meta name="robots" content="noindex">
+{%- endif %}
+{%- if hasTwin %}
+<link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="{{ 'en' if lang == 'cs' else 'cs' }}" href="{{ site.url }}{{ twinHref }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enHref }}">
+{%- endif %}
+<link rel="stylesheet" href="/css/main.css">
+{%- if page.url == "/" %}
+<script data-cs="{{ '/cs/' | htmlBaseUrl }}">
+{% include "js/lang-infer.js" %}
+</script>
+{%- endif %}
+</head>
+<body>
+{%- if not bilingual %}
+<header class="site-header wrapper">
+{% include "partials/lang-switch.njk" %}
+</header>
+{%- endif %}
+<main class="wrapper region flow">
+{{ content | safe }}
+</main>
+{%- if not bilingual %}
+<script>
+{% include "js/lang-save.js" %}
+</script>
+{%- endif %}
+</body>
+</html>

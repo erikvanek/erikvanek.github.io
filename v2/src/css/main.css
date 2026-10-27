@@ -1,0 +1,19 @@
+/*
+ * v2 stylesheet, organised by CUBE CSS (https://cube.fyi): global styles do
+ * most of the work, compositions handle layout, utilities do one job each,
+ * blocks style a component. Exceptions live inside their block as attribute
+ * selectors ([aria-current], [data-state]).
+ *
+ * Each @import is inlined at build time (v2/lib/css.mjs) into this one file,
+ * wrapped in its cascade layer. Later layers win over earlier ones.
+ * No framework.
+ */
+@layer reset, global, composition, utility, block;
+
+@import "_reset.css" layer(reset);
+@import "_tokens.css" layer(global);
+@import "_global.css" layer(global);
+@import "_compositions.css" layer(composition);
+@import "_utilities.css" layer(utility);
+@import "blocks/_site-header.css" layer(block);
+@import "blocks/_lang-switch.css" layer(block);
