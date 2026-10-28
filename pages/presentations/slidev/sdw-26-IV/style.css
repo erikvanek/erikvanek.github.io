@@ -61,6 +61,9 @@
 }
 .box p { margin: 0.2em 0; }
 
+/* Rámeček přes celou šířku dvousloupcového slidu, mezi nadpisem a sloupci */
+.col-header .box { margin: 0 0 1em; }
+
 /* Pět polí příkladu z praxe: iniciativa, co se testovalo, co jsme chtěli zjistit, co jsme zjistili, co to umožnilo */
 .fields ul { list-style: none; padding-left: 0; margin: 0; }
 .fields li { margin: 0 0 0.45em; padding-left: 0; }

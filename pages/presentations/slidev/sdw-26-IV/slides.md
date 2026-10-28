@@ -27,12 +27,12 @@ hideInToc: true
 
 # Dnes nás čeká
 
-- **Vaše prototypy** – kolečko týmů
-- **Usability testování** – jak připravit a vést sezení
-- **Testovací scénář** – v týmech
-- **Pilot** – týmy se testují navzájem
+- **Jak šlo prototypování?**
+- **Uživatelské testování** – jak se připravit a vést setkání
+- **Tvorba testovacího scénáře**
+- **Pilotní testování** – vzájemně na svých projektech
 - **Další evaluační metody**
-- **Úkol** – test s pěti lidmi
+- **Úkol do příště**
 
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
@@ -47,11 +47,11 @@ hideInToc: true
 
 # Jak šlo prototypování?
 
-Za každý tým jeden člověk, zhruba minutu:
+Krátké shrnutí za každý tým:
 
-1. Co jste při prototypování zkoušeli
-2. Co jste se naučili
-3. Co máte v ruce – ukažte nám to
+1. Čím jste si od minula prošli?
+2. Co jste se naučili?
+3. S čím v ruce přicházíte?
 
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
@@ -63,28 +63,62 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 layout: section-break
 ---
 
-# Usability testování
-
-Funguje to tak, jak si myslíte?
+# Evaluace prototypů
 
 ---
 layout: heading-body
 hideInToc: true
 ---
 
-# Vaše představa a jejich zkušenost
+# Hlavní motivace pro testování
 
-- Máte prototyp a chcete vědět, jestli funguje tak, jak čekáte
-- Vaše myšlenky a očekávání jsou jedna věc, druhá je to, jak prototyp vnímají uživatelé
-- Dnes hlavně **usability testování**, ostatní techniky jsou jeho obměny
-
-<div class="box"><strong>Jestli si z kurzu odnesete jednu věc, ať je to testování jako denní chleba.</strong></div>
+- Máte prototyp a chcete **vědět, jestli funguje tak, jak čekáte**
+- Vaše myšlenky a očekávání jsou jedna věc, druhá je to, jak vaše návrhy vnímají uživatelé
+- Dnes hlavně **uživatelské testování**, ostatní techniky jsou jeho obměny
+  - Nejdůležitější technika k osvojení
 
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
 h1 { margin-bottom: 0.45em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
-.box { margin-top: 1.2em; }
+</style>
+
+---
+layout: heading-body
+hideInToc: true
+title: Mapa výzkumných metod
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="figure">
+<div class="map">
+  <img :src="asset + 'nngroup-mapa-vyzkumnych-metod.png'" alt="A Landscape of User Research Methods: dvacet metod na osách postoje a chování, kvalitativní a kvantitativní, s doplněnými metodami RITE, fake door a five-second test" />
+  <span class="ring" style="left:14.5%; top:27.5%; width:17.5%; height:6%"></span>
+  <span class="ring" style="left:76%; top:13.8%; width:12.6%; height:6%"></span>
+  <span class="ring" style="left:41.2%; top:64.3%; width:24.6%; height:6%"></span>
+  <span class="add" style="left:15.5%; top:34.6%"><i class="mk square"></i><b>RITE</b></span>
+  <span class="add" style="left:76.6%; top:32%"><i class="mk circle"></i><b>Fake door</b></span>
+  <span class="add" style="left:62.8%; top:53.5%"><i class="mk diamond"></i><b>Five-second test</b></span>
+</div>
+<div class="credit">Mapa výzkumných metod. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">Christian Rohrer</a>, <a href="https://www.nngroup.com/">NN/g</a>, modré štítky jsou doplněné</div>
+</div>
+
+<style>
+.slidev-layout.heading-body { padding-top: 1.5rem; padding-bottom: 1.25rem; }
+.figure { width: 38rem; margin: 0 auto; }
+.map { position: relative; container-type: inline-size; }
+.map img { width: 100%; height: auto; display: block; }
+.ring { position: absolute; border: 4px solid #e4002b; border-radius: 50%; box-sizing: border-box; }
+.add { position: absolute; display: flex; align-items: center; gap: 0.6cqw; font-size: 2.1cqw; white-space: nowrap; }
+.add b { font-weight: 700; line-height: 1.3; color: #fff; background: var(--muni-blue, #0000dc); padding: 0.15em 0.5em; border-radius: 0.25em; }
+/* Značky podle legendy mapy: kruh přirozené použití, čtverec použití podle scénáře, kosočtverec omezená podoba produktu */
+.mk { flex: none; width: 1.6cqw; height: 1.6cqw; box-sizing: border-box; border: 1px solid rgb(0 0 0 / 0.3); }
+.mk.circle { background: #99cc00; border-radius: 50%; }
+.mk.square { background: #ff6666; }
+.mk.diamond { background: #0099cc; transform: rotate(45deg) scale(0.85); }
 </style>
 
 ---
@@ -95,43 +129,26 @@ hideInToc: true
 
 # Dobrý design vzniká iterací
 
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
 ::left::
 
-- **Iterace** je další kolo návrhu, které stojí na zjištěních z toho předchozího
-- Nemusíte začít s něčím skvělým, stačí začít a pak ladit
-- S AI nástroji je iterace rychlá, proto se tolik ujaly agilní metodiky, třeba Scrum
+- **Iterace** je další kolo návrhu, které stojí na zjištěních z předchozích
+- Nemusíte začít s něčím skvělým, stačí začít a pak opravit
+- S rozvojem AI nástrojů je možné iterovat velice rychle
+- Na iterativních procesech stojí tzv. agilní metodiky vývoje produktů jako např. Scrum
 
 ::right::
 
-<svg viewBox="0 0 520 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dvojitý diamant se šipkami, které se vracejí z řešení zpátky k problému" class="diamond">
-  <defs>
-    <marker id="dd-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#0000dc" />
-    </marker>
-  </defs>
-  <g fill="none" stroke="#0000dc" stroke-width="4" stroke-linejoin="round">
-    <path d="M20 125 L125 45 L230 125 L125 205 Z" />
-    <path d="M230 125 L335 45 L440 125 L335 205 Z" />
-  </g>
-  <line x1="440" y1="125" x2="500" y2="125" stroke="#0000dc" stroke-width="4" marker-end="url(#dd-arrow)" />
-  <g fill="none" stroke="#4bc8ff" stroke-width="5" stroke-linecap="round">
-    <path d="M415 75 C 395 10, 290 10, 262 75" marker-end="url(#dd-arrow)" />
-    <path d="M425 180 C 380 265, 120 265, 70 170" marker-end="url(#dd-arrow)" />
-  </g>
-  <g style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 26px" fill="#000" text-anchor="middle">
-    <text x="125" y="134">Problém</text>
-    <text x="335" y="134">Řešení</text>
-  </g>
-</svg>
+<img :src="asset + 'design-council-framework-for-innovation.png'" alt="Framework for Innovation: dvojitý diamant Discover, Define, Develop, Deliver s přerušovanými šipkami iterace zpátky k začátku" class="framework" />
 
-<p class="claim">Good design is iterative</p>
-
-<div class="credit">Rámec Double Diamond formuloval britský <a href="https://www.designcouncil.org.uk/resources/the-double-diamond/">Design Council</a> (2004), šipky iterace jsou dokreslené</div>
+<div class="credit">Revised Double Diamond – <a href="https://www.designcouncil.org.uk/resources/the-double-diamond/">Design Council</a></div>
 
 <style>
 .col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
-.diamond { width: 100%; height: auto; display: block; }
-.claim { font-weight: 700; font-size: 1.3em; color: var(--muni-blue, #0000dc); text-align: center; margin: 0.4em 0 0; }
+.framework { max-height: 22.5rem; width: auto; max-width: 100%; display: block; margin: 0 auto; }
 </style>
 
 ---
@@ -140,101 +157,36 @@ ratio: "50-50"
 hideInToc: true
 ---
 
-# Jeden účastník na sezení
+# Průběh uživatelského testování
 
 <script setup>
 const asset = import.meta.env.BASE_URL
 </script>
 
+<div class="box">Cílem je zjistit <strong>jak se uživatelům váš návrh používá a jak mu rozumí</strong></div>
+
 ::left::
 
-- Každý má v hlavě vlastní představu o tom, jak věc funguje, a ve skupině se lidé navzájem ovlivňují
-- Sledujete, co dělá jeden člověk, a máte na něj čas
-- U stolu sedí **účastník**, **facilitátor** a **zapisovatel**
+- Uživatelé procházejí prototypem
+- Dáváte jim úkoly, které s jeho pomocí mají splnit
+- Testujete individuálně
+- Aktivně se doptáváte a děláte si poznámky
+- Doporučuju setkání nahrát (alespoň zvuk), záznam přepsat + si psát poznámky "bokem"
 
 ::right::
 
-<img :src="asset + 'jarmilka-testovani-1.jpg'" alt="Testování papírového prototypu shora: ruce účastníka nad papírovými obrazovkami" class="fit-img" />
+<img :src="asset + 'jarmilka-testovani-3.jpg'" alt="Účastník testu ukazuje prstem na papírový prototyp Jarmilky, pohled přes stůl od facilitátora" class="fit-img" />
 
 <div class="credit">Testování papírového prototypu Jarmilky</div>
 
 <style>
-.col-left li { margin-top: 0.5em; margin-bottom: 0.5em; }
-</style>
-
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
-
-# Připravte sebe
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-Checklist je infrastruktura, na kterou se můžete spolehnout:
-
-<ul class="checklist">
-  <li>Prototyp funguje a čeká na prvním kroku</li>
-  <li>Scénář máte vytištěný</li>
-  <li>Souhlas s nahráváním, nabitý telefon, místo v paměti</li>
-  <li>Zapisovatel má šablonu na poznámky</li>
-  <li>Místo a čas jsou s účastníkem potvrzené</li>
-</ul>
-
-<div class="box"><strong>Všechno nahrávejte, nechte si to přepsat a pracujte s přepisem.</strong></div>
-
-::right::
-
-<img :src="asset + 'jarmilka-papirovy-prototyp.jpg'" alt="Papírový prototyp asistenta Jarmilka rozložený na stole" class="fit-img" />
-
-<div class="credit">Papírový prototyp Jarmilky</div>
-
-<style>
-.col-left p { margin-bottom: 0.3em; }
-.checklist { list-style: none; padding-left: 0; margin: 0.2em 0 0; }
-.checklist li { position: relative; padding-left: 1.6em; margin: 0.3em 0; }
-.checklist li::before { content: ""; position: absolute; left: 0; top: 0.25em; width: 0.9em; height: 0.9em; border: 2px solid var(--muni-blue, #0000dc); border-radius: 0.15em; }
+.col-left li { margin-top: 0.3em; margin-bottom: 0.3em; }
+.col-right .fit-img { max-height: 19.5rem; width: auto; max-width: 100%; }
 </style>
 
 ---
 layout: two-column
 ratio: "50-50"
-hideInToc: true
----
-
-# Pozvěte účastníka
-
-::left::
-
-**Kde lidi sehnat**
-
-- Cold call, kamarád kamaráda
-- Placení účastníci
-- V B2B přes zákazníky a partnery
-
-**Pozvánka má vítat**
-
-<div class="box">„Není to schůzka. Projdeme spolu nápad nebo pár nápadů.“</div>
-
-::right::
-
-<div class="invite">„Dávám vám možnost spoluutvářet to, na čem pracuji, abyste z toho v budoucnu měli užitek.“</div>
-
-<style>
-.col-left p { margin: 0.6em 0 0.2em; }
-.col-left li { margin: 0.2em 0; }
-.col-right { display: flex; align-items: center; }
-.invite { font-size: 1.35em; line-height: 1.35; font-weight: 700; color: var(--muni-blue, #0000dc); }
-</style>
-
----
-layout: two-column
-ratio: "55-45"
 hideInToc: true
 ---
 
@@ -250,10 +202,12 @@ Přečtěte ho doslova, nebo si napište pár bodů:
 
 1. Kdo jste
 2. Proč tu účastník je
-3. Jak sezení poběží
+3. Jak bude sezení probíhat
 4. Souhlas s nahráváním
-5. Ať mluví nahlas
 6. Kdykoli se může zeptat i skončit
+5. Prosba o "sdílení nahlas"
+
+<div class="box"><strong>Cíl:</strong> co nejvíc psychologického bezpečí</div>
 
 ::right::
 
@@ -261,48 +215,11 @@ Přečtěte ho doslova, nebo si napište pár bodů:
 
 <img :src="asset + 'jarmilka-testovani-2.jpg'" alt="Sezení nad papírovým prototypem shora" class="fit-img photo" />
 
-<p class="goal">Cíl: co nejvíc psychologického bezpečí</p>
-
 <style>
 .col-left p { margin-bottom: 0.3em; }
 .col-left li { margin: 0.2em 0; }
+.col-left .box { margin: 1.5em -1rem 0 0; white-space: nowrap; }
 .col-right .box { margin: 0 0 0.8em; }
-.goal { font-weight: 700; margin-top: 0.6em; }
-</style>
-
----
-layout: two-column
-ratio: "60-40"
-hideInToc: true
----
-
-# Think aloud
-
-::left::
-
-- Do hlavy účastníkovi nevidíte, tak ho poprosíte, ať říká, co se v ní děje
-- Uslyšíte, jak rozhraní chápe a jaký má o něm mentální model
-- Usability test je o tom pochopit, jak lidé rozumějí tomu, co jste udělali
-
-<div class="box">„Nerozumím textu v bublině Jarmilky. Pojem časová perspektiva je hodně abstraktní.“</div>
-
-<div class="credit">Účastnice testu Jarmilky</div>
-
-::right::
-
-<a class="book" href="https://sensible.com/dont-make-me-think/">
-  <span class="book-title">Don't Make Me Think</span>
-  <span class="book-author">Steve Krug</span>
-</a>
-
-<div class="credit">Kniha <a href="https://sensible.com/dont-make-me-think/">Steva Kruga</a> o tom, jak lidé opravdu používají rozhraní</div>
-
-<style>
-.col-left li { margin: 0.35em 0; }
-.col-right { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.book { display: flex; flex-direction: column; justify-content: space-between; width: 13rem; height: 17rem; padding: 1.4rem 1.2rem; background: #fff; border: 2px solid #000; box-shadow: 0.4rem 0.4rem 0 var(--muni-arts-blue, #4bc8ff); text-align: left; text-decoration: none !important; color: #000 !important; }
-.book-title { font-size: 1.5em; font-weight: 700; line-height: 1.15; }
-.book-author { font-size: 0.9em; }
 </style>
 
 ---
@@ -315,10 +232,10 @@ hideInToc: true
 
 ::left::
 
-- Úkoly, které má účastník v prototypu udělat
-- Zadejte situaci a cíl, cestu ať najde sám
-- Raději méně úkolů a víc času pozorovat a ptát se
-- Scénář je lešení pro facilitátora
+- Úkoly, které má účastník pomocí prototypu provést
+- Zadejte situaci v níž se nachází a cíl, kterého mají dosáhnout
+- Raději zadejte méně úkolů a nechte si více času na pozorování a doptávání se
+- Scénář testování je pro vás klíčová pomůcka, abyste **nemuseli přemýšlet nad tím, co zrovna říkat a mohli se soustředit na poslouchání a pozorování**
 
 ::right::
 
@@ -332,57 +249,81 @@ hideInToc: true
 </style>
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "50-50"
 hideInToc: true
 ---
 
-# To, co dnes uděláte, je pilot
+# Pozvánka k testování
 
-- Pilotujte rozhovory i usability sezení, než s nimi půjdete ven
-- Na pilotu zjistíte, kde scénář drhne, kolik zabere času a jestli funguje technika
+::left::
+
+- Rozhodněte se jestli on-line nebo osobně
+  - On-line snazší logisticky, získáte však méně non-verbálních informací
+
+**Kde získávat lidi?**
+
+- Cold call, kamarád kamaráda, metoda "sněhové koule"
+- V B2B přes zákazníky a partnery
+- Placení účastníci
+- Facebookové skupiny, zájmové aktivity, nástěnky na univerzitě, ...
+
+::right::
+
+<div class="box">„Dávám vám možnost spolu-tvořit to, na čem pracuji, abyste z toho v budoucnu mohli mít užitek.“</div>
 
 <style>
-.heading-body { display: flex; flex-direction: column; justify-content: center; }
-h1 { margin-bottom: 0.45em !important; }
-li { margin-top: 0.5em; margin-bottom: 0.5em; }
+.col-left p { margin: 0.6em 0 0.2em; }
+.col-left li { margin: 0.2em 0; }
+.col-right { display: flex; align-items: center; }
+.col-right .box { margin: 0; }
 </style>
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "50-50"
 hideInToc: true
 ---
 
-# Než začnete: spojte test s discovery
+# Připravte se
 
-<svg viewBox="0 0 640 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rozhodovací diagram: krátký rozhovor, pak otázka, jestli účastník odpovídá profilu. Ne vede k discovery otázkám, ano vede k prototypu." class="flow">
-  <defs>
-    <marker id="fl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#0000dc" />
-    </marker>
-  </defs>
-  <g fill="none" stroke="#0000dc" stroke-width="3">
-    <rect x="200" y="5" width="240" height="54" rx="6" />
-    <path d="M320 92 L450 142 L320 192 L190 142 Z" fill="#eef4fb" />
-    <rect x="10" y="205" width="250" height="60" rx="6" />
-    <rect x="410" y="205" width="220" height="60" rx="6" fill="#0000dc" />
-    <path d="M320 59 L320 90" marker-end="url(#fl-arrow)" />
-    <path d="M190 142 L135 142 L135 203" marker-end="url(#fl-arrow)" />
-    <path d="M450 142 L520 142 L520 203" marker-end="url(#fl-arrow)" />
-  </g>
-  <g style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 22px" text-anchor="middle">
-    <text x="320" y="40">Krátký rozhovor</text>
-    <text x="320" y="149" style="font-weight: 700">Odpovídá profilu?</text>
-    <text x="160" y="132" style="font-size: 18px">Ne</text>
-    <text x="480" y="132" style="font-size: 18px">Ano</text>
-    <text x="135" y="231">Discovery otázky,</text>
-    <text x="135" y="255">nebo ušetřit čas</text>
-    <text x="520" y="242" fill="#fff" style="font-weight: 700">Ukázat prototyp</text>
-  </g>
-</svg>
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+Připravte všechno, co pro setkání potřebujete:
+
+<ul class="checklist">
+  <li>Prototyp, který chcete testovat</li>
+  <li>Připravený scénář testování</li>
+  <li>Potvrzení místa a času s účastníkem</li>
+</ul>
+
+<br>
+<h3>Doplňkové položky</h3>
+
+<ul class="checklist">
+<li>Zařízení pro nahrávání zvuku</li>
+  <li>Šablona na poznámky</li>
+  <li>Papírový souhlas s nahráváním</li>
+  <li>Dohoda o mlčenlivosti</li>
+</ul>
+
+
+::right::
+
+<img :src="asset + 'jarmilka-design-crit.jpg'" alt="Papírový prototyp asistenta Jarmilka s poznámkami k menu, krokům wizardu a ovládání" class="fit-img" />
+
+<div class="credit">Papírový prototyp pro testování</div>
 
 <style>
-h1 { margin-bottom: 0.4em !important; }
-.flow { width: 40rem; max-width: 100%; height: auto; display: block; margin: 0.4rem auto 0; }
+.col-left p { margin-bottom: 0.3em; }
+.col-right .fit-img { width: calc(100% + 1.75rem); max-width: none !important; }
+.checklist { list-style: none; padding-left: 0; margin: 0.2em 0 0; }
+.checklist li { position: relative; padding-left: 1.6em; margin: 0.3em 0; }
+.checklist li::before { content: ""; position: absolute; left: 0; top: 0.25em; width: 0.9em; height: 0.9em; border: 2px solid var(--muni-blue, #0000dc); border-radius: 0.15em; }
 </style>
 
 ---
@@ -391,7 +332,7 @@ ratio: "60-40"
 hideInToc: true
 ---
 
-# Jarmilka: usability studie
+# Think aloud protokol
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -399,25 +340,126 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-<div class="fields">
+- Do hlavy účastníkovi nevidíte, tak ho poprosíte, ať říká, co se v nich odehrává
+- Uslyšíte, jak rozhraní rozumí a jaký mu rozumí
+- Usability test je o tom pochopit, jak lidé rozumějí tomu, co jste vytvořili
+<br/>
+<br/>
+- *"Můžete se mnou nahlas sdílet co se ve vás u jednotlivých obrazovek odehrává?"*
 
-- **Iniciativa** – AI asistent, který lidem v těžké životní situaci pomůže najít sociální nebo zdravotní službu
-- **Co se testovalo** – papírový prototyp, šest navazujících úkolů, pět lidí z cílové skupiny, každý zvlášť
-- **Co jsem chtěl zjistit** – jestli lidé asistentem projdou a jak mu rozumějí
-- **Co jsem zjistil** – nejvíc problémů dělal přechod mezi prvním a druhým krokem
-- **Co to umožnilo** – po prvním a třetím testu jsem návrh upravil a poslední dva testy běžely na výrazně lepší verzi
+<div class="box">„Nerozumím textu v bublině Jarmilky. Pojem časová perspektiva je hodně abstraktní.“</div>
 
-</div>
+<div class="credit">Citát účastnice z testování</div>
 
 ::right::
 
-<img :src="asset + 'jarmilka-papirovy-prototyp.jpg'" alt="Papírový prototyp asistenta Jarmilka" class="fit-img" />
+<img :src="asset + 'krug-dont-make-me-think.jpg'" alt="Obálka knihy Steva Kruga Don't Make Me Think, Revisited" class="cover" />
 
-<div class="credit">Celá <a href="https://www.erikvanek.com/case-studies/jarmilka/uzivatelska-studie-Jarmilka.pdf">studie Jarmilka</a> (PDF)</div>
+<div class="credit">Kniha Steva Kruga o tom, jak lidé opravdu používají rozhraní, <a href="https://sensible.com/dont-make-me-think/">sensible.com</a></div>
+
+<style>
+.col-left li { margin: 0.35em 0; }
+.cover { max-height: 21rem; width: auto; max-width: 100%; display: block; }
+</style>
 
 ---
 layout: two-column
-ratio: "55-45"
+ratio: "45-55"
+hideInToc: true
+---
+
+# Spojení testování s výzkumem
+
+::left::
+
+- Lze spojit dohromady – obzvlášť když je náročné získat ty správné lidi
+- Úvodní rozhovor ověří profil účastníka
+- Pokud nesplňuje profil, můžete setkání zkrátit
+- Případně využít jako výzkumný rozhovor
+
+::right::
+
+<svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rozhodovací diagram: krátký rozhovor, pak otázka, jestli účastník odpovídá profilu. Ne vede k výzkumnému rozhovoru, nebo k ušetření času, ano vede k prototypu." class="flow">
+  <defs>
+    <marker id="fl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0000dc" />
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0000dc" stroke-width="3">
+    <rect x="120" y="5" width="220" height="54" rx="6" />
+    <path d="M230 94 L350 150 L230 206 L110 150 Z" fill="#eef4fb" />
+    <rect x="5" y="245" width="210" height="70" rx="6" />
+    <rect x="245" y="245" width="210" height="70" rx="6" fill="#0000dc" />
+    <path d="M230 59 L230 92" marker-end="url(#fl-arrow)" />
+    <path d="M110 150 L110 243" marker-end="url(#fl-arrow)" />
+    <path d="M350 150 L350 243" marker-end="url(#fl-arrow)" />
+  </g>
+  <g style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 21px" text-anchor="middle">
+    <text x="230" y="40">Krátký rozhovor</text>
+    <text x="230" y="157" style="font-weight: 700; font-size: 19px">Odpovídá profilu?</text>
+    <text x="96" y="200" text-anchor="end" style="font-size: 18px">Ne</text>
+    <text x="364" y="200" text-anchor="start" style="font-size: 18px">Ano</text>
+    <text x="110" y="274">Výzkumný rozhovor,</text>
+    <text x="110" y="300">nebo ušetřit čas</text>
+    <text x="350" y="287" fill="#fff" style="font-weight: 700">Ukázat prototyp</text>
+  </g>
+</svg>
+
+<style>
+.col-left li { margin: 0.45em 0; }
+.flow { width: 100%; height: auto; display: block; }
+</style>
+
+---
+layout: heading-body
+hideInToc: true
+title: Jarmilka - matice zjištění
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="matrix">
+<div class="overview">
+<div class="axis">Vysoký dopad na uživatelky</div>
+<div class="board">
+<img :src="asset + 'jarmilka-matice-celek.png'" alt="Celá matice zjištění ze studie Jarmilka, osy dopad na uživatelky a náročnost změny" />
+<span class="axis hard">Náročná<br/>změna</span>
+<span class="axis easy">Snadná<br/>změna</span>
+<img :src="asset + 'jarmilka-matice-shluky.svg'" alt="" class="loops on-overview" />
+</div>
+<div class="axis">Nízký dopad na uživatelky</div>
+</div>
+<div class="detail">
+<img :src="asset + 'jarmilka-matice-kvadrant.png'" alt="Detail kvadrantu s vysokým dopadem a snadnou změnou, čtyři shluky zjištění zakroužkované červeně" />
+<img :src="asset + 'jarmilka-matice-shluky.svg'" alt="" class="loops on-detail" />
+</div>
+</div>
+
+<style>
+.slidev-layout.heading-body { padding: 1rem 1.25rem 1.5rem; }
+.matrix { display: flex; gap: 1rem; align-items: center; justify-content: center; height: 100%; }
+.overview { flex: 1; min-width: 0; }
+.board, .detail { position: relative; }
+.board img, .detail img { display: block; }
+.board img { width: 100%; height: auto; }
+.detail { flex: none; }
+.detail img { height: 31rem; width: auto; }
+/* jarmilka-matice-shluky.svg is drawn in the detail shot's pixels (934x850) with 24px of room
+   around it; the overview shows the same quadrant at 0.51x, offset by (445, 16.4) of 924x876 */
+.board img.loops, .detail img.loops { position: absolute; max-width: none; }
+.loops.on-detail { left: -2.5696%; top: -2.8235%; width: 105.139%; height: 105.647%; }
+.loops.on-overview { left: 46.835%; top: 0.475%; width: 54.201%; height: 52.281%; }
+.axis { font-size: 0.8rem; font-weight: 700; color: #0000dc; text-align: center; line-height: 1.15; margin: 0.2em 0; }
+.board .axis { position: absolute; margin: 0; }
+.hard { left: 1%; top: 54%; text-align: left; }
+.easy { right: 0.5%; bottom: 51.5%; text-align: right; }
+</style>
+
+---
+layout: two-column
+ratio: "50-50"
 hideInToc: true
 ---
 
@@ -433,10 +475,10 @@ const asset = import.meta.env.BASE_URL
 2. Nejednotný a místy příliš technický jazyk
 3. Nesrozumitelná navigace mezi kroky
 4. Důvěryhodnost nástroje
+<br/>
+<br/>
 
 <div class="box">„Dostala jsem se do jinýho módu a nevím co se tady po mně chce, není vybudovaná důvěra takže mám strach psát citlivý věci.“</div>
-
-<div class="credit">Účastnice testu Jarmilky</div>
 
 ::right::
 
@@ -446,7 +488,7 @@ const asset = import.meta.env.BASE_URL
 
 <style>
 .col-left li { margin: 0.3em 0; }
-.page { height: 20rem; overflow: hidden; border: 1px solid #ddd; }
+.page { height: 22rem; overflow: hidden; border: 1px solid #ddd; }
 .page img { width: 100%; height: auto; display: block; }
 </style>
 
@@ -459,83 +501,21 @@ hideProgress: true
 # Máte teď nějaké dotazy?
 
 ---
-layout: two-column
-ratio: "40-60"
-hideInToc: true
----
-
-# Co vás při testování zajímá?
-
-::left::
-
-- Test s uživateli míří hlavně na **použitelnost**
-- Hodnotu, proveditelnost a životaschopnost přitom neztrácejte z očí
-- Na co se zeptáte, záleží na tom, co je u vašeho nápadu největší neznámá
-
-<div class="credit">Marty Cagan, <a href="https://www.svpg.com/four-big-risks/">Four Big Risks</a> (SVPG)</div>
-
-::right::
-
-<svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vennův diagram čtyř rizik produktu: hodnota, použitelnost, proveditelnost a životaschopnost, použitelnost je zvýrazněná" class="venn">
-  <circle cx="165" cy="240" r="120" fill="#0000dc" fill-opacity="0.85" />
-  <g fill="#4bc8ff" fill-opacity="0.18" stroke="#0000dc" stroke-width="3">
-    <circle cx="280" cy="125" r="120" />
-    <circle cx="395" cy="240" r="120" />
-    <circle cx="280" cy="355" r="120" />
-  </g>
-  <circle cx="165" cy="240" r="120" fill="none" stroke="#0000dc" stroke-width="3" />
-  <g style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 24px" text-anchor="middle">
-    <text x="145" y="248" fill="#fff" style="font-weight: 700">Použitelnost</text>
-    <text x="280" y="70">Hodnota</text>
-    <text x="415" y="248">Proveditelnost</text>
-    <text x="280" y="418">Životaschopnost</text>
-  </g>
-</svg>
-
-<style>
-.col-left li { margin: 0.45em 0; }
-.venn { width: 100%; max-height: 27rem; height: auto; display: block; }
-</style>
-
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
-
-# Příklad: kam se postavit na nástupišti
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-<div class="fields">
-
-- **Situace** – v aplikaci vidím, odkud mi vlak jede, ale nevím, kam se na nástupišti postavit, abych po příjezdu vlaku neběhal sem a tam
-- **Předpoklad** – nejistota na nástupišti přispívá ke zpoždění vlaků
-- **Otázka pro test** – pomůže nový návrh lidem se po příjezdu vlaku lépe zorientovat?
-
-</div>
-
-::right::
-
-<img :src="asset + 'vlak-razeni-viden.jpg'" alt="Displej řazení vlaku ve Vídni, ukazuje polohu každého vozu podél nástupiště" class="fit-img" />
-
-<div class="credit">Řazení vlaku ve Vídni, ze setkání 1</div>
-
----
 layout: groupwork
 hideInToc: true
 progressSection: true
 ---
 
-# Napište testovací scénář
+# Tvorba testovacího scénáře
 
-- **Celý tým**, výstup je scénář na jednu A4
-- Tři kroky: výzkumné otázky, úkoly, doplňující otázky a k tomu krátký úvod sezení
-- **Hned potom ho pilotně otestujete na jiném týmu**
+- **Celý tým**, výstup je scénář na jednen papír nebo digitálně
+- 4 kroky:
+  1. Výzkumné otázky
+  2. Úvod k setkání
+  3. Úkoly pro testující
+  4. Doplňující otázky 
+
+**Následně scénáře napříč týmy budete pilotně testovat**
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -549,22 +529,36 @@ hideInToc: true
 
 # 1 Výzkumné otázky
 
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="halves">
+<div>
+
 - Vezměte svůj zarámovaný problém a prototyp
 - Napište 1–3 otázky nebo předpoklady o lidech, na které má test odpovědět
 
 <div class="box">
-
-**Příklady**
 
 - Pomůže nový návrh lidem se po příjezdu vlaku lépe zorientovat?
 - Najdou lidé svůj sektor dřív, než vlak přijede?
 - Věří lidé údaji o sektoru natolik, aby se podle něj postavili?
 
 </div>
+</div>
+<div>
+<br/>
+<img :src="asset + 'vlak-razeni-viden.jpg'" alt="Displej řazení vlaku ve Vídni, ukazuje polohu každého vozu podél nástupiště" class="fit-img" />
+</div>
+</div>
 
 <style>
 li { margin-top: 0.3em; margin-bottom: 0.3em; }
-.box ul { margin: 0.2em 0 0; }
+.halves { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+.halves ul:first-child { margin-top: 0; }
+.halves .box { font-size: 0.85em; }
+.halves .box ul { margin: 0.2em 0 0.4em; }
 </style>
 
 ---
@@ -573,16 +567,34 @@ hideInToc: true
 # timer: 8   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
-# 2 Úkoly
+# Testovací úkoly
 
-- 2–3 úkoly, které účastníka provedou prototypem tak, aby ho viděl svýma očima
-- Zadejte situaci a cíl, cestu ať najde sám
+- 2–3 úkoly, které účastníka provedou prototypem
+- Zadejte situaci a cíl, kterého má dosáhnout
 
-<div class="box">„Máte místenku ve voze 7 a vlak přijede za pět minut. Ukažte mi, kam se na nástupišti postavíte.“</div>
+<div class="box tasks">
+
+1. „Zítra ráno jedete v 7:40 z Brna do Prahy. Zjistěte, ze které koleje vlak pojede.“
+2. „Máte místenku ve voze 7 a vlak přijede za pět minut. Ukažte mi, kam se na nástupišti postavíte.“
+3. „Jedete s kolem a místenku nemáte. Najděte, kde na nástupišti počkat, abyste to měli k vozu pro kola co nejblíž.“
+4. „Jedete z Olomouce do Hradce Králové a v Pardubicích máte na přestup šest minut. Připravte se tak, abyste ho stihli.“
+
+</div>
 
 <style>
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
+.tasks { font-size: 0.85em; }
+.tasks ol { margin: 0.2em 0; padding-left: 1.4em; }
+.tasks li { margin: 0.3em 0; }
 </style>
+
+<!--
+1 Rozjezd: najde účastník spojení a detail vlaku? Testuje základní navigaci.
+2 Jádro: použije údaj o poloze vozu bez nápovědy, kde ho hledat?
+3 Bez místenky: rozumí typům vozů a jejich poloze na nástupišti?
+4 Přestup pod tlakem: napadne ho sám vybrat vůz u schodů? Ukazuje, jestli funkci bere jako svou.
+-->
+
 
 ---
 layout: groupwork
@@ -637,7 +649,7 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 
 ---
 layout: two-column
-ratio: "55-45"
+ratio: "50-50"
 hideInToc: true
 progressSection: true
 ---
@@ -674,52 +686,7 @@ Obměny usability testu, o kterých je dobré vědět
 
 ---
 layout: two-column
-ratio: "60-40"
-hideInToc: true
----
-
-# Mapa výzkumných metod
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-<div class="map">
-  <img :src="asset + 'nngroup-mapa-vyzkumnych-metod.png'" alt="A Landscape of User Research Methods: dvacet metod na osách postoje a chování, kvalitativní a kvantitativní" />
-  <span class="ring" style="left:14.5%; top:27.5%; width:17.5%; height:6%"></span>
-  <span class="ring" style="left:76%; top:13.8%; width:12.6%; height:6%"></span>
-  <span class="ring" style="left:62%; top:23.3%; width:22.2%; height:6%"></span>
-  <span class="ring" style="left:41.2%; top:64.3%; width:24.6%; height:6%"></span>
-</div>
-
-<div class="credit">Mapa výzkumných metod. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">Christian Rohrer</a>, <a href="https://www.nngroup.com/">NN/g</a></div>
-
-::right::
-
-**Na mapě**
-
-- Usability testování
-- A/B testování
-- Benchmark, třeba se SUS
-- Tree testing
-
-**Mimo mapu**
-
-- RITE, heuristiky, fake door, five-second test
-
-<style>
-.map { position: relative; }
-.map img { width: 100%; height: auto; display: block; }
-.ring { position: absolute; border: 4px solid #e4002b; border-radius: 50%; box-sizing: border-box; }
-.col-right p { margin: 0.4em 0 0.1em; }
-.col-right li { margin: 0.15em 0; }
-</style>
-
----
-layout: two-column
-ratio: "55-45"
+ratio: "50-50"
 hideInToc: true
 ---
 
@@ -746,7 +713,7 @@ const asset = import.meta.env.BASE_URL
 
 <style>
 .col-left li { margin: 0.4em 0; }
-.page { height: 20rem; overflow: hidden; border: 1px solid #ddd; }
+.page { height: 22rem; overflow: hidden; border: 1px solid #ddd; }
 .page img { width: 100%; height: auto; display: block; }
 </style>
 
@@ -885,10 +852,6 @@ const asset = import.meta.env.BASE_URL
 
 <div class="credit">Český sen. Film <a href="https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_sen">Víta Klusáka a Filipa Remundy</a>, <a href="https://commons.wikimedia.org/wiki/File:%C4%8Cesk%C3%BD_sen_bou%C5%99e.jpg">Wikimedia Commons</a></div>
 
-<style>
-.col-header .box { margin: 0 0 1em; }
-</style>
-
 ---
 layout: two-column
 ratio: "55-45"
@@ -920,10 +883,10 @@ const asset = import.meta.env.BASE_URL
 </div>
 
 <style>
-.stack { position: relative; height: 20rem; }
-.stack img { position: absolute; width: 80%; height: auto; border: 1px solid #ccc; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
+.stack { position: relative; height: 22.5rem; }
+.stack img { position: absolute; width: 90%; height: auto; border: 1px solid #ccc; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
 .stack img:first-child { top: 0; left: 0; }
-.stack img:last-child { top: 7rem; right: 0; }
+.stack img:last-child { top: 7.9rem; right: 0; }
 </style>
 
 ---
@@ -960,13 +923,13 @@ const asset = import.meta.env.BASE_URL
 <div class="credit">Service blueprint návštěvy z kraje</div>
 
 <style>
-.shot { max-height: 10rem; width: auto; max-width: 100%; display: block; }
-.col-right .credit { margin: 0.3rem 0 0.7rem; }
+.shot { max-height: 10.6rem; width: auto; max-width: 100%; display: block; }
+.col-right .credit { margin: 0.3rem 0 0.5rem; }
 </style>
 
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "40-60"
 hideInToc: true
 ---
 
