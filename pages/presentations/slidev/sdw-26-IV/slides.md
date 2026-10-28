@@ -726,7 +726,7 @@ const asset = import.meta.env.BASE_URL
 
 <img :src="asset + 'rite-standard-vs-rite.png'" alt="Standardní test: nejdřív všichni účastníci, pak změny. Test RITE: po každém účastníkovi hned změny, třikrát za sebou" class="fit-img" />
 
-<div class="credit">RITE vymyslel kolektive z Microsoft Game Studios, diagram z <a href="https://helio.zurb.com/blog/speed-wins-mastering-product-design-with-rapid-iterative-testing/">blogu Helio</a> (Bryan Zmijewski)</div>
+<div class="credit">RITE vymyslel kolektiv z Microsoft Game Studios, diagram z <a href="https://helio.zurb.com/blog/speed-wins-mastering-product-design-with-rapid-iterative-testing/">blogu Helio</a> (Bryan Zmijewski)</div>
 
 <style>
 .col-left li { margin: 0.4em 0; }
@@ -781,6 +781,9 @@ const asset = import.meta.env.BASE_URL
 - Průměrné SUS skóre je kolem 68
 
 - Formulář např <a href="https://www.bentley.edu/centers/user-experience-center/what-every-client-should-know-about-sus-scores">zde</a>
+
+<div class="credit">Dotazník SUS <a href="https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html">Johna Brooka</a> ve verzi Bangora, Kortuma a Millera, <a href="https://www.bentley.edu/centers/user-experience-center/what-every-client-should-know-about-sus-scores">Bentley University</a></div>
+
 ::right::
 
 <img :src="asset + 'sus-formular.png'" alt="Tištěný dotazník SUS: deset anglických výroků, u každého škála od 1, rozhodně nesouhlasím, po 5, rozhodně souhlasím" class="form" />
