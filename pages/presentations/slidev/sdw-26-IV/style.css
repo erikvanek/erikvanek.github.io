@@ -1,0 +1,71 @@
+/*
+  Čitelnost z poslední řady. Místnost je dlouhá asi 8 m, plátno měří zhruba 3 x 2 m,
+  takže plátno 980 px široké (plátno Slidevu) dává 3 mm na pixel. Slidev základně
+  sází text na 1,1 rem (17,6 px), tedy velká písmena vysoká asi 38 mm, což je
+  1:210 vzdálenosti poslední řady. Cíl je 1:170 a lepší, tedy od 22 px výš.
+  Základ se mění tady na jednom místě, odrážky a popisky se škálují v em.
+*/
+.slidev-layout.slidev-layout {
+  font-size: 1.4rem;
+}
+
+/* Slidev sází odstavce a odrážky s řádkováním kolem 2, což u větší písma žere výšku
+   slidu. 1,4 vrátí asi třetinu výšky a čte se pořád dobře. */
+.slidev-layout p,
+.slidev-layout li {
+  line-height: 1.4;
+}
+
+/* Pevné rem velikosti v motivu, které se se základem neškálují */
+.slidev-layout.break p {
+  font-size: 1.8rem !important;
+}
+.groupwork-eyebrow,
+.homework-eyebrow {
+  font-size: 1.1rem !important;
+}
+
+/* Otázka na slidech SCAMPER ve stejné krabici jako šablona Jak bychom mohli, jen tučně */
+.ask {
+  font-weight: 700;
+  line-height: 1.8;
+  margin: 0.4em 0 0.8em;
+  padding: 0.5em 1em;
+  background: #eef4fb;
+  border-left: 4px solid var(--muni-arts-blue, #4bc8ff);
+}
+
+/* Společné prvky decku IV */
+
+/* Kredit pod obrázkem nebo pod textem, 0,68 em je kolem 15 px */
+.credit {
+  font-size: 0.68em;
+  opacity: 0.62;
+  margin-top: 0.6rem;
+  line-height: 1.35;
+}
+
+/* Nadpis pracovních slidů stejně jako v decku III */
+.groupwork h1 {
+  font-size: 1.9rem !important;
+  margin-bottom: 0.5em !important;
+}
+
+/* Rámeček pro příklad, citát nebo šablonu, stejný jako .ask a .tpl v decku III */
+.box {
+  margin: 0.8em 0 0;
+  padding: 0.5em 1em;
+  background: #eef4fb;
+  border-left: 4px solid var(--muni-arts-blue, #4bc8ff);
+  line-height: 1.4;
+}
+.box p { margin: 0.2em 0; }
+
+/* Pět polí příkladu z praxe: iniciativa, co se testovalo, co jsme chtěli zjistit, co jsme zjistili, co to umožnilo */
+.fields ul { list-style: none; padding-left: 0; margin: 0; }
+.fields li { margin: 0 0 0.45em; padding-left: 0; }
+.fields li::before { content: none; }
+.fields strong { color: var(--muni-blue, #0000dc); }
+
+/* Obrázek přes celý sloupec */
+.fit-img { width: 100%; height: auto; display: block; }
