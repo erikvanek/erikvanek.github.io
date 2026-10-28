@@ -1027,7 +1027,7 @@ layout: homework
 hideInToc: true
 ---
 
-# Uživatelské testování do 12. 11.
+# Uživatelské testování do 25. 11.
 
 - Otestujte svůj prototyp s **aspoň pěti lidmi** z cílové skupiny
 - Každé sezení si ideálně nahrajte a přepište
