@@ -95,13 +95,14 @@ const asset = import.meta.env.BASE_URL
 
 <div class="figure">
 <div class="map">
-  <img :src="asset + 'nngroup-mapa-vyzkumnych-metod.png'" alt="A Landscape of User Research Methods: dvacet metod na osách postoje a chování, kvalitativní a kvantitativní, s doplněnými metodami RITE, fake door a five-second test" />
+  <img :src="asset + 'nngroup-mapa-vyzkumnych-metod.png'" alt="A Landscape of User Research Methods: dvacet metod na osách postoje a chování, kvalitativní a kvantitativní, s doplněnými metodami RITE, fake door, SUS, heuristická evaluace a simulace služby" />
   <span class="ring" style="left:14.5%; top:27.5%; width:17.5%; height:6%"></span>
   <span class="ring" style="left:76%; top:13.8%; width:12.6%; height:6%"></span>
-  <span class="ring" style="left:41.2%; top:64.3%; width:24.6%; height:6%"></span>
   <span class="add" style="left:15.5%; top:34.6%"><i class="mk square"></i><b>RITE</b></span>
   <span class="add" style="left:76.6%; top:32%"><i class="mk circle"></i><b>Fake door</b></span>
-  <span class="add" style="left:62.8%; top:53.5%"><i class="mk diamond"></i><b>Five-second test</b></span>
+  <span class="add" style="left:76.6%; top:66.5%"><i class="mk square"></i><b>SUS</b></span>
+  <span class="add" style="left:41.6%; top:34%"><i class="mk square"></i><b>Heuristic evaluation</b></span>
+  <span class="add" style="left:15.5%; top:16%"><i class="mk circle"></i><b>Service simulation</b></span>
 </div>
 <div class="credit">Mapa výzkumných metod. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">Christian Rohrer</a>, <a href="https://www.nngroup.com/">NN/g</a>, modré štítky jsou doplněné</div>
 </div>
@@ -114,11 +115,10 @@ const asset = import.meta.env.BASE_URL
 .ring { position: absolute; border: 4px solid #e4002b; border-radius: 50%; box-sizing: border-box; }
 .add { position: absolute; display: flex; align-items: center; gap: 0.6cqw; font-size: 2.1cqw; white-space: nowrap; }
 .add b { font-weight: 700; line-height: 1.3; color: #fff; background: var(--muni-blue, #0000dc); padding: 0.15em 0.5em; border-radius: 0.25em; }
-/* Značky podle legendy mapy: kruh přirozené použití, čtverec použití podle scénáře, kosočtverec omezená podoba produktu */
+/* Značky podle legendy mapy: kruh přirozené použití, čtverec použití podle scénáře */
 .mk { flex: none; width: 1.6cqw; height: 1.6cqw; box-sizing: border-box; border: 1px solid rgb(0 0 0 / 0.3); }
 .mk.circle { background: #99cc00; border-radius: 50%; }
 .mk.square { background: #ff6666; }
-.mk.diamond { background: #0099cc; transform: rotate(45deg) scale(0.85); }
 </style>
 
 ---
@@ -232,8 +232,9 @@ hideInToc: true
 
 ::left::
 
-- Úkoly, které má účastník pomocí prototypu provést
-- Zadejte situaci v níž se nachází a cíl, kterého mají dosáhnout
+- Na začátek rozehřívací otázka nebo nedávný zážitek, který s prototypem souvisí
+- Úkoly, které má účastník s prototypem splnit
+- Zadejte situaci v níž se nachází a cíl, kterého má dosáhnout
 - Raději zadejte méně úkolů a nechte si více času na pozorování a doptávání se
 - Scénář testování je pro vás klíčová pomůcka, abyste **nemuseli přemýšlet nad tím, co zrovna říkat a mohli se soustředit na poslouchání a pozorování**
 
@@ -345,11 +346,9 @@ const asset = import.meta.env.BASE_URL
 - Usability test je o tom pochopit, jak lidé rozumějí tomu, co jste vytvořili
 <br/>
 <br/>
-- *"Můžete se mnou nahlas sdílet co se ve vás u jednotlivých obrazovek odehrává?"*
 
-<div class="box">„Nerozumím textu v bublině Jarmilky. Pojem časová perspektiva je hodně abstraktní.“</div>
+<div class="box">"Můžete se mnou nahlas sdílet co se ve vás u jednotlivých obrazovek odehrává?"</div>
 
-<div class="credit">Citát účastnice z testování</div>
 
 ::right::
 
@@ -508,7 +507,7 @@ progressSection: true
 
 # Tvorba testovacího scénáře
 
-- **Celý tým**, výstup je scénář na jednen papír nebo digitálně
+- **Celý tým**, výstup je scénář na jeden papír nebo digitálně
 - 4 kroky:
   1. Výzkumné otázky
   2. Úvod k setkání
@@ -536,8 +535,8 @@ const asset = import.meta.env.BASE_URL
 <div class="halves">
 <div>
 
-- Vezměte svůj zarámovaný problém a prototyp
-- Napište 1–3 otázky nebo předpoklady o lidech, na které má test odpovědět
+- Vraťte se k zarámovanému problému a ke svým prototypům
+- Formulujte 1–3 otázky či předpoklady o lidech, na které má test odpovědět
 
 <div class="box">
 
@@ -549,7 +548,8 @@ const asset = import.meta.env.BASE_URL
 </div>
 <div>
 <br/>
-<img :src="asset + 'vlak-razeni-viden.jpg'" alt="Displej řazení vlaku ve Vídni, ukazuje polohu každého vozu podél nástupiště" class="fit-img" />
+<img :src="asset + 'vlak-razeni-viden-rovne.jpg'" alt="Displej řazení vlaku ve Vídni, ukazuje polohu každého vozu podél nástupiště" class="fit-img" />
+
 </div>
 </div>
 
@@ -561,23 +561,48 @@ li { margin-top: 0.3em; margin-bottom: 0.3em; }
 .halves .box ul { margin: 0.2em 0 0.4em; }
 </style>
 
+<!--
+Otázky jsou pro tým, účastník je neuslyší. Kdo se ho zeptá přímo „Věříte údaji o sektoru?“, dostane zdvořilou odpověď místo chování (Erika Hall: Research questions are not interview questions).
+-->
+
+---
+layout: groupwork
+hideInToc: true
+# timer: 3   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
+---
+
+# 2 Úvod k setkání
+
+
+<div class="box intro">„Díky, že jste si na nás udělali čas. <br/><br/>Zkoušíme návrh aplikace, která ukazuje, kde na nástupišti zastaví který vůz. Dám vám pár úkolů a budu sledovat, jak se vám s ním pracuje. <br/><br/> Během setkání testujeme prototyp, ne vás. Pokud něco nefunguje – je to nejspíše chyba návrhu.<br/><br/> Velmi nám pomůže pokud budete nahlas sdílet, co si u jednotlivých obrazovek myslíte. Nebojte se kdykoli zeptat nebo setkání v případě potřeby ukončit. <br/><br/>Mohli bychom si setkání nahrát? Je to jen pro naše interní potřeby.“</div>
+
+- Následně můžete navázat "rozehřívací" otázku, třeba „Řekněte mi o své poslední cestě vlakem.“
+
+
+<style>
+li { margin-top: 0.4em; margin-bottom: 0.4em; }
+.intro { font-size: 0.85em; }
+</style>
+
 ---
 layout: groupwork
 hideInToc: true
 # timer: 8   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
-# Testovací úkoly
+# 3 Úkoly pro testující
 
-- 2–3 úkoly, které účastníka provedou prototypem
-- Zadejte situaci a cíl, kterého má dosáhnout
+- Úkoly, které účastníka provedou prototypem
+  - Pro potřeby cvičení stačí 2-3
+- Zadejte situaci a cíl, cestu k němu nechte na účastníkovi
+- Nepoužívejte názvy tlačítek a obrazovek
+- Každý úkol si v prototypu projděte sami, ať víte, že jde dokončit
 
 <div class="box tasks">
 
-1. „Zítra ráno jedete v 7:40 z Brna do Prahy. Zjistěte, ze které koleje vlak pojede.“
-2. „Máte místenku ve voze 7 a vlak přijede za pět minut. Ukažte mi, kam se na nástupišti postavíte.“
-3. „Jedete s kolem a místenku nemáte. Najděte, kde na nástupišti počkat, abyste to měli k vozu pro kola co nejblíž.“
-4. „Jedete z Olomouce do Hradce Králové a v Pardubicích máte na přestup šest minut. Připravte se tak, abyste ho stihli.“
+1. „Máte místenku do vozu 7, vlak přijede za pět minut. Ukažte, kam se postavíte.“
+2. „Jedete s kolem bez místenky. Najděte, kde počkat, abyste byli co nejblíž vozu pro kola.“
+3. „Jedete z Olomouce a v Pardubicích máte na přestup šest minut. Připravte se, ať ho stihnete.“
 
 </div>
 
@@ -589,10 +614,9 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
 <!--
-1 Rozjezd: najde účastník spojení a detail vlaku? Testuje základní navigaci.
-2 Jádro: použije údaj o poloze vozu bez nápovědy, kde ho hledat?
-3 Bez místenky: rozumí typům vozů a jejich poloze na nástupišti?
-4 Přestup pod tlakem: napadne ho sám vybrat vůz u schodů? Ukazuje, jestli funkci bere jako svou.
+1 Jádro: použije účastník údaj o poloze vozu bez nápovědy, kde ho hledat?
+2 Bez místenky: rozumí typům vozů a jejich poloze na nástupišti?
+3 Přestup pod tlakem: napadne ho sám vybrat vůz u schodů? Ukazuje, jestli funkci bere jako svou.
 -->
 
 
@@ -602,14 +626,26 @@ hideInToc: true
 # timer: 5   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
-# 3 Doplňující otázky a úvod
+# 4 Doplňující otázky
 
 - 2–3 otázky na konec, které vám pomůžou pochopit účastníka a jeho kontext
-- Nakonec třeba kouzelná hůlka: „Kdyby aplikace na nástupišti uměla cokoli, co by to bylo?“
-- Pár bodů úvodu: kdo jste, ať mluví nahlas, „testujeme prototyp, ne vás“
+- Ptejte se otevřeně na to, co už zažil, a nenaznačujte odpověď
+- Moje oblíbená otázka na závěr
+  - *"Nezapomněli jsme během testování otevřít nějaké důležité téma, které se týká (orientace na nástupišti, nákupu jízdenek, cestování vlakem obecně, ...)?"*
+
+<div class="box follow">
+
+- „Kdy jste naposledy na nástupišti hledali svůj vůz? Jak to dopadlo?“
+- „Jak dnes poznáte, kam se postavit?“
+- „Kdyby aplikace na nástupišti uměla cokoli, co by to bylo?“
+
+</div>
 
 <style>
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
+.follow { font-size: 0.85em; }
+.follow ul { margin: 0.2em 0; padding-left: 1.4em; }
+.follow li { margin: 0.3em 0; }
 </style>
 
 ---
@@ -619,14 +655,15 @@ progressSection: true
 # timer: [8, 8]   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
-# Pilot: tým testuje tým
-
-- **Dvojice týmů**, otestujete se navzájem
-- Druhý tým vám půjčí **jednoho účastníka**
-- U vás **facilitátor** vede sezení podle scénáře a **zapisovatel** píše, co účastník dělá a říká
-- Ostatní se dívají a mlčí
-- Pak se týmy prohodí
-
+# Pilotní testování
+- vytvořte dojice / trojice napříč týmy
+  - pokud jste dnes v týmu 3, rozdělte se na 1 a 2 osoby
+- ideálně máme co nejvíce 1:1 dvojic napříč týmy
+- v každé dvojici:
+  - prvních 10 minut testování prototypu prvního týmu dle scénáře
+  - druhých 10 minut – prohodíte se a testujete druhý prototyp
+- dělejte si při testování poznámky!
+- následně zpátky do svých týmů
 <style>
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
@@ -641,48 +678,29 @@ hideInToc: true
 
 - Co účastník udělal jinak, než jste čekali?
 - Co změníte ve scénáři?
-- Co změníte v prototypu, než s ním půjdete ven?
+- Co změníte v prototypu, než s ním půjdete za svými uživateli?
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 ---
-layout: two-column
-ratio: "50-50"
+layout: section-break
 hideInToc: true
 progressSection: true
 ---
 
 # Co jste zjistili?
 
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-- Za každý tým jeden člověk: jedna věc, kterou jste viděli, a co s ní uděláte
-- Zjištění pak seřaďte podle dopadu a úsilí, jako minule nápady
-- Pořádnou syntézu uděláte doma
-
-::right::
-
-<img :src="asset + 'jarmilka-prioritizace.jpg'" alt="Papíry a lepicí lístky s otázkou, jaký je nejmenší workflow s nejméně rozptýlením" class="fit-img" />
-
-<div class="credit">Jarmilka: co patří do nejmenšího workflow</div>
-
-<style>
-.col-left li { margin: 0.5em 0; }
-</style>
+<!--
+Odkázat zpátky na matici Jarmilky: zjištění se třídí podle dopadu a náročnosti změny stejně jako minule nápady. Pořádnou syntézu udělají doma.
+-->
 
 ---
 layout: section-break
 ---
 
 # Další evaluační metody
-
-Obměny usability testu, o kterých je dobré vědět
 
 ---
 layout: two-column
@@ -699,95 +717,134 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 - **Rapid Iterative Testing and Evaluation**
-- Prototyp opravujete hned mezi sezeními, jakmile je problém jasný
-- Po dnešním pilotu můžete prototyp malou i velkou úpravou opravit, než s ním půjdete ven
-- Jak AI iteraci zrychluje, uvidíme příště
-
-<div class="credit">Postup RITE popisuje třeba <a href="https://handbook.gitlab.com/handbook/product/ux/ux-research/rite/">GitLab Handbook</a></div>
+- Prototyp opravujete hned mezi sezeními když víte jaký problém je potřeba upravit
+- Po dnešním pilotu můžete prototyp opravit, než s ním půjdete ven
+- Postup RITE popisuje třeba <a href="https://handbook.gitlab.com/handbook/product/ux/ux-research/rite/">GitLab Handbook</a>
+- Rétorická otázka – "Co je vlastně iterace?"
 
 ::right::
 
-<div class="page"><img :src="asset + 'jarmilka-studie-overeni-navrhu.jpg'" alt="Strana studie Jarmilka: testování s pěti lidmi, změny návrhu po prvním a třetím testu" /></div>
+<img :src="asset + 'rite-standard-vs-rite.png'" alt="Standardní test: nejdřív všichni účastníci, pak změny. Test RITE: po každém účastníkovi hned změny, třikrát za sebou" class="fit-img" />
 
-<div class="credit">Jarmilka: změny po prvním a třetím testu, strana 9 <a href="https://www.erikvanek.com/case-studies/jarmilka/uzivatelska-studie-Jarmilka.pdf">studie</a></div>
+<div class="credit">RITE vymyslel kolektive z Microsoft Game Studios, diagram z <a href="https://helio.zurb.com/blog/speed-wins-mastering-product-design-with-rapid-iterative-testing/">blogu Helio</a> (Bryan Zmijewski)</div>
 
 <style>
 .col-left li { margin: 0.4em 0; }
-.page { height: 22rem; overflow: hidden; border: 1px solid #ddd; }
-.page img { width: 100%; height: auto; display: block; }
 </style>
 
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "55-45"
 hideInToc: true
 ---
 
-# Testovat se dá i dlouhý text
+# A/B/n testování
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
 ::left::
 
-**Metodická příručka SDS**
-
-Obsah dlouhého dokumentu jsme testovali ve třech kolech.
+- Dvě a víc variant produktu, každý uživatel vidí jen jednu z nich
+- V živém produktu měříte chování, třeba kolik lidí dokončí objednávku
+- Předem si určete jednu metriku, podle které vítěze poznáte
+- Kvantitativní metoda, ideálně v "živých" systémech
 
 ::right::
 
-**Metodika ze Sovie**
+<img :src="asset + 'abn-testovani-magnolia.png'" alt="Varianty A, B a N stejné stránky, každou vidí jiná část publika" class="fit-img" />
 
-Nástroje pro pracovníky služeb a předpenitenciární péči jsme upravovali podle zpětné vazby, zhruba podle RITE.
+<div class="credit">Diagram z dokumentace <a href="https://docs.magnolia-cms.com/product-docs/6.2/special-features/abn-testing/">Magnolia CMS</a></div>
 
 <style>
-.col-left p, .col-right p { margin-top: 0.4em; }
+.col-left li { margin: 0.4em 0; }
 </style>
 
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "46-54"
 hideInToc: true
 ---
 
-# A/B/n testování a SUS
+# System Usability Scale (SUS)
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
 ::left::
-
-**A/B/n testování**
-
-- Dvě a víc variant téhož, každý člověk dostane jednu
-- V živém produktu měříte chování, třeba kolik lidí dokončí objednávku
-- V malém testu vidí každý obě varianty, polovina nejdřív A, druhá nejdřív B
-
-::right::
-
-**System Usability Scale (SUS)**
 
 - Deset výroků, odpovědi na škále 1–5, skóre 0–100
-- Kvantitativní, s pár lidmi ale jen orientační
-- Hodí se na srovnání staré a nové verze
+- Kvantitativní, ale lze indikativně využít např. spojením s uživatelským testováním
+- Vyplňte ihned hned po testu, ještě před rozhovorem
+- Průměrné SUS skóre je kolem 68
 
-<div class="credit">System Usability Scale. <a href="https://web.archive.org/web/20250126084800/https://uxpajournal.org/sus-a-retrospective/">John Brooke</a></div>
+- Formulář např <a href="https://www.bentley.edu/centers/user-experience-center/what-every-client-should-know-about-sus-scores">zde</a>
+::right::
+
+<img :src="asset + 'sus-formular.png'" alt="Tištěný dotazník SUS: deset anglických výroků, u každého škála od 1, rozhodně nesouhlasím, po 5, rozhodně souhlasím" class="form" />
 
 <style>
-.col-left p, .col-right p { margin-bottom: 0.2em; }
-.col-left li, .col-right li { margin: 0.3em 0; }
+.col-left li { margin: 0.4em 0; }
+.form { display: block; max-height: 25rem; width: auto; max-width: 100%; margin-left: auto; }
 </style>
 
 ---
 layout: heading-body
 hideInToc: true
+title: Sovia - varianty A a B dopisu
 ---
 
-# Sovia: A/B test dopisu se SUS
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
-<div class="fields">
-
-- **Iniciativa** – Sovia, podpora lidí mezi odsouzením a nástupem do výkonu trestu
-- **Co se testovalo** – úřední dopis Výzva k nástupu výkonu trestu, platné znění (A) a přepsaná verze (B)
-- **Co jsme chtěli zjistit** – jestli přepsanému dopisu lidé rozumějí líp
-- **Jak** – každý účastník četl obě verze, pořadí se střídalo, po každé verzi vyplnil SUS
-- **Co zatím vidíme** – přepsaná verze vychází lépe u většiny účastníků
-
+<div class="letters">
+<img :src="asset + 'sovia-vyzva-varianta-a.png'" alt="Varianta A: platné znění Výzvy k nastoupení k trestu, hutný úřední text" />
+<img :src="asset + 'sovia-vyzva-varianta-b.png'" alt="Varianta B: přepsaná Výzva s vytaženým kdy a kde, s oddílem co se stane, když nenastoupíte, a s kontakty na pomoc" />
 </div>
+
+<style>
+.letters { display: flex; justify-content: center; gap: 2rem; }
+.letters img { height: 29.5rem; width: auto; border: 1px solid #ddd; box-shadow: 0 2px 10px rgba(0, 0, 40, 0.08); }
+</style>
+
+<!--
+Iniciativa: Sovia, podpora lidí mezi odsouzením a nástupem do výkonu trestu.
+Co se testovalo: úřední dopis Výzva k nástupu výkonu trestu, platné znění (A) a přepsaná verze (B).
+Co jsme chtěli zjistit: jestli přepsanému dopisu lidé rozumějí líp.
+Jak: každý účastník četl obě verze, pořadí se střídalo, po každé verzi vyplnil SUS.
+Co zatím vidíme: přepsaná verze vychází lépe u většiny účastníků.
+-->
+
+---
+layout: two-column
+ratio: "36-64"
+hideInToc: true
+---
+
+# Výsledky "SUS" dotazníku
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+- SUS dotazník upravený pro potřeby projektu
+  - otázky na srozumitelnost a obsah textu
+- Každý pruh jsou odpovědi každého ze 7 účastníků
+- Největší rozdíl je u výroků 5–8 a 10
+- Indikativní výsledek, nelze říct že je druhá varianta jasně lepší
+
+::right::
+
+<img :src="asset + 'sovia-ab-test-vyroky.png'" alt="Odpovědi sedmi účastníků na deset výroků o dopisu, verze A vlevo a B vpravo, na škále od rozhodně nesouhlasím po rozhodně souhlasím" class="chart" />
+
+<style>
+.col-left li { margin: 0.5em 0; }
+.chart { display: block; max-height: 25rem; width: auto; max-width: 100%; margin-left: auto; }
+</style>
 
 ---
 layout: two-column
@@ -801,9 +858,10 @@ hideInToc: true
 
 - Levná evaluace, kterou zvládnete i bez uživatelů
 - Projdete rozhraní podle deseti pravidel a zapíšete, kde je porušuje
+- Můžete používat třeba jako checklist
+- Nálezy seřaďte podle závažnosti
 - S uživateli je to lepší
-
-<div class="credit">Deset heuristik <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Jakoba Nielsena</a>, <a href="https://www.nngroup.com/">NN/g</a></div>
+- Heuristiky s příklady popisuje <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Jakob Nielsen na NN/g</a>
 
 ::right::
 
@@ -827,105 +885,142 @@ hideInToc: true
 </style>
 
 ---
+layout: full-image
+image: /cesky-sen-utek.jpg
+dim: false
+credit: "Foto dafilms.cz"
+hideInToc: true
+title: Nejlepší fake door test vůbec
+---
+
+<div v-click class="film">Český sen, 2004, Vít Klusák a Filip Remunda</div>
+
+<style>
+.film { display: inline-block; margin-bottom: 1.2rem; padding: 0.45rem 1rem; background: rgba(0, 0, 30, 0.75); color: #fff; font-size: 1.5rem; font-weight: 700; }
+</style>
+
+<!--
+Fake door test: nabídnete něco, co ještě neexistuje, a měříte, kolik lidí o to stojí.
+Zdroj fotky: https://dafilms.cz/film/7187-cesky-sen
+-->
+
+---
+layout: full-image
+image: /cesky-sen-otevreni.jpg
+dim: false
+credit: "Foto iDNES.cz"
+hideInToc: true
+title: Český sen - dav na otevření hypermarketu
+---
+
+<!--
+Na otevření neexistujícího hypermarketu přišly až čtyři tisíce lidí.
+Zdroj fotky: Český sen slaví úspěchy ve světě, iDNES.cz, 18. 5. 2005, https://www.idnes.cz/kultura/film-televize/cesky-sen-slavi-uspechy-ve-svete.A050518_154018_filmvideo_ton
+-->
+
+---
+layout: full-image
+image: /cesky-sen-boure.jpg
+dim: false
+credit: "Záběr z filmu, Hypermarket Film, přes Wikimedia Commons"
+hideInToc: true
+title: Český sen - fasáda hypermarketu v bouři
+---
+
+<!--
+Fasáda hypermarketu byla jen plachta napnutá na lešení.
+Zdroj: https://commons.wikimedia.org/wiki/File:Český_sen_bouře.jpg, z hesla https://cs.wikipedia.org/wiki/Český_sen, licenci drží Hypermarket Film.
+-->
+
+---
 layout: two-column
-ratio: "50-50"
+ratio: "62-38"
 hideInToc: true
 ---
 
-# Nejlepší fake door test vůbec
+# Fake door test
 
-<div class="box"><strong>Fake door test:</strong> nabídnete něco, co ještě neexistuje, a měříte, kolik lidí o to stojí</div>
+::left::
+
+- Nabídnete něco, co ještě neexistuje
+- Kdo o to projeví zájem, dozví se, že jde o test
+- Počítáte, kolik lidí o nabídku stojí
+- Zájem ověříte dřív, než cokoli postavíte
+- Ve videu je stránka Sousedských dětských skupin, po kliknutí se ukáže poděkování a pár otázek
+
+::right::
+
+<SlidevVideo autoplay autoreset="slide" controls muted playsinline class="vid">
+  <source src="https://www.erikvanek.com/videos/sds-fake-door-compressed.mp4" type="video/mp4" />
+</SlidevVideo>
+
+<style>
+.col-left li { margin: 0.5em 0; }
+.vid { display: block; height: 26rem; width: auto; margin: 0 auto; border: 1px solid #ccc; }
+</style>
+
+---
+layout: heading-body
+hideInToc: true
+title: Fake door test SDS ve dvou fidelitách
+---
 
 <script setup>
 const asset = import.meta.env.BASE_URL
 </script>
-
-::left::
-
-<img :src="asset + 'cesky-sen-davy.jpg'" alt="Dav lidí jde k fasádě hypermarketu Český sen" class="fit-img" />
-
-<div class="credit">Český sen. Film <a href="https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_sen">Víta Klusáka a Filipa Remundy</a>, <a href="https://commons.wikimedia.org/wiki/File:%C4%8Cesk%C3%BD_sen_davy.jpg">Wikimedia Commons</a></div>
-
-::right::
-
-<img :src="asset + 'cesky-sen-fasada.jpg'" alt="Fasáda hypermarketu na lešení, za ní tráva a bouřková obloha" class="fit-img" />
-
-<div class="credit">Český sen. Film <a href="https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%BD_sen">Víta Klusáka a Filipa Remundy</a>, <a href="https://commons.wikimedia.org/wiki/File:%C4%8Cesk%C3%BD_sen_bou%C5%99e.jpg">Wikimedia Commons</a></div>
-
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
-
-# Fake door test: Sousedské dětské skupiny
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-<div class="fields">
-
-- **Iniciativa** – Sousedské dětské skupiny, nová služba domácí péče o malé děti, pilot s MPSV
-- **Co se testovalo** – web služby, která ještě neexistovala, ve dvou verzích: pro pečující a pro rodiče
-- **Co jsme chtěli zjistit** – jestli o službu stojí lidé, kteří by ji provozovali, i rodiče
-- **Co jsme zjistili** – o domácí péči je velký zájem, hlavně u rodičů dětí se specifickými potřebami
-
-</div>
-
-::right::
 
 <div class="stack">
-  <img :src="asset + 'sds-fake-door-pecujici.png'" alt="Landing page Sousedských dětských skupin pro pečující" />
-  <img :src="asset + 'sds-fake-door-rodice.png'" alt="Landing page Sousedských dětských skupin pro rodiče" />
+  <img :src="asset + 'sds-fake-door-lofi.png'" alt="Lo-fi verze: prostá stránka Sousedských dětských skupin s upozorněním, že jde o test nabídky" class="back" />
+  <img :src="asset + 'sds-fake-door-hifi.jpg'" alt="Hi-fi verze: stránka Sousedských dětských skupin v podobě webu MPSV" class="front" />
 </div>
 
 <style>
-.stack { position: relative; height: 22.5rem; }
-.stack img { position: absolute; width: 90%; height: auto; border: 1px solid #ccc; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
-.stack img:first-child { top: 0; left: 0; }
-.stack img:last-child { top: 7.9rem; right: 0; }
+.stack { position: relative; height: 30.5rem; }
+.stack img { position: absolute; height: 26rem; width: auto; border: 1px solid #ccc; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
+.stack .back { top: 0; left: 14%; }
+.stack .front { top: 4.5rem; left: 43%; }
 </style>
 
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
+<!--
+Iniciativa: Sousedské dětské skupiny, nová služba domácí péče o malé děti, pilot s MPSV.
+Co se testovalo: web služby, která ještě neexistovala, ve dvou verzích: pro pečující a pro rodiče.
+Co jsme chtěli zjistit: jestli o službu stojí lidé, kteří by ji provozovali, i rodiče.
+Co jsme zjistili: o domácí péči je velký zájem, hlavně u rodičů dětí se specifickými potřebami.
+Vlevo lo-fi verze na erikvanek.com/sds, vpravo hi-fi v podobě webu MPSV.
+-->
 
-# Simulace služby: inkubátor SDS
+---
+layout: heading-body
+hideInToc: true
+title: Simulace služby - inkubátor SDS
+---
 
 <script setup>
 const asset = import.meta.env.BASE_URL
 </script>
 
-::left::
-
-<div class="fields">
-
-- **Co se testovalo** – celá služba v pískovišti: půl roku pilotního provozu s pečujícími a rodinami, než služba oficiálně existovala, včetně adaptace nových dětí v domácí péči
-- **Co jsme chtěli zjistit** – jestli služba odpovídá potřebám klientů i systému, než se uzákoní
-- **Co jsme zjistili** – několik úzkých hrdel, která je potřeba vyřešit, aby služba měla šanci uspět
-- **Co to umožnilo** – doporučení pro klíčové aktéry včetně náměstka ministra
-
+<div class="stack">
+  <img :src="asset + 'sds-blueprint-navsteva.png'" alt="Service blueprint návštěvy z kraje v pilotu Sousedských dětských skupin" class="back" />
+  <img :src="asset + 'sds-inkubator-ct24.jpg'" alt="Snímek z reportáže Událostí o testovacím provozu sousedského hlídání" class="front" />
+  <div class="credit">Reportáž <a href="https://ct24.ceskatelevize.cz/clanek/domaci/sousedske-hlidani-se-v-pilotnim-projektu-podle-ministerstva-osvedcilo-354955">Událostí ČT24</a></div>
 </div>
 
-::right::
-
-<img :src="asset + 'sds-inkubator-ct24.jpg'" alt="Snímek z reportáže Událostí o testovacím provozu sousedského hlídání" class="shot" />
-
-<div class="credit">Testovací provoz sousedského hlídání. Reportáž <a href="https://ct24.ceskatelevize.cz/clanek/domaci/sousedske-hlidani-se-v-pilotnim-projektu-podle-ministerstva-osvedcilo-354955">Událostí</a>, <a href="https://ct24.ceskatelevize.cz/">ČT24</a></div>
-
-<img :src="asset + 'sds-blueprint-navsteva.png'" alt="Service blueprint návštěvy z kraje v pilotu Sousedských dětských skupin" class="shot" />
-
-<div class="credit">Service blueprint návštěvy z kraje</div>
-
 <style>
-.shot { max-height: 10.6rem; width: auto; max-width: 100%; display: block; }
-.col-right .credit { margin: 0.3rem 0 0.5rem; }
+.stack { position: relative; height: 30.5rem; }
+.stack img { position: absolute; width: 76%; height: auto; border: 1px solid #ccc; box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 0.18); }
+.stack .back { top: 0; left: 0; }
+.stack .front { top: 7rem; right: 0; }
+.stack .credit { position: absolute; right: 0; bottom: 0; margin: 0; }
 </style>
+
+<!--
+Co se testovalo: celá služba v pískovišti, půl roku pilotního provozu s pečujícími a rodinami, než služba oficiálně existovala, včetně adaptace nových dětí v domácí péči.
+Co jsme chtěli zjistit: jestli služba odpovídá potřebám klientů i systému, než se uzákoní.
+Co jsme zjistili: několik úzkých hrdel, která je potřeba vyřešit, aby služba měla šanci uspět.
+Co to umožnilo: doporučení pro klíčové aktéry včetně náměstka ministra.
+Vlevo service blueprint návštěvy z kraje, vpravo reportáž Událostí ČT24 o testovacím provozu.
+-->
+
 
 ---
 layout: two-column
@@ -960,12 +1055,13 @@ layout: homework
 hideInToc: true
 ---
 
-# Usability test do 12. 11.
+# Uživatelské testování do 12. 11.
 
 - Otestujte svůj prototyp s **aspoň pěti lidmi** z cílové skupiny
-- Každé sezení nahrajte a přepište
-- Zjištění odevzdejte do odevzdávárny v IS
-- Nedaří se vám sehnat lidi z cílové skupiny? Ozvěte se, domluvíme se.
+- Každé sezení si ideálně nahrajte a přepište
+- Klíčová zjištění z testování za tým odevzdejte do odevzdávárny v ISu
+- Stručně popište, jak se zjištěními plánujete naložit
+- Formu a rozsah nechám na vašem uvážení
 
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
@@ -978,9 +1074,9 @@ hideInToc: true
 
 # Příště: AI a produktové trio
 
-- **12. 11.** – pokročilejší prototypování, AI v designovém procesu a produktové trio
+- **12. 11.** – pokročilejší prototypovací techniky, AI v designovém procesu, produktové trio
 - Vezměte si notebook a nainstalujte si **GitHub Copilot**, studentská licence je zdarma a návod najdete v podkapitole AI v kurzu
-- Kdo už platí za **Claude Code**, může použít ten
+- Pokud si platíte jiný nástroj od OpenAI, Anthropic či jiné – klidně můžete použít je
 
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
