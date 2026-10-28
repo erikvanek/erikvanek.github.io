@@ -568,7 +568,7 @@ Otázky jsou pro tým, účastník je neuslyší. Kdo se ho zeptá přímo „V�
 ---
 layout: groupwork
 hideInToc: true
-# timer: 3   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
+# timer: 2   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
 # 2 Úvod k setkání
@@ -587,7 +587,7 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 ---
 layout: groupwork
 hideInToc: true
-# timer: 8   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
+# timer: 5   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
 # 3 Úkoly pro testující
@@ -652,7 +652,7 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 layout: groupwork
 hideInToc: true
 progressSection: true
-# timer: [8, 8]   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
+# timer: [10, 10]   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
 # Pilotní testování
@@ -671,7 +671,7 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 ---
 layout: groupwork
 hideInToc: true
-# timer: 3   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
+# timer: 5   # zástupný čas, časovač se přidá až bude fungovat (backlog 050)
 ---
 
 # Po pilotu ve svém týmu
@@ -1021,34 +1021,6 @@ Co to umožnilo: doporučení pro klíčové aktéry včetně náměstka ministr
 Vlevo service blueprint návštěvy z kraje, vpravo reportáž Událostí ČT24 o testovacím provozu.
 -->
 
-
----
-layout: two-column
-ratio: "40-60"
-hideInToc: true
----
-
-# Evaly pro produkty s LLM
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-- **Eval** je test pro AI systém: dáte mu vstup a jeho výstup ohodnotíte
-- Hodnotí kód, jiný model, nebo člověk
-- Každá vrstva má díry, proto se skládají za sebe: automatické evaly, čtení přepisů, A/B testy v provozu
-
-::right::
-
-<img :src="asset + 'anthropic-evals-svycarsky-syr.png'" alt="Švýcarský sýr kvality: vrstvy automatických evalů, ručního čtení přepisů a provozu s A/B testy a zpětnou vazbou" class="fit-img" />
-
-<div class="credit">Švýcarský sýr kvality. Model <a href="https://en.wikipedia.org/wiki/Swiss_cheese_model">Jamese Reasona</a>, <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic</a></div>
-
-<style>
-.col-left li { margin: 0.45em 0; }
-</style>
 
 ---
 layout: homework
