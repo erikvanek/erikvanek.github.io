@@ -1,13 +1,13 @@
-/* v2 site - "Proof A / Riso" from the Paper brand board.
-   Newsprint ground, near-black ink, riso pink only on lines, marks and the
+/* v2 site - "White + riso pink" (colourway 1 on the Paper board).
+   White ground, near-black ink, riso pink only on lines, marks and the
    booking dot. Fluid sizes follow a Utopia-style clamp() scale (360-1240px). */
 
 :root {
-  --paper: #f4f1ea;
-  --card: #ffffff;
-  --ink: #161514;
-  --pencil: #625e57;
-  --rule: #dcd6ca;
+  --paper: #ffffff;
+  --card: #f6f6f6;
+  --ink: #141414;
+  --pencil: #5e5e5e;
+  --rule: #e8e8e8;
   --accent: #ee2f7c;
 
   --font-display: 'Newsreader', Georgia, serif;
@@ -86,7 +86,7 @@ main { padding-top: var(--space-l); }
 /* The strip scrolls sideways and bleeds to the screen edge, so a cut-off tile reads as "more this way". */
 .partner-strip { display: flex; gap: 0.6rem; margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter); scroll-padding-inline: var(--gutter); list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .partner-strip li { flex: 0 0 auto; scroll-snap-align: start; }
-.partner-strip a { display: grid; place-items: center; width: 7.5rem; height: 5rem; padding: 0.75rem; background: var(--card); border: 1px solid var(--rule); }
+.partner-strip a { display: grid; place-items: center; width: 7.5rem; height: 5rem; padding: 0.75rem; background: var(--paper); border: 1px solid var(--rule); }
 .partner-strip img { max-height: 3.25rem; width: auto; object-fit: contain; }
 .partner-strip img.invert { filter: invert(1); } /* the JINAG logo is drawn white */
 
