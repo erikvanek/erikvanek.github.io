@@ -2,6 +2,7 @@
 node_modules
 .DS_Store
 yarn-error.log
+_deploy/
 
 # ── Secrets: NEVER commit (they belong in 1Password) ─────────
 *.env
