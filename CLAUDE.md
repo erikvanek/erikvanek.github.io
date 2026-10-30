@@ -23,6 +23,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Follow the existing patterns in the codebase when creating new components or modifying existing ones.
 - make sure the progress in all relevant markdown docs
 
+## Agent autonomy: this repo is PR-gated
+`master` advances only through a PR that Erik merges. An agent working here:
+- **Never commits or pushes to `master`.**
+- **May commit and push on its own branch and open a PR.** All three conditions are required: off `master` only, a PR at the end, and never merge, because the merge is Erik's review.
+
+**Main guard.** `.githooks/main-guard.sh` (called first by `.githooks/pre-commit`) and `.githooks/pre-merge-commit` refuse a commit or merge commit on `master`. Both are byte-identical copies of the erik-skills backlog `main-guard.sh`; `install-main-guard.mjs --check` reports `pre-commit: foreign` because the chaining is done by hand. The way out is `git switch -c <branch>`, which carries staged work along. Erik can force a commit with `--no-verify`; agents never do.
+
 ## Slidev decks and per-client theming
 Slidev decks live under `pages/presentations/slidev/<deck-name>/slides.md`, built to `docs/presentations/slidev/<deck-name>/` via `yarn build:slides` (`scripts/build-slidev-decks.mjs`) - isolated from Eleventy and from the older reveal.js decks elsewhere under `pages/presentations/`. `yarn slides` runs the top-level scratch file for quick trying-out; it's excluded from the build on purpose (see the script's own header comment).
 - **Where a deck publishes.** By default it lands at the same path it lives at, so `pages/presentations/slidev/foo/` serves from `/presentations/slidev/foo/`. A deck that wants a shorter public URL declares `publicPath: /sdw-26/I/` in its own headmatter, and the build script routes and rebases it there. **A publicPath must be at least two segments deep.** Every Eleventy page on this site routes through `permalink: /{{page.fileSlug}}/`, which can only ever produce one URL segment, so a two-segment path is structurally out of Eleventy's reach; a one-segment one would sit in the same namespace as those 50-odd pages, where Eleventy would silently overwrite the deck - and since CI runs Eleventy but not `yarn build:slides`, that would only ever surface on the live site.
