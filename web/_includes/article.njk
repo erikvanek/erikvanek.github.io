@@ -10,7 +10,7 @@ layout: base.njk
     {%- if subtitle %}
     <p class="subtitle">{{ subtitle }}</p>
     {%- endif %}
-    <p class="meta"><time datetime="{{ date | dateToRfc3339 }}">{{ date | longDate(lang) }}</time></p>
+    <p class="meta"><time datetime="{{ date | isoDate }}">{{ date | longDate(lang) }}</time></p>
     {%- if original %}
     <p class="note">{{ t.originallyIn }} <a href="{{ original.url }}" hreflang="{{ t.otherLang }}">{{ t.readOriginal }}</a></p>
     {%- endif %}

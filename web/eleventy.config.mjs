@@ -60,6 +60,8 @@ export default function (eleventyConfig) {
       .sort((a, b) => b.year - a.year),
   )
 
+  // YYYY-MM-DD for <time datetime>.
+  eleventyConfig.addFilter('isoDate', (date) => new Date(date).toISOString().slice(0, 10))
   eleventyConfig.addFilter('longDate', (date, lang) =>
     new Date(date).toLocaleDateString(lang === 'cs' ? 'cs-CZ' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
   )
