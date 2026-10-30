@@ -170,3 +170,14 @@ This is not blocking current migration work. It will be enforced as a routine pa
 
 ---
 
+## DEC-012 — `@` marker for agent instructions in handwritten notes
+**Date**: 2026-10-04  
+**Status**: Decided  
+
+**Decision**: Instructions to a processing agent inside reMarkable/paper notes are marked with `@`. A line opens an instruction when `@` is its first character, or follows a bullet (`- @`), and text follows. A bare `@` closes it. Instructions are never transcribed into the note, and the agent reports what it read before saving.
+
+**Alternatives rejected**: `>>` (collides with handwritten arrows), `*` (collides with markdown bullets and emphasis), `@/` as a closer (extra stroke; Erik prefers a single symbol), `@end` (two ways to do one thing).
+
+**Rationale**: `@` is one quick stroke, doesn't clash with the existing `!` / `!!!` / underscore conventions, and rarely appears in normal notes. Verified legible on a real reMarkable photo.
+
+**Implications**: Shared definition lives in [[Agent Instructions in Handwritten Notes]] and is referenced by the book-notes routine. The book-notes and deep-dive-notes skills sync from claude.ai and need the same step pasted in there. Known risk: the same character opens and closes, so a missed closer swallows content; mitigated by the echo-back report.
