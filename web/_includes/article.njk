@@ -5,7 +5,7 @@ layout: base.njk
 {%- set original = collections.all | translation(translationKey, t.otherLang) if translatedFrom else undefined -%}
 <article class="article wrapper">
   <header class="article-header">
-    <p class="label"><a href="{{ t.writingUrl }}"><span class="mark">§</span> {{ t.writing }}</a></p>
+    <p class="label"><a href="{{ t.writingUrl }}">{{ t.writing }}</a></p>
     <h1>{{ title }}</h1>
     {%- if subtitle %}
     <p class="subtitle">{{ subtitle }}</p>

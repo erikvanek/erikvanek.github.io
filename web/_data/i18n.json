@@ -15,7 +15,10 @@
     "readOriginal": "Read the original",
     "back": "Back to writing",
     "email": "me@erikvanek.com",
-    "bookSubject": "30 minutes with Erik"
+    "bookSubject": "30 minutes with Erik",
+    "bookUrl": "",
+    "bookNoteCalendar": "Pick a time in my calendar",
+    "bookNoteEmail": "Write me and we’ll find a time"
   },
   "cs": {
     "home": "/cs/",
@@ -33,6 +36,9 @@
     "readOriginal": "Přečíst originál",
     "back": "Zpět na texty",
     "email": "me@erikvanek.com",
-    "bookSubject": "30 minut s Erikem"
+    "bookSubject": "30 minut s Erikem",
+    "bookUrl": "",
+    "bookNoteCalendar": "Vyberte si termín v mém kalendáři",
+    "bookNoteEmail": "Napište mi a najdeme termín"
   }
 }

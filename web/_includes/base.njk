@@ -22,17 +22,19 @@
   {%- endif %}
 </head>
 <body>
-  <header class="site-header wrapper">
-    <a class="wordmark" href="{{ t.home }}">Erik Vaněk</a>
-    <nav class="lang-switch" aria-label="{{ t.langName }}">
-      {%- for code in ['en', 'cs'] %}
-      {%- if code == lang %}
-      <span class="lang-current" aria-current="true">{{ code | upper }}</span>
-      {%- else %}
-      <a href="{{ other.url if other else i18n[code].home }}" hreflang="{{ code }}" lang="{{ code }}" data-lang-choice="{{ code }}" title="{{ t.switchLabel }}">{{ code | upper }}</a>
-      {%- endif %}
-      {%- endfor %}
-    </nav>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="wordmark" href="{{ t.home }}">erikvanek.com</a>
+      <nav class="lang-switch" aria-label="{{ t.langName }}">
+        {%- for code in ['en', 'cs'] %}
+        {%- if code == lang %}
+        <span class="lang-current" aria-current="true">{{ code | upper }}</span>
+        {%- else %}
+        <a href="{{ other.url if other else i18n[code].home }}" hreflang="{{ code }}" lang="{{ code }}" data-lang-choice="{{ code }}" title="{{ t.switchLabel }}">{{ code | upper }}</a>
+        {%- endif %}
+        {%- endfor %}
+      </nav>
+    </div>
   </header>
   <main id="main">
     {{ content | safe }}
