@@ -1,5 +1,5 @@
 /* v2 site - "White + riso pink" (colourway 1 on the Paper board).
-   White ground, near-black ink, riso pink only on lines, marks and the
+   White ground, near-black ink, riso pink only on underlines, rules and the
    booking dot. Fluid sizes follow a Utopia-style clamp() scale (360-1240px). */
 
 :root {
@@ -19,6 +19,7 @@
   --step-2: clamp(1.75rem, 1.6rem + 0.7vw, 2.25rem);
   --step-3: clamp(2.5rem, 2.2rem + 1.4vw, 3.5rem);
   --step-4: clamp(3.25rem, 2.8rem + 2.2vw, 4.75rem);
+  --step-hero: clamp(2.75rem, 2.4rem + 1.6vw, 4rem); /* landing hello and CTA, same weight */
 
   --space-s: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   --space-m: clamp(1.5rem, 1.4rem + 0.4vw, 1.75rem);
@@ -33,7 +34,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; } /* anchors land below the sticky header */
 
 body {
   background: var(--paper);
@@ -65,23 +66,25 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 main > * + * { margin-top: var(--space-xl); }
 
 /* Header and footer */
-.site-header { display: flex; justify-content: space-between; align-items: baseline; padding-top: var(--space-l); }
-.wordmark { font-family: var(--font-display); font-size: var(--step-1); text-decoration: none; }
+/* A sticky bar: the domain always leads home, the language switch stays in reach. */
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.site-header .wrapper { display: flex; justify-content: space-between; align-items: center; padding-block: 1.1rem; }
+.wordmark { font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; text-decoration: none; }
 .lang-switch { display: flex; gap: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; }
 .lang-switch a { color: var(--pencil); text-decoration: none; }
 .lang-current { font-weight: 700; text-decoration: underline 2px var(--accent); text-underline-offset: 0.45em; }
-.site-footer { display: flex; flex-wrap: wrap; gap: var(--space-s) var(--space-m); margin-top: var(--space-xl); padding-block: var(--space-m) var(--space-l); border-top: 1px solid var(--rule); font-size: var(--step--1); color: var(--pencil); }
+.site-footer { display: flex; flex-wrap: wrap; gap: var(--space-s) var(--space-m); margin-top: var(--space-xl); padding-block: var(--space-m) var(--space-l); font-size: var(--step--1); color: var(--pencil); }
 main { padding-top: var(--space-l); }
 
 /* Shared bits */
-.label { font-family: var(--font-text); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.4; }
+.label { font-family: var(--font-text); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.4; }
 .label a { text-decoration: none; }
-.mark { color: var(--accent); }
 .link { font-weight: 600; }
 
 /* Home */
-.hello > * + * { margin-top: var(--space-s); }
-.pitch { font-family: var(--font-display); font-size: var(--step-1); line-height: 1.45; max-width: 32rem; }
+.hello h1, .cta h2 { max-width: 34rem; font-size: var(--step-hero); line-height: 1.14; letter-spacing: -0.025em; }
+.hello > * + * { margin-top: var(--space-m); }
+.pitch { max-width: 34rem; }
 .partners .label, .writing .label { margin-bottom: var(--space-s); }
 /* The strip scrolls sideways and bleeds to the screen edge, so a cut-off tile reads as "more this way". */
 .partner-strip { display: flex; gap: 0.6rem; margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter); scroll-padding-inline: var(--gutter); list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
@@ -99,17 +102,21 @@ a.entry-title:hover { text-decoration: underline 1.5px var(--accent); }
 .soon { font-family: var(--font-text); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pencil); }
 .writing > p { margin-top: var(--space-s); }
 
-.cta h2 { max-width: 30rem; }
 .cta em { font-style: italic; }
-.book { display: inline-flex; align-items: center; gap: 0.65rem; margin-top: var(--space-m); font-weight: 600; text-decoration: none; transition: transform 160ms var(--ease-out); }
-.book-label { text-decoration: underline 1.5px var(--accent); text-underline-offset: 0.3em; }
+/* The booking card: a slot-like, thumb-sized target with a line saying what happens next. */
+.book { display: flex; align-items: center; gap: 1rem; max-width: 26rem; margin-top: var(--space-m); padding: 1.1rem 1.25rem; border: 1.5px solid var(--ink); border-radius: 1rem; text-decoration: none; transition: transform 160ms var(--ease-out); }
+.book:focus-visible { border-radius: 1rem; }
 .book:active { transform: scale(0.97); }
+.book-text { display: flex; flex: 1; flex-direction: column; gap: 0.2rem; }
+.book-label { font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
+.book-note { font-size: var(--step--1); line-height: 1.35; color: var(--pencil); }
+.book-arrow { font-size: 1.25rem; line-height: 1; transition: transform 200ms var(--ease-out); }
 /* The booking dot: an empty ring that fills on hover, like a gallery "sold" sticker. */
-.dot { position: relative; width: 0.875rem; height: 0.875rem; border: 1.5px solid var(--accent); border-radius: 50%; }
-.dot::after { content: ''; position: absolute; inset: 1.5px; border-radius: 50%; background: var(--accent); opacity: 0; transform: scale(0.6); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); }
+.dot { position: relative; flex: 0 0 auto; width: 1.25rem; height: 1.25rem; border: 2px solid var(--accent); border-radius: 50%; }
+.dot::after { content: ''; position: absolute; inset: 2px; border-radius: 50%; background: var(--accent); opacity: 0; transform: scale(0.6); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); }
 @media (hover: hover) and (pointer: fine) {
   .book:hover .dot::after { opacity: 1; transform: scale(1); }
-  .book:hover .book-label { text-decoration-thickness: 3px; }
+  .book:hover .book-arrow { transform: translateX(3px); }
 }
 .book:focus-visible .dot::after { opacity: 1; transform: scale(1); }
 
