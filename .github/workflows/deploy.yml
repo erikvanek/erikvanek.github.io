@@ -1,0 +1,50 @@
+# Production deploy: builds the site named in SITE (see scripts/build-deploy.mjs)
+# and publishes it to the root of the gh-pages branch, which GitHub Pages serves.
+# PR previews live in gh-pages:/pr-preview/ (preview.yml) and are left alone here.
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# One production deploy at a time; a newer push replaces a queued one, but a
+# deploy that has started is never cancelled halfway.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build _deploy/
+        run: yarn build:deploy
+
+      # clean removes files the new build no longer has, except previews;
+      # force: false rebases onto a preview pushed meanwhile instead of overwriting it.
+      - name: Publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
+        with:
+          folder: _deploy
+          branch: gh-pages
+          clean: true
+          clean-exclude: pr-preview/
+          force: false
