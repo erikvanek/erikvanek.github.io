@@ -21,4 +21,6 @@ regexes = [
   '''(?i)replace[_-]?with[_-]?your''',
   '''^x{8,}$''',
   '''<[^>]+>''',
+  # Cloudflare Web Analytics site token: public by design, every page ships it.
+  '''^17fbb912f698470cb0b944b5d1d6fdf8$''',
 ]
