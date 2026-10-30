@@ -47,5 +47,6 @@ If neither holds, do not archive it - flag it so a case study gets written first
 ## Deployment
 - GitHub Pages serves the root of the `gh-pages` branch. On every push to `master`, `.github/workflows/deploy.yml` runs `yarn build:deploy` and publishes `_deploy/` there, leaving `pr-preview/` alone.
 - `SITE` is a one-line file at the repo root naming the site production serves. `legacy` copies the committed `docs/` as is, so `yarn build` and `yarn build:slides` still have to run locally and their output gets committed. The contract for adding a site sits at the top of `scripts/build-deploy.mjs`.
-- `.github/workflows/preview.yml` builds every same-repo PR into `gh-pages:/pr-preview/pr-N/` (https://www.erikvanek.com/pr-preview/pr-N/), comments the link, and removes it when the PR closes. Every preview page gets `noindex`. Legacy previews copy text files only, because the full site is over 1.5 GB.
+- `.github/workflows/preview.yml` builds every same-repo PR into `gh-pages:/pr-preview/pr-N/` (https://www.erikvanek.com/pr-preview/pr-N/), comments the link, and removes it when the PR closes. Every preview page gets `noindex`. Previews build `PREVIEW_SITE` (now `v2`), whatever `SITE` says.
+- The v2 site lives in `web/` (Eleventy config `web/eleventy.config.mjs`, `yarn start:v2`), EN at `/` and CS at `/cs/`, pages paired by `translationKey`. README has the details. `yarn switch-site v2` flips production.
 - The custom domain comes from the root `CNAME` file, copied into every production build; `.nojekyll` keeps Pages from running Jekyll over the branch.

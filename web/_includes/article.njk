@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+{%- set t = i18n[lang] -%}
+{%- set original = collections.all | translation(translationKey, t.otherLang) if translatedFrom else undefined -%}
+<article class="article wrapper">
+  <header class="article-header">
+    <p class="label"><a href="{{ t.writingUrl }}"><span class="mark">§</span> {{ t.writing }}</a></p>
+    <h1>{{ title }}</h1>
+    {%- if subtitle %}
+    <p class="subtitle">{{ subtitle }}</p>
+    {%- endif %}
+    <p class="meta"><time datetime="{{ date | dateToRfc3339 }}">{{ date | longDate(lang) }}</time></p>
+    {%- if original %}
+    <p class="note">{{ t.originallyIn }} <a href="{{ original.url }}" hreflang="{{ t.otherLang }}">{{ t.readOriginal }}</a></p>
+    {%- endif %}
+  </header>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+  <p class="back"><a class="link" href="{{ t.writingUrl }}">{{ t.back }}</a></p>
+</article>

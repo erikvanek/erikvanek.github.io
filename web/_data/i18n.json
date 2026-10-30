@@ -1,0 +1,38 @@
+{
+  "en": {
+    "home": "/",
+    "writingUrl": "/writing/",
+    "profileUrl": "/profile/",
+    "otherLang": "cs",
+    "langName": "English",
+    "switchLabel": "Česky",
+    "writing": "Writing",
+    "allWriting": "All writing",
+    "recentPartners": "Recent partners",
+    "soon": "soon",
+    "opensSite": "opens another website",
+    "originallyIn": "Originally written in Czech.",
+    "readOriginal": "Read the original",
+    "back": "Back to writing",
+    "email": "me@erikvanek.com",
+    "bookSubject": "30 minutes with Erik"
+  },
+  "cs": {
+    "home": "/cs/",
+    "writingUrl": "/cs/psani/",
+    "profileUrl": "/cs/profil/",
+    "otherLang": "en",
+    "langName": "Čeština",
+    "switchLabel": "English",
+    "writing": "Psaní",
+    "allWriting": "Všechny texty",
+    "recentPartners": "S kým jsem pracoval",
+    "soon": "brzy",
+    "opensSite": "otevře jiný web",
+    "originallyIn": "Původně napsáno anglicky.",
+    "readOriginal": "Přečíst originál",
+    "back": "Zpět na texty",
+    "email": "me@erikvanek.com",
+    "bookSubject": "30 minut s Erikem"
+  }
+}

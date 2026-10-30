@@ -1,0 +1,12 @@
+[
+  { "key": "prototype-2000", "year": 2026, "landing": true, "soon": true, "title": { "en": "Prototype like it’s 2000", "cs": "Prototypuj jako v roce 2000" } },
+  { "key": "dis-kisk", "year": 2026, "landing": true },
+  { "key": "ministry-workshop", "year": 2025, "landing": true },
+  { "key": "design-for-public", "year": 2025 },
+  { "key": "mamka", "year": 2025, "landing": true },
+  { "key": "innovation-teams", "year": 2024, "landing": true, "href": "https://www.inovacnitymystatnispravy.cz/", "title": { "en": "Research of innovative public services", "cs": "Výzkum inovačních týmů státní správy" } },
+  { "key": "is-coding-dead", "year": 2024 },
+  { "key": "kombucha", "year": 2023 },
+  { "key": "tepache", "year": 2021 },
+  { "key": "aero", "year": 2018 }
+]

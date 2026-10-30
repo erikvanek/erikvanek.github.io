@@ -28,9 +28,9 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const OUT_DIR = join(ROOT, '_deploy')
 const DOCS_DIR = join(ROOT, 'docs')
 
-// The site PR previews build. #43 points this at 'v2', so previews show the new
-// site while production still serves whatever SITE says.
-const PREVIEW_SITE = 'legacy'
+// The site PR previews build: v2, so previews show the new site while
+// production still serves whatever SITE says.
+const PREVIEW_SITE = 'v2'
 
 // Legacy previews copy text files only. The full legacy site is about 1.6 GB,
 // mostly PDFs and images, and every open preview would add another copy to the
@@ -54,6 +54,18 @@ const SITES = {
       filter: async (src) =>
         (await stat(src)).isDirectory() || LEGACY_PREVIEW_EXTENSIONS.has(extname(src).toLowerCase()),
     })
+  },
+
+  // The v2 site (#43) is built from web/ by its own Eleventy config. basePath
+  // becomes Eleventy's pathPrefix, which HtmlBasePlugin applies to every link.
+  async v2({ outDir, basePath }) {
+    const { default: Eleventy } = await import('@11ty/eleventy')
+    const eleventy = new Eleventy('web', outDir, {
+      configPath: join(ROOT, 'web', 'eleventy.config.mjs'),
+      pathPrefix: basePath,
+      quietMode: true,
+    })
+    await eleventy.write()
   },
 }
 
