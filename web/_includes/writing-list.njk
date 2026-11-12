@@ -1,0 +1,15 @@
+{%- set t = i18n[lang] -%}
+<ol class="entries" role="list">
+  {%- for entry in entries %}
+  {%- if not landingOnly or entry.landing %}
+  <li class="entry">
+    <span class="year">{{ entry.year }}</span>
+    {%- if entry.url %}
+    <a class="entry-title" href="{{ entry.url }}">{{ entry.title }}{% if entry.external %} <span class="external" aria-label="{{ t.opensSite }}">↗</span>{% endif %}</a>
+    {%- else %}
+    <span class="entry-title">{{ entry.title }} <span class="soon">{{ t.soon }}</span></span>
+    {%- endif %}
+  </li>
+  {%- endif %}
+  {%- endfor %}
+</ol>
