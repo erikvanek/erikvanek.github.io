@@ -21,6 +21,12 @@ shaderRustDuration: 180
 hideInToc: true
 ---
 
+<!--
+<br/>
+
+**Úvod <span style="white-space:nowrap">18:00–18:03 (1/3)</span>**
+-->
+
 ---
 layout: section-break
 hideInToc: true
@@ -28,7 +34,14 @@ hideProgress: true
 shader: true
 ---
 
-# Design je dnes docela šílený
+# Design in 2026
+# 🤯
+
+<!--
+<br/>
+
+**Úvod <span style="white-space:nowrap">18:00–18:03 (2/3)</span>**
+-->
 
 ---
 layout: heading-body
@@ -38,7 +51,7 @@ hideInToc: true
 # Dnes nás čeká
 
 - **Trendy** – kam se posouvá role designéra
-- **Koncepty, které pomáhají** – od řemesla po MVP
+- **Návrhové vzory, knihovny** až po MVP
 - **AI v práci designéra** – od vibe codingu po MCP
 - **Workshop** – prototypujeme s AI
 - **Další témata** – skilly, GitHub a jeho workflow
@@ -50,11 +63,27 @@ h1 { margin-bottom: 0.45em !important; }
 li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
+<!--
+<br/>
+
+**Úvod <span style="white-space:nowrap">18:00–18:03 (3/3)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:03 končí úvod.**
+-->
+
 ---
 layout: section-break
 ---
 
 # Trendy
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (1/11)</span>**
+-->
 
 ---
 layout: two-column
@@ -87,6 +116,12 @@ const asset = import.meta.env.BASE_URL
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 </style>
 
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (2/11)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "55-45"
@@ -108,7 +143,14 @@ hideInToc: true
 <style>
 .col-left li { margin: 0.45em 0; }
 .big-q { font-size: 1.5em; font-weight: 700; color: var(--muni-blue, #0000dc); line-height: 1.25; margin: 0.4em 0 0.8em; }
+del, s { text-decoration-color: rgba(0, 0, 0, 0.5); }
 </style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (3/11)</span>**
+-->
 
 ---
 layout: heading-body
@@ -120,7 +162,7 @@ hideInToc: true
 - Mluvit v roce 2026 o AI je trochu jako mluvit v roce 2010 o internetu
 - Já to vidím tak, že AI zesiluje dovednosti, které už máte
   - Investujte do základních principů a znalostí, abyste věděli "co od AI chcete"
-- Nový software nevytvoří AI sama, ale [lidé, kteří ji používají](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/) jako další svou schopnost
+- Nový software nevytvoří AI sama, ale [lidé, kteří ji využívají](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/) jako další kompetenci
 - Výroky firem, které AI vyrábějí, berte se zrnkem soli
   - např. *"U nás už AI tvoří 100% kódu"* nebo *"Tenhle nástroj AI vytvoří za den"*
 
@@ -128,9 +170,15 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (4/11)</span>**
+-->
+
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "45-55"
 hideInToc: true
 ---
 
@@ -150,16 +198,22 @@ const asset = import.meta.env.BASE_URL
 
 <img :src="asset + 'anthropic-pokryti-uloh-ai.jpg'" alt="Paprskový graf pokrytí pracovních úkolů AI podle skupin povolání, modrá plocha teoretických možností je u většiny skupin mnohem větší než červená plocha skutečného používání" class="fit-img radar" />
 
-<div class="credit">Teoretické a skutečné pokrytí úkolů AI, <a href="https://www.anthropic.com/research/labor-market-impacts">od Anthropic</a>, březen 2026</div>
+<div class="credit">Teoretické a skutečné pokrytí úkolů AI, <a href="https://www.anthropic.com/research/labor-market-impacts">od Anthropic</a></div>
 
 <style>
 .col-left li { margin: 0.45em 0; }
-.radar { max-height: 25rem; width: auto; margin: 0 auto; }
+.radar { max-height: 25rem; width: auto; max-width: 100%; margin: 0 auto; }
 </style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (5/11)</span>**
+-->
 
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "40-60"
 hideInToc: true
 ---
 
@@ -181,10 +235,41 @@ const asset = import.meta.env.BASE_URL
 <img :src="asset + 'ai-slop-landing-page.png'" alt="Typická landing page z AI: tmavé pozadí s fialovým přechodem, nadpis Supercharge your workflow with AI-powered magic, emoji v ikonách, pět hvězdiček a tři zaoblené karty s kartami uvnitř" class="fit-img slop" />
 
 <style>
-.col-left li { margin: 0.45em 0; }
+.col-left li { margin: 0.3em 0; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
-.slop { max-height: 22rem; width: auto; margin: 0 auto; }
+.slop { width: 100%; }
 </style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (6/11)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+title: Slop
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="slop-def">
+  <img :src="asset + 'slop-vyznam.png'" alt="Význam slova slop v češtině: doslovně pomyje, pomeje, splašky nebo šlichta, ve slangu AI slop neboli AI břečka, nekvalitní a hromadně generovaný obsah z umělé inteligence, o který nikdo nestál" />
+</div>
+
+<style>
+.slop-def { height: 100%; display: flex; align-items: center; justify-content: center; }
+.slop-def img { width: 96%; }
+</style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (7/11)</span>**
+-->
 
 ---
 layout: two-column
@@ -200,7 +285,7 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Trh práce v UX se podle [NN/g](https://www.nngroup.com/articles/state-of-ux-2026/) od konce roku 2024 stabilizuje
+- Trh práce v UX se podle [NN/g](https://www.nngroup.com/articles/state-of-ux-2026/) od konce roku 2024 stabilizuje, ale!
 - Seniorní a generalistické role se ale zotavují rychleji, juniorních míst je pořád málo a je o ně velký boj
 - **Můj názor:** kdo rozumí principům, zná základní výzkumné a návrhové koncepty, z trhu nevypadne a AI mu může i pomoct
 
@@ -214,6 +299,44 @@ const asset = import.meta.env.BASE_URL
 .col-left li { margin: 0.5em 0; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 </style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (8/11)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Rekordně málo pozic v designu
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="jobs">
+  <figure><figcaption>Designéři</figcaption><img :src="asset + 'lenny-pozice-design.png'" alt="Graf otevřených pozic v designu v tech firmách 2022 až 2026: po propadu v roce 2023 kolem 2 000, teď rekordní minimum 1 924" /></figure>
+  <figure><figcaption>Inženýři</figcaption><img :src="asset + 'lenny-pozice-inzenyri.png'" alt="Graf otevřených inženýrských pozic v tech firmách 2023 až 2026: růst o 29 %, pak o 15 % a za poslední rok jen o 2,5 %, dnes 65 351" /></figure>
+  <figure><figcaption>Produktoví manažeři</figcaption><img :src="asset + 'lenny-pozice-pm.png'" alt="Graf otevřených pozic produktových manažerů v tech firmách 2022 až 2026: po minimu 4 171 v roce 2023 růst o 75 % na 7 303, nejvíc za čtyři roky" /></figure>
+</div>
+
+<div class="credit">Otevřené pozice v tech firmách podle dat TrueUp. <a href="https://www.lennysnewsletter.com/p/state-of-the-tech-job-market-late">Lenny Rachitsky</a>, <a href="https://www.lennysnewsletter.com/">Lenny's Newsletter</a></div>
+
+<style>
+.jobs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.jobs figure { margin: 0; }
+.jobs figcaption { font-weight: 700; margin-bottom: 0.3rem; }
+.jobs img { display: block; width: 100%; }
+</style>
+
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (9/11)</span>**
+-->
 
 ---
 layout: heading-body
@@ -259,6 +382,12 @@ h1 { font-size: 1.9rem !important; }
 .legend .sw:first-child { margin-left: 0; }
 </style>
 
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (10/11)</span>**
+-->
+
 ---
 layout: section-break
 hideInToc: true
@@ -270,11 +399,27 @@ shader: true
 
 Jste první generace, která do designu vstupuje rovnou s AI
 
+<!--
+<br/>
+
+**Trendy <span style="white-space:nowrap">18:03–18:16 (11/11)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:16 končí trendy včetně diskuse.**
+-->
+
 ---
 layout: section-break
 ---
 
 # Koncepty, které pomáhají
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (1/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -307,13 +452,19 @@ const asset = import.meta.env.BASE_URL
 .play { max-height: 16rem; width: auto; margin: 0 auto; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (2/14)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "50-50"
 hideInToc: true
 ---
 
-# Typografie a paleta s pravidly
+# Typografie a brand manuál
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -323,7 +474,7 @@ const asset = import.meta.env.BASE_URL
 
 - Z brand manuálu potřebujete paletu s pravidly a typografickou škálu
 - Každá barva má svůj účel a správné a špatné užití
-- Jedno, nanejvýš dvě písma a hierarchie z velikosti, řezu a bílého místa
+- Vědomý výběr řezů písma, barev a vědomá práce s bílým místem
 - Vizuální hierarchii můžete ověřit tzv. "squint" testem a s přimhouřením očí zkontrolujete, jestli je struktura vidět i rozmazaná
 
 ::right::
@@ -337,6 +488,12 @@ const asset = import.meta.env.BASE_URL
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .squint { max-height: 22rem; width: auto; margin: 0 auto; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (3/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -369,6 +526,12 @@ const asset = import.meta.env.BASE_URL
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .crap { max-height: 24rem; width: auto; margin: 0 auto; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (4/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -408,6 +571,12 @@ const asset = import.meta.env.BASE_URL
 .cards .c3 { left: 11rem; top: 5.2rem; transform: rotate(6deg); }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (5/14)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "55-45"
@@ -441,12 +610,18 @@ const asset = import.meta.env.BASE_URL
 .shot { max-height: 26rem; width: auto; margin: 0 auto; border: 1px solid #ddd; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (6/14)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
 ---
 
-# Designové systémy a komponentové knihovny
+# Design systémy a komponentové knihovny
 
 - [shadcn/ui](https://ui.shadcn.com/) – kód komponent si zkopírujete do projektu, de facto standard dneška, i když trochu nudný
 - [GitHub Primer](https://primer.style/) – střídmý, počítá s hustými obrazovkami plnými dat
@@ -457,6 +632,12 @@ hideInToc: true
 h1 { font-size: 1.9rem !important; }
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (7/14)</span>**
+-->
 
 ---
 layout: heading-body
@@ -480,6 +661,12 @@ const asset = import.meta.env.BASE_URL
 li { margin-top: 0.3em; margin-bottom: 0.3em; }
 .shot { max-height: 17rem; width: auto; margin: 0.7em auto 0; border: 1px solid #ddd; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (8/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -511,6 +698,12 @@ const asset = import.meta.env.BASE_URL
 .shot { max-height: 24rem; width: auto; margin: 0 auto; border: 1px solid #ddd; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (9/14)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "40-60"
@@ -540,6 +733,12 @@ const asset = import.meta.env.BASE_URL
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .insta { max-height: 24rem; width: auto; margin: 0 auto; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (10/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -572,6 +771,12 @@ const asset = import.meta.env.BASE_URL
 .col-left li { margin: 0.5em 0; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (11/14)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "55-45"
@@ -603,6 +808,12 @@ const asset = import.meta.env.BASE_URL
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .dark { max-height: 22rem; width: auto; margin: 0 auto; border: 1px solid #ddd; }
 </style>
+
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (12/14)</span>**
+-->
 
 ---
 layout: two-column
@@ -639,6 +850,12 @@ const asset = import.meta.env.BASE_URL
 li { margin: 0.5em 0; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (13/14)</span>**
+-->
+
 ---
 layout: two-column
 ratio: "45-55"
@@ -667,15 +884,31 @@ const asset = import.meta.env.BASE_URL
 .col-left li { margin: 0.5em 0; }
 </style>
 
+<!--
+<br/>
+
+**Koncepty, které pomáhají <span style="white-space:nowrap">18:16–18:32 (14/14)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:32 končí koncepty.**
+-->
+
 ---
 layout: section-break
 ---
 
 # AI v práci designéra
 
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (1/7)</span>**
+-->
+
 ---
 layout: two-column
-ratio: "50-50"
+ratio: "35-65"
 hideInToc: true
 ---
 
@@ -698,9 +931,15 @@ const asset = import.meta.env.BASE_URL
 <div class="credit">Náklady vibe codingu a agentic engineering v čase. <a href="https://addyosmani.com/blog/new-sdlc-vibe-coding/">Addy Osmani a kol.</a>, <a href="https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding">Kaggle</a></div>
 
 <style>
-.col-left li { margin: 0.45em 0; }
+.col-left li { margin: 0.3em 0; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 </style>
+
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (2/7)</span>**
+-->
 
 ---
 layout: two-column
@@ -724,13 +963,19 @@ const asset = import.meta.env.BASE_URL
 
 <img :src="asset + 'claude-cowork-kroky.jpg'" alt="Přepínač Chat a Cowork s kurzorem na Cowork. Vlevo výběr složky Meeting Transcripts, uprostřed postup úkolu: přečíst přepisy schůzek a vytáhnout hlavní body je odškrtnuté, čeká najít úkoly, zkontrolovat Google Calendar a připravit deck na standup. Vpravo kontext: složka s přepisy, soubory SKILL.md, pptx-patterns.md, css.md a Claude in Chrome" class="fit-img shot" />
 
-<div class="credit">Cowork rozkládá úkol na kroky. <a href="https://claude.com/product/cowork">Anthropic</a>, <a href="https://www.softr.io/blog/claude-code-vs-claude-cowork">Softr</a></div>
+<div class="credit">Cowork rozkládá úkol na kroky. <a href="https://claude.com/product/cowork">Anthropic</a></div>
 
 <style>
 .col-left li { margin: 0.5em 0; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .shot { max-height: 22rem; width: auto; margin: 0 auto; }
 </style>
+
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (3/7)</span>**
+-->
 
 ---
 layout: heading-body
@@ -756,6 +1001,12 @@ li { margin-top: 0.3em; margin-bottom: 0.3em; }
 .wide { max-height: 12rem; width: auto; margin: 0.6em auto 0; }
 </style>
 
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (4/7)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -778,6 +1029,12 @@ hideInToc: true
 li { margin: 0.45em 0; }
 </style>
 
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (5/7)</span>**
+-->
+
 ---
 layout: full-image
 image: /claude-design-upravy.jpg
@@ -795,15 +1052,86 @@ title: Claude Design
 .design-credit a { color: #fff; }
 </style>
 
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (6/7)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+title: Figma
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="logo-only">
+  <img :src="asset + 'figma-logo.svg'" alt="Logo Figmy" />
+</div>
+
+<style>
+.logo-only { height: 100%; display: flex; align-items: center; justify-content: center; }
+.logo-only img { height: 14rem; }
+</style>
+
+<!--
+<br/>
+
+**AI v práci designéra <span style="white-space:nowrap">18:32–18:40 (7/7)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:40 začíná workshop.**
+-->
+
+---
+layout: section-break
+---
+
+# Pojďme to vyzkoušet
+
+<!--
+<br/>
+
+**Workshop: zadání <span style="white-space:nowrap">18:40–18:42 (1/3)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+title: GitHub Copilot
+---
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+<div class="logo-only">
+  <img :src="asset + 'github-invertocat.svg'" alt="Logo GitHubu, silueta kočky s chapadly" />
+</div>
+
+<style>
+.logo-only { height: 100%; display: flex; align-items: center; justify-content: center; }
+.logo-only img { height: 14rem; }
+</style>
+
+<!--
+<br/>
+
+**Workshop: zadání <span style="white-space:nowrap">18:40–18:42 (2/3)</span>**
+-->
+
 ---
 layout: groupwork
 hideInToc: true
-progressSection: true
 ---
 
-# Workshop: spolujízda do Žiliny
+# Workshop: spolujízda do Zvolena
 
-<div class="box">Chcete se dostat s přítelkyní a jejím kokršpanělem do Žiliny na Slovensku na její rodinnou oslavu v pátek odpoledne s pomocí spolujízdy. Navrhněte, jak by vypadala aplikace pro hledání spolujízdy, která s tím pomůže.</div>
+<div class="box">Chcete se dostat s přítelkyní a jejím kokršpanělem do Zvolena na Slovensku na její rodinnou oslavu v pátek odpoledne s pomocí spolujízdy. Navrhněte, jak by vypadala aplikace pro hledání spolujízdy, která s tím pomůže.</div>
 
 - Pracujete ve dvojicích
 - Vyjíždíte z Brna
@@ -814,6 +1142,16 @@ progressSection: true
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
 .box { margin-bottom: 0.8em; }
 </style>
+
+<!--
+<br/>
+
+**Workshop: zadání <span style="white-space:nowrap">18:40–18:42 (3/3)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:42 končí zadání workshopu.**
+-->
 
 ---
 layout: groupwork
@@ -831,6 +1169,37 @@ hideInToc: true
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
+
+<!--
+<br/>
+
+**Workshop: 1 co musí aplikace zvládnout <span style="white-space:nowrap">18:42–18:52 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:52 končí brainstorming na tabuli.**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+title: Plot twist
+---
+
+<div class="twist">
+  <h1>Plot twist</h1>
+</div>
+
+<style>
+.twist { height: 100%; display: flex; align-items: center; justify-content: center; }
+.twist h1 { font-size: 3.2rem !important; margin: 0 !important; }
+</style>
+
+<!--
+<br/>
+
+**Workshop: 2 náčrt na papír <span style="white-space:nowrap">18:52–19:02 (1/2)</span>**
+-->
 
 ---
 layout: groupwork
@@ -854,6 +1223,16 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Workshop: 2 náčrt na papír <span style="white-space:nowrap">18:52–19:02 (2/2)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:02 končí náčrt na papír.**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -869,6 +1248,16 @@ hideInToc: true
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
+
+<!--
+<br/>
+
+**Workshop: ukázka <span style="white-space:nowrap">19:02–19:05 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:05 končí ukázka.**
+-->
 
 ---
 layout: groupwork
@@ -892,6 +1281,16 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 .box { margin-top: 0.8em; }
 </style>
 
+<!--
+<br/>
+
+**Workshop: 3 prototyp s Copilotem <span style="white-space:nowrap">19:05–19:15 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:15 končí prototyp s Copilotem.**
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -909,6 +1308,16 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Workshop: 4 test mezi dvojicemi <span style="white-space:nowrap">19:15–19:30 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:30 končí test.**
+-->
+
 ---
 layout: groupwork
 hideInToc: true
@@ -916,6 +1325,16 @@ hideInToc: true
 ---
 
 # 5 Iterace?
+
+<!--
+<br/>
+
+**Workshop: 5 iterace – rezerva**
+
+<br/>
+
+Jen když test skončí před 19:30. V 19:30 jít na rozdíly, i když iterace běží.
+-->
 
 ---
 layout: section-break
@@ -925,11 +1344,31 @@ hideProgress: true
 
 # Rozdíly oproti předchozím prototypům?
 
+<!--
+<br/>
+
+**Rozdíly oproti předchozím prototypům <span style="white-space:nowrap">19:30–19:35 (1/1)</span>**
+
+<br/>
+
+🛑 **Nejpozději 19:35 končí debrief workshopu. Doplňky přeskočit a jít rovnou na úkol.**
+-->
+
 ---
 layout: section-break
 ---
 
 # Doplňky
+
+<!--
+<br/>
+
+**Doplňky – rezerva (1/5)**
+
+<br/>
+
+Jen s časem navíc. Jinak odkázat na kapitolu 5 v IO a přejít na úkol.
+-->
 
 ---
 layout: heading-body
@@ -948,6 +1387,12 @@ hideInToc: true
 <style>
 li { margin-top: 0.35em; margin-bottom: 0.35em; }
 </style>
+
+<!--
+<br/>
+
+**Doplňky – rezerva (2/5)**
+-->
 
 ---
 layout: heading-body
@@ -969,6 +1414,12 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 .prompt { font-family: ui-monospace, Menlo, monospace; display: inline-block; margin-top: 1em; }
 </style>
 
+<!--
+<br/>
+
+**Doplňky – rezerva (3/5)**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -985,6 +1436,12 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Doplňky – rezerva (4/5)**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -995,7 +1452,7 @@ hideInToc: true
 - **Investujte do technických dovedností** a naučte se základy programování,třeba napsat jednoduchá kalkulačka
 - **Učte se dobře ptát** uživatelů, kolegů i AI
 - **Naučte se základy řemesla** – principy, typografii, přístupnost
-- Pak vám práci žádná AI nevezme
+- **Sledujte** [Lennyho Rachitského](https://www.lennysnewsletter.com/), [Karriho Saarinena](https://x.com/karrisaarinen) a podcast [Dive Club](https://www.dive.club/)
 
 <div class="box">Kde začít s programováním? <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development">Learn web development</a> od Mozilly nebo kurzy <a href="https://www.czechitas.cz/kurzy">Czechitas</a></div>
 
@@ -1003,6 +1460,12 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 .box { margin-top: 1.1em; }
 </style>
+
+<!--
+<br/>
+
+**Doplňky – rezerva (5/5)**
+-->
 
 ---
 layout: homework
@@ -1019,6 +1482,12 @@ hideInToc: true
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
 </style>
 
+<!--
+<br/>
+
+**Úkol a závěr <span style="white-space:nowrap">19:35–19:40 (1/4)</span>**
+-->
+
 ---
 layout: heading-body
 hideInToc: true
@@ -1034,6 +1503,12 @@ hideInToc: true
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
+<!--
+<br/>
+
+**Úkol a závěr <span style="white-space:nowrap">19:35–19:40 (2/4)</span>**
+-->
+
 ---
 layout: section-break
 hideInToc: true
@@ -1043,6 +1518,12 @@ hideProgress: true
 
 # Co se vám honí hlavou?
 
+<!--
+<br/>
+
+**Úkol a závěr <span style="white-space:nowrap">19:35–19:40 (3/4)</span>**
+-->
+
 ---
 layout: section-break
 hideProgress: true
@@ -1050,3 +1531,13 @@ hideInToc: true
 ---
 
 # Díky a pěkný večer!
+
+<!--
+<br/>
+
+**Úkol a závěr <span style="white-space:nowrap">19:35–19:40 (4/4)</span>**
+
+<br/>
+
+🛑 **V 19:40 konec.**
+-->
