@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+{%- set t = i18n[lang] -%}
+<section class="hello wrapper">
+  <h1>{{ hello | safe }}</h1>
+  <div class="pitch">{{ content | safe }}</div>
+  <p><a class="link" href="{{ t.profileUrl }}">{{ profileLink }}</a></p>
+</section>
+
+<section class="partners wrapper" aria-labelledby="partners-title">
+  <h2 class="label" id="partners-title">{{ t.recentPartners }}</h2>
+  <ul class="partner-strip" role="list">
+    {%- for partner in partners %}
+    <li><a href="{{ partner.href }}"><img src="{{ partner.logo }}" alt="{{ partner.name }}"{% if partner.invert %} class="invert"{% endif %} loading="lazy"></a></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="writing wrapper" aria-labelledby="writing-title">
+  <h2 class="label" id="writing-title">{{ t.writing }}</h2>
+  {% set entries = collections.all | writingFor(lang, writing) %}{% set landingOnly = true %}
+  {% include "writing-list.njk" %}
+  <p><a class="link" href="{{ t.writingUrl }}">{{ t.allWriting }}</a></p>
+</section>
+
+<section class="cta wrapper">
+  <h2>{{ ctaHeading | safe }}</h2>
+  {#- Until a calendar link is set in i18n.json, booking falls back to an email and says so. #}
+  <a class="book" href="{{ t.bookUrl or ('mailto:' + t.email + '?subject=' + (t.bookSubject | urlencode)) }}">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="book-text"><span class="book-label">{{ ctaLink }}</span><span class="book-note">{{ t.bookNoteCalendar if t.bookUrl else t.bookNoteEmail }}</span></span>
+    <span class="book-arrow" aria-hidden="true">→</span>
+  </a>
+</section>

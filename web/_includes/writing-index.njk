@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+{%- set t = i18n[lang] -%}
+<section class="writing wrapper">
+  <h1>{{ title }}</h1>
+  {% set entries = collections.all | writingFor(lang, writing) %}{% set landingOnly = false %}
+  {% include "writing-list.njk" %}
+</section>

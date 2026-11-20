@@ -1,0 +1,55 @@
+{%- set t = i18n[lang] -%}
+{%- set other = collections.all | translation(translationKey, t.otherLang) -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and translationKey != 'home' %}{{ title }} | {% endif %}Erik Vaněk</title>
+  {%- if description %}
+  <meta name="description" content="{{ description }}">
+  {%- endif %}
+  <link rel="alternate" hreflang="{{ lang }}" href="https://www.erikvanek.com{{ page.url }}">
+  {%- if other %}
+  <link rel="alternate" hreflang="{{ t.otherLang }}" href="https://www.erikvanek.com{{ other.url }}">
+  {%- endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/css/site.css">
+  {%- if translationKey == 'home' %}
+  <script src="/js/lang.js" data-lang="{{ lang }}" data-cs="{{ i18n.cs.home | url }}"></script>
+  {%- endif %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="wordmark" href="{{ t.home }}">erikvanek.com</a>
+      <nav class="lang-switch" aria-label="{{ t.langName }}">
+        {%- for code in ['en', 'cs'] %}
+        {%- if code == lang %}
+        <span class="lang-current" aria-current="true">{{ code | upper }}</span>
+        {%- else %}
+        <a href="{{ other.url if other else i18n[code].home }}" hreflang="{{ code }}" lang="{{ code }}" data-lang-choice="{{ code }}" title="{{ t.switchLabel }}">{{ code | upper }}</a>
+        {%- endif %}
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer wrapper">
+    <a href="mailto:{{ t.email }}">{{ t.email }}</a>
+    <a href="https://www.linkedin.com/in/erikvanek/">LinkedIn</a>
+    <a href="https://github.com/erikvanek/">GitHub</a>
+  </footer>
+  <script>
+    for (const link of document.querySelectorAll('[data-lang-choice]')) {
+      link.addEventListener('click', () => {
+        try { localStorage.setItem('lang', link.dataset.langChoice) } catch {}
+      })
+    }
+  </script>
+</body>
+</html>

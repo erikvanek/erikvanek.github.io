@@ -1,0 +1,7 @@
+[
+  { "name": "Sovia", "href": "https://www.sovia.cz/", "logo": "/img/partners/sovia.png" },
+  { "name": "JINAG", "href": "https://www.jinag.eu/", "logo": "/img/partners/jinag.svg", "invert": true },
+  { "name": "MPSV", "href": "https://www.mpsv.cz/", "logo": "/img/partners/mpsv.png" },
+  { "name": "IQRS", "href": "https://www.iqrs.cz/", "logo": "/img/partners/iqrs.png" },
+  { "name": "Galerie architektury Brno", "href": "https://www.galeriearchitektury.com/", "logo": "/img/partners/gab.png" }
+]
