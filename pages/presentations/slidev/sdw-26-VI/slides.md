@@ -29,12 +29,10 @@ hideInToc: true
 
 # Dnes nás čeká
 
-- **Testování** – jak dopadlo
-- **Design critique** – proč, jak a kdo jak na to
-- **Workshop** – příprava v týmech a crit ve trojicích
-- **Business case a vyprávění** pro závěrečnou prezentaci
-- **Závěrečná prezentace** – co od vás chci
-- **Otázky**
+- **Testování** – jak to šlo?
+- **Design critique** – motivace, přístup & cvičení
+- **Business case a storytelling**
+- **Instrukce pro závěrečné prezentace**
 
 <style>
 .heading-body { display: flex; flex-direction: column; justify-content: center; }
@@ -50,18 +48,6 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 <br/>
 
 🛑 **Nejpozději 18:05 končí úvod.**
--->
-
----
-layout: section-break
----
-
-# Testování
-
-<!--
-<br/>
-
-**Debrief testování <span style="white-space:nowrap">18:05–18:15 (1/2)</span>**
 -->
 
 ---
