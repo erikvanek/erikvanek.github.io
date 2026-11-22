@@ -161,10 +161,10 @@ hideInToc: true
 
 - Usability testování je **evaluativní**, design critique je **spíš generativní**: teď hledáme nové perspektivy
 - Teď divergujeme a hledáme nové perspektivy
-- Otevřené, ale **strukturované** – žádné YOLO
-- Stejně jako u testování rozhoduje příprava: **řekněte předem, jakou zpětnou vazbu chcete** a co je pro vás teď zajímavé otvírat
-- Ptejte se o radu: „Co byste nám poradili k…?“
-- Komentář s **„protože“** se do návrhu opravdu dostane
+- Otevřené, ale **strukturované**
+- Důležitost přípravy
+  - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co vás teď nezajímá
+- Hledáte odpověď na otázku: „Co byste nám doporučili k…?“
 
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
@@ -184,11 +184,15 @@ hideInToc: true
 
 # Tři druhy zpětné vazby
 
+- Na critu uslyšíte spoustu komentářů a každý vám pomůže jinak
+- Liší se tím, jestli z nich poznáte, co s návrhem dělat a proč
+- Jako kritici se snažte dávat hlavně ten třetí druh
+
 ::left::
 
-- **Reakce** – první dojem, pocit z břicha
+- **Reakce** – první dojem, "gut feeling"
 - **Pokyn** – navržená změna bez vysvětlení
-- **Kritika** – posouzení návrhu vůči cíli, s „protože“
+- **Kritika** – posouzení návrhu vůči cíli, ideálně včetně „protože“
 
 ::right::
 
@@ -200,6 +204,7 @@ hideInToc: true
 
 <style>
 .col-left li { margin: 0.5em 0; }
+.col-header ul { margin-bottom: 0.6em; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
 .steps { display: flex; flex-direction: column; gap: 0.6em; }
 .step {
