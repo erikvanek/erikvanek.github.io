@@ -113,7 +113,7 @@ layout: section-break
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/9)</span>**
 -->
 
 ---
@@ -149,7 +149,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/9)</span>**
 -->
 
 ---
@@ -173,7 +173,7 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/9)</span>**
 -->
 
 ---
@@ -222,7 +222,7 @@ li { margin: 0.3em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/9)</span>**
 -->
 
 ---
@@ -239,13 +239,17 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Prezentující shrne problém, cíl a kde v procesu je
-- Řekne, jakou zpětnou vazbu hledá a co je mimo hru
-- Ukáže návrh, krátce a bez obhajoby
-- Kritici se nejdřív ptají, aby návrhu porozuměli
-- Pak kritika vůči cíli, s „protože“
-- Někdo jiný zapisuje, prezentující poslouchá
-- Na konci: co si odnáším a co udělám dál, rozhoduje prezentující
+1. Prezentující shrne problém, cíl a kde v procesu je
+2. Řekne, jakou zpětnou vazbu hledá a co je mimo hru
+3. Krátce ukáže diskutovaný návrh
+4. Kritici se nejdřív ptají, aby návrhu porozuměli
+5. Pak kritika vztažená k cíli
+6. Prezentující shrne získaná zjištění 
+<br>
+<br>
+  - nahrát a přepsat průběh setkání nebo
+  - poznámky píše facilitující či přísedící
+
 
 ::right::
 
@@ -260,7 +264,66 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/9)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Jak nachystat stage
+
+- Pro koho to je a jaký problém řešíte, jedním odstavcem
+- Co potřebujete po critu vědět víc než teď
+- Kde v procesu jste: hrubá skica, nebo skoro hotovo
+- Co je teď zajímavé otvírat a co už je rozhodnuté
+- Dvě až tři konkrétní otázky, na které chcete odpověď
+- Návrh ukažte v kontextu celé cesty, ať kritici vědí, kde jsou
+
+<style>
+li { margin: 0.4em 0; }
+</style>
+
+<!--
+<br/>
+
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (6/9)</span>**
+-->
+
+---
+layout: two-column
+ratio: "50-50"
+hideInToc: true
+---
+
+# Jak se doptávat
+
+::left::
+
+**Kritici, než začnou kritizovat**
+
+- „Co má člověk na tomhle kroku udělat?“
+- „Co tu bylo nejtěžší rozhodnout?“
+- „Proč jste zvolili zrovna tohle?“
+
+::right::
+
+**Prezentující, když slyší reakci nebo pokyn**
+
+- „Proč ti to tak přijde?“
+- „Co by ta změna vyřešila?“
+- „Vůči kterému cíli to vztahuješ?“
+
+<style>
+.col-left li, .col-right li { margin: 0.4em 0; }
+.col-left p, .col-right p { margin-bottom: 0.4em; }
+</style>
+
+<!--
+<br/>
+
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (7/9)</span>**
 -->
 
 ---
@@ -277,7 +340,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (6/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/9)</span>**
 -->
 
 ---
@@ -306,167 +369,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (7/13)</span>**
--->
-
----
-layout: heading-body
-hideInToc: true
----
-
-# GitLab: kodex nahlas
-
-- Facilitátor přečte pravidla nahlas: „Focus on the design work, not the designer“
-- Kontext 5 min, ukázka 10 min, většina času na otázky a kritiku
-- Zpětná vazba se zapíše k práci a **v další iteraci se ukáže, co změnila**
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/13)</span>**
--->
-
----
-layout: two-column
-ratio: "45-55"
-hideInToc: true
----
-
-# Atlassian: Sparring
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-- 2–5 lidí, 15 minut příprava, 30 minut crit
-- **Tichá písemná fáze** na časovač dá prostor i tišším
-- Varianta „Leave the room“: prezentující odejde, kritici píšou otevřeněji
-- Na konci: co udělám dál a kdy se ozvu s další iterací
-
-::right::
-
-<img :src="asset + 'atlassian-sparring-sablona.jpg'" alt="Stránka v Confluence s přehledem sparringu a tabulkou se sloupci What looks good, What could be improved a Questions, vedle videohovor se čtyřmi lidmi" class="fit-img" />
-<div class="credit">Písemná fáze: co funguje, co zlepšit, otázky. <a href="https://www.atlassian.com/team-playbook/plays/sparring">Sparring</a>, <a href="https://www.atlassian.com/team-playbook">Atlassian Team Playbook</a></div>
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/13)</span>**
--->
-
----
-layout: heading-body
-hideInToc: true
----
-
-# GOV.UK: service assessment
-
-- Opak critu: panel specialistů hodnotí službu podle standardu
-- Asi čtyři hodiny, výsledek zelená, oranžová, nebo červená
-- „Do not just focus on the happy path“
-- V critu rozhoduje prezentující, v assessmentu panel
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/13)</span>**
--->
-
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
-
-# Six thinking hats
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-- Celá skupina nosí v jednu chvíli **stejný klobouk**
-- Červený: první dojem, oddělí reakci od kritiky
-- Černý a žlutý: rizika a přínosy vůči cíli
-- Zelený: z kritiky udělá návrh
-- Modrý: hlídá proces
-
-::right::
-
-<img :src="asset + 'six-thinking-hats-nng.jpg'" alt="Tabulka šesti barevných klobouků s popisem: bílý fakta, žlutý přínosy, černý rizika, červený pocity, zelený nápady, modrý řízení procesu" class="fit-img hats-img" />
-<div class="credit">Šest klobouků a k čemu je který. <a href="https://www.debonogroup.com/services/core-programs/six-thinking-hats/">Edward de Bono</a>, <a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Nielsen Norman Group</a></div>
-
-<style>
-.col-left li { margin: 0.4em 0; }
-.col-right { display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.hats-img { max-height: 400px; width: auto; }
-</style>
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (11/13)</span>**
--->
-
----
-layout: two-column
-ratio: "50-50"
-hideInToc: true
----
-
-# Design Studio
-
-<script setup>
-const asset = import.meta.env.BASE_URL
-</script>
-
-::left::
-
-- Kola: **skica, prezentace, kritika, iterace**, každé jen pár minut
-- Kritizovaná skica se hned předělá, takže kritik vidí dopad své poznámky
-- Šestiminutovou skicu nikdo neobhajuje
-- Jde zkombinovat s critem: tým přinese otázku, trojice ji skicuje
-
-::right::
-
-<img :src="asset + 'design-studio-tri-kola-nng.jpg'" alt="Tři skici téže obrazovky v kolech 1, 2 a 3, každá propracovanější než předchozí" class="fit-img" />
-<div class="credit">Tři kola skicování, každé po kritice toho předchozího. <a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Kate Kaplan</a>, <a href="https://www.nngroup.com/">Nielsen Norman Group</a></div>
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (12/13)</span>**
--->
-
----
-layout: heading-body
-hideInToc: true
----
-
-# V čem se liší
-
-| | Kdo rozhoduje | Jak | Co se nese předem |
-|---|---|---|---|
-| Figma, GitLab, Intercom | prezentující | naživo, v týmu | cíl a otázky |
-| Atlassian | prezentující | potichu a písemně | stránka s kontextem |
-| GOV.UK | panel | podle standardu | celá služba |
-| Design Studio | skupina | tvorbou v kolech | jen zadání |
-
-<style>
-table { font-size: 0.8em; }
-</style>
-
-<!--
-<br/>
-
-**Úvod do critu: souhrn <span style="white-space:nowrap">18:15–18:30 (13/13)</span>**
-
-<br/>
-
-🛑 **Nejpozději 18:30 končí úvod do critu.**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/9)</span>**
 -->
 
 ---
