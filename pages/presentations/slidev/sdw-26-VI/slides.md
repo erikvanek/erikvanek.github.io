@@ -390,8 +390,7 @@ const asset = import.meta.env.BASE_URL
 -->
 
 ---
-layout: two-column
-ratio: "50-50"
+layout: heading-body
 hideInToc: true
 clicks: 3
 ---
@@ -408,17 +407,6 @@ const cards = [
 ]
 </script>
 
-::left::
-
-- Cíl je všude stejný, formát si tým vybírá podle fáze návrhu a lidí
-- **Autor odejde z místnosti** (Atlassian): kritici píšou otevřeněji, autor si to přečte potom
-- **Braintrust** (Pixar): kolegové dávají režisérovi poznámky, rozhodnutí ale zůstává na něm
-- **Design Studio**: kritika skicou místo slov, každé kolo jen pár minut
-- **Service assessment** (GOV.UK): panel hodnotí službu podle standardu, výsledek je semafor
-- **FYI crit** (Figma): jen ukázat, na čem dělám, zpětná vazba se nečeká
-
-::right::
-
 <div class="stack">
   <div v-for="(c, i) in cards" :key="c.img" class="card" :class="{ fit: c.fit }"
     :style="i < $clicks
@@ -430,11 +418,10 @@ const cards = [
 <div class="credit">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div>
 
 <style>
-.col-left li { margin: 0.3em 0; }
-.col-right { display: flex; flex-direction: column; justify-content: center; }
-.stack { position: relative; height: 330px; }
+.stack { position: relative; height: 390px; margin-left: 80px; }
+.credit { text-align: center; }
 .card {
-  position: absolute; top: 40px; right: 0; width: 76%; height: 270px;
+  position: absolute; top: 30px; left: 0; right: 0; margin: 0 auto; width: 560px; height: 340px;
   border-radius: 18px; overflow: hidden; background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
   transition: transform 0.45s ease, opacity 0.45s ease;
