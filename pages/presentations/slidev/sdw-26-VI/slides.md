@@ -421,10 +421,10 @@ const cards = [
 <div class="credit">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div>
 
 <style>
-.stack { position: relative; height: 380px; margin-left: 120px; }
-.credit { text-align: center; }
+.stack { position: relative; height: 404px; margin: -10px 0 0 150px; }
+.credit { text-align: center; margin-top: -6px; }
 .card {
-  position: absolute; top: 12px; left: 0; right: 0; margin: 0 auto; width: 540px; height: 320px;
+  position: absolute; top: 6px; left: 0; right: 0; margin: 0 auto; width: 620px; height: 368px;
   border-radius: 18px; overflow: hidden; background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
   transition: transform 0.45s ease, opacity 0.45s ease;
