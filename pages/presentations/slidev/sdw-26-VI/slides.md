@@ -178,7 +178,7 @@ hideInToc: true
 ::left::
 
 - **Reakce** – první dojem, pocit z břicha
-- **Direktiva** – navržená změna bez vysvětlení
+- **Pokyn** – navržená změna bez vysvětlení
 - **Kritika** – posouzení návrhu vůči cíli, s „protože“
 
 <div class="credit">Podle knihy <a href="https://oreilly.com/library/view/~/9781491902394">Discussing Design</a> Adama Connora a Aarona Irizarryho</div>
@@ -213,17 +213,31 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # Figma: menu formátů
+
+::left::
 
 - Šest formátů: standardní, jam, párový design, tichý, výtisky na zdi, FYI
 - Prezentující si připraví slide **„jakou zpětnou vazbu hledám a jakou ne“**
 - Kolem stolu jeden po druhém, protože popcorn odměňuje nejhlasitější
 
 <div class="credit"><a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
+
+::right::
+
+<div class="viz-card">
+  <div class="viz-card-title">Jakou zpětnou vazbu hledám</div>
+  <div class="viz-yes">✓ Je jasné, co dělá krok 3?</div>
+  <div class="viz-yes">✓ Která ze dvou variant víc sedí cíli?</div>
+  <div class="viz-card-title">Jakou nehledám</div>
+  <div class="viz-no">✗ Barvy a písmo</div>
+  <div class="viz-no">✗ Jestli to celé dělat</div>
+</div>
 
 <!--
 <br/>
@@ -252,17 +266,34 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # GitLab: kodex nahlas
+
+::left::
 
 - Facilitátor přečte pravidla nahlas: „Focus on the design work, not the designer“
 - Kontext 5 min, ukázka 10 min, většina času na otázky a kritiku
 - Zpětná vazba se zapíše k práci a **v další iteraci se ukáže, co změnila**
 
 <div class="credit"><a href="https://handbook.gitlab.com/handbook/upstream-studios/product-design/workflow/">Product design workflow</a>, <a href="https://handbook.gitlab.com/">GitLab Handbook</a></div>
+
+::right::
+
+<div class="viz-flow">
+  <div class="viz-box">Pravidla nahlas</div>
+  <div class="viz-arrow">↓</div>
+  <div class="viz-box">Kontext a ukázka</div>
+  <div class="viz-arrow">↓</div>
+  <div class="viz-box viz-strong">Otázky a kritika</div>
+  <div class="viz-arrow">↓</div>
+  <div class="viz-box">Zápis k práci</div>
+  <div class="viz-arrow">↓</div>
+  <div class="viz-box viz-accent">Další iterace: co se díky critu změnilo</div>
+</div>
 
 <!--
 <br/>
@@ -271,11 +302,14 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # Atlassian: Sparring
+
+::left::
 
 - 2–5 lidí, 15 minut příprava, 30 minut crit
 - **Tichá písemná fáze** na časovač dá prostor i tišším
@@ -283,6 +317,15 @@ hideInToc: true
 - Na konci: co udělám dál a kdy se ozvu s další iterací
 
 <div class="credit"><a href="https://www.atlassian.com/team-playbook/plays/sparring">Sparring</a>, <a href="https://www.atlassian.com/team-playbook">Atlassian Team Playbook</a></div>
+
+::right::
+
+<div class="viz-time">
+  <div class="viz-seg" style="flex:15">Příprava<br><small>15 min</small></div>
+  <div class="viz-seg viz-quiet" style="flex:10">Ticho, píše se<br><small>na časovač</small></div>
+  <div class="viz-seg viz-strong" style="flex:20">Diskuse<br><small>zbytek z 30 min</small></div>
+</div>
+<div class="viz-note">→ co udělám dál a kdy se ozvu</div>
 
 <!--
 <br/>
@@ -311,11 +354,14 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # GOV.UK: service assessment
+
+::left::
 
 - Opak critu: panel specialistů hodnotí službu podle standardu
 - Asi čtyři hodiny, výsledek zelená, oranžová, nebo červená
@@ -323,6 +369,15 @@ hideInToc: true
 - V critu rozhoduje prezentující, v assessmentu panel
 
 <div class="credit"><a href="https://www.gov.uk/service-manual/service-assessments/how-service-assessments-work">How service assessments work</a>, <a href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></div>
+
+::right::
+
+<div class="viz-rag">
+  <div><span class="viz-light" style="background:#43a047"></span>Splňuje standard</div>
+  <div><span class="viz-light" style="background:#fb8c00"></span>Splňuje s výhradami</div>
+  <div><span class="viz-light" style="background:#e53935"></span>Nesplňuje</div>
+</div>
+<div class="viz-note">Rozhoduje panel</div>
 
 <!--
 <br/>
@@ -373,11 +428,14 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # Design Studio
+
+::left::
 
 - Kola: **skica, prezentace, kritika, iterace**, každé jen pár minut
 - Kritizovaná skica se hned předělá, takže kritik vidí dopad své poznámky
@@ -385,6 +443,16 @@ hideInToc: true
 - Jde zkombinovat s critem: tým přinese otázku, trojice ji skicuje
 
 <div class="credit"><a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Kate Kaplan</a>, <a href="https://www.nngroup.com/">Nielsen Norman Group</a></div>
+
+::right::
+
+<div class="viz-cycle">
+  <div class="viz-box">Skica</div>
+  <div class="viz-box">Prezentace</div>
+  <div class="viz-box">Iterace</div>
+  <div class="viz-box viz-strong">Kritika</div>
+  <div class="viz-loop">↻</div>
+</div>
 
 <!--
 <br/>
