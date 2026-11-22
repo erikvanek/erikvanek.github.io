@@ -408,7 +408,7 @@ const cards = [
   { img: 'stack-figma-vytisky.jpg', alt: 'Návrhy vytištěné a vylepené na skleněné stěně, prezentující stojí vedle nich', cap: 'Figma: crit nad výtisky na zdi.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -4 },
   { img: 'stack-figma-par.jpg', alt: 'Dva designéři nad jedním notebookem', cap: 'Figma: párový design u jednoho notebooku.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: 3 },
   { img: 'stack-atlassian-lepiky.jpg', alt: 'Tabule se třemi sloupci co funguje, co zlepšit a otázky, plná barevných lepíků', cap: 'Atlassian: sparring, každý potichu píše lepíky do tří sloupců.', who: 'Sparring', whoUrl: 'https://www.atlassian.com/team-playbook/plays/sparring', site: 'Atlassian Team Playbook', siteUrl: 'https://www.atlassian.com/team-playbook', rot: -2 },
-  { img: 'stack-nng-zapis.jpg', alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
+  { img: 'stack-nng-zapis.jpg', fit: true, alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
 ]
 </script>
 
@@ -424,8 +424,10 @@ const cards = [
 ::right::
 
 <div class="stack">
-  <div v-for="(c, i) in cards" :key="c.img" class="card"
-    :style="{ zIndex: i === $clicks ? 10 : (i > $clicks ? 6 - (i - $clicks) : 1), transform: i === $clicks ? 'rotate(0deg) scale(1)' : `rotate(${c.rot}deg) scale(0.92)`, opacity: i < $clicks ? 0.35 : 1 }">
+  <div v-for="(c, i) in cards" :key="c.img" class="card" :class="{ fit: c.fit }"
+    :style="i < $clicks
+      ? { zIndex: 20, opacity: 0, transform: 'translate(40%, 8%) rotate(12deg)' }
+      : { zIndex: 10 - (i - $clicks), opacity: 1, transform: `translate(${-(i - $clicks) * 14}%, ${-(i - $clicks) * 7}%) rotate(${(i - $clicks) === 0 ? 3 : -(i - $clicks) * 4}deg) scale(${1 - (i - $clicks) * 0.06})` }">
     <img :src="asset + c.img" :alt="c.alt" />
   </div>
 </div>
@@ -434,15 +436,15 @@ const cards = [
 <style>
 .col-left li { margin: 0.3em 0; }
 .col-right { display: flex; flex-direction: column; justify-content: center; }
-.stack { position: relative; height: 310px; }
+.stack { position: relative; height: 330px; }
 .card {
-  position: absolute; inset: 0; margin: auto; width: 92%; height: 290px;
-  background: #fff; padding: 8px; box-sizing: border-box;
-  box-shadow: 0 6px 18px rgba(0, 0, 40, 0.22);
-  display: flex; align-items: center; justify-content: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  position: absolute; top: 40px; right: 0; width: 76%; height: 270px;
+  border-radius: 18px; overflow: hidden; background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
+  transition: transform 0.45s ease, opacity 0.45s ease;
 }
-.card img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card.fit img { object-fit: contain; padding: 10px; box-sizing: border-box; }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
 </style>
 
