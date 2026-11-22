@@ -113,15 +113,22 @@ layout: section-break
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/12)</span>**
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # Proč design critique
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
 
 - Cílem je **dobrá zpětná vazba**: nové myšlenky, inspirace, věci k promyšlení
 - Uvnitř týmu i s uživateli, obojí má své pro a proti
@@ -129,14 +136,20 @@ hideInToc: true
 - Další způsob, jak **sdílet práci** s ostatními
 - Řešení se nehledá na místě, rozhodujete až potom vy
 
+::right::
+
+<img :src="asset + 'gds-crit.jpg'" alt="Tři lidé u stolu se skloní nad notebookem, jeden ukazuje propiskou na obrazovku" class="fit-img" />
+<div class="credit">Crit v GDS: kolegové nad rozpracovaným návrhem. <a href="https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/">Design in government</a>, <a href="https://designnotes.blog.gov.uk/">GOV.UK blog</a></div>
+
 <style>
-li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
 </style>
 
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/12)</span>**
 -->
 
 ---
@@ -160,7 +173,7 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/12)</span>**
 -->
 
 ---
@@ -203,7 +216,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/13)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/12)</span>**
 -->
 
 ---
@@ -214,6 +227,10 @@ hideInToc: true
 
 # Figma: menu formátů
 
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
 ::left::
 
 - Šest formátů: standardní, jam, párový design, tichý, výtisky na zdi, FYI
@@ -222,19 +239,42 @@ hideInToc: true
 
 ::right::
 
-<div class="viz-card">
-  <div class="viz-card-title">Jakou zpětnou vazbu hledám</div>
-  <div class="viz-yes">✓ Je jasné, co dělá krok 3?</div>
-  <div class="viz-yes">✓ Která ze dvou variant víc sedí cíli?</div>
-  <div class="viz-card-title">Jakou nehledám</div>
-  <div class="viz-no">✗ Barvy a písmo</div>
-  <div class="viz-no">✗ Jestli to celé dělat</div>
-</div>
+<img :src="asset + 'figma-crit.jpg'" alt="Lidé sedí v kruhu na critu, jeden zvedá ruku a mluví" class="fit-img" />
+<div class="credit">Crit ve Figmě. <a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (5/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (5/12)</span>**
+-->
+
+---
+layout: two-column
+ratio: "50-50"
+hideInToc: true
+---
+
+# Intercom: problém v jednom odstavci
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+- Problém dostane jméno a jeden odstavec srozumitelné češtiny
+- Ideálně několik **radikálně odlišných variant**, každá pojmenovaná zvlášť
+- Prezentující řekne, kterou favorizuje a proč
+
+::right::
+
+<img :src="asset + 'intercom-sablona-critu.jpg'" alt="Dvě stránky šablony: vlevo Problem title s odstavcem o problému a tabulkou jobs, vpravo Concept A s návrhem, dopady, obrazovkou, pro a proti a otevřenými otázkami" class="fit-img" />
+<div class="credit">Šablona na crit: vlevo problém, vpravo jedna varianta. <a href="https://www.intercom.com/blog/running-productive-design-critiques/">Gustavs Cirulis</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
+
+<!--
+<br/>
+
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (6/12)</span>**
 -->
 
 ---
@@ -242,60 +282,29 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Intercom: problém v jednom odstavci
-
-- Problém dostane jméno a jeden odstavec srozumitelné češtiny
-- Ideálně několik **radikálně odlišných variant**, každá pojmenovaná zvlášť
-- Prezentující řekne, kterou favorizuje a proč
-- „You might dismiss a good solution just because it was coupled with a bad one.“
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (6/13)</span>**
--->
-
----
-layout: two-column
-ratio: "55-45"
-hideInToc: true
----
-
 # GitLab: kodex nahlas
-
-::left::
 
 - Facilitátor přečte pravidla nahlas: „Focus on the design work, not the designer“
 - Kontext 5 min, ukázka 10 min, většina času na otázky a kritiku
 - Zpětná vazba se zapíše k práci a **v další iteraci se ukáže, co změnila**
 
-::right::
-
-<div class="viz-flow">
-  <div class="viz-box">Pravidla nahlas</div>
-  <div class="viz-arrow">↓</div>
-  <div class="viz-box">Kontext a ukázka</div>
-  <div class="viz-arrow">↓</div>
-  <div class="viz-box viz-strong">Otázky a kritika</div>
-  <div class="viz-arrow">↓</div>
-  <div class="viz-box">Zápis k práci</div>
-  <div class="viz-arrow">↓</div>
-  <div class="viz-box viz-accent">Další iterace: co se díky critu změnilo</div>
-</div>
-
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (7/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (7/12)</span>**
 -->
 
 ---
 layout: two-column
-ratio: "55-45"
+ratio: "45-55"
 hideInToc: true
 ---
 
 # Atlassian: Sparring
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
 ::left::
 
@@ -306,17 +315,13 @@ hideInToc: true
 
 ::right::
 
-<div class="viz-time">
-  <div class="viz-seg" style="flex:15">Příprava<br><small>15 min</small></div>
-  <div class="viz-seg viz-quiet" style="flex:10">Ticho, píše se<br><small>na časovač</small></div>
-  <div class="viz-seg viz-strong" style="flex:20">Diskuse<br><small>zbytek z 30 min</small></div>
-</div>
-<div class="viz-note">→ co udělám dál a kdy se ozvu</div>
+<img :src="asset + 'atlassian-sparring-sablona.jpg'" alt="Stránka v Confluence s přehledem sparringu a tabulkou se sloupci What looks good, What could be improved a Questions, vedle videohovor se čtyřmi lidmi" class="fit-img" />
+<div class="credit">Písemná fáze: co funguje, co zlepšit, otázky. <a href="https://www.atlassian.com/team-playbook/plays/sparring">Sparring</a>, <a href="https://www.atlassian.com/team-playbook">Atlassian Team Playbook</a></div>
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/12)</span>**
 -->
 
 ---
@@ -324,17 +329,17 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Anthropic: kritika přes používání
+# GOV.UK: service assessment
 
-- Jak vypadá jejich crit, veřejně popsané není
-- Prototyp se pustí do interní bety a sbírá se zpětná vazba z používání
-- Designér si nechá vygenerovat **15 verzí jednoho flow** a sbírá k nim reakce kolegů
-- „We're not too precious about our work.“
+- Opak critu: panel specialistů hodnotí službu podle standardu
+- Asi čtyři hodiny, výsledek zelená, oranžová, nebo červená
+- „Do not just focus on the happy path“
+- V critu rozhoduje prezentující, v assessmentu panel
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/12)</span>**
 -->
 
 ---
@@ -343,37 +348,11 @@ ratio: "55-45"
 hideInToc: true
 ---
 
-# GOV.UK: service assessment
-
-::left::
-
-- Opak critu: panel specialistů hodnotí službu podle standardu
-- Asi čtyři hodiny, výsledek zelená, oranžová, nebo červená
-- „Do not just focus on the happy path“
-- V critu rozhoduje prezentující, v assessmentu panel
-
-::right::
-
-<div class="viz-rag">
-  <div><span class="viz-light" style="background:#43a047"></span>Splňuje standard</div>
-  <div><span class="viz-light" style="background:#fb8c00"></span>Splňuje s výhradami</div>
-  <div><span class="viz-light" style="background:#e53935"></span>Nesplňuje</div>
-</div>
-<div class="viz-note">Rozhoduje panel</div>
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/13)</span>**
--->
-
----
-layout: two-column
-ratio: "50-50"
-hideInToc: true
----
-
 # Six thinking hats
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
 ::left::
 
@@ -385,35 +364,32 @@ hideInToc: true
 
 ::right::
 
-<div class="hats">
-  <div><span class="dot" style="background:#ffffff"></span>Bílý: fakta</div>
-  <div><span class="dot" style="background:#e53935"></span>Červený: pocity</div>
-  <div><span class="dot" style="background:#222222"></span>Černý: rizika</div>
-  <div><span class="dot" style="background:#fdd835"></span>Žlutý: přínosy</div>
-  <div><span class="dot" style="background:#43a047"></span>Zelený: nápady</div>
-  <div><span class="dot" style="background:#1e63d6"></span>Modrý: proces</div>
-</div>
+<img :src="asset + 'six-thinking-hats-nng.jpg'" alt="Tabulka šesti barevných klobouků s popisem: bílý fakta, žlutý přínosy, černý rizika, červený pocity, zelený nápady, modrý řízení procesu" class="fit-img hats-img" />
+<div class="credit">Šest klobouků a k čemu je který. <a href="https://www.debonogroup.com/services/core-programs/six-thinking-hats/">Edward de Bono</a>, <a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Nielsen Norman Group</a></div>
 
 <style>
 .col-left li { margin: 0.4em 0; }
-.col-right { display: flex; flex-direction: column; justify-content: center; }
-.hats div { display: flex; align-items: center; gap: 0.6em; margin: 0.35em 0; }
-.dot { width: 1.1em; height: 1.1em; border-radius: 50%; border: 2px solid #222; flex-shrink: 0; }
+.col-right { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.hats-img { max-height: 400px; width: auto; }
 </style>
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (11/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/12)</span>**
 -->
 
 ---
 layout: two-column
-ratio: "55-45"
+ratio: "50-50"
 hideInToc: true
 ---
 
 # Design Studio
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
 
 ::left::
 
@@ -424,18 +400,13 @@ hideInToc: true
 
 ::right::
 
-<div class="viz-cycle">
-  <div class="viz-box">Skica</div>
-  <div class="viz-box">Prezentace</div>
-  <div class="viz-box">Iterace</div>
-  <div class="viz-box viz-strong">Kritika</div>
-  <div class="viz-loop">↻</div>
-</div>
+<img :src="asset + 'design-studio-tri-kola-nng.jpg'" alt="Tři skici téže obrazovky v kolech 1, 2 a 3, každá propracovanější než předchozí" class="fit-img" />
+<div class="credit">Tři kola skicování, každé po kritice toho předchozího. <a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Kate Kaplan</a>, <a href="https://www.nngroup.com/">Nielsen Norman Group</a></div>
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (12/13)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (11/12)</span>**
 -->
 
 ---
@@ -449,7 +420,6 @@ hideInToc: true
 |---|---|---|---|
 | Figma, GitLab, Intercom | prezentující | naživo, v týmu | cíl a otázky |
 | Atlassian | prezentující | potichu a písemně | stránka s kontextem |
-| Anthropic | nedoloženo | používáním, asynchronně | fungující prototyp |
 | GOV.UK | panel | podle standardu | celá služba |
 | Design Studio | skupina | tvorbou v kolech | jen zadání |
 
@@ -460,7 +430,7 @@ table { font-size: 0.8em; }
 <!--
 <br/>
 
-**Úvod do critu: souhrn <span style="white-space:nowrap">18:15–18:30 (13/13)</span>**
+**Úvod do critu: souhrn <span style="white-space:nowrap">18:15–18:30 (12/12)</span>**
 
 <br/>
 
