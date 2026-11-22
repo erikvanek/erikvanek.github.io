@@ -108,7 +108,7 @@ ratio: "55-45"
 hideInToc: true
 ---
 
-# Proč design critique
+# Design crit/critique
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -116,11 +116,13 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Cílem je **dobrá zpětná vazba**: nové myšlenky, inspirace, věci k promyšlení
-- Uvnitř týmu i s uživateli, obojí má své pro a proti
-- Posiluje spolupráci napříč obory a týmy
-- Další způsob, jak **sdílet práci** s ostatními
-- Řešení se nehledá na místě, rozhodujete až potom vy
+- Další z formátů pro **sběr zpětné vazby a nápadů**
+- Neexistuje jediný správný formát
+  - V rámci týmu nebo s uživateli
+  - Online X osobně
+  - Asynchronně X synchronně
+  - Hotový návrh X koncepty X varianty
+- Nejvíce vás posune **pravidelnost**
 
 ::right::
 
@@ -145,12 +147,14 @@ hideInToc: true
 
 # Mindset
 
-- Usability testování je **evaluativní**, design critique je **spíš generativní**: teď hledáme nové perspektivy
-- Teď divergujeme a hledáme nové perspektivy
-- Otevřené, ale **strukturované**
+- Usability testování je **evaluativní**, design critique je **spíš generativní**
+  - Tj. hledáme nové perspektivy a nápady
+- Otevřený formát, ale zároveň **strukturované**
 - Důležitost přípravy
-  - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co vás teď nezajímá
+  - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co taky co teď nepotřebujete
 - Hledáte odpověď na otázku: „Co byste nám doporučili k…?“
+- Při skupinové práci pozor na dominantní hlasy
+  - Můžete řešit např. pomocí brainwritingu
 
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
@@ -170,8 +174,9 @@ hideInToc: true
 # Tři druhy zpětné vazby
 
 - Během crit uslyšíte spoustu komentářů a každý pomůže jinak
-- Kniha *Discussing Design* je dělí podle toho, jestli z nich poznáte, dělat dál
-- Snažte se přinášet a sbírat zejména ten třetí typ
+- Kniha *Discussing Design* je dělí podle toho, jak s nimi můžete pracovat dál
+- Snažte se sbírat a sdílet zejména třetí typ – kritiku
+  - Dobrou facilitací můžete z Reakce dostat Kritiku
 
 <div class="fb">
   <div class="fb-h">Druh</div>
@@ -185,7 +190,7 @@ hideInToc: true
   <div class="fb-q">„Přidejte tam potvrzení.“</div>
   <div class="fb-type fb-key">Kritika</div>
   <div class="fb-key">Posouzení návrhu vůči cíli, ideálně včetně „protože“</div>
-  <div class="fb-q fb-key">„Jestli je cílem, aby člověk věděl, že má jízdenku, tak na kroku 3 chybí potvrzení, protože…“</div>
+  <div class="fb-q fb-key">„Jestli je cílem, aby člověk porozuměl procesu, tak na kroku 3 chybí potvrzení, protože…“</div>
 </div>
 
 <style>
@@ -226,11 +231,11 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 1. Prezentující shrne problém, cíl a kde v procesu je
-2. Řekne, jakou zpětnou vazbu hledá a co je mimo hru
-3. Krátce ukáže diskutovaný návrh
+2. Řekne, co jej teď zajímá a co ne
+3. Krátce projde diskutovaný návrh + klíčová rozhodnutí, které za ním jsou
 4. Kritici se nejdřív ptají, aby návrhu porozuměli
-5. Pak kritika vztažená k cíli
-6. Prezentující shrne získaná zjištění 
+5. Doptávání se, "stavění na nápadech ostatních"
+5. Shrnutí výsledků + případně co budou další kroky
 <br>
 <br>
   - nahrát a přepsat průběh setkání nebo
@@ -258,15 +263,14 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Jak nachystat stage
+# Úvod a nastavení pravidel
 
-- Pro koho to je a jaký problém řešíte, jedním odstavcem
-- Co potřebujete po critu vědět víc než teď
-- Kde v procesu jste: hrubá skica, nebo skoro hotovo
-- Co je teď zajímavé otvírat a co už je rozhodnuté
-- Dvě až tři konkrétní otázky, na které chcete odpověď
-- Návrh ukažte v kontextu celé cesty, ať kritici vědí, kde jsou
-
+1. Popište jaký problém řešíte a kdo je cílová skupina
+2. Popište kde jste v procesu a co chete probírat:
+  - Hrubá skica X celkový průchod X varianty X interakční design X ...
+3. Jasně rozliště co **chcete a nechcete** řešit
+4. Popište několik témat nad kterými si lámete hlavu a jejichž zodpovězení vám teď pomůže
+5. Stručně ukažte váš návrh tak, aby mu účastníci porozuměli
 <style>
 li { margin: 0.4em 0; }
 </style>
@@ -282,25 +286,29 @@ layout: two-column
 ratio: "50-50"
 hideInToc: true
 ---
-
 # Jak se doptávat
+- Po představení návrhu přichází na řadu diskuze
+- Dobrá facilitace a **kladení správných otázek** jsou klíčové pro úspěch
+- Dobrou zpětnou vazbu předáte i položením správně položené otázky!
+- Při prezentaci a facilitaci dejte pozor, abyste neobhajovali své návrhy
+
+<br>
 
 ::left::
 
-**Prezentující, když slyší reakci nebo pokyn**
+**Otázky pro prezentující**
 
-- „Proč ti to tak přijde?“
-- „Co by ta změna vyřešila?“
-- „Vůči kterému cíli to vztahuješ?“
+- „Co by uživateli přinesla změna, kterou navrhuješ?“
+- „Máš příklad nějakého produktu, kde to funguje lépe?“
+- „Můžeš svůj návrh rychle načrtnout?“
 
 ::right::
 
-**Kritici, než začnou kritizovat**
+**Otázky pro kritizující**
 
-- „Co má člověk na tomhle kroku udělat?“
+- „Co má uživatel v tomto kroku udělat?“
+- „Proč jste zvolili zrovna tuto variantu?“
 - „Co tu bylo nejtěžší rozhodnout?“
-- „Proč jste zvolili zrovna tohle?“
-
 <style>
 .col-left li, .col-right li { margin: 0.4em 0; }
 .col-left p, .col-right p { margin-bottom: 0.4em; }
@@ -326,9 +334,11 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Problém dostane jméno a jeden odstavec srozumitelné češtiny
-- Ideálně několik **radikálně odlišných variant**, každá pojmenovaná zvlášť
-- Prezentující řekne, kterou favorizuje a proč
+- Problém pojmenujte a popište jedním odstavcem, kterému rozumí i člověk mimo tým
+- Přidejte situace uživatelů ve tvaru „Když…, chci…, abych…“
+- Přineste několik opravdu odlišných variant a každou pojmenujte
+- U každé varianty sepište, co je na ní dobré, co špatné a co zůstává otevřené
+- Řekněte, kterou variantu favorizujete a proč
 
 ::right::
 
@@ -357,11 +367,9 @@ const asset = import.meta.env.BASE_URL
 
 - Kontext 10–15 min, doptávání 2–5 min, zpětná vazba 10 min a víc
 - Na začátku slide **„jakou zpětnou vazbu hledám a jakou ne“**
-- Prezentující řekne, jestli se smí skákat do řeči
-- Kolem stolu po jednom, asi 2 min na člověka, kdo nemá co dodat, řekne „pass“
-- Prezentující se neobhajuje, poděkuje a odpovědět může později
+- Kolem stolu po jednom, kdo nemá co dodat, řekne „pass“
+- Prezentující se neobhajuje, jen poděkuje
 - O roadmapě se na critu nerozhoduje
-- Na jiné situace mají další formáty: jam, párový design, tichý crit, výtisky, FYI
 
 ::right::
 
