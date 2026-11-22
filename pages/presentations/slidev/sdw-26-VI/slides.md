@@ -322,7 +322,7 @@ hideInToc: true
 
 ---
 layout: two-column
-ratio: "40-60"
+ratio: "55-45"
 hideInToc: true
 ---
 
