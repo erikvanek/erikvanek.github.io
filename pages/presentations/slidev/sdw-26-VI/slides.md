@@ -372,8 +372,8 @@ const asset = import.meta.env.BASE_URL
 
 ::right::
 
-<img :src="asset + 'figma-poznamky-v-souboru.jpg'" alt="Sdílený soubor ve Figmě s několika variantami obrazovek, kurzory kolegů se jmény a žlutými lepíky s poznámkami u návrhů" class="fit-img" />
-<div class="credit">Kritici ve sdíleném souboru nechávají poznámky přímo u návrhu. <a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
+<img :src="asset + 'figma-lepik-u-obrazovky.jpg'" alt="Notebook s navrhovanou obrazovkou a vedle ní žlutá poznámka kritika" class="fit-img" />
+<div class="credit">Poznámka kritika leží přímo vedle obrazovky, ke které patří. <a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
 
 <style>
 .col-left li { margin: 0.25em 0; }
