@@ -370,7 +370,7 @@ const asset = import.meta.env.BASE_URL
   2. Doplňující otázky účastníků 2–5 min
   3. Zpětná vazba 10 min a víc
 - Na začátku popis **„jakou zpětnou vazbu hledám a jakou ne“**
-- Předem řekněte, jestli se smí skákat do řeči
+- Předem řečeno, jestli se smí skákat do řeči
 - Prezentující neobhajuje jednotlivá řešení, může vysvětlit důležitá rozhodnutí
 
 ::right::
@@ -396,7 +396,7 @@ hideInToc: true
 clicks: 3
 ---
 
-# Jeden správný přístup neexistuje
+# Neexistuje "ten správný" formát
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -410,12 +410,12 @@ const cards = [
 
 ::left::
 
-- Každý tým si crit skládá po svém, podle lidí a fáze projektu
-- Liší se, kdo rozhoduje: prezentující, skupina, nebo panel
-- Naživo kolem stolu, potichu na lepíky, nebo na dálku
-- Nad výtisky, ve sdíleném souboru, nebo u jednoho notebooku
-- Někde zapisuje kolega, jinde jde shrnutí do Slacku
-- Společné mají cíl, otázky předem a „protože“
+- Cíl je všude stejný, formát si tým vybírá podle fáze návrhu a lidí
+- **Nad výtisky na zdi**: hodně variant vedle sebe, kritici chodí kolem a lepí lepíky
+- **Ve dvojici**: rychlá zpětná vazba přímo při práci, bez plánované schůzky
+- **Potichu na lepíky**: každý nejdřív píše sám, ke slovu se dostanou i tišší
+- **Potichu ve sdíleném souboru**: hodně komentářů naráz, funguje i na dálku
+- **Zápis do tabulky**: ke každému návrhu poznámky a otázky, ke kterým se tým vrátí
 
 ::right::
 
