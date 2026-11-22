@@ -124,14 +124,26 @@ hideInToc: true
 
 # Proč design critique
 
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
 - Cílem je **dobrá zpětná vazba**: nové myšlenky, inspirace, věci k promyšlení
 - Uvnitř týmu i s uživateli, obojí má své pro a proti
 - Posiluje spolupráci napříč obory a týmy
 - Další způsob, jak **sdílet práci** s ostatními
 - Řešení se nehledá na místě, rozhodujete až potom vy
 
+::right::
+
+<img :src="asset + 'gds-crit.jpg'" alt="Tři lidé u stolu nad notebookem, jeden ukazuje propiskou na obrazovku" class="fit-img" />
+<div class="credit">Crit v GDS: kolegové nad rozpracovaným návrhem. <a href="https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/">Design in government</a>, <a href="https://designnotes.blog.gov.uk/">GOV.UK blog</a></div>
+
 <style>
-li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
 </style>
 
 <!--
@@ -208,8 +220,7 @@ hideInToc: true
 -->
 
 ---
-layout: two-column
-ratio: "55-45"
+layout: heading-body
 hideInToc: true
 ---
 
