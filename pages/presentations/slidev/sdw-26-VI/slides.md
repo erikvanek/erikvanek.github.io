@@ -341,7 +341,7 @@ const asset = import.meta.env.BASE_URL
 
 ::right::
 
-<img :src="asset + 'intercom-user-vs-job-story.png'" alt="Ručně kreslená user story As a, I want to, So that: persona je označená jako irelevantní, akce jako předpoklad a celé jako příliš mnoho předpokladů" class="fit-img" />
+<img :src="asset + 'intercom-user-vs-job-story.png'" alt="Ručně kreslená user story As a, I want to, So that: persona je označená jako irelevantní, akce jako předpoklad a celé jako příliš mnoho předpokladů" class="fit-img" style="width: 80%; margin: 0 auto;" />
 <div class="credit">User story stojí na personě a předpokladech, job story začíná situací. <a href="https://www.intercom.com/blog/using-job-stories-design-features-ui-ux/">Alan Klement</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
 
 <!--
