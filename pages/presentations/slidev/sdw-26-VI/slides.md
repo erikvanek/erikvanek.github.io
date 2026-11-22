@@ -301,19 +301,19 @@ hideInToc: true
 
 ::left::
 
-**Kritici, než začnou kritizovat**
-
-- „Co má člověk na tomhle kroku udělat?“
-- „Co tu bylo nejtěžší rozhodnout?“
-- „Proč jste zvolili zrovna tohle?“
-
-::right::
-
 **Prezentující, když slyší reakci nebo pokyn**
 
 - „Proč ti to tak přijde?“
 - „Co by ta změna vyřešila?“
 - „Vůči kterému cíli to vztahuješ?“
+
+::right::
+
+**Kritici, než začnou kritizovat**
+
+- „Co má člověk na tomhle kroku udělat?“
+- „Co tu bylo nejtěžší rozhodnout?“
+- „Proč jste zvolili zrovna tohle?“
 
 <style>
 .col-left li, .col-right li { margin: 0.4em 0; }
