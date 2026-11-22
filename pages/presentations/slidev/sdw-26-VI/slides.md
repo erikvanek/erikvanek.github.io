@@ -356,15 +356,36 @@ const asset = import.meta.env.BASE_URL
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
-# Figma: menu formátů
+# Figma: standardní crit
 
-- Šest formátů: standardní, jam, párový design, tichý, výtisky na zdi, FYI
-- Prezentující si připraví slide **„jakou zpětnou vazbu hledám a jakou ne“**
-- Kolem stolu jeden po druhém, protože popcorn odměňuje nejhlasitější
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+- Kontext 10–15 min, doptávání 2–5 min, zpětná vazba 10 min a víc
+- Na začátku slide **„jakou zpětnou vazbu hledám a jakou ne“**
+- Prezentující řekne, jestli se smí skákat do řeči
+- Kolem stolu po jednom, asi 2 min na člověka, kdo nemá co dodat, řekne „pass“
+- Prezentující se neobhajuje, poděkuje a odpovědět může později
+- O roadmapě se na critu nerozhoduje
+- Na jiné situace mají další formáty: jam, párový design, tichý crit, výtisky, FYI
+
+::right::
+
+<img :src="asset + 'figma-poznamky-v-souboru.jpg'" alt="Sdílený soubor ve Figmě s několika variantami obrazovek, kurzory kolegů se jmény a žlutými lepíky s poznámkami u návrhů" class="fit-img" />
+<div class="credit">Kritici ve sdíleném souboru nechávají poznámky přímo u návrhu. <a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
+
+<style>
+.col-left li { margin: 0.25em 0; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+</style>
 
 <!--
 <br/>
