@@ -30,7 +30,7 @@ hideInToc: true
 # Dnes nás čeká
 
 - **Testování** – jak to šlo?
-- **Design critique** – motivace, přístup & cvičení
+- **Design critique** – motivace, přístup a cvičení
 - **Business case a storytelling**
 - **Instrukce pro závěrečné prezentace**
 
@@ -60,7 +60,7 @@ hideInToc: true
 <div class="qs">
   <div class="q" :class="{ past: $clicks >= 1 }"><span class="n">1</span>Jaké to pro vás bylo?</div>
   <div class="q" v-click="1" :class="{ past: $clicks >= 2 }"><span class="n">2</span>Co vás nejvíc překvapilo?</div>
-  <div class="q" v-click="2"><span class="n">3</span>Co s tím budete dělat dál?</div>
+  <div class="q" v-click="2"><span class="n">3</span>Jak s tím plánujete naložit?</div>
 </div>
 
 <style>
@@ -392,7 +392,7 @@ const asset = import.meta.env.BASE_URL
 ---
 layout: heading-body
 hideInToc: true
-clicks: 3
+clicks: 5
 ---
 
 # Neexistuje "ten správný" formát
@@ -404,6 +404,8 @@ const cards = [
   { img: 'stack-figma-par.jpg', alt: 'Dva designéři nad jedním notebookem', cap: 'Figma: párový design u jednoho notebooku.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: 3 },
   { img: 'stack-atlassian-lepiky.jpg', alt: 'Tabule se třemi sloupci co funguje, co zlepšit a otázky, plná barevných lepíků', cap: 'Atlassian: sparring, každý potichu píše lepíky do tří sloupců.', who: 'Sparring', whoUrl: 'https://www.atlassian.com/team-playbook/plays/sparring', site: 'Atlassian Team Playbook', siteUrl: 'https://www.atlassian.com/team-playbook', rot: -2 },
   { img: 'stack-nng-zapis.jpg', fit: true, alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
+  { img: 'stack-figma-skica.jpg', alt: 'Ruka kreslí tužkou skicu obrazovky na papír', cap: 'Figma: crit nad skicou tužkou.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -3 },
+  { img: 'stack-nng-klobouky.jpg', fit: true, alt: 'Šest barevných klobouků, každý pro jiný druh pohledu', cap: 'Šest klobouků: celá skupina se dívá stejným pohledem.', who: 'Edward de Bono', whoUrl: 'https://www.debonogroup.com/services/core-programs/six-thinking-hats/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/articles/facilitating-design-studio-workshop/', rot: 4 },
 ]
 </script>
 
