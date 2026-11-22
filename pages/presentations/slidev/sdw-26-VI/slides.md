@@ -113,7 +113,7 @@ layout: section-break
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/12)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/13)</span>**
 -->
 
 ---
@@ -149,7 +149,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/12)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/13)</span>**
 -->
 
 ---
@@ -173,7 +173,7 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/12)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/13)</span>**
 -->
 
 ---
@@ -183,9 +183,9 @@ hideInToc: true
 
 # Tři druhy zpětné vazby
 
-- Na critu uslyšíte spoustu komentářů a každý vám pomůže jinak
-- Adam Connor a Aaron Irizarry je v knize *Discussing Design* dělí podle toho, jestli z nich poznáte, co s návrhem dělat a proč
-- Jako kritici se snažte dávat hlavně ten třetí druh
+- Během crit uslyšíte spoustu komentářů a každý pomůže jinak
+- Kniha *Discussing Design* je dělí podle toho, jestli z nich poznáte, dělat dál
+- Snažte se přinášet a sbírat zejména ten třetí typ
 
 <div class="fb">
   <div class="fb-h">Druh</div>
@@ -222,7 +222,45 @@ li { margin: 0.3em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/12)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/13)</span>**
+-->
+
+---
+layout: two-column
+ratio: "58-42"
+hideInToc: true
+---
+
+# Jak crit běžně probíhá
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+- Prezentující shrne problém, cíl a kde v procesu je
+- Řekne, jakou zpětnou vazbu hledá a co je mimo hru
+- Ukáže návrh, krátce a bez obhajoby
+- Kritici se nejdřív ptají, aby návrhu porozuměli
+- Pak kritika vůči cíli, s „protože“
+- Někdo jiný zapisuje, prezentující poslouchá
+- Na konci: co si odnáším a co udělám dál, rozhoduje prezentující
+
+::right::
+
+<img :src="asset + 'intercom-navrhy-na-zdi.jpg'" alt="Vytištěné stránky s návrhy, diagramem toku a grafy, vylepené vedle sebe na skleněné stěně" class="fit-img" />
+<div class="credit">Návrhy vylepené na zdi, připravené na crit. <a href="https://www.intercom.com/blog/running-productive-design-critiques/">Gustavs Cirulis</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
+
+<style>
+.col-left li { margin: 0.3em 0; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+</style>
+
+<!--
+<br/>
+
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/13)</span>**
 -->
 
 ---
@@ -239,7 +277,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (5/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (6/13)</span>**
 -->
 
 ---
@@ -268,7 +306,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (6/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (7/13)</span>**
 -->
 
 ---
@@ -285,7 +323,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (7/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/13)</span>**
 -->
 
 ---
@@ -315,7 +353,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/13)</span>**
 -->
 
 ---
@@ -333,7 +371,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/13)</span>**
 -->
 
 ---
@@ -370,7 +408,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (11/13)</span>**
 -->
 
 ---
@@ -400,7 +438,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (11/12)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (12/13)</span>**
 -->
 
 ---
@@ -424,7 +462,7 @@ table { font-size: 0.8em; }
 <!--
 <br/>
 
-**Úvod do critu: souhrn <span style="white-space:nowrap">18:15–18:30 (12/12)</span>**
+**Úvod do critu: souhrn <span style="white-space:nowrap">18:15–18:30 (13/13)</span>**
 
 <br/>
 
