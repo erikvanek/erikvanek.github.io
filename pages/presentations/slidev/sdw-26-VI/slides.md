@@ -123,6 +123,7 @@ const asset = import.meta.env.BASE_URL
   - Asynchronně X synchronně
   - Hotový návrh X koncepty X varianty
 - Nejvíce vás posune **pravidelnost**
+  - Po každé iteraci / před vydáním nové verze / po nasbírání XY kusů nové zpětné vazby / ...
 
 ::right::
 
@@ -392,7 +393,7 @@ const asset = import.meta.env.BASE_URL
 ---
 layout: heading-body
 hideInToc: true
-clicks: 5
+clicks: 4
 ---
 
 # Neexistuje "ten správný" formát
@@ -401,7 +402,6 @@ clicks: 5
 const asset = import.meta.env.BASE_URL
 const cards = [
   { img: 'stack-figma-vytisky.jpg', alt: 'Návrhy vytištěné a vylepené na skleněné stěně, prezentující stojí vedle nich', cap: 'Figma: crit nad výtisky na zdi.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -4 },
-  { img: 'stack-figma-par.jpg', alt: 'Dva designéři nad jedním notebookem', cap: 'Figma: párový design u jednoho notebooku.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: 3 },
   { img: 'stack-atlassian-lepiky.jpg', alt: 'Tabule se třemi sloupci co funguje, co zlepšit a otázky, plná barevných lepíků', cap: 'Atlassian: sparring, každý potichu píše lepíky do tří sloupců.', who: 'Sparring', whoUrl: 'https://www.atlassian.com/team-playbook/plays/sparring', site: 'Atlassian Team Playbook', siteUrl: 'https://www.atlassian.com/team-playbook', rot: -2 },
   { img: 'stack-nng-zapis.jpg', fit: true, alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
   { img: 'stack-figma-skica.jpg', alt: 'Ruka kreslí tužkou skicu obrazovky na papír', cap: 'Figma: crit nad skicou tužkou.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -3 },
@@ -413,17 +413,17 @@ const cards = [
   <div v-for="(c, i) in cards" :key="c.img" class="card" :class="{ fit: c.fit }"
     :style="i < $clicks
       ? { zIndex: 20, opacity: 0, transform: 'translate(40%, 8%) rotate(12deg)' }
-      : { zIndex: 10 - (i - $clicks), opacity: 1, transform: `translate(${-(i - $clicks) * 14}%, ${-(i - $clicks) * 7}%) rotate(${(i - $clicks) === 0 ? 3 : -(i - $clicks) * 4}deg) scale(${1 - (i - $clicks) * 0.06})` }">
+      : { zIndex: 10 - (i - $clicks), opacity: (i - $clicks) > 3 ? 0 : 1, transform: `translate(${-(i - $clicks) * 12}%, ${(i - $clicks) * 3}%) rotate(${(i - $clicks) === 0 ? 3 : -(i - $clicks) * 4}deg) scale(${1 - (i - $clicks) * 0.06})` }">
     <img :src="asset + c.img" :alt="c.alt" />
   </div>
 </div>
 <div class="credit">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div>
 
 <style>
-.stack { position: relative; height: 390px; margin-left: 80px; }
+.stack { position: relative; height: 380px; margin-left: 120px; }
 .credit { text-align: center; }
 .card {
-  position: absolute; top: 30px; left: 0; right: 0; margin: 0 auto; width: 560px; height: 340px;
+  position: absolute; top: 12px; left: 0; right: 0; margin: 0 auto; width: 540px; height: 320px;
   border-radius: 18px; overflow: hidden; background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
   transition: transform 0.45s ease, opacity 0.45s ease;
