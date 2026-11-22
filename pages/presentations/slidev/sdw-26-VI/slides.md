@@ -411,11 +411,11 @@ const cards = [
 ::left::
 
 - Cíl je všude stejný, formát si tým vybírá podle fáze návrhu a lidí
-- **Nad výtisky na zdi**: hodně variant vedle sebe, kritici chodí kolem a lepí lepíky
-- **Ve dvojici**: rychlá zpětná vazba přímo při práci, bez plánované schůzky
-- **Potichu na lepíky**: každý nejdřív píše sám, ke slovu se dostanou i tišší
-- **Potichu ve sdíleném souboru**: hodně komentářů naráz, funguje i na dálku
-- **Zápis do tabulky**: ke každému návrhu poznámky a otázky, ke kterým se tým vrátí
+- **Autor odejde z místnosti** (Atlassian): kritici píšou otevřeněji, autor si to přečte potom
+- **Braintrust** (Pixar): kolegové dávají režisérovi poznámky, rozhodnutí ale zůstává na něm
+- **Design Studio**: kritika skicou místo slov, každé kolo jen pár minut
+- **Service assessment** (GOV.UK): panel hodnotí službu podle standardu, výsledek je semafor
+- **FYI crit** (Figma): jen ukázat, na čem dělám, zpětná vazba se nečeká
 
 ::right::
 
