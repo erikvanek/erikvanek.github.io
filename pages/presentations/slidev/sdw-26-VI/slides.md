@@ -336,8 +336,9 @@ const asset = import.meta.env.BASE_URL
 
 - Řešený problém pojmenujte a srozumitelně popište
 - Přidejte situace uživatelů ve tvaru *„Když…, chci…, abych…“*
+  - Využijte jobs to be done, job stories, user stories, ...
 - Přineste několik odlišných variant řešení a každou pojmenujte
-- U každé varianty sepište, co je na ní dobré, co špatné a co zůstává otevřené
+- U každé varianty sepište, co je na ní dobré, co špatné a jaké otázky k ní máte
 
 ::right::
 
@@ -364,16 +365,18 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Kontext 10–15 min, doptávání 2–5 min, zpětná vazba 10 min a víc
-- Na začátku slide **„jakou zpětnou vazbu hledám a jakou ne“**
-- Kolem stolu po jednom, kdo nemá co dodat, řekne „pass“
-- Prezentující se neobhajuje, jen poděkuje
-- O roadmapě se na critu nerozhoduje
+- Standardní průběh crit v jejich týmu
+  1. Kontext řešeného problému 10–15 min
+  2. Doplňující otázky účastníků 2–5 min
+  3. Zpětná vazba 10 min a víc
+- Na začátku popis **„jakou zpětnou vazbu hledám a jakou ne“**
+- Předem řekněte, jestli se smí skákat do řeči
+- Prezentující neobhajuje jednotlivá řešení, může vysvětlit důležitá rozhodnutí
 
 ::right::
 
 <img :src="asset + 'figma-lepik-u-obrazovky.jpg'" alt="Notebook s navrhovanou obrazovkou a vedle ní žlutá poznámka kritika" class="fit-img" />
-<div class="credit">Poznámka kritika leží přímo vedle obrazovky, ke které patří. <a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
+<div class="credit">Sběr zpětné vazby probíhá přímo <a href="https://www.figma.com/blog/design-critiques-at-figma/">ve Figmě</a></div>
 
 <style>
 .col-left li { margin: 0.25em 0; }
@@ -393,7 +396,7 @@ hideInToc: true
 clicks: 3
 ---
 
-# Jeden správný crit neexistuje
+# Jeden správný přístup neexistuje
 
 <script setup>
 const asset = import.meta.env.BASE_URL
