@@ -326,7 +326,7 @@ ratio: "40-60"
 hideInToc: true
 ---
 
-# Intercom: problém v jednom odstavci
+# Intercom – silné zaměření na problém
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -334,16 +334,15 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Problém pojmenujte a popište jedním odstavcem, kterému rozumí i člověk mimo tým
-- Přidejte situace uživatelů ve tvaru „Když…, chci…, abych…“
-- Přineste několik opravdu odlišných variant a každou pojmenujte
+- Řešený problém pojmenujte a srozumitelně popište
+- Přidejte situace uživatelů ve tvaru *„Když…, chci…, abych…“*
+- Přineste několik odlišných variant řešení a každou pojmenujte
 - U každé varianty sepište, co je na ní dobré, co špatné a co zůstává otevřené
-- Řekněte, kterou variantu favorizujete a proč
 
 ::right::
 
-<img :src="asset + 'intercom-sablona-critu.jpg'" alt="Dvě stránky šablony: vlevo Problem title s odstavcem o problému a tabulkou jobs, vpravo Concept A s návrhem, dopady, obrazovkou, pro a proti a otevřenými otázkami" class="fit-img" />
-<div class="credit">Šablona na crit: vlevo problém, vpravo jedna varianta. <a href="https://www.intercom.com/blog/running-productive-design-critiques/">Gustavs Cirulis</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
+<img :src="asset + 'intercom-user-vs-job-story.png'" alt="Ručně kreslená user story As a, I want to, So that: persona je označená jako irelevantní, akce jako předpoklad a celé jako příliš mnoho předpokladů" class="fit-img" />
+<div class="credit">User story stojí na personě a předpokladech, job story začíná situací. <a href="https://www.intercom.com/blog/using-job-stories-design-features-ui-ux/">Alan Klement</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
 
 <!--
 <br/>
