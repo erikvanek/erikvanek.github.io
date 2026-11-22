@@ -177,45 +177,46 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 -->
 
 ---
-layout: two-column
-ratio: "50-50"
+layout: heading-body
 hideInToc: true
 ---
 
 # Tři druhy zpětné vazby
 
 - Na critu uslyšíte spoustu komentářů a každý vám pomůže jinak
-- Liší se tím, jestli z nich poznáte, co s návrhem dělat a proč
+- Adam Connor a Aaron Irizarry je v knize *Discussing Design* dělí podle toho, jestli z nich poznáte, co s návrhem dělat a proč
 - Jako kritici se snažte dávat hlavně ten třetí druh
 
-::left::
-
-- **Reakce** – první dojem, "gut feeling"
-- **Pokyn** – navržená změna bez vysvětlení
-- **Kritika** – posouzení návrhu vůči cíli, ideálně včetně „protože“
-
-::right::
-
-<div class="steps">
-  <div class="step s1">„Je to zmatené.“</div>
-  <div class="step s2">„Přidejte tam potvrzení.“</div>
-  <div class="step s3">„Jestli je cílem, aby člověk věděl, že má jízdenku, tak na kroku 3 chybí potvrzení, protože…“</div>
+<div class="fb">
+  <div class="fb-h">Druh</div>
+  <div class="fb-h">Co to je</div>
+  <div class="fb-h">Jak to zní</div>
+  <div class="fb-type">Reakce</div>
+  <div>První dojem, „gut feeling“</div>
+  <div class="fb-q">„Je to zmatené.“</div>
+  <div class="fb-type">Pokyn</div>
+  <div>Navržená změna bez vysvětlení</div>
+  <div class="fb-q">„Přidejte tam potvrzení.“</div>
+  <div class="fb-type fb-key">Kritika</div>
+  <div class="fb-key">Posouzení návrhu vůči cíli, ideálně včetně „protože“</div>
+  <div class="fb-q fb-key">„Jestli je cílem, aby člověk věděl, že má jízdenku, tak na kroku 3 chybí potvrzení, protože…“</div>
 </div>
 
 <style>
-.col-left li { margin: 0.5em 0; }
-.col-header ul { margin-bottom: 0.6em; }
-.col-right { display: flex; flex-direction: column; justify-content: center; }
-.steps { display: flex; flex-direction: column; gap: 0.6em; }
-.step {
-  padding: 0.5em 0.9em;
-  border-left: 4px solid var(--muni-arts-blue, #4bc8ff);
-  background: #eef4fb;
+li { margin: 0.3em 0; }
+.fb {
+  display: grid;
+  grid-template-columns: 7.5em 1fr 1.5fr;
+  margin-top: 1em;
+  font-size: 0.9em;
   line-height: 1.35;
 }
-.s1 { margin-right: 30%; opacity: 0.6; }
-.s2 { margin-right: 15%; opacity: 0.8; }
-.s3 { font-weight: 700; }
+.fb > div { padding: 0.45em 0.7em; border-bottom: 1px solid #c9d6e6; }
+.fb-h { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.6; border-bottom: 2px solid var(--muni-blue, #0000dc) !important; }
+.fb-type { font-weight: 700; }
+.fb-q { background: #eef4fb; border-left: 4px solid var(--muni-arts-blue, #4bc8ff); }
+.fb-key { font-weight: 700; }
+.fb-key.fb-q { background: #d9e8fa; }
 </style>
 
 <!--
