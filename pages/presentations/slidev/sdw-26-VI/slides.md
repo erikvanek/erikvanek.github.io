@@ -113,7 +113,7 @@ layout: section-break
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/10)</span>**
 -->
 
 ---
@@ -149,7 +149,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/10)</span>**
 -->
 
 ---
@@ -173,7 +173,7 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/10)</span>**
 -->
 
 ---
@@ -222,7 +222,7 @@ li { margin: 0.3em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/10)</span>**
 -->
 
 ---
@@ -264,7 +264,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/10)</span>**
 -->
 
 ---
@@ -288,7 +288,7 @@ li { margin: 0.4em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (6/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (6/10)</span>**
 -->
 
 ---
@@ -323,7 +323,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (7/9)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (7/10)</span>**
 -->
 
 ---
@@ -352,7 +352,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/9)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/10)</span>**
 -->
 
 ---
@@ -390,7 +390,66 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/9)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/10)</span>**
+-->
+
+---
+layout: two-column
+ratio: "50-50"
+hideInToc: true
+clicks: 3
+---
+
+# Jeden správný crit neexistuje
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+const cards = [
+  { img: 'stack-figma-vytisky.jpg', alt: 'Návrhy vytištěné a vylepené na skleněné stěně, prezentující stojí vedle nich', cap: 'Figma: crit nad výtisky na zdi.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -4 },
+  { img: 'stack-figma-par.jpg', alt: 'Dva designéři nad jedním notebookem', cap: 'Figma: párový design u jednoho notebooku.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: 3 },
+  { img: 'stack-atlassian-lepiky.jpg', alt: 'Tabule se třemi sloupci co funguje, co zlepšit a otázky, plná barevných lepíků', cap: 'Atlassian: sparring, každý potichu píše lepíky do tří sloupců.', who: 'Sparring', whoUrl: 'https://www.atlassian.com/team-playbook/plays/sparring', site: 'Atlassian Team Playbook', siteUrl: 'https://www.atlassian.com/team-playbook', rot: -2 },
+  { img: 'stack-nng-zapis.jpg', alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
+]
+</script>
+
+::left::
+
+- Každý tým si crit skládá po svém, podle lidí a fáze projektu
+- Liší se, kdo rozhoduje: prezentující, skupina, nebo panel
+- Naživo kolem stolu, potichu na lepíky, nebo na dálku
+- Nad výtisky, ve sdíleném souboru, nebo u jednoho notebooku
+- Někde zapisuje kolega, jinde jde shrnutí do Slacku
+- Společné mají cíl, otázky předem a „protože“
+
+::right::
+
+<div class="stack">
+  <div v-for="(c, i) in cards" :key="c.img" class="card"
+    :style="{ zIndex: i === $clicks ? 10 : (i > $clicks ? 6 - (i - $clicks) : 1), transform: i === $clicks ? 'rotate(0deg) scale(1)' : `rotate(${c.rot}deg) scale(0.92)`, opacity: i < $clicks ? 0.35 : 1 }">
+    <img :src="asset + c.img" :alt="c.alt" />
+  </div>
+</div>
+<div class="credit">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div>
+
+<style>
+.col-left li { margin: 0.3em 0; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+.stack { position: relative; height: 310px; }
+.card {
+  position: absolute; inset: 0; margin: auto; width: 92%; height: 290px;
+  background: #fff; padding: 8px; box-sizing: border-box;
+  box-shadow: 0 6px 18px rgba(0, 0, 40, 0.22);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.card img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+
+<!--
+<br/>
+
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/10)</span>**
 -->
 
 ---
