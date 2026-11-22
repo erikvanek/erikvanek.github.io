@@ -327,23 +327,6 @@ hideInToc: true
 -->
 
 ---
-layout: heading-body
-hideInToc: true
----
-
-# Figma: menu formátů
-
-- Šest formátů: standardní, jam, párový design, tichý, výtisky na zdi, FYI
-- Prezentující si připraví slide **„jakou zpětnou vazbu hledám a jakou ne“**
-- Kolem stolu jeden po druhém, protože popcorn odměňuje nejhlasitější
-
-<!--
-<br/>
-
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/9)</span>**
--->
-
----
 layout: two-column
 ratio: "50-50"
 hideInToc: true
@@ -365,6 +348,23 @@ const asset = import.meta.env.BASE_URL
 
 <img :src="asset + 'intercom-sablona-critu.jpg'" alt="Dvě stránky šablony: vlevo Problem title s odstavcem o problému a tabulkou jobs, vpravo Concept A s návrhem, dopady, obrazovkou, pro a proti a otevřenými otázkami" class="fit-img" />
 <div class="credit">Šablona na crit: vlevo problém, vpravo jedna varianta. <a href="https://www.intercom.com/blog/running-productive-design-critiques/">Gustavs Cirulis</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
+
+<!--
+<br/>
+
+**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/9)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Figma: menu formátů
+
+- Šest formátů: standardní, jam, párový design, tichý, výtisky na zdi, FYI
+- Prezentující si připraví slide **„jakou zpětnou vazbu hledám a jakou ne“**
+- Kolem stolu jeden po druhém, protože popcorn odměňuje nejhlasitější
 
 <!--
 <br/>
