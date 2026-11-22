@@ -159,7 +159,7 @@ hideInToc: true
 
 # Mindset
 
-- Usability testování je **evaluativní**, design critique je **generativní**
+- Usability testování je **evaluativní**, design critique je **spíš generativní**: teď hledáme nové perspektivy
 - Teď divergujeme a hledáme nové perspektivy
 - Otevřené, ale **strukturované** – žádné YOLO
 - Stejně jako u testování rozhoduje příprava: **řekněte předem, jakou zpětnou vazbu chcete** a co je pro vás teď zajímavé otvírat
