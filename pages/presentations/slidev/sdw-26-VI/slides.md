@@ -129,8 +129,6 @@ hideInToc: true
 - Další způsob, jak **sdílet práci** s ostatními
 - Řešení se nehledá na místě, rozhodujete až potom vy
 
-<div class="credit"><a href="https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/">GDS</a>, <a href="https://digitalblog.coop.co.uk/2018/03/28/how-to-run-a-design-crit-and-why-theyre-important/">Co-op Digital</a></div>
-
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
 </style>
@@ -155,8 +153,6 @@ hideInToc: true
 - Ptejte se o radu: „Co byste nám poradili k…?“
 - Komentář s **„protože“** se do návrhu opravdu dostane
 
-<div class="credit"><a href="https://www.figma.com/blog/design-critiques-at-figma/">Figma</a>, <a href="https://linear.app/method/manage-design-projects">Linear</a>, <a href="https://www.library.hbs.edu/working-knowledge/want-better-performance-reviews-change-this-one-word">Harvard Business School</a>, <a href="https://www.lrdc.pitt.edu/Schunn/papers/Wu-SchunnIS2021-FromPlansToActionsAProcessMode.pdf">Wu a Schunn</a></div>
-
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
 </style>
@@ -180,8 +176,6 @@ hideInToc: true
 - **Reakce** – první dojem, pocit z břicha
 - **Pokyn** – navržená změna bez vysvětlení
 - **Kritika** – posouzení návrhu vůči cíli, s „protože“
-
-<div class="credit">Podle knihy <a href="https://oreilly.com/library/view/~/9781491902394">Discussing Design</a> Adama Connora a Aarona Irizarryho</div>
 
 ::right::
 
@@ -226,8 +220,6 @@ hideInToc: true
 - Prezentující si připraví slide **„jakou zpětnou vazbu hledám a jakou ne“**
 - Kolem stolu jeden po druhém, protože popcorn odměňuje nejhlasitější
 
-<div class="credit"><a href="https://www.figma.com/blog/design-critiques-at-figma/">Noah Levin</a>, <a href="https://www.figma.com/blog/">Figma</a></div>
-
 ::right::
 
 <div class="viz-card">
@@ -257,8 +249,6 @@ hideInToc: true
 - Prezentující řekne, kterou favorizuje a proč
 - „You might dismiss a good solution just because it was coupled with a bad one.“
 
-<div class="credit"><a href="https://www.intercom.com/blog/running-productive-design-critiques/">Gustavs Cirulis</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
-
 <!--
 <br/>
 
@@ -278,8 +268,6 @@ hideInToc: true
 - Facilitátor přečte pravidla nahlas: „Focus on the design work, not the designer“
 - Kontext 5 min, ukázka 10 min, většina času na otázky a kritiku
 - Zpětná vazba se zapíše k práci a **v další iteraci se ukáže, co změnila**
-
-<div class="credit"><a href="https://handbook.gitlab.com/handbook/upstream-studios/product-design/workflow/">Product design workflow</a>, <a href="https://handbook.gitlab.com/">GitLab Handbook</a></div>
 
 ::right::
 
@@ -316,8 +304,6 @@ hideInToc: true
 - Varianta „Leave the room“: prezentující odejde, kritici píšou otevřeněji
 - Na konci: co udělám dál a kdy se ozvu s další iterací
 
-<div class="credit"><a href="https://www.atlassian.com/team-playbook/plays/sparring">Sparring</a>, <a href="https://www.atlassian.com/team-playbook">Atlassian Team Playbook</a></div>
-
 ::right::
 
 <div class="viz-time">
@@ -345,8 +331,6 @@ hideInToc: true
 - Designér si nechá vygenerovat **15 verzí jednoho flow** a sbírá k nim reakce kolegů
 - „We're not too precious about our work.“
 
-<div class="credit"><a href="https://www.ideo.com/journal/crafting-the-last-mile-of-delight">Joel Lewenstein</a>, <a href="https://www.ideo.com/journal">IDEO</a>, <a href="https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them">Nate Parrott</a>, <a href="https://claude.com/blog">Claude blog</a></div>
-
 <!--
 <br/>
 
@@ -367,8 +351,6 @@ hideInToc: true
 - Asi čtyři hodiny, výsledek zelená, oranžová, nebo červená
 - „Do not just focus on the happy path“
 - V critu rozhoduje prezentující, v assessmentu panel
-
-<div class="credit"><a href="https://www.gov.uk/service-manual/service-assessments/how-service-assessments-work">How service assessments work</a>, <a href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></div>
 
 ::right::
 
@@ -400,8 +382,6 @@ hideInToc: true
 - Černý a žlutý: rizika a přínosy vůči cíli
 - Zelený: z kritiky udělá návrh
 - Modrý: hlídá proces
-
-<div class="credit"><a href="https://www.debonogroup.com/services/core-programs/six-thinking-hats/">Edward de Bono</a>, <a href="https://www.debonogroup.com/">de Bono Group</a></div>
 
 ::right::
 
@@ -441,8 +421,6 @@ hideInToc: true
 - Kritizovaná skica se hned předělá, takže kritik vidí dopad své poznámky
 - Šestiminutovou skicu nikdo neobhajuje
 - Jde zkombinovat s critem: tým přinese otázku, trojice ji skicuje
-
-<div class="credit"><a href="https://www.nngroup.com/articles/facilitating-design-studio-workshop/">Kate Kaplan</a>, <a href="https://www.nngroup.com/">Nielsen Norman Group</a></div>
 
 ::right::
 
