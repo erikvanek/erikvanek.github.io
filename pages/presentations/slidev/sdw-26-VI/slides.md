@@ -526,6 +526,7 @@ hideInToc: true
 
 <style>
 .slidev-layout { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.slidev-layout h1 { font-size: 2.6rem; }
 </style>
 
 <!--
