@@ -548,7 +548,63 @@ layout: section-break
 <!--
 <br/>
 
-**Závěr <span style="white-space:nowrap">19:25–19:40 (1/5)</span>**
+**Závěr <span style="white-space:nowrap">19:25–19:40 (1/7)</span>**
+-->
+
+---
+layout: two-column
+ratio: "55-45"
+hideInToc: true
+---
+
+# Příběh
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+- Lidé se rozhodují podle pocitů, zdůvodnění hledají až potom
+- Příběh potřebuje hrdinu, překážku a proměnu
+- Začněte koncem: co si má publikum odnést?
+
+::right::
+
+<img :src="asset + 'lichaw-pribehovy-oblouk.png'" alt="Panáček s mečem šplhá po příběhovém oblouku: expozice, spouštěcí událost, stoupající děj, krize s drakem, vyvrcholení, rozuzlení, konec" class="fit-img" />
+<div class="credit">Příběhový oblouk. <a href="https://rosenfeldmedia.com/books/storymapping/">Donna Lichaw</a>, <a href="https://www.uxmatters.com/mt/archives/2020/09/book-review-the-users-journey-storymapping-products-that-people-love.php">UXmatters</a></div>
+
+<style>
+.col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+</style>
+
+<!--
+<br/>
+
+**Závěr: vyprávění <span style="white-space:nowrap">19:25–19:30 (2/7)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Kdo je váš hrdina?
+
+- Hrdinou je člověk, kterému vaše řešení pomáhá
+- Jaký je jeho běžný svět a co ho z něj vytrhne?
+- Jaké rozhodnutí před ním stojí?
+- Kdo rozhoduje o vašem řešení? I on je hrdinou svého příběhu
+
+<style>
+li { margin-top: 0.5em; margin-bottom: 0.5em; }
+</style>
+
+<!--
+<br/>
+
+**Závěr: hrdina <span style="white-space:nowrap">19:25–19:30 (3/7)</span>**
 -->
 
 ---
@@ -558,23 +614,54 @@ hideInToc: true
 
 # Business case
 
+- Pro koho ho píšete a jaké rozhodnutí ten člověk dělá?
+- Potřeba, cíle, přínosy, náklady, rizika
+- Počítejte i s variantou „nedělat nic“
+- Bez dat o tržbách: odhad s předpoklady, které ukážete
+
+<style>
+li { margin-top: 0.5em; margin-bottom: 0.5em; }
+</style>
+
 <!--
 <br/>
 
-**Závěr: business case <span style="white-space:nowrap">19:25–19:30 (2/5)</span>**
+**Závěr: business case <span style="white-space:nowrap">19:25–19:30 (4/7)</span>**
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "60-40"
 hideInToc: true
 ---
 
-# Vyprávění
+# Příklad: Jarmilka
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
+
+- Business case, který jsem psal pro Jihomoravskou agenturu pro veřejné inovace (JINAG)
+- Berte ho jako inspiraci, strukturu si přizpůsobte svému projektu
+- Takhle se dá psát pro firmu i pro neziskovku
+
+::right::
+
+<img :src="asset + 'jarmilka-business-case.png'" alt="Obálka business case Jarmilka, osobní průvodkyně sociálně-zdravotní sítí" class="fit-img" />
+<div class="credit">Business case Jarmilka pro JINAG</div>
+
+<style>
+.col-right img { max-height: 380px; object-fit: contain; }
+.col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+</style>
 
 <!--
 <br/>
 
-**Závěr: vyprávění <span style="white-space:nowrap">19:25–19:30 (3/5)</span>**
+**Závěr: příklad business case <span style="white-space:nowrap">19:25–19:30 (5/7)</span>**
 -->
 
 ---
@@ -587,7 +674,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Závěr: zadání prezentace <span style="white-space:nowrap">19:30–19:35 (4/5)</span>**
+**Závěr: zadání prezentace <span style="white-space:nowrap">19:30–19:35 (6/7)</span>**
 -->
 
 ---
@@ -600,7 +687,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Závěr: otázky <span style="white-space:nowrap">19:35–19:40 (5/5)</span>**
+**Závěr: otázky <span style="white-space:nowrap">19:35–19:40 (7/7)</span>**
 
 <br/>
 
