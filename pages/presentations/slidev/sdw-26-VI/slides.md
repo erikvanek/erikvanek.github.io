@@ -500,16 +500,10 @@ layout: groupwork
 hideInToc: true
 ---
 
-# Design critique
-
-- Trojice, každý prezentuje 12 minut
-- Prezentující: nahrajte si to, nebo si pište poznámky
-- Kritici: pište si do handoutu, půlku pak předejte prezentujícímu
-
-<RingTimer :minutes="36" :size="190" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
+<RingTimer :minutes="36" :size="250" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
 
 <style>
-li { margin-top: 0.5em; margin-bottom: 0.5em; }
+.ring-timer { margin-top: 2.5rem; }
 </style>
 
 <!--

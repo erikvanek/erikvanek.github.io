@@ -182,10 +182,10 @@ const drawn = computed(() => props.rings.map(r => ({
 .single { flex-direction: column; gap: 1rem; }
 .single .ring-timer__ring { position: relative; }
 .single .ring-timer__clock { padding-bottom: 0; }
-.ring-timer__inside { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; }
+.ring-timer__time.ring-timer__inside { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 46px; letter-spacing: -0.06em; white-space: nowrap; }
 .track { stroke: #e8e8e8; }
 .fill { stroke: #3b5bf0; }
-.mark { stroke: #fff; stroke-width: 2; }
+.mark { stroke: #a9b8f8; stroke-width: 2; }
 .ring-timer__clock {
   display: flex;
   flex-direction: column;
