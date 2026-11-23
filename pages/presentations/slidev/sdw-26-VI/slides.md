@@ -150,9 +150,9 @@ hideInToc: true
 
 - Usability testování je **evaluativní**, design critique je **spíš generativní**
   - Tj. hledáme nové perspektivy a nápady
-- Otevřený formát, ale zároveň **strukturované**
+- Otevřený formát, ale zároveň **strukturovaný**
 - Důležitost přípravy
-  - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co taky co teď nepotřebujete
+  - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co teď naopak nepotřebujete
 - Hledáte odpověď na otázku: „Co byste nám doporučili k…?“
 - Při skupinové práci pozor na dominantní hlasy
   - Můžete řešit např. pomocí brainwritingu
@@ -174,10 +174,10 @@ hideInToc: true
 
 # Tři druhy zpětné vazby
 
-- Během crit uslyšíte spoustu komentářů a každý pomůže jinak
+- Během critu uslyšíte spoustu komentářů a každý pomůže jinak
 - Kniha *Discussing Design* je dělí podle toho, jak s nimi můžete pracovat dál
 - Snažte se sbírat a sdílet zejména třetí typ – kritiku
-  - Dobrou facilitací můžete z Reakce dostat Kritiku
+  - Dobrou facilitací můžete z reakce dostat kritiku
 
 <div class="fb">
   <div class="fb-h">Druh</div>
@@ -233,10 +233,10 @@ const asset = import.meta.env.BASE_URL
 
 1. Prezentující shrne problém, cíl a kde v procesu je
 2. Řekne, co jej teď zajímá a co ne
-3. Krátce projde diskutovaný návrh + klíčová rozhodnutí, které za ním jsou
+3. Krátce projde diskutovaný návrh + klíčová rozhodnutí, která za ním jsou
 4. Kritici se nejdřív ptají, aby návrhu porozuměli
-5. Doptávání se, "stavění na nápadech ostatních"
-5. Shrnutí výsledků + případně co budou další kroky
+5. Doptávání se, „stavění na nápadech ostatních“
+6. Shrnutí výsledků + případně co budou další kroky
 <br>
 <br>
   - nahrát a přepsat průběh setkání nebo
@@ -266,11 +266,11 @@ hideInToc: true
 
 # Úvod a nastavení pravidel
 
-1. Popište jaký problém řešíte a kdo je cílová skupina
-2. Popište kde jste v procesu a co chete probírat:
+1. Popište, jaký problém řešíte a kdo je cílová skupina
+2. Popište, kde jste v procesu a co chcete probírat:
   - Hrubá skica X celkový průchod X varianty X interakční design X ...
-3. Jasně rozliště co **chcete a nechcete** řešit
-4. Popište několik témat nad kterými si lámete hlavu a jejichž zodpovězení vám teď pomůže
+3. Jasně rozlište, co **chcete a nechcete** řešit
+4. Popište několik témat, nad kterými si lámete hlavu a jejichž zodpovězení vám teď pomůže
 5. Stručně ukažte váš návrh tak, aby mu účastníci porozuměli
 <style>
 li { margin: 0.4em 0; }
@@ -290,7 +290,7 @@ hideInToc: true
 # Jak se doptávat
 - Po představení návrhu přichází na řadu diskuze
 - Dobrá facilitace a **kladení správných otázek** jsou klíčové pro úspěch
-- Dobrou zpětnou vazbu předáte i položením správně položené otázky!
+- Dobrou zpětnou vazbu předáte i správně položenou otázkou!
 - Při prezentaci a facilitaci dejte pozor, abyste neobhajovali své návrhy
 
 <br>
@@ -366,7 +366,7 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Standardní průběh crit v jejich týmu
+- Standardní průběh critu v jejich týmu
   1. Kontext řešeného problému 10–15 min
   2. Doplňující otázky účastníků 2–5 min
   3. Zpětná vazba 10 min a víc
@@ -396,7 +396,7 @@ hideInToc: true
 clicks: 5
 ---
 
-# Neexistuje "ten správný" formát
+# Neexistuje „ten správný“ formát
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -543,7 +543,7 @@ hideInToc: true
 layout: section-break
 ---
 
-# Závěrečná prezentace
+# K prezentacím
 
 <!--
 <br/>
@@ -566,11 +566,11 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 - Nejúčinnější způsob předání informace je příběhem
-- Každý příběh má "hrdinu", překážku a vyústění
-  - A podle toho stavějte svůj obsah
+- Každý příběh má „hrdinu“, překážku a vyústění
 - Nebojte se být ve sdělení osobní (obzvlášť pokud řešíte problém, který se vás dotýká)
-- "Představte si, že ..."
-- Tip: Začněte koncem – co si má publikum odnést?
+- „Představte si, že…“
+- Tip: Při stavbě příběhu začněte u jeho konce
+  - Nejdřív si ujasněte, co chcete předat, pak stavějte příběh
 
 ::right::
 
@@ -599,8 +599,9 @@ hideInToc: true
 - Jak vypadá jeho běžný den?
 - Co se jednoho dne stane, že už to tak dál nejde?
   - Tím příběh začíná, tzv. inciting incident (zápletka)
+  - Vzpomeňte si na „push“ z jobs to be done
 - Co mu stojí v cestě?
-- Jak vypadá jeho svět, když vaše řešení funguje?
+- Jak vypadá jeho svět, když mu vaše řešení pomohlo?
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -627,14 +628,16 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 - Kdo o vašem řešení rozhoduje a před jakým rozhodnutím stojí?
-- Potřeba, cíle, přínosy, náklady, rizika
-- Počítejte i s variantou „nedělat nic“
-- Bez dat o tržbách: odhad s předpoklady, které ukážete
+- Standardní formát pro popis vašeho záměru
+- Měl by obsahovat:
+  - Potřeby, cíle, přínosy, náklady, rizika
+- Může předkládat různé varianty
+- Pokud nemáte konkrétní čísla (uživatelé, příjmy…), i odhad může pomoci pro ilustraci
 
 ::right::
 
 <img :src="asset + 'kaninsky-business-case.png'" alt="Úvod článku A design system business case and business benefits, the ultimate guide" class="fit-img" />
-<div class="credit">Business case v šesti částech. <a href="https://uxdesign.cc/a-design-system-business-case-business-benefits-the-ultimate-guide-cc2e09715ab">Matěj Káninský</a>, <a href="https://uxdesign.cc/">UX Collective</a></div>
+<div class="credit">Business case ilustrující využití design systému, <a href="https://uxdesign.cc/a-design-system-business-case-business-benefits-the-ultimate-guide-cc2e09715ab">Matěj Káninský</a></div>
 
 <style>
 .col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
@@ -663,13 +666,14 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 - Business case, který jsem psal pro Jihomoravskou agenturu pro veřejné inovace (JINAG)
+- Měl sloužit pro další investici kraje do inovací v sociálně-zdravotním sektoru
 - Berte ho jako inspiraci, strukturu si přizpůsobte svému projektu
-- Takhle se dá psát pro firmu i pro neziskovku
+- Formát lze použít pro firmu i pro neziskovku
 
 ::right::
 
 <img :src="asset + 'jarmilka-business-case.png'" alt="Obálka business case Jarmilka, osobní průvodkyně sociálně-zdravotní sítí" class="fit-img" />
-<div class="credit">Business case Jarmilka pro JINAG</div>
+<div class="credit"><a href="https://jinag.eu/files/2025/10/jarmilka-osobni-pruvodkyne-socialne-zdravotni-siti.pdf" target="_blank">Business case Jarmilka pro JINAG</a></div>
 
 <style>
 .col-right img { max-height: 380px; object-fit: contain; }
@@ -688,10 +692,10 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Závěrečná prezentace 10. 12.
+# Závěrečné prezentace 10. 12.
 
-- 100 minut, šest týmů, na každý tým 15 minut
-- Prezentace 8–10 minut, zbytek na otázky
+- 100 minut, šest týmů, na každý tým cca **15 minut**
+- Délka prezentace max 8–10 minut, 5–7 na otázky od ostatních
 - Prezentaci mi pošlete do 16:00 téhož dne do Teams, nebo přineste notebook s HDMI
 - Formát je na vás: PowerPoint, PDF, video, Figma…
 
@@ -710,12 +714,14 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Co v prezentaci ukázat
+# Co by nemělo chybět
 
-- Jaký problém jste řešili a co jste o něm zjistili
-- Jak jste prošli milníky a prací mezi nimi, klidně v diagramu
-- Fotky z testování a prototypování
-- Jak se vám spolupracovalo
+1. Srozumitelný popis řešeného problému
+2. Jaké kroky jste v průběhu projektu prošli
+3. Jak probíhalo uživatelské testování
+4. Co jste zjistili
+  - O tématu, cílové skupině, sobě, ...
+5. Dokumentace – z testování, prototypování, finální podoba vašeho návrhu
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -734,11 +740,11 @@ hideInToc: true
 
 # Co mě zajímá nejvíc
 
-- Iterace: co bylo v první verzi a co je ve druhé
+- Iterace: rozdíl mezi první a druhou verzí
 - Co jste se naučili během projektu a na konci
-- Co dál? Plánujete s tím něco, nebo končíte? Obojí je v pořádku
 - Jste s výsledkem spokojení? Co mu ještě chybí?
-
+- Co dál? Plánujete s tím něco, nebo končíte? Obojí je v pořádku
+- Co byste dělali jinak, kdybyste začínali znovu?
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
@@ -747,21 +753,4 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 <br/>
 
 **Závěr: proces <span style="white-space:nowrap">19:30–19:35 (8/9)</span>**
--->
-
----
-layout: heading-body
-hideInToc: true
----
-
-# Otázky
-
-<!--
-<br/>
-
-**Závěr: otázky <span style="white-space:nowrap">19:35–19:40 (9/9)</span>**
-
-<br/>
-
-🛑 **V 19:40 konec.**
 -->
