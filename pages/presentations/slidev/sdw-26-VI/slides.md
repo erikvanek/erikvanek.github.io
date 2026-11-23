@@ -524,6 +524,10 @@ hideInToc: true
 
 # Co si odnášíte zpátky do týmu?
 
+<style>
+.slidev-layout { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+</style>
+
 <!--
 <br/>
 
