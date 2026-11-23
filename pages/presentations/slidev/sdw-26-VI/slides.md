@@ -445,7 +445,7 @@ const cards = [
 layout: section-break
 ---
 
-# Workshop
+# Pojďme to vyzkoušet
 
 <!--
 <br/>
@@ -454,17 +454,23 @@ layout: section-break
 -->
 
 ---
-layout: groupwork
+layout: two-column
+ratio: "58-42"
 hideInToc: true
-timer: 10
 ---
 
 # Příprava v týmech
+
+::left::
 
 - Vyplňte přípravný list (najdete ho v Teams)
 - Cíl critu, rozsah a otázky, na které chcete odpověď
 - Každý z vás pak bude projekt prezentovat sám v jiné skupině
 - Mezitím vás rozdělím do trojic
+
+::right::
+
+<RingTimer :minutes="10" :size="240" />
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -492,7 +498,6 @@ hideInToc: true
 ---
 layout: groupwork
 hideInToc: true
-timer: [12, 12, 12]
 ---
 
 # Design critique
@@ -500,6 +505,8 @@ timer: [12, 12, 12]
 - Trojice, každý prezentuje 12 minut
 - Prezentující: nahrajte si to, nebo si pište poznámky
 - Kritici: pište si do handoutu, půlku pak předejte prezentujícímu
+
+<RingTimer :minutes="36" :size="190" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
