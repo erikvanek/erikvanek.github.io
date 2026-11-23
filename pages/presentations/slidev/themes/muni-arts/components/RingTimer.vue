@@ -25,7 +25,7 @@ import { onSlideEnter, onSlideLeave, useIsSlideActive, useSlideContext } from '@
 import { computed, onUnmounted, ref, watch } from 'vue'
 import { crossedZero, formatClock, freshClock, isRunning, pause, remaining, start } from './activity-timer'
 import { playGong, primeAudio } from './gong'
-import { elapsedShare, ringParts, ringTicks } from './ring-timer'
+import { elapsedShare, partRemaining, ringParts, ringTicks } from './ring-timer'
 
 const props = withDefaults(
   defineProps<{
@@ -119,6 +119,7 @@ function tick2(a: number) {
 
 const drawn = computed(() => props.rings.map(r => ({
   label: r.label,
+  time: formatClock(partRemaining(props.minutes * 60_000, left.value, r.parts)),
   parts: ringParts(r.parts, share.value),
   ticks: ringTicks(r.parts).map(tick2),
 })))
@@ -128,7 +129,6 @@ const drawn = computed(() => props.rings.map(r => ({
   <div class="ring-timer" :class="{ running, over, idle: !started, single: drawn.length === 1 }">
     <template v-for="(ring, i) in drawn" :key="i">
       <div v-if="i === 1" class="ring-timer__clock">
-        <span class="ring-timer__time">{{ formatClock(left) }}</span>
         <button class="ring-timer__btn" :title="running ? 'Pozastavit' : 'Spustit'" @mousedown.prevent @click="onButton">
           <svg v-if="running" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" /><rect x="9.5" y="2" width="3.5" height="12" rx="1" /></svg>
           <svg v-else viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 4 2.5Z" /></svg>
@@ -144,7 +144,7 @@ const drawn = computed(() => props.rings.map(r => ({
           </g>
           <line v-for="(t, k) in ring.ticks" :key="k" v-bind="t" class="mark" />
         </svg>
-        <span v-if="drawn.length === 1" class="ring-timer__time ring-timer__inside">{{ formatClock(left) }}</span>
+        <span class="ring-timer__time ring-timer__inside" :style="{ top: `${C}px` }">{{ ring.time }}</span>
         <figcaption v-if="ring.label">{{ ring.label }}</figcaption>
       </figure>
     </template>
@@ -180,9 +180,9 @@ const drawn = computed(() => props.rings.map(r => ({
 }
 /* One ring: the clock sits inside it and the button below, so it fits a column. */
 .single { flex-direction: column; gap: 1rem; }
-.single .ring-timer__ring { position: relative; }
+.ring-timer__ring { position: relative; }
 .single .ring-timer__clock { padding-bottom: 0; }
-.ring-timer__time.ring-timer__inside { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 46px; letter-spacing: -0.06em; white-space: nowrap; }
+.ring-timer__time.ring-timer__inside { position: absolute; left: 50%; transform: translate(-50%, -50%); font-size: 46px; letter-spacing: -0.06em; white-space: nowrap; }
 .track { stroke: #e8e8e8; }
 .fill { stroke: #3b5bf0; }
 .mark { stroke: #a9b8f8; stroke-width: 2; }

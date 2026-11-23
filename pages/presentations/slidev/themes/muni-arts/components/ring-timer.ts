@@ -49,3 +49,16 @@ export function elapsedShare(totalMs: number, remainingMs: number): number {
     return 1
   return Math.min(1, Math.max(0, (totalMs - remainingMs) / totalMs))
 }
+
+/** Time left in the part that is running now, so each ring can show its own
+ * countdown (Erik, 23 Nov: 12:00 in the trio ring, 18:00 in the pair ring).
+ * At a boundary the next part shows full. At zero and in overrun it returns
+ * the overall remaining time unchanged, so the overrun reads the same in
+ * every ring. */
+export function partRemaining(totalMs: number, remainingMs: number, parts: number): number {
+  const n = Math.max(1, Math.floor(parts))
+  if (remainingMs <= 0 || n === 1)
+    return remainingMs
+  const partMs = totalMs / n
+  return remainingMs - Math.floor((remainingMs - 1) / partMs) * partMs
+}

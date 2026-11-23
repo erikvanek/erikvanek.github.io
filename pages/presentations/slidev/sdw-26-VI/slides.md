@@ -487,7 +487,7 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Přesun do trojic
+# Rozdělení do trojic
 
 <!--
 <br/>
@@ -499,7 +499,8 @@ hideInToc: true
 layout: groupwork
 hideInToc: true
 ---
-
+<br>
+<br>
 <RingTimer :minutes="36" :size="250" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
 
 <style>
