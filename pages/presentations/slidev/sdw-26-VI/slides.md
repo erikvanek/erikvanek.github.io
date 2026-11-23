@@ -413,25 +413,27 @@ const cards = [
 <div class="stack">
   <div v-for="(c, i) in cards" :key="c.img" class="card" :class="{ fit: c.fit }"
     :style="i < $clicks
-      ? { zIndex: 20, opacity: 0, transform: 'translate(40%, 8%) rotate(12deg)' }
+      ? { zIndex: 20, opacity: 0, transform: 'translate(45%, -2%) rotate(10deg) scale(1.02)' }
       : { zIndex: 10 - (i - $clicks), opacity: (i - $clicks) > 3 ? 0 : 1, transform: `translate(${-(i - $clicks) * 12}%, ${(i - $clicks) * 3}%) rotate(${(i - $clicks) === 0 ? 3 : -(i - $clicks) * 4}deg) scale(${1 - (i - $clicks) * 0.06})` }">
     <img :src="asset + c.img" :alt="c.alt" />
   </div>
 </div>
-<div class="credit">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div>
+<Transition name="cap" mode="out-in"><div class="credit" :key="$clicks">{{ cards[$clicks].cap }} <a :href="cards[$clicks].whoUrl">{{ cards[$clicks].who }}</a>, <a :href="cards[$clicks].siteUrl">{{ cards[$clicks].site }}</a></div></Transition>
 
 <style>
 .stack { position: relative; height: 404px; margin: -10px 0 0 150px; }
-.credit { text-align: center; margin-top: -6px; }
+.credit { position: relative; z-index: 30; text-align: center; margin-top: -6px; text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #fff; }
 .card {
   position: absolute; top: 6px; left: 0; right: 0; margin: 0 auto; width: 620px; height: 368px;
   border-radius: 18px; overflow: hidden; background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
-  transition: transform 0.45s ease, opacity 0.45s ease;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease-out;
 }
+.cap-enter-active, .cap-leave-active { transition: opacity 0.2s ease; }
+.cap-enter-from, .cap-leave-to { opacity: 0; }
 .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card.fit img { object-fit: contain; padding: 10px; box-sizing: border-box; }
-@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .card, .cap-enter-active, .cap-leave-active { transition: none; } }
 </style>
 
 <!--
