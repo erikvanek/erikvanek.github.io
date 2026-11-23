@@ -557,7 +557,7 @@ ratio: "55-45"
 hideInToc: true
 ---
 
-# Příběh
+# Storytelling
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -565,11 +565,12 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Příběhy si pamatujeme, odrážky ze slidů zapomeneme
-- Příběh pomáhá lidem udělat krok k něčemu novému
-- Lidé se rozhodují podle pocitů, zdůvodnění hledají až potom
-- Každý příběh má hrdinu, překážku a proměnu
-- Začněte koncem: co si má publikum odnést?
+- Nejúčinnější způsob předání informace je příběhem
+- Každý příběh má "hrdinu", překážku a vyústění
+  - A podle toho stavějte svůj obsah
+- Nebojte se být ve sdělení osobní (obzvlášť pokud řešíte problém, který se vás dotýká)
+- "Představte si, že ..."
+- Tip: Začněte koncem – co si má publikum odnést?
 
 ::right::
 
@@ -592,12 +593,13 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Kdo je váš hrdina?
+# Pro koho píšete?
 
-- Hrdinou je člověk, kterému vaše řešení pomáhá
-- Jaký je jeho běžný svět a co ho z něj vytrhne?
+- Hrdina či persona je člověk, kterému vaše řešení pomáhá
+- Jaký je jeho běžný svět a co ho z něj vytrhne? Co chcete v jeho životě proměnit?
+  - Příběh začíná tzv. inciting incident (zápletka)
 - Jaké rozhodnutí před ním stojí?
-- Kdo rozhoduje o vašem řešení? I on je hrdinou svého příběhu
+- Kdo rozhoduje o vašem řešení?
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -610,19 +612,33 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 -->
 
 ---
-layout: heading-body
+layout: two-column
+ratio: "55-45"
 hideInToc: true
 ---
 
 # Business case
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
+::left::
 
 - Pro koho ho píšete a jaké rozhodnutí ten člověk dělá?
 - Potřeba, cíle, přínosy, náklady, rizika
 - Počítejte i s variantou „nedělat nic“
 - Bez dat o tržbách: odhad s předpoklady, které ukážete
 
+::right::
+
+<img :src="asset + 'kaninsky-business-case.png'" alt="Úvod článku A design system business case and business benefits, the ultimate guide" class="fit-img" />
+<div class="credit">Business case v šesti částech. <a href="https://uxdesign.cc/a-design-system-business-case-business-benefits-the-ultimate-guide-cc2e09715ab">Matěj Káninský</a>, <a href="https://uxdesign.cc/">UX Collective</a></div>
+
 <style>
-li { margin-top: 0.5em; margin-bottom: 0.5em; }
+.col-left li { margin-top: 0.45em; margin-bottom: 0.45em; }
+.col-right { display: flex; flex-direction: column; justify-content: center; }
+.col-right img { max-height: 340px; object-fit: contain; }
 </style>
 
 <!--
