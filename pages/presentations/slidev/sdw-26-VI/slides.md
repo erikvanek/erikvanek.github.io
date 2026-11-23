@@ -593,13 +593,14 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Pro koho píšete?
+# Ke komu mluvíte?
 
 - Hrdina či persona je člověk, kterému vaše řešení pomáhá
-- Jaký je jeho běžný svět a co ho z něj vytrhne? Co chcete v jeho životě proměnit?
-  - Příběh začíná tzv. inciting incident (zápletka)
-- Jaké rozhodnutí před ním stojí?
-- Kdo rozhoduje o vašem řešení?
+- Jak vypadá jeho běžný den?
+- Co se jednoho dne stane, že už to tak dál nejde?
+  - Tím příběh začíná, tzv. inciting incident (zápletka)
+- Co mu stojí v cestě?
+- Jak vypadá jeho svět, když vaše řešení funguje?
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -625,7 +626,7 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-- Pro koho ho píšete a jaké rozhodnutí ten člověk dělá?
+- Kdo o vašem řešení rozhoduje a před jakým rozhodnutím stojí?
 - Potřeba, cíle, přínosy, náklady, rizika
 - Počítejte i s variantou „nedělat nic“
 - Bez dat o tržbách: odhad s předpoklady, které ukážete
