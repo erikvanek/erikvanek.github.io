@@ -548,7 +548,7 @@ layout: section-break
 <!--
 <br/>
 
-**Závěr <span style="white-space:nowrap">19:25–19:40 (1/7)</span>**
+**Závěr <span style="white-space:nowrap">19:25–19:40 (1/9)</span>**
 -->
 
 ---
@@ -565,8 +565,10 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
+- Příběhy si pamatujeme, odrážky ze slidů zapomeneme
+- Příběh pomáhá lidem udělat krok k něčemu novému
 - Lidé se rozhodují podle pocitů, zdůvodnění hledají až potom
-- Příběh potřebuje hrdinu, překážku a proměnu
+- Každý příběh má hrdinu, překážku a proměnu
 - Začněte koncem: co si má publikum odnést?
 
 ::right::
@@ -582,7 +584,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Závěr: vyprávění <span style="white-space:nowrap">19:25–19:30 (2/7)</span>**
+**Závěr: vyprávění <span style="white-space:nowrap">19:25–19:30 (2/9)</span>**
 -->
 
 ---
@@ -604,7 +606,7 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 <!--
 <br/>
 
-**Závěr: hrdina <span style="white-space:nowrap">19:25–19:30 (3/7)</span>**
+**Závěr: hrdina <span style="white-space:nowrap">19:25–19:30 (3/9)</span>**
 -->
 
 ---
@@ -626,7 +628,7 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 <!--
 <br/>
 
-**Závěr: business case <span style="white-space:nowrap">19:25–19:30 (4/7)</span>**
+**Závěr: business case <span style="white-space:nowrap">19:25–19:30 (4/9)</span>**
 -->
 
 ---
@@ -661,7 +663,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Závěr: příklad business case <span style="white-space:nowrap">19:25–19:30 (5/7)</span>**
+**Závěr: příklad business case <span style="white-space:nowrap">19:25–19:30 (5/9)</span>**
 -->
 
 ---
@@ -669,12 +671,65 @@ layout: heading-body
 hideInToc: true
 ---
 
-# Co od vás chci na závěrečné prezentaci
+# Závěrečná prezentace 10. 12.
+
+- 100 minut, šest týmů, na každý tým 15 minut
+- Prezentace 8–10 minut, zbytek na otázky
+- Prezentaci mi pošlete do 16:00 téhož dne do Teams, nebo přineste notebook s HDMI
+- Formát je na vás: PowerPoint, PDF, video, Figma…
+
+<style>
+li { margin-top: 0.5em; margin-bottom: 0.5em; }
+</style>
 
 <!--
 <br/>
 
-**Závěr: zadání prezentace <span style="white-space:nowrap">19:30–19:35 (6/7)</span>**
+**Závěr: organizace <span style="white-space:nowrap">19:30–19:35 (6/9)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Co v prezentaci ukázat
+
+- Jaký problém jste řešili a co jste o něm zjistili
+- Jak jste prošli milníky a prací mezi nimi, klidně v diagramu
+- Fotky z testování a prototypování
+- Jak se vám spolupracovalo
+
+<style>
+li { margin-top: 0.5em; margin-bottom: 0.5em; }
+</style>
+
+<!--
+<br/>
+
+**Závěr: obsah <span style="white-space:nowrap">19:30–19:35 (7/9)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+---
+
+# Co mě zajímá nejvíc
+
+- Iterace: co bylo v první verzi a co je ve druhé
+- Co jste se naučili během projektu a na konci
+- Co dál? Plánujete s tím něco, nebo končíte? Obojí je v pořádku
+- Jste s výsledkem spokojení? Co mu ještě chybí?
+
+<style>
+li { margin-top: 0.5em; margin-bottom: 0.5em; }
+</style>
+
+<!--
+<br/>
+
+**Závěr: proces <span style="white-space:nowrap">19:30–19:35 (8/9)</span>**
 -->
 
 ---
@@ -687,7 +742,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Závěr: otázky <span style="white-space:nowrap">19:35–19:40 (7/7)</span>**
+**Závěr: otázky <span style="white-space:nowrap">19:35–19:40 (9/9)</span>**
 
 <br/>
 
