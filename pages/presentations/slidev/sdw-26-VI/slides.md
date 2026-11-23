@@ -433,7 +433,6 @@ const cards = [
 .cap-enter-from, .cap-leave-to { opacity: 0; }
 .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card.fit img { object-fit: contain; padding: 10px; box-sizing: border-box; }
-@media (prefers-reduced-motion: reduce) { .card, .cap-enter-active, .cap-leave-active { transition: none; } }
 </style>
 
 <!--
