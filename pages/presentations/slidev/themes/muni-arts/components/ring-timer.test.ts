@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { elapsedShare, GAP_DEG, partRemaining, ringParts, ringTicks } from './ring-timer'
+import { elapsedShare, GAP_DEG, partRemaining, restoreClock, ringParts, ringTicks } from './ring-timer'
 
 describe('ringParts', () => {
   it('splits a trio ring into three equal parts with gaps', () => {
@@ -58,5 +58,25 @@ describe("partRemaining", () => {
   it("passes zero and overrun through", () => {
     expect(partRemaining(T, 0, 3)).toBe(0)
     expect(partRemaining(T, -5_000, 2)).toBe(-5_000)
+  })
+})
+
+describe('restoreClock', () => {
+  const now = 1_000_000_000
+  const saved = (o: object) => JSON.stringify({ budgetMs: 600_000, elapsedMs: 0, runningSince: now - 60_000, savedAt: now - 5_000, ...o })
+
+  it('restores a running clock as it was saved', () => {
+    expect(restoreClock(saved({}), now)).toEqual({ budgetMs: 600_000, elapsedMs: 0, runningSince: now - 60_000 })
+  })
+  it('restores a paused clock', () => {
+    expect(restoreClock(saved({ runningSince: null, elapsedMs: 120_000 }), now)?.runningSince).toBeNull()
+  })
+  it('drops nothing, junk and malformed entries', () => {
+    expect(restoreClock(null, now)).toBeNull()
+    expect(restoreClock('{oops', now)).toBeNull()
+    expect(restoreClock(saved({ budgetMs: 'x' }), now)).toBeNull()
+  })
+  it('drops a leftover older than budget plus grace', () => {
+    expect(restoreClock(saved({ savedAt: now - 600_000 - 30 * 60_000 - 1 }), now)).toBeNull()
   })
 })
