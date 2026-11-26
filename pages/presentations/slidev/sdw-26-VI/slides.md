@@ -8,7 +8,7 @@ info: |
   Running order, rozhodnutí a otevřené body: SDW-26, backlog/030-build-session-6-deck.md
 layout: cover
 session: 6
-sessionTitle: Design critique a business case
+sessionTitle: Design critique, business case, prezentace
 date: 26. 11. 2026
 transition: slide-left
 mdc: true
@@ -58,9 +58,7 @@ hideInToc: true
 # Testování
 
 <div class="qs">
-  <div class="q" :class="{ past: $clicks >= 1 }"><span class="n">1</span>Jaké to pro vás bylo?</div>
-  <div class="q" v-click="1" :class="{ past: $clicks >= 2 }"><span class="n">2</span>Co vás nejvíc překvapilo?</div>
-  <div class="q" v-click="2"><span class="n">3</span>Jak s tím plánujete naložit?</div>
+  <div class="q">Jaké to pro vás bylo a co vás nejvíc překvapilo?</div>
 </div>
 
 <style>
@@ -70,24 +68,82 @@ hideInToc: true
   font-size: 1.6em;
   font-weight: 700;
   margin: 0.55em 0;
-  transition: opacity 600ms ease, transform 600ms ease;
-}
-.q.past { opacity: 0.28; transform: scale(0.94); transform-origin: left center; }
-.q .n {
-  display: inline-block;
-  width: 1.4em;
-  color: var(--muni-blue, #0000dc);
 }
 </style>
 
 <!--
 <br/>
 
-**Debrief testování <span style="white-space:nowrap">18:05–18:15 (2/2)</span>**
+**Debrief testování <span style="white-space:nowrap">18:05–18:20 (2/3)</span>**
+-->
+
+---
+layout: heading-body
+hideInToc: true
+clicks: 8
+---
+
+# Střípky z úkolů
+
+<script setup>
+const asset = import.meta.env.BASE_URL
+// Each item is a quote (string) or an image ({ img, alt }).
+const quotes = [
+  'Mezi hlavní zjištění patří nedostatečná smysluplnost prototypu v případě prvního přidání fotky, kdy si **respondentka nejdříve myslela**, že má přidat fotku sebe místo bytu',
+  '„takže jestli chcete, **aby to lidi zaklikli a necítili se jako red flag**, tak bych to možná přepsala, protože mě by se na to nechtělo kliknout“',
+  { img: 'stripky-graf-pokladna.png', alt: 'Sloupcový graf: časy úkolů v současné pokladně a v redesignu, u posledního úkolu 3:55 proti 1:16' },
+  'Hlavním zjištěním bylo, že některé klíčové funkce respondent nedokázal použít',
+  'pochopila úkoly, ale nedokázala předem říct, co se s nimi bude pak dít',
+  '„To nejde vylosovat vše najednou? To se mi nechce překlikávat pořád.“',
+  'čekající úkoly pochopila a a sama na ně poukázala, ale nechapala proč je tam nula',
+  '“I already help a lot of people through Whatsapp, so why not do it here?”',
+  'Zároveň by ocenila, **keby bol stav rezervovanej knihy odlíšený červenou farbou**, nielen tučným písmom',
+]
+// Inline Markdown in the quotes: **bold**, *italic*.
+const md = (t) => t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>")
+</script>
+
+<div class="stack">
+  <div v-for="(q, i) in quotes" :key="i" class="card" :class="{ long: typeof q === 'string' && q.length > 120, pic: typeof q !== 'string' }"
+    :style="i < $clicks
+      ? { zIndex: 20, opacity: 0, transform: 'translate(45%, -2%) rotate(10deg) scale(1.02)' }
+      : { zIndex: 10 - (i - $clicks), opacity: (i - $clicks) > 3 ? 0 : 1, transform: `translate(${-(i - $clicks) * 12}%, ${(i - $clicks) * 3}%) rotate(${(i - $clicks) === 0 ? 0 : -(i - $clicks) * 4}deg) scale(${1 - (i - $clicks) * 0.06})` }">
+    <img v-if="typeof q !== 'string'" :src="asset + q.img" :alt="q.alt" />
+    <blockquote v-else v-html="md(q)" />
+  </div>
+</div>
+
+<style>
+.stack { position: relative; height: 404px; margin: -10px 0 0 150px; }
+.card {
+  position: absolute; top: 6px; left: 0; right: 0; margin: 0 auto; width: 620px; height: 368px;
+  border-radius: 18px; overflow: hidden; background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
+  display: flex; align-items: center; justify-content: center;
+  padding: 2.2rem 2.6rem; box-sizing: border-box;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease-out;
+}
+.card blockquote {
+  margin: 0; padding: 0; border: 0; background: none;
+  font-size: 30px; line-height: 1.3; font-weight: 400; color: var(--muni-black);
+}
+.card.long blockquote { font-size: 25px; }
+.card.pic { padding: 1.4rem; }
+.card.pic img { width: 100%; height: 100%; object-fit: contain; display: block; }
+</style>
+
+<!--
+<br/>
+
+Úryvky z odevzdaných zpráv, ke každému krátký komentář. Klik přenese další úryvek navrch.
 
 <br/>
 
-🛑 **Nejpozději 18:15 končí debrief testování.**
+**Debrief testování <span style="white-space:nowrap">18:05–18:20 (3/3)</span>**
+
+<br/>
+
+🛑 **Nejpozději 18:20 končí debrief testování.**
 -->
 
 ---
@@ -99,7 +155,7 @@ layout: section-break
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (1/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (1/10)</span>**
 -->
 
 ---
@@ -123,7 +179,7 @@ const asset = import.meta.env.BASE_URL
   - Asynchronně X synchronně
   - Hotový návrh X koncepty X varianty
 - Nejvíce vás posune **pravidelnost**
-  - Po každé iteraci / před vydáním nové verze / po nasbírání XY kusů nové zpětné vazby / ...
+  - Po každé iteraci / před vydáním nové verze / po nasbírání nové zpětné vazby 
 
 ::right::
 
@@ -138,7 +194,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (2/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (2/10)</span>**
 -->
 
 ---
@@ -149,13 +205,12 @@ hideInToc: true
 # Mindset
 
 - Usability testování je **evaluativní**, design critique je **spíš generativní**
-  - Tj. hledáme nové perspektivy a nápady
-- Otevřený formát, ale zároveň **strukturovaný**
+  - Tj. hledáme nové perspektivy a návrhy ke zlepšení
+- Otevřený, ale zároveň **strukturovaný** formát
 - Důležitost přípravy
   - **Řekněte na úvod, jakou zpětnou vazbu chcete** a co teď naopak nepotřebujete
 - Hledáte odpověď na otázku: „Co byste nám doporučili k…?“
 - Při skupinové práci pozor na dominantní hlasy
-  - Můžete řešit např. pomocí brainwritingu
 
 <style>
 li { margin-top: 0.45em; margin-bottom: 0.45em; }
@@ -164,7 +219,7 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (3/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (3/10)</span>**
 -->
 
 ---
@@ -174,10 +229,10 @@ hideInToc: true
 
 # Tři druhy zpětné vazby
 
-- Během critu uslyšíte spoustu komentářů a každý pomůže jinak
+- Během crit uslyšíte spoustu různých komentářů
 - Kniha *Discussing Design* je dělí podle toho, jak s nimi můžete pracovat dál
 - Snažte se sbírat a sdílet zejména třetí typ – kritiku
-  - Dobrou facilitací můžete z reakce dostat kritiku
+- Doptáváním se můžete reakci přetvořit na kritiku
 
 <div class="fb">
   <div class="fb-h">Druh</div>
@@ -214,7 +269,7 @@ li { margin: 0.3em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (4/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (4/10)</span>**
 -->
 
 ---
@@ -231,11 +286,11 @@ const asset = import.meta.env.BASE_URL
 
 ::left::
 
-1. Prezentující shrne problém, cíl a kde v procesu je
+1. Prezentující popíše řešený problém
 2. Řekne, co jej teď zajímá a co ne
 3. Krátce projde diskutovaný návrh + klíčová rozhodnutí, která za ním jsou
 4. Kritici se nejdřív ptají, aby návrhu porozuměli
-5. Doptávání se, „stavění na nápadech ostatních“
+5. Facilitovaná diskuze a sběr nových podnětů, „stavění na nápadech ostatních“
 6. Shrnutí výsledků + případně co budou další kroky
 <br>
 <br>
@@ -256,7 +311,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (5/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (5/10)</span>**
 -->
 
 ---
@@ -267,8 +322,8 @@ hideInToc: true
 # Úvod a nastavení pravidel
 
 1. Popište, jaký problém řešíte a kdo je cílová skupina
-2. Popište, kde jste v procesu a co chcete probírat:
-  - Hrubá skica X celkový průchod X varianty X interakční design X ...
+2. Popište, kde jste v procesu a úroveň detailu, která vás zajímá:
+  - Hrubá skica / celkový průchod / varianty / interakční design / ...
 3. Jasně rozlište, co **chcete a nechcete** řešit
 4. Popište několik témat, nad kterými si lámete hlavu a jejichž zodpovězení vám teď pomůže
 5. Stručně ukažte váš návrh tak, aby mu účastníci porozuměli
@@ -279,7 +334,7 @@ li { margin: 0.4em 0; }
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (6/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (6/10)</span>**
 -->
 
 ---
@@ -291,7 +346,8 @@ hideInToc: true
 - Po představení návrhu přichází na řadu diskuze
 - Dobrá facilitace a **kladení správných otázek** jsou klíčové pro úspěch
 - Dobrou zpětnou vazbu předáte i správně položenou otázkou!
-- Při prezentaci a facilitaci dejte pozor, abyste neobhajovali své návrhy
+  - *"Zvažovali jste při návrhu ... ?"*
+- Při prezentaci a facilitaci neobhajujte své návrhy
 
 <br>
 
@@ -307,7 +363,7 @@ hideInToc: true
 
 **Otázky pro kritizující**
 
-- „Co má uživatel v tomto kroku udělat?“
+- Čeho má uživatel v tomto kroku docílit?“
 - „Proč jste zvolili zrovna tuto variantu?“
 - „Co tu bylo nejtěžší rozhodnout?“
 <style>
@@ -318,7 +374,7 @@ hideInToc: true
 <!--
 <br/>
 
-**Úvod do critu <span style="white-space:nowrap">18:15–18:30 (7/10)</span>**
+**Úvod do critu <span style="white-space:nowrap">18:20–18:30 (7/10)</span>**
 -->
 
 ---
@@ -336,20 +392,20 @@ const asset = import.meta.env.BASE_URL
 ::left::
 
 - Řešený problém pojmenujte a srozumitelně popište
-- Přidejte situace uživatelů ve tvaru *„Když…, chci…, abych…“*
-  - Využijte jobs to be done, job stories, user stories, ...
+- Využijte jobs to be done, job stories, user stories, ...
+  - např. *„Když…, chci…, abych…“*
 - Přineste několik odlišných variant řešení a každou pojmenujte
 - U každé varianty sepište, co je na ní dobré, co špatné a jaké otázky k ní máte
 
 ::right::
 
-<img :src="asset + 'intercom-user-vs-job-story.png'" alt="Ručně kreslená user story As a, I want to, So that: persona je označená jako irelevantní, akce jako předpoklad a celé jako příliš mnoho předpokladů" class="fit-img" style="width: 80%; margin: 0 auto;" />
-<div class="credit">User story stojí na personě a předpokladech, job story začíná situací. <a href="https://www.intercom.com/blog/using-job-stories-design-features-ui-ux/">Alan Klement</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
+<img :src="asset + 'intercom-user-vs-job-story.webp'" alt="Ručně kreslená user story As a, I want to, So that: persona je označená jako irelevantní, akce jako předpoklad a celé jako příliš mnoho předpokladů" class="fit-img" style="width: 110%; margin: 0 auto;" />
+<div class="credit">Formát tzv. job story pro popis problému <a href="https://www.intercom.com/blog/using-job-stories-design-features-ui-ux/">Alan Klement</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
 
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (8/10)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (8/10)</span>**
 -->
 
 ---
@@ -358,7 +414,7 @@ ratio: "55-45"
 hideInToc: true
 ---
 
-# Figma: standardní crit
+# Design crit v týmu Figmy
 
 <script setup>
 const asset = import.meta.env.BASE_URL
@@ -369,7 +425,7 @@ const asset = import.meta.env.BASE_URL
 - Standardní průběh critu v jejich týmu
   1. Kontext řešeného problému 10–15 min
   2. Doplňující otázky účastníků 2–5 min
-  3. Zpětná vazba 10 min a víc
+  3. Zpětná vazba ostatních 10 min a víc
 - Na začátku popis **„jakou zpětnou vazbu hledám a jakou ne“**
 - Předem řečeno, jestli se smí skákat do řeči
 - Prezentující neobhajuje jednotlivá řešení, může vysvětlit důležitá rozhodnutí
@@ -377,7 +433,7 @@ const asset = import.meta.env.BASE_URL
 ::right::
 
 <img :src="asset + 'figma-lepik-u-obrazovky.jpg'" alt="Notebook s navrhovanou obrazovkou a vedle ní žlutá poznámka kritika" class="fit-img" />
-<div class="credit">Sběr zpětné vazby probíhá přímo <a href="https://www.figma.com/blog/design-critiques-at-figma/">ve Figmě</a></div>
+<div class="credit">Sběr zpětné vazby může probíhat přímo <a href="https://www.figma.com/blog/design-critiques-at-figma/">ve Figmě</a></div>
 
 <style>
 .col-left li { margin: 0.25em 0; }
@@ -387,7 +443,7 @@ const asset = import.meta.env.BASE_URL
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (9/10)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (9/10)</span>**
 -->
 
 ---
@@ -406,7 +462,7 @@ const cards = [
   { img: 'stack-gds-vytisk.jpg', alt: 'Designérka drží vytištěnou obrazovku nad stolem, ostatní se dívají a komentují', cap: 'GDS: crit day napříč úřady nad vytištěnou obrazovkou.', who: 'Jeremy Yun a Clara Greo', whoUrl: 'https://designnotes.blog.gov.uk/2019/04/08/how-a-cross-government-design-crit-day-helps-your-work/', site: 'Design in government', siteUrl: 'https://designnotes.blog.gov.uk/', rot: 3 },
   { img: 'stack-nng-zapis.jpg', fit: true, alt: 'Tabulka se zápisem critu: prezentující, návrhy, poznámky a navazující otázky', cap: 'NN/g: zápis critu v tabulce, poznámky a navazující otázky.', who: 'Design critiques', whoUrl: 'https://www.nngroup.com/articles/design-critiques/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/', rot: 5 },
   { img: 'stack-figma-skica.jpg', alt: 'Ruka kreslí tužkou skicu obrazovky na papír', cap: 'Figma: crit nad skicou tužkou.', who: 'Noah Levin', whoUrl: 'https://www.figma.com/blog/design-critiques-at-figma/', site: 'Figma', siteUrl: 'https://www.figma.com/blog/', rot: -3 },
-  { img: 'stack-nng-klobouky.jpg', fit: true, alt: 'Šest barevných klobouků, každý pro jiný druh pohledu', cap: 'Šest klobouků: celá skupina se dívá stejným pohledem.', who: 'Edward de Bono', whoUrl: 'https://www.debonogroup.com/services/core-programs/six-thinking-hats/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/articles/facilitating-design-studio-workshop/', rot: 4 },
+  { img: 'google_thinking_hats_design_sprint.jpg', fit: true, alt: 'Šest barevných klobouků, každý pro jiný druh pohledu', cap: 'Šest klobouků: celá skupina se dívá stejným pohledem.', who: 'Edward de Bono', whoUrl: 'https://www.debonogroup.com/services/core-programs/six-thinking-hats/', site: 'Nielsen Norman Group', siteUrl: 'https://www.nngroup.com/articles/facilitating-design-studio-workshop/', rot: 4 },
 ]
 </script>
 
@@ -438,7 +494,7 @@ const cards = [
 <!--
 <br/>
 
-**Úvod do critu: příklady <span style="white-space:nowrap">18:15–18:30 (10/10)</span>**
+**Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (10/10)</span>**
 -->
 
 ---
@@ -461,16 +517,20 @@ hideInToc: true
 
 # Příprava v týmech
 
+<script setup>
+const asset = import.meta.env.BASE_URL
+</script>
+
 ::left::
 
 - Vyplňte přípravný list (najdete ho v Teams)
 - Cíl critu, rozsah a otázky, na které chcete odpověď
 - Každý z vás pak bude projekt prezentovat sám v jiné skupině
-- Mezitím vás rozdělím do trojic
+- Mezitím vás rozdělím do dvojic/trojic
 
 ::right::
 
-<RingTimer :minutes="10" :size="240" />
+<img :src="asset + 'pripravny-list-canvas.png'" alt="" class="fit-img" style="box-shadow: 0 2px 12px rgba(0,0,0,0.15);" />
 
 <style>
 li { margin-top: 0.5em; margin-bottom: 0.5em; }
@@ -479,7 +539,44 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 <!--
 <br/>
 
-**Workshop: příprava <span style="white-space:nowrap">18:31–18:41 (1/2)</span>**
+**Workshop: příprava <span style="white-space:nowrap">18:31–18:41 (1/3)</span>**
+-->
+
+---
+layout: two-column
+ratio: "58-42"
+hideInToc: true
+---
+
+# Doporučená příprava
+
+::left::
+
+1. Popis problému, který řešíte
+2. Co chcete ukazovat: celý průchod, jednu funkci, nebo varianty?
+3. Co si chcete odnést?
+4. Dvě až tři konkrétní otázky, na které chcete odpověď
+5. Co řešit nechcete
+6. Jak to ukážeme ostatním?
+7. Jak si zpětnou vazbu zachytíte?
+8. Chcete s ostatními něco nakreslit?
+
+::right::
+
+<RingTimer :minutes="10" :size="312" />
+
+<style>
+li { margin-top: 0.3em; margin-bottom: 0.3em; }
+</style>
+
+<!--
+<br/>
+
+Záloha pro ty, kdo nechtějí pracovat v Google Docu. Na plátně po celou dobu přípravy.
+
+<br/>
+
+**Workshop: příprava <span style="white-space:nowrap">18:31–18:41 (2/3)</span>**
 -->
 
 ---
@@ -492,19 +589,18 @@ hideInToc: true
 <!--
 <br/>
 
-**Workshop: přesun <span style="white-space:nowrap">18:41–18:44 (2/2)</span>**
+**Workshop: přesun <span style="white-space:nowrap">18:41–18:44 (3/3)</span>**
 -->
 
 ---
 layout: groupwork
 hideInToc: true
 ---
-<br>
-<br>
-<RingTimer :minutes="36" :size="250" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
+<RingTimer :minutes="36" :size="325" :rings="[{ parts: 3, label: 'Trojice' }, { parts: 2, label: 'Dvojice' }]" />
 
 <style>
-.ring-timer { margin-top: 2.5rem; }
+.slidev-layout.groupwork { display: flex; flex-direction: column; height: 100%; }
+.ring-timer { margin-top: auto; margin-bottom: auto; }
 </style>
 
 <!--
@@ -574,7 +670,7 @@ const asset = import.meta.env.BASE_URL
 
 ::right::
 
-<img :src="asset + 'lichaw-pribehovy-oblouk.png'" alt="Panáček s mečem šplhá po příběhovém oblouku: expozice, spouštěcí událost, stoupající děj, krize s drakem, vyvrcholení, rozuzlení, konec" class="fit-img" />
+<img :src="asset + 'lichaw-pribehovy-oblouk.png'" alt="Panáček s mečem šplhá po příběhovém oblouku: expozice, spouštěcí událost, stoupající děj, krize s drakem, vyvrcholení, rozuzlení, konec" class="fit-img" style="width: 115%; margin: 0 auto;" />
 <div class="credit">Příběhový oblouk. <a href="https://rosenfeldmedia.com/books/storymapping/">Donna Lichaw</a>, <a href="https://www.uxmatters.com/mt/archives/2020/09/book-review-the-users-journey-storymapping-products-that-people-love.php">UXmatters</a></div>
 
 <style>
@@ -694,9 +790,10 @@ hideInToc: true
 
 # Závěrečné prezentace 10. 12.
 
-- 100 minut, šest týmů, na každý tým cca **15 minut**
+- 100 minut / šest týmů = na každý tým cca **15 minut**
 - Délka prezentace max 8–10 minut, 5–7 na otázky od ostatních
 - Prezentaci mi pošlete do 16:00 téhož dne do Teams, nebo přineste notebook s HDMI
+- Finální výstup odevzdejte taky do odevzdávárny ve stejném termínu
 - Formát je na vás: PowerPoint, PDF, video, Figma…
 
 <style>
