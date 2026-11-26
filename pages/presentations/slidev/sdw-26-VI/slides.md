@@ -17,8 +17,6 @@ hideInToc: true
 ---
 
 <!--
-<br/>
-
 **Úvod <span style="white-space:nowrap">18:00–18:05 (1/2)</span>**
 -->
 
@@ -41,8 +39,6 @@ li { margin-top: 0.4em; margin-bottom: 0.4em; }
 </style>
 
 <!--
-<br/>
-
 **Úvod <span style="white-space:nowrap">18:00–18:05 (2/2)</span>**
 
 <br/>
@@ -72,8 +68,6 @@ hideInToc: true
 </style>
 
 <!--
-<br/>
-
 **Debrief testování <span style="white-space:nowrap">18:05–18:20 (2/3)</span>**
 -->
 
@@ -133,8 +127,6 @@ const md = (t) => t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*
 </style>
 
 <!--
-<br/>
-
 Úryvky z odevzdaných zpráv, ke každému krátký komentář. Klik přenese další úryvek navrch.
 
 <br/>
@@ -153,8 +145,6 @@ layout: section-break
 # Design critique
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (1/10)</span>**
 -->
 
@@ -192,8 +182,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (2/10)</span>**
 -->
 
@@ -217,8 +205,6 @@ li { margin-top: 0.45em; margin-bottom: 0.45em; }
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (3/10)</span>**
 -->
 
@@ -267,8 +253,6 @@ li { margin: 0.3em 0; }
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (4/10)</span>**
 -->
 
@@ -309,8 +293,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (5/10)</span>**
 -->
 
@@ -332,8 +314,6 @@ li { margin: 0.4em 0; }
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (6/10)</span>**
 -->
 
@@ -372,8 +352,6 @@ hideInToc: true
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu <span style="white-space:nowrap">18:20–18:30 (7/10)</span>**
 -->
 
@@ -403,8 +381,6 @@ const asset = import.meta.env.BASE_URL
 <div class="credit">Formát tzv. job story pro popis problému <a href="https://www.intercom.com/blog/using-job-stories-design-features-ui-ux/">Alan Klement</a>, <a href="https://www.intercom.com/blog/">Intercom</a></div>
 
 <!--
-<br/>
-
 **Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (8/10)</span>**
 -->
 
@@ -441,8 +417,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (9/10)</span>**
 -->
 
@@ -492,8 +466,6 @@ const cards = [
 </style>
 
 <!--
-<br/>
-
 **Úvod do critu: příklady <span style="white-space:nowrap">18:20–18:30 (10/10)</span>**
 -->
 
@@ -504,8 +476,6 @@ layout: section-break
 # Pojďme to vyzkoušet
 
 <!--
-<br/>
-
 **Workshop: zadání <span style="white-space:nowrap">18:30–18:31 (1/1)</span>**
 -->
 
@@ -537,8 +507,6 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 <!--
-<br/>
-
 **Workshop: příprava <span style="white-space:nowrap">18:31–18:41 (1/3)</span>**
 -->
 
@@ -570,8 +538,6 @@ li { margin-top: 0.3em; margin-bottom: 0.3em; }
 </style>
 
 <!--
-<br/>
-
 Záloha pro ty, kdo nechtějí pracovat v Google Docu. Na plátně po celou dobu přípravy.
 
 <br/>
@@ -587,8 +553,6 @@ hideInToc: true
 # Rozdělení do trojic
 
 <!--
-<br/>
-
 **Workshop: přesun <span style="white-space:nowrap">18:41–18:44 (3/3)</span>**
 -->
 
@@ -604,8 +568,6 @@ hideInToc: true
 </style>
 
 <!--
-<br/>
-
 **Workshop: crit <span style="white-space:nowrap">18:44–19:20 (1/1)</span>**
 
 <br/>
@@ -626,8 +588,6 @@ hideInToc: true
 </style>
 
 <!--
-<br/>
-
 **Workshop: debrief critu <span style="white-space:nowrap">19:20–19:25 (1/1)</span>**
 
 <br/>
@@ -642,8 +602,6 @@ layout: section-break
 # K prezentacím
 
 <!--
-<br/>
-
 **Závěr <span style="white-space:nowrap">19:25–19:40 (1/9)</span>**
 -->
 
@@ -679,8 +637,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Závěr: vyprávění <span style="white-space:nowrap">19:25–19:30 (2/9)</span>**
 -->
 
@@ -704,8 +660,6 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 <!--
-<br/>
-
 **Závěr: hrdina <span style="white-space:nowrap">19:25–19:30 (3/9)</span>**
 -->
 
@@ -742,8 +696,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Závěr: business case <span style="white-space:nowrap">19:25–19:30 (4/9)</span>**
 -->
 
@@ -778,8 +730,6 @@ const asset = import.meta.env.BASE_URL
 </style>
 
 <!--
-<br/>
-
 **Závěr: příklad business case <span style="white-space:nowrap">19:25–19:30 (5/9)</span>**
 -->
 
@@ -801,8 +751,6 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 <!--
-<br/>
-
 **Závěr: organizace <span style="white-space:nowrap">19:30–19:35 (6/9)</span>**
 -->
 
@@ -825,8 +773,6 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 <!--
-<br/>
-
 **Závěr: obsah <span style="white-space:nowrap">19:30–19:35 (7/9)</span>**
 -->
 
@@ -847,7 +793,5 @@ li { margin-top: 0.5em; margin-bottom: 0.5em; }
 </style>
 
 <!--
-<br/>
-
 **Závěr: proces <span style="white-space:nowrap">19:30–19:35 (8/9)</span>**
 -->
