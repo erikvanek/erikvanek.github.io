@@ -62,3 +62,26 @@ export function partRemaining(totalMs: number, remainingMs: number, parts: numbe
   const partMs = totalMs / n
   return remainingMs - Math.floor((remainingMs - 1) / partMs) * partMs
 }
+
+/** Reads a clock saved by RingTimer back from storage. Returns null for
+ * anything missing, malformed, or saved longer ago than the budget plus
+ * `graceMs` (a leftover from a rehearsal, not this run). */
+export function restoreClock(raw: string | null, now: number, graceMs = 30 * 60_000): { budgetMs: number, elapsedMs: number, runningSince: number | null } | null {
+  if (!raw)
+    return null
+  let v: any
+  try {
+    v = JSON.parse(raw)
+  }
+  catch {
+    return null
+  }
+  const num = (x: unknown) => typeof x === 'number' && Number.isFinite(x)
+  if (!v || !num(v.budgetMs) || !num(v.elapsedMs) || !num(v.savedAt))
+    return null
+  if (v.runningSince !== null && !num(v.runningSince))
+    return null
+  if (now - v.savedAt > v.budgetMs + graceMs)
+    return null
+  return { budgetMs: v.budgetMs, elapsedMs: v.elapsedMs, runningSince: v.runningSince }
+}
